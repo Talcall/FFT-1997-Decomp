@@ -11,6 +11,349 @@ typedef unsigned short    undefined2;
 typedef unsigned int    undefined4;
 typedef unsigned short    ushort;
 typedef unsigned short    word;
+typedef struct ShieldSecondary ShieldSecondary, *PShieldSecondary;
+
+struct ShieldSecondary {
+    byte PhysicalEvade;
+    byte MagicalEvade;
+};
+
+typedef struct PrimaryItemData PrimaryItemData, *PPrimaryItemData;
+
+struct PrimaryItemData {
+    byte Palette;
+    byte SpriteID;
+    byte ReqLevel;
+    int NA:1;
+    int Rare:1;
+    int NA:1;
+    int Accessory:1;
+    int Armor:1;
+    int Headgear:1;
+    int Shield:1;
+    int Weapon:1;
+    byte SecondID;
+    byte ItemType;
+    undefined field13_0x6;
+    byte ItemAttr;
+    short Price;
+    byte ShopAvailability;
+    undefined field17_0xb;
+};
+
+typedef struct AllWeaponSecondaryItem AllWeaponSecondaryItem, *PAllWeaponSecondaryItem;
+
+typedef struct WeaponSecondary WeaponSecondary, *PWeaponSecondary;
+
+struct WeaponSecondary {
+    byte Range;
+    int Forced2Hands:1;
+    int Throwable:1;
+    int 2Hands:1;
+    int 2Swords:1;
+    int Arc:1;
+    int Direct:1;
+    int Lunging:1;
+    int Striking:1;
+    byte Formula;
+    undefined field10_0x3;
+    byte WeaponPower;
+    byte Evade;
+    int Dark:1;
+    int Holy:1;
+    int Water:1;
+    int Earth:1;
+    int Wind:1;
+    int ice:1;
+    int Lightning:1;
+    int Fire:1;
+    byte SecondaryEffect;
+};
+
+struct AllWeaponSecondaryItem {
+    struct WeaponSecondary NoWeapon;
+    struct WeaponSecondary Dagger;
+    struct WeaponSecondary Mythril Knife;
+    struct WeaponSecondary Blind Knife;
+    struct WeaponSecondary Mage Masher;
+    struct WeaponSecondary Platina Dagger;
+    struct WeaponSecondary Main Gauche;
+    struct WeaponSecondary Orichalcum;
+    struct WeaponSecondary Assassin Dagger;
+    struct WeaponSecondary Air Knife;
+    struct WeaponSecondary Zorlin Shape;
+    struct WeaponSecondary Hidden Knife;
+    struct WeaponSecondary Ninja Knife;
+    struct WeaponSecondary Short Edge;
+    struct WeaponSecondary Ninja Edge;
+    struct WeaponSecondary Spell Edge;
+    struct WeaponSecondary Sasuke Knife;
+    struct WeaponSecondary Iga Knife;
+    struct WeaponSecondary Koga Knife;
+    struct WeaponSecondary Broad Sword;
+    struct WeaponSecondary Long Sword;
+    struct WeaponSecondary Iron Sword;
+    struct WeaponSecondary Mythril Sword;
+    struct WeaponSecondary Blood Sword;
+    struct WeaponSecondary Coral Sword;
+    struct WeaponSecondary Ancient Sword;
+    struct WeaponSecondary Sleep Sword;
+    struct WeaponSecondary Platinum Sword;
+    struct WeaponSecondary Diamond Sword;
+    struct WeaponSecondary Ice Brand;
+    struct WeaponSecondary Rune Blade;
+    struct WeaponSecondary Nagrarock;
+    struct WeaponSecondary Materia Blade;
+    struct WeaponSecondary Defender;
+    struct WeaponSecondary Save the Queen;
+    struct WeaponSecondary Excalibur;
+    struct WeaponSecondary Ragnarok;
+    struct WeaponSecondary Chaos Blade;
+    struct WeaponSecondary Asura Knife;
+    struct WeaponSecondary Koutetsu Knife;
+    struct WeaponSecondary Bizen Boat;
+    struct WeaponSecondary Murasame;
+    struct WeaponSecondary Heaven's Cloud;
+    struct WeaponSecondary Kiyomori;
+    struct WeaponSecondary Muramasa;
+    struct WeaponSecondary Kikuichimoji;
+    struct WeaponSecondary Masamune;
+    struct WeaponSecondary Chirijiraden;
+    struct WeaponSecondary Battle Axe;
+    struct WeaponSecondary Giant Axe;
+    struct WeaponSecondary Slasher;
+    struct WeaponSecondary Rod;
+    struct WeaponSecondary Thunder Rod;
+    struct WeaponSecondary Flame Rod;
+    struct WeaponSecondary Ice Rod;
+    struct WeaponSecondary Poison Rod;
+    struct WeaponSecondary Wizard Rod;
+    struct WeaponSecondary Dragon Rod;
+    struct WeaponSecondary Faith Rod;
+    struct WeaponSecondary Oak Staff;
+    struct WeaponSecondary White Staff;
+    struct WeaponSecondary Healing Staff;
+    struct WeaponSecondary Rainbow Staff;
+    struct WeaponSecondary Wizard Staff;
+    struct WeaponSecondary Gold Staff;
+    struct WeaponSecondary Mace of Zeus;
+    struct WeaponSecondary Sage Staff;
+    struct WeaponSecondary Flail;
+    struct WeaponSecondary Flame Whip;
+    struct WeaponSecondary Morning Star;
+    struct WeaponSecondary Scorpion Tail;
+    struct WeaponSecondary Romanda Gun;
+    struct WeaponSecondary Mythril Gun;
+    struct WeaponSecondary Stone Gun;
+    struct WeaponSecondary Blaze Gun;
+    struct WeaponSecondary Glacier Gun;
+    struct WeaponSecondary Blast Gun;
+    struct WeaponSecondary Bow Gun;
+    struct WeaponSecondary Night Killer;
+    struct WeaponSecondary Cross Bow;
+    struct WeaponSecondary Poison Bow;
+    struct WeaponSecondary Hunting Bow;
+    struct WeaponSecondary Gastrafitis;
+    struct WeaponSecondary Long Bow;
+    struct WeaponSecondary Silver Bow;
+    struct WeaponSecondary Ice Bow;
+    struct WeaponSecondary Lightning Bow;
+    struct WeaponSecondary Windslash Bow;
+    struct WeaponSecondary Mythril Bow;
+    struct WeaponSecondary Ultimus Bow;
+    struct WeaponSecondary Yoichi Bow;
+    struct WeaponSecondary Perseus Bow;
+    struct WeaponSecondary Ramia Harp;
+    struct WeaponSecondary Bloody Strings;
+    struct WeaponSecondary Fairy Harp;
+    struct WeaponSecondary Battle Dict;
+    struct WeaponSecondary Monster Dict;
+    struct WeaponSecondary Papyrus Plate;
+    struct WeaponSecondary Madlemgen;
+    struct WeaponSecondary Javelin;
+    struct WeaponSecondary Spear;
+    struct WeaponSecondary Mythril Spear;
+    struct WeaponSecondary Partisan;
+    struct WeaponSecondary Oberisk;
+    struct WeaponSecondary Holy Lance;
+    struct WeaponSecondary Dragon Whisker;
+    struct WeaponSecondary Javelin (II);
+    struct WeaponSecondary Cypress Rod;
+    struct WeaponSecondary Battle Bamboo;
+    struct WeaponSecondary Musk Rod;
+    struct WeaponSecondary Iron Fan;
+    struct WeaponSecondary Gokuu Rod;
+    struct WeaponSecondary Ivory Rod;
+    struct WeaponSecondary Octagon Rod;
+    struct WeaponSecondary Whale Whisker;
+    struct WeaponSecondary C Bag;
+    struct WeaponSecondary FS Bag;
+    struct WeaponSecondary P Bag;
+    struct WeaponSecondary H Bag;
+    struct WeaponSecondary Persia;
+    struct WeaponSecondary Cashmere;
+    struct WeaponSecondary Ryozan Silk;
+    struct WeaponSecondary Shuriken;
+    struct WeaponSecondary Magic Shuriken;
+    struct WeaponSecondary Yagyu Darkness;
+    struct WeaponSecondary Fire Ball;
+    struct WeaponSecondary Water Ball;
+    struct WeaponSecondary Lightning Ball;
+};
+
+typedef struct AllOtherSecondaryItem AllOtherSecondaryItem, *PAllOtherSecondaryItem;
+
+typedef struct ArmorSecondary ArmorSecondary, *PArmorSecondary;
+
+typedef struct AccessorySecondary AccessorySecondary, *PAccessorySecondary;
+
+typedef struct ItemSecondary ItemSecondary, *PItemSecondary;
+
+struct AccessorySecondary {
+    byte PhysicalEvade;
+    byte MagicalEvade;
+};
+
+struct ItemSecondary {
+    byte Formula;
+    byte Z;
+    byte InflictStatusID;
+};
+
+struct ArmorSecondary {
+    byte HP;
+    byte MP;
+};
+
+struct AllOtherSecondaryItem {
+    struct ShieldSecondary Escutcheon;
+    struct ShieldSecondary Buckler;
+    struct ShieldSecondary Bronze Shield;
+    struct ShieldSecondary Round Shield;
+    struct ShieldSecondary Mythril Shield;
+    struct ShieldSecondary Gold Shield;
+    struct ShieldSecondary Ice Shield;
+    struct ShieldSecondary Flame Shield;
+    struct ShieldSecondary Aegis Shield;
+    struct ShieldSecondary Diamond Shield;
+    struct ShieldSecondary Platina Shield;
+    struct ShieldSecondary Crystal Shield;
+    struct ShieldSecondary Genji Shield;
+    struct ShieldSecondary Kaiser Plate;
+    struct ShieldSecondary Venetian Shield;
+    struct ShieldSecondary Escutcheon (II);
+    struct ArmorSecondary Leather Helmet;
+    struct ArmorSecondary Bronze Helmet;
+    struct ArmorSecondary Iron Helmet;
+    struct ArmorSecondary Barbuta;
+    struct ArmorSecondary Mythril Helmet;
+    struct ArmorSecondary Gold Helmet;
+    struct ArmorSecondary Cross Helmet;
+    struct ArmorSecondary Diamond Helmet;
+    struct ArmorSecondary Platina Helmet;
+    struct ArmorSecondary Circlet;
+    struct ArmorSecondary Crystal Helmet;
+    struct ArmorSecondary Genji Helmet;
+    struct ArmorSecondary Grand Helmet;
+    struct ArmorSecondary Leather Hat;
+    struct ArmorSecondary Feather Hat;
+    struct ArmorSecondary Red Hood;
+    struct ArmorSecondary Headgear;
+    struct ArmorSecondary Triangle Hat;
+    struct ArmorSecondary Green Beret;
+    struct ArmorSecondary Twist Headband;
+    struct ArmorSecondary Holy Miter;
+    struct ArmorSecondary Black Hood;
+    struct ArmorSecondary Golden Hairpin;
+    struct ArmorSecondary Flash Hat;
+    struct ArmorSecondary Thief Hat;
+    struct ArmorSecondary Cachusha;
+    struct ArmorSecondary Berette;
+    struct ArmorSecondary Ribbon;
+    struct ArmorSecondary Leather Armor;
+    struct ArmorSecondary Linen Cuirass;
+    struct ArmorSecondary Bronze Armor;
+    struct ArmorSecondary Chain Mail;
+    struct ArmorSecondary Mythril Armor;
+    struct ArmorSecondary Plate Mail;
+    struct ArmorSecondary Gold Armor;
+    struct ArmorSecondary Diamond Armor;
+    struct ArmorSecondary Platina Armor;
+    struct ArmorSecondary Carabini Mail;
+    struct ArmorSecondary Crystal Mail;
+    struct ArmorSecondary Genji Armor;
+    struct ArmorSecondary Reflect Mail;
+    struct ArmorSecondary Maximilian;
+    struct ArmorSecondary Clothes;
+    struct ArmorSecondary Leather Outfit;
+    struct ArmorSecondary Leather Vest;
+    struct ArmorSecondary Chain Vest;
+    struct ArmorSecondary Mythril Vest;
+    struct ArmorSecondary Adaman Vest;
+    struct ArmorSecondary Wizard Outfit;
+    struct ArmorSecondary Brigandine;
+    struct ArmorSecondary Judo Outfit;
+    struct ArmorSecondary Power Sleeve;
+    struct ArmorSecondary Earth Clothes;
+    struct ArmorSecondary Secret Clothes;
+    struct ArmorSecondary Black Costume;
+    struct ArmorSecondary Rubber Costume;
+    struct ArmorSecondary Linen Robe;
+    struct ArmorSecondary Silk Robe;
+    struct ArmorSecondary Wizard Robe;
+    struct ArmorSecondary Chameleon Robe;
+    struct ArmorSecondary White Robe;
+    struct ArmorSecondary Black Robe;
+    struct ArmorSecondary Light Robe;
+    struct ArmorSecondary Robe of Lords;
+    struct AccessorySecondary Battle Boots;
+    struct AccessorySecondary Spike Boots;
+    struct AccessorySecondary Germinas Boots;
+    struct AccessorySecondary Rubber Shoes;
+    struct AccessorySecondary Feather Boots;
+    struct AccessorySecondary Sprint Shoes;
+    struct AccessorySecondary Red Shoes;
+    struct AccessorySecondary Power Wrist;
+    struct AccessorySecondary Genji Gauntlet;
+    struct AccessorySecondary Magic Gauntlet;
+    struct AccessorySecondary Bracer;
+    struct AccessorySecondary Reflect Ring;
+    struct AccessorySecondary Defense Ring;
+    struct AccessorySecondary Magic Ring;
+    struct AccessorySecondary Cursed Ring;
+    struct AccessorySecondary Angel Ring;
+    struct AccessorySecondary Diamond Armlet;
+    struct AccessorySecondary Jade Armlet;
+    struct AccessorySecondary 108 Gems;
+    struct AccessorySecondary N-Kai Armlet;
+    struct AccessorySecondary Defense Armlet;
+    struct AccessorySecondary Small Mantle;
+    struct AccessorySecondary Leather Mantle;
+    struct AccessorySecondary Wizard Mantle;
+    struct AccessorySecondary Elf Mantle;
+    struct AccessorySecondary Dracula Mantle;
+    struct AccessorySecondary Feather Mantle;
+    struct AccessorySecondary Vanish Mantle;
+    struct AccessorySecondary Chantage;
+    struct AccessorySecondary Cherche;
+    struct AccessorySecondary Setiemson;
+    struct AccessorySecondary Salty Rage;
+    struct ItemSecondary Potion;
+    struct ItemSecondary Hi-Potion;
+    struct ItemSecondary X-Potion;
+    struct ItemSecondary Ether;
+    struct ItemSecondary Hi-Ether;
+    struct ItemSecondary Elixir;
+    struct ItemSecondary Antidote;
+    struct ItemSecondary Eye Drops;
+    struct ItemSecondary Echo Grass;
+    struct ItemSecondary Maiden's Kiss;
+    struct ItemSecondary Soft;
+    struct ItemSecondary Holy Water;
+    struct ItemSecondary Remedy;
+    struct ItemSecondary Phoenix Down;
+};
+
 typedef struct fileOpenDesc fileOpenDesc, *PfileOpenDesc;
 
 typedef struct CdlLOC CdlLOC, *PCdlLOC;
@@ -59,6 +402,267 @@ struct 16Palette {
     short argbD;
     short argbE;
     short argbF;
+};
+
+typedef struct AllPrimaryItem AllPrimaryItem, *PAllPrimaryItem;
+
+struct AllPrimaryItem {
+    struct PrimaryItemData NoWeapon;
+    struct PrimaryItemData Dagger;
+    struct PrimaryItemData Mythril Knife;
+    struct PrimaryItemData Blind Knife;
+    struct PrimaryItemData Mage Masher;
+    struct PrimaryItemData Platina Dagger;
+    struct PrimaryItemData Main Gauche;
+    struct PrimaryItemData Orichalcum;
+    struct PrimaryItemData Assassin Dagger;
+    struct PrimaryItemData Air Knife;
+    struct PrimaryItemData Zorlin Shape;
+    struct PrimaryItemData Hidden Knife;
+    struct PrimaryItemData Ninja Knife;
+    struct PrimaryItemData Short Edge;
+    struct PrimaryItemData Ninja Edge;
+    struct PrimaryItemData Spell Edge;
+    struct PrimaryItemData Sasuke Knife;
+    struct PrimaryItemData Iga Knife;
+    struct PrimaryItemData Koga Knife;
+    struct PrimaryItemData Broad Sword;
+    struct PrimaryItemData Long Sword;
+    struct PrimaryItemData Iron Sword;
+    struct PrimaryItemData Mythril Sword;
+    struct PrimaryItemData Blood Sword;
+    struct PrimaryItemData Coral Sword;
+    struct PrimaryItemData Ancient Sword;
+    struct PrimaryItemData Sleep Sword;
+    struct PrimaryItemData Platinum Sword;
+    struct PrimaryItemData Diamond Sword;
+    struct PrimaryItemData Ice Brand;
+    struct PrimaryItemData Rune Blade;
+    struct PrimaryItemData Nagrarock;
+    struct PrimaryItemData Materia Blade;
+    struct PrimaryItemData Defender;
+    struct PrimaryItemData Save the Queen;
+    struct PrimaryItemData Excalibur;
+    struct PrimaryItemData Ragnarok;
+    struct PrimaryItemData Chaos Blade;
+    struct PrimaryItemData Asura Knife;
+    struct PrimaryItemData Koutetsu Knife;
+    struct PrimaryItemData Bizen Boat;
+    struct PrimaryItemData Murasame;
+    struct PrimaryItemData Heaven's Cloud;
+    struct PrimaryItemData Kiyomori;
+    struct PrimaryItemData Muramasa;
+    struct PrimaryItemData Kikuichimoji;
+    struct PrimaryItemData Masamune;
+    struct PrimaryItemData Chirijiraden;
+    struct PrimaryItemData Battle Axe;
+    struct PrimaryItemData Giant Axe;
+    struct PrimaryItemData Slasher;
+    struct PrimaryItemData Rod;
+    struct PrimaryItemData Thunder Rod;
+    struct PrimaryItemData Flame Rod;
+    struct PrimaryItemData Ice Rod;
+    struct PrimaryItemData Poison Rod;
+    struct PrimaryItemData Wizard Rod;
+    struct PrimaryItemData Dragon Rod;
+    struct PrimaryItemData Faith Rod;
+    struct PrimaryItemData Oak Staff;
+    struct PrimaryItemData White Staff;
+    struct PrimaryItemData Healing Staff;
+    struct PrimaryItemData Rainbow Staff;
+    struct PrimaryItemData Wizard Staff;
+    struct PrimaryItemData Gold Staff;
+    struct PrimaryItemData Mace of Zeus;
+    struct PrimaryItemData Sage Staff;
+    struct PrimaryItemData Flail;
+    struct PrimaryItemData Flame Whip;
+    struct PrimaryItemData Morning Star;
+    struct PrimaryItemData Scorpion Tail;
+    struct PrimaryItemData Romanda Gun;
+    struct PrimaryItemData Mythril Gun;
+    struct PrimaryItemData Stone Gun;
+    struct PrimaryItemData Blaze Gun;
+    struct PrimaryItemData Glacier Gun;
+    struct PrimaryItemData Blast Gun;
+    struct PrimaryItemData Bow Gun;
+    struct PrimaryItemData Night Killer;
+    struct PrimaryItemData Cross Bow;
+    struct PrimaryItemData Poison Bow;
+    struct PrimaryItemData Hunting Bow;
+    struct PrimaryItemData Gastrafitis;
+    struct PrimaryItemData Long Bow;
+    struct PrimaryItemData Silver Bow;
+    struct PrimaryItemData Ice Bow;
+    struct PrimaryItemData Lightning Bow;
+    struct PrimaryItemData Windslash Bow;
+    struct PrimaryItemData Mythril Bow;
+    struct PrimaryItemData Ultimus Bow;
+    struct PrimaryItemData Yoichi Bow;
+    struct PrimaryItemData Perseus Bow;
+    struct PrimaryItemData Ramia Harp;
+    struct PrimaryItemData Bloody Strings;
+    struct PrimaryItemData Fairy Harp;
+    struct PrimaryItemData Battle Dict;
+    struct PrimaryItemData Monster Dict;
+    struct PrimaryItemData Papyrus Plate;
+    struct PrimaryItemData Madlemgen;
+    struct PrimaryItemData Javelin;
+    struct PrimaryItemData Spear;
+    struct PrimaryItemData Mythril Spear;
+    struct PrimaryItemData Partisan;
+    struct PrimaryItemData Oberisk;
+    struct PrimaryItemData Holy Lance;
+    struct PrimaryItemData Dragon Whisker;
+    struct PrimaryItemData Javelin (II);
+    struct PrimaryItemData Cypress Rod;
+    struct PrimaryItemData Battle Bamboo;
+    struct PrimaryItemData Musk Rod;
+    struct PrimaryItemData Iron Fan;
+    struct PrimaryItemData Gokuu Rod;
+    struct PrimaryItemData Ivory Rod;
+    struct PrimaryItemData Octagon Rod;
+    struct PrimaryItemData Whale Whisker;
+    struct PrimaryItemData C Bag;
+    struct PrimaryItemData FS Bag;
+    struct PrimaryItemData P Bag;
+    struct PrimaryItemData H Bag;
+    struct PrimaryItemData Persia;
+    struct PrimaryItemData Cashmere;
+    struct PrimaryItemData Ryozan Silk;
+    struct PrimaryItemData Shuriken;
+    struct PrimaryItemData Magic Shuriken;
+    struct PrimaryItemData Yagyu Darkness;
+    struct PrimaryItemData Fire Ball;
+    struct PrimaryItemData Water Ball;
+    struct PrimaryItemData Lightning Ball;
+    struct PrimaryItemData Escutcheon;
+    struct PrimaryItemData Buckler;
+    struct PrimaryItemData Bronze Shield;
+    struct PrimaryItemData Round Shield;
+    struct PrimaryItemData Mythril Shield;
+    struct PrimaryItemData Gold Shield;
+    struct PrimaryItemData Ice Shield;
+    struct PrimaryItemData Flame Shield;
+    struct PrimaryItemData Aegis Shield;
+    struct PrimaryItemData Diamond Shield;
+    struct PrimaryItemData Platina Shield;
+    struct PrimaryItemData Crystal Shield;
+    struct PrimaryItemData Genji Shield;
+    struct PrimaryItemData Kaiser Plate;
+    struct PrimaryItemData Venetian Shield;
+    struct PrimaryItemData Escutcheon (II);
+    struct PrimaryItemData Leather Helmet;
+    struct PrimaryItemData Bronze Helmet;
+    struct PrimaryItemData Iron Helmet;
+    struct PrimaryItemData Barbuta;
+    struct PrimaryItemData Mythril Helmet;
+    struct PrimaryItemData Gold Helmet;
+    struct PrimaryItemData Cross Helmet;
+    struct PrimaryItemData Diamond Helmet;
+    struct PrimaryItemData Platina Helmet;
+    struct PrimaryItemData Circlet;
+    struct PrimaryItemData Crystal Helmet;
+    struct PrimaryItemData Genji Helmet;
+    struct PrimaryItemData Grand Helmet;
+    struct PrimaryItemData Leather Hat;
+    struct PrimaryItemData Feather Hat;
+    struct PrimaryItemData Red Hood;
+    struct PrimaryItemData Headgear;
+    struct PrimaryItemData Triangle Hat;
+    struct PrimaryItemData Green Beret;
+    struct PrimaryItemData Twist Headband;
+    struct PrimaryItemData Holy Miter;
+    struct PrimaryItemData Black Hood;
+    struct PrimaryItemData Golden Hairpin;
+    struct PrimaryItemData Flash Hat;
+    struct PrimaryItemData Thief Hat;
+    struct PrimaryItemData Cachusha;
+    struct PrimaryItemData Berette;
+    struct PrimaryItemData Ribbon;
+    struct PrimaryItemData Leather Armor;
+    struct PrimaryItemData Linen Cuirass;
+    struct PrimaryItemData Bronze Armor;
+    struct PrimaryItemData Chain Mail;
+    struct PrimaryItemData Mythril Armor;
+    struct PrimaryItemData Plate Mail;
+    struct PrimaryItemData Gold Armor;
+    struct PrimaryItemData Diamond Armor;
+    struct PrimaryItemData Platina Armor;
+    struct PrimaryItemData Carabini Mail;
+    struct PrimaryItemData Crystal Mail;
+    struct PrimaryItemData Genji Armor;
+    struct PrimaryItemData Reflect Mail;
+    struct PrimaryItemData Maximilian;
+    struct PrimaryItemData Clothes;
+    struct PrimaryItemData Leather Outfit;
+    struct PrimaryItemData Leather Vest;
+    struct PrimaryItemData Chain Vest;
+    struct PrimaryItemData Mythril Vest;
+    struct PrimaryItemData Adaman Vest;
+    struct PrimaryItemData Wizard Outfit;
+    struct PrimaryItemData Brigandine;
+    struct PrimaryItemData Judo Outfit;
+    struct PrimaryItemData Power Sleeve;
+    struct PrimaryItemData Earth Clothes;
+    struct PrimaryItemData Secret Clothes;
+    struct PrimaryItemData Black Costume;
+    struct PrimaryItemData Rubber Costume;
+    struct PrimaryItemData Linen Robe;
+    struct PrimaryItemData Silk Robe;
+    struct PrimaryItemData Wizard Robe;
+    struct PrimaryItemData Chameleon Robe;
+    struct PrimaryItemData White Robe;
+    struct PrimaryItemData Black Robe;
+    struct PrimaryItemData Light Robe;
+    struct PrimaryItemData Robe of Lords;
+    struct PrimaryItemData Battle Boots;
+    struct PrimaryItemData Spike Boots;
+    struct PrimaryItemData Germinas Boots;
+    struct PrimaryItemData Rubber Shoes;
+    struct PrimaryItemData Feather Boots;
+    struct PrimaryItemData Sprint Shoes;
+    struct PrimaryItemData Red Shoes;
+    struct PrimaryItemData Power Wrist;
+    struct PrimaryItemData Genji Gauntlet;
+    struct PrimaryItemData Magic Gauntlet;
+    struct PrimaryItemData Bracer;
+    struct PrimaryItemData Reflect Ring;
+    struct PrimaryItemData Defense Ring;
+    struct PrimaryItemData Magic Ring;
+    struct PrimaryItemData Cursed Ring;
+    struct PrimaryItemData Angel Ring;
+    struct PrimaryItemData Diamond Armlet;
+    struct PrimaryItemData Jade Armlet;
+    struct PrimaryItemData 108 Gems;
+    struct PrimaryItemData N-Kai Armlet;
+    struct PrimaryItemData Defense Armlet;
+    struct PrimaryItemData Small Mantle;
+    struct PrimaryItemData Leather Mantle;
+    struct PrimaryItemData Wizard Mantle;
+    struct PrimaryItemData Elf Mantle;
+    struct PrimaryItemData Dracula Mantle;
+    struct PrimaryItemData Feather Mantle;
+    struct PrimaryItemData Vanish Mantle;
+    struct PrimaryItemData Chantage;
+    struct PrimaryItemData Cherche;
+    struct PrimaryItemData Setiemson;
+    struct PrimaryItemData Salty Rage;
+    struct PrimaryItemData Potion;
+    struct PrimaryItemData Hi-Potion;
+    struct PrimaryItemData X-Potion;
+    struct PrimaryItemData Ether;
+    struct PrimaryItemData Hi-Ether;
+    struct PrimaryItemData Elixir;
+    struct PrimaryItemData Antidote;
+    struct PrimaryItemData Eye Drops;
+    struct PrimaryItemData Echo Grass;
+    struct PrimaryItemData Maiden's Kiss;
+    struct PrimaryItemData Soft;
+    struct PrimaryItemData Holy Water;
+    struct PrimaryItemData Remedy;
+    struct PrimaryItemData Phoenix Down;
+    struct PrimaryItemData ENTD_Random;
+    struct PrimaryItemData ENTD_None;
 };
 
 
@@ -27337,10 +27941,10 @@ undefined4 Get_AbilityPointers_and_Type(uint param_1,undefined4 *param_2,int *pa
 
 
 
-undefined * Get_Item_DataPointer(uint param_1)
+PrimaryItemData * Get_Item_DataPointer(uint param_1)
 
 {
-  return &UNK_80062eb8 + (param_1 & 0xff) * 0xc;
+  return &AllPrimaryItem_80062eb8.NoWeapon + (param_1 & 0xff);
 }
 
 
@@ -28242,7 +28846,7 @@ void Create_Unit_Equip_From_ENTD(int param_1,int param_2)
         }
       }
     }
-    if (((&DAT_80062ebb)[uVar4 * 0xc] & 0x40) == 0) {
+    if (((&AllPrimaryItem_80062eb8.NoWeapon)[uVar4].field_0x3 & 0x40) == 0) {
       *(byte *)(param_1 + 0x1d) = bVar2;
       *(undefined *)(param_1 + 0x1e) = 0xff;
     }
@@ -28252,8 +28856,9 @@ void Create_Unit_Equip_From_ENTD(int param_1,int param_2)
     }
     bVar2 = *(byte *)(param_2 + 0x16);
     if ((*(byte *)(param_1 + 0x1d) != 0xff) &&
-       ((((&DAT_80063ab9)[(uint)(byte)(&DAT_80062ebc)[(uint)*(byte *)(param_1 + 0x1d) * 0xc] * 8] &
-         1) != 0 || ((*(byte *)(param_1 + 0x91) & 2) != 0)))) {
+       ((((&WeaponSecondary.NoWeapon)
+          [(&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x1d)].SecondID].field_0x1 & 1)
+         != 0 || ((*(byte *)(param_1 + 0x91) & 2) != 0)))) {
       bVar2 = 0xff;
     }
     if ((bVar2 == 0xfe) && ((*(byte *)(param_1 + 0x91) & 1) != 0)) {
@@ -28267,7 +28872,7 @@ void Create_Unit_Equip_From_ENTD(int param_1,int param_2)
         bVar2 = Create_Random_Equip(param_1,0x40,0,0xff);
       }
     }
-    if (((&DAT_80062ebb)[(uint)bVar2 * 0xc] & 0x80) == 0) {
+    if (((&AllPrimaryItem_80062eb8.NoWeapon)[bVar2].field_0x3 & 0x80) == 0) {
       *(byte *)(param_1 + 0x20) = bVar2;
       *(undefined *)(param_1 + 0x1f) = 0xff;
     }
@@ -28364,38 +28969,34 @@ void Equipment_Stat_Calc(int param_1)
 
 {
   byte bVar1;
-  int iVar2;
   
   Data_Null((undefined *)(param_1 + 0x3c),0xb);
   *(undefined *)(param_1 + 0x43) = (&DAT_800610d1)[(uint)*(byte *)(param_1 + 3) * 0x30];
   if ((*(byte *)(param_1 + 6) & 0x20) == 0) {
-    iVar2 = (uint)*(byte *)(param_1 + 0x1c) * 0xc;
-    if (((&DAT_80062ebb)[iVar2] & 8) != 0) {
-      bVar1 = (&DAT_80062ebc)[iVar2];
-      *(undefined *)(param_1 + 0x40) = (&DAT_80063f58)[(uint)bVar1 * 2];
-      *(undefined *)(param_1 + 0x44) = (&DAT_80063f59)[(uint)bVar1 * 2];
+    if (((&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x1c)].field_0x3 & 8) != 0) {
+      bVar1 = (&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x1c)].SecondID;
+      *(byte *)(param_1 + 0x40) = (&OtherSecondary.Battle_Boots)[bVar1].PhysicalEvade;
+      *(byte *)(param_1 + 0x44) = (&OtherSecondary.Battle_Boots)[bVar1].MagicalEvade;
     }
-    iVar2 = (uint)*(byte *)(param_1 + 0x1e) * 0xc;
-    if (((&DAT_80062ebb)[iVar2] & 0x40) != 0) {
-      bVar1 = (&DAT_80062ebc)[iVar2];
-      *(undefined *)(param_1 + 0x41) = (&DAT_80063eb8)[(uint)bVar1 * 2];
-      *(undefined *)(param_1 + 0x45) = (&DAT_80063eb9)[(uint)bVar1 * 2];
+    if (((&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x1e)].field_0x3 & 0x40) != 0) {
+      bVar1 = (&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x1e)].SecondID;
+      *(byte *)(param_1 + 0x41) = (&OtherSecondary.Escutcheon)[bVar1].PhysicalEvade;
+      *(byte *)(param_1 + 0x45) = (&OtherSecondary.Escutcheon)[bVar1].MagicalEvade;
     }
-    iVar2 = (uint)*(byte *)(param_1 + 0x20) * 0xc;
-    if (((&DAT_80062ebb)[iVar2] & 0x40) != 0) {
-      bVar1 = (&DAT_80062ebc)[iVar2];
-      *(undefined *)(param_1 + 0x42) = (&DAT_80063eb8)[(uint)bVar1 * 2];
-      *(undefined *)(param_1 + 0x46) = (&DAT_80063eb9)[(uint)bVar1 * 2];
+    if (((&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x20)].field_0x3 & 0x40) != 0) {
+      bVar1 = (&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x20)].SecondID;
+      *(byte *)(param_1 + 0x42) = (&OtherSecondary.Escutcheon)[bVar1].PhysicalEvade;
+      *(byte *)(param_1 + 0x46) = (&OtherSecondary.Escutcheon)[bVar1].MagicalEvade;
     }
-    iVar2 = (uint)*(byte *)(param_1 + 0x1d) * 8;
-    if (((&DAT_80062ebb)[(uint)*(byte *)(param_1 + 0x1d) * 0xc] & 0x80) != 0) {
-      *(undefined *)(param_1 + 0x3c) = (&DAT_80063abc)[iVar2];
-      *(undefined *)(param_1 + 0x3e) = (&DAT_80063abd)[iVar2];
+    bVar1 = *(byte *)(param_1 + 0x1d);
+    if (((&AllPrimaryItem_80062eb8.NoWeapon)[bVar1].field_0x3 & 0x80) != 0) {
+      *(byte *)(param_1 + 0x3c) = (&WeaponSecondary.NoWeapon)[bVar1].WeaponPower;
+      *(byte *)(param_1 + 0x3e) = (&WeaponSecondary.NoWeapon)[bVar1].Evade;
     }
-    iVar2 = (uint)*(byte *)(param_1 + 0x1f) * 8;
-    if (((&DAT_80062ebb)[(uint)*(byte *)(param_1 + 0x1f) * 0xc] & 0x80) != 0) {
-      *(undefined *)(param_1 + 0x3d) = (&DAT_80063abc)[iVar2];
-      *(undefined *)(param_1 + 0x3f) = (&DAT_80063abd)[iVar2];
+    bVar1 = *(byte *)(param_1 + 0x1f);
+    if (((&AllPrimaryItem_80062eb8.NoWeapon)[bVar1].field_0x3 & 0x80) != 0) {
+      *(byte *)(param_1 + 0x3d) = (&WeaponSecondary.NoWeapon)[bVar1].WeaponPower;
+      *(byte *)(param_1 + 0x3f) = (&WeaponSecondary.NoWeapon)[bVar1].Evade;
     }
   }
   return;
@@ -28408,7 +29009,7 @@ void Equipment_Attr_Calc(int param_1,int param_2)
 {
   byte bVar1;
   int iVar2;
-  int iVar3;
+  uint uVar3;
   uint uVar4;
   byte *pbVar5;
   int iVar6;
@@ -28427,58 +29028,59 @@ void Equipment_Attr_Calc(int param_1,int param_2)
       if (uVar4 == 0x20) {
         *(byte *)(param_1 + 0x184) = *(byte *)(param_1 + 0x184) | 4;
       }
-      if ((uVar4 < 0x80) && ((byte)(&DAT_80062ebd)[uVar4 * 0xc] - 3 < 2)) {
+      if ((uVar4 < 0x80) && ((&AllPrimaryItem_80062eb8.NoWeapon)[uVar4].ItemType - 3 < 2)) {
         *(byte *)(param_1 + 0x184) = *(byte *)(param_1 + 0x184) | 8;
       }
       if (uVar4 != 0xff) {
-        iVar2 = uVar4 * 0xc;
-        iVar6 = (uint)(byte)(&DAT_80062ebf)[iVar2] * 0x19;
+        iVar6 = (uint)(&AllPrimaryItem_80062eb8.NoWeapon)[uVar4].ItemAttr * 0x19;
         pbVar8 = &DAT_800642c4 + iVar6;
         pbVar5 = pbVar8;
         pbVar7 = (byte *)(param_1 + 0x33);
         do {
-          uVar4 = (uint)*pbVar5 + (uint)*pbVar7;
+          uVar3 = (uint)*pbVar5 + (uint)*pbVar7;
           pbVar5 = pbVar5 + 1;
-          if (0xff < uVar4) {
-            uVar4 = 0xff;
+          if (0xff < uVar3) {
+            uVar3 = 0xff;
           }
-          *pbVar7 = (byte)uVar4;
+          *pbVar7 = (byte)uVar3;
           pbVar7 = pbVar7 + 1;
         } while ((int)pbVar7 < param_1 + 0x36);
-        uVar4 = (uint)(byte)(&DAT_800642c7)[iVar6] + (uint)*(byte *)(param_1 + 0x3a);
-        if (0xfd < uVar4) {
-          uVar4 = 0xfd;
+        uVar3 = (uint)(byte)(&DAT_800642c7)[iVar6] + (uint)*(byte *)(param_1 + 0x3a);
+        if (0xfd < uVar3) {
+          uVar3 = 0xfd;
         }
-        *(char *)(param_1 + 0x3a) = (char)uVar4;
-        uVar4 = (uint)(byte)(&DAT_800642c8)[iVar6] + (uint)*(byte *)(param_1 + 0x3b);
+        *(char *)(param_1 + 0x3a) = (char)uVar3;
+        uVar3 = (uint)(byte)(&DAT_800642c8)[iVar6] + (uint)*(byte *)(param_1 + 0x3b);
         iVar6 = 0;
-        if (7 < uVar4) {
-          uVar4 = 7;
+        if (7 < uVar3) {
+          uVar3 = 7;
         }
-        *(char *)(param_1 + 0x3b) = (char)uVar4;
+        *(char *)(param_1 + 0x3b) = (char)uVar3;
         pbVar5 = (byte *)(param_1 + 0x4e);
         do {
-          iVar3 = iVar6 + 5;
+          iVar2 = iVar6 + 5;
           iVar6 = iVar6 + 1;
-          *pbVar5 = pbVar8[iVar3] | *pbVar5;
+          *pbVar5 = pbVar8[iVar2] | *pbVar5;
           pbVar5 = pbVar5 + 1;
         } while (iVar6 < 0xf);
         iVar6 = 0;
         pbVar5 = (byte *)(param_1 + 0x6d);
         do {
-          iVar3 = iVar6 + 0x14;
+          iVar2 = iVar6 + 0x14;
           iVar6 = iVar6 + 1;
-          *pbVar5 = pbVar8[iVar3] | *pbVar5;
+          *pbVar5 = pbVar8[iVar2] | *pbVar5;
           pbVar5 = pbVar5 + 1;
         } while (iVar6 < 5);
-        if (((&DAT_80062ebb)[iVar2] & 0x30) != 0) {
-          bVar1 = (&DAT_80062ebc)[iVar2];
-          uVar4 = (uint)*(ushort *)(param_1 + 0x2a) + (uint)(byte)(&DAT_80063ed8)[(uint)bVar1 * 2];
+        if (((&AllPrimaryItem_80062eb8.NoWeapon)[uVar4].field_0x3 & 0x30) != 0) {
+          bVar1 = (&AllPrimaryItem_80062eb8.NoWeapon)[uVar4].SecondID;
+          uVar4 = (uint)*(ushort *)(param_1 + 0x2a) +
+                  (uint)(&OtherSecondary.Leather_Helmet)[bVar1].HP;
           if (999 < uVar4) {
             uVar4 = 999;
           }
           *(short *)(param_1 + 0x2a) = (short)uVar4;
-          uVar4 = (uint)*(ushort *)(param_1 + 0x2e) + (uint)(byte)(&DAT_80063ed9)[(uint)bVar1 * 2];
+          uVar4 = (uint)*(ushort *)(param_1 + 0x2e) +
+                  (uint)(&OtherSecondary.Leather_Helmet)[bVar1].MP;
           if (999 < uVar4) {
             uVar4 = 999;
           }
@@ -28747,13 +29349,15 @@ LAB_8005cd24:
   if (uVar4 < uVar7) {
     iVar8 = uVar4 * 0xc;
     do {
-      if (((&DAT_80062ebb)[iVar8] & 2) == 0) {
-        bVar2 = (&DAT_80062ebd)[iVar8];
+      if (((&AllPrimaryItem_80062eb8.NoWeapon.field_0x3)[iVar8] & 2) == 0) {
+        bVar2 = (&AllPrimaryItem_80062eb8.NoWeapon.ItemType)[iVar8];
         if (((((param_4 & 0xff) == 0xff) || ((uint)bVar2 == (param_4 & 0xff))) &&
             (((uint)*(byte *)(param_1 + (uint)(bVar2 >> 3) + 0x4a) & 0x80 >> (bVar2 & 7)) != 0)) &&
            ((param_3 == 0 ||
-            ((param_3 & (&DAT_80063ab9)[(uint)(byte)(&DAT_80062ebc)[iVar8] * 8]) != 0)))) {
-          bVar2 = (&DAT_80062eba)[iVar8];
+            ((param_3 &
+             (&WeaponSecondary.NoWeapon)[(&AllPrimaryItem_80062eb8.NoWeapon.SecondID)[iVar8]].
+             field_0x1) != 0)))) {
+          bVar2 = (&AllPrimaryItem_80062eb8.NoWeapon.ReqLevel)[iVar8];
           if (bVar2 <= bVar1) {
             uVar6 = uVar5;
             if (bVar9 < bVar2) {

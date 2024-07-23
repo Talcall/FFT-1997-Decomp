@@ -11,11 +11,45 @@ typedef unsigned short    undefined2;
 typedef unsigned int    undefined4;
 typedef unsigned short    ushort;
 typedef unsigned short    word;
-typedef struct ShieldSecondary ShieldSecondary, *PShieldSecondary;
+typedef struct PrimaryAbilityData PrimaryAbilityData, *PPrimaryAbilityData;
 
-struct ShieldSecondary {
-    byte PhysicalEvade;
-    byte MagicalEvade;
+struct PrimaryAbilityData {
+    short JP cost;
+    byte Chance to Learn;
+    int AbilityType:4;
+    int LearnOnHit:1;
+    int DisplayName:1;
+    int LearnWithJP:1;
+    int AITargetAllies:1;
+    int AITargetEnemies:1;
+    int AIUnequips:1;
+    int AIAltersStats:1;
+    int AIAddStatus:1;
+    int AICancelStatus:1;
+    int AIMP:1;
+    int AIHP:1;
+    int AISilencable:1;
+    int AIEvadeable:1;
+    int AIFaith:1;
+    int AIRandomHits:1;
+    int AIHasChargeTime:1;
+    int AIUndeadReverse:1;
+    int AIReflectable:1;
+    int AITargetMap:1;
+    int AIPhysical:1;
+    int AIMagic:1;
+    int AI3DirRange:1;
+    int AI3DirMelee:1;
+    int AINonPierce:1;
+    int AILinear:1;
+    int AIObstacle:1;
+    int AIArc:1;
+    int EvadeMotion:1;
+    int WeaponRange:1;
+    int AIRequiresMS:1; // not sure if this really does affect monster skill usage in any way
+    int AIOnlyEnemies:1;
+    int AIOnlyAllies:1;
+    int AIUsable:1;
 };
 
 typedef struct PrimaryItemData PrimaryItemData, *PPrimaryItemData;
@@ -201,18 +235,7 @@ struct AllWeaponSecondaryItem {
     struct WeaponSecondary Lightning Ball;
 };
 
-typedef struct AllOtherSecondaryItem AllOtherSecondaryItem, *PAllOtherSecondaryItem;
-
-typedef struct ArmorSecondary ArmorSecondary, *PArmorSecondary;
-
-typedef struct AccessorySecondary AccessorySecondary, *PAccessorySecondary;
-
 typedef struct ItemSecondary ItemSecondary, *PItemSecondary;
-
-struct AccessorySecondary {
-    byte PhysicalEvade;
-    byte MagicalEvade;
-};
 
 struct ItemSecondary {
     byte Formula;
@@ -220,9 +243,494 @@ struct ItemSecondary {
     byte InflictStatusID;
 };
 
+typedef struct StatusList StatusList, *PStatusList;
+
+struct StatusList {
+    int Perform:1;
+    int Defend:1;
+    int Jump:1;
+    int Charging:1;
+    int Undead:1;
+    int Dead:1;
+    int Crystal:1;
+    int Treasure:1;
+    int CursedDEPRECATED:1;
+    int BloodSuck:1;
+    int Silence:1;
+    int Confusion:1;
+    int Darkness:1;
+    int Traitor:1;
+    int Petrify:1;
+    int Critical:1;
+    int Frog:1;
+    int Chicken:1;
+    int Berserk:1;
+    int Transparent:1;
+    int Reraise:1;
+    int Float:1;
+    int Oil:1;
+    int WallDEPRECATED:1;
+    int Stop:1;
+    int Slow:1;
+    int Haste:1;
+    int Shell:1;
+    int Protect:1;
+    int Regen:1;
+    int Poison:1;
+    int DeathSentence:1;
+    int Reflect:1;
+    int DontAct:1;
+    int DontMove:1;
+    int Sleep:1;
+    int Charm:1;
+    int Innocent:1;
+    int Faith:1;
+};
+
+typedef struct AllSkillsets AllSkillsets, *PAllSkillsets;
+
+typedef struct Skillset Skillset, *PSkillset;
+
+struct Skillset {
+    short ActionFlags;
+    byte RSMFlags;
+    byte Ability0;
+    byte Ability1;
+    byte Ability2;
+    byte Ability3;
+    byte Ability4;
+    byte Ability5;
+    byte Ability6;
+    byte Ability7;
+    byte Ability8;
+    byte Ability9;
+    byte AbilityA;
+    byte AbilityB;
+    byte AbilityC;
+    byte AbilityD;
+    byte AbilityE;
+    byte AbilityF;
+    byte RSM0;
+    byte RSM1;
+    byte RSM2;
+    byte RSM3;
+    byte RSM4;
+    byte RSM5;
+};
+
+struct AllSkillsets {
+    struct Skillset field0_0x0;
+    struct Skillset Attack;
+    struct Skillset Defend;
+    struct Skillset EquipChange;
+    struct Skillset SwimDEPRECATED;
+    struct Skillset BasicSkill;
+    struct Skillset Item;
+    struct Skillset BattleSkill;
+    struct Skillset Charge;
+    struct Skillset PunchArt;
+    struct Skillset WhiteMagic;
+    struct Skillset BlackMagic;
+    struct Skillset TimeMagic;
+    struct Skillset SummonMagic;
+    struct Skillset Steal;
+    struct Skillset TalkSkill;
+    struct Skillset YinYangMagic;
+    struct Skillset Elemental;
+    struct Skillset Jump;
+    struct Skillset DrawOut;
+    struct Skillset Throw;
+    struct Skillset MathSkill;
+    struct Skillset Sing;
+    struct Skillset Dance;
+    struct Skillset Mimic;
+    struct Skillset GutsR1;
+    struct Skillset GutsR2;
+    struct Skillset GutsR4;
+    struct Skillset GutsD;
+    struct Skillset HolySwordD;
+    struct Skillset MightySwordD;
+    struct Skillset BasicSkillA;
+    struct Skillset DarkSwordGGuest;
+    struct Skillset HolySwordAGuest;
+    struct Skillset HolySwordW1;
+    struct Skillset MagicT;
+    struct Skillset HolyMagicO;
+    struct Skillset SnipeMGuest;
+    struct Skillset SnipeMJoin;
+    struct Skillset DarkSwordGEnemy;
+    struct Skillset HolySwordAJoin;
+    struct Skillset Limit;
+    struct Skillset WhiteAid;
+    struct Skillset DragonR;
+    struct Skillset BreathR;
+    struct Skillset TruthGuest;
+    struct Skillset UntruthDead;
+    struct Skillset StarryHeaven;
+    struct Skillset WhiteKnightW2;
+    struct Skillset HolyMagicAEvent;
+    struct Skillset TruthJoin;
+    struct Skillset BattleSkillI;
+    struct Skillset JumpMaster;
+    struct Skillset PunchSkillSpecial;
+    struct Skillset UseHandC;
+    struct Skillset UseHandL;
+    struct Skillset ThrowE;
+    struct Skillset ThrowE2;
+    struct Skillset HolySwordSpecial;
+    struct Skillset SwordSpirit;
+    struct Skillset MightSwordR;
+    struct Skillset AllMagicSong;
+    struct Skillset SwordSpirit2;
+    struct Skillset BloodSuckE;
+    struct Skillset MightySwordV;
+    struct Skillset AllMagicQuake;
+    struct Skillset MightySwordMEnemy;
+    struct Skillset MightySwordMJoin;
+    struct Skillset SnipeB;
+    struct Skillset MagicSword;
+    struct Skillset SwordSkillD;
+    struct Skillset AllMagic3;
+    struct Skillset AllMagicS;
+    struct Skillset Phantom;
+    struct Skillset AllSwordskill;
+    struct Skillset DestroySword;
+    struct Skillset HolyMagicABattle;
+    struct Skillset field77_0x785;
+    struct Skillset field78_0x79e;
+    struct Skillset field79_0x7b7;
+    struct Skillset field80_0x7d0;
+    struct Skillset field81_0x7e9;
+    struct Skillset field82_0x802;
+    struct Skillset field83_0x81b;
+    struct Skillset field84_0x834;
+    struct Skillset field85_0x84d;
+    struct Skillset field86_0x866;
+    struct Skillset field87_0x87f;
+    struct Skillset field88_0x898;
+    struct Skillset field89_0x8b1;
+    struct Skillset field90_0x8ca;
+    struct Skillset field91_0x8e3;
+    struct Skillset field92_0x8fc;
+    struct Skillset field93_0x915;
+    struct Skillset field94_0x92e;
+    struct Skillset field95_0x947;
+    struct Skillset field96_0x960;
+    struct Skillset field97_0x979;
+    struct Skillset field98_0x992;
+    struct Skillset field99_0x9ab;
+    struct Skillset field100_0x9c4;
+    struct Skillset field101_0x9dd;
+    struct Skillset field102_0x9f6;
+    struct Skillset FearWarlock;
+    struct Skillset Warlock Summon;
+    struct Skillset field105_0xa41;
+    struct Skillset field106_0xa5a;
+    struct Skillset FearAngel;
+    struct Skillset JaMagic;
+    struct Skillset field109_0xaa5;
+    struct Skillset field110_0xabe;
+    struct Skillset FearRegulator;
+    struct Skillset DimensionMagic;
+    struct Skillset field113_0xb09;
+    struct Skillset field114_0xb22;
+    struct Skillset FearImpure;
+    struct Skillset Impure;
+    struct Skillset field117_0xb6d;
+    struct Skillset field118_0xb86;
+    struct Skillset FearGhost;
+    struct Skillset AllMagicGhost;
+    struct Skillset field121_0xbd1;
+    struct Skillset field122_0xbea;
+    struct Skillset UltimateMagic;
+    struct Skillset Chaos;
+    struct Skillset CompleteMagic;
+    struct Skillset Saturation;
+    struct Skillset field127_0xc67;
+    struct Skillset field128_0xc80;
+    struct Skillset field129_0xc99;
+    struct Skillset field130_0xcb2;
+    struct Skillset field131_0xccb;
+    struct Skillset field132_0xce4;
+    struct Skillset field133_0xcfd;
+    struct Skillset field134_0xd16;
+    struct Skillset field135_0xd2f;
+    struct Skillset field136_0xd48;
+    struct Skillset field137_0xd61;
+    struct Skillset field138_0xd7a;
+    struct Skillset field139_0xd93;
+    struct Skillset field140_0xdac;
+    struct Skillset field141_0xdc5;
+    struct Skillset field142_0xdde;
+    struct Skillset field143_0xdf7;
+    struct Skillset field144_0xe10;
+    struct Skillset field145_0xe29;
+    struct Skillset field146_0xe42;
+    struct Skillset field147_0xe5b;
+    struct Skillset field148_0xe74;
+    struct Skillset field149_0xe8d;
+    struct Skillset field150_0xea6;
+    struct Skillset field151_0xebf;
+    struct Skillset field152_0xed8;
+    struct Skillset field153_0xef1;
+    struct Skillset field154_0xf0a;
+    struct Skillset SwordSkillSpecial;
+    struct Skillset ChargeZombie;
+    struct Skillset BlackMagicSpecial;
+    struct Skillset TimeMagicZombie;
+    struct Skillset YinYangMagicSpecial;
+    struct Skillset SummonMagicZombie;
+    struct Skillset ItemSpecial;
+    struct Skillset WhiteMagicSpecial;
+    struct Skillset BlackMagicZombie;
+    struct Skillset YinYangMagicZombie;
+    struct Skillset field165_0x101d;
+    struct Skillset field166_0x1036;
+    struct Skillset field167_0x104f;
+    struct Skillset field168_0x1068;
+    struct Skillset field169_0x1081;
+    struct Skillset Byblos;
+    struct Skillset Work;
+    struct Skillset Bio;
+    struct Skillset DarkCloud;
+    struct Skillset DarkMagic;
+    struct Skillset NightMagic;
+};
+
+typedef struct AllInflictStatuses AllInflictStatuses, *PAllInflictStatuses;
+
+typedef struct InflictStatuses InflictStatuses, *PInflictStatuses;
+
+struct InflictStatuses {
+    int Cancel:1;
+    int InflictSeperate:1;
+    int InflictRandom:1;
+    int InflictAll:1;
+    struct StatusList field4_0x1;
+};
+
+struct AllInflictStatuses {
+    struct InflictStatuses field0_0x0;
+    struct InflictStatuses field1_0x6;
+    struct InflictStatuses field2_0xc;
+    struct InflictStatuses field3_0x12;
+    struct InflictStatuses field4_0x18;
+    struct InflictStatuses field5_0x1e;
+    struct InflictStatuses field6_0x24;
+    struct InflictStatuses field7_0x2a;
+    struct InflictStatuses field8_0x30;
+    struct InflictStatuses field9_0x36;
+    struct InflictStatuses field10_0x3c;
+    struct InflictStatuses field11_0x42;
+    struct InflictStatuses field12_0x48;
+    struct InflictStatuses field13_0x4e;
+    struct InflictStatuses field14_0x54;
+    struct InflictStatuses field15_0x5a;
+    struct InflictStatuses field16_0x60;
+    struct InflictStatuses field17_0x66;
+    struct InflictStatuses field18_0x6c;
+    struct InflictStatuses field19_0x72;
+    struct InflictStatuses field20_0x78;
+    struct InflictStatuses field21_0x7e;
+    struct InflictStatuses field22_0x84;
+    struct InflictStatuses field23_0x8a;
+    struct InflictStatuses field24_0x90;
+    struct InflictStatuses field25_0x96;
+    struct InflictStatuses field26_0x9c;
+    struct InflictStatuses field27_0xa2;
+    struct InflictStatuses field28_0xa8;
+    struct InflictStatuses field29_0xae;
+    struct InflictStatuses field30_0xb4;
+    struct InflictStatuses field31_0xba;
+    struct InflictStatuses field32_0xc0;
+    struct InflictStatuses field33_0xc6;
+    struct InflictStatuses field34_0xcc;
+    struct InflictStatuses field35_0xd2;
+    struct InflictStatuses field36_0xd8;
+    struct InflictStatuses field37_0xde;
+    struct InflictStatuses field38_0xe4;
+    struct InflictStatuses field39_0xea;
+    struct InflictStatuses field40_0xf0;
+    struct InflictStatuses field41_0xf6;
+    struct InflictStatuses field42_0xfc;
+    struct InflictStatuses field43_0x102;
+    struct InflictStatuses field44_0x108;
+    struct InflictStatuses field45_0x10e;
+    struct InflictStatuses field46_0x114;
+    struct InflictStatuses field47_0x11a;
+    struct InflictStatuses field48_0x120;
+    struct InflictStatuses field49_0x126;
+    struct InflictStatuses field50_0x12c;
+    struct InflictStatuses field51_0x132;
+    struct InflictStatuses field52_0x138;
+    struct InflictStatuses field53_0x13e;
+    struct InflictStatuses field54_0x144;
+    struct InflictStatuses field55_0x14a;
+    struct InflictStatuses field56_0x150;
+    struct InflictStatuses field57_0x156;
+    struct InflictStatuses field58_0x15c;
+    struct InflictStatuses field59_0x162;
+    struct InflictStatuses field60_0x168;
+    struct InflictStatuses field61_0x16e;
+    struct InflictStatuses field62_0x174;
+    struct InflictStatuses field63_0x17a;
+    struct InflictStatuses field64_0x180;
+    struct InflictStatuses field65_0x186;
+    struct InflictStatuses field66_0x18c;
+    struct InflictStatuses field67_0x192;
+    struct InflictStatuses field68_0x198;
+    struct InflictStatuses field69_0x19e;
+    struct InflictStatuses field70_0x1a4;
+    struct InflictStatuses field71_0x1aa;
+    struct InflictStatuses field72_0x1b0;
+    struct InflictStatuses field73_0x1b6;
+    struct InflictStatuses field74_0x1bc;
+    struct InflictStatuses field75_0x1c2;
+    struct InflictStatuses field76_0x1c8;
+    struct InflictStatuses field77_0x1ce;
+    struct InflictStatuses field78_0x1d4;
+    struct InflictStatuses field79_0x1da;
+    struct InflictStatuses field80_0x1e0;
+    struct InflictStatuses field81_0x1e6;
+    struct InflictStatuses field82_0x1ec;
+    struct InflictStatuses field83_0x1f2;
+    struct InflictStatuses field84_0x1f8;
+    struct InflictStatuses field85_0x1fe;
+    struct InflictStatuses field86_0x204;
+    struct InflictStatuses field87_0x20a;
+    struct InflictStatuses field88_0x210;
+    struct InflictStatuses field89_0x216;
+    struct InflictStatuses field90_0x21c;
+    struct InflictStatuses field91_0x222;
+    struct InflictStatuses field92_0x228;
+    struct InflictStatuses field93_0x22e;
+    struct InflictStatuses field94_0x234;
+    struct InflictStatuses field95_0x23a;
+    struct InflictStatuses field96_0x240;
+    struct InflictStatuses field97_0x246;
+    struct InflictStatuses field98_0x24c;
+    struct InflictStatuses field99_0x252;
+    struct InflictStatuses field100_0x258;
+    struct InflictStatuses field101_0x25e;
+    struct InflictStatuses field102_0x264;
+    struct InflictStatuses field103_0x26a;
+    struct InflictStatuses field104_0x270;
+    struct InflictStatuses field105_0x276;
+    struct InflictStatuses field106_0x27c;
+    struct InflictStatuses field107_0x282;
+    struct InflictStatuses field108_0x288;
+    struct InflictStatuses field109_0x28e;
+    struct InflictStatuses field110_0x294;
+    struct InflictStatuses field111_0x29a;
+    struct InflictStatuses field112_0x2a0;
+    struct InflictStatuses field113_0x2a6;
+    struct InflictStatuses field114_0x2ac;
+    struct InflictStatuses field115_0x2b2;
+    struct InflictStatuses field116_0x2b8;
+    struct InflictStatuses field117_0x2be;
+    struct InflictStatuses field118_0x2c4;
+    struct InflictStatuses field119_0x2ca;
+    struct InflictStatuses field120_0x2d0;
+    struct InflictStatuses field121_0x2d6;
+    struct InflictStatuses field122_0x2dc;
+    struct InflictStatuses field123_0x2e2;
+    struct InflictStatuses field124_0x2e8;
+    struct InflictStatuses field125_0x2ee;
+    struct InflictStatuses field126_0x2f4;
+    struct InflictStatuses field127_0x2fa;
+};
+
+typedef struct SecondaryAbilityJump SecondaryAbilityJump, *PSecondaryAbilityJump;
+
+struct SecondaryAbilityJump {
+    byte Range;
+    byte Vert;
+};
+
+typedef struct AllMonSkillsets AllMonSkillsets, *PAllMonSkillsets;
+
+typedef struct MonSkillset MonSkillset, *PMonSkillset;
+
+struct MonSkillset {
+    byte ActionFlags;
+    byte Ability0;
+    byte Ability1;
+    byte Ability2;
+    byte AbilityMS;
+};
+
+struct AllMonSkillsets {
+    struct MonSkillset Chocobo;
+    struct MonSkillset BChocobo;
+    struct MonSkillset RChocobo;
+    struct MonSkillset Goblin;
+    struct MonSkillset BGoblin;
+    struct MonSkillset GGoblin;
+    struct MonSkillset Bomb;
+    struct MonSkillset GBomb;
+    struct MonSkillset EBomb;
+    struct MonSkillset RPanther;
+    struct MonSkillset CPanther;
+    struct MonSkillset VPanther;
+    struct MonSkillset PMindflare;
+    struct MonSkillset SMindflare;
+    struct MonSkillset Mindflare;
+    struct MonSkillset Skeleton;
+    struct MonSkillset BSkeleton;
+    struct MonSkillset LSkeleton;
+    struct MonSkillset Ghoul;
+    struct MonSkillset GGhoul;
+    struct MonSkillset RGhoul;
+    struct MonSkillset Flotiball;
+    struct MonSkillset AFlotiball;
+    struct MonSkillset PFlotiball;
+    struct MonSkillset Juravis;
+    struct MonSkillset SJuravis;
+    struct MonSkillset CJuravis;
+    struct MonSkillset Uribo;
+    struct MonSkillset PUribo;
+    struct MonSkillset WUribo;
+    struct MonSkillset Woodman;
+    struct MonSkillset Trent;
+    struct MonSkillset Taiju;
+    struct MonSkillset BullDemon;
+    struct MonSkillset MBullDemon;
+    struct MonSkillset SBullDemon;
+    struct MonSkillset Morbol;
+    struct MonSkillset OMorbol;
+    struct MonSkillset GMorbol;
+    struct MonSkillset Behemoth;
+    struct MonSkillset KBehemoth;
+    struct MonSkillset DBehemoth;
+    struct MonSkillset Dragon;
+    struct MonSkillset BDragon;
+    struct MonSkillset RDragon;
+    struct MonSkillset Hyudra;
+    struct MonSkillset Hydra;
+    struct MonSkillset Tiamat;
+};
+
+typedef struct AllOtherSecondaryItem AllOtherSecondaryItem, *PAllOtherSecondaryItem;
+
+typedef struct ShieldSecondary ShieldSecondary, *PShieldSecondary;
+
+typedef struct ArmorSecondary ArmorSecondary, *PArmorSecondary;
+
+typedef struct AccessorySecondary AccessorySecondary, *PAccessorySecondary;
+
+struct AccessorySecondary {
+    byte PhysicalEvade;
+    byte MagicalEvade;
+};
+
 struct ArmorSecondary {
     byte HP;
     byte MP;
+};
+
+struct ShieldSecondary {
+    byte PhysicalEvade;
+    byte MagicalEvade;
 };
 
 struct AllOtherSecondaryItem {
@@ -354,35 +862,6 @@ struct AllOtherSecondaryItem {
     struct ItemSecondary Phoenix Down;
 };
 
-typedef struct fileOpenDesc fileOpenDesc, *PfileOpenDesc;
-
-typedef struct CdlLOC CdlLOC, *PCdlLOC;
-
-typedef ulong __u_long;
-
-typedef __u_long u_long;
-
-typedef uchar u_char;
-
-struct CdlLOC {
-    u_char minute;
-    u_char second;
-    u_char sector;
-    u_char track;
-};
-
-struct fileOpenDesc { // custom FFT file header used to load most files
-    undefined4 field0_0x0;
-    int busy;
-    undefined4 field2_0x8;
-    undefined4 field3_0xc;
-    int nosect;
-    int lba;
-    undefined4 field6_0x18;
-    struct CdlLOC CdlLOC;
-    u_long addr;
-};
-
 typedef struct 16Palette 16Palette, *P16Palette;
 
 struct 16Palette {
@@ -402,6 +881,523 @@ struct 16Palette {
     short argbD;
     short argbE;
     short argbF;
+};
+
+typedef struct AllPrimaryAbilities AllPrimaryAbilities, *PAllPrimaryAbilities;
+
+struct AllPrimaryAbilities {
+    struct PrimaryAbilityData field0_0x0;
+    struct PrimaryAbilityData field1_0x8;
+    struct PrimaryAbilityData field2_0x10;
+    struct PrimaryAbilityData field3_0x18;
+    struct PrimaryAbilityData field4_0x20;
+    struct PrimaryAbilityData field5_0x28;
+    struct PrimaryAbilityData field6_0x30;
+    struct PrimaryAbilityData field7_0x38;
+    struct PrimaryAbilityData field8_0x40;
+    struct PrimaryAbilityData field9_0x48;
+    struct PrimaryAbilityData field10_0x50;
+    struct PrimaryAbilityData field11_0x58;
+    struct PrimaryAbilityData field12_0x60;
+    struct PrimaryAbilityData field13_0x68;
+    struct PrimaryAbilityData field14_0x70;
+    struct PrimaryAbilityData field15_0x78;
+    struct PrimaryAbilityData field16_0x80;
+    struct PrimaryAbilityData field17_0x88;
+    struct PrimaryAbilityData field18_0x90;
+    struct PrimaryAbilityData field19_0x98;
+    struct PrimaryAbilityData field20_0xa0;
+    struct PrimaryAbilityData field21_0xa8;
+    struct PrimaryAbilityData field22_0xb0;
+    struct PrimaryAbilityData field23_0xb8;
+    struct PrimaryAbilityData field24_0xc0;
+    struct PrimaryAbilityData field25_0xc8;
+    struct PrimaryAbilityData field26_0xd0;
+    struct PrimaryAbilityData field27_0xd8;
+    struct PrimaryAbilityData field28_0xe0;
+    struct PrimaryAbilityData field29_0xe8;
+    struct PrimaryAbilityData field30_0xf0;
+    struct PrimaryAbilityData field31_0xf8;
+    struct PrimaryAbilityData field32_0x100;
+    struct PrimaryAbilityData field33_0x108;
+    struct PrimaryAbilityData field34_0x110;
+    struct PrimaryAbilityData field35_0x118;
+    struct PrimaryAbilityData field36_0x120;
+    struct PrimaryAbilityData field37_0x128;
+    struct PrimaryAbilityData field38_0x130;
+    struct PrimaryAbilityData field39_0x138;
+    struct PrimaryAbilityData field40_0x140;
+    struct PrimaryAbilityData field41_0x148;
+    struct PrimaryAbilityData field42_0x150;
+    struct PrimaryAbilityData field43_0x158;
+    struct PrimaryAbilityData field44_0x160;
+    struct PrimaryAbilityData field45_0x168;
+    struct PrimaryAbilityData field46_0x170;
+    struct PrimaryAbilityData field47_0x178;
+    struct PrimaryAbilityData field48_0x180;
+    struct PrimaryAbilityData field49_0x188;
+    struct PrimaryAbilityData field50_0x190;
+    struct PrimaryAbilityData field51_0x198;
+    struct PrimaryAbilityData field52_0x1a0;
+    struct PrimaryAbilityData field53_0x1a8;
+    struct PrimaryAbilityData field54_0x1b0;
+    struct PrimaryAbilityData field55_0x1b8;
+    struct PrimaryAbilityData field56_0x1c0;
+    struct PrimaryAbilityData field57_0x1c8;
+    struct PrimaryAbilityData field58_0x1d0;
+    struct PrimaryAbilityData field59_0x1d8;
+    struct PrimaryAbilityData field60_0x1e0;
+    struct PrimaryAbilityData field61_0x1e8;
+    struct PrimaryAbilityData field62_0x1f0;
+    struct PrimaryAbilityData field63_0x1f8;
+    struct PrimaryAbilityData field64_0x200;
+    struct PrimaryAbilityData field65_0x208;
+    struct PrimaryAbilityData field66_0x210;
+    struct PrimaryAbilityData field67_0x218;
+    struct PrimaryAbilityData field68_0x220;
+    struct PrimaryAbilityData field69_0x228;
+    struct PrimaryAbilityData field70_0x230;
+    struct PrimaryAbilityData field71_0x238;
+    struct PrimaryAbilityData field72_0x240;
+    struct PrimaryAbilityData field73_0x248;
+    struct PrimaryAbilityData field74_0x250;
+    struct PrimaryAbilityData field75_0x258;
+    struct PrimaryAbilityData field76_0x260;
+    struct PrimaryAbilityData field77_0x268;
+    struct PrimaryAbilityData field78_0x270;
+    struct PrimaryAbilityData field79_0x278;
+    struct PrimaryAbilityData field80_0x280;
+    struct PrimaryAbilityData field81_0x288;
+    struct PrimaryAbilityData field82_0x290;
+    struct PrimaryAbilityData field83_0x298;
+    struct PrimaryAbilityData field84_0x2a0;
+    struct PrimaryAbilityData field85_0x2a8;
+    struct PrimaryAbilityData field86_0x2b0;
+    struct PrimaryAbilityData field87_0x2b8;
+    struct PrimaryAbilityData field88_0x2c0;
+    struct PrimaryAbilityData field89_0x2c8;
+    struct PrimaryAbilityData field90_0x2d0;
+    struct PrimaryAbilityData field91_0x2d8;
+    struct PrimaryAbilityData field92_0x2e0;
+    struct PrimaryAbilityData field93_0x2e8;
+    struct PrimaryAbilityData field94_0x2f0;
+    struct PrimaryAbilityData field95_0x2f8;
+    struct PrimaryAbilityData field96_0x300;
+    struct PrimaryAbilityData field97_0x308;
+    struct PrimaryAbilityData field98_0x310;
+    struct PrimaryAbilityData field99_0x318;
+    struct PrimaryAbilityData field100_0x320;
+    struct PrimaryAbilityData field101_0x328;
+    struct PrimaryAbilityData field102_0x330;
+    struct PrimaryAbilityData field103_0x338;
+    struct PrimaryAbilityData field104_0x340;
+    struct PrimaryAbilityData field105_0x348;
+    struct PrimaryAbilityData field106_0x350;
+    struct PrimaryAbilityData field107_0x358;
+    struct PrimaryAbilityData field108_0x360;
+    struct PrimaryAbilityData field109_0x368;
+    struct PrimaryAbilityData field110_0x370;
+    struct PrimaryAbilityData field111_0x378;
+    struct PrimaryAbilityData field112_0x380;
+    struct PrimaryAbilityData field113_0x388;
+    struct PrimaryAbilityData field114_0x390;
+    struct PrimaryAbilityData field115_0x398;
+    struct PrimaryAbilityData field116_0x3a0;
+    struct PrimaryAbilityData field117_0x3a8;
+    struct PrimaryAbilityData field118_0x3b0;
+    struct PrimaryAbilityData field119_0x3b8;
+    struct PrimaryAbilityData field120_0x3c0;
+    struct PrimaryAbilityData field121_0x3c8;
+    struct PrimaryAbilityData field122_0x3d0;
+    struct PrimaryAbilityData field123_0x3d8;
+    struct PrimaryAbilityData field124_0x3e0;
+    struct PrimaryAbilityData field125_0x3e8;
+    struct PrimaryAbilityData field126_0x3f0;
+    struct PrimaryAbilityData field127_0x3f8;
+    struct PrimaryAbilityData field128_0x400;
+    struct PrimaryAbilityData field129_0x408;
+    struct PrimaryAbilityData field130_0x410;
+    struct PrimaryAbilityData field131_0x418;
+    struct PrimaryAbilityData field132_0x420;
+    struct PrimaryAbilityData field133_0x428;
+    struct PrimaryAbilityData field134_0x430;
+    struct PrimaryAbilityData field135_0x438;
+    struct PrimaryAbilityData field136_0x440;
+    struct PrimaryAbilityData field137_0x448;
+    struct PrimaryAbilityData field138_0x450;
+    struct PrimaryAbilityData field139_0x458;
+    struct PrimaryAbilityData field140_0x460;
+    struct PrimaryAbilityData field141_0x468;
+    struct PrimaryAbilityData field142_0x470;
+    struct PrimaryAbilityData field143_0x478;
+    struct PrimaryAbilityData field144_0x480;
+    struct PrimaryAbilityData field145_0x488;
+    struct PrimaryAbilityData field146_0x490;
+    struct PrimaryAbilityData field147_0x498;
+    struct PrimaryAbilityData field148_0x4a0;
+    struct PrimaryAbilityData field149_0x4a8;
+    struct PrimaryAbilityData field150_0x4b0;
+    struct PrimaryAbilityData field151_0x4b8;
+    struct PrimaryAbilityData field152_0x4c0;
+    struct PrimaryAbilityData field153_0x4c8;
+    struct PrimaryAbilityData field154_0x4d0;
+    struct PrimaryAbilityData field155_0x4d8;
+    struct PrimaryAbilityData field156_0x4e0;
+    struct PrimaryAbilityData field157_0x4e8;
+    struct PrimaryAbilityData field158_0x4f0;
+    struct PrimaryAbilityData field159_0x4f8;
+    struct PrimaryAbilityData field160_0x500;
+    struct PrimaryAbilityData field161_0x508;
+    struct PrimaryAbilityData field162_0x510;
+    struct PrimaryAbilityData field163_0x518;
+    struct PrimaryAbilityData field164_0x520;
+    struct PrimaryAbilityData field165_0x528;
+    struct PrimaryAbilityData field166_0x530;
+    struct PrimaryAbilityData field167_0x538;
+    struct PrimaryAbilityData field168_0x540;
+    struct PrimaryAbilityData field169_0x548;
+    struct PrimaryAbilityData field170_0x550;
+    struct PrimaryAbilityData field171_0x558;
+    struct PrimaryAbilityData field172_0x560;
+    struct PrimaryAbilityData field173_0x568;
+    struct PrimaryAbilityData field174_0x570;
+    struct PrimaryAbilityData field175_0x578;
+    struct PrimaryAbilityData field176_0x580;
+    struct PrimaryAbilityData field177_0x588;
+    struct PrimaryAbilityData field178_0x590;
+    struct PrimaryAbilityData field179_0x598;
+    struct PrimaryAbilityData field180_0x5a0;
+    struct PrimaryAbilityData field181_0x5a8;
+    struct PrimaryAbilityData field182_0x5b0;
+    struct PrimaryAbilityData field183_0x5b8;
+    struct PrimaryAbilityData field184_0x5c0;
+    struct PrimaryAbilityData field185_0x5c8;
+    struct PrimaryAbilityData field186_0x5d0;
+    struct PrimaryAbilityData field187_0x5d8;
+    struct PrimaryAbilityData field188_0x5e0;
+    struct PrimaryAbilityData field189_0x5e8;
+    struct PrimaryAbilityData field190_0x5f0;
+    struct PrimaryAbilityData field191_0x5f8;
+    struct PrimaryAbilityData field192_0x600;
+    struct PrimaryAbilityData field193_0x608;
+    struct PrimaryAbilityData field194_0x610;
+    struct PrimaryAbilityData field195_0x618;
+    struct PrimaryAbilityData field196_0x620;
+    struct PrimaryAbilityData field197_0x628;
+    struct PrimaryAbilityData field198_0x630;
+    struct PrimaryAbilityData field199_0x638;
+    struct PrimaryAbilityData field200_0x640;
+    struct PrimaryAbilityData field201_0x648;
+    struct PrimaryAbilityData field202_0x650;
+    struct PrimaryAbilityData field203_0x658;
+    struct PrimaryAbilityData field204_0x660;
+    struct PrimaryAbilityData field205_0x668;
+    struct PrimaryAbilityData field206_0x670;
+    struct PrimaryAbilityData field207_0x678;
+    struct PrimaryAbilityData field208_0x680;
+    struct PrimaryAbilityData field209_0x688;
+    struct PrimaryAbilityData field210_0x690;
+    struct PrimaryAbilityData field211_0x698;
+    struct PrimaryAbilityData field212_0x6a0;
+    struct PrimaryAbilityData field213_0x6a8;
+    struct PrimaryAbilityData field214_0x6b0;
+    struct PrimaryAbilityData field215_0x6b8;
+    struct PrimaryAbilityData field216_0x6c0;
+    struct PrimaryAbilityData field217_0x6c8;
+    struct PrimaryAbilityData field218_0x6d0;
+    struct PrimaryAbilityData field219_0x6d8;
+    struct PrimaryAbilityData field220_0x6e0;
+    struct PrimaryAbilityData field221_0x6e8;
+    struct PrimaryAbilityData field222_0x6f0;
+    struct PrimaryAbilityData field223_0x6f8;
+    struct PrimaryAbilityData field224_0x700;
+    struct PrimaryAbilityData field225_0x708;
+    struct PrimaryAbilityData field226_0x710;
+    struct PrimaryAbilityData field227_0x718;
+    struct PrimaryAbilityData field228_0x720;
+    struct PrimaryAbilityData field229_0x728;
+    struct PrimaryAbilityData field230_0x730;
+    struct PrimaryAbilityData field231_0x738;
+    struct PrimaryAbilityData field232_0x740;
+    struct PrimaryAbilityData field233_0x748;
+    struct PrimaryAbilityData field234_0x750;
+    struct PrimaryAbilityData field235_0x758;
+    struct PrimaryAbilityData field236_0x760;
+    struct PrimaryAbilityData field237_0x768;
+    struct PrimaryAbilityData field238_0x770;
+    struct PrimaryAbilityData field239_0x778;
+    struct PrimaryAbilityData field240_0x780;
+    struct PrimaryAbilityData field241_0x788;
+    struct PrimaryAbilityData field242_0x790;
+    struct PrimaryAbilityData field243_0x798;
+    struct PrimaryAbilityData field244_0x7a0;
+    struct PrimaryAbilityData field245_0x7a8;
+    struct PrimaryAbilityData field246_0x7b0;
+    struct PrimaryAbilityData field247_0x7b8;
+    struct PrimaryAbilityData field248_0x7c0;
+    struct PrimaryAbilityData field249_0x7c8;
+    struct PrimaryAbilityData field250_0x7d0;
+    struct PrimaryAbilityData field251_0x7d8;
+    struct PrimaryAbilityData field252_0x7e0;
+    struct PrimaryAbilityData field253_0x7e8;
+    struct PrimaryAbilityData field254_0x7f0;
+    struct PrimaryAbilityData field255_0x7f8;
+    struct PrimaryAbilityData field256_0x800;
+    struct PrimaryAbilityData field257_0x808;
+    struct PrimaryAbilityData field258_0x810;
+    struct PrimaryAbilityData field259_0x818;
+    struct PrimaryAbilityData field260_0x820;
+    struct PrimaryAbilityData field261_0x828;
+    struct PrimaryAbilityData field262_0x830;
+    struct PrimaryAbilityData field263_0x838;
+    struct PrimaryAbilityData field264_0x840;
+    struct PrimaryAbilityData field265_0x848;
+    struct PrimaryAbilityData field266_0x850;
+    struct PrimaryAbilityData field267_0x858;
+    struct PrimaryAbilityData field268_0x860;
+    struct PrimaryAbilityData field269_0x868;
+    struct PrimaryAbilityData field270_0x870;
+    struct PrimaryAbilityData field271_0x878;
+    struct PrimaryAbilityData field272_0x880;
+    struct PrimaryAbilityData field273_0x888;
+    struct PrimaryAbilityData field274_0x890;
+    struct PrimaryAbilityData field275_0x898;
+    struct PrimaryAbilityData field276_0x8a0;
+    struct PrimaryAbilityData field277_0x8a8;
+    struct PrimaryAbilityData field278_0x8b0;
+    struct PrimaryAbilityData field279_0x8b8;
+    struct PrimaryAbilityData field280_0x8c0;
+    struct PrimaryAbilityData field281_0x8c8;
+    struct PrimaryAbilityData field282_0x8d0;
+    struct PrimaryAbilityData field283_0x8d8;
+    struct PrimaryAbilityData field284_0x8e0;
+    struct PrimaryAbilityData field285_0x8e8;
+    struct PrimaryAbilityData field286_0x8f0;
+    struct PrimaryAbilityData field287_0x8f8;
+    struct PrimaryAbilityData field288_0x900;
+    struct PrimaryAbilityData field289_0x908;
+    struct PrimaryAbilityData field290_0x910;
+    struct PrimaryAbilityData field291_0x918;
+    struct PrimaryAbilityData field292_0x920;
+    struct PrimaryAbilityData field293_0x928;
+    struct PrimaryAbilityData field294_0x930;
+    struct PrimaryAbilityData field295_0x938;
+    struct PrimaryAbilityData field296_0x940;
+    struct PrimaryAbilityData field297_0x948;
+    struct PrimaryAbilityData field298_0x950;
+    struct PrimaryAbilityData field299_0x958;
+    struct PrimaryAbilityData field300_0x960;
+    struct PrimaryAbilityData field301_0x968;
+    struct PrimaryAbilityData field302_0x970;
+    struct PrimaryAbilityData field303_0x978;
+    struct PrimaryAbilityData field304_0x980;
+    struct PrimaryAbilityData field305_0x988;
+    struct PrimaryAbilityData field306_0x990;
+    struct PrimaryAbilityData field307_0x998;
+    struct PrimaryAbilityData field308_0x9a0;
+    struct PrimaryAbilityData field309_0x9a8;
+    struct PrimaryAbilityData field310_0x9b0;
+    struct PrimaryAbilityData field311_0x9b8;
+    struct PrimaryAbilityData field312_0x9c0;
+    struct PrimaryAbilityData field313_0x9c8;
+    struct PrimaryAbilityData field314_0x9d0;
+    struct PrimaryAbilityData field315_0x9d8;
+    struct PrimaryAbilityData field316_0x9e0;
+    struct PrimaryAbilityData field317_0x9e8;
+    struct PrimaryAbilityData field318_0x9f0;
+    struct PrimaryAbilityData field319_0x9f8;
+    struct PrimaryAbilityData field320_0xa00;
+    struct PrimaryAbilityData field321_0xa08;
+    struct PrimaryAbilityData field322_0xa10;
+    struct PrimaryAbilityData field323_0xa18;
+    struct PrimaryAbilityData field324_0xa20;
+    struct PrimaryAbilityData field325_0xa28;
+    struct PrimaryAbilityData field326_0xa30;
+    struct PrimaryAbilityData field327_0xa38;
+    struct PrimaryAbilityData field328_0xa40;
+    struct PrimaryAbilityData field329_0xa48;
+    struct PrimaryAbilityData field330_0xa50;
+    struct PrimaryAbilityData field331_0xa58;
+    struct PrimaryAbilityData field332_0xa60;
+    struct PrimaryAbilityData field333_0xa68;
+    struct PrimaryAbilityData field334_0xa70;
+    struct PrimaryAbilityData field335_0xa78;
+    struct PrimaryAbilityData field336_0xa80;
+    struct PrimaryAbilityData field337_0xa88;
+    struct PrimaryAbilityData field338_0xa90;
+    struct PrimaryAbilityData field339_0xa98;
+    struct PrimaryAbilityData field340_0xaa0;
+    struct PrimaryAbilityData field341_0xaa8;
+    struct PrimaryAbilityData field342_0xab0;
+    struct PrimaryAbilityData field343_0xab8;
+    struct PrimaryAbilityData field344_0xac0;
+    struct PrimaryAbilityData field345_0xac8;
+    struct PrimaryAbilityData field346_0xad0;
+    struct PrimaryAbilityData field347_0xad8;
+    struct PrimaryAbilityData field348_0xae0;
+    struct PrimaryAbilityData field349_0xae8;
+    struct PrimaryAbilityData field350_0xaf0;
+    struct PrimaryAbilityData field351_0xaf8;
+    struct PrimaryAbilityData field352_0xb00;
+    struct PrimaryAbilityData field353_0xb08;
+    struct PrimaryAbilityData field354_0xb10;
+    struct PrimaryAbilityData field355_0xb18;
+    struct PrimaryAbilityData field356_0xb20;
+    struct PrimaryAbilityData field357_0xb28;
+    struct PrimaryAbilityData field358_0xb30;
+    struct PrimaryAbilityData field359_0xb38;
+    struct PrimaryAbilityData field360_0xb40;
+    struct PrimaryAbilityData field361_0xb48;
+    struct PrimaryAbilityData field362_0xb50;
+    struct PrimaryAbilityData field363_0xb58;
+    struct PrimaryAbilityData field364_0xb60;
+    struct PrimaryAbilityData field365_0xb68;
+    struct PrimaryAbilityData field366_0xb70;
+    struct PrimaryAbilityData field367_0xb78;
+    struct PrimaryAbilityData field368_0xb80;
+    struct PrimaryAbilityData field369_0xb88;
+    struct PrimaryAbilityData field370_0xb90;
+    struct PrimaryAbilityData field371_0xb98;
+    struct PrimaryAbilityData field372_0xba0;
+    struct PrimaryAbilityData field373_0xba8;
+    struct PrimaryAbilityData field374_0xbb0;
+    struct PrimaryAbilityData field375_0xbb8;
+    struct PrimaryAbilityData field376_0xbc0;
+    struct PrimaryAbilityData field377_0xbc8;
+    struct PrimaryAbilityData field378_0xbd0;
+    struct PrimaryAbilityData field379_0xbd8;
+    struct PrimaryAbilityData field380_0xbe0;
+    struct PrimaryAbilityData field381_0xbe8;
+    struct PrimaryAbilityData field382_0xbf0;
+    struct PrimaryAbilityData field383_0xbf8;
+    struct PrimaryAbilityData field384_0xc00;
+    struct PrimaryAbilityData field385_0xc08;
+    struct PrimaryAbilityData field386_0xc10;
+    struct PrimaryAbilityData field387_0xc18;
+    struct PrimaryAbilityData field388_0xc20;
+    struct PrimaryAbilityData field389_0xc28;
+    struct PrimaryAbilityData field390_0xc30;
+    struct PrimaryAbilityData field391_0xc38;
+    struct PrimaryAbilityData field392_0xc40;
+    struct PrimaryAbilityData field393_0xc48;
+    struct PrimaryAbilityData field394_0xc50;
+    struct PrimaryAbilityData field395_0xc58;
+    struct PrimaryAbilityData field396_0xc60;
+    struct PrimaryAbilityData field397_0xc68;
+    struct PrimaryAbilityData field398_0xc70;
+    struct PrimaryAbilityData field399_0xc78;
+    struct PrimaryAbilityData field400_0xc80;
+    struct PrimaryAbilityData field401_0xc88;
+    struct PrimaryAbilityData field402_0xc90;
+    struct PrimaryAbilityData field403_0xc98;
+    struct PrimaryAbilityData field404_0xca0;
+    struct PrimaryAbilityData field405_0xca8;
+    struct PrimaryAbilityData field406_0xcb0;
+    struct PrimaryAbilityData field407_0xcb8;
+    struct PrimaryAbilityData field408_0xcc0;
+    struct PrimaryAbilityData field409_0xcc8;
+    struct PrimaryAbilityData field410_0xcd0;
+    struct PrimaryAbilityData field411_0xcd8;
+    struct PrimaryAbilityData field412_0xce0;
+    struct PrimaryAbilityData field413_0xce8;
+    struct PrimaryAbilityData field414_0xcf0;
+    struct PrimaryAbilityData field415_0xcf8;
+    struct PrimaryAbilityData field416_0xd00;
+    struct PrimaryAbilityData field417_0xd08;
+    struct PrimaryAbilityData field418_0xd10;
+    struct PrimaryAbilityData field419_0xd18;
+    struct PrimaryAbilityData field420_0xd20;
+    struct PrimaryAbilityData field421_0xd28;
+    struct PrimaryAbilityData field422_0xd30;
+    struct PrimaryAbilityData field423_0xd38;
+    struct PrimaryAbilityData field424_0xd40;
+    struct PrimaryAbilityData field425_0xd48;
+    struct PrimaryAbilityData field426_0xd50;
+    struct PrimaryAbilityData field427_0xd58;
+    struct PrimaryAbilityData field428_0xd60;
+    struct PrimaryAbilityData field429_0xd68;
+    struct PrimaryAbilityData field430_0xd70;
+    struct PrimaryAbilityData field431_0xd78;
+    struct PrimaryAbilityData field432_0xd80;
+    struct PrimaryAbilityData field433_0xd88;
+    struct PrimaryAbilityData field434_0xd90;
+    struct PrimaryAbilityData field435_0xd98;
+    struct PrimaryAbilityData field436_0xda0;
+    struct PrimaryAbilityData field437_0xda8;
+    struct PrimaryAbilityData field438_0xdb0;
+    struct PrimaryAbilityData field439_0xdb8;
+    struct PrimaryAbilityData field440_0xdc0;
+    struct PrimaryAbilityData field441_0xdc8;
+    struct PrimaryAbilityData field442_0xdd0;
+    struct PrimaryAbilityData field443_0xdd8;
+    struct PrimaryAbilityData field444_0xde0;
+    struct PrimaryAbilityData field445_0xde8;
+    struct PrimaryAbilityData field446_0xdf0;
+    struct PrimaryAbilityData field447_0xdf8;
+    struct PrimaryAbilityData field448_0xe00;
+    struct PrimaryAbilityData field449_0xe08;
+    struct PrimaryAbilityData field450_0xe10;
+    struct PrimaryAbilityData field451_0xe18;
+    struct PrimaryAbilityData field452_0xe20;
+    struct PrimaryAbilityData field453_0xe28;
+    struct PrimaryAbilityData field454_0xe30;
+    struct PrimaryAbilityData field455_0xe38;
+    struct PrimaryAbilityData field456_0xe40;
+    struct PrimaryAbilityData field457_0xe48;
+    struct PrimaryAbilityData field458_0xe50;
+    struct PrimaryAbilityData field459_0xe58;
+    struct PrimaryAbilityData field460_0xe60;
+    struct PrimaryAbilityData field461_0xe68;
+    struct PrimaryAbilityData field462_0xe70;
+    struct PrimaryAbilityData field463_0xe78;
+    struct PrimaryAbilityData field464_0xe80;
+    struct PrimaryAbilityData field465_0xe88;
+    struct PrimaryAbilityData field466_0xe90;
+    struct PrimaryAbilityData field467_0xe98;
+    struct PrimaryAbilityData field468_0xea0;
+    struct PrimaryAbilityData field469_0xea8;
+    struct PrimaryAbilityData field470_0xeb0;
+    struct PrimaryAbilityData field471_0xeb8;
+    struct PrimaryAbilityData field472_0xec0;
+    struct PrimaryAbilityData field473_0xec8;
+    struct PrimaryAbilityData field474_0xed0;
+    struct PrimaryAbilityData field475_0xed8;
+    struct PrimaryAbilityData field476_0xee0;
+    struct PrimaryAbilityData field477_0xee8;
+    struct PrimaryAbilityData field478_0xef0;
+    struct PrimaryAbilityData field479_0xef8;
+    struct PrimaryAbilityData field480_0xf00;
+    struct PrimaryAbilityData field481_0xf08;
+    struct PrimaryAbilityData field482_0xf10;
+    struct PrimaryAbilityData field483_0xf18;
+    struct PrimaryAbilityData field484_0xf20;
+    struct PrimaryAbilityData field485_0xf28;
+    struct PrimaryAbilityData field486_0xf30;
+    struct PrimaryAbilityData field487_0xf38;
+    struct PrimaryAbilityData field488_0xf40;
+    struct PrimaryAbilityData field489_0xf48;
+    struct PrimaryAbilityData field490_0xf50;
+    struct PrimaryAbilityData field491_0xf58;
+    struct PrimaryAbilityData field492_0xf60;
+    struct PrimaryAbilityData field493_0xf68;
+    struct PrimaryAbilityData field494_0xf70;
+    struct PrimaryAbilityData field495_0xf78;
+    struct PrimaryAbilityData field496_0xf80;
+    struct PrimaryAbilityData field497_0xf88;
+    struct PrimaryAbilityData field498_0xf90;
+    struct PrimaryAbilityData field499_0xf98;
+    struct PrimaryAbilityData field500_0xfa0;
+    struct PrimaryAbilityData field501_0xfa8;
+    struct PrimaryAbilityData field502_0xfb0;
+    struct PrimaryAbilityData field503_0xfb8;
+    struct PrimaryAbilityData field504_0xfc0;
+    struct PrimaryAbilityData field505_0xfc8;
+    struct PrimaryAbilityData field506_0xfd0;
+    struct PrimaryAbilityData field507_0xfd8;
+    struct PrimaryAbilityData field508_0xfe0;
+    struct PrimaryAbilityData field509_0xfe8;
+    struct PrimaryAbilityData field510_0xff0;
+    struct PrimaryAbilityData field511_0xff8;
 };
 
 typedef struct AllPrimaryItem AllPrimaryItem, *PAllPrimaryItem;
@@ -663,6 +1659,1189 @@ struct AllPrimaryItem {
     struct PrimaryItemData Phoenix Down;
     struct PrimaryItemData ENTD_Random;
     struct PrimaryItemData ENTD_None;
+};
+
+typedef struct SecondaryAbilityData SecondaryAbilityData, *PSecondaryAbilityData;
+
+struct SecondaryAbilityData {
+    byte Range;
+    byte AOE;
+    byte Vert;
+    int NoTargetSelf:1;
+    int AutoTarget:1;
+    int WeaponStrike:1;
+    int VertTolerance:1;
+    int VertFixed:1;
+    int WeaponRange:1;
+    int OnlyEnemyTilesDEPRECATED:1;
+    int OnlyAllyTilesDEPRECATED:1;
+    int NoHitSelf:1;
+    int 3Dir:1;
+    int Linear:1;
+    int RandomFire:1;
+    int NoTarFollow:1;
+    int TopDownTarget:1;
+    int NoAllyHit:1;
+    int NoEnemyHit:1;
+    int AnimateMiss:1;
+    int Quote:1;
+    int PersevereCast:1;
+    int HitGolem:1;
+    int NoMimic:1;
+    int Silenceable:1;
+    int MathSkill:1;
+    int Reflectable:1;
+    int NoTargetting:1;
+    int Evadeable:1;
+    int ReqMatBlade:1;
+    int ReqSword:1;
+    int BladeGrasp:1;
+    int Direct:1;
+    int CounterMagic:1;
+    int CounterFlood:1;
+    byte Element;
+    byte Formula;
+    byte X;
+    byte Y;
+    byte InflictStatus;
+    byte CT;
+    byte MPCost;
+};
+
+typedef struct ActionMenus ActionMenus, *PActionMenus;
+
+struct ActionMenus {
+    byte field0_0x0;
+    byte field1_0x1;
+    byte field2_0x2;
+    byte field3_0x3;
+    byte field4_0x4;
+    byte field5_0x5;
+    byte field6_0x6;
+    byte field7_0x7;
+    byte field8_0x8;
+    byte field9_0x9;
+    byte field10_0xa;
+    byte field11_0xb;
+    byte field12_0xc;
+    byte field13_0xd;
+    byte field14_0xe;
+    byte field15_0xf;
+    byte field16_0x10;
+    byte field17_0x11;
+    byte field18_0x12;
+    byte field19_0x13;
+    byte field20_0x14;
+    byte field21_0x15;
+    byte field22_0x16;
+    byte field23_0x17;
+    byte field24_0x18;
+    byte field25_0x19;
+    byte field26_0x1a;
+    byte field27_0x1b;
+    byte field28_0x1c;
+    byte field29_0x1d;
+    byte field30_0x1e;
+    byte field31_0x1f;
+    byte field32_0x20;
+    byte field33_0x21;
+    byte field34_0x22;
+    byte field35_0x23;
+    byte field36_0x24;
+    byte field37_0x25;
+    byte field38_0x26;
+    byte field39_0x27;
+    byte field40_0x28;
+    byte field41_0x29;
+    byte field42_0x2a;
+    byte field43_0x2b;
+    byte field44_0x2c;
+    byte field45_0x2d;
+    byte field46_0x2e;
+    byte field47_0x2f;
+    byte field48_0x30;
+    byte field49_0x31;
+    byte field50_0x32;
+    byte field51_0x33;
+    byte field52_0x34;
+    byte field53_0x35;
+    byte field54_0x36;
+    byte field55_0x37;
+    byte field56_0x38;
+    byte field57_0x39;
+    byte field58_0x3a;
+    byte field59_0x3b;
+    byte field60_0x3c;
+    byte field61_0x3d;
+    byte field62_0x3e;
+    byte field63_0x3f;
+    byte field64_0x40;
+    byte field65_0x41;
+    byte field66_0x42;
+    byte field67_0x43;
+    byte field68_0x44;
+    byte field69_0x45;
+    byte field70_0x46;
+    byte field71_0x47;
+    byte field72_0x48;
+    byte field73_0x49;
+    byte field74_0x4a;
+    byte field75_0x4b;
+    byte field76_0x4c;
+    byte field77_0x4d;
+    byte field78_0x4e;
+    byte field79_0x4f;
+    byte field80_0x50;
+    byte field81_0x51;
+    byte field82_0x52;
+    byte field83_0x53;
+    byte field84_0x54;
+    byte field85_0x55;
+    byte field86_0x56;
+    byte field87_0x57;
+    byte field88_0x58;
+    byte field89_0x59;
+    byte field90_0x5a;
+    byte field91_0x5b;
+    byte field92_0x5c;
+    byte field93_0x5d;
+    byte field94_0x5e;
+    byte field95_0x5f;
+    byte field96_0x60;
+    byte field97_0x61;
+    byte field98_0x62;
+    byte field99_0x63;
+    byte field100_0x64;
+    byte field101_0x65;
+    byte field102_0x66;
+    byte field103_0x67;
+    byte field104_0x68;
+    byte field105_0x69;
+    byte field106_0x6a;
+    byte field107_0x6b;
+    byte field108_0x6c;
+    byte field109_0x6d;
+    byte field110_0x6e;
+    byte field111_0x6f;
+    byte field112_0x70;
+    byte field113_0x71;
+    byte field114_0x72;
+    byte field115_0x73;
+    byte field116_0x74;
+    byte field117_0x75;
+    byte field118_0x76;
+    byte field119_0x77;
+    byte field120_0x78;
+    byte field121_0x79;
+    byte field122_0x7a;
+    byte field123_0x7b;
+    byte field124_0x7c;
+    byte field125_0x7d;
+    byte field126_0x7e;
+    byte field127_0x7f;
+    byte field128_0x80;
+    byte field129_0x81;
+    byte field130_0x82;
+    byte field131_0x83;
+    byte field132_0x84;
+    byte field133_0x85;
+    byte field134_0x86;
+    byte field135_0x87;
+    byte field136_0x88;
+    byte field137_0x89;
+    byte field138_0x8a;
+    byte field139_0x8b;
+    byte field140_0x8c;
+    byte field141_0x8d;
+    byte field142_0x8e;
+    byte field143_0x8f;
+    byte field144_0x90;
+    byte field145_0x91;
+    byte field146_0x92;
+    byte field147_0x93;
+    byte field148_0x94;
+    byte field149_0x95;
+    byte field150_0x96;
+    byte field151_0x97;
+    byte field152_0x98;
+    byte field153_0x99;
+    byte field154_0x9a;
+    byte field155_0x9b;
+    byte field156_0x9c;
+    byte field157_0x9d;
+    byte field158_0x9e;
+    byte field159_0x9f;
+    byte field160_0xa0;
+    byte field161_0xa1;
+    byte field162_0xa2;
+    byte field163_0xa3;
+    byte field164_0xa4;
+    byte field165_0xa5;
+    byte field166_0xa6;
+    byte field167_0xa7;
+    byte field168_0xa8;
+    byte field169_0xa9;
+    byte field170_0xaa;
+    byte field171_0xab;
+    byte field172_0xac;
+    byte field173_0xad;
+    byte field174_0xae;
+    byte field175_0xaf;
+    byte field176_0xb0;
+    byte field177_0xb1;
+    byte field178_0xb2;
+    byte field179_0xb3;
+    byte field180_0xb4;
+    byte field181_0xb5;
+    byte field182_0xb6;
+    byte field183_0xb7;
+    byte field184_0xb8;
+    byte field185_0xb9;
+    byte field186_0xba;
+    byte field187_0xbb;
+    byte field188_0xbc;
+    byte field189_0xbd;
+    byte field190_0xbe;
+    byte field191_0xbf;
+    byte field192_0xc0;
+    byte field193_0xc1;
+    byte field194_0xc2;
+    byte field195_0xc3;
+    byte field196_0xc4;
+    byte field197_0xc5;
+    byte field198_0xc6;
+    byte field199_0xc7;
+    byte field200_0xc8;
+    byte field201_0xc9;
+    byte field202_0xca;
+    byte field203_0xcb;
+    byte field204_0xcc;
+    byte field205_0xcd;
+    byte field206_0xce;
+    byte field207_0xcf;
+    byte field208_0xd0;
+    byte field209_0xd1;
+    byte field210_0xd2;
+    byte field211_0xd3;
+    byte field212_0xd4;
+    byte field213_0xd5;
+    byte field214_0xd6;
+    byte field215_0xd7;
+    byte field216_0xd8;
+    byte field217_0xd9;
+    byte field218_0xda;
+    byte field219_0xdb;
+    byte field220_0xdc;
+    byte field221_0xdd;
+    byte field222_0xde;
+    byte field223_0xdf;
+};
+
+typedef struct SecondaryAbilityItem SecondaryAbilityItem, *PSecondaryAbilityItem;
+
+struct SecondaryAbilityItem {
+    byte UsedItemID;
+};
+
+typedef struct SecondaryAbilityCharge SecondaryAbilityCharge, *PSecondaryAbilityCharge;
+
+struct SecondaryAbilityCharge {
+    byte CT;
+    byte Power;
+};
+
+typedef struct AllSecondaryAbilityData AllSecondaryAbilityData, *PAllSecondaryAbilityData;
+
+typedef struct SecondaryAbilityMath SecondaryAbilityMath, *PSecondaryAbilityMath;
+
+typedef struct SecondaryAbilityRSM SecondaryAbilityRSM, *PSecondaryAbilityRSM;
+
+struct SecondaryAbilityMath {
+    int Mult:4;
+    int Stat:4;
+};
+
+struct SecondaryAbilityRSM {
+    byte ID;
+};
+
+struct AllSecondaryAbilityData {
+    struct SecondaryAbilityData field0_0x0;
+    struct SecondaryAbilityData field1_0xe;
+    struct SecondaryAbilityData field2_0x1c;
+    struct SecondaryAbilityData field3_0x2a;
+    struct SecondaryAbilityData field4_0x38;
+    struct SecondaryAbilityData field5_0x46;
+    struct SecondaryAbilityData field6_0x54;
+    struct SecondaryAbilityData field7_0x62;
+    struct SecondaryAbilityData field8_0x70;
+    struct SecondaryAbilityData field9_0x7e;
+    struct SecondaryAbilityData field10_0x8c;
+    struct SecondaryAbilityData field11_0x9a;
+    struct SecondaryAbilityData field12_0xa8;
+    struct SecondaryAbilityData field13_0xb6;
+    struct SecondaryAbilityData field14_0xc4;
+    struct SecondaryAbilityData field15_0xd2;
+    struct SecondaryAbilityData field16_0xe0;
+    struct SecondaryAbilityData field17_0xee;
+    struct SecondaryAbilityData field18_0xfc;
+    struct SecondaryAbilityData field19_0x10a;
+    struct SecondaryAbilityData field20_0x118;
+    struct SecondaryAbilityData field21_0x126;
+    struct SecondaryAbilityData field22_0x134;
+    struct SecondaryAbilityData field23_0x142;
+    struct SecondaryAbilityData field24_0x150;
+    struct SecondaryAbilityData field25_0x15e;
+    struct SecondaryAbilityData field26_0x16c;
+    struct SecondaryAbilityData field27_0x17a;
+    struct SecondaryAbilityData field28_0x188;
+    struct SecondaryAbilityData field29_0x196;
+    struct SecondaryAbilityData field30_0x1a4;
+    struct SecondaryAbilityData field31_0x1b2;
+    struct SecondaryAbilityData field32_0x1c0;
+    struct SecondaryAbilityData field33_0x1ce;
+    struct SecondaryAbilityData field34_0x1dc;
+    struct SecondaryAbilityData field35_0x1ea;
+    struct SecondaryAbilityData field36_0x1f8;
+    struct SecondaryAbilityData field37_0x206;
+    struct SecondaryAbilityData field38_0x214;
+    struct SecondaryAbilityData field39_0x222;
+    struct SecondaryAbilityData field40_0x230;
+    struct SecondaryAbilityData field41_0x23e;
+    struct SecondaryAbilityData field42_0x24c;
+    struct SecondaryAbilityData field43_0x25a;
+    struct SecondaryAbilityData field44_0x268;
+    struct SecondaryAbilityData field45_0x276;
+    struct SecondaryAbilityData field46_0x284;
+    struct SecondaryAbilityData field47_0x292;
+    struct SecondaryAbilityData field48_0x2a0;
+    struct SecondaryAbilityData field49_0x2ae;
+    struct SecondaryAbilityData field50_0x2bc;
+    struct SecondaryAbilityData field51_0x2ca;
+    struct SecondaryAbilityData field52_0x2d8;
+    struct SecondaryAbilityData field53_0x2e6;
+    struct SecondaryAbilityData field54_0x2f4;
+    struct SecondaryAbilityData field55_0x302;
+    struct SecondaryAbilityData field56_0x310;
+    struct SecondaryAbilityData field57_0x31e;
+    struct SecondaryAbilityData field58_0x32c;
+    struct SecondaryAbilityData field59_0x33a;
+    struct SecondaryAbilityData field60_0x348;
+    struct SecondaryAbilityData field61_0x356;
+    struct SecondaryAbilityData field62_0x364;
+    struct SecondaryAbilityData field63_0x372;
+    struct SecondaryAbilityData field64_0x380;
+    struct SecondaryAbilityData field65_0x38e;
+    struct SecondaryAbilityData field66_0x39c;
+    struct SecondaryAbilityData field67_0x3aa;
+    struct SecondaryAbilityData field68_0x3b8;
+    struct SecondaryAbilityData field69_0x3c6;
+    struct SecondaryAbilityData field70_0x3d4;
+    struct SecondaryAbilityData field71_0x3e2;
+    struct SecondaryAbilityData field72_0x3f0;
+    struct SecondaryAbilityData field73_0x3fe;
+    struct SecondaryAbilityData field74_0x40c;
+    struct SecondaryAbilityData field75_0x41a;
+    struct SecondaryAbilityData field76_0x428;
+    struct SecondaryAbilityData field77_0x436;
+    struct SecondaryAbilityData field78_0x444;
+    struct SecondaryAbilityData field79_0x452;
+    struct SecondaryAbilityData field80_0x460;
+    struct SecondaryAbilityData field81_0x46e;
+    struct SecondaryAbilityData field82_0x47c;
+    struct SecondaryAbilityData field83_0x48a;
+    struct SecondaryAbilityData field84_0x498;
+    struct SecondaryAbilityData field85_0x4a6;
+    struct SecondaryAbilityData field86_0x4b4;
+    struct SecondaryAbilityData field87_0x4c2;
+    struct SecondaryAbilityData field88_0x4d0;
+    struct SecondaryAbilityData field89_0x4de;
+    struct SecondaryAbilityData field90_0x4ec;
+    struct SecondaryAbilityData field91_0x4fa;
+    struct SecondaryAbilityData field92_0x508;
+    struct SecondaryAbilityData field93_0x516;
+    struct SecondaryAbilityData field94_0x524;
+    struct SecondaryAbilityData field95_0x532;
+    struct SecondaryAbilityData field96_0x540;
+    struct SecondaryAbilityData field97_0x54e;
+    struct SecondaryAbilityData field98_0x55c;
+    struct SecondaryAbilityData field99_0x56a;
+    struct SecondaryAbilityData field100_0x578;
+    struct SecondaryAbilityData field101_0x586;
+    struct SecondaryAbilityData field102_0x594;
+    struct SecondaryAbilityData field103_0x5a2;
+    struct SecondaryAbilityData field104_0x5b0;
+    struct SecondaryAbilityData field105_0x5be;
+    struct SecondaryAbilityData field106_0x5cc;
+    struct SecondaryAbilityData field107_0x5da;
+    struct SecondaryAbilityData field108_0x5e8;
+    struct SecondaryAbilityData field109_0x5f6;
+    struct SecondaryAbilityData field110_0x604;
+    struct SecondaryAbilityData field111_0x612;
+    struct SecondaryAbilityData field112_0x620;
+    struct SecondaryAbilityData field113_0x62e;
+    struct SecondaryAbilityData field114_0x63c;
+    struct SecondaryAbilityData field115_0x64a;
+    struct SecondaryAbilityData field116_0x658;
+    struct SecondaryAbilityData field117_0x666;
+    struct SecondaryAbilityData field118_0x674;
+    struct SecondaryAbilityData field119_0x682;
+    struct SecondaryAbilityData field120_0x690;
+    struct SecondaryAbilityData field121_0x69e;
+    struct SecondaryAbilityData field122_0x6ac;
+    struct SecondaryAbilityData field123_0x6ba;
+    struct SecondaryAbilityData field124_0x6c8;
+    struct SecondaryAbilityData field125_0x6d6;
+    struct SecondaryAbilityData field126_0x6e4;
+    struct SecondaryAbilityData field127_0x6f2;
+    struct SecondaryAbilityData field128_0x700;
+    struct SecondaryAbilityData field129_0x70e;
+    struct SecondaryAbilityData field130_0x71c;
+    struct SecondaryAbilityData field131_0x72a;
+    struct SecondaryAbilityData field132_0x738;
+    struct SecondaryAbilityData field133_0x746;
+    struct SecondaryAbilityData field134_0x754;
+    struct SecondaryAbilityData field135_0x762;
+    struct SecondaryAbilityData field136_0x770;
+    struct SecondaryAbilityData field137_0x77e;
+    struct SecondaryAbilityData field138_0x78c;
+    struct SecondaryAbilityData field139_0x79a;
+    struct SecondaryAbilityData field140_0x7a8;
+    struct SecondaryAbilityData field141_0x7b6;
+    struct SecondaryAbilityData field142_0x7c4;
+    struct SecondaryAbilityData field143_0x7d2;
+    struct SecondaryAbilityData field144_0x7e0;
+    struct SecondaryAbilityData field145_0x7ee;
+    struct SecondaryAbilityData field146_0x7fc;
+    struct SecondaryAbilityData field147_0x80a;
+    struct SecondaryAbilityData field148_0x818;
+    struct SecondaryAbilityData field149_0x826;
+    struct SecondaryAbilityData field150_0x834;
+    struct SecondaryAbilityData field151_0x842;
+    struct SecondaryAbilityData field152_0x850;
+    struct SecondaryAbilityData field153_0x85e;
+    struct SecondaryAbilityData field154_0x86c;
+    struct SecondaryAbilityData field155_0x87a;
+    struct SecondaryAbilityData field156_0x888;
+    struct SecondaryAbilityData field157_0x896;
+    struct SecondaryAbilityData field158_0x8a4;
+    struct SecondaryAbilityData field159_0x8b2;
+    struct SecondaryAbilityData field160_0x8c0;
+    struct SecondaryAbilityData field161_0x8ce;
+    struct SecondaryAbilityData field162_0x8dc;
+    struct SecondaryAbilityData field163_0x8ea;
+    struct SecondaryAbilityData field164_0x8f8;
+    struct SecondaryAbilityData field165_0x906;
+    struct SecondaryAbilityData field166_0x914;
+    struct SecondaryAbilityData field167_0x922;
+    struct SecondaryAbilityData field168_0x930;
+    struct SecondaryAbilityData field169_0x93e;
+    struct SecondaryAbilityData field170_0x94c;
+    struct SecondaryAbilityData field171_0x95a;
+    struct SecondaryAbilityData field172_0x968;
+    struct SecondaryAbilityData field173_0x976;
+    struct SecondaryAbilityData field174_0x984;
+    struct SecondaryAbilityData field175_0x992;
+    struct SecondaryAbilityData field176_0x9a0;
+    struct SecondaryAbilityData field177_0x9ae;
+    struct SecondaryAbilityData field178_0x9bc;
+    struct SecondaryAbilityData field179_0x9ca;
+    struct SecondaryAbilityData field180_0x9d8;
+    struct SecondaryAbilityData field181_0x9e6;
+    struct SecondaryAbilityData field182_0x9f4;
+    struct SecondaryAbilityData field183_0xa02;
+    struct SecondaryAbilityData field184_0xa10;
+    struct SecondaryAbilityData field185_0xa1e;
+    struct SecondaryAbilityData field186_0xa2c;
+    struct SecondaryAbilityData field187_0xa3a;
+    struct SecondaryAbilityData field188_0xa48;
+    struct SecondaryAbilityData field189_0xa56;
+    struct SecondaryAbilityData field190_0xa64;
+    struct SecondaryAbilityData field191_0xa72;
+    struct SecondaryAbilityData field192_0xa80;
+    struct SecondaryAbilityData field193_0xa8e;
+    struct SecondaryAbilityData field194_0xa9c;
+    struct SecondaryAbilityData field195_0xaaa;
+    struct SecondaryAbilityData field196_0xab8;
+    struct SecondaryAbilityData field197_0xac6;
+    struct SecondaryAbilityData field198_0xad4;
+    struct SecondaryAbilityData field199_0xae2;
+    struct SecondaryAbilityData field200_0xaf0;
+    struct SecondaryAbilityData field201_0xafe;
+    struct SecondaryAbilityData field202_0xb0c;
+    struct SecondaryAbilityData field203_0xb1a;
+    struct SecondaryAbilityData field204_0xb28;
+    struct SecondaryAbilityData field205_0xb36;
+    struct SecondaryAbilityData field206_0xb44;
+    struct SecondaryAbilityData field207_0xb52;
+    struct SecondaryAbilityData field208_0xb60;
+    struct SecondaryAbilityData field209_0xb6e;
+    struct SecondaryAbilityData field210_0xb7c;
+    struct SecondaryAbilityData field211_0xb8a;
+    struct SecondaryAbilityData field212_0xb98;
+    struct SecondaryAbilityData field213_0xba6;
+    struct SecondaryAbilityData field214_0xbb4;
+    struct SecondaryAbilityData field215_0xbc2;
+    struct SecondaryAbilityData field216_0xbd0;
+    struct SecondaryAbilityData field217_0xbde;
+    struct SecondaryAbilityData field218_0xbec;
+    struct SecondaryAbilityData field219_0xbfa;
+    struct SecondaryAbilityData field220_0xc08;
+    struct SecondaryAbilityData field221_0xc16;
+    struct SecondaryAbilityData field222_0xc24;
+    struct SecondaryAbilityData field223_0xc32;
+    struct SecondaryAbilityData field224_0xc40;
+    struct SecondaryAbilityData field225_0xc4e;
+    struct SecondaryAbilityData field226_0xc5c;
+    struct SecondaryAbilityData field227_0xc6a;
+    struct SecondaryAbilityData field228_0xc78;
+    struct SecondaryAbilityData field229_0xc86;
+    struct SecondaryAbilityData field230_0xc94;
+    struct SecondaryAbilityData field231_0xca2;
+    struct SecondaryAbilityData field232_0xcb0;
+    struct SecondaryAbilityData field233_0xcbe;
+    struct SecondaryAbilityData field234_0xccc;
+    struct SecondaryAbilityData field235_0xcda;
+    struct SecondaryAbilityData field236_0xce8;
+    struct SecondaryAbilityData field237_0xcf6;
+    struct SecondaryAbilityData field238_0xd04;
+    struct SecondaryAbilityData field239_0xd12;
+    struct SecondaryAbilityData field240_0xd20;
+    struct SecondaryAbilityData field241_0xd2e;
+    struct SecondaryAbilityData field242_0xd3c;
+    struct SecondaryAbilityData field243_0xd4a;
+    struct SecondaryAbilityData field244_0xd58;
+    struct SecondaryAbilityData field245_0xd66;
+    struct SecondaryAbilityData field246_0xd74;
+    struct SecondaryAbilityData field247_0xd82;
+    struct SecondaryAbilityData field248_0xd90;
+    struct SecondaryAbilityData field249_0xd9e;
+    struct SecondaryAbilityData field250_0xdac;
+    struct SecondaryAbilityData field251_0xdba;
+    struct SecondaryAbilityData field252_0xdc8;
+    struct SecondaryAbilityData field253_0xdd6;
+    struct SecondaryAbilityData field254_0xde4;
+    struct SecondaryAbilityData field255_0xdf2;
+    struct SecondaryAbilityData field256_0xe00;
+    struct SecondaryAbilityData field257_0xe0e;
+    struct SecondaryAbilityData field258_0xe1c;
+    struct SecondaryAbilityData field259_0xe2a;
+    struct SecondaryAbilityData field260_0xe38;
+    struct SecondaryAbilityData field261_0xe46;
+    struct SecondaryAbilityData field262_0xe54;
+    struct SecondaryAbilityData field263_0xe62;
+    struct SecondaryAbilityData field264_0xe70;
+    struct SecondaryAbilityData field265_0xe7e;
+    struct SecondaryAbilityData field266_0xe8c;
+    struct SecondaryAbilityData field267_0xe9a;
+    struct SecondaryAbilityData field268_0xea8;
+    struct SecondaryAbilityData field269_0xeb6;
+    struct SecondaryAbilityData field270_0xec4;
+    struct SecondaryAbilityData field271_0xed2;
+    struct SecondaryAbilityData field272_0xee0;
+    struct SecondaryAbilityData field273_0xeee;
+    struct SecondaryAbilityData field274_0xefc;
+    struct SecondaryAbilityData field275_0xf0a;
+    struct SecondaryAbilityData field276_0xf18;
+    struct SecondaryAbilityData field277_0xf26;
+    struct SecondaryAbilityData field278_0xf34;
+    struct SecondaryAbilityData field279_0xf42;
+    struct SecondaryAbilityData field280_0xf50;
+    struct SecondaryAbilityData field281_0xf5e;
+    struct SecondaryAbilityData field282_0xf6c;
+    struct SecondaryAbilityData field283_0xf7a;
+    struct SecondaryAbilityData field284_0xf88;
+    struct SecondaryAbilityData field285_0xf96;
+    struct SecondaryAbilityData field286_0xfa4;
+    struct SecondaryAbilityData field287_0xfb2;
+    struct SecondaryAbilityData field288_0xfc0;
+    struct SecondaryAbilityData field289_0xfce;
+    struct SecondaryAbilityData field290_0xfdc;
+    struct SecondaryAbilityData field291_0xfea;
+    struct SecondaryAbilityData field292_0xff8;
+    struct SecondaryAbilityData field293_0x1006;
+    struct SecondaryAbilityData field294_0x1014;
+    struct SecondaryAbilityData field295_0x1022;
+    struct SecondaryAbilityData field296_0x1030;
+    struct SecondaryAbilityData field297_0x103e;
+    struct SecondaryAbilityData field298_0x104c;
+    struct SecondaryAbilityData field299_0x105a;
+    struct SecondaryAbilityData field300_0x1068;
+    struct SecondaryAbilityData field301_0x1076;
+    struct SecondaryAbilityData field302_0x1084;
+    struct SecondaryAbilityData field303_0x1092;
+    struct SecondaryAbilityData field304_0x10a0;
+    struct SecondaryAbilityData field305_0x10ae;
+    struct SecondaryAbilityData field306_0x10bc;
+    struct SecondaryAbilityData field307_0x10ca;
+    struct SecondaryAbilityData field308_0x10d8;
+    struct SecondaryAbilityData field309_0x10e6;
+    struct SecondaryAbilityData field310_0x10f4;
+    struct SecondaryAbilityData field311_0x1102;
+    struct SecondaryAbilityData field312_0x1110;
+    struct SecondaryAbilityData field313_0x111e;
+    struct SecondaryAbilityData field314_0x112c;
+    struct SecondaryAbilityData field315_0x113a;
+    struct SecondaryAbilityData field316_0x1148;
+    struct SecondaryAbilityData field317_0x1156;
+    struct SecondaryAbilityData field318_0x1164;
+    struct SecondaryAbilityData field319_0x1172;
+    struct SecondaryAbilityData field320_0x1180;
+    struct SecondaryAbilityData field321_0x118e;
+    struct SecondaryAbilityData field322_0x119c;
+    struct SecondaryAbilityData field323_0x11aa;
+    struct SecondaryAbilityData field324_0x11b8;
+    struct SecondaryAbilityData field325_0x11c6;
+    struct SecondaryAbilityData field326_0x11d4;
+    struct SecondaryAbilityData field327_0x11e2;
+    struct SecondaryAbilityData field328_0x11f0;
+    struct SecondaryAbilityData field329_0x11fe;
+    struct SecondaryAbilityData field330_0x120c;
+    struct SecondaryAbilityData field331_0x121a;
+    struct SecondaryAbilityData field332_0x1228;
+    struct SecondaryAbilityData field333_0x1236;
+    struct SecondaryAbilityData field334_0x1244;
+    struct SecondaryAbilityData field335_0x1252;
+    struct SecondaryAbilityData field336_0x1260;
+    struct SecondaryAbilityData field337_0x126e;
+    struct SecondaryAbilityData field338_0x127c;
+    struct SecondaryAbilityData field339_0x128a;
+    struct SecondaryAbilityData field340_0x1298;
+    struct SecondaryAbilityData field341_0x12a6;
+    struct SecondaryAbilityData field342_0x12b4;
+    struct SecondaryAbilityData field343_0x12c2;
+    struct SecondaryAbilityData field344_0x12d0;
+    struct SecondaryAbilityData field345_0x12de;
+    struct SecondaryAbilityData field346_0x12ec;
+    struct SecondaryAbilityData field347_0x12fa;
+    struct SecondaryAbilityData field348_0x1308;
+    struct SecondaryAbilityData field349_0x1316;
+    struct SecondaryAbilityData field350_0x1324;
+    struct SecondaryAbilityData field351_0x1332;
+    struct SecondaryAbilityData field352_0x1340;
+    struct SecondaryAbilityData field353_0x134e;
+    struct SecondaryAbilityData field354_0x135c;
+    struct SecondaryAbilityData field355_0x136a;
+    struct SecondaryAbilityData field356_0x1378;
+    struct SecondaryAbilityData field357_0x1386;
+    struct SecondaryAbilityData field358_0x1394;
+    struct SecondaryAbilityData field359_0x13a2;
+    struct SecondaryAbilityData field360_0x13b0;
+    struct SecondaryAbilityData field361_0x13be;
+    struct SecondaryAbilityData field362_0x13cc;
+    struct SecondaryAbilityData field363_0x13da;
+    struct SecondaryAbilityData field364_0x13e8;
+    struct SecondaryAbilityData field365_0x13f6;
+    struct SecondaryAbilityData field366_0x1404;
+    struct SecondaryAbilityData field367_0x1412;
+    struct SecondaryAbilityItem field368_0x1420;
+    struct SecondaryAbilityItem field369_0x1421;
+    struct SecondaryAbilityItem field370_0x1422;
+    struct SecondaryAbilityItem field371_0x1423;
+    struct SecondaryAbilityItem field372_0x1424;
+    struct SecondaryAbilityItem field373_0x1425;
+    struct SecondaryAbilityItem field374_0x1426;
+    struct SecondaryAbilityItem field375_0x1427;
+    struct SecondaryAbilityItem field376_0x1428;
+    struct SecondaryAbilityItem field377_0x1429;
+    struct SecondaryAbilityItem field378_0x142a;
+    struct SecondaryAbilityItem field379_0x142b;
+    struct SecondaryAbilityItem field380_0x142c;
+    struct SecondaryAbilityItem field381_0x142d;
+    struct SecondaryAbilityItem field382_0x142e;
+    struct SecondaryAbilityItem field383_0x142f;
+    struct SecondaryAbilityItem field384_0x1430;
+    struct SecondaryAbilityItem field385_0x1431;
+    struct SecondaryAbilityItem field386_0x1432;
+    struct SecondaryAbilityItem field387_0x1433;
+    struct SecondaryAbilityItem field388_0x1434;
+    struct SecondaryAbilityItem field389_0x1435;
+    struct SecondaryAbilityItem field390_0x1436;
+    struct SecondaryAbilityItem field391_0x1437;
+    struct SecondaryAbilityItem field392_0x1438;
+    struct SecondaryAbilityItem field393_0x1439;
+    struct SecondaryAbilityItem field394_0x143a;
+    struct SecondaryAbilityItem field395_0x143b;
+    struct SecondaryAbilityJump field396_0x143c;
+    struct SecondaryAbilityJump field397_0x143e;
+    struct SecondaryAbilityJump field398_0x1440;
+    struct SecondaryAbilityJump field399_0x1442;
+    struct SecondaryAbilityJump field400_0x1444;
+    struct SecondaryAbilityJump field401_0x1446;
+    struct SecondaryAbilityJump field402_0x1448;
+    struct SecondaryAbilityJump field403_0x144a;
+    struct SecondaryAbilityJump field404_0x144c;
+    struct SecondaryAbilityJump field405_0x144e;
+    struct SecondaryAbilityJump field406_0x1450;
+    struct SecondaryAbilityJump field407_0x1452;
+    struct SecondaryAbilityCharge field408_0x1454;
+    struct SecondaryAbilityCharge field409_0x1456;
+    struct SecondaryAbilityCharge field410_0x1458;
+    struct SecondaryAbilityCharge field411_0x145a;
+    struct SecondaryAbilityCharge field412_0x145c;
+    struct SecondaryAbilityCharge field413_0x145e;
+    struct SecondaryAbilityCharge field414_0x1460;
+    struct SecondaryAbilityCharge field415_0x1462;
+    struct SecondaryAbilityMath field416_0x1464;
+    struct SecondaryAbilityMath field417_0x1465;
+    struct SecondaryAbilityMath field418_0x1466;
+    struct SecondaryAbilityMath field419_0x1467;
+    struct SecondaryAbilityMath field420_0x1468;
+    struct SecondaryAbilityMath field421_0x1469;
+    struct SecondaryAbilityMath field422_0x146a;
+    struct SecondaryAbilityMath field423_0x146b;
+    struct SecondaryAbilityRSM field424_0x146c;
+    struct SecondaryAbilityRSM field425_0x146d;
+    struct SecondaryAbilityRSM field426_0x146e;
+    struct SecondaryAbilityRSM field427_0x146f;
+    struct SecondaryAbilityRSM field428_0x1470;
+    struct SecondaryAbilityRSM field429_0x1471;
+    struct SecondaryAbilityRSM field430_0x1472;
+    struct SecondaryAbilityRSM field431_0x1473;
+    struct SecondaryAbilityRSM field432_0x1474;
+    struct SecondaryAbilityRSM field433_0x1475;
+    struct SecondaryAbilityRSM field434_0x1476;
+    struct SecondaryAbilityRSM field435_0x1477;
+    struct SecondaryAbilityRSM field436_0x1478;
+    struct SecondaryAbilityRSM field437_0x1479;
+    struct SecondaryAbilityRSM field438_0x147a;
+    struct SecondaryAbilityRSM field439_0x147b;
+    struct SecondaryAbilityRSM field440_0x147c;
+    struct SecondaryAbilityRSM field441_0x147d;
+    struct SecondaryAbilityRSM field442_0x147e;
+    struct SecondaryAbilityRSM field443_0x147f;
+    struct SecondaryAbilityRSM field444_0x1480;
+    struct SecondaryAbilityRSM field445_0x1481;
+    struct SecondaryAbilityRSM field446_0x1482;
+    struct SecondaryAbilityRSM field447_0x1483;
+    struct SecondaryAbilityRSM field448_0x1484;
+    struct SecondaryAbilityRSM field449_0x1485;
+    struct SecondaryAbilityRSM field450_0x1486;
+    struct SecondaryAbilityRSM field451_0x1487;
+    struct SecondaryAbilityRSM field452_0x1488;
+    struct SecondaryAbilityRSM field453_0x1489;
+    struct SecondaryAbilityRSM field454_0x148a;
+    struct SecondaryAbilityRSM field455_0x148b;
+    struct SecondaryAbilityRSM field456_0x148c;
+    struct SecondaryAbilityRSM field457_0x148d;
+    struct SecondaryAbilityRSM field458_0x148e;
+    struct SecondaryAbilityRSM field459_0x148f;
+    struct SecondaryAbilityRSM field460_0x1490;
+    struct SecondaryAbilityRSM field461_0x1491;
+    struct SecondaryAbilityRSM field462_0x1492;
+    struct SecondaryAbilityRSM field463_0x1493;
+    struct SecondaryAbilityRSM field464_0x1494;
+    struct SecondaryAbilityRSM field465_0x1495;
+    struct SecondaryAbilityRSM field466_0x1496;
+    struct SecondaryAbilityRSM field467_0x1497;
+    struct SecondaryAbilityRSM field468_0x1498;
+    struct SecondaryAbilityRSM field469_0x1499;
+    struct SecondaryAbilityRSM field470_0x149a;
+    struct SecondaryAbilityRSM field471_0x149b;
+    struct SecondaryAbilityRSM field472_0x149c;
+    struct SecondaryAbilityRSM field473_0x149d;
+    struct SecondaryAbilityRSM field474_0x149e;
+    struct SecondaryAbilityRSM field475_0x149f;
+    struct SecondaryAbilityRSM field476_0x14a0;
+    struct SecondaryAbilityRSM field477_0x14a1;
+    struct SecondaryAbilityRSM field478_0x14a2;
+    struct SecondaryAbilityRSM field479_0x14a3;
+    struct SecondaryAbilityRSM field480_0x14a4;
+    struct SecondaryAbilityRSM field481_0x14a5;
+    struct SecondaryAbilityRSM field482_0x14a6;
+    struct SecondaryAbilityRSM field483_0x14a7;
+    struct SecondaryAbilityRSM field484_0x14a8;
+    struct SecondaryAbilityRSM field485_0x14a9;
+    struct SecondaryAbilityRSM field486_0x14aa;
+    struct SecondaryAbilityRSM field487_0x14ab;
+    struct SecondaryAbilityRSM field488_0x14ac;
+    struct SecondaryAbilityRSM field489_0x14ad;
+    struct SecondaryAbilityRSM field490_0x14ae;
+    struct SecondaryAbilityRSM field491_0x14af;
+    struct SecondaryAbilityRSM field492_0x14b0;
+    struct SecondaryAbilityRSM field493_0x14b1;
+    struct SecondaryAbilityRSM field494_0x14b2;
+    struct SecondaryAbilityRSM field495_0x14b3;
+    struct SecondaryAbilityRSM field496_0x14b4;
+    struct SecondaryAbilityRSM field497_0x14b5;
+    struct SecondaryAbilityRSM field498_0x14b6;
+    struct SecondaryAbilityRSM field499_0x14b7;
+    struct SecondaryAbilityRSM field500_0x14b8;
+    struct SecondaryAbilityRSM field501_0x14b9;
+    struct SecondaryAbilityRSM field502_0x14ba;
+    struct SecondaryAbilityRSM field503_0x14bb;
+    struct SecondaryAbilityRSM field504_0x14bc;
+    struct SecondaryAbilityRSM field505_0x14bd;
+    struct SecondaryAbilityRSM field506_0x14be;
+    struct SecondaryAbilityRSM field507_0x14bf;
+    struct SecondaryAbilityRSM field508_0x14c0;
+    struct SecondaryAbilityRSM field509_0x14c1;
+    struct SecondaryAbilityRSM field510_0x14c2;
+    struct SecondaryAbilityRSM field511_0x14c3;
+    struct SecondaryAbilityRSM field512_0x14c4;
+    struct SecondaryAbilityRSM field513_0x14c5;
+};
+
+typedef struct JobData JobData, *PJobData;
+
+struct JobData {
+    byte Skillset;
+    short InnateAbility1;
+    short InnateAbility2;
+    short InnateAbility3;
+    short InnateAbility4;
+    int Rod:1;
+    int Axe:1;
+    int Katana:1;
+    int KnightSword:1;
+    int Sword:1;
+    int NinjaBlade:1;
+    int Knife:1;
+    int Unarmed:1;
+    int Polearm:1;
+    int Book:1;
+    int Instrument:1;
+    int Bow:1;
+    int Crossbow:1;
+    int Gun:1;
+    int Flail:1;
+    int Staff:1;
+    int Armor:1;
+    int HairAdrn:1;
+    int Hat:1;
+    int Helmet:1;
+    int Shield:1;
+    int Cloth:1;
+    int Bag:1;
+    int Pole:1;
+    int Perfume:1;
+    int Cloak:1;
+    int Armlet:1;
+    int Ring:1;
+    int Armguard:1;
+    int Shoes:1;
+    int Robe:1;
+    int Clothing:1;
+    byte HPGrowth;
+    byte HPMult;
+    byte MPGrowth;
+    byte MPMult;
+    byte SpeedGrowth;
+    byte SpeedMult;
+    byte PAGrowth;
+    byte PAMult;
+    byte MAGrowth;
+    byte MAMult;
+    byte Move;
+    byte Jump;
+    byte CEV;
+    struct StatusList AlwaysStatus;
+    struct StatusList ImmuneStatus;
+    struct StatusList StartStatus;
+    byte AbsorbElem;
+    byte NullElem;
+    byte HalfElem;
+    byte DoubleElem;
+    byte MonPortrait;
+    byte MonPal;
+    byte MonGraphic;
+};
+
+typedef struct fileOpenDesc fileOpenDesc, *PfileOpenDesc;
+
+typedef struct CdlLOC CdlLOC, *PCdlLOC;
+
+typedef ulong __u_long;
+
+typedef __u_long u_long;
+
+typedef uchar u_char;
+
+struct CdlLOC {
+    u_char minute;
+    u_char second;
+    u_char sector;
+    u_char track;
+};
+
+struct fileOpenDesc { // custom FFT file header used to load most files
+    undefined4 field0_0x0;
+    int busy;
+    undefined4 field2_0x8;
+    undefined4 field3_0xc;
+    int nosect;
+    int lba;
+    undefined4 field6_0x18;
+    struct CdlLOC CdlLOC;
+    u_long addr;
+};
+
+typedef struct AllItemAttr AllItemAttr, *PAllItemAttr;
+
+typedef struct ItemAttributes ItemAttributes, *PItemAttributes;
+
+struct ItemAttributes {
+    byte PA;
+    byte MA;
+    byte Speed;
+    byte Move;
+    byte Jump;
+    struct StatusList AlwaysStatuses;
+    struct StatusList ImmuneStatuses;
+    struct StatusList StartStatuses;
+    byte AbsorbElem;
+    byte NullElem;
+    byte HalfElem;
+    byte DoubleElem;
+    byte BoostElem;
+};
+
+struct AllItemAttr {
+    struct ItemAttributes field0_0x0;
+    struct ItemAttributes field1_0x19;
+    struct ItemAttributes field2_0x32;
+    struct ItemAttributes field3_0x4b;
+    struct ItemAttributes field4_0x64;
+    struct ItemAttributes field5_0x7d;
+    struct ItemAttributes field6_0x96;
+    struct ItemAttributes field7_0xaf;
+    struct ItemAttributes field8_0xc8;
+    struct ItemAttributes field9_0xe1;
+    struct ItemAttributes field10_0xfa;
+    struct ItemAttributes field11_0x113;
+    struct ItemAttributes field12_0x12c;
+    struct ItemAttributes field13_0x145;
+    struct ItemAttributes field14_0x15e;
+    struct ItemAttributes field15_0x177;
+    struct ItemAttributes field16_0x190;
+    struct ItemAttributes field17_0x1a9;
+    struct ItemAttributes field18_0x1c2;
+    struct ItemAttributes field19_0x1db;
+    struct ItemAttributes field20_0x1f4;
+    struct ItemAttributes field21_0x20d;
+    struct ItemAttributes field22_0x226;
+    struct ItemAttributes field23_0x23f;
+    struct ItemAttributes field24_0x258;
+    struct ItemAttributes field25_0x271;
+    struct ItemAttributes field26_0x28a;
+    struct ItemAttributes field27_0x2a3;
+    struct ItemAttributes field28_0x2bc;
+    struct ItemAttributes field29_0x2d5;
+    struct ItemAttributes field30_0x2ee;
+    struct ItemAttributes field31_0x307;
+    struct ItemAttributes field32_0x320;
+    struct ItemAttributes field33_0x339;
+    struct ItemAttributes field34_0x352;
+    struct ItemAttributes field35_0x36b;
+    struct ItemAttributes field36_0x384;
+    struct ItemAttributes field37_0x39d;
+    struct ItemAttributes field38_0x3b6;
+    struct ItemAttributes field39_0x3cf;
+    struct ItemAttributes field40_0x3e8;
+    struct ItemAttributes field41_0x401;
+    struct ItemAttributes field42_0x41a;
+    struct ItemAttributes field43_0x433;
+    struct ItemAttributes field44_0x44c;
+    struct ItemAttributes field45_0x465;
+    struct ItemAttributes field46_0x47e;
+    struct ItemAttributes field47_0x497;
+    struct ItemAttributes field48_0x4b0;
+    struct ItemAttributes field49_0x4c9;
+    struct ItemAttributes field50_0x4e2;
+    struct ItemAttributes field51_0x4fb;
+    struct ItemAttributes field52_0x514;
+    struct ItemAttributes field53_0x52d;
+    struct ItemAttributes field54_0x546;
+    struct ItemAttributes field55_0x55f;
+    struct ItemAttributes field56_0x578;
+    struct ItemAttributes field57_0x591;
+    struct ItemAttributes field58_0x5aa;
+    struct ItemAttributes field59_0x5c3;
+    struct ItemAttributes field60_0x5dc;
+    struct ItemAttributes field61_0x5f5;
+    struct ItemAttributes field62_0x60e;
+    struct ItemAttributes field63_0x627;
+    struct ItemAttributes field64_0x640;
+    struct ItemAttributes field65_0x659;
+    struct ItemAttributes field66_0x672;
+    struct ItemAttributes field67_0x68b;
+    struct ItemAttributes field68_0x6a4;
+    struct ItemAttributes field69_0x6bd;
+    struct ItemAttributes field70_0x6d6;
+    struct ItemAttributes field71_0x6ef;
+    struct ItemAttributes field72_0x708;
+    struct ItemAttributes field73_0x721;
+    struct ItemAttributes field74_0x73a;
+    struct ItemAttributes field75_0x753;
+    struct ItemAttributes field76_0x76c;
+    struct ItemAttributes field77_0x785;
+    struct ItemAttributes field78_0x79e;
+    struct ItemAttributes field79_0x7b7;
+};
+
+typedef struct AllJobData AllJobData, *PAllJobData;
+
+struct AllJobData {
+    struct JobData NONE;
+    struct JobData SquireR1;
+    struct JobData SquireR2;
+    struct JobData SquireR4;
+    struct JobData SquireD;
+    struct JobData HolyKnightD;
+    struct JobData ArcKnightD;
+    struct JobData SquireA;
+    struct JobData ArcKnightZ;
+    struct JobData LuneKnight;
+    struct JobData DukeL;
+    struct JobData DukeG;
+    struct JobData Princess;
+    struct JobData HolySwordsman;
+    struct JobData HighPriest;
+    struct JobData Dragoner;
+    struct JobData HolyPriest;
+    struct JobData DarkKnightEnemy;
+    struct JobData HellKnightDead;
+    struct JobData Bishop;
+    struct JobData ClericBattle;
+    struct JobData Astrologist;
+    struct JobData EngineerJoin;
+    struct JobData DarkKnightGuest;
+    struct JobData Cardinal;
+    struct JobData HeavenKnightGuest;
+    struct JobData HellKnightEnemy;
+    struct JobData ArcKnightE;
+    struct JobData DelitaSister;
+    struct JobData ArcDuke;
+    struct JobData HolyKnightAJoin;
+    struct JobData TempleKnight;
+    struct JobData WhiteKnightW1;
+    struct JobData ArcWitch;
+    struct JobData EngineerGuest;
+    struct JobData BiCount;
+    struct JobData DivineKnightV;
+    struct JobData DivineKnightR;
+    struct JobData KnightBlade;
+    struct JobData Sorceror;
+    struct JobData WhiteKnightW2;
+    struct JobData HeavenKnightJoin;
+    struct JobData DivineKnightMJoin;
+    struct JobData EngineerB;
+    struct JobData ClericDead;
+    struct JobData AssassinC;
+    struct JobData AssassinL;
+    struct JobData DivineKnightMEnemy;
+    struct JobData ClericEvent;
+    struct JobData PhonySaint;
+    struct JobData SOLDIER;
+    struct JobData ArcKnightZZ;
+    struct JobData HolyKnightAGuest;
+    struct JobData FChemistSpecial;
+    struct JobData FPriestSpecial;
+    struct JobData MWizardSpecial;
+    struct JobData MOracleSpecial;
+    struct JobData MSquireSpecial;
+    struct JobData AssassinCUNUSED;
+    struct JobData AssassinLUNUSED;
+    struct JobData Warlock;
+    struct JobData MKnightZombie;
+    struct JobData AngelOfDeath;
+    struct JobData MArcherZombie;
+    struct JobData Regulator;
+    struct JobData HolyAngel;
+    struct JobData MWizardZombie;
+    struct JobData ImpureKing;
+    struct JobData FTimeMageZombie;
+    struct JobData GhostOfFury;
+    struct JobData MOracleZombie;
+    struct JobData FSummonerZombie;
+    struct JobData HolyDragon;
+    struct JobData ArchAngel;
+    struct JobData Squire;
+    struct JobData Chemist;
+    struct JobData Knight;
+    struct JobData Archer;
+    struct JobData Monk;
+    struct JobData Priest;
+    struct JobData Wizard;
+    struct JobData TimeMage;
+    struct JobData Summoner;
+    struct JobData Thief;
+    struct JobData Mediator;
+    struct JobData Oracle;
+    struct JobData Geomancer;
+    struct JobData Lancer;
+    struct JobData Samurai;
+    struct JobData Ninja;
+    struct JobData Calculator;
+    struct JobData Bard;
+    struct JobData Dancer;
+    struct JobData Mime;
+    struct JobData Chocobo;
+    struct JobData BChocobo;
+    struct JobData RChocobo;
+    struct JobData Goblin;
+    struct JobData BGoblin;
+    struct JobData GGoblin;
+    struct JobData Bomb;
+    struct JobData GBomb;
+    struct JobData EBomb;
+    struct JobData RPanther;
+    struct JobData CPanther;
+    struct JobData VPanther;
+    struct JobData PMindflare;
+    struct JobData SMindflare;
+    struct JobData Mindflare;
+    struct JobData Skeleton;
+    struct JobData BSkeleton;
+    struct JobData LSkeleton;
+    struct JobData Ghoul;
+    struct JobData GGhoul;
+    struct JobData RGhoul;
+    struct JobData Flotiball;
+    struct JobData AFlotiball;
+    struct JobData PFlotiball;
+    struct JobData Juravis;
+    struct JobData SJuravis;
+    struct JobData CJuravis;
+    struct JobData Uribo;
+    struct JobData PUribo;
+    struct JobData WUribo;
+    struct JobData Woodman;
+    struct JobData Trent;
+    struct JobData Taiju;
+    struct JobData BullDemon;
+    struct JobData MBullDemon;
+    struct JobData SBullDemon;
+    struct JobData Morbol;
+    struct JobData OMorbol;
+    struct JobData GMorbol;
+    struct JobData Behemoth;
+    struct JobData KBehemoth;
+    struct JobData DBehemoth;
+    struct JobData Dragon;
+    struct JobData BDragon;
+    struct JobData RDragon;
+    struct JobData Hyudra;
+    struct JobData Hydra;
+    struct JobData Tiamat;
+    struct JobData field142_0x1aa0;
+    struct JobData field143_0x1ad0;
+    struct JobData Byblos;
+    struct JobData SteelGiant;
+    struct JobData field146_0x1b60;
+    struct JobData field147_0x1b90;
+    struct JobData field148_0x1bc0;
+    struct JobData field149_0x1bf0;
+    struct JobData Apanda;
+    struct JobData Serpentarius;
+    struct JobData HolyDragon2;
+    struct JobData ArchaicDemon;
+    struct JobData UltimaDemon;
+    struct JobData field155_0x1d10;
+    struct JobData field156_0x1d40;
+    struct JobData field157_0x1d70;
+    struct JobData field158_0x1da0;
+    struct JobData field159_0x1dd0;
 };
 
 
@@ -27804,7 +29983,7 @@ void Make_Unit_BaseRawStats(undefined *param_1,int param_2)
 void JobGrowthMult_to_Unit(int param_1)
 
 {
-  StoreArg1_IntoArg2_(&DAT_800610c5 + (uint)*(byte *)(param_1 + 3) * 0x30,param_1 + 0x81,10);
+  StoreArg1_IntoArg2_((uint)*(byte *)(param_1 + 3) * 0x30 + -0x7ff9ef3b,param_1 + 0x81,10);
   return;
 }
 
@@ -27816,18 +29995,19 @@ uint Get_Abiltity_from_Skillset(int param_1,int param_2)
   byte bVar1;
   uint uVar2;
   int iVar3;
+  int iVar4;
   
   if (param_1 < 0xb0) {
     if (0x15 < param_2) {
       return 0;
     }
-    iVar3 = param_2;
+    iVar4 = param_2;
     if (param_2 < 0) {
-      iVar3 = param_2 + 7;
+      iVar4 = param_2 + 7;
     }
-    uVar2 = (uint)(byte)(&UNK_80064a94)[(iVar3 >> 3) + param_1 * 0x19] <<
-            (param_2 + (iVar3 >> 3) * -8 + 1U & 0x1f);
-    bVar1 = (&UNK_80064a94)[param_2 + param_1 * 0x19 + 3];
+    uVar2 = (uint)*(byte *)((int)&SkillsetList[param_1].ActionFlags + (iVar4 >> 3)) <<
+            (param_2 + (iVar4 >> 3) * -8 + 1U & 0x1f);
+    bVar1 = (&SkillsetList[param_1].Ability0)[param_2];
   }
   else {
     if (0xdf < param_1) {
@@ -27836,13 +30016,13 @@ uint Get_Abiltity_from_Skillset(int param_1,int param_2)
     if (3 < param_2) {
       return 0;
     }
-    iVar3 = param_2;
+    iVar3 = param_1 * 5 + -0x7ff9a7ac;
+    iVar4 = param_2;
     if (param_2 < 0) {
-      iVar3 = param_2 + 7;
+      iVar4 = param_2 + 7;
     }
-    uVar2 = (uint)(byte)(&UNK_80065854)[(iVar3 >> 3) + param_1 * 5] <<
-            (param_2 + (iVar3 >> 3) * -8 + 1U & 0x1f);
-    bVar1 = (&UNK_80065854)[param_2 + param_1 * 5 + 1];
+    uVar2 = (uint)*(byte *)(iVar3 + (iVar4 >> 3)) << (param_2 + (iVar4 >> 3) * -8 + 1U & 0x1f);
+    bVar1 = *(byte *)(iVar3 + param_2 + 1);
   }
   return (uint)bVar1 | uVar2 & 0x100;
 }
@@ -27893,47 +30073,49 @@ undefined2 * Store_SkillsetAbilities(int param_1,uint param_2)
 
 
 
-undefined4 Get_AbilityPointers_and_Type(uint param_1,undefined4 *param_2,int *param_3)
+undefined4
+Get_AbilityPointers_and_Type
+          (uint param_1,PrimaryAbilityData **param_2,SecondaryAbilityData **param_3)
 
 {
   undefined4 uVar1;
   
   param_1 = param_1 & 0x1ff;
-  *param_2 = &DAT_8005ebf0 + param_1 * 8;
+  *param_2 = PrimaryAbilityData + param_1;
   if (param_1 < 0x170) {
-    *param_3 = (int)&PTR_gte_ldv0_8005fbf0 + param_1 * 0xe;
+    *param_3 = SecondaryAbilityData + param_1;
     uVar1 = 0;
   }
   else if (param_1 < 0x17e) {
-    *param_3 = (int)(&UNK_80060ea0 + param_1);
+    *param_3 = (SecondaryAbilityData *)(param_1 + 0x80060ea0);
     uVar1 = 1;
   }
   else if (param_1 < 0x18a) {
-    *param_3 = (int)(&UNK_80060ea2 + param_1);
+    *param_3 = (SecondaryAbilityData *)(param_1 + 0x80060ea2);
     uVar1 = 2;
   }
   else if (param_1 < 0x196) {
-    *param_3 = (int)(&UNK_80060d18 + param_1 * 2);
+    *param_3 = (SecondaryAbilityData *)(param_1 * 2 + -0x7ff9f2e8);
     uVar1 = 3;
   }
   else if (param_1 < 0x19e) {
-    *param_3 = (int)(&UNK_80060d18 + param_1 * 2);
+    *param_3 = (SecondaryAbilityData *)(param_1 * 2 + -0x7ff9f2e8);
     uVar1 = 4;
   }
   else if (param_1 < 0x1a6) {
-    *param_3 = (int)(&UNK_80060eb6 + param_1);
+    *param_3 = (SecondaryAbilityData *)(param_1 + 0x80060eb6);
     uVar1 = 5;
   }
   else if (param_1 < 0x1c6) {
-    *param_3 = (int)(&UNK_80060eb6 + param_1);
+    *param_3 = (SecondaryAbilityData *)(param_1 + 0x80060eb6);
     uVar1 = 6;
   }
   else if (param_1 < 0x1e6) {
-    *param_3 = (int)(&UNK_80060eb6 + param_1);
+    *param_3 = (SecondaryAbilityData *)(param_1 + 0x80060eb6);
     uVar1 = 7;
   }
   else {
-    *param_3 = (int)(&UNK_80060eb6 + param_1);
+    *param_3 = (SecondaryAbilityData *)(param_1 + 0x80060eb6);
     uVar1 = 8;
   }
   return uVar1;
@@ -27944,23 +30126,23 @@ undefined4 Get_AbilityPointers_and_Type(uint param_1,undefined4 *param_2,int *pa
 PrimaryItemData * Get_Item_DataPointer(uint param_1)
 
 {
-  return &AllPrimaryItem_80062eb8.NoWeapon + (param_1 & 0xff);
+  return PrimaryItemData + (param_1 & 0xff);
 }
 
 
 
-undefined1 * Get_Job_DataPointer(int param_1)
+JobData * Get_Job_DataPointer(int param_1)
 
 {
-  undefined1 *puVar1;
+  JobData *pJVar1;
   
   if (param_1 < 0xa0) {
-    puVar1 = &DAT_800610b8 + param_1 * 0x30;
+    pJVar1 = JobData + param_1;
   }
   else {
-    puVar1 = (undefined1 *)0x0;
+    pJVar1 = (JobData *)0x0;
   }
-  return puVar1;
+  return pJVar1;
 }
 
 
@@ -28101,7 +30283,7 @@ undefined4 ENTD_Data_Calculation(byte *param_1,byte *param_2)
           pbVar1[2] = *param_2;
         }
         if (((bVar4 == 0x19) || (bVar4 == 0x1a)) || (bVar4 == 0x1b)) {
-          pbVar1[7] = (&DAT_800610b8)[(uint)*param_2 * 0x30];
+          pbVar1[7] = JobData[*param_2].Skillset;
         }
         unaff_s4 = Initialize_Unit_JobData_Prep(param_1,param_2);
         bVar4 = 8;
@@ -28370,7 +30552,7 @@ void CreateUnitJob_From_ENTD(int param_1,int param_2)
       if ((*(byte *)(param_1 + 6) & 0x20) == 0) {
         bVar2 = Get_Random_UnlockedJob(param_1);
         if (bVar2 != 0) {
-          bVar2 = (&DAT_800610b8)[(uint)bVar2 * 0x30];
+          bVar2 = JobData[bVar2].Skillset;
         }
         if (bVar2 == *(byte *)(param_1 + 0x12)) {
           bVar2 = 0;
@@ -28444,50 +30626,52 @@ void Transfer_JobData_to_Unit(byte *param_1)
   byte bVar2;
   ushort uVar3;
   int iVar4;
-  byte *pbVar5;
-  int iVar6;
+  uint uVar5;
+  byte *pbVar6;
+  int iVar7;
   
   if (*param_1 < 0x4a) {
-    param_1[0x162] = (&DAT_800610b8)[(uint)*param_1 * 0x30];
+    param_1[0x162] = JobData[*param_1].Skillset;
   }
   else {
     param_1[0x162] = 0;
   }
-  iVar4 = (uint)param_1[3] * 0x30;
-  param_1[0x12] = (&DAT_800610b8)[iVar4];
-  StoreArg1_IntoArg2_(&DAT_800610b9 + iVar4,param_1 + 10,8);
-  StoreArg1_IntoArg2_(&DAT_800610c1 + iVar4,param_1 + 0x4a,4);
-  StoreArg1_IntoArg2_(&DAT_800610c5 + iVar4,param_1 + 0x81,10);
-  param_1[0x3a] = (&DAT_800610cf)[iVar4];
-  param_1[0x3b] = (&DAT_800610d0)[iVar4] & 0x7f;
-  if (((&DAT_800610d0)[iVar4] & 0x80) == 0) {
+  uVar5 = (uint)param_1[3];
+  iVar4 = uVar5 * 0x30;
+  param_1[0x12] = JobData[uVar5].Skillset;
+  StoreArg1_IntoArg2_(iVar4 + -0x7ff9ef47,param_1 + 10,8);
+  StoreArg1_IntoArg2_(iVar4 + -0x7ff9ef3f,param_1 + 0x4a,4);
+  StoreArg1_IntoArg2_(iVar4 + -0x7ff9ef3b,param_1 + 0x81,10);
+  param_1[0x3a] = JobData[uVar5].Move;
+  param_1[0x3b] = JobData[uVar5].Jump & 0x7f;
+  if ((JobData[uVar5].Jump & 0x80) == 0) {
     uVar3 = *(ushort *)(param_1 + 0x48) & 0xbfff;
   }
   else {
     uVar3 = *(ushort *)(param_1 + 0x48) | 0x4000;
   }
   *(ushort *)(param_1 + 0x48) = uVar3;
-  StoreArg1_IntoArg2_(&UNK_800610d2 + iVar4,param_1 + 0x4e,0xf);
+  StoreArg1_IntoArg2_(iVar4 + -0x7ff9ef2e,param_1 + 0x4e,0xf);
   bVar1 = param_1[5];
   bVar2 = param_1[6];
-  if (((bVar1 & 4) != 0) && (iVar6 = 0, (bVar2 & 9) != 0)) {
-    pbVar5 = param_1 + 0x53;
+  if (((bVar1 & 4) != 0) && (iVar7 = 0, (bVar2 & 9) != 0)) {
+    pbVar6 = param_1 + 0x53;
     do {
       if ((bVar1 & 4) != 0) {
-        *pbVar5 = *pbVar5 | (&DAT_800662e9)[iVar6];
+        *pbVar6 = *pbVar6 | (&DAT_800662e9)[iVar7];
       }
       if ((bVar2 & 9) != 0) {
-        *pbVar5 = *pbVar5 | (&DAT_800662ee)[iVar6];
+        *pbVar6 = *pbVar6 | (&DAT_800662ee)[iVar7];
       }
-      iVar6 = iVar6 + 1;
-      pbVar5 = pbVar5 + 1;
-    } while (iVar6 < 5);
+      iVar7 = iVar7 + 1;
+      pbVar6 = pbVar6 + 1;
+    } while (iVar7 < 5);
   }
-  StoreArg1_IntoArg2_(&UNK_800610e1 + iVar4,param_1 + 0x6d,4);
+  StoreArg1_IntoArg2_(iVar4 + -0x7ff9ef1f,param_1 + 0x6d,4);
   param_1[0x71] = 0;
-  param_1[0x15f] = (&DAT_800610e5)[iVar4];
-  param_1[0x160] = (&DAT_800610e6)[iVar4];
-  param_1[0x15e] = (&DAT_800610e7)[iVar4];
+  param_1[0x15f] = JobData[uVar5].MonPortrait;
+  param_1[0x160] = JobData[uVar5].MonPal;
+  param_1[0x15e] = JobData[uVar5].MonGraphic;
   return;
 }
 
@@ -28659,7 +30843,6 @@ void Calculate_Unit_Abilities(int param_1,int param_2)
   int iVar8;
   int iVar9;
   int iVar10;
-  int iVar11;
   
   bVar1 = *(byte *)(param_1 + 3);
   bVar2 = *(byte *)(param_1 + 6);
@@ -28669,19 +30852,19 @@ void Calculate_Unit_Abilities(int param_1,int param_2)
   else {
     cVar3 = *(char *)(param_2 + 0x1d);
     if ((cVar3 == -1) || (cVar3 == '\0')) {
-      *(undefined1 *)(param_1 + 0x12) = (&DAT_800610b8)[(uint)bVar1 * 0x30];
+      *(byte *)(param_1 + 0x12) = JobData[bVar1].Skillset;
     }
     else {
       *(char *)(param_1 + 0x12) = cVar3;
     }
     if ((bVar2 & 0xc0) != 0) {
       Data_Null((undefined *)(param_1 + 0x99),0x39);
-      iVar9 = 0;
-      iVar11 = 0;
-      iVar10 = param_1;
+      iVar8 = 0;
+      iVar10 = 0;
+      iVar9 = param_1;
       do {
-        bVar4 = *(byte *)(param_1 + iVar9 + 0xd2);
-        if ((iVar9 != 9) || (sVar5 = 0, (bVar2 & 0x80) == 0)) {
+        bVar4 = *(byte *)(param_1 + iVar8 + 0xd2);
+        if ((iVar8 != 9) || (sVar5 = 0, (bVar2 & 0x80) == 0)) {
           if (bVar4 >> 4 == 0) {
             iVar7 = rand();
             iVar7 = iVar7 * 100;
@@ -28699,10 +30882,10 @@ void Calculate_Unit_Abilities(int param_1,int param_2)
             sVar5 = *(short *)(&DAT_80066182 + (uint)(bVar4 >> 4) * 2) + (short)(iVar7 >> 0xf);
           }
         }
-        *(short *)(iVar10 + 0x104) = sVar5;
-        *(short *)(iVar10 + 0xdc) = sVar5;
-        Calc_Learned_Abilities(param_1,iVar11 + 0x4a,param_2);
-        if ((iVar9 != 8) || (sVar5 = 0, (bVar2 & 0x40) == 0)) {
+        *(short *)(iVar9 + 0x104) = sVar5;
+        *(short *)(iVar9 + 0xdc) = sVar5;
+        Calc_Learned_Abilities(param_1,iVar10 + 0x4a,param_2);
+        if ((iVar8 != 8) || (sVar5 = 0, (bVar2 & 0x40) == 0)) {
           if ((bVar4 & 0xf) == 0) {
             iVar7 = rand();
             iVar7 = iVar7 * 100;
@@ -28720,34 +30903,31 @@ void Calculate_Unit_Abilities(int param_1,int param_2)
             sVar5 = *(short *)(&DAT_80066182 + (bVar4 & 0xf) * 2) + (short)(iVar7 >> 0xf);
           }
         }
-        *(short *)(iVar10 + 0x106) = sVar5;
-        *(short *)(iVar10 + 0xde) = sVar5;
-        if (iVar9 == 9) break;
-        Calc_Learned_Abilities(param_1,iVar11 + 0x4b,param_2);
-        iVar10 = iVar10 + 4;
-        iVar9 = iVar9 + 1;
-        iVar11 = iVar11 + 2;
-      } while (iVar9 < 10);
+        *(short *)(iVar9 + 0x106) = sVar5;
+        *(short *)(iVar9 + 0xde) = sVar5;
+        if (iVar8 == 9) break;
+        Calc_Learned_Abilities(param_1,iVar10 + 0x4b,param_2);
+        iVar9 = iVar9 + 4;
+        iVar8 = iVar8 + 1;
+        iVar10 = iVar10 + 2;
+      } while (iVar8 < 10);
       if ((*(char *)(param_2 + 0x1d) != '\0') && (*(char *)(param_2 + 0x1d) != -1)) {
         *(undefined *)(param_1 + 0x99) = 0xff;
         *(undefined *)(param_1 + 0x9a) = 0xff;
         *(undefined *)(param_1 + 0x9b) = 0xff;
       }
     }
-    iVar9 = 0;
-    iVar10 = param_1;
+    iVar9 = param_1;
+    iVar8 = 0;
     do {
-      iVar7 = iVar9 * 2;
-      iVar8 = param_1 + iVar9;
-      iVar11 = iVar9 + (uint)bVar1 * 0x30;
-      iVar9 = iVar9 + 1;
-      iVar7 = iVar7 + (uint)bVar1 * 0x30;
-      *(ushort *)(iVar10 + 10) =
-           (ushort)(byte)(&DAT_800610b8)[iVar7 + 1] +
-           (ushort)(byte)(&DAT_800610b8)[iVar7 + 2] * 0x100;
-      *(undefined1 *)(iVar8 + 0x4a) = (&DAT_800610b8)[iVar11 + 9];
-      iVar10 = iVar10 + 2;
-    } while (iVar9 < 4);
+      iVar10 = iVar8 + 1;
+      *(ushort *)(iVar9 + 10) =
+           (ushort)*(byte *)(&JobData[bVar1].InnateAbility1 + iVar8) +
+           (ushort)*(byte *)((int)&JobData[bVar1].InnateAbility1 + iVar8 * 2 + 1) * 0x100;
+      *(undefined *)(param_1 + iVar8 + 0x4a) = (&JobData[bVar1].field_0x9)[iVar8];
+      iVar9 = iVar9 + 2;
+      iVar8 = iVar10;
+    } while (iVar10 < 4);
     uVar6 = Calculate_RSM(param_1,*(undefined2 *)(param_2 + 0xc),2,param_2);
     *(undefined2 *)(param_1 + 0x14) = uVar6;
     uVar6 = Calculate_RSM(param_1,*(undefined2 *)(param_2 + 0xe),4,param_2);
@@ -28846,7 +31026,7 @@ void Create_Unit_Equip_From_ENTD(int param_1,int param_2)
         }
       }
     }
-    if (((&AllPrimaryItem_80062eb8.NoWeapon)[uVar4].field_0x3 & 0x40) == 0) {
+    if ((PrimaryItemData[uVar4].field_0x3 & 0x40) == 0) {
       *(byte *)(param_1 + 0x1d) = bVar2;
       *(undefined *)(param_1 + 0x1e) = 0xff;
     }
@@ -28856,9 +31036,8 @@ void Create_Unit_Equip_From_ENTD(int param_1,int param_2)
     }
     bVar2 = *(byte *)(param_2 + 0x16);
     if ((*(byte *)(param_1 + 0x1d) != 0xff) &&
-       ((((&WeaponSecondary.NoWeapon)
-          [(&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x1d)].SecondID].field_0x1 & 1)
-         != 0 || ((*(byte *)(param_1 + 0x91) & 2) != 0)))) {
+       (((WeaponSecondary[PrimaryItemData[*(byte *)(param_1 + 0x1d)].SecondID].field_0x1 & 1) != 0
+        || ((*(byte *)(param_1 + 0x91) & 2) != 0)))) {
       bVar2 = 0xff;
     }
     if ((bVar2 == 0xfe) && ((*(byte *)(param_1 + 0x91) & 1) != 0)) {
@@ -28872,7 +31051,7 @@ void Create_Unit_Equip_From_ENTD(int param_1,int param_2)
         bVar2 = Create_Random_Equip(param_1,0x40,0,0xff);
       }
     }
-    if (((&AllPrimaryItem_80062eb8.NoWeapon)[bVar2].field_0x3 & 0x80) == 0) {
+    if ((PrimaryItemData[bVar2].field_0x3 & 0x80) == 0) {
       *(byte *)(param_1 + 0x20) = bVar2;
       *(undefined *)(param_1 + 0x1f) = 0xff;
     }
@@ -28971,32 +31150,32 @@ void Equipment_Stat_Calc(int param_1)
   byte bVar1;
   
   Data_Null((undefined *)(param_1 + 0x3c),0xb);
-  *(undefined *)(param_1 + 0x43) = (&DAT_800610d1)[(uint)*(byte *)(param_1 + 3) * 0x30];
+  *(byte *)(param_1 + 0x43) = JobData[*(byte *)(param_1 + 3)].CEV;
   if ((*(byte *)(param_1 + 6) & 0x20) == 0) {
-    if (((&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x1c)].field_0x3 & 8) != 0) {
-      bVar1 = (&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x1c)].SecondID;
-      *(byte *)(param_1 + 0x40) = (&OtherSecondary.Battle_Boots)[bVar1].PhysicalEvade;
-      *(byte *)(param_1 + 0x44) = (&OtherSecondary.Battle_Boots)[bVar1].MagicalEvade;
+    if ((PrimaryItemData[*(byte *)(param_1 + 0x1c)].field_0x3 & 8) != 0) {
+      bVar1 = PrimaryItemData[*(byte *)(param_1 + 0x1c)].SecondID;
+      *(byte *)(param_1 + 0x40) = AccessorySecondary[bVar1].PhysicalEvade;
+      *(byte *)(param_1 + 0x44) = AccessorySecondary[bVar1].MagicalEvade;
     }
-    if (((&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x1e)].field_0x3 & 0x40) != 0) {
-      bVar1 = (&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x1e)].SecondID;
-      *(byte *)(param_1 + 0x41) = (&OtherSecondary.Escutcheon)[bVar1].PhysicalEvade;
-      *(byte *)(param_1 + 0x45) = (&OtherSecondary.Escutcheon)[bVar1].MagicalEvade;
+    if ((PrimaryItemData[*(byte *)(param_1 + 0x1e)].field_0x3 & 0x40) != 0) {
+      bVar1 = PrimaryItemData[*(byte *)(param_1 + 0x1e)].SecondID;
+      *(byte *)(param_1 + 0x41) = ShieldSecondary[bVar1].PhysicalEvade;
+      *(byte *)(param_1 + 0x45) = ShieldSecondary[bVar1].MagicalEvade;
     }
-    if (((&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x20)].field_0x3 & 0x40) != 0) {
-      bVar1 = (&AllPrimaryItem_80062eb8.NoWeapon)[*(byte *)(param_1 + 0x20)].SecondID;
-      *(byte *)(param_1 + 0x42) = (&OtherSecondary.Escutcheon)[bVar1].PhysicalEvade;
-      *(byte *)(param_1 + 0x46) = (&OtherSecondary.Escutcheon)[bVar1].MagicalEvade;
+    if ((PrimaryItemData[*(byte *)(param_1 + 0x20)].field_0x3 & 0x40) != 0) {
+      bVar1 = PrimaryItemData[*(byte *)(param_1 + 0x20)].SecondID;
+      *(byte *)(param_1 + 0x42) = ShieldSecondary[bVar1].PhysicalEvade;
+      *(byte *)(param_1 + 0x46) = ShieldSecondary[bVar1].MagicalEvade;
     }
     bVar1 = *(byte *)(param_1 + 0x1d);
-    if (((&AllPrimaryItem_80062eb8.NoWeapon)[bVar1].field_0x3 & 0x80) != 0) {
-      *(byte *)(param_1 + 0x3c) = (&WeaponSecondary.NoWeapon)[bVar1].WeaponPower;
-      *(byte *)(param_1 + 0x3e) = (&WeaponSecondary.NoWeapon)[bVar1].Evade;
+    if ((PrimaryItemData[bVar1].field_0x3 & 0x80) != 0) {
+      *(byte *)(param_1 + 0x3c) = WeaponSecondary[bVar1].WeaponPower;
+      *(byte *)(param_1 + 0x3e) = WeaponSecondary[bVar1].Evade;
     }
     bVar1 = *(byte *)(param_1 + 0x1f);
-    if (((&AllPrimaryItem_80062eb8.NoWeapon)[bVar1].field_0x3 & 0x80) != 0) {
-      *(byte *)(param_1 + 0x3d) = (&WeaponSecondary.NoWeapon)[bVar1].WeaponPower;
-      *(byte *)(param_1 + 0x3f) = (&WeaponSecondary.NoWeapon)[bVar1].Evade;
+    if ((PrimaryItemData[bVar1].field_0x3 & 0x80) != 0) {
+      *(byte *)(param_1 + 0x3d) = WeaponSecondary[bVar1].WeaponPower;
+      *(byte *)(param_1 + 0x3f) = WeaponSecondary[bVar1].Evade;
     }
   }
   return;
@@ -29007,14 +31186,14 @@ void Equipment_Stat_Calc(int param_1)
 void Equipment_Attr_Calc(int param_1,int param_2)
 
 {
-  byte bVar1;
-  int iVar2;
+  byte *pbVar1;
+  byte bVar2;
   uint uVar3;
   uint uVar4;
-  byte *pbVar5;
+  ItemAttributes *pIVar5;
   int iVar6;
   byte *pbVar7;
-  byte *pbVar8;
+  ItemAttributes *pIVar8;
   int iVar9;
   
   Data_Null((byte *)(param_1 + 0x33),3);
@@ -29028,59 +31207,57 @@ void Equipment_Attr_Calc(int param_1,int param_2)
       if (uVar4 == 0x20) {
         *(byte *)(param_1 + 0x184) = *(byte *)(param_1 + 0x184) | 4;
       }
-      if ((uVar4 < 0x80) && ((&AllPrimaryItem_80062eb8.NoWeapon)[uVar4].ItemType - 3 < 2)) {
+      if ((uVar4 < 0x80) && (PrimaryItemData[uVar4].ItemType - 3 < 2)) {
         *(byte *)(param_1 + 0x184) = *(byte *)(param_1 + 0x184) | 8;
       }
       if (uVar4 != 0xff) {
-        iVar6 = (uint)(&AllPrimaryItem_80062eb8.NoWeapon)[uVar4].ItemAttr * 0x19;
-        pbVar8 = &DAT_800642c4 + iVar6;
-        pbVar5 = pbVar8;
+        bVar2 = PrimaryItemData[uVar4].ItemAttr;
+        pIVar8 = ItemAttributes + bVar2;
+        pIVar5 = pIVar8;
         pbVar7 = (byte *)(param_1 + 0x33);
         do {
-          uVar3 = (uint)*pbVar5 + (uint)*pbVar7;
-          pbVar5 = pbVar5 + 1;
+          uVar3 = (uint)pIVar5->PA + (uint)*pbVar7;
+          pIVar5 = (ItemAttributes *)&pIVar5->MA;
           if (0xff < uVar3) {
             uVar3 = 0xff;
           }
           *pbVar7 = (byte)uVar3;
           pbVar7 = pbVar7 + 1;
         } while ((int)pbVar7 < param_1 + 0x36);
-        uVar3 = (uint)(byte)(&DAT_800642c7)[iVar6] + (uint)*(byte *)(param_1 + 0x3a);
+        uVar3 = (uint)ItemAttributes[bVar2].Move + (uint)*(byte *)(param_1 + 0x3a);
         if (0xfd < uVar3) {
           uVar3 = 0xfd;
         }
         *(char *)(param_1 + 0x3a) = (char)uVar3;
-        uVar3 = (uint)(byte)(&DAT_800642c8)[iVar6] + (uint)*(byte *)(param_1 + 0x3b);
+        uVar3 = (uint)ItemAttributes[bVar2].Jump + (uint)*(byte *)(param_1 + 0x3b);
         iVar6 = 0;
         if (7 < uVar3) {
           uVar3 = 7;
         }
         *(char *)(param_1 + 0x3b) = (char)uVar3;
-        pbVar5 = (byte *)(param_1 + 0x4e);
+        pbVar7 = (byte *)(param_1 + 0x4e);
         do {
-          iVar2 = iVar6 + 5;
+          pbVar1 = &(pIVar8->AlwaysStatuses).field_0x0 + iVar6;
           iVar6 = iVar6 + 1;
-          *pbVar5 = pbVar8[iVar2] | *pbVar5;
-          pbVar5 = pbVar5 + 1;
+          *pbVar7 = *pbVar1 | *pbVar7;
+          pbVar7 = pbVar7 + 1;
         } while (iVar6 < 0xf);
         iVar6 = 0;
-        pbVar5 = (byte *)(param_1 + 0x6d);
+        pbVar7 = (byte *)(param_1 + 0x6d);
         do {
-          iVar2 = iVar6 + 0x14;
+          pbVar1 = &pIVar8->AbsorbElem + iVar6;
           iVar6 = iVar6 + 1;
-          *pbVar5 = pbVar8[iVar2] | *pbVar5;
-          pbVar5 = pbVar5 + 1;
+          *pbVar7 = *pbVar1 | *pbVar7;
+          pbVar7 = pbVar7 + 1;
         } while (iVar6 < 5);
-        if (((&AllPrimaryItem_80062eb8.NoWeapon)[uVar4].field_0x3 & 0x30) != 0) {
-          bVar1 = (&AllPrimaryItem_80062eb8.NoWeapon)[uVar4].SecondID;
-          uVar4 = (uint)*(ushort *)(param_1 + 0x2a) +
-                  (uint)(&OtherSecondary.Leather_Helmet)[bVar1].HP;
+        if ((PrimaryItemData[uVar4].field_0x3 & 0x30) != 0) {
+          bVar2 = PrimaryItemData[uVar4].SecondID;
+          uVar4 = (uint)*(ushort *)(param_1 + 0x2a) + (uint)ArmorSecondary[bVar2].HP;
           if (999 < uVar4) {
             uVar4 = 999;
           }
           *(short *)(param_1 + 0x2a) = (short)uVar4;
-          uVar4 = (uint)*(ushort *)(param_1 + 0x2e) +
-                  (uint)(&OtherSecondary.Leather_Helmet)[bVar1].MP;
+          uVar4 = (uint)*(ushort *)(param_1 + 0x2e) + (uint)ArmorSecondary[bVar2].MP;
           if (999 < uVar4) {
             uVar4 = 999;
           }
@@ -29094,13 +31271,13 @@ void Equipment_Attr_Calc(int param_1,int param_2)
   if (*(ushort *)(param_1 + 0x2a) < *(ushort *)(param_1 + 0x28)) {
     *(undefined2 *)(param_1 + 0x28) = *(undefined2 *)(param_1 + 0x2a);
   }
-  pbVar5 = (byte *)(param_1 + 0x30);
+  pbVar7 = (byte *)(param_1 + 0x30);
   if (*(ushort *)(param_1 + 0x2e) < *(ushort *)(param_1 + 0x2c)) {
     *(undefined2 *)(param_1 + 0x2c) = *(undefined2 *)(param_1 + 0x2e);
   }
   do {
-    uVar4 = (uint)pbVar5[3] + (uint)*pbVar5;
-    if ((int)pbVar5 < param_1 + 0x32) {
+    uVar4 = (uint)pbVar7[3] + (uint)*pbVar7;
+    if ((int)pbVar7 < param_1 + 0x32) {
       if (99 < uVar4) {
         uVar4 = 99;
       }
@@ -29108,9 +31285,9 @@ void Equipment_Attr_Calc(int param_1,int param_2)
     else if (0x32 < uVar4) {
       uVar4 = 0x32;
     }
-    pbVar5[6] = (byte)uVar4;
-    pbVar5 = pbVar5 + 1;
-  } while ((int)pbVar5 < param_1 + 0x33);
+    pbVar7[6] = (byte)uVar4;
+    pbVar7 = pbVar7 + 1;
+  } while ((int)pbVar7 < param_1 + 0x33);
   return;
 }
 
@@ -29349,15 +31526,13 @@ LAB_8005cd24:
   if (uVar4 < uVar7) {
     iVar8 = uVar4 * 0xc;
     do {
-      if (((&AllPrimaryItem_80062eb8.NoWeapon.field_0x3)[iVar8] & 2) == 0) {
-        bVar2 = (&AllPrimaryItem_80062eb8.NoWeapon.ItemType)[iVar8];
+      if (((&PrimaryItemData[0].field_0x3)[iVar8] & 2) == 0) {
+        bVar2 = (&PrimaryItemData[0].ItemType)[iVar8];
         if (((((param_4 & 0xff) == 0xff) || ((uint)bVar2 == (param_4 & 0xff))) &&
             (((uint)*(byte *)(param_1 + (uint)(bVar2 >> 3) + 0x4a) & 0x80 >> (bVar2 & 7)) != 0)) &&
            ((param_3 == 0 ||
-            ((param_3 &
-             (&WeaponSecondary.NoWeapon)[(&AllPrimaryItem_80062eb8.NoWeapon.SecondID)[iVar8]].
-             field_0x1) != 0)))) {
-          bVar2 = (&AllPrimaryItem_80062eb8.NoWeapon.ReqLevel)[iVar8];
+            ((param_3 & WeaponSecondary[(&PrimaryItemData[0].SecondID)[iVar8]].field_0x1) != 0)))) {
+          bVar2 = (&PrimaryItemData[0].ReqLevel)[iVar8];
           if (bVar2 <= bVar1) {
             uVar6 = uVar5;
             if (bVar9 < bVar2) {
@@ -29395,13 +31570,12 @@ void Calc_Learned_Abilities(byte *param_1,uint param_2,int param_3)
   int iVar3;
   uint uVar4;
   int iVar5;
-  int iVar6;
-  uint uVar7;
-  int iVar8;
-  byte bVar9;
+  uint uVar6;
+  int iVar7;
+  byte bVar8;
   
   bVar1 = false;
-  uVar7 = param_2 - 0x4a;
+  uVar6 = param_2 - 0x4a;
   if (param_2 == 0x4a) {
     if (1 < (byte)(*param_1 + 0x80)) {
       if (*param_1 == 0x82) {
@@ -29413,57 +31587,58 @@ void Calc_Learned_Abilities(byte *param_1,uint param_2,int param_3)
     }
   }
   else if (((uint)param_1[0x96] * 0x10000 + (uint)param_1[0x97] * 0x100 + (uint)param_1[0x98] &
-           0x800000 >> (uVar7 & 0x1f)) == 0) {
+           0x800000 >> (uVar6 & 0x1f)) == 0) {
     return;
   }
   if (((param_2 != 0x5b) || ((param_1[6] & 0x40) == 0)) &&
      ((param_2 != 0x5c || ((param_1[6] & 0x80) == 0)))) {
     if (param_2 == param_1[3]) {
-      bVar9 = param_1[0x12];
+      bVar8 = param_1[0x12];
       if (*(char *)(param_3 + 0x1d) == '\0') {
         bVar1 = true;
       }
     }
     else {
-      bVar9 = (&DAT_800610b8)[param_2 * 0x30];
+      bVar8 = JobData[param_2].Skillset;
     }
-    iVar8 = 0;
-    iVar3 = uVar7 * 3 + 0x99;
+    iVar7 = 0;
+    iVar3 = uVar6 * 3 + 0x99;
     do {
       bVar2 = false;
-      uVar4 = Get_Abiltity_from_Skillset(bVar9,iVar8);
-      iVar6 = (uVar4 & 0xffff) * 8;
-      if ((uVar4 & 0xffff) != 0) {
+      uVar4 = Get_Abiltity_from_Skillset(bVar8,iVar7);
+      uVar4 = uVar4 & 0xffff;
+      if (uVar4 != 0) {
         if (bVar1) {
           bVar2 = true;
         }
         else {
-          iVar5 = PassFail_Roll(100,(&DAT_8005ebf2)[iVar6]);
+          iVar5 = PassFail_Roll(100,PrimaryAbilityData[uVar4].Chance_to_Learn);
           if ((iVar5 == 0) &&
-             (*(ushort *)(&DAT_8005ebf0 + iVar6) <= *(ushort *)(param_1 + uVar7 * 2 + 0xdc))) {
-            *(ushort *)(param_1 + uVar7 * 2 + 0xdc) =
-                 *(short *)(param_1 + uVar7 * 2 + 0xdc) - *(ushort *)(&DAT_8005ebf0 + iVar6);
-            iVar6 = iVar8;
-            if (iVar8 < 0) {
-              iVar6 = iVar8 + 7;
+             ((ushort)PrimaryAbilityData[uVar4].JP_cost <= *(ushort *)(param_1 + uVar6 * 2 + 0xdc)))
+          {
+            *(short *)(param_1 + uVar6 * 2 + 0xdc) =
+                 *(short *)(param_1 + uVar6 * 2 + 0xdc) - PrimaryAbilityData[uVar4].JP_cost;
+            iVar5 = iVar7;
+            if (iVar7 < 0) {
+              iVar5 = iVar7 + 7;
             }
             bVar2 = true;
-            param_1[(iVar6 >> 3) + iVar3] =
-                 param_1[(iVar6 >> 3) + iVar3] | (byte)(0x80 >> (iVar8 + (iVar6 >> 3) * -8 & 0x1fU))
+            param_1[(iVar5 >> 3) + iVar3] =
+                 param_1[(iVar5 >> 3) + iVar3] | (byte)(0x80 >> (iVar7 + (iVar5 >> 3) * -8 & 0x1fU))
             ;
           }
         }
         if (bVar2) {
-          iVar6 = iVar8;
-          if (iVar8 < 0) {
-            iVar6 = iVar8 + 7;
+          iVar5 = iVar7;
+          if (iVar7 < 0) {
+            iVar5 = iVar7 + 7;
           }
-          param_1[(iVar6 >> 3) + iVar3] =
-               param_1[(iVar6 >> 3) + iVar3] | (byte)(0x80 >> (iVar8 + (iVar6 >> 3) * -8 & 0x1fU));
+          param_1[(iVar5 >> 3) + iVar3] =
+               param_1[(iVar5 >> 3) + iVar3] | (byte)(0x80 >> (iVar7 + (iVar5 >> 3) * -8 & 0x1fU));
         }
       }
-      iVar8 = iVar8 + 1;
-    } while (iVar8 < 0x18);
+      iVar7 = iVar7 + 1;
+    } while (iVar7 < 0x18);
   }
   return;
 }
@@ -29537,7 +31712,7 @@ ushort Calculate_RSM(byte *param_1,ushort param_2,uint param_3,int param_4)
 code_r0x8005d1cc:
         if (uVar10 == 0) {
           if ((in_t1 & 0xff) == 0) goto LAB_8005d34c;
-          uVar10 = (uint)(byte)(&DAT_800610b8)[(in_t1 & 0xff) * 0x30];
+          uVar10 = (uint)JobData[in_t1 & 0xff].Skillset;
         }
         if (uVar10 == uVar8) {
           iVar11 = 0;
@@ -29605,7 +31780,7 @@ LAB_8005d34c:
 
 
 
-uint Find_Skillset_JobID(char param_1)
+uint Find_Skillset_JobID(byte param_1)
 
 {
   uint uVar1;
@@ -29614,7 +31789,7 @@ uint Find_Skillset_JobID(char param_1)
   bVar2 = 0;
   uVar1 = 0;
   do {
-    if ((&DAT_800610b8)[uVar1 * 0x30] == param_1) {
+    if (JobData[uVar1].Skillset == param_1) {
       return uVar1;
     }
     bVar2 = bVar2 + 1;
@@ -29729,52 +31904,53 @@ void Equipment_StatusRSM(int param_1,int param_2,int param_3)
   byte bVar2;
   uint uVar3;
   uint uVar4;
-  int iVar5;
-  uint uVar6;
-  byte *pbVar7;
-  undefined *puVar8;
-  int iVar9;
-  uint uVar10;
+  uint uVar5;
+  int iVar6;
+  uint uVar7;
+  byte *pbVar8;
+  undefined *puVar9;
+  int iVar10;
   undefined local_28 [5];
   undefined auStack_23 [3];
   byte local_20 [8];
   
   Store_Current_Statuses();
-  iVar9 = 0;
-  puVar8 = local_28;
-  pbVar7 = local_20;
+  iVar10 = 0;
+  puVar9 = local_28;
+  pbVar8 = local_20;
   do {
-    iVar5 = param_1 + iVar9;
-    iVar9 = iVar9 + 1;
-    *pbVar7 = *(byte *)(iVar5 + 0x58);
-    pbVar7 = pbVar7 + 1;
-    *puVar8 = *(undefined *)(iVar5 + 0x1bb);
-    puVar8 = puVar8 + 1;
-  } while (iVar9 < 5);
-  iVar9 = (uint)*(byte *)(param_1 + 3) * 0x30;
-  *(undefined *)(param_1 + 0x3a) = (&DAT_800610cf)[iVar9];
-  *(byte *)(param_1 + 0x3b) = (&DAT_800610d0)[iVar9] & 0x7f;
-  Move_Data(&DAT_800610c1 + iVar9,param_1 + 0x4a,4);
-  Move_Data(&UNK_800610d2 + iVar9,param_1 + 0x4e,0xf);
-  Move_Data(&UNK_800610e1 + iVar9,param_1 + 0x6d,4);
+    iVar6 = param_1 + iVar10;
+    iVar10 = iVar10 + 1;
+    *pbVar8 = *(byte *)(iVar6 + 0x58);
+    pbVar8 = pbVar8 + 1;
+    *puVar9 = *(undefined *)(iVar6 + 0x1bb);
+    puVar9 = puVar9 + 1;
+  } while (iVar10 < 5);
+  uVar3 = (uint)*(byte *)(param_1 + 3);
+  iVar10 = uVar3 * 0x30;
+  *(byte *)(param_1 + 0x3a) = JobData[uVar3].Move;
+  *(byte *)(param_1 + 0x3b) = JobData[uVar3].Jump & 0x7f;
+  Move_Data(iVar10 + -0x7ff9ef3f,param_1 + 0x4a,4);
+  Move_Data(iVar10 + -0x7ff9ef2e,param_1 + 0x4e,0xf);
+  Move_Data(iVar10 + -0x7ff9ef1f,param_1 + 0x6d,4);
   *(undefined *)(param_1 + 0x71) = 0;
   Enable_Unit_RSM(param_1);
   MoveJumpBonusCalc(param_1,1);
   Equipment_Stat_Calc(param_1);
   Equipment_Attr_Calc(param_1,0);
   Female_Equip_setting(param_1);
-  puVar8 = local_28;
-  iVar9 = param_1;
+  puVar9 = local_28;
+  iVar10 = param_1;
   do {
     if (param_3 == 0) {
-      *(undefined *)(iVar9 + 0x1bb) = *puVar8;
+      *(undefined *)(iVar10 + 0x1bb) = *puVar9;
     }
     else {
-      *(undefined *)(iVar9 + 0x1bb) = *(undefined *)(iVar9 + 0x58);
+      *(undefined *)(iVar10 + 0x1bb) = *(undefined *)(iVar10 + 0x58);
     }
-    puVar8 = puVar8 + 1;
-    iVar9 = iVar9 + 1;
-  } while ((int)puVar8 < (int)auStack_23);
+    puVar9 = puVar9 + 1;
+    iVar10 = iVar10 + 1;
+  } while ((int)puVar9 < (int)auStack_23);
   uVar1 = *(undefined *)(param_1 + 2);
   *(undefined *)(param_1 + 2) = 0xff;
   CurrentStatusCT(param_1);
@@ -29789,22 +31965,22 @@ void Equipment_StatusRSM(int param_1,int param_2,int param_3)
     }
     *(byte *)(param_1 + 0x1bd) = bVar2;
     Store_Current_Statuses(param_1);
-    uVar10 = 0;
+    uVar3 = 0;
     do {
-      uVar3 = uVar10;
-      if ((int)uVar10 < 0) {
-        uVar3 = uVar10 + 7;
+      uVar4 = uVar3;
+      if ((int)uVar3 < 0) {
+        uVar4 = uVar3 + 7;
       }
-      uVar6 = 0x80 >> (uVar10 & 7);
-      uVar4 = *(byte *)(param_1 + ((int)uVar3 >> 3) + 0x58) & uVar6;
-      if ((param_3 != 0) || ((local_20[(int)uVar3 >> 3] & uVar6) != uVar4)) {
-        if ((uVar4 != 0) && (param_3 != 0)) {
-          Status_CT_Set(param_1,uVar10,0);
+      uVar7 = 0x80 >> (uVar3 & 7);
+      uVar5 = *(byte *)(param_1 + ((int)uVar4 >> 3) + 0x58) & uVar7;
+      if ((param_3 != 0) || ((local_20[(int)uVar4 >> 3] & uVar7) != uVar5)) {
+        if ((uVar5 != 0) && (param_3 != 0)) {
+          Status_CT_Set(param_1,uVar3,0);
         }
         FUN_8018e9bc();
       }
-      uVar10 = uVar10 + 1;
-    } while ((int)uVar10 < 0x28);
+      uVar3 = uVar3 + 1;
+    } while ((int)uVar3 < 0x28);
   }
   return;
 }
@@ -29858,7 +32034,7 @@ uint LevelUp_Unit(int param_1,int param_2)
     if (0 < iVar7) {
       do {
         pbVar3 = (byte *)(param_1 + 0x19);
-        pbVar5 = &DAT_800610c5 + (uint)bVar1 * 0x30;
+        pbVar5 = &JobData[bVar1].HPGrowth;
         do {
           uVar4 = (uint)*pbVar3 + (uint)pbVar3[1] * 0x100 + (uint)pbVar3[2] * 0x10000;
           if (*pbVar5 == 0) {
@@ -30185,34 +32361,34 @@ void Initialize_Enemy_ENTD(int param_1,int param_2)
 
 
 
-undefined Get_Ability_Range(uint param_1)
+byte Get_Ability_Range(uint param_1)
 
 {
-  undefined uVar1;
+  byte bVar1;
   
   if ((param_1 & 0xffff) < 0x170) {
-    uVar1 = *(undefined *)((int)&PTR_gte_ldv0_8005fbf0 + (param_1 & 0xffff) * 0xe);
+    bVar1 = SecondaryAbilityData[param_1 & 0xffff].Range;
   }
   else {
-    uVar1 = 0;
+    bVar1 = 0;
   }
-  return uVar1;
+  return bVar1;
 }
 
 
 
-undefined Get_Ability_AOE(uint param_1)
+byte Get_Ability_AOE(uint param_1)
 
 {
-  undefined uVar1;
+  byte bVar1;
   
   if ((param_1 & 0xffff) < 0x170) {
-    uVar1 = *(undefined *)((int)&PTR_gte_ldv0_8005fbf0 + (param_1 & 0xffff) * 0xe + 1);
+    bVar1 = SecondaryAbilityData[param_1 & 0xffff].AOE;
   }
   else {
-    uVar1 = 0;
+    bVar1 = 0;
   }
-  return uVar1;
+  return bVar1;
 }
 
 
@@ -30582,7 +32758,7 @@ void Store_Current_Statuses(int param_1)
 void Transfer_Last_Ability_Used_CT(int param_1)
 
 {
-  *(byte *)(param_1 + 0x18b) = (&DAT_8005fbfc)[*(short *)(param_1 + 0x170) * 0xe] & 0x7f;
+  *(byte *)(param_1 + 0x18b) = SecondaryAbilityData[*(short *)(param_1 + 0x170)].CT & 0x7f;
   return;
 }
 

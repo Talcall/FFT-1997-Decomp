@@ -2576,6 +2576,155 @@ struct fileOpenDesc { // custom FFT file header used to load most files
     u_long addr;
 };
 
+typedef struct PartyUnit PartyUnit, *PPartyUnit;
+
+struct PartyUnit {
+    byte SpriteSet;
+    byte PartyID;
+    byte JobID;
+    byte Palette;
+    int SaveFormation:1;
+    int BossStats:1;
+    int LoadFormation:1;
+    int JoinAfterEvent:1;
+    int Monster:1;
+    int Female:1;
+    int Male:1;
+    int Birthday:9;
+    int ZodiacSign:4;
+    byte SecondarySkillset;
+    short Reaction;
+    short Support;
+    short Movement;
+    byte Head;
+    byte Body;
+    byte Accessory;
+    byte RHWeapon;
+    byte RHShield;
+    byte LHWeapon;
+    byte LHShield;
+    byte Experience;
+    byte Level;
+    byte Brave;
+    byte Faith;
+    int RawHP:24;
+    int RawMP:24;
+    int RawSP:24;
+    int RawPA:24;
+    int RawMA:24;
+    int UnlockedJobs:24;
+    short BaseAction;
+    byte BaseRSM;
+    short ChemistAction;
+    byte ChemistRSM;
+    short KnightAction;
+    byte KnightRSM;
+    short ArcherAction;
+    byte ArcherRSM;
+    short MonkAction;
+    byte MonkRSM;
+    short PriestAction;
+    byte PriestRSM;
+    short WizardAction;
+    byte WizardRSM;
+    short TimeMageAction;
+    byte TimeMageRSM;
+    short SummonerAction;
+    byte SummonerRSM;
+    short ThiefAction;
+    byte ThiefRSM;
+    short MediatorAction;
+    byte MediatorRSM;
+    short OracleAction;
+    byte OracleRSM;
+    short GeomancerAction;
+    byte GeomancerRSM;
+    short LancerAction;
+    byte LancerRSM;
+    short SamuraiAction;
+    byte SamuraiRSM;
+    short NinjaAction;
+    byte NinjaRSM;
+    short CalculatorAction;
+    byte CalculatorRSM;
+    short BardAction;
+    byte BardRSM;
+    short DancerAction;
+    byte DancerRSM;
+    int ChemistLevel:4;
+    int SquireLevel:4;
+    int ArcherLevel:4;
+    int KnightLevel:4;
+    int PriestLevel:4;
+    int MonkLevel:4;
+    int TimeMageLevel:4;
+    int WizardLevel:4;
+    int ThiefLevel:4;
+    int SummonerLevel:4;
+    int OracleLevel:4;
+    int MediatorLevel:4;
+    int LancerLevel:4;
+    int GeomancerLevel:4;
+    int NinjaLevel:4;
+    int SamuraiLevel:4;
+    int BardLevel:4;
+    int CalculatorLevel:4;
+    int MimeLevel:4;
+    int DancerLevel:4;
+    short JobJP[20];
+    short JobTotalJP[20];
+    char UnitName[16];
+    short UnitNameID;
+    byte Proposition;
+    undefined field97_0xd1;
+    byte EggStage;
+    undefined field99_0xd3;
+    undefined field100_0xd4;
+    undefined field101_0xd5;
+    undefined field102_0xd6;
+    undefined field103_0xd7;
+    undefined field104_0xd8;
+    undefined field105_0xd9;
+    undefined field106_0xda;
+    undefined field107_0xdb;
+    undefined field108_0xdc;
+    undefined field109_0xdd;
+    undefined field110_0xde;
+    undefined field111_0xdf;
+    undefined field112_0xe0;
+    undefined field113_0xe1;
+    undefined field114_0xe2;
+    undefined field115_0xe3;
+    undefined field116_0xe4;
+    undefined field117_0xe5;
+    undefined field118_0xe6;
+    undefined field119_0xe7;
+    undefined field120_0xe8;
+    undefined field121_0xe9;
+    undefined field122_0xea;
+    undefined field123_0xeb;
+    undefined field124_0xec;
+    undefined field125_0xed;
+    undefined field126_0xee;
+    undefined field127_0xef;
+    undefined field128_0xf0;
+    undefined field129_0xf1;
+    undefined field130_0xf2;
+    undefined field131_0xf3;
+    undefined field132_0xf4;
+    undefined field133_0xf5;
+    undefined field134_0xf6;
+    undefined field135_0xf7;
+    undefined field136_0xf8;
+    undefined field137_0xf9;
+    undefined field138_0xfa;
+    undefined field139_0xfb;
+    undefined field140_0xfc;
+    undefined field141_0xfd;
+    undefined field142_0xfe;
+    undefined field143_0xff;
+};
+
 typedef struct AllItemAttr AllItemAttr, *PAllItemAttr;
 
 typedef struct ItemAttributes ItemAttributes, *PItemAttributes;
@@ -29257,77 +29406,90 @@ void Open_WORLD_File(int param_1,int param_2,u_long *param_3,int param_4)
 void FUN_800452ec(void)
 
 {
-  undefined *puVar1;
-  undefined4 *puVar2;
-  undefined4 uVar3;
-  int iVar4;
-  undefined4 uVar5;
-  int iVar6;
-  undefined4 uVar7;
-  undefined4 *puVar8;
+  short *psVar1;
+  undefined *puVar2;
+  int iVar3;
+  undefined4 uVar4;
+  int iVar5;
+  undefined4 uVar6;
+  int iVar7;
+  undefined4 uVar8;
+  undefined4 *puVar9;
+  undefined4 *puVar10;
   
-  iVar4 = 0;
-  puVar2 = &DAT_80059594;
-  iVar6 = 0;
+  iVar5 = 0;
+  iVar3 = -0x7ffa6a6c;
+  iVar7 = 0;
   do {
-    *(undefined2 *)((int)puVar2 + 0x26) = 0xffff;
-    *(undefined2 *)(puVar2 + 9) = 0xffff;
-    *(undefined2 *)((int)puVar2 + 0x22) = 0xffff;
-    *(undefined2 *)(puVar2 + 8) = 0xffff;
-    *(undefined2 *)((int)puVar2 + 0x1e) = 0xffff;
-    *(undefined2 *)((int)&DAT_800595ae + iVar6) = 0xffff;
-    *(undefined2 *)(puVar2 + 0xb) = 0;
-    *(undefined2 *)((int)puVar2 + 0x2a) = 0;
-    *(undefined2 *)(puVar2 + 3) = 0;
-    *(undefined2 *)((int)&DAT_800595a2 + iVar6) = 0;
-    *(undefined4 *)((int)&DAT_800595c8 + iVar6) = 0;
-    *(undefined2 *)(puVar2 + 6) = 0;
-    *(undefined2 *)(puVar2 + 5) = 0;
-    puVar2 = puVar2 + 0xe;
-    *(undefined2 *)((int)&DAT_800595a6 + iVar6) = 0;
-    *(undefined **)((int)&DAT_80059594 + iVar6) = &DAT_800d0bbc;
-    iVar4 = iVar4 + 1;
-    iVar6 = iVar6 + 0x38;
-  } while (iVar4 < 5);
-  puVar8 = &DAT_80057f34;
-  puVar2 = &DAT_800454d0;
-  DAT_800595aa = 0x10;
-  DAT_800595e2 = 0x10;
-  DAT_8005961a = 0;
-  DAT_80059652 = 0;
-  DAT_8005968a = 0x10;
+    *(undefined2 *)(iVar3 + 0x26) = 0xffff;
+    *(undefined2 *)(iVar3 + 0x24) = 0xffff;
+    *(undefined2 *)(iVar3 + 0x22) = 0xffff;
+    *(undefined2 *)(iVar3 + 0x20) = 0xffff;
+    *(undefined2 *)(iVar3 + 0x1e) = 0xffff;
+    *(undefined2 *)((int)PartyData[0x16].JobJP + iVar7 + -0x34) = 0xffff;
+    *(undefined2 *)(iVar3 + 0x2c) = 0;
+    *(undefined2 *)(iVar3 + 0x2a) = 0;
+    *(undefined2 *)(iVar3 + 0xc) = 0;
+    *(undefined2 *)((int)PartyData[0x16].JobJP + iVar7 + -0x40) = 0;
+    *(undefined4 *)((int)PartyData[0x16].JobJP + iVar7 + -0x1a) = 0;
+    *(undefined2 *)(iVar3 + 0x18) = 0;
+    *(undefined2 *)(iVar3 + 0x14) = 0;
+    iVar3 = iVar3 + 0x38;
+    *(undefined2 *)((int)PartyData[0x16].JobJP + iVar7 + -0x3c) = 0;
+    *(undefined **)((int)PartyData[0x16].JobJP + iVar7 + -0x4e) = &DAT_800d0bbc;
+    iVar5 = iVar5 + 1;
+    iVar7 = iVar7 + 0x38;
+  } while (iVar5 < 5);
+  puVar10 = &DAT_80057f34;
+  puVar9 = &DAT_800454d0;
+                    // WARNING: Read-only address (ram,0x800595aa) is written
+  PartyData[22]._54_2_ = 0x10;
+                    // WARNING: Read-only address (ram,0x800595e2) is written
+  PartyData[22].JobJP[0] = 0x10;
+                    // WARNING: Read-only address (ram,0x8005961a) is written
+  PartyData[22].JobTotalJP[8] = 0;
+                    // WARNING: Read-only address (ram,0x80059652) is written
+  PartyData[22]._222_2_ = 0;
+  PartyData[23].Level = 0x10;
+  PartyData[23].Brave = 0;
+                    // WARNING: Read-only address (ram,0x8005968a) is written
   do {
-    uVar3 = puVar2[1];
-    uVar5 = puVar2[2];
-    uVar7 = puVar2[3];
-    *puVar8 = *puVar2;
-    puVar8[1] = uVar3;
-    puVar8[2] = uVar5;
-    puVar8[3] = uVar7;
-    puVar2 = puVar2 + 4;
-    puVar8 = puVar8 + 4;
-  } while (puVar2 != (undefined4 *)&UNK_80045510);
-  iVar4 = 0x27;
-  puVar2 = &DAT_80059410;
+    uVar4 = puVar9[1];
+    uVar6 = puVar9[2];
+    uVar8 = puVar9[3];
+    *puVar10 = *puVar9;
+    puVar10[1] = uVar4;
+    puVar10[2] = uVar6;
+    puVar10[3] = uVar8;
+    puVar9 = puVar9 + 4;
+    puVar10 = puVar10 + 4;
+  } while (puVar9 != (undefined4 *)&UNK_80045510);
+                    // WARNING: Read-only address (ram,0x800595aa) is written
+                    // WARNING: Read-only address (ram,0x800595e2) is written
+                    // WARNING: Read-only address (ram,0x8005961a) is written
+                    // WARNING: Read-only address (ram,0x80059652) is written
+                    // WARNING: Read-only address (ram,0x8005968a) is written
+  iVar3 = 0x27;
+  psVar1 = PartyData[0x14].JobTotalJP + 3;
+  do {
+    *(undefined4 *)psVar1 = 0;
+    iVar3 = iVar3 + -1;
+    psVar1 = psVar1 + -2;
+  } while (-1 < iVar3);
+  iVar3 = 1;
+  puVar9 = &DAT_80059814;
+  do {
+    *puVar9 = 0;
+    iVar3 = iVar3 + -1;
+    puVar9 = puVar9 + -1;
+  } while (-1 < iVar3);
+  iVar3 = 0x5f;
+  puVar2 = &DAT_80057d83;
   do {
     *puVar2 = 0;
-    iVar4 = iVar4 + -1;
+    iVar3 = iVar3 + -1;
     puVar2 = puVar2 + -1;
-  } while (-1 < iVar4);
-  iVar4 = 1;
-  puVar2 = &DAT_80059814;
-  do {
-    *puVar2 = 0;
-    iVar4 = iVar4 + -1;
-    puVar2 = puVar2 + -1;
-  } while (-1 < iVar4);
-  iVar4 = 0x5f;
-  puVar1 = &DAT_80057d83;
-  do {
-    *puVar1 = 0;
-    iVar4 = iVar4 + -1;
-    puVar1 = puVar1 + -1;
-  } while (-1 < iVar4);
+  } while (-1 < iVar3);
   DAT_80057ce8 = 0;
   DAT_8004d950 = 0;
   return;
@@ -29392,7 +29554,7 @@ void FUN_80045514(void)
   DAT_80057c08 = 0xff;
   DAT_80057c30 = 0xff;
   DAT_80057c54 = 0xff;
-  memset("",'\0',0x100);
+  memset(&PartyData[0x15].field_0x20,'\0',0x100);
   return;
 }
 
@@ -29406,14 +29568,22 @@ void Initialise_MEMCARD_events(void)
   if (DAT_80057c6b == '\0') {
     iVar1 = 0;
     EnterCriticalSection();
-    DAT_800596c0 = OpenEvent();
-    DAT_800596c4 = OpenEvent();
-    DAT_800596c8 = OpenEvent();
-    DAT_800596cc = OpenEvent();
-    DAT_800596d0 = OpenEvent();
-    DAT_800596d4 = OpenEvent();
-    DAT_800596d8 = OpenEvent();
-    DAT_800596dc = OpenEvent();
+    PartyData[23]._76_4_ = OpenEvent();
+                    // WARNING: Read-only address (ram,0x800596c0) is written
+    PartyData[23]._80_4_ = OpenEvent();
+                    // WARNING: Read-only address (ram,0x800596c4) is written
+    PartyData[23]._84_4_ = OpenEvent();
+                    // WARNING: Read-only address (ram,0x800596c8) is written
+    PartyData[23]._88_4_ = OpenEvent();
+                    // WARNING: Read-only address (ram,0x800596cc) is written
+    PartyData[23]._92_4_ = OpenEvent();
+                    // WARNING: Read-only address (ram,0x800596d0) is written
+    PartyData[23]._96_4_ = OpenEvent();
+                    // WARNING: Read-only address (ram,0x800596d4) is written
+    PartyData[23]._100_4_ = OpenEvent();
+                    // WARNING: Read-only address (ram,0x800596d8) is written
+    PartyData[23]._104_4_ = OpenEvent();
+                    // WARNING: Read-only address (ram,0x800596dc) is written
     init_card_earlysafe();
     StartCARD_earlysafe();
     ChangeClearPAD();
@@ -29462,7 +29632,7 @@ void Initialize_Status_Check_Data(void)
   uint uVar6;
   int iVar7;
   
-  Data_Null(&DAT_80059414,0x80);
+  Data_Null((undefined *)(PartyData[0x14].JobTotalJP + 5),0x80);
   Data_Null(&DAT_800662d0,0x37);
   uVar6 = 0;
   iVar7 = 0;
@@ -29524,7 +29694,7 @@ void Initialize_Party_ID_to_Neg1(void)
   
   iVar1 = 0x1300;
   do {
-    (&DAT_80057f75)[iVar1] = 0xff;
+    *(undefined *)((int)PartyData[0].JobJP + iVar1 + -0x6d) = 0xff;
     iVar1 = iVar1 + -0x100;
   } while (-1 < iVar1);
   return;
@@ -29532,18 +29702,18 @@ void Initialize_Party_ID_to_Neg1(void)
 
 
 
-undefined1 * Get_Party_Data_Pointer(int param_1)
+PartyUnit * Get_Party_Data_Pointer(int param_1)
 
 {
-  undefined1 *puVar1;
+  PartyUnit *pPVar1;
   
   if (param_1 < 0x14) {
-    puVar1 = &DAT_80057f74 + param_1 * 0x100;
+    pPVar1 = PartyData + param_1;
   }
   else {
-    puVar1 = (undefined1 *)0x0;
+    pPVar1 = (PartyUnit *)0x0;
   }
-  return puVar1;
+  return pPVar1;
 }
 
 
@@ -29558,8 +29728,8 @@ undefined4 Unit_Initialization(int param_1,int param_2,undefined4 param_3,undefi
   undefined local_4d;
   undefined local_46;
   
-  DAT_80066238 = (char *)(param_1 + param_2 * 0x28);
-  if (*DAT_80066238 == '\0') {
+  CurrentENTD = (undefined *)(param_1 + param_2 * 0x28);
+  if (*CurrentENTD == '\0') {
     uVar1 = 0xfffffffe;
   }
   else {
@@ -29567,7 +29737,7 @@ undefined4 Unit_Initialization(int param_1,int param_2,undefined4 param_3,undefi
     local_46 = 0xff;
     local_4d = 1;
     local_1ce = 0xff;
-    BATTLE_Initialize_UnitGen(&uStack_1d0,DAT_80066238,param_4,0);
+    BATTLE_Initialize_UnitGen(&uStack_1d0,CurrentENTD,param_4,0);
     uVar1 = Save_unit_to_Party(&uStack_1d0,param_3);
   }
   return uVar1;
@@ -29741,14 +29911,14 @@ int Generate_Unit_in_Empty_PartySlot(undefined4 param_1)
 int Find_Units_Party_Data_Location(uint param_1)
 
 {
-  byte *pbVar1;
+  PartyUnit *pPVar1;
   int iVar2;
   
   iVar2 = 0;
-  pbVar1 = &DAT_80057f74;
-  while ((pbVar1[1] == 0xff || (*pbVar1 != param_1))) {
+  pPVar1 = PartyData;
+  while ((pPVar1->PartyID == 0xff || (pPVar1->SpriteSet != param_1))) {
     iVar2 = iVar2 + 1;
-    pbVar1 = pbVar1 + 0x100;
+    pPVar1 = pPVar1 + 1;
     if (0x13 < iVar2) {
       return -1;
     }
@@ -29761,7 +29931,7 @@ int Find_Units_Party_Data_Location(uint param_1)
 void Remove_Unit(int param_1)
 
 {
-  (&DAT_80057f75)[param_1 * 0x100] = 0xff;
+  PartyData[param_1].PartyID = 0xff;
   return;
 }
 
@@ -29777,36 +29947,37 @@ void WORLD_UnitGeneration_(byte *param_1,int param_2)
   int iVar5;
   int iVar6;
   undefined4 uVar7;
-  uint uVar8;
-  byte *pbVar9;
-  int iVar10;
+  PartyUnit *pPVar8;
+  uint uVar9;
+  byte *pbVar10;
   int iVar11;
+  int iVar12;
   
   if (param_2 == 0) {
-    iVar11 = 0x4100;
-    iVar10 = 0x100;
+    iVar12 = 0x4100;
+    iVar11 = 0x100;
     bVar3 = 0x80;
     *param_1 = 0x80;
   }
   else {
-    iVar11 = 0x4200;
+    iVar12 = 0x4200;
     if (param_2 == 1) {
-      iVar10 = 0x200;
+      iVar11 = 0x200;
       *param_1 = 0x81;
       bVar3 = 0x40;
     }
     else {
-      iVar11 = 0x4000;
+      iVar12 = 0x4000;
       if (param_2 != 3) {
         param_2 = 2;
-        iVar10 = 0;
+        iVar11 = 0;
         *param_1 = 1;
         param_1[4] = 0x80;
         param_1[2] = 1;
         goto LAB_8005a0b4;
       }
-      iVar11 = 0x4300;
-      iVar10 = 0x300;
+      iVar12 = 0x4300;
+      iVar11 = 0x300;
       *param_1 = 0x82;
       bVar3 = 0x20;
     }
@@ -29819,10 +29990,10 @@ LAB_8005a0b4:
   if (iVar5 < 0) {
     iVar5 = iVar5 + 0x7fff;
   }
-  uVar8 = (iVar5 >> 0xf) + 1;
-  cVar2 = Calculate_Zodiac_Sign(uVar8 & 0xffff);
-  param_1[5] = (byte)uVar8;
-  param_1[6] = ((byte)(uVar8 >> 8) & 1) + cVar2 * '\x10';
+  uVar9 = (iVar5 >> 0xf) + 1;
+  cVar2 = Calculate_Zodiac_Sign(uVar9 & 0xffff);
+  param_1[5] = (byte)uVar9;
+  param_1[6] = ((byte)(uVar9 >> 8) & 1) + cVar2 * '\x10';
   if (param_2 == 2) {
     bVar3 = 0x46;
     param_1[0x17] = 0x46;
@@ -29850,7 +30021,7 @@ LAB_8005a0b4:
   bVar3 = param_1[4];
   if ((bVar3 & 0xc0) != 0) {
     iVar5 = 0;
-    pbVar9 = param_1;
+    pbVar10 = param_1;
     do {
       if (((iVar5 != 0x11) || ((bVar3 & 0x40) == 0)) && ((iVar5 != 0x12 || ((bVar3 & 0x80) == 0))))
       {
@@ -29860,12 +30031,12 @@ LAB_8005a0b4:
           iVar6 = iVar6 + 0x7fff;
         }
         bVar4 = (char)(iVar6 >> 0xf) + 100;
-        pbVar9[0x96] = bVar4;
-        pbVar9[0x6e] = bVar4;
+        pbVar10[0x96] = bVar4;
+        pbVar10[0x6e] = bVar4;
         param_1[iVar5 / 2 + 100] = 0x11;
       }
       iVar5 = iVar5 + 1;
-      pbVar9 = pbVar9 + 2;
+      pbVar10 = pbVar10 + 2;
     } while (iVar5 < 0x14);
   }
   if ((bVar3 & 0x80) != 0) {
@@ -29883,11 +30054,11 @@ LAB_8005a0b4:
     iVar5 = iVar6;
   } while (iVar6 < 7);
   if (param_2 == 2) {
-    uVar8 = 1;
+    uVar9 = 1;
   }
   else {
     param_1[0xce] = 0xff;
-    param_1[0xcf] = (byte)((uint)iVar10 >> 8);
+    param_1[0xcf] = (byte)((uint)iVar11 >> 8);
     do {
       bVar1 = true;
       iVar5 = rand();
@@ -29896,22 +30067,23 @@ LAB_8005a0b4:
       if (iVar5 < 0) {
         iVar5 = iVar5 + 0x7fff;
       }
-      uVar8 = iVar10 + (iVar5 >> 0xf);
-      pbVar9 = &DAT_80057f74;
+      uVar9 = iVar11 + (iVar5 >> 0xf);
+      pPVar8 = PartyData;
       do {
-        if (((pbVar9[1] != 0xff) && ((*pbVar9 & (char)*pbVar9 >> 7) == (bVar3 & (char)bVar3 >> 7)))
-           && ((uint)*(ushort *)(pbVar9 + 0xce) == (uVar8 & 0xffff))) {
+        if (((pPVar8->PartyID != 0xff) &&
+            ((pPVar8->SpriteSet & (char)pPVar8->SpriteSet >> 7) == (bVar3 & (char)bVar3 >> 7))) &&
+           ((uint)(ushort)pPVar8->UnitNameID == (uVar9 & 0xffff))) {
           bVar1 = false;
           break;
         }
         iVar6 = iVar6 + 1;
-        pbVar9 = pbVar9 + 0x100;
+        pPVar8 = pPVar8 + 1;
       } while (iVar6 < 0x10);
     } while (!bVar1);
   }
-  param_1[0xce] = (byte)uVar8;
-  param_1[0xcf] = (byte)(uVar8 >> 8);
-  uVar7 = FUN_800e6edc(iVar11 + (uVar8 & 0xff));
+  param_1[0xce] = (byte)uVar9;
+  param_1[0xcf] = (byte)(uVar9 >> 8);
+  uVar7 = FUN_800e6edc(iVar12 + (uVar9 & 0xff));
   Move_Data(uVar7,param_1 + 0xbe,0x10);
   param_1[0xd0] = 0;
   param_1[0xd2] = 0;
@@ -30147,13 +30319,13 @@ JobData * Get_Job_DataPointer(int param_1)
 
 
 
-undefined4 Initialize_Unit_JobData(int param_1,undefined4 param_2,undefined4 param_3)
+undefined4 Initialize_Unit_JobData(int param_1,undefined4 param_2,dword param_3)
 
 {
   int iVar1;
   undefined4 uVar2;
   
-  DAT_80066200 = param_3;
+  InitializeBattle = param_3;
   iVar1 = Get_Party_Data_Pointer(param_2);
   if ((iVar1 == 0) || (*(char *)(iVar1 + 1) == -1)) {
     uVar2 = 0xffffffff;
@@ -30177,12 +30349,12 @@ undefined4 Initialize_Unit_JobData(int param_1,undefined4 param_2,undefined4 par
 
 
 
-undefined4 BATTLE_Initialize_UnitGen(int param_1,byte *param_2,undefined4 param_3,int param_4)
+undefined4 BATTLE_Initialize_UnitGen(int param_1,byte *param_2,dword param_3,int param_4)
 
 {
   int iVar1;
   
-  DAT_80066200 = param_3;
+  InitializeBattle = param_3;
   if (param_4 != 0x82) {
     Initialize_ENTD_UnitTargettingData();
     iVar1 = ENTD_Data_Calculation(param_1,param_2);
@@ -30298,7 +30470,7 @@ undefined4 ENTD_Data_Calculation(byte *param_1,byte *param_2)
 LAB_8005ad90:
   do {
     iVar3 = iVar2 + 1;
-    param_1[iVar2 + 0x165] = *(byte *)(DAT_80066238 + iVar2 + 0x21);
+    param_1[iVar2 + 0x165] = CurrentENTD[iVar2 + 0x21];
     iVar2 = iVar3;
   } while (iVar3 < 7);
   if ((bVar4 & 8) == 0) {
@@ -30308,8 +30480,8 @@ LAB_8005ad90:
     *param_1 = bVar4;
     uVar6 = (uint)param_2[3];
     if ((uVar6 == 0) || (uVar6 == 0xfe)) {
-      uVar6 = (uint)DAT_80066308;
-      bVar4 = DAT_80066308 >> 3;
+      uVar6 = (uint)HighestPartyLevel;
+      bVar4 = HighestPartyLevel >> 3;
       iVar2 = rand();
       iVar2 = (bVar4 + 1) * iVar2;
       if (iVar2 < 0) {
@@ -30318,7 +30490,7 @@ LAB_8005ad90:
       uVar6 = (uVar6 - bVar4) + (iVar2 >> 0xf);
     }
     else if (99 < uVar6) {
-      uVar6 = uVar6 + DAT_80066308 + 0x9c;
+      uVar6 = uVar6 + HighestPartyLevel + 0x9c;
     }
     if ((uVar6 & 0xff) == 0) {
       uVar6 = 1;
@@ -30339,7 +30511,7 @@ LAB_8005ad90:
       uVar5 = (short)(iVar2 >> 0xf) + 1;
     }
     else {
-      uVar5 = *(short *)(&DAT_800661ce + uVar6 * 2) + uVar5;
+      uVar5 = MonthDayValues[uVar6] + uVar5;
     }
     *(ushort *)(param_1 + 8) = *(ushort *)(param_1 + 8) & 0xfe00 | uVar5 & 0x1ff;
     uVar6 = Calculate_Zodiac_Sign();
@@ -30398,7 +30570,7 @@ undefined4 Initialize_Unit_JobData_Prep(int param_1,undefined *param_2)
   iVar1 = Find_Units_Party_Data_Location(*param_2);
   uVar2 = 0xffffffff;
   if (iVar1 != -1) {
-    Initialize_Unit_JobData(param_1,iVar1,DAT_80066200);
+    Initialize_Unit_JobData(param_1,iVar1,InitializeBattle);
     bVar3 = *(byte *)(param_1 + 6) & 0xee;
     *(byte *)(param_1 + 6) = bVar3;
     *(byte *)(param_1 + 6) = bVar3 | param_2[1] & 0x11;
@@ -31346,7 +31518,7 @@ void Generate_Unit_Name(int param_1)
   int iVar3;
   undefined4 uVar4;
   undefined *puVar5;
-  undefined1 *puVar6;
+  PartyUnit *pPVar6;
   int iVar7;
   uint uVar8;
   int iVar9;
@@ -31354,7 +31526,7 @@ void Generate_Unit_Name(int param_1)
   code *pcVar11;
   
   pcVar11 = (code *)&UNK_80132824;
-  if (DAT_80066200 != 0) {
+  if (InitializeBattle != 0) {
     pcVar11 = FUN_800e6edc;
   }
   if (*(char *)(param_1 + 2) == -1) {
@@ -31385,15 +31557,15 @@ void Generate_Unit_Name(int param_1)
           iVar3 = iVar3 + 0x7fff;
         }
         uVar8 = iVar10 + (iVar3 >> 0xf);
-        puVar6 = &DAT_80057f74;
+        pPVar6 = PartyData;
         do {
-          if (((puVar6[1] != -1) && ((bVar1 & 0xe0) == (puVar6[4] & 0xe0))) &&
-             ((uint)*(ushort *)(puVar6 + 0xce) == (uVar8 & 0xffff))) {
+          if (((pPVar6->PartyID != 0xff) && ((bVar1 & 0xe0) == (pPVar6->field_0x4 & 0xe0))) &&
+             ((uint)(ushort)pPVar6->UnitNameID == (uVar8 & 0xffff))) {
             bVar2 = false;
             break;
           }
           iVar7 = iVar7 + 1;
-          puVar6 = puVar6 + 0x100;
+          pPVar6 = pPVar6 + 1;
         } while (iVar7 < 0x14);
         iVar3 = 0;
         puVar5 = &DAT_801908cc;
@@ -31447,7 +31619,7 @@ byte Get_Highest_PlayerUnit_Level(void)
   if (99 < bVar3) {
     bVar3 = 99;
   }
-  DAT_80066308 = bVar3;
+  HighestPartyLevel = bVar3;
   return bVar3;
 }
 
@@ -32536,7 +32708,7 @@ uint Get_Equip_Quantity(byte param_1,int param_2)
   uint uVar8;
   
   iVar7 = 0;
-  uVar8 = (uint)(byte)(&DAT_800596e0)[param_1];
+  uVar8 = (uint)*(byte *)((int)PartyData[0x17].JobJP + (param_1 - 2));
   do {
     iVar2 = Get_Party_Data_Pointer(iVar7);
     if ((*(char *)(iVar2 + 1) != -1) && ((*(byte *)(iVar2 + 4) & 0x20) == 0)) {
@@ -32663,17 +32835,17 @@ int Get_Highest_Priority_Status(int param_1)
 uint Calculate_Zodiac_Sign(ushort param_1)
 
 {
-  ushort *puVar1;
+  short *psVar1;
   int iVar2;
   int iVar3;
   
   iVar2 = 0;
   iVar3 = 0;
-  puVar1 = &DAT_800661e8;
+  psVar1 = ZodiacDayLimits;
   do {
     iVar3 = iVar3 + 1;
-    iVar2 = iVar2 + (param_1 < *puVar1 ^ 1);
-    puVar1 = puVar1 + 1;
+    iVar2 = iVar2 + (param_1 < (ushort)*psVar1 ^ 1);
+    psVar1 = (short *)((ushort *)psVar1 + 1);
   } while (iVar3 < 0xc);
   return (iVar2 + 9) % 0xc & 0xffff;
 }

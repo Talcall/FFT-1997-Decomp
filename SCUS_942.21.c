@@ -13,6 +13,951 @@ typedef unsigned int    undefined4;
 typedef unsigned long long    undefined8;
 typedef unsigned short    ushort;
 typedef unsigned short    word;
+typedef struct Thread Thread, *PThread;
+
+struct Thread {
+    int Param1;
+    int Param2;
+    int Param3;
+    int isAvailable;
+    int r16;
+    int r17;
+    int r18;
+    int r19;
+    int r20;
+    int r21;
+    int r22;
+    int r23;
+    int r26;
+    int r27;
+    int r28;
+    int r29;
+    int r30;
+    int r31;
+    int isRunning;
+    int TaskID;
+    undefined4 field20_0x50;
+    undefined4 field21_0x54;
+    undefined4 field22_0x58;
+    undefined4 field23_0x5c;
+    undefined4 field24_0x60;
+    undefined4 field25_0x64;
+    undefined4 field26_0x68;
+    int stack;
+    undefined field28_0x70;
+    undefined field29_0x71;
+    undefined field30_0x72;
+    undefined field31_0x73;
+    undefined field32_0x74;
+    undefined field33_0x75;
+    undefined field34_0x76;
+    undefined field35_0x77;
+    undefined field36_0x78;
+    undefined field37_0x79;
+    undefined field38_0x7a;
+    undefined field39_0x7b;
+    undefined field40_0x7c;
+    undefined field41_0x7d;
+    undefined field42_0x7e;
+    undefined field43_0x7f;
+    undefined field44_0x80;
+    undefined field45_0x81;
+    undefined field46_0x82;
+    undefined field47_0x83;
+    undefined field48_0x84;
+    undefined field49_0x85;
+    undefined field50_0x86;
+    undefined field51_0x87;
+    undefined field52_0x88;
+    undefined field53_0x89;
+    undefined field54_0x8a;
+    undefined field55_0x8b;
+    undefined field56_0x8c;
+    undefined field57_0x8d;
+    undefined field58_0x8e;
+    undefined field59_0x8f;
+    undefined field60_0x90;
+    undefined field61_0x91;
+    undefined field62_0x92;
+    undefined field63_0x93;
+    undefined field64_0x94;
+    undefined field65_0x95;
+    undefined field66_0x96;
+    undefined field67_0x97;
+    undefined field68_0x98;
+    undefined field69_0x99;
+    undefined field70_0x9a;
+    undefined field71_0x9b;
+    undefined field72_0x9c;
+    undefined field73_0x9d;
+    undefined field74_0x9e;
+    undefined field75_0x9f;
+    undefined field76_0xa0;
+    undefined field77_0xa1;
+    undefined field78_0xa2;
+    undefined field79_0xa3;
+    undefined field80_0xa4;
+    undefined field81_0xa5;
+    undefined field82_0xa6;
+    undefined field83_0xa7;
+    undefined field84_0xa8;
+    undefined field85_0xa9;
+    undefined field86_0xaa;
+    undefined field87_0xab;
+    undefined field88_0xac;
+    undefined field89_0xad;
+    undefined field90_0xae;
+    undefined field91_0xaf;
+    undefined field92_0xb0;
+    undefined field93_0xb1;
+    undefined field94_0xb2;
+    undefined field95_0xb3;
+    undefined field96_0xb4;
+    undefined field97_0xb5;
+    undefined field98_0xb6;
+    undefined field99_0xb7;
+    undefined field100_0xb8;
+    undefined field101_0xb9;
+    undefined field102_0xba;
+    undefined field103_0xbb;
+    undefined field104_0xbc;
+    undefined field105_0xbd;
+    undefined field106_0xbe;
+    undefined field107_0xbf;
+    undefined field108_0xc0;
+    undefined field109_0xc1;
+    undefined field110_0xc2;
+    undefined field111_0xc3;
+    undefined field112_0xc4;
+    undefined field113_0xc5;
+    undefined field114_0xc6;
+    undefined field115_0xc7;
+    undefined field116_0xc8;
+    undefined field117_0xc9;
+    undefined field118_0xca;
+    undefined field119_0xcb;
+    undefined field120_0xcc;
+    undefined field121_0xcd;
+    undefined field122_0xce;
+    undefined field123_0xcf;
+    undefined field124_0xd0;
+    undefined field125_0xd1;
+    undefined field126_0xd2;
+    undefined field127_0xd3;
+    undefined field128_0xd4;
+    undefined field129_0xd5;
+    undefined field130_0xd6;
+    undefined field131_0xd7;
+    undefined field132_0xd8;
+    undefined field133_0xd9;
+    undefined field134_0xda;
+    undefined field135_0xdb;
+    undefined field136_0xdc;
+    undefined field137_0xdd;
+    undefined field138_0xde;
+    undefined field139_0xdf;
+    undefined field140_0xe0;
+    undefined field141_0xe1;
+    undefined field142_0xe2;
+    undefined field143_0xe3;
+    undefined field144_0xe4;
+    undefined field145_0xe5;
+    undefined field146_0xe6;
+    undefined field147_0xe7;
+    undefined field148_0xe8;
+    undefined field149_0xe9;
+    undefined field150_0xea;
+    undefined field151_0xeb;
+    undefined field152_0xec;
+    undefined field153_0xed;
+    undefined field154_0xee;
+    undefined field155_0xef;
+    undefined field156_0xf0;
+    undefined field157_0xf1;
+    undefined field158_0xf2;
+    undefined field159_0xf3;
+    undefined field160_0xf4;
+    undefined field161_0xf5;
+    undefined field162_0xf6;
+    undefined field163_0xf7;
+    undefined field164_0xf8;
+    undefined field165_0xf9;
+    undefined field166_0xfa;
+    undefined field167_0xfb;
+    undefined field168_0xfc;
+    undefined field169_0xfd;
+    undefined field170_0xfe;
+    undefined field171_0xff;
+    undefined field172_0x100;
+    undefined field173_0x101;
+    undefined field174_0x102;
+    undefined field175_0x103;
+    undefined field176_0x104;
+    undefined field177_0x105;
+    undefined field178_0x106;
+    undefined field179_0x107;
+    undefined field180_0x108;
+    undefined field181_0x109;
+    undefined field182_0x10a;
+    undefined field183_0x10b;
+    undefined field184_0x10c;
+    undefined field185_0x10d;
+    undefined field186_0x10e;
+    undefined field187_0x10f;
+    undefined field188_0x110;
+    undefined field189_0x111;
+    undefined field190_0x112;
+    undefined field191_0x113;
+    undefined field192_0x114;
+    undefined field193_0x115;
+    undefined field194_0x116;
+    undefined field195_0x117;
+    undefined field196_0x118;
+    undefined field197_0x119;
+    undefined field198_0x11a;
+    undefined field199_0x11b;
+    undefined field200_0x11c;
+    undefined field201_0x11d;
+    undefined field202_0x11e;
+    undefined field203_0x11f;
+    undefined field204_0x120;
+    undefined field205_0x121;
+    undefined field206_0x122;
+    undefined field207_0x123;
+    undefined field208_0x124;
+    undefined field209_0x125;
+    undefined field210_0x126;
+    undefined field211_0x127;
+    undefined field212_0x128;
+    undefined field213_0x129;
+    undefined field214_0x12a;
+    undefined field215_0x12b;
+    undefined field216_0x12c;
+    undefined field217_0x12d;
+    undefined field218_0x12e;
+    undefined field219_0x12f;
+    undefined field220_0x130;
+    undefined field221_0x131;
+    undefined field222_0x132;
+    undefined field223_0x133;
+    undefined field224_0x134;
+    undefined field225_0x135;
+    undefined field226_0x136;
+    undefined field227_0x137;
+    undefined field228_0x138;
+    undefined field229_0x139;
+    undefined field230_0x13a;
+    undefined field231_0x13b;
+    undefined field232_0x13c;
+    undefined field233_0x13d;
+    undefined field234_0x13e;
+    undefined field235_0x13f;
+    undefined field236_0x140;
+    undefined field237_0x141;
+    undefined field238_0x142;
+    undefined field239_0x143;
+    undefined field240_0x144;
+    undefined field241_0x145;
+    undefined field242_0x146;
+    undefined field243_0x147;
+    undefined field244_0x148;
+    undefined field245_0x149;
+    undefined field246_0x14a;
+    undefined field247_0x14b;
+    undefined field248_0x14c;
+    undefined field249_0x14d;
+    undefined field250_0x14e;
+    undefined field251_0x14f;
+    undefined field252_0x150;
+    undefined field253_0x151;
+    undefined field254_0x152;
+    undefined field255_0x153;
+    undefined field256_0x154;
+    undefined field257_0x155;
+    undefined field258_0x156;
+    undefined field259_0x157;
+    undefined field260_0x158;
+    undefined field261_0x159;
+    undefined field262_0x15a;
+    undefined field263_0x15b;
+    undefined field264_0x15c;
+    undefined field265_0x15d;
+    undefined field266_0x15e;
+    undefined field267_0x15f;
+    undefined field268_0x160;
+    undefined field269_0x161;
+    undefined field270_0x162;
+    undefined field271_0x163;
+    undefined field272_0x164;
+    undefined field273_0x165;
+    undefined field274_0x166;
+    undefined field275_0x167;
+    undefined field276_0x168;
+    undefined field277_0x169;
+    undefined field278_0x16a;
+    undefined field279_0x16b;
+    undefined field280_0x16c;
+    undefined field281_0x16d;
+    undefined field282_0x16e;
+    undefined field283_0x16f;
+    undefined field284_0x170;
+    undefined field285_0x171;
+    undefined field286_0x172;
+    undefined field287_0x173;
+    undefined field288_0x174;
+    undefined field289_0x175;
+    undefined field290_0x176;
+    undefined field291_0x177;
+    undefined field292_0x178;
+    undefined field293_0x179;
+    undefined field294_0x17a;
+    undefined field295_0x17b;
+    undefined field296_0x17c;
+    undefined field297_0x17d;
+    undefined field298_0x17e;
+    undefined field299_0x17f;
+    undefined field300_0x180;
+    undefined field301_0x181;
+    undefined field302_0x182;
+    undefined field303_0x183;
+    undefined field304_0x184;
+    undefined field305_0x185;
+    undefined field306_0x186;
+    undefined field307_0x187;
+    undefined field308_0x188;
+    undefined field309_0x189;
+    undefined field310_0x18a;
+    undefined field311_0x18b;
+    undefined field312_0x18c;
+    undefined field313_0x18d;
+    undefined field314_0x18e;
+    undefined field315_0x18f;
+    undefined field316_0x190;
+    undefined field317_0x191;
+    undefined field318_0x192;
+    undefined field319_0x193;
+    undefined field320_0x194;
+    undefined field321_0x195;
+    undefined field322_0x196;
+    undefined field323_0x197;
+    undefined field324_0x198;
+    undefined field325_0x199;
+    undefined field326_0x19a;
+    undefined field327_0x19b;
+    undefined field328_0x19c;
+    undefined field329_0x19d;
+    undefined field330_0x19e;
+    undefined field331_0x19f;
+    undefined field332_0x1a0;
+    undefined field333_0x1a1;
+    undefined field334_0x1a2;
+    undefined field335_0x1a3;
+    undefined field336_0x1a4;
+    undefined field337_0x1a5;
+    undefined field338_0x1a6;
+    undefined field339_0x1a7;
+    undefined field340_0x1a8;
+    undefined field341_0x1a9;
+    undefined field342_0x1aa;
+    undefined field343_0x1ab;
+    undefined field344_0x1ac;
+    undefined field345_0x1ad;
+    undefined field346_0x1ae;
+    undefined field347_0x1af;
+    undefined field348_0x1b0;
+    undefined field349_0x1b1;
+    undefined field350_0x1b2;
+    undefined field351_0x1b3;
+    undefined field352_0x1b4;
+    undefined field353_0x1b5;
+    undefined field354_0x1b6;
+    undefined field355_0x1b7;
+    undefined field356_0x1b8;
+    undefined field357_0x1b9;
+    undefined field358_0x1ba;
+    undefined field359_0x1bb;
+    undefined field360_0x1bc;
+    undefined field361_0x1bd;
+    undefined field362_0x1be;
+    undefined field363_0x1bf;
+    undefined field364_0x1c0;
+    undefined field365_0x1c1;
+    undefined field366_0x1c2;
+    undefined field367_0x1c3;
+    undefined field368_0x1c4;
+    undefined field369_0x1c5;
+    undefined field370_0x1c6;
+    undefined field371_0x1c7;
+    undefined field372_0x1c8;
+    undefined field373_0x1c9;
+    undefined field374_0x1ca;
+    undefined field375_0x1cb;
+    undefined field376_0x1cc;
+    undefined field377_0x1cd;
+    undefined field378_0x1ce;
+    undefined field379_0x1cf;
+    undefined field380_0x1d0;
+    undefined field381_0x1d1;
+    undefined field382_0x1d2;
+    undefined field383_0x1d3;
+    undefined field384_0x1d4;
+    undefined field385_0x1d5;
+    undefined field386_0x1d6;
+    undefined field387_0x1d7;
+    undefined field388_0x1d8;
+    undefined field389_0x1d9;
+    undefined field390_0x1da;
+    undefined field391_0x1db;
+    undefined field392_0x1dc;
+    undefined field393_0x1dd;
+    undefined field394_0x1de;
+    undefined field395_0x1df;
+    undefined field396_0x1e0;
+    undefined field397_0x1e1;
+    undefined field398_0x1e2;
+    undefined field399_0x1e3;
+    undefined field400_0x1e4;
+    undefined field401_0x1e5;
+    undefined field402_0x1e6;
+    undefined field403_0x1e7;
+    undefined field404_0x1e8;
+    undefined field405_0x1e9;
+    undefined field406_0x1ea;
+    undefined field407_0x1eb;
+    undefined field408_0x1ec;
+    undefined field409_0x1ed;
+    undefined field410_0x1ee;
+    undefined field411_0x1ef;
+    undefined field412_0x1f0;
+    undefined field413_0x1f1;
+    undefined field414_0x1f2;
+    undefined field415_0x1f3;
+    undefined field416_0x1f4;
+    undefined field417_0x1f5;
+    undefined field418_0x1f6;
+    undefined field419_0x1f7;
+    undefined field420_0x1f8;
+    undefined field421_0x1f9;
+    undefined field422_0x1fa;
+    undefined field423_0x1fb;
+    undefined field424_0x1fc;
+    undefined field425_0x1fd;
+    undefined field426_0x1fe;
+    undefined field427_0x1ff;
+    undefined field428_0x200;
+    undefined field429_0x201;
+    undefined field430_0x202;
+    undefined field431_0x203;
+    undefined field432_0x204;
+    undefined field433_0x205;
+    undefined field434_0x206;
+    undefined field435_0x207;
+    undefined field436_0x208;
+    undefined field437_0x209;
+    undefined field438_0x20a;
+    undefined field439_0x20b;
+    undefined field440_0x20c;
+    undefined field441_0x20d;
+    undefined field442_0x20e;
+    undefined field443_0x20f;
+    undefined field444_0x210;
+    undefined field445_0x211;
+    undefined field446_0x212;
+    undefined field447_0x213;
+    undefined field448_0x214;
+    undefined field449_0x215;
+    undefined field450_0x216;
+    undefined field451_0x217;
+    undefined field452_0x218;
+    undefined field453_0x219;
+    undefined field454_0x21a;
+    undefined field455_0x21b;
+    undefined field456_0x21c;
+    undefined field457_0x21d;
+    undefined field458_0x21e;
+    undefined field459_0x21f;
+    undefined field460_0x220;
+    undefined field461_0x221;
+    undefined field462_0x222;
+    undefined field463_0x223;
+    undefined field464_0x224;
+    undefined field465_0x225;
+    undefined field466_0x226;
+    undefined field467_0x227;
+    undefined field468_0x228;
+    undefined field469_0x229;
+    undefined field470_0x22a;
+    undefined field471_0x22b;
+    undefined field472_0x22c;
+    undefined field473_0x22d;
+    undefined field474_0x22e;
+    undefined field475_0x22f;
+    undefined field476_0x230;
+    undefined field477_0x231;
+    undefined field478_0x232;
+    undefined field479_0x233;
+    undefined field480_0x234;
+    undefined field481_0x235;
+    undefined field482_0x236;
+    undefined field483_0x237;
+    undefined field484_0x238;
+    undefined field485_0x239;
+    undefined field486_0x23a;
+    undefined field487_0x23b;
+    undefined field488_0x23c;
+    undefined field489_0x23d;
+    undefined field490_0x23e;
+    undefined field491_0x23f;
+    undefined field492_0x240;
+    undefined field493_0x241;
+    undefined field494_0x242;
+    undefined field495_0x243;
+    undefined field496_0x244;
+    undefined field497_0x245;
+    undefined field498_0x246;
+    undefined field499_0x247;
+    undefined field500_0x248;
+    undefined field501_0x249;
+    undefined field502_0x24a;
+    undefined field503_0x24b;
+    undefined field504_0x24c;
+    undefined field505_0x24d;
+    undefined field506_0x24e;
+    undefined field507_0x24f;
+    undefined field508_0x250;
+    undefined field509_0x251;
+    undefined field510_0x252;
+    undefined field511_0x253;
+    undefined field512_0x254;
+    undefined field513_0x255;
+    undefined field514_0x256;
+    undefined field515_0x257;
+    undefined field516_0x258;
+    undefined field517_0x259;
+    undefined field518_0x25a;
+    undefined field519_0x25b;
+    undefined field520_0x25c;
+    undefined field521_0x25d;
+    undefined field522_0x25e;
+    undefined field523_0x25f;
+    undefined field524_0x260;
+    undefined field525_0x261;
+    undefined field526_0x262;
+    undefined field527_0x263;
+    undefined field528_0x264;
+    undefined field529_0x265;
+    undefined field530_0x266;
+    undefined field531_0x267;
+    undefined field532_0x268;
+    undefined field533_0x269;
+    undefined field534_0x26a;
+    undefined field535_0x26b;
+    undefined field536_0x26c;
+    undefined field537_0x26d;
+    undefined field538_0x26e;
+    undefined field539_0x26f;
+    undefined field540_0x270;
+    undefined field541_0x271;
+    undefined field542_0x272;
+    undefined field543_0x273;
+    undefined field544_0x274;
+    undefined field545_0x275;
+    undefined field546_0x276;
+    undefined field547_0x277;
+    undefined field548_0x278;
+    undefined field549_0x279;
+    undefined field550_0x27a;
+    undefined field551_0x27b;
+    undefined field552_0x27c;
+    undefined field553_0x27d;
+    undefined field554_0x27e;
+    undefined field555_0x27f;
+    undefined field556_0x280;
+    undefined field557_0x281;
+    undefined field558_0x282;
+    undefined field559_0x283;
+    undefined field560_0x284;
+    undefined field561_0x285;
+    undefined field562_0x286;
+    undefined field563_0x287;
+    undefined field564_0x288;
+    undefined field565_0x289;
+    undefined field566_0x28a;
+    undefined field567_0x28b;
+    undefined field568_0x28c;
+    undefined field569_0x28d;
+    undefined field570_0x28e;
+    undefined field571_0x28f;
+    undefined field572_0x290;
+    undefined field573_0x291;
+    undefined field574_0x292;
+    undefined field575_0x293;
+    undefined field576_0x294;
+    undefined field577_0x295;
+    undefined field578_0x296;
+    undefined field579_0x297;
+    undefined field580_0x298;
+    undefined field581_0x299;
+    undefined field582_0x29a;
+    undefined field583_0x29b;
+    undefined field584_0x29c;
+    undefined field585_0x29d;
+    undefined field586_0x29e;
+    undefined field587_0x29f;
+    undefined field588_0x2a0;
+    undefined field589_0x2a1;
+    undefined field590_0x2a2;
+    undefined field591_0x2a3;
+    undefined field592_0x2a4;
+    undefined field593_0x2a5;
+    undefined field594_0x2a6;
+    undefined field595_0x2a7;
+    undefined field596_0x2a8;
+    undefined field597_0x2a9;
+    undefined field598_0x2aa;
+    undefined field599_0x2ab;
+    undefined field600_0x2ac;
+    undefined field601_0x2ad;
+    undefined field602_0x2ae;
+    undefined field603_0x2af;
+    undefined field604_0x2b0;
+    undefined field605_0x2b1;
+    undefined field606_0x2b2;
+    undefined field607_0x2b3;
+    undefined field608_0x2b4;
+    undefined field609_0x2b5;
+    undefined field610_0x2b6;
+    undefined field611_0x2b7;
+    undefined field612_0x2b8;
+    undefined field613_0x2b9;
+    undefined field614_0x2ba;
+    undefined field615_0x2bb;
+    undefined field616_0x2bc;
+    undefined field617_0x2bd;
+    undefined field618_0x2be;
+    undefined field619_0x2bf;
+    undefined field620_0x2c0;
+    undefined field621_0x2c1;
+    undefined field622_0x2c2;
+    undefined field623_0x2c3;
+    undefined field624_0x2c4;
+    undefined field625_0x2c5;
+    undefined field626_0x2c6;
+    undefined field627_0x2c7;
+    undefined field628_0x2c8;
+    undefined field629_0x2c9;
+    undefined field630_0x2ca;
+    undefined field631_0x2cb;
+    undefined field632_0x2cc;
+    undefined field633_0x2cd;
+    undefined field634_0x2ce;
+    undefined field635_0x2cf;
+    undefined field636_0x2d0;
+    undefined field637_0x2d1;
+    undefined field638_0x2d2;
+    undefined field639_0x2d3;
+    undefined field640_0x2d4;
+    undefined field641_0x2d5;
+    undefined field642_0x2d6;
+    undefined field643_0x2d7;
+    undefined field644_0x2d8;
+    undefined field645_0x2d9;
+    undefined field646_0x2da;
+    undefined field647_0x2db;
+    undefined field648_0x2dc;
+    undefined field649_0x2dd;
+    undefined field650_0x2de;
+    undefined field651_0x2df;
+    undefined field652_0x2e0;
+    undefined field653_0x2e1;
+    undefined field654_0x2e2;
+    undefined field655_0x2e3;
+    undefined field656_0x2e4;
+    undefined field657_0x2e5;
+    undefined field658_0x2e6;
+    undefined field659_0x2e7;
+    undefined field660_0x2e8;
+    undefined field661_0x2e9;
+    undefined field662_0x2ea;
+    undefined field663_0x2eb;
+    undefined field664_0x2ec;
+    undefined field665_0x2ed;
+    undefined field666_0x2ee;
+    undefined field667_0x2ef;
+    undefined field668_0x2f0;
+    undefined field669_0x2f1;
+    undefined field670_0x2f2;
+    undefined field671_0x2f3;
+    undefined field672_0x2f4;
+    undefined field673_0x2f5;
+    undefined field674_0x2f6;
+    undefined field675_0x2f7;
+    undefined field676_0x2f8;
+    undefined field677_0x2f9;
+    undefined field678_0x2fa;
+    undefined field679_0x2fb;
+    undefined field680_0x2fc;
+    undefined field681_0x2fd;
+    undefined field682_0x2fe;
+    undefined field683_0x2ff;
+    undefined field684_0x300;
+    undefined field685_0x301;
+    undefined field686_0x302;
+    undefined field687_0x303;
+    undefined field688_0x304;
+    undefined field689_0x305;
+    undefined field690_0x306;
+    undefined field691_0x307;
+    undefined field692_0x308;
+    undefined field693_0x309;
+    undefined field694_0x30a;
+    undefined field695_0x30b;
+    undefined field696_0x30c;
+    undefined field697_0x30d;
+    undefined field698_0x30e;
+    undefined field699_0x30f;
+    undefined field700_0x310;
+    undefined field701_0x311;
+    undefined field702_0x312;
+    undefined field703_0x313;
+    undefined field704_0x314;
+    undefined field705_0x315;
+    undefined field706_0x316;
+    undefined field707_0x317;
+    undefined field708_0x318;
+    undefined field709_0x319;
+    undefined field710_0x31a;
+    undefined field711_0x31b;
+    undefined field712_0x31c;
+    undefined field713_0x31d;
+    undefined field714_0x31e;
+    undefined field715_0x31f;
+    undefined field716_0x320;
+    undefined field717_0x321;
+    undefined field718_0x322;
+    undefined field719_0x323;
+    undefined field720_0x324;
+    undefined field721_0x325;
+    undefined field722_0x326;
+    undefined field723_0x327;
+    undefined field724_0x328;
+    undefined field725_0x329;
+    undefined field726_0x32a;
+    undefined field727_0x32b;
+    undefined field728_0x32c;
+    undefined field729_0x32d;
+    undefined field730_0x32e;
+    undefined field731_0x32f;
+    undefined field732_0x330;
+    undefined field733_0x331;
+    undefined field734_0x332;
+    undefined field735_0x333;
+    undefined field736_0x334;
+    undefined field737_0x335;
+    undefined field738_0x336;
+    undefined field739_0x337;
+    undefined field740_0x338;
+    undefined field741_0x339;
+    undefined field742_0x33a;
+    undefined field743_0x33b;
+    undefined field744_0x33c;
+    undefined field745_0x33d;
+    undefined field746_0x33e;
+    undefined field747_0x33f;
+    undefined field748_0x340;
+    undefined field749_0x341;
+    undefined field750_0x342;
+    undefined field751_0x343;
+    undefined field752_0x344;
+    undefined field753_0x345;
+    undefined field754_0x346;
+    undefined field755_0x347;
+    undefined field756_0x348;
+    undefined field757_0x349;
+    undefined field758_0x34a;
+    undefined field759_0x34b;
+    undefined field760_0x34c;
+    undefined field761_0x34d;
+    undefined field762_0x34e;
+    undefined field763_0x34f;
+    undefined field764_0x350;
+    undefined field765_0x351;
+    undefined field766_0x352;
+    undefined field767_0x353;
+    undefined field768_0x354;
+    undefined field769_0x355;
+    undefined field770_0x356;
+    undefined field771_0x357;
+    undefined field772_0x358;
+    undefined field773_0x359;
+    undefined field774_0x35a;
+    undefined field775_0x35b;
+    undefined field776_0x35c;
+    undefined field777_0x35d;
+    undefined field778_0x35e;
+    undefined field779_0x35f;
+    undefined field780_0x360;
+    undefined field781_0x361;
+    undefined field782_0x362;
+    undefined field783_0x363;
+    undefined field784_0x364;
+    undefined field785_0x365;
+    undefined field786_0x366;
+    undefined field787_0x367;
+    undefined field788_0x368;
+    undefined field789_0x369;
+    undefined field790_0x36a;
+    undefined field791_0x36b;
+    undefined field792_0x36c;
+    undefined field793_0x36d;
+    undefined field794_0x36e;
+    undefined field795_0x36f;
+    undefined field796_0x370;
+    undefined field797_0x371;
+    undefined field798_0x372;
+    undefined field799_0x373;
+    undefined field800_0x374;
+    undefined field801_0x375;
+    undefined field802_0x376;
+    undefined field803_0x377;
+    undefined field804_0x378;
+    undefined field805_0x379;
+    undefined field806_0x37a;
+    undefined field807_0x37b;
+    undefined field808_0x37c;
+    undefined field809_0x37d;
+    undefined field810_0x37e;
+    undefined field811_0x37f;
+    undefined field812_0x380;
+    undefined field813_0x381;
+    undefined field814_0x382;
+    undefined field815_0x383;
+    undefined field816_0x384;
+    undefined field817_0x385;
+    undefined field818_0x386;
+    undefined field819_0x387;
+    undefined field820_0x388;
+    undefined field821_0x389;
+    undefined field822_0x38a;
+    undefined field823_0x38b;
+    undefined field824_0x38c;
+    undefined field825_0x38d;
+    undefined field826_0x38e;
+    undefined field827_0x38f;
+    undefined field828_0x390;
+    undefined field829_0x391;
+    undefined field830_0x392;
+    undefined field831_0x393;
+    undefined field832_0x394;
+    undefined field833_0x395;
+    undefined field834_0x396;
+    undefined field835_0x397;
+    undefined field836_0x398;
+    undefined field837_0x399;
+    undefined field838_0x39a;
+    undefined field839_0x39b;
+    undefined field840_0x39c;
+    undefined field841_0x39d;
+    undefined field842_0x39e;
+    undefined field843_0x39f;
+    undefined field844_0x3a0;
+    undefined field845_0x3a1;
+    undefined field846_0x3a2;
+    undefined field847_0x3a3;
+    undefined field848_0x3a4;
+    undefined field849_0x3a5;
+    undefined field850_0x3a6;
+    undefined field851_0x3a7;
+    undefined field852_0x3a8;
+    undefined field853_0x3a9;
+    undefined field854_0x3aa;
+    undefined field855_0x3ab;
+    undefined field856_0x3ac;
+    undefined field857_0x3ad;
+    undefined field858_0x3ae;
+    undefined field859_0x3af;
+    undefined field860_0x3b0;
+    undefined field861_0x3b1;
+    undefined field862_0x3b2;
+    undefined field863_0x3b3;
+    undefined field864_0x3b4;
+    undefined field865_0x3b5;
+    undefined field866_0x3b6;
+    undefined field867_0x3b7;
+    undefined field868_0x3b8;
+    undefined field869_0x3b9;
+    undefined field870_0x3ba;
+    undefined field871_0x3bb;
+    undefined field872_0x3bc;
+    undefined field873_0x3bd;
+    undefined field874_0x3be;
+    undefined field875_0x3bf;
+    undefined field876_0x3c0;
+    undefined field877_0x3c1;
+    undefined field878_0x3c2;
+    undefined field879_0x3c3;
+    undefined field880_0x3c4;
+    undefined field881_0x3c5;
+    undefined field882_0x3c6;
+    undefined field883_0x3c7;
+    undefined field884_0x3c8;
+    undefined field885_0x3c9;
+    undefined field886_0x3ca;
+    undefined field887_0x3cb;
+    undefined field888_0x3cc;
+    undefined field889_0x3cd;
+    undefined field890_0x3ce;
+    undefined field891_0x3cf;
+    undefined field892_0x3d0;
+    undefined field893_0x3d1;
+    undefined field894_0x3d2;
+    undefined field895_0x3d3;
+    undefined field896_0x3d4;
+    undefined field897_0x3d5;
+    undefined field898_0x3d6;
+    undefined field899_0x3d7;
+    undefined field900_0x3d8;
+    undefined field901_0x3d9;
+    undefined field902_0x3da;
+    undefined field903_0x3db;
+    undefined field904_0x3dc;
+    undefined field905_0x3dd;
+    undefined field906_0x3de;
+    undefined field907_0x3df;
+    undefined field908_0x3e0;
+    undefined field909_0x3e1;
+    undefined field910_0x3e2;
+    undefined field911_0x3e3;
+    undefined field912_0x3e4;
+    undefined field913_0x3e5;
+    undefined field914_0x3e6;
+    undefined field915_0x3e7;
+    undefined field916_0x3e8;
+    undefined field917_0x3e9;
+    undefined field918_0x3ea;
+    undefined field919_0x3eb;
+    undefined field920_0x3ec;
+    undefined field921_0x3ed;
+    undefined field922_0x3ee;
+    undefined field923_0x3ef;
+    undefined1 initial_sp_gp; // Created by retype action
+    undefined field925_0x3f1;
+    undefined field926_0x3f2;
+    undefined field927_0x3f3;
+    undefined field928_0x3f4;
+    undefined field929_0x3f5;
+    undefined field930_0x3f6;
+    undefined field931_0x3f7;
+    undefined field932_0x3f8;
+    undefined field933_0x3f9;
+    undefined field934_0x3fa;
+    undefined field935_0x3fb;
+    undefined field936_0x3fc;
+    undefined field937_0x3fd;
+    undefined field938_0x3fe;
+    undefined field939_0x3ff;
+};
+
 typedef enum AbilityID {
     None=0,
     Cure=1,
@@ -1392,6 +2337,506 @@ struct PrimaryItemData {
     undefined field17_0xb;
 };
 
+typedef struct MusicChannelData MusicChannelData, *PMusicChannelData;
+
+typedef enum mus_voiceChannelFunc {
+    CalcLFOVoices1=4,
+    CalcLFOVoices2=16,
+    CalcReverbVoices=64
+} mus_voiceChannelFunc;
+
+typedef struct MusDataAll MusDataAll, *PMusDataAll;
+
+typedef struct MusicDataHeader MusicDataHeader, *PMusicDataHeader;
+
+struct MusicDataHeader {
+    undefined2 field0_0x0;
+    undefined2 field1_0x2;
+    struct MusDataAll * field2_0x4;
+    struct MusDataAll * NextMusDat;
+    int DedicatedSpace;
+    struct MusDataAll * field5_0x10;
+    undefined field6_0x14;
+    undefined field7_0x15;
+    uint NumChannels;
+    undefined field9_0x1a;
+    undefined field10_0x1b;
+    undefined field11_0x1c;
+    undefined field12_0x1d;
+    undefined field13_0x1e;
+    undefined field14_0x1f;
+    undefined field15_0x20;
+    undefined field16_0x21;
+    undefined field17_0x22;
+    undefined field18_0x23;
+    undefined field19_0x24;
+    undefined field20_0x25;
+    undefined field21_0x26;
+    undefined field22_0x27;
+    undefined field23_0x28;
+    undefined field24_0x29;
+    undefined field25_0x2a;
+    undefined field26_0x2b;
+    undefined field27_0x2c;
+    undefined field28_0x2d;
+    undefined field29_0x2e;
+    undefined field30_0x2f;
+    undefined field31_0x30;
+    undefined field32_0x31;
+    undefined field33_0x32;
+    undefined field34_0x33;
+    undefined field35_0x34;
+    undefined field36_0x35;
+    undefined field37_0x36;
+    undefined field38_0x37;
+    undefined field39_0x38;
+    undefined field40_0x39;
+    undefined field41_0x3a;
+    undefined field42_0x3b;
+    undefined field43_0x3c;
+    undefined field44_0x3d;
+    undefined field45_0x3e;
+    undefined field46_0x3f;
+    undefined field47_0x40;
+    undefined field48_0x41;
+    undefined field49_0x42;
+    undefined field50_0x43;
+    uint ReverbMode; // Created by retype action
+    short volumeDepth; // Created by retype action
+    undefined field53_0x4a;
+    undefined field54_0x4b;
+    long reverbDelay; // Created by retype action
+    long reverbFeedback; // Created by retype action
+    undefined field57_0x54;
+    undefined field58_0x55;
+    undefined field59_0x56;
+    undefined field60_0x57;
+    undefined4 OwnedChannels;
+    undefined field62_0x5c;
+    undefined field63_0x5d;
+    undefined field64_0x5e;
+    undefined field65_0x5f;
+    uint ModifiedChannels;
+    undefined field67_0x64;
+    undefined field68_0x65;
+    undefined field69_0x66;
+    undefined field70_0x67;
+    uint LFOVoiceBits;
+    uint NoiseVoiceBits;
+    uint ReverbVoiceBits;
+    undefined field74_0x74;
+    undefined field75_0x75;
+    undefined field76_0x76;
+    undefined field77_0x77;
+    undefined field78_0x78;
+    undefined field79_0x79;
+    undefined field80_0x7a;
+    undefined field81_0x7b;
+    undefined field82_0x7c;
+    undefined field83_0x7d;
+    undefined field84_0x7e;
+    undefined field85_0x7f;
+    undefined field86_0x80;
+    undefined field87_0x81;
+    undefined field88_0x82;
+    undefined field89_0x83;
+    undefined field90_0x84;
+    undefined field91_0x85;
+    undefined field92_0x86;
+    undefined field93_0x87;
+    undefined field94_0x88;
+    undefined field95_0x89;
+    undefined field96_0x8a;
+    undefined field97_0x8b;
+    undefined field98_0x8c;
+    undefined field99_0x8d;
+    undefined field100_0x8e;
+    undefined field101_0x8f;
+    undefined field102_0x90;
+    undefined field103_0x91;
+    undefined field104_0x92;
+    undefined field105_0x93;
+    int field106_0x94;
+    int field107_0x98;
+    short field108_0x9c;
+    short field109_0x9e;
+    undefined field110_0xa0;
+    undefined field111_0xa1;
+    undefined field112_0xa2;
+    undefined field113_0xa3;
+    undefined field114_0xa4;
+    undefined field115_0xa5;
+    undefined field116_0xa6;
+    undefined field117_0xa7;
+    undefined field118_0xa8;
+    undefined field119_0xa9;
+    undefined field120_0xaa;
+    undefined field121_0xab;
+    undefined field122_0xac;
+    undefined field123_0xad;
+    undefined field124_0xae;
+    undefined field125_0xaf;
+    undefined field126_0xb0;
+    undefined field127_0xb1;
+    undefined field128_0xb2;
+    undefined field129_0xb3;
+    undefined field130_0xb4;
+    undefined field131_0xb5;
+    undefined field132_0xb6;
+    undefined field133_0xb7;
+};
+
+struct MusicChannelData {
+    ushort hasSound;
+    ushort field1_0x2;
+    enum mus_voiceChannelFunc channelFunc; // Created by retype action
+    undefined field3_0x6;
+    undefined field4_0x7;
+    struct MusDataAll * field5_0x8;
+    undefined field6_0xc;
+    undefined field7_0xd;
+    undefined field8_0xe;
+    undefined field9_0xf;
+    undefined field10_0x10;
+    undefined field11_0x11;
+    undefined field12_0x12;
+    undefined field13_0x13;
+    undefined field14_0x14;
+    undefined field15_0x15;
+    undefined field16_0x16;
+    undefined field17_0x17;
+    undefined field18_0x18;
+    undefined field19_0x19;
+    undefined field20_0x1a;
+    undefined field21_0x1b;
+    undefined field22_0x1c;
+    undefined field23_0x1d;
+    undefined field24_0x1e;
+    undefined field25_0x1f;
+    undefined field26_0x20;
+    undefined field27_0x21;
+    undefined field28_0x22;
+    undefined field29_0x23;
+    undefined field30_0x24;
+    undefined field31_0x25;
+    undefined field32_0x26;
+    undefined field33_0x27;
+    undefined field34_0x28;
+    undefined field35_0x29;
+    undefined field36_0x2a;
+    undefined field37_0x2b;
+    undefined field38_0x2c;
+    undefined field39_0x2d;
+    undefined field40_0x2e;
+    undefined field41_0x2f;
+    undefined field42_0x30;
+    undefined field43_0x31;
+    undefined field44_0x32;
+    undefined field45_0x33;
+    uint hasChannel;
+    undefined field47_0x38;
+    undefined field48_0x39;
+    undefined field49_0x3a;
+    undefined field50_0x3b;
+    undefined field51_0x3c;
+    undefined field52_0x3d;
+    undefined field53_0x3e;
+    undefined field54_0x3f;
+    undefined field55_0x40;
+    undefined field56_0x41;
+    undefined field57_0x42;
+    undefined field58_0x43;
+    undefined field59_0x44;
+    undefined field60_0x45;
+    undefined field61_0x46;
+    undefined field62_0x47;
+    undefined field63_0x48;
+    undefined field64_0x49;
+    undefined field65_0x4a;
+    undefined field66_0x4b;
+    undefined field67_0x4c;
+    undefined field68_0x4d;
+    undefined field69_0x4e;
+    undefined field70_0x4f;
+    undefined field71_0x50;
+    undefined field72_0x51;
+    undefined field73_0x52;
+    undefined field74_0x53;
+    undefined field75_0x54;
+    undefined field76_0x55;
+    undefined field77_0x56;
+    undefined field78_0x57;
+    undefined field79_0x58;
+    undefined field80_0x59;
+    undefined field81_0x5a;
+    undefined field82_0x5b;
+    undefined field83_0x5c;
+    undefined field84_0x5d;
+    undefined field85_0x5e;
+    undefined field86_0x5f;
+    undefined field87_0x60;
+    undefined field88_0x61;
+    undefined field89_0x62;
+    undefined field90_0x63;
+    undefined field91_0x64;
+    undefined field92_0x65;
+    undefined field93_0x66;
+    undefined field94_0x67;
+    undefined field95_0x68;
+    undefined field96_0x69;
+    undefined field97_0x6a;
+    undefined field98_0x6b;
+    undefined field99_0x6c;
+    undefined field100_0x6d;
+    undefined field101_0x6e;
+    undefined field102_0x6f;
+    undefined field103_0x70;
+    undefined field104_0x71;
+    undefined field105_0x72;
+    undefined field106_0x73;
+    undefined field107_0x74;
+    undefined field108_0x75;
+    undefined field109_0x76;
+    undefined field110_0x77;
+    undefined field111_0x78;
+    undefined field112_0x79;
+    undefined field113_0x7a;
+    undefined field114_0x7b;
+    undefined field115_0x7c;
+    undefined field116_0x7d;
+    undefined field117_0x7e;
+    undefined field118_0x7f;
+    undefined field119_0x80;
+    undefined field120_0x81;
+    undefined field121_0x82;
+    undefined field122_0x83;
+    undefined field123_0x84;
+    undefined field124_0x85;
+    undefined field125_0x86;
+    undefined field126_0x87;
+    undefined field127_0x88;
+    undefined field128_0x89;
+    undefined field129_0x8a;
+    undefined field130_0x8b;
+    undefined field131_0x8c;
+    undefined field132_0x8d;
+    undefined field133_0x8e;
+    undefined field134_0x8f;
+    undefined field135_0x90;
+    undefined field136_0x91;
+    undefined field137_0x92;
+    undefined field138_0x93;
+    undefined field139_0x94;
+    undefined field140_0x95;
+    undefined field141_0x96;
+    undefined field142_0x97;
+    undefined field143_0x98;
+    undefined field144_0x99;
+    undefined field145_0x9a;
+    undefined field146_0x9b;
+    undefined field147_0x9c;
+    undefined field148_0x9d;
+    undefined field149_0x9e;
+    undefined field150_0x9f;
+    undefined field151_0xa0;
+    undefined field152_0xa1;
+    undefined field153_0xa2;
+    undefined field154_0xa3;
+    undefined field155_0xa4;
+    undefined field156_0xa5;
+    undefined field157_0xa6;
+    undefined field158_0xa7;
+    undefined field159_0xa8;
+    undefined field160_0xa9;
+    undefined field161_0xaa;
+    undefined field162_0xab;
+    undefined field163_0xac;
+    undefined field164_0xad;
+    undefined field165_0xae;
+    undefined field166_0xaf;
+    undefined field167_0xb0;
+    undefined field168_0xb1;
+    undefined field169_0xb2;
+    undefined field170_0xb3;
+    undefined field171_0xb4;
+    undefined field172_0xb5;
+    undefined field173_0xb6;
+    undefined field174_0xb7;
+    undefined field175_0xb8;
+    undefined field176_0xb9;
+    undefined field177_0xba;
+    undefined field178_0xbb;
+    undefined field179_0xbc;
+    undefined field180_0xbd;
+    undefined field181_0xbe;
+    undefined field182_0xbf;
+    undefined field183_0xc0;
+    undefined field184_0xc1;
+    undefined field185_0xc2;
+    undefined field186_0xc3;
+    undefined field187_0xc4;
+    undefined field188_0xc5;
+    undefined field189_0xc6;
+    undefined field190_0xc7;
+    undefined field191_0xc8;
+    undefined field192_0xc9;
+    undefined field193_0xca;
+    undefined field194_0xcb;
+    undefined field195_0xcc;
+    undefined field196_0xcd;
+    undefined field197_0xce;
+    undefined field198_0xcf;
+    undefined field199_0xd0;
+    undefined field200_0xd1;
+    undefined field201_0xd2;
+    undefined field202_0xd3;
+    undefined field203_0xd4;
+    undefined field204_0xd5;
+    undefined field205_0xd6;
+    undefined field206_0xd7;
+    undefined field207_0xd8;
+    undefined field208_0xd9;
+    undefined field209_0xda;
+    undefined field210_0xdb;
+    undefined field211_0xdc;
+    undefined field212_0xdd;
+    undefined field213_0xde;
+    undefined field214_0xdf;
+    undefined field215_0xe0;
+    undefined field216_0xe1;
+    undefined field217_0xe2;
+    undefined field218_0xe3;
+    undefined field219_0xe4;
+    undefined field220_0xe5;
+    undefined field221_0xe6;
+    undefined field222_0xe7;
+    undefined field223_0xe8;
+    undefined field224_0xe9;
+    undefined field225_0xea;
+    undefined field226_0xeb;
+    undefined field227_0xec;
+    undefined field228_0xed;
+    undefined field229_0xee;
+    undefined field230_0xef;
+    undefined field231_0xf0;
+    undefined field232_0xf1;
+    undefined field233_0xf2;
+    undefined field234_0xf3;
+    undefined field235_0xf4;
+    undefined field236_0xf5;
+    undefined field237_0xf6;
+    undefined field238_0xf7;
+    undefined field239_0xf8;
+    undefined field240_0xf9;
+    undefined field241_0xfa;
+    undefined field242_0xfb;
+    undefined field243_0xfc;
+    undefined field244_0xfd;
+    undefined field245_0xfe;
+    undefined field246_0xff;
+    undefined field247_0x100;
+    undefined field248_0x101;
+    undefined field249_0x102;
+    undefined field250_0x103;
+    undefined field251_0x104;
+    undefined field252_0x105;
+    undefined field253_0x106;
+    undefined field254_0x107;
+    undefined field255_0x108;
+    undefined field256_0x109;
+    undefined field257_0x10a;
+    undefined field258_0x10b;
+    undefined field259_0x10c;
+    undefined field260_0x10d;
+    undefined field261_0x10e;
+    undefined field262_0x10f;
+    undefined field263_0x110;
+    undefined field264_0x111;
+    undefined field265_0x112;
+    undefined field266_0x113;
+    undefined field267_0x114;
+    undefined field268_0x115;
+    undefined field269_0x116;
+    undefined field270_0x117;
+    undefined field271_0x118;
+    undefined field272_0x119;
+    undefined field273_0x11a;
+    undefined field274_0x11b;
+    undefined field275_0x11c;
+    undefined field276_0x11d;
+    undefined field277_0x11e;
+    undefined field278_0x11f;
+    undefined field279_0x120;
+    undefined field280_0x121;
+    undefined field281_0x122;
+    undefined field282_0x123;
+    undefined field283_0x124;
+    undefined field284_0x125;
+    undefined field285_0x126;
+    undefined field286_0x127;
+    undefined field287_0x128;
+    undefined field288_0x129;
+    undefined field289_0x12a;
+    undefined field290_0x12b;
+    undefined field291_0x12c;
+    undefined field292_0x12d;
+    undefined field293_0x12e;
+    undefined field294_0x12f;
+    undefined field295_0x130;
+    undefined field296_0x131;
+    undefined field297_0x132;
+    undefined field298_0x133;
+    undefined field299_0x134;
+    undefined field300_0x135;
+    undefined field301_0x136;
+    undefined field302_0x137;
+    undefined field303_0x138;
+    undefined field304_0x139;
+    undefined field305_0x13a;
+    undefined field306_0x13b;
+    undefined field307_0x13c;
+    undefined field308_0x13d;
+    undefined field309_0x13e;
+    undefined field310_0x13f;
+    undefined field311_0x140;
+    undefined field312_0x141;
+    undefined field313_0x142;
+    undefined field314_0x143;
+    undefined field315_0x144;
+    undefined field316_0x145;
+    undefined field317_0x146;
+    undefined field318_0x147;
+    undefined field319_0x148;
+    undefined field320_0x149;
+    undefined field321_0x14a;
+    undefined field322_0x14b;
+    undefined field323_0x14c;
+    undefined field324_0x14d;
+    undefined field325_0x14e;
+    undefined field326_0x14f;
+    undefined field327_0x150;
+    undefined field328_0x151;
+    undefined field329_0x152;
+    undefined field330_0x153;
+    undefined field331_0x154;
+    undefined field332_0x155;
+    undefined field333_0x156;
+    undefined field334_0x157;
+    undefined field335_0x158;
+    undefined field336_0x159;
+    undefined field337_0x15a;
+    undefined field338_0x15b;
+    undefined field339_0x15c;
+    undefined field340_0x15d;
+    undefined field341_0x15e;
+    undefined field342_0x15f;
+};
+
+struct MusDataAll {
+    struct MusicDataHeader HeaderData;
+    struct MusicChannelData ChannelData[8];
+};
+
 typedef struct ItemSecondary ItemSecondary, *PItemSecondary;
 
 typedef enum FormulaID {
@@ -1739,175 +3184,6 @@ struct SecondaryAbilityData {
     byte MPCost;
 };
 
-typedef struct MusicDataHeader MusicDataHeader, *PMusicDataHeader;
-
-struct MusicDataHeader {
-    undefined2 field0_0x0;
-    undefined2 field1_0x2;
-    undefined4 field2_0x4;
-    struct MusicDataHeader * NextMusDat;
-    int DedicatedSpace;
-    undefined field5_0x10;
-    undefined field6_0x11;
-    undefined field7_0x12;
-    undefined field8_0x13;
-    undefined field9_0x14;
-    undefined field10_0x15;
-    undefined field11_0x16;
-    undefined field12_0x17;
-    undefined field13_0x18;
-    undefined field14_0x19;
-    undefined field15_0x1a;
-    undefined field16_0x1b;
-    undefined field17_0x1c;
-    undefined field18_0x1d;
-    undefined field19_0x1e;
-    undefined field20_0x1f;
-    undefined field21_0x20;
-    undefined field22_0x21;
-    undefined field23_0x22;
-    undefined field24_0x23;
-    undefined field25_0x24;
-    undefined field26_0x25;
-    undefined field27_0x26;
-    undefined field28_0x27;
-    undefined field29_0x28;
-    undefined field30_0x29;
-    undefined field31_0x2a;
-    undefined field32_0x2b;
-    undefined field33_0x2c;
-    undefined field34_0x2d;
-    undefined field35_0x2e;
-    undefined field36_0x2f;
-    undefined field37_0x30;
-    undefined field38_0x31;
-    undefined field39_0x32;
-    undefined field40_0x33;
-    undefined field41_0x34;
-    undefined field42_0x35;
-    undefined field43_0x36;
-    undefined field44_0x37;
-    undefined field45_0x38;
-    undefined field46_0x39;
-    undefined field47_0x3a;
-    undefined field48_0x3b;
-    undefined field49_0x3c;
-    undefined field50_0x3d;
-    undefined field51_0x3e;
-    undefined field52_0x3f;
-    undefined field53_0x40;
-    undefined field54_0x41;
-    undefined field55_0x42;
-    undefined field56_0x43;
-    undefined field57_0x44;
-    undefined field58_0x45;
-    undefined field59_0x46;
-    undefined field60_0x47;
-    undefined field61_0x48;
-    undefined field62_0x49;
-    undefined field63_0x4a;
-    undefined field64_0x4b;
-    undefined field65_0x4c;
-    undefined field66_0x4d;
-    undefined field67_0x4e;
-    undefined field68_0x4f;
-    undefined field69_0x50;
-    undefined field70_0x51;
-    undefined field71_0x52;
-    undefined field72_0x53;
-    undefined field73_0x54;
-    undefined field74_0x55;
-    undefined field75_0x56;
-    undefined field76_0x57;
-    undefined field77_0x58;
-    undefined field78_0x59;
-    undefined field79_0x5a;
-    undefined field80_0x5b;
-    undefined field81_0x5c;
-    undefined field82_0x5d;
-    undefined field83_0x5e;
-    undefined field84_0x5f;
-    undefined field85_0x60;
-    undefined field86_0x61;
-    undefined field87_0x62;
-    undefined field88_0x63;
-    undefined field89_0x64;
-    undefined field90_0x65;
-    undefined field91_0x66;
-    undefined field92_0x67;
-    uint LFOVoiceBits;
-    uint LFOVoiceBits2;
-    uint ReverbVoiceBits;
-    undefined field96_0x74;
-    undefined field97_0x75;
-    undefined field98_0x76;
-    undefined field99_0x77;
-    undefined field100_0x78;
-    undefined field101_0x79;
-    undefined field102_0x7a;
-    undefined field103_0x7b;
-    undefined field104_0x7c;
-    undefined field105_0x7d;
-    undefined field106_0x7e;
-    undefined field107_0x7f;
-    undefined field108_0x80;
-    undefined field109_0x81;
-    undefined field110_0x82;
-    undefined field111_0x83;
-    undefined field112_0x84;
-    undefined field113_0x85;
-    undefined field114_0x86;
-    undefined field115_0x87;
-    undefined field116_0x88;
-    undefined field117_0x89;
-    undefined field118_0x8a;
-    undefined field119_0x8b;
-    undefined field120_0x8c;
-    undefined field121_0x8d;
-    undefined field122_0x8e;
-    undefined field123_0x8f;
-    undefined field124_0x90;
-    undefined field125_0x91;
-    undefined field126_0x92;
-    undefined field127_0x93;
-    undefined field128_0x94;
-    undefined field129_0x95;
-    undefined field130_0x96;
-    undefined field131_0x97;
-    undefined field132_0x98;
-    undefined field133_0x99;
-    undefined field134_0x9a;
-    undefined field135_0x9b;
-    undefined field136_0x9c;
-    undefined field137_0x9d;
-    undefined field138_0x9e;
-    undefined field139_0x9f;
-    undefined field140_0xa0;
-    undefined field141_0xa1;
-    undefined field142_0xa2;
-    undefined field143_0xa3;
-    undefined field144_0xa4;
-    undefined field145_0xa5;
-    undefined field146_0xa6;
-    undefined field147_0xa7;
-    undefined field148_0xa8;
-    undefined field149_0xa9;
-    undefined field150_0xaa;
-    undefined field151_0xab;
-    undefined field152_0xac;
-    undefined field153_0xad;
-    undefined field154_0xae;
-    undefined field155_0xaf;
-    undefined field156_0xb0;
-    undefined field157_0xb1;
-    undefined field158_0xb2;
-    undefined field159_0xb3;
-    undefined field160_0xb4;
-    undefined field161_0xb5;
-    undefined field162_0xb6;
-    undefined field163_0xb7;
-};
-
 typedef enum ItemID {
     None=0,
     Knife=1,
@@ -2166,6 +3442,32 @@ typedef enum ItemID {
     RND_ENTD=254,
     NONE_ENTD=255
 } ItemID;
+
+typedef enum MusicInstruction {
+    PlayNote=127,
+    Instruction=128,
+    Rest=128,
+    Fermata=129,
+    EndBar=144,
+    Loop=145,
+    Octave=148,
+    RaiseOctave=149,
+    LowerOctave=150,
+    TimeSignature=151,
+    Repeat=152,
+    Coda=153,
+    ToCoda=154,
+    Tempo=160,
+    Instrument=172,
+    Cue=186,
+    Naturale=192,
+    AttackTime=194,
+    Sustain=196,
+    AttackTime2=198,
+    PitchShift=216,
+    Dynamic=224,
+    Balance=232
+} MusicInstruction;
 
 typedef enum SkillsetID {
     NONE=0,
@@ -2472,6 +3774,20 @@ struct MonSkillset {
     enum AbilityID Ability2:8;
     enum AbilityID AbilityMS:8;
 };
+
+typedef enum status_legal {
+    is_dead=0,
+    team_loss_enemy=1,
+    team_loss_ally=2,
+    freeze_ct=3,
+    can_act=4,
+    immortal_immune=5,
+    formation_immune=6,
+    0x7=7,
+    0x8=8,
+    no_mount=9,
+    0x9=10
+} status_legal;
 
 typedef enum JobID {
     None=0,
@@ -3094,8 +4410,8 @@ struct fileOpenDesc { // custom FFT file header used to load most files
     undefined4 field0_0x0;
     int busy;
     undefined4 field2_0x8;
-    undefined4 field3_0xc;
-    int nosect;
+    undefined4 successful_passes;
+    int num_sect;
     int lba;
     undefined4 field6_0x18;
     struct CdlLOC CdlLOC;
@@ -3137,12 +4453,6 @@ struct ItemAttributes {
     byte DoubleElem;
     byte BoostElem;
 };
-
-typedef enum mus_voiceChannelFunc {
-    CalcLFOVoices1=4,
-    CalcLFOVoices2=16,
-    CalcReverbVoices=64
-} mus_voiceChannelFunc;
 
 
 // WARNING! conflicting data type names: /TYPES.H/u_long - /types.h/u_long
@@ -3897,6 +5207,18 @@ typedef __u_int u_int;
 
 typedef long __off_t;
 
+typedef enum Movements2 {
+    None=0,
+    Any_Ground=1,
+    Any_Weather=2,
+    Teleport_2=4,
+    Teleport=8,
+    Cannot_Enter_Water=16,
+    Move-Get_JP=32,
+    Move-Get_EXP=64,
+    Move-MP_UP=128
+} Movements2;
+
 typedef struct BattleUnitData BattleUnitData, *PBattleUnitData;
 
 typedef struct AllActionUnitData AllActionUnitData, *PAllActionUnitData;
@@ -3943,12 +5265,201 @@ typedef enum birthday {
     Zodiac=61440
 } birthday;
 
+typedef enum ElemAffinity {
+    Dark=1,
+    Holy=2,
+    Water=4,
+    Earth=8,
+    Wind=16,
+    Ice=32,
+    Lightning=64,
+    Fire=128
+} ElemAffinity;
+
+typedef enum Reactions1 {
+    None=0,
+    Brave_UP=1,
+    Regenerator=2,
+    Dragon_Spirit=4,
+    Caution=8,
+    Sunken_State=16,
+    Speed_Save=32,
+    MA_Save=64,
+    PA_Save=128
+} Reactions1;
+
+typedef enum Reactions2 {
+    None=0,
+    Counter_Flood=1,
+    Counter_Tackle=2,
+    Counter_Magic=4,
+    Meatbone_Slash=8,
+    Critical_Quick=16,
+    MP_Restore=32,
+    HP_Restore=64,
+    Face_UP=128
+} Reactions2;
+
+typedef enum Reactions3 {
+    None=0,
+    MP_Switch=1,
+    Distribute=2,
+    UNUSED=4,
+    Counter=8,
+    Auto_Potion=16,
+    Reflect_Status=32,
+    Gilgame_Heart=64,
+    Absorb_Used_MP=128
+} Reactions3;
+
+typedef enum Reactions4 {
+    None=0,
+    Hamedo=1,
+    Arrow_Guard=2,
+    Blade_Grasp=4,
+    Catch=8,
+    Abandon=16,
+    Finger_Guard=32,
+    Weapon_Guard=64,
+    Damage_Split=128
+} Reactions4;
+
+typedef enum Supports1 {
+    None=0,
+    Equip_Gun=1,
+    Equip_Axe=2,
+    Equip_Spear=4,
+    Equip_Crossbow=8,
+    Equip_Katana=16,
+    Equip_Sword=32,
+    Equip_Shield=64,
+    Equip_Armor=128
+} Supports1;
+
+typedef enum Supports2 {
+    None=0,
+    Concentrate=1,
+    Magic_Defense_UP=2,
+    Magic_Attack_UP=4,
+    Defense_UP=8,
+    Attack_UP=16,
+    Gained_EXP-UP=32,
+    Gained_JP-UP=64,
+    Half_of_MP=128
+} Supports2;
+
+typedef enum Supports3 {
+    None=0,
+    Two_Swords=1,
+    Two_Hands=2,
+    Maintenance=4,
+    Throw_Item=8,
+    Monster_Talk=16,
+    Martial_Arts=32,
+    Secret_Hunt=64,
+    Train=128
+} Supports3;
+
+typedef enum Supports4 {
+    None=0,
+    UNUSED_1=1,
+    UNUSED_2=2,
+    Non-Charge=4,
+    Short_Charge=8,
+    UNUSED_10=16,
+    Equip_Change=32,
+    Defend=64,
+    Monster_Skill=128
+} Supports4;
+
+typedef enum Movements1 {
+    None=0,
+    Move-HP_UP=1,
+    Ignore_Height=2,
+    Jump_Plus3=4,
+    Jump_Plus2=8,
+    Jump_Plus1=16,
+    Move_Plus3=32,
+    Move_Plus2=64,
+    Move_Plus1=128
+} Movements1;
+
+typedef enum Movements3 {
+    None=0,
+    Move-Find_Item=1,
+    Silent_Walk=2,
+    Fly=4,
+    Float=8,
+    Move_Underwater=16,
+    Move_on_Lava=32,
+    Move_in_Water=64,
+    Walk_on_Water=128
+} Movements3;
+
 typedef enum all_action_aiflags {
     BehaviourMod=24,
     Focus_coords=32,
     Focus_target=64,
     Map_level_stay=128
 } all_action_aiflags;
+
+typedef enum UniqueEffect1 {
+    Golem=1,
+    Moldball=2,
+    Break_Item=4,
+    Stole_Target_Item=8,
+    Stolen_Item=16,
+    Poached=32,
+    SwitchTeam=64,
+    Plus_Level=128
+} UniqueEffect1;
+
+typedef enum UniqueEffect2 {
+    Minus_Level=1,
+    Secondary_Proc=2,
+    Elem_Absorb=4,
+    Elem_Weak=8,
+    Katana_Broken=16,
+    UNUSED=32,
+    Knockback=64,
+    Hit_Golem=128
+} UniqueEffect2;
+
+typedef enum StatChange {
+    Value=127,
+    Bonus=128
+} StatChange;
+
+typedef enum CTStatChange {
+    Value=127,
+    Bonus=128,
+    Quick=255
+} CTStatChange;
+
+typedef enum StatusMissMessageByte {
+    Failed=1,
+    Guarded=2,
+    AnimateOnMiss=128
+} StatusMissMessageByte;
+
+typedef enum EquipSlotRemove {
+    LeftHandShield=2,
+    LeftHandWeapon=4,
+    RightHandShield=8,
+    RightHandWeapon=16,
+    Accessory=32,
+    Armor=64,
+    Helmet=128
+} EquipSlotRemove;
+
+typedef enum AttackType {
+    StatAlter=1,
+    StatusChange=8,
+    MPRecovery=16,
+    MPDamage=32,
+    HPRecovery=64,
+    HPDamage=128
+} AttackType;
 
 struct AllActionUnitData {
     enum JobID BaseClass;
@@ -4038,11 +5549,11 @@ struct AllActionUnitData {
     byte DontActCT;
     byte ReflectCT;
     byte DeathSentenceCT;
-    byte AbsorbElem;
-    byte NullElem;
-    byte HalfElem;
-    byte DoubleElem;
-    byte BoostElem;
+    enum ElemAffinity AbsorbElem;
+    enum ElemAffinity NullElem;
+    enum ElemAffinity HalfElem;
+    enum ElemAffinity WeakElem;
+    enum ElemAffinity BoostElem;
     int RawHP:24;
     int RawMP:24;
     int RawSP:24;
@@ -4058,9 +5569,17 @@ struct AllActionUnitData {
     byte PAMult;
     byte MAGrowth;
     byte MAMult;
-    dword Reactions;
-    dword Supports;
-    int Movements:24;
+    enum Reactions1 Reactions1;
+    enum Reactions2 Reactions2;
+    enum Reactions3 Reactions3;
+    enum Reactions4 Reactions4;
+    enum Supports1 Supports1;
+    enum Supports2 Supports2;
+    enum Supports3 Supports3;
+    enum Supports4 Supports4;
+    enum Movements1 Movements1;
+    enum Movements2 Movements2;
+    enum Movements3 Movements3;
     int UnlockedJobs:24;
     int BaseAbilities:24;
     int ChemistAbilities:24;
@@ -4101,9 +5620,9 @@ struct AllActionUnitData {
     byte AIYStay;
     enum all_action_aiflags Ai_behavious_flags;
     byte PrioritisedTarID;
-    undefined field150_0x169;
-    undefined field151_0x16a;
-    undefined field152_0x16b;
+    undefined field158_0x169;
+    undefined field159_0x16a;
+    undefined field160_0x16b;
     short UnitNameID;
 };
 
@@ -4141,8 +5660,8 @@ struct CurActionTargetData {
 };
 
 struct CurActionUnitData {
-    enum bbool HitFlag;
-    enum bbool CritFlag;
+    byte HitFlag;
+    byte CritFlag;
     byte EvadeType;
     byte ItemBreakID;
     short HPDamage;
@@ -4150,66 +5669,29 @@ struct CurActionUnitData {
     short MPDamage;
     short MPRecovery;
     short GilLost;
-    short ReactionID;
-    enum bbool Golem:1;
-    enum bbool MoldballVirus:1;
-    enum bbool BreakItem:1;
-    enum bbool StoleItem:1;
-    enum bbool StealItem:1;
-    enum bbool Poached:1;
-    enum bbool SwitchTeam:1;
-    enum bbool +1Lv:1;
-    enum bbool -1Lv:1;
-    enum bbool ProcTrigger:1;
-    enum bbool Absorb:1;
-    enum bbool Weak:1;
-    enum bbool KatanaBroke:1;
-    enum bbool Knockback:1;
-    enum bbool HitGolem:1;
-    int SPChange:7;
-    enum bbool SPBonus:1;
-    int CTChange:7;
-    enum bbool CTBonus:1;
-    int PAChange:7;
-    enum bbool PABonus:1;
-    int MAChange:7;
-    enum bbool MABonus:1;
-    int BrChange:7;
-    enum bbool BrBonus:1;
-    int FaChange:7;
-    enum bbool FaBonus:1;
-    enum bbool MissedStatus:1;
-    enum bbool GuardedStatus:1;
-    enum bbool AnimateStatusOnMiss:1;
-    enum bbool RemLHS:1;
-    enum bbool RemLHW:1;
-    enum bbool RemRHS:1;
-    enum bbool RemRHW:1;
-    enum bbool RemAcc:1;
-    enum bbool RemBody:1;
-    enum bbool RemHelm:1;
+    enum AbilityID ReactionID;
+    enum UniqueEffect1 UniqueEffect1;
+    enum UniqueEffect2 UniqueEffect2;
+    enum StatChange SPChange;
+    enum CTStatChange CTChange;
+    enum StatChange PAChange;
+    enum StatChange MAChange;
+    enum StatChange BraveChange;
+    enum StatChange FaithChange;
+    enum StatusMissMessageByte StatusMissMessageByte;
+    enum EquipSlotRemove RemoveEquipmentFlags;
     enum ItemID StolenItemID;
     struct StatusList StatusInfliction;
     struct StatusList StatusRemoval;
-    enum bbool StatsChange:1;
-    enum bbool StatusChange:1;
-    enum bbool MPREC:1;
-    enum bbool MPDMG:1;
-    enum bbool HPREC:1;
-    enum bbool HPDMG:1;
+    enum AttackType AttackType;
     short ReactionVar;
     byte StolenEXP;
     byte StolenJP;
     byte Hit%;
-    byte field60_0x2b;
+    byte hi_hit%;
     byte AutoBattle;
     byte MainTargetID;
-    int isRamza:2;
-    enum bbool Immortal:1;
-    enum bbool Control:1;
-    int Team:2;
-    enum bbool RandomlyPresent:1;
-    enum bbool AlwaysPresent:1;
+    enum ENTD_team.conflict ModifiedENTDTeam;
     struct StatusList FinalInflictStatus;
 };
 
@@ -4291,69 +5773,6 @@ struct CurrentMapTileData {
     bool FullShadow:1;
     undefined field10_0x7;
 };
-
-typedef enum GameStateVar {
-    FreeCursor=0,
-    Case1=1,
-    Case2=2,
-    ActionMenus=3,
-    Case4=4,
-    Case5=5,
-    Case6=6,
-    LongList=7,
-    Case8=8,
-    Case9=9,
-    CaseA=10,
-    CaseB=11,
-    CaseC=12,
-    CaseD=13,
-    CaseE=14,
-    CaseF=15,
-    Case10=16,
-    Case11=17,
-    Case12=18,
-    Case13=19,
-    Case14=20,
-    Case15=21,
-    Case16=22,
-    Case17=23,
-    Case18=24,
-    Case19=25,
-    Case1a=26,
-    Case1b=27,
-    Case1c=28,
-    Case1d=29,
-    CommenceAttackPhaseCtrl=30,
-    Case1F=31,
-    Case20=32,
-    Case21=33,
-    Case22=34,
-    Case23=35,
-    Case24=36,
-    Case25=37,
-    Case26=38,
-    JPEXPGain=39,
-    LearnAbilityOnHit=40,
-    OpenSP2Files=41,
-    Case2a=42,
-    Case2b=43,
-    Case2c=44,
-    Case2d=45,
-    Case2e=46,
-    ResumeAttackPhaseCtrl=47,
-    Case30=48,
-    Case31=49,
-    Case32=50,
-    Case33=51,
-    Case34=52,
-    Case35=53,
-    Case36=54,
-    Case37=55,
-    Case38=56,
-    Case39=57,
-    Case3a=58,
-    Case3b=59
-} GameStateVar;
 
 typedef enum SkillsetType {
     Default=0,
@@ -5203,6 +6622,69 @@ struct MapCoordinateStats {
     int ModifiedPalettes;
 };
 
+typedef enum GameStateVar {
+    FreeCursor=0,
+    HighlightUnits=1,
+    OpenActionMenus=2,
+    IdlingActionMenus=3,
+    MenuToTargetting=4,
+    DisableMoveAct=5,
+    OpenHelpMenu=6,
+    MiniMenu=7,
+    MiniMenuHelp=8,
+    Case9=9,
+    CaseA=10,
+    CaseB=11,
+    UnitMove=12,
+    CloseMoveHelp=13,
+    CaseE=14,
+    IllegalMoveMenu=15,
+    UnitMovingSetup=16,
+    UnitMoving=17,
+    MoveConfirmMenu=18,
+    WaitDirection=19,
+    WaitMenu=20,
+    CrystalLearn=21,
+    ActionExecuteSetup=22,
+    TargettingRange=23,
+    IllegalRange=24,
+    AbilityPrvwHandling=25,
+    Case1a=26,
+    ConfirmAction=27,
+    PreAttackAnim1=28,
+    Case1d=29,
+    CommenceAtkPhaseCtrl=30,
+    Case1f=31,
+    Case20=32,
+    Case21=33,
+    Case22=34,
+    Case23=35,
+    Case24=36,
+    Case25=37,
+    JPEXPGain=38,
+    Case27=39,
+    LearnAbilityOnHit=40,
+    DoEffectDamageDisp=41,
+    OpenSP2Files=42,
+    StartEffectFileOpen=43,
+    SecondaryEffect=44,
+    Case2d=45,
+    BattleMessageDisplay=46,
+    ResumeAttackPhaseControl=47,
+    Case30=48,
+    Case31=49,
+    Case32=50,
+    Case33=51,
+    Case34=52,
+    Case35=53,
+    Case36=54,
+    Case37=55,
+    Case38=56,
+    Case39=57,
+    Case3a=58,
+    CloseBattle=59
+} GameStateVar;
+
 typedef struct CurrentAbilityData CurrentAbilityData, *PCurrentAbilityData;
 
 struct CurrentAbilityData {
@@ -5535,7 +7017,7 @@ int _Calculate_File_Header
     fileOpenDesc->lba = lba;
     CdIntToPos(lba,&fileOpenDesc->CdlLOC);
     couldCalculateCdlLOC = 0;
-    fileOpenDesc->nosect = nosect;
+    fileOpenDesc->num_sect = nosect;
     fileOpenDesc->addr = (u_long)addr;
   }
   else {
@@ -5574,76 +7056,76 @@ void Reset_CD_Subsystems(void)
 
 
 
-void Open_File_to_RAM_Centre(int param_1)
+void Open_File_to_RAM_Centre(fileOpenDesc *filehdr_ptr)
 
 {
-  int iVar1;
-  u_char local_10 [8];
+  int i;
+  u_char cd_args [8];
   
-  switch(*(undefined4 *)(param_1 + 4)) {
+  switch(filehdr_ptr->busy) {
   default:
-    goto switchD_80011e70_caseD_0;
+    goto switchD_80011e70_draw_nowloading;
   case 1:
-    local_10[0] = 0x80;
-    CdControl('\x0e',local_10,(u_char *)0x0);
-    DAT_80057718 = 0;
-    iVar1 = *(int *)(param_1 + 4) + 1;
+    cd_args[0] = 0x80;
+    CdControl('\x0e',cd_args,(u_char *)0x0);
+    openfile_timer = 0;
+    i = filehdr_ptr->busy + 1;
     break;
   case 2:
-    if (DAT_80057718 < 4) goto switchD_80011e70_caseD_0;
-    iVar1 = *(int *)(param_1 + 4) + 1;
+    if (openfile_timer < 4) goto switchD_80011e70_draw_nowloading;
+    i = filehdr_ptr->busy + 1;
     break;
   case 3:
-    CdControlF('\x15',(u_char *)(param_1 + 0x1c));
-    iVar1 = *(int *)(param_1 + 4) + 1;
+    CdControlF('\x15',&(filehdr_ptr->CdlLOC).minute);
+    i = filehdr_ptr->busy + 1;
     break;
   case 4:
-    iVar1 = CdSync(1,(u_char *)0x0);
-    if (iVar1 != 2) {
-      if (iVar1 != 5) goto switchD_80011e70_caseD_0;
+    i = CdSync(1,(u_char *)0x0);
+    if (i != 2) {
+      if (i != 5) goto switchD_80011e70_draw_nowloading;
 LAB_80011fbc:
       Reset_CD_Subsystems();
-      iVar1 = *(int *)(param_1 + 8);
-      *(undefined4 *)(param_1 + 4) = 1;
+      i = filehdr_ptr->field2_0x8;
+      filehdr_ptr->busy = 1;
 LAB_80011fd4:
-      *(int *)(param_1 + 8) = iVar1 + 1;
-      goto switchD_80011e70_caseD_0;
+      filehdr_ptr->field2_0x8 = i + 1;
+      goto switchD_80011e70_draw_nowloading;
     }
-    *(int *)(param_1 + 4) = *(int *)(param_1 + 4) + 1;
-    if (*(int *)(param_1 + 0x20) != 0) goto switchD_80011e70_caseD_0;
-    goto LAB_80011f10;
+    filehdr_ptr->busy = filehdr_ptr->busy + 1;
+    if (filehdr_ptr->addr != 0) goto switchD_80011e70_draw_nowloading;
+    goto marknotbusy;
   case 5:
-    iVar1 = CdRead(*(int *)(param_1 + 0x10),*(u_long **)(param_1 + 0x20),0x80);
-    if (iVar1 == 0) {
-      iVar1 = *(int *)(param_1 + 8);
+    i = CdRead(filehdr_ptr->num_sect,(u_long *)filehdr_ptr->addr,0x80);
+    if (i == 0) {
+      i = filehdr_ptr->field2_0x8;
       goto LAB_80011fd4;
     }
-    DAT_80057718 = 0;
-    *(undefined4 *)(param_1 + 0xc) = 0;
-    iVar1 = *(int *)(param_1 + 4) + 1;
+    openfile_timer = 0;
+    filehdr_ptr->successful_passes = 0;
+    i = filehdr_ptr->busy + 1;
     break;
   case 6:
-    iVar1 = CdReadSync(1,(u_char *)0x0);
-    if (iVar1 != 0) {
-      if ((iVar1 != *(int *)(param_1 + 0x10)) && (iVar1 != -1)) {
-        *(undefined4 *)(param_1 + 0xc) = 0;
-        goto switchD_80011e70_caseD_0;
+    i = CdReadSync(1,(u_char *)0x0);
+    if (i != 0) {
+      if ((i != filehdr_ptr->num_sect) && (i != -1)) {
+        filehdr_ptr->successful_passes = 0;
+        goto switchD_80011e70_draw_nowloading;
       }
-      if (DAT_80057718 < 0x101) {
-        *(int *)(param_1 + 0xc) = *(int *)(param_1 + 0xc) + 1;
-        goto switchD_80011e70_caseD_0;
+      if (openfile_timer < 0x101) {
+        filehdr_ptr->successful_passes = filehdr_ptr->successful_passes + 1;
+        goto switchD_80011e70_draw_nowloading;
       }
-      DAT_80057718 = 0;
-      *(undefined4 *)(param_1 + 0xc) = 0;
+      openfile_timer = 0;
+      filehdr_ptr->successful_passes = 0;
       goto LAB_80011fbc;
     }
-LAB_80011f10:
-    *(undefined4 *)(param_1 + 4) = 0;
-    goto switchD_80011e70_caseD_0;
+marknotbusy:
+    filehdr_ptr->busy = 0;
+    goto switchD_80011e70_draw_nowloading;
   }
-  *(int *)(param_1 + 4) = iVar1;
-switchD_80011e70_caseD_0:
-  if (*(int *)(param_1 + 4) != 0) {
+  filehdr_ptr->busy = i;
+switchD_80011e70_draw_nowloading:
+  if (filehdr_ptr->busy != 0) {
     Draw_NowLoading();
   }
   return;
@@ -5679,15 +7161,15 @@ void Draw_NowLoading(void)
 MusicDataHeader * FUN_800120f4(undefined *SMDPtr)
 
 {
-  MusicDataHeader *MusicData;
+  MusDataAll *MusicData;
   
   MusicData = FindSpaceForSMDMUS((uint)(byte)SMDPtr[0x14] * 0x160 + 0xb8);
-  MusicData->NextMusDat = (MusicDataHeader *)SMDPtr;
-  FUN_800136c0(MusicData);
-  FUN_800138ac(MusicData);
-  *(undefined4 *)&MusicData->field_0x5c = 0;
-  FUN_80014024(MusicData);
-  return MusicData;
+  (MusicData->HeaderData).NextMusDat = (MusDataAll *)SMDPtr;
+  FUN_800136c0(&MusicData->HeaderData);
+  FUN_800138ac(&MusicData->HeaderData);
+  *(undefined4 *)&(MusicData->HeaderData).field_0x5c = 0;
+  FUN_80014024(&MusicData->HeaderData);
+  return &MusicData->HeaderData;
 }
 
 
@@ -5697,7 +7179,7 @@ void FUN_8001216c(MusicDataHeader *param_1)
 {
   int iVar1;
   
-  if (((int)*(short *)&param_1->field_0x10 & 0x8000U) != 0) {
+  if (((int)*(short *)&param_1->field5_0x10 & 0x8000U) != 0) {
     FUN_80012338((int)param_1);
   }
   iVar1 = FUN_80014078(param_1);
@@ -5710,22 +7192,38 @@ void FUN_8001216c(MusicDataHeader *param_1)
 
 
 
-void FUN_800121dc(MusicDataHeader *param_1,short param_2,short param_3)
+void SUZUKI_NOOP_1(void)
+
+{
+  return;
+}
+
+
+
+void SUZUKI_NOOP_2(void)
+
+{
+  return;
+}
+
+
+
+void FUN_800121dc(MusicDataHeader *MusData,short param_2,short param_3)
 
 {
   ulong spuInterruptTemp;
   
   spuInterruptTemp = rootCounter2Event;
-  if (param_1 != (MusicDataHeader *)0x0) {
-    *(ushort *)&param_1->field_0x10 = *(ushort *)&param_1->field_0x10 & 0x7fff;
+  if (MusData != (MusicDataHeader *)0x0) {
+    *(ushort *)&MusData->field5_0x10 = *(ushort *)&MusData->field5_0x10 & 0x7fff;
     DisableEvent(spuInterruptTemp);
-    FUN_800136c0(param_1);
-    FUN_800138ac(param_1);
-    *(undefined4 *)&param_1->field_0x94 = 0;
-    FUN_80012f08(param_1,(int)param_2,param_3);
-    FUN_800170d8((int)param_1,0x7000);
+    FUN_800136c0(MusData);
+    FUN_800138ac(MusData);
+    MusData->field106_0x94 = 0;
+    FUN_80012f08((MusDataAll *)MusData,(int)param_2,param_3);
+    FUN_800170d8((MusDataAll *)MusData,0x7000);
     spuInterruptTemp = rootCounter2Event;
-    *(ushort *)&param_1->field_0x10 = *(ushort *)&param_1->field_0x10 | 0x8000;
+    *(ushort *)&MusData->field5_0x10 = *(ushort *)&MusData->field5_0x10 | 0x8000;
     EnableEvent(spuInterruptTemp);
   }
   return;
@@ -5752,7 +7250,7 @@ void Toggle_Music_Playing(int onOff)
 
 {
   if (onOff == 0) {
-    FUN_80012860();
+    PauseActiveMUS();
     SuzukiInstrHalf = SuzukiInstrHalf & ~MusicPlayable;
   }
   else {
@@ -5767,7 +7265,7 @@ void Play_Sound(uint sfx_ID)
 
 {
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
-    DAT_800329f0 = 2;
+    always2 = 2;
     Play_Sound_Worker(0xffff8006,sfx_ID,0x6000,0x4000);
   }
   return;
@@ -5775,42 +7273,54 @@ void Play_Sound(uint sfx_ID)
 
 
 
-void FUN_80012560(uint param_1)
+void Play_Sound2(uint sfx_ID)
 
 {
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
-    DAT_800329f0 = 2;
-    Play_Sound_Worker(0x6004,param_1,0x6000,0x4000);
+    always2 = 2;
+    Play_Sound_Worker(0x6004,sfx_ID,0x6000,0x4000);
   }
   return;
 }
 
 
 
-void Play_SoundEffect(MusicDataHeader *param_1)
+void PlaySound_FromMUS(MusDataAll *MusData)
 
 {
   uint uVar1;
   
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
-    uVar1 = FUN_80012d40(param_1,2);
-    DAT_800329f0 = 2;
-    Play_Sound_Worker((int)(short)((ushort)uVar1 | 0x2000),(uint)param_1,0x6000,0x4000);
+    uVar1 = FUN_80012d40(MusData,2);
+    always2 = 2;
+    Play_Sound_Worker((int)(short)((ushort)uVar1 | 0x2000),(uint)MusData,0x6000,0x4000);
   }
   return;
 }
 
 
 
-void FUN_80012664(MusicDataHeader *param_1,int param_2,int param_3)
+void Play_Sound3(uint sfx_ID,ushort param_2)
+
+{
+  if ((SuzukiInstrHalf & MusicPlayable) != Off) {
+    always2 = 2;
+    Play_Sound_Worker((int)(short)(param_2 & 0xfffe | 0x2000),sfx_ID,0x6000,0x4000);
+  }
+  return;
+}
+
+
+
+void PlaySound_FromMus2(MusDataAll *MusData,int param_2,int param_3)
 
 {
   uint uVar1;
   
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
-    uVar1 = FUN_80012d40(param_1,2);
-    DAT_800329f0 = 2;
-    Play_Sound_Worker((int)(short)((ushort)uVar1 | 0x2000),(uint)param_1,
+    uVar1 = FUN_80012d40(MusData,2);
+    always2 = 2;
+    Play_Sound_Worker((int)(short)((ushort)uVar1 | 0x2000),(uint)MusData,
                       (short)((uint)(param_2 << 0x18) >> 0x10),
                       (short)((uint)(param_3 << 0x18) >> 0x10));
   }
@@ -5819,177 +7329,378 @@ void FUN_80012664(MusicDataHeader *param_1,int param_2,int param_3)
 
 
 
-void FUN_80012860(void)
+void Play_Sound4(uint sfx_ID,ushort param_2,int param_3,int param_4)
 
 {
-  MusicDataHeader *pMVar1;
-  MusicDataHeader *pMVar2;
-  int iVar3;
-  uint uVar4;
-  ulong gpuInterruptedEvent;
-  
-  pMVar1 = FirstMUS;
-  uVar4 = 0;
-  iVar3 = 8;
-  pMVar2 = FirstMUS + 1;
-  do {
-    iVar3 = iVar3 + -1;
-    if ((pMVar2->field0_0x0 & 1) != 0) {
-      pMVar2->field0_0x0 = 0;
-      uVar4 = uVar4 | *(uint *)&pMVar2->field_0x34;
-    }
-    pMVar2 = (MusicDataHeader *)&pMVar2[1].field_0xa8;
-  } while (iVar3 != 0);
-  DisableEvent(rootCounter2Event);
-  gpuInterruptedEvent = rootCounter2Event;
-  *(undefined4 *)&pMVar1->field_0x58 = 0;
-  *(undefined4 *)&pMVar1->field_0x60 = 0;
-  pMVar1->LFOVoiceBits = 0;
-  pMVar1->LFOVoiceBits2 = 0;
-  pMVar1->ReverbVoiceBits = 0;
-  PitchLFO_onlyInclude = 0;
-  DAT_80032a20 = uVar4 | DAT_80032a20;
-  EnableEvent(gpuInterruptedEvent);
-  return;
-}
-
-
-
-void FUN_80012914(int param_1)
-
-{
-  short sVar1;
-  MusicDataHeader *pMVar2;
-  int iVar3;
-  
-  iVar3 = 8;
-  sVar1 = *(short *)(param_1 + 10);
-  pMVar2 = FirstMUS + 1;
-  do {
-    iVar3 = iVar3 + -1;
-    if (((pMVar2->field0_0x0 & 1) != 0) && ((int)pMVar2->NextMusDat >> 0x10 == (int)sVar1)) {
-      FUN_80012990(pMVar2->NextMusDat);
-    }
-    pMVar2 = (MusicDataHeader *)&pMVar2[1].field_0xa8;
-  } while (iVar3 != 0);
-  return;
-}
-
-
-
-void FUN_80012990(MusicDataHeader *param_1)
-
-{
-  MusicDataHeader *pMVar1;
-  uint uVar2;
-  uint *puVar3;
-  uint uVar4;
-  uint uVar5;
-  MusicDataHeader *pMVar6;
-  int iVar7;
-  uint uVar8;
-  
-  pMVar1 = FirstMUS;
-  uVar8 = 1;
-  uVar5 = 0;
-  uVar4 = 0;
-  iVar7 = 8;
-  pMVar6 = FirstMUS + 1;
-  puVar3 = (uint *)&FirstMUS[1].field_0x34;
-  do {
-    iVar7 = iVar7 + -1;
-    if (((pMVar6->field0_0x0 & 1) != 0) && ((MusicDataHeader *)puVar3[-0xb] == param_1)) {
-      uVar2 = *puVar3;
-      uVar4 = uVar4 | uVar8;
-      pMVar6->field0_0x0 = 0;
-      uVar5 = uVar5 | uVar2;
-    }
-    uVar8 = uVar8 << 1;
-    puVar3 = puVar3 + 0x58;
-    pMVar6 = (MusicDataHeader *)&pMVar6[1].field_0xa8;
-  } while (iVar7 != 0);
-  if (uVar4 != 0) {
-    FUN_80012ab0((int)pMVar1,uVar4,uVar5);
+  if ((SuzukiInstrHalf & MusicPlayable) != Off) {
+    always2 = 2;
+    Play_Sound_Worker((int)(short)(param_2 & 0xfffe | 0x2000),sfx_ID,
+                      (short)((uint)(param_3 << 0x18) >> 0x10),
+                      (short)((uint)(param_4 << 0x18) >> 0x10));
   }
   return;
 }
 
 
 
-void FUN_80012ab0(int param_1,uint param_2,uint param_3)
+void Play2_Sound(uint sxf_1,uint sfx_2)
 
 {
-  uint uVar1;
+  if ((SuzukiInstrHalf & MusicPlayable) != Off) {
+    always2 = 2;
+    Play_Sound_Worker(0x2000,sxf_1,0x6000,0x4000);
+    Play_Sound_Worker(0x2002,sfx_2,0x6000,0x4000);
+  }
+  return;
+}
+
+
+
+void Play4_Sound(uint sfx_1,uint sfx_2,uint sfx_3,uint sfx_4)
+
+{
+  if ((SuzukiInstrHalf & MusicPlayable) != Off) {
+    always2 = 2;
+    Play_Sound_Worker(0x2000,sfx_1,0x6000,0x4000);
+    Play_Sound_Worker(0x2002,sfx_2,0x6000,0x4000);
+    Play_Sound_Worker(0x2004,sfx_3,0x6000,0x4000);
+    Play_Sound_Worker(0x2006,sfx_4,0x6000,0x4000);
+  }
+  return;
+}
+
+
+
+void PauseActiveMUS(void)
+
+{
+  MusicChannelData *ChannelData;
+  int numChannels;
+  uint acc_OwnedChannels;
+  MusDataAll *MusicData;
   ulong gpuInterruptedEvent;
   
+  MusicData = FirstMUS;
+  acc_OwnedChannels = 0;
+  numChannels = 8;
+  ChannelData = FirstMUS->ChannelData;
+  do {
+    numChannels = numChannels + -1;
+    if ((ChannelData->hasSound & 1) != 0) {
+      ChannelData->hasSound = 0;
+      acc_OwnedChannels = acc_OwnedChannels | ChannelData->hasChannel;
+    }
+    ChannelData = ChannelData + 1;
+  } while (numChannels != 0);
   DisableEvent(rootCounter2Event);
   gpuInterruptedEvent = rootCounter2Event;
-  uVar1 = ~param_3;
-  DAT_80032a20 = param_3 | DAT_80032a20;
-  *(uint *)(param_1 + 0x58) = ~param_2 & *(uint *)(param_1 + 0x58);
-  *(uint *)(param_1 + 0x60) = uVar1 & *(uint *)(param_1 + 0x60);
-  *(uint *)(param_1 + 0x68) = uVar1 & *(uint *)(param_1 + 0x68);
-  PitchLFO_onlyInclude = uVar1 & PitchLFO_onlyInclude;
-  *(uint *)(param_1 + 0x6c) = uVar1 & *(uint *)(param_1 + 0x6c);
-  *(uint *)(param_1 + 0x70) = uVar1 & *(uint *)(param_1 + 0x70);
+  (MusicData->HeaderData).OwnedChannels = 0;
+  (MusicData->HeaderData).ModifiedChannels = 0;
+  (MusicData->HeaderData).LFOVoiceBits = 0;
+  (MusicData->HeaderData).NoiseVoiceBits = 0;
+  (MusicData->HeaderData).ReverbVoiceBits = 0;
+  PitchLFO_onlyInclude = 0;
+  PausedMusicChannels = acc_OwnedChannels | PausedMusicChannels;
   EnableEvent(gpuInterruptedEvent);
   return;
 }
 
 
 
-uint FUN_80012d40(MusicDataHeader *param_1,uint param_2)
+void Pause_SpecificMUS(int param_1)
+
+{
+  short sVar1;
+  MusicChannelData *ChannelData;
+  int numChannels;
+  
+  numChannels = 8;
+  sVar1 = *(short *)(param_1 + 10);
+  ChannelData = FirstMUS->ChannelData;
+  do {
+    numChannels = numChannels + -1;
+    if (((ChannelData->hasSound & 1) != 0) && ((int)ChannelData->field5_0x8 >> 0x10 == (int)sVar1))
+    {
+      AccumulateChannelsToPause(&ChannelData->field5_0x8->HeaderData);
+    }
+    ChannelData = ChannelData + 1;
+  } while (numChannels != 0);
+  return;
+}
+
+
+
+void AccumulateChannelsToPause(MusicDataHeader *MusData)
 
 {
   uint uVar1;
   uint *puVar2;
-  MusicDataHeader *pMVar3;
-  uint uVar4;
-  int iVar5;
-  uint uVar6;
-  uint uVar7;
-  uint uVar8;
-  uint in_t5;
-  uint uVar9;
+  uint OwnedChannels;
+  uint neededChannels;
+  MusicChannelData *ChannelData;
+  int NumChannels;
+  uint mask;
+  MusDataAll *MusicData;
   
-  DAT_80032a14 = 0;
-  DAT_80032a10 = 0;
-  uVar4 = 1;
-  iVar5 = 8;
-  pMVar3 = FirstMUS + 1;
-  puVar2 = (uint *)&FirstMUS[1].field_0x34;
+  MusicData = FirstMUS;
+  mask = 1;
+  neededChannels = 0;
+  OwnedChannels = 0;
+  NumChannels = 8;
+  ChannelData = FirstMUS->ChannelData;
+  puVar2 = &FirstMUS->ChannelData[0].hasChannel;
   do {
-    iVar5 = iVar5 + -1;
-    if (((pMVar3->field0_0x0 & 1) != 0) && ((MusicDataHeader *)puVar2[-0xb] == param_1)) {
+    NumChannels = NumChannels + -1;
+    if (((ChannelData->hasSound & 1) != 0) && ((MusDataAll *)puVar2[-0xb] == (MusDataAll *)MusData))
+    {
       uVar1 = *puVar2;
-      DAT_80032a10 = DAT_80032a10 | uVar4;
-      pMVar3->field0_0x0 = 0;
-      DAT_80032a14 = DAT_80032a14 | uVar1;
+      OwnedChannels = OwnedChannels | mask;
+      ChannelData->hasSound = 0;
+      neededChannels = neededChannels | uVar1;
     }
-    uVar4 = uVar4 << 1;
+    mask = mask << 1;
     puVar2 = puVar2 + 0x58;
-    pMVar3 = (MusicDataHeader *)&pMVar3[1].field_0xa8;
-  } while (iVar5 != 0);
-  uVar4 = 6 - param_2;
-  uVar8 = 0xffffffff >> (0x20 - param_2 & 0x1f);
-  uVar1 = uVar8 << (uVar4 & 0x1f);
-  iVar5 = (int)FirstMUS + uVar4 * 0x160 + 0xb8;
-  uVar6 = 0xffffffff;
+    ChannelData = ChannelData + 1;
+  } while (NumChannels != 0);
+  if (OwnedChannels != 0) {
+    PauseNeededChannels(MusicData,OwnedChannels,neededChannels);
+  }
+  return;
+}
+
+
+
+void Pause_SpecificChannel(uint channel)
+
+{
+  MusDataAll *MusData;
+  MusicChannelData *_channel;
+  uint OwnedChannels;
+  uint neededChannels;
+  int iVar1;
+  uint channel_flag;
+  
+  MusData = FirstMUS;
+  channel_flag = 1 << (channel & 0x1f);
+  neededChannels = 0;
+  OwnedChannels = 0;
+  iVar1 = 2;
+  _channel = FirstMUS->ChannelData + channel;
+  do {
+    iVar1 = iVar1 + -1;
+    if ((_channel->hasSound & 1) != 0) {
+      OwnedChannels = OwnedChannels | channel_flag;
+      _channel->hasSound = 0;
+      neededChannels = neededChannels | _channel->hasChannel;
+    }
+    channel_flag = channel_flag << 1;
+    _channel = _channel + 1;
+  } while (iVar1 != 0);
+  if (OwnedChannels != 0) {
+    PauseNeededChannels(MusData,OwnedChannels,neededChannels);
+  }
+  return;
+}
+
+
+
+void PauseNeededChannels(MusDataAll *MusData,uint OwnedChannels,uint neededChannels)
+
+{
+  uint channelBits;
+  ulong gpuInterruptedEvent;
+  
+  DisableEvent(rootCounter2Event);
+  gpuInterruptedEvent = rootCounter2Event;
+  channelBits = ~neededChannels;
+  PausedMusicChannels = neededChannels | PausedMusicChannels;
+  (MusData->HeaderData).OwnedChannels = ~OwnedChannels & (MusData->HeaderData).OwnedChannels;
+  (MusData->HeaderData).ModifiedChannels = channelBits & (MusData->HeaderData).ModifiedChannels;
+  (MusData->HeaderData).LFOVoiceBits = channelBits & (MusData->HeaderData).LFOVoiceBits;
+  PitchLFO_onlyInclude = channelBits & PitchLFO_onlyInclude;
+  (MusData->HeaderData).NoiseVoiceBits = channelBits & (MusData->HeaderData).NoiseVoiceBits;
+  (MusData->HeaderData).ReverbVoiceBits = channelBits & (MusData->HeaderData).ReverbVoiceBits;
+  EnableEvent(gpuInterruptedEvent);
+  return;
+}
+
+
+
+void FUN_80012b6c(MusDataAll *MusData,uint param_2)
+
+{
+  uint uVar1;
+  ushort *puVar2;
+  uint *puVar3;
+  uint OwnedChannels;
+  MusicChannelData *channelData;
+  uint neededChannels;
+  int numChannels;
+  uint mask;
+  MusDataAll *firstMus;
+  ushort *hasSound;
+  
+  firstMus = FirstMUS;
+  numChannels = 8;
+  channelData = FirstMUS->ChannelData;
+  if ((param_2 & 0xffff) == 0) {
+    mask = 1;
+    neededChannels = 0;
+    OwnedChannels = 0;
+    numChannels = 8;
+    puVar3 = &FirstMUS->ChannelData[0].hasChannel;
+    do {
+      numChannels = numChannels + -1;
+      if (((channelData->hasSound & 1) != 0) && ((MusDataAll *)puVar3[-0xb] == MusData)) {
+        uVar1 = *puVar3;
+        OwnedChannels = OwnedChannels | mask;
+        channelData->hasSound = 0;
+        neededChannels = neededChannels | uVar1;
+      }
+      mask = mask << 1;
+      puVar3 = puVar3 + 0x58;
+      channelData = channelData + 1;
+    } while (numChannels != 0);
+    if (OwnedChannels != 0) {
+      PauseNeededChannels(firstMus,OwnedChannels,neededChannels);
+    }
+  }
+  else {
+    puVar2 = &FirstMUS->ChannelData[0].field1_0x2;
+    do {
+      hasSound = &channelData->hasSound;
+      channelData = channelData + 1;
+      if (((*hasSound & 1) != 0) && (*(MusDataAll **)(puVar2 + 3) == MusData)) {
+        puVar2[0x49] = (short)(param_2 << 8);
+        *puVar2 = 0x100;
+      }
+      numChannels = numChannels + -1;
+      puVar2 = puVar2 + 0xb0;
+    } while (numChannels != 0);
+  }
+  return;
+}
+
+
+
+void FUN_80012c58(MusDataAll *musData,int param_2)
+
+{
+  ushort *puVar1;
+  ushort *puVar2;
+  MusicChannelData *_channelData;
+  int numChannels;
+  
+  numChannels = 8;
+  _channelData = FirstMUS->ChannelData;
+  puVar2 = &FirstMUS->ChannelData[0].field1_0x2;
+  do {
+    puVar1 = &_channelData->hasSound;
+    _channelData = _channelData + 1;
+    if (((*puVar1 & 1) != 0) && (*(MusDataAll **)(puVar2 + 3) == musData)) {
+      puVar2[0x48] = (short)(param_2 << 8);
+      *puVar2 = 0x100;
+    }
+    numChannels = numChannels + -1;
+    puVar2 = puVar2 + 0xb0;
+  } while (numChannels != 0);
+  return;
+}
+
+
+
+uint get_MUS_channels(MusDataAll *musData)
+
+{
+  MusicChannelData *firstChannel;
+  uint mask;
+  int numChannels;
+  uint acc_Channels;
+  ushort *hasSound;
+  
+  numChannels = 8;
+  mask = 1;
+  firstChannel = FirstMUS->ChannelData;
+  acc_Channels = 0;
+  if (musData == (MusDataAll *)0xffffffff) {
+    do {
+      hasSound = &firstChannel->hasSound;
+      firstChannel = firstChannel + 1;
+      if ((*hasSound & 1) != 0) {
+        acc_Channels = acc_Channels | mask;
+      }
+      numChannels = numChannels + -1;
+      mask = mask << 1;
+    } while (numChannels != 0);
+  }
+  else {
+    do {
+      numChannels = numChannels + -1;
+      if (((firstChannel->hasSound & 1) != 0) && (firstChannel->field5_0x8 == musData)) {
+        acc_Channels = acc_Channels | mask;
+      }
+      firstChannel = firstChannel + 1;
+      mask = mask << 1;
+    } while (numChannels != 0);
+  }
+  return acc_Channels;
+}
+
+
+
+uint FUN_80012d40(MusDataAll *MusData,uint numChannels)
+
+{
+  uint isChannel;
+  uint *hasChannel;
+  MusicChannelData *ChannelData;
+  int channel;
+  uint i;
+  int NumChannels;
+  uint uVar1;
+  uint uVar2;
+  uint allChannelsMask;
+  uint in_t5;
+  uint uVar3;
+  
+  acc_activeChannels = 0;
+  acc_inactiveChannels = 0;
+  i = 1;
+  NumChannels = 8;
+  ChannelData = FirstMUS->ChannelData;
+  hasChannel = &FirstMUS->ChannelData[0].hasChannel;
+  do {
+    NumChannels = NumChannels + -1;
+    if (((ChannelData->hasSound & 1) != 0) && ((MusDataAll *)hasChannel[-0xb] == MusData)) {
+      isChannel = *hasChannel;
+      acc_inactiveChannels = acc_inactiveChannels | i;
+      ChannelData->hasSound = 0;
+      acc_activeChannels = acc_activeChannels | isChannel;
+    }
+    i = i << 1;
+    hasChannel = hasChannel + 0x58;
+    ChannelData = ChannelData + 1;
+  } while (NumChannels != 0);
+  i = 6 - numChannels;
+  allChannelsMask = 0xffffffff >> (0x20 - numChannels & 0x1f);
+  isChannel = allChannelsMask << (i & 0x1f);
+  channel = (int)FirstMUS + i * 0x160 + 0xb8;
+  uVar1 = 0xffffffff;
   while( true ) {
-    if ((~DAT_80032a10 & *(uint *)&FirstMUS->field_0x58 & uVar1) == 0) {
-      return uVar4;
+    if ((~acc_inactiveChannels & (FirstMUS->HeaderData).OwnedChannels & isChannel) == 0) {
+      return i;
     }
-    uVar1 = uVar1 >> (param_2 & 0x1f);
-    uVar7 = uVar6;
-    uVar9 = in_t5;
-    if ((uVar6 <= *(uint *)(iVar5 + 0x10)) ||
-       (uVar7 = *(uint *)(iVar5 + 0x10), uVar9 = uVar4, *(byte *)(iVar5 + 0xd) < 0x21)) {
-      uVar6 = uVar7;
-      in_t5 = uVar9;
+    isChannel = isChannel >> (numChannels & 0x1f);
+    uVar2 = uVar1;
+    uVar3 = in_t5;
+    if ((uVar1 <= *(uint *)(channel + 0x10)) ||
+       (uVar2 = *(uint *)(channel + 0x10), uVar3 = i, *(byte *)(channel + 0xd) < 0x21)) {
+      uVar1 = uVar2;
+      in_t5 = uVar3;
     }
-    if (uVar1 < uVar8) break;
-    iVar5 = iVar5 + param_2 * -0x160;
-    uVar4 = uVar4 - param_2;
+    if (isChannel < allChannelsMask) break;
+    channel = channel + numChannels * -0x160;
+    i = i - numChannels;
   }
   return in_t5;
 }
@@ -6004,34 +7715,35 @@ ushort FUN_80012e7c(int param_1)
 
 
 
-void FUN_80012f08(MusicDataHeader *param_1,uint param_2,short param_3)
+void FUN_80012f08(MusDataAll *MusData,uint param_2,short param_3)
 
 {
   int iVar1;
   ulong gpuInterruptedEvent;
   
-  *(short *)&param_1->field_0x9e = (short)(param_2 << 8);
+  (MusData->HeaderData).field109_0x9e = (short)(param_2 << 8);
   if (param_3 == 0) {
-    *(uint *)&param_1->field_0x94 = param_2 << 0x18;
-    *(undefined2 *)&param_1->field_0x9c = 0;
-    FUN_80017098(0x100,param_1);
+    (MusData->HeaderData).field106_0x94 = param_2 << 0x18;
+    (MusData->HeaderData).field108_0x9c = 0;
+    FUN_80017098(0x100,MusData);
   }
   else {
-    iVar1 = param_2 * 0x10000 - (*(int *)&param_1->field_0x94 >> 8);
+    iVar1 = param_2 * 0x10000 - ((MusData->HeaderData).field106_0x94 >> 8);
     if (iVar1 == 0) {
       return;
     }
-    *(short *)&param_1->field_0x9c = param_3;
-    *(int *)&param_1->field_0x98 = iVar1 / (int)param_3 << 8;
+    (MusData->HeaderData).field108_0x9c = param_3;
+    (MusData->HeaderData).field107_0x98 = iVar1 / (int)param_3 << 8;
   }
-  if (((*(ushort *)&param_1->field_0x10 & 0x100) != 0) && ((param_2 & 0xffff) != 0)) {
+  if (((*(ushort *)&(MusData->HeaderData).field5_0x10 & 0x100) != 0) && ((param_2 & 0xffff) != 0)) {
     DisableEvent(rootCounter2Event);
-    SetReverbParam(*(uint *)&param_1->field_0x44,(undefined *)(int)*(short *)&param_1->field_0x48,
-                   *(long *)&param_1->field_0x4c,*(long *)&param_1->field_0x50);
-    FUN_800170d8((int)param_1,0x71ff);
-    FUN_80013544((int)param_1);
+    SetReverbParam((MusData->HeaderData).ReverbMode,(MusData->HeaderData).volumeDepth,
+                   (MusData->HeaderData).reverbDelay,(MusData->HeaderData).reverbFeedback);
+    FUN_800170d8(MusData,0x71ff);
+    FUN_80013544((int)MusData);
     gpuInterruptedEvent = rootCounter2Event;
-    *(ushort *)&param_1->field_0x10 = *(ushort *)&param_1->field_0x10 & 0xfeff | 0x8000;
+    *(ushort *)&(MusData->HeaderData).field5_0x10 =
+         *(ushort *)&(MusData->HeaderData).field5_0x10 & 0xfeff | 0x8000;
     EnableEvent(gpuInterruptedEvent);
   }
   return;
@@ -6052,7 +7764,7 @@ void FUN_80013480(undefined4 *param_1)
     DAT_80032a08 = uVar1 | DAT_80032a08;
     FUN_80013fc0(param_1,(undefined4 *)param_1[1]);
     param_1[0xb] = uVar2;
-    FUN_800170d8((int)param_1,0x71ff);
+    FUN_800170d8((MusDataAll *)param_1,0x71ff);
     param_1[0x19] = 0;
     param_1[0x18] = 0;
     FUN_80013544((int)param_1);
@@ -6114,33 +7826,33 @@ uint FUN_800135fc(int param_1)
 MusicDataHeader * FUN_8001363c(void)
 
 {
-  MusicDataHeader *MusicData;
-  int *piVar1;
+  MusDataAll *MusicData;
+  uint *puVar1;
   uint uVar2;
   char cVar3;
   int iVar4;
-  MusicDataHeader *pMVar5;
+  MusicChannelData *pMVar5;
   
   MusicData = FindSpaceForSMDMUS(3000);
   FUN_80013788((int)MusicData);
-  pMVar5 = MusicData + 1;
+  pMVar5 = MusicData->ChannelData;
   uVar2 = 0x10;
   iVar4 = 8;
   cVar3 = '\0';
-  piVar1 = (int *)&MusicData[1].field_0x34;
+  puVar1 = &MusicData->ChannelData[0].hasChannel;
   do {
-    pMVar5->field0_0x0 = 0;
-    *(char *)(piVar1 + -10) = cVar3;
+    pMVar5->hasSound = 0;
+    *(char *)(puVar1 + -10) = cVar3;
     cVar3 = cVar3 + '\x01';
-    *(char *)((int)piVar1 + -7) = (char)uVar2;
-    *piVar1 = 1 << (uVar2 & 0x1f);
-    piVar1 = piVar1 + 0x58;
-    pMVar5 = (MusicDataHeader *)&pMVar5[1].field_0xa8;
+    *(char *)((int)puVar1 + -7) = (char)uVar2;
+    *puVar1 = 1 << (uVar2 & 0x1f);
+    puVar1 = puVar1 + 0x58;
+    pMVar5 = pMVar5 + 1;
     iVar4 = iVar4 + -1;
     uVar2 = uVar2 + 1;
   } while (iVar4 != 0);
-  FUN_80014024(MusicData);
-  return MusicData;
+  FUN_80014024(&MusicData->HeaderData);
+  return &MusicData->HeaderData;
 }
 
 
@@ -6148,25 +7860,27 @@ MusicDataHeader * FUN_8001363c(void)
 void FUN_800136c0(MusicDataHeader *MusicData)
 
 {
-  byte bVar1;
-  MusicDataHeader *NextMusicData;
+  MusDataAll *NextMusicData;
+  uint feedback;
   
   NextMusicData = MusicData->NextMusDat;
-  *(ushort *)&MusicData->field_0x10 = *(ushort *)&MusicData->field_0x10 | 1;
-  *(undefined2 *)&MusicData->field_0x12 = *(undefined2 *)&NextMusicData->field_0x10;
-  MusicData->field_0x14 = NextMusicData->field_0x12;
-  MusicData->field_0x15 = NextMusicData->field_0x13;
-  MusicData->field_0x16 = NextMusicData->field_0x14;
-  MusicData->field_0x17 = NextMusicData->field_0x15;
-  *(undefined2 *)&MusicData->field_0x18 = *(undefined2 *)&NextMusicData->field_0x16;
-  *(undefined2 *)&MusicData->field_0x1a = *(undefined2 *)&NextMusicData->field_0x18;
-  *(int *)&MusicData->field_0x44 = (int)(char)NextMusicData->field_0x1a;
-  *(ushort *)&MusicData->field_0x48 = (ushort)(byte)NextMusicData->field_0x1b << 8;
-  *(uint *)&MusicData->field_0x4c = (uint)(byte)NextMusicData->field_0x1c;
-  bVar1 = NextMusicData->field_0x1d;
-  *(uint *)&MusicData->field_0x50 = (uint)bVar1;
-  SetReverbParam(*(uint *)&MusicData->field_0x44,(undefined *)(int)*(short *)&MusicData->field_0x48,
-                 *(long *)&MusicData->field_0x4c,(uint)bVar1);
+  *(ushort *)&MusicData->field5_0x10 = *(ushort *)&MusicData->field5_0x10 | 1;
+  *(undefined2 *)((int)&MusicData->field5_0x10 + 2) =
+       *(undefined2 *)&(NextMusicData->HeaderData).field5_0x10;
+  MusicData->field_0x14 = *(undefined *)((int)&(NextMusicData->HeaderData).field5_0x10 + 2);
+  MusicData->field_0x15 = *(undefined *)((int)&(NextMusicData->HeaderData).field5_0x10 + 3);
+  *(undefined *)&MusicData->NumChannels = (NextMusicData->HeaderData).field_0x14;
+  *(undefined *)((int)&MusicData->NumChannels + 1) = (NextMusicData->HeaderData).field_0x15;
+  *(undefined2 *)((int)&MusicData->NumChannels + 2) =
+       *(undefined2 *)&(NextMusicData->HeaderData).NumChannels;
+  *(undefined2 *)&MusicData->field_0x1a =
+       *(undefined2 *)((int)&(NextMusicData->HeaderData).NumChannels + 2);
+  MusicData->ReverbMode = (int)(char)(NextMusicData->HeaderData).field_0x1a;
+  MusicData->volumeDepth = (ushort)(byte)(NextMusicData->HeaderData).field_0x1b << 8;
+  MusicData->reverbDelay = (uint)(byte)(NextMusicData->HeaderData).field_0x1c;
+  feedback = (uint)(byte)(NextMusicData->HeaderData).field_0x1d;
+  MusicData->reverbFeedback = feedback;
+  SetReverbParam(MusicData->ReverbMode,MusicData->volumeDepth,MusicData->reverbDelay,feedback);
   FUN_800137d8((int)MusicData);
   return;
 }
@@ -6236,9 +7950,9 @@ void FUN_800138ac(MusicDataHeader *MusicData)
 {
   ushort uVar1;
   undefined2 uVar2;
-  undefined *puVar3;
+  uint *puVar3;
   int iVar4;
-  MusicDataHeader *pMVar5;
+  MusDataAll *pMVar5;
   uint uVar6;
   int *piVar7;
   MusicDataHeader *pMVar8;
@@ -6249,7 +7963,7 @@ void FUN_800138ac(MusicDataHeader *MusicData)
   uint uVar13;
   char cVar14;
   
-  uVar13 = (uint)(byte)MusicData->field_0x16;
+  uVar13 = (uint)*(byte *)&MusicData->NumChannels;
   pMVar8 = MusicData + 1;
   if (uVar13 == 0) {
     return;
@@ -6259,11 +7973,12 @@ void FUN_800138ac(MusicDataHeader *MusicData)
   uVar6 = 0;
   uVar12 = 1;
   pMVar5 = MusicData->NextMusDat;
-  puVar11 = (ushort *)&pMVar5->field_0x22;
+  puVar11 = (ushort *)&(pMVar5->HeaderData).field_0x22;
   if (DAT_80032a44 != 0) {
     iVar9 = DAT_80032a44;
     do {
-      if ((uint)*(ushort *)(iVar9 + 0x20) == (int)*(short *)&MusicData->field_0x18) break;
+      if ((uint)*(ushort *)(iVar9 + 0x20) == (int)*(short *)((int)&MusicData->NumChannels + 2))
+      break;
       iVar9 = *(int *)(iVar9 + 0x2c);
     } while (iVar9 != 0);
     piVar7 = (int *)&MusicData[1].field_0x30;
@@ -6285,12 +8000,12 @@ LAB_8001394c:
         uVar2 = 0x421;
       }
       pMVar8->field0_0x0 = uVar2;
-      if ((*(ushort *)&MusicData->field_0x10 & 0x2000) != 0) {
+      if ((*(ushort *)&MusicData->field5_0x10 & 0x2000) != 0) {
         pMVar8->field0_0x0 = pMVar8->field0_0x0 | 4;
       }
       *(undefined2 *)((int)piVar7 + -0x2e) = 0x300;
       *(undefined2 *)((int)piVar7 + -0x2a) = 0;
-      uVar1 = *(ushort *)&pMVar5->field_0x10;
+      uVar1 = *(ushort *)&(pMVar5->HeaderData).field5_0x10;
       *(undefined *)((int)piVar7 + -0x23) = 0x10;
       *(char *)(piVar7 + -9) = cVar14;
       piVar7[-10] = (int)(uint)uVar1;
@@ -6316,7 +8031,7 @@ LAB_8001394c:
       *(undefined2 *)(piVar7 + 0x17) = 0;
       *(undefined2 *)(piVar7 + 4) = 0;
       *(undefined2 *)((int)piVar7 + 0x12) = 0;
-      iVar4 = (int)&pMVar5->field0_0x0 + (uint)uVar1;
+      iVar4 = (int)&(pMVar5->HeaderData).field0_0x0 + (uint)uVar1;
       piVar7[-7] = iVar4;
       piVar7[-6] = iVar4;
       if ((uVar10 & 0xff) < 0x19) {
@@ -6328,11 +8043,11 @@ LAB_8001394c:
         piVar7[2] = 0;
       }
       iVar4 = 3;
-      puVar3 = &pMVar8->field_0x60;
+      puVar3 = &pMVar8->ModifiedChannels;
       do {
-        *(undefined2 *)(puVar3 + 0xfe) = 0;
+        *(undefined2 *)((int)puVar3 + 0xfe) = 0;
         iVar4 = iVar4 + -1;
-        puVar3 = puVar3 + -0x20;
+        puVar3 = puVar3 + -8;
       } while (-1 < iVar4);
       *piVar7 = iVar9;
       if (iVar9 != 0) {
@@ -6350,7 +8065,7 @@ LAB_8001394c:
     }
     uVar13 = uVar13 - 1;
   } while (uVar13 != 0);
-  *(uint *)&MusicData->field_0x58 = uVar6;
+  MusicData->OwnedChannels = uVar6;
   return;
 }
 
@@ -6360,149 +8075,152 @@ void Play_Sound_Worker(uint param_1,uint sfx_ID,short param_3,undefined2 param_4
 
 {
   ushort uVar1;
-  undefined2 *puVar2;
-  uint uVar3;
-  ushort *puVar4;
-  int iVar5;
-  uint *puVar6;
-  ushort *puVar7;
-  MusicDataHeader *pMVar8;
+  undefined4 uVar2;
+  mus_voiceChannelFunc *pmVar3;
+  uint uVar4;
+  undefined *puVar5;
+  int iVar6;
+  uint *puVar7;
+  MusicChannelData *ChannelData;
+  int iVar8;
   int iVar9;
-  uint uVar10;
-  int iVar11;
-  ushort *puVar12;
+  int iVar10;
+  ushort *puVar11;
+  uint uVar12;
   uint uVar13;
   uint uVar14;
-  uint uVar15;
   undefined2 local_50;
   uint local_40;
-  MusicDataHeader *MusToOpen;
+  MusDataAll *MusData;
   
-  MusToOpen = FirstMUS;
+  MusData = FirstMUS;
   local_40 = 0;
-  uVar13 = 0;
+  uVar12 = 0;
   uVar1 = *(ushort *)(DAT_80032a00 + 10);
-  iVar11 = DAT_80032a00;
+  iVar10 = DAT_80032a00;
   while ((uint)uVar1 != (int)sfx_ID >> 0x10) {
-    iVar11 = *(int *)(iVar11 + 0x10);
-    if (iVar11 == 0) {
+    iVar10 = *(int *)(iVar10 + 0x10);
+    if (iVar10 == 0) {
       return;
     }
-    uVar1 = *(ushort *)(iVar11 + 10);
+    uVar1 = *(ushort *)(iVar10 + 10);
   }
-  uVar10 = DAT_80032a44;
+  iVar9 = DAT_80032a44;
   if (DAT_80032a44 != 0) {
     do {
-      if ((uint)*(ushort *)(uVar10 + 0x20) == (int)*(short *)&FirstMUS->field_0x18) break;
-      uVar10 = *(uint *)(uVar10 + 0x2c);
-    } while (uVar10 != 0);
-    if (uVar10 == 0) {
-      uVar10 = DAT_80032a44;
+      if ((uint)*(ushort *)(iVar9 + 0x20) ==
+          (int)*(short *)((int)&(FirstMUS->HeaderData).NumChannels + 2)) break;
+      iVar9 = *(int *)(iVar9 + 0x2c);
+    } while (iVar9 != 0);
+    if (iVar9 == 0) {
+      iVar9 = DAT_80032a44;
     }
   }
-  uVar15 = (int)param_3 *
-           (uint)*(byte *)(iVar11 + (uint)*(ushort *)(iVar11 + 0xc) + (sfx_ID & 0xffff));
-  local_50 = (undefined2)(uVar15 >> 7);
-  if ((uVar15 >> 0x16 & 1) != 0) {
+  uVar14 = (int)param_3 *
+           (uint)*(byte *)(iVar10 + (uint)*(ushort *)(iVar10 + 0xc) + (sfx_ID & 0xffff));
+  local_50 = (undefined2)(uVar14 >> 7);
+  if ((uVar14 >> 0x16 & 1) != 0) {
     local_50 = 0x7fff;
   }
-  puVar12 = (ushort *)(iVar11 + (sfx_ID & 0xffff) * 4 + 0x14);
-  uVar14 = 1 << (param_1 & 0x1f);
-  puVar7 = (ushort *)((int)FirstMUS + (param_1 & 0xff) * 0x160 + 0xb8);
-  iVar9 = (int)DAT_800329f0;
-  puVar6 = (uint *)(puVar7 + 0x1a);
+  puVar11 = (ushort *)(iVar10 + (sfx_ID & 0xffff) * 4 + 0x14);
+  uVar13 = 1 << (param_1 & 0x1f);
+  ChannelData = FirstMUS->ChannelData + (param_1 & 0xff);
+  iVar8 = (int)always2;
+  puVar7 = &ChannelData->hasChannel;
   DisableEvent(rootCounter2Event);
-  uVar15 = 0;
+  uVar14 = 0;
   do {
-    uVar3 = DAT_80032a2c;
-    puVar6[-0xb] = sfx_ID;
-    puVar6[-9] = uVar3;
-    *(char *)((int)puVar6 + -0x27) = (char)(param_1 >> 8);
-    iVar5 = 3;
-    if (*puVar12 == 0) {
-      if ((*puVar7 & 1) != 0) {
-        uVar13 = uVar13 | *puVar6;
+    uVar2 = DAT_80032a2c;
+    puVar7[-0xb] = sfx_ID;
+    puVar7[-9] = uVar2;
+    *(char *)((int)puVar7 + -0x27) = (char)(param_1 >> 8);
+    iVar6 = 3;
+    if (*puVar11 == 0) {
+      if ((ChannelData->hasSound & 1) != 0) {
+        uVar12 = uVar12 | *puVar7;
       }
-      *puVar7 = 0;
+      ChannelData->hasSound = 0;
     }
     else {
-      local_40 = local_40 | uVar14;
-      uVar3 = *puVar6;
-      puVar4 = puVar7 + 0x30;
-      *puVar7 = 0x409;
-      *(undefined2 *)((int)puVar6 + -0x32) = 0x100;
-      *(undefined2 *)((int)puVar6 + -0x2e) = 0;
-      uVar1 = *puVar12;
-      *(undefined2 *)((int)puVar6 + 0x4a) = 0x3c;
-      *(undefined2 *)((int)puVar6 + 0x46) = 0xf;
-      puVar6[-6] = 0;
-      puVar6[-4] = 0;
-      *(undefined2 *)(puVar6 + -3) = 0;
-      *(undefined *)((int)puVar6 + -10) = 0;
-      *(undefined2 *)(puVar6 + 0x10) = 0;
-      *(undefined *)((int)puVar6 + 0x42) = 0;
-      *(undefined2 *)((int)puVar6 + 0x52) = 0;
-      *(undefined *)(puVar6 + 0x12) = 0;
-      *(undefined2 *)(puVar6 + 0x1e) = 0xffff;
-      puVar6[0x19] = 0x7f000000;
-      uVar15 = uVar15 | uVar3;
-      *(undefined2 *)(puVar6 + 0x18) = local_50;
-      *(undefined2 *)(puVar6 + 0x17) = 0;
-      *(undefined2 *)(puVar6 + 0x15) = 0;
-      *(undefined2 *)((int)puVar6 + 0x56) = 0;
-      *(undefined2 *)(puVar6 + 0x16) = 0;
-      *(undefined2 *)(puVar6 + 3) = 0;
-      *(undefined2 *)((int)puVar6 + 0xe) = 0;
-      puVar6[-8] = iVar11 + (uint)uVar1;
-      puVar6[-7] = iVar11 + (uint)uVar1;
-      *(undefined2 *)((int)puVar6 + 0x5e) = param_4;
+      local_40 = local_40 | uVar13;
+      uVar4 = *puVar7;
+      puVar5 = &ChannelData->field_0x60;
+      ChannelData->hasSound = 0x409;
+      *(ushort *)((int)puVar7 + -0x32) = 0x100;
+      *(undefined2 *)((int)puVar7 + -0x2e) = 0;
+      uVar1 = *puVar11;
+      *(undefined2 *)((int)puVar7 + 0x4a) = 0x3c;
+      *(undefined2 *)((int)puVar7 + 0x46) = 0xf;
+      puVar7[-6] = 0;
+      puVar7[-4] = 0;
+      *(undefined2 *)(puVar7 + -3) = 0;
+      *(undefined *)((int)puVar7 + -10) = 0;
+      *(undefined2 *)(puVar7 + 0x10) = 0;
+      *(undefined *)((int)puVar7 + 0x42) = 0;
+      *(undefined2 *)((int)puVar7 + 0x52) = 0;
+      *(undefined *)(puVar7 + 0x12) = 0;
+      *(undefined2 *)(puVar7 + 0x1e) = 0xffff;
+      puVar7[0x19] = 0x7f000000;
+      uVar14 = uVar14 | uVar4;
+      *(undefined2 *)(puVar7 + 0x18) = local_50;
+      *(undefined2 *)(puVar7 + 0x17) = 0;
+      *(undefined2 *)(puVar7 + 0x15) = 0;
+      *(undefined2 *)((int)puVar7 + 0x56) = 0;
+      *(undefined2 *)(puVar7 + 0x16) = 0;
+      *(undefined2 *)(puVar7 + 3) = 0;
+      *(undefined2 *)((int)puVar7 + 0xe) = 0;
+      puVar7[-8] = iVar10 + (uint)uVar1;
+      puVar7[-7] = iVar10 + (uint)uVar1;
+      *(undefined2 *)((int)puVar7 + 0x5e) = param_4;
       do {
-        puVar4[0x7f] = 0;
-        iVar5 = iVar5 + -1;
-        puVar4 = puVar4 + -0x10;
-      } while (-1 < iVar5);
-      puVar6[-1] = uVar10;
-      if (uVar10 != 0) {
-        Set_Instrument((int)DAT_80032a1c,puVar7);
+        *(undefined2 *)(puVar5 + 0xfe) = 0;
+        iVar6 = iVar6 + -1;
+        puVar5 = puVar5 + -0x20;
+      } while (-1 < iVar6);
+      puVar7[-1] = iVar9;
+      if (iVar9 != 0) {
+        Set_Instrument((int)DAT_80032a1c,&ChannelData->hasSound);
       }
     }
-    puVar12 = puVar12 + 1;
-    uVar14 = uVar14 << 1;
-    puVar6 = puVar6 + 0x58;
-    iVar9 = iVar9 + -1;
-    puVar7 = puVar7 + 0xb0;
-  } while (iVar9 != 0);
-  uVar13 = uVar13 | uVar15 | DAT_80032a14;
-  uVar10 = ~uVar13;
-  *(uint *)&MusToOpen->field_0x58 = local_40 | ~DAT_80032a10 & *(uint *)&MusToOpen->field_0x58;
-  *(uint *)&MusToOpen->field_0x64 = uVar10 & *(uint *)&MusToOpen->field_0x64;
-  *(uint *)&MusToOpen->field_0x60 = uVar10 & *(uint *)&MusToOpen->field_0x60;
-  DAT_80032a20 = uVar13 | DAT_80032a20;
-  PitchLFO_onlyInclude = uVar15 | uVar10 & PitchLFO_onlyInclude;
-  MusToOpen->LFOVoiceBits = uVar10 & MusToOpen->LFOVoiceBits;
-  MusToOpen->LFOVoiceBits2 = uVar10 & MusToOpen->LFOVoiceBits2;
-  DAT_80032a10 = 0;
-  DAT_80032a14 = 0;
-  MusToOpen->ReverbVoiceBits = uVar10 & MusToOpen->ReverbVoiceBits;
+    puVar11 = puVar11 + 1;
+    uVar13 = uVar13 << 1;
+    puVar7 = puVar7 + 0x58;
+    iVar8 = iVar8 + -1;
+    ChannelData = ChannelData + 1;
+  } while (iVar8 != 0);
+  uVar12 = uVar12 | uVar14 | acc_activeChannels;
+  uVar13 = ~uVar12;
+  (MusData->HeaderData).OwnedChannels =
+       local_40 | ~acc_inactiveChannels & (MusData->HeaderData).OwnedChannels;
+  *(uint *)&(MusData->HeaderData).field_0x64 = uVar13 & *(uint *)&(MusData->HeaderData).field_0x64;
+  (MusData->HeaderData).ModifiedChannels = uVar13 & (MusData->HeaderData).ModifiedChannels;
+  PausedMusicChannels = uVar12 | PausedMusicChannels;
+  PitchLFO_onlyInclude = uVar14 | uVar13 & PitchLFO_onlyInclude;
+  (MusData->HeaderData).LFOVoiceBits = uVar13 & (MusData->HeaderData).LFOVoiceBits;
+  (MusData->HeaderData).NoiseVoiceBits = uVar13 & (MusData->HeaderData).NoiseVoiceBits;
+  acc_inactiveChannels = 0;
+  acc_activeChannels = 0;
+  (MusData->HeaderData).ReverbVoiceBits = uVar13 & (MusData->HeaderData).ReverbVoiceBits;
   ChooseVoice = ChooseVoice | (CalcLFOVoices1|CalcLFOVoices2|CalcReverbVoices);
-  *(ushort *)&MusToOpen->field_0x10 = *(ushort *)&MusToOpen->field_0x10 | 0x8000;
-  MusToOpen = LastOpenedMus;
-  if (uVar15 != 0) {
-    for (; MusToOpen != (MusicDataHeader *)0x0; MusToOpen = *(MusicDataHeader **)MusToOpen) {
-      if (((*(ushort *)&MusToOpen->field_0x10 & 1) != 0) &&
-         ((int)((uint)*(ushort *)&MusToOpen->field_0x10 << 0x10) < 0)) {
-        pMVar8 = MusToOpen + 1;
-        uVar13 = (uint)(byte)MusToOpen->field_0x16;
-        puVar7 = (ushort *)&MusToOpen[1].field2_0x4;
+  *(ushort *)&(MusData->HeaderData).field5_0x10 =
+       *(ushort *)&(MusData->HeaderData).field5_0x10 | 0x8000;
+  MusData = LastOpenedMus;
+  if (uVar14 != 0) {
+    for (; MusData != (MusDataAll *)0x0; MusData = *(MusDataAll **)&MusData->HeaderData) {
+      uVar1 = *(ushort *)&(MusData->HeaderData).field5_0x10;
+      if (((uVar1 & 1) != 0) && ((int)((uint)uVar1 << 0x10) < 0)) {
+        ChannelData = MusData->ChannelData;
+        uVar12 = (uint)*(byte *)&(MusData->HeaderData).NumChannels;
+        pmVar3 = &MusData->ChannelData[0].channelFunc;
         do {
-          puVar2 = &pMVar8->field0_0x0;
-          pMVar8 = (MusicDataHeader *)&pMVar8[1].field_0xa8;
-          if (((*puVar2 & 1) != 0) && ((uVar15 & *(uint *)(puVar7 + 0x18)) != 0)) {
-            *puVar7 = *puVar7 | 0x71ff;
+          puVar11 = &ChannelData->hasSound;
+          ChannelData = ChannelData + 1;
+          if (((*puVar11 & 1) != 0) && ((uVar14 & *(uint *)(pmVar3 + 0x18)) != 0)) {
+            *pmVar3 = *pmVar3 | 0x71ff;
           }
-          uVar13 = uVar13 - 1;
-          puVar7 = puVar7 + 0xb0;
-        } while (uVar13 != 0);
+          uVar12 = uVar12 - 1;
+          pmVar3 = pmVar3 + 0xb0;
+        } while (uVar12 != 0);
       }
     }
   }
@@ -6551,13 +8269,13 @@ void FUN_80013fc0(undefined4 *param_1,undefined4 *param_2)
 void FUN_80014024(MusicDataHeader *MusicData)
 
 {
-  MusicDataHeader *Mus;
+  MusDataAll *Mus;
   ulong gpuInterruptedEvent;
   
   DisableEvent(rootCounter2Event);
   gpuInterruptedEvent = rootCounter2Event;
-  Mus = MusicData;
-  *(MusicDataHeader **)MusicData = LastOpenedMus;
+  Mus = (MusDataAll *)MusicData;
+  *(MusDataAll **)MusicData = LastOpenedMus;
   LastOpenedMus = Mus;
   EnableEvent(gpuInterruptedEvent);
   return;
@@ -6569,35 +8287,35 @@ undefined4 FUN_80014078(MusicDataHeader *param_1)
 
 {
   undefined2 uVar1;
-  MusicDataHeader *pMVar2;
-  MusicDataHeader *pMVar3;
+  MusDataAll *pMVar2;
+  MusDataAll *pMVar3;
   uint uVar4;
-  MusicDataHeader *pMVar5;
+  MusDataAll *pMVar5;
   
   pMVar3 = LastOpenedMus;
-  pMVar5 = (MusicDataHeader *)0x0;
-  if (LastOpenedMus != (MusicDataHeader *)0x0) {
+  pMVar5 = (MusDataAll *)0x0;
+  if (LastOpenedMus != (MusDataAll *)0x0) {
     do {
       pMVar2 = pMVar3;
       pMVar3 = pMVar2;
-      if (pMVar2 == param_1) break;
-      pMVar3 = *(MusicDataHeader **)pMVar2;
+      if (pMVar2 == (MusDataAll *)param_1) break;
+      pMVar3 = *(MusDataAll **)&pMVar2->HeaderData;
       pMVar5 = pMVar2;
-    } while (pMVar3 != (MusicDataHeader *)0x0);
-    if (pMVar3 != (MusicDataHeader *)0x0) {
-      if ((((int)(short)*(ushort *)&param_1->field_0x10 & 0x8000U) != 0) &&
+    } while (pMVar3 != (MusDataAll *)0x0);
+    if (pMVar3 != (MusDataAll *)0x0) {
+      if ((((int)(short)*(ushort *)&param_1->field5_0x10 & 0x8000U) != 0) &&
          (param_1 != (MusicDataHeader *)0x0)) {
-        *(ushort *)&param_1->field_0x10 = *(ushort *)&param_1->field_0x10 & 0x7fff;
+        *(ushort *)&param_1->field5_0x10 = *(ushort *)&param_1->field5_0x10 & 0x7fff;
         uVar4 = FUN_800135fc((int)param_1);
         DAT_80032a08 = uVar4 | DAT_80032a08;
       }
-      if (pMVar5 == (MusicDataHeader *)0x0) {
-        LastOpenedMus = *(MusicDataHeader **)param_1;
+      if (pMVar5 == (MusDataAll *)0x0) {
+        LastOpenedMus = *(MusDataAll **)param_1;
       }
       else {
         uVar1 = param_1->field1_0x2;
-        pMVar5->field0_0x0 = param_1->field0_0x0;
-        pMVar5->field1_0x2 = uVar1;
+        (pMVar5->HeaderData).field0_0x0 = param_1->field0_0x0;
+        (pMVar5->HeaderData).field1_0x2 = uVar1;
       }
       return 0;
     }
@@ -6616,50 +8334,51 @@ void SetGlobalMusicVariables(MusicDataHeader *GlobalMusicData,uint MaxMusicDataS
   GlobalMusData2 = GlobalMusicData;
   GlobalMusData = GlobalMusicData;
   GlobalMusicData->field1_0x2 = 0;
-  GlobalMusicData->field2_0x4 = 0;
-  GlobalMusicData->NextMusDat = (MusicDataHeader *)&GlobalMusicData->field_0x10;
+  GlobalMusicData->field2_0x4 = (MusDataAll *)0x0;
+  GlobalMusicData->NextMusDat = (MusDataAll *)&GlobalMusicData->field5_0x10;
   GlobalMusicData->DedicatedSpace = 0;
   return;
 }
 
 
 
-MusicDataHeader * FindSpaceForSMDMUS(uint SMDSize)
+MusDataAll * FindSpaceForSMDMUS(uint SMDSize)
 
 {
   int CurMusDataSize;
-  MusicDataHeader *MusDataPtr;
+  MusDataAll *MusData;
   int MusDataCurSize;
   uint MusDataSizeCheck;
   uint SMDSizeRounded;
-  MusicDataHeader *MusData;
+  MusicDataHeader *HeaderData;
   
   SMDSizeRounded = (SMDSize + 0xf & 0xfffffff0) + 0x10;
   MusDataCurSize = GlobalMusData->DedicatedSpace;
-  MusData = GlobalMusData;
+  HeaderData = GlobalMusData;
   while (MusDataCurSize != 0) {
-    MusDataSizeCheck = MusData->DedicatedSpace;
-    if (SMDSizeRounded <= MusDataSizeCheck - (int)MusData->NextMusDat) goto SpaceFound;
-    MusData = (MusicDataHeader *)MusDataSizeCheck;
+    MusDataSizeCheck = HeaderData->DedicatedSpace;
+    if (SMDSizeRounded <= MusDataSizeCheck - (int)HeaderData->NextMusDat) goto SpaceFound;
+    HeaderData = (MusicDataHeader *)MusDataSizeCheck;
     MusDataCurSize = *(int *)(MusDataSizeCheck + 0xc);
   }
-  if ((uint)(MaxEndMusDataArray - (int)MusData->NextMusDat) < SMDSizeRounded) {
-    MusDataPtr = (MusicDataHeader *)0x0;
+  if ((uint)(MaxEndMusDataArray - (int)HeaderData->NextMusDat) < SMDSizeRounded) {
+    MusData = (MusDataAll *)0x0;
   }
   else {
 SpaceFound:
-    CurMusDataSize = (uint)((int)&MusData->NextMusDat->DedicatedSpace + 3) & 0xfffffff0;
-    MusDataPtr = (MusicDataHeader *)(CurMusDataSize + 0x10);
-    *(uint *)(CurMusDataSize + 8) = (int)&MusDataPtr->field0_0x0 + SMDSize;
+    CurMusDataSize =
+         (uint)((int)&(HeaderData->NextMusDat->HeaderData).DedicatedSpace + 3) & 0xfffffff0;
+    MusData = (MusDataAll *)(CurMusDataSize + 0x10);
+    *(uint *)(CurMusDataSize + 8) = (int)&(MusData->HeaderData).field0_0x0 + SMDSize;
     *(undefined4 *)(CurMusDataSize + 0xc) = 0;
     *(undefined4 *)(CurMusDataSize + 4) = 0;
     *(undefined2 *)CurMusDataSize = 2;
     *(undefined2 *)(CurMusDataSize + 2) = 0;
-    *(int *)(CurMusDataSize + 0xc) = MusData->DedicatedSpace;
-    MusData->DedicatedSpace = CurMusDataSize;
-    FUN_800144d0(MusDataPtr,SMDSize);
+    *(int *)(CurMusDataSize + 0xc) = HeaderData->DedicatedSpace;
+    HeaderData->DedicatedSpace = CurMusDataSize;
+    FUN_800144d0(MusData,SMDSize);
   }
-  return MusDataPtr;
+  return MusData;
 }
 
 
@@ -6739,35 +8458,35 @@ void FUN_8001442c(undefined4 *param_1,undefined4 *param_2,uint param_3)
 
 
 
-void FUN_800144d0(MusicDataHeader *MusPtr,uint SMDSize)
+void FUN_800144d0(MusDataAll *MusPtr,uint SMDSize)
 
 {
-  int iVar1;
-  uint uVar2;
-  undefined4 *puVar3;
+  int SizeMult10;
+  uint uVar1;
+  MusDataAll **ppMVar2;
   
-  iVar1 = (int)SMDSize >> 4;
-  if (iVar1 != 0) {
-    puVar3 = &MusPtr->field2_0x4;
+  SizeMult10 = (int)SMDSize >> 4;
+  if (SizeMult10 != 0) {
+    ppMVar2 = &(MusPtr->HeaderData).field2_0x4;
     do {
-      puVar3[2] = 0;
-      puVar3[1] = 0;
-      *puVar3 = 0;
-      puVar3 = puVar3 + 4;
-      MusPtr->field0_0x0 = 0;
-      MusPtr->field1_0x2 = 0;
-      iVar1 = iVar1 + -1;
-      MusPtr = (MusicDataHeader *)&MusPtr->field_0x10;
-    } while (iVar1 != 0);
+      ppMVar2[2] = (MusDataAll *)0x0;
+      ppMVar2[1] = (MusDataAll *)0x0;
+      *ppMVar2 = (MusDataAll *)0x0;
+      ppMVar2 = ppMVar2 + 4;
+      (MusPtr->HeaderData).field0_0x0 = 0;
+      (MusPtr->HeaderData).field1_0x2 = 0;
+      SizeMult10 = SizeMult10 + -1;
+      MusPtr = (MusDataAll *)&(MusPtr->HeaderData).field5_0x10;
+    } while (SizeMult10 != 0);
   }
-  for (uVar2 = (int)SMDSize >> 2 & 3; uVar2 != 0; uVar2 = uVar2 - 1) {
-    MusPtr->field0_0x0 = 0;
-    MusPtr->field1_0x2 = 0;
-    MusPtr = (MusicDataHeader *)&MusPtr->field2_0x4;
+  for (uVar1 = (int)SMDSize >> 2 & 3; uVar1 != 0; uVar1 = uVar1 - 1) {
+    (MusPtr->HeaderData).field0_0x0 = 0;
+    (MusPtr->HeaderData).field1_0x2 = 0;
+    MusPtr = (MusDataAll *)&(MusPtr->HeaderData).field2_0x4;
   }
-  for (uVar2 = SMDSize & 3; uVar2 != 0; uVar2 = uVar2 - 1) {
-    *(undefined *)&MusPtr->field0_0x0 = 0;
-    MusPtr = (MusicDataHeader *)((int)&MusPtr->field0_0x0 + 1);
+  for (uVar1 = SMDSize & 3; uVar1 != 0; uVar1 = uVar1 - 1) {
+    *(undefined *)&(MusPtr->HeaderData).field0_0x0 = 0;
+    MusPtr = (MusDataAll *)((int)&(MusPtr->HeaderData).field0_0x0 + 1);
   }
   return;
 }
@@ -6788,11 +8507,13 @@ void FUN_80014544(void)
 // Possible SCNOFF.OBJ/SsSetNoiseOff
 // Possible SSQUIT.OBJ/SsQuit
 
-void Call_SpuMalloc(uint Size)
+undefined4 * Call_SpuMalloc(uint Size)
 
 {
-  SpuMalloc(Size);
-  return;
+  long puVar1;
+  
+  puVar1 = SpuMalloc(Size);
+  return (undefined4 *)puVar1;
 }
 
 
@@ -6809,82 +8530,173 @@ undefined4 Call_SpuFree(uint param_1)
 void Calc_Mus_VoiceCh_Settings(void)
 
 {
-  uint uVar1;
-  mus_voiceChannelFunc *pmVar2;
-  mus_voiceChannelFunc uVar3;
-  MusicDataHeader *MusToPush;
-  MusicDataHeader *pMVar3;
-  uint uVar4;
+  ushort uVar1;
+  uint uVar2;
+  mus_voiceChannelFunc *_channelFunc_ptr;
+  mus_voiceChannelFunc _channelFunc;
+  MusDataAll *MusToPush;
+  MusicChannelData *_channelData;
+  uint ChannelCounter;
   uint local_38;
   
   MusToPush = LastOpenedMus;
-  if (LastOpenedMus != (MusicDataHeader *)0x0) {
+  if (LastOpenedMus != (MusDataAll *)0x0) {
     do {
-      uVar1 = (uint)(short)*(ushort *)&MusToPush->field_0x10;
-      if (((uVar1 & 0xc000) != 0) && ((uVar1 & 0x20) == 0)) {
-        *(ushort *)&MusToPush->field_0x10 = *(ushort *)&MusToPush->field_0x10 & 0xbfff;
-        uVar4 = (uint)(byte)MusToPush->field_0x16;
-        pMVar3 = MusToPush + 1;
-        if ((uVar1 & 2) == 0) {
-          local_38 = ~(PitchLFO_onlyInclude | DAT_80032a20);
+      uVar1 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
+      uVar2 = (uint)(short)uVar1;
+      if (((uVar2 & 0xc000) != 0) && ((uVar2 & 0x20) == 0)) {
+        *(ushort *)&(MusToPush->HeaderData).field5_0x10 = uVar1 & 0xbfff;
+        ChannelCounter = (uint)*(byte *)&(MusToPush->HeaderData).NumChannels;
+        _channelData = MusToPush->ChannelData;
+        if ((uVar2 & 2) == 0) {
+          local_38 = ~(PitchLFO_onlyInclude | PausedMusicChannels);
         }
         else {
           local_38 = 0xffffffff;
         }
-        pmVar2 = (mus_voiceChannelFunc *)&MusToPush[1].field2_0x4;
+        _channelFunc_ptr = &MusToPush->ChannelData[0].channelFunc;
         do {
-          if (((pMVar3->field0_0x0 & 1) != 0) && ((local_38 & *(uint *)(pmVar2 + 0x18)) != 0)) {
-            uVar3 = *pmVar2;
-            if (uVar3 != 0) {
-              uVar1 = (uint)*(byte *)((int)pmVar2 + 0x29);
-              if ((uVar3 & 2) != 0) {
-                uVar3 = uVar3 & 0xfffe;
-                FUN_8001b4b0(uVar1,pmVar2[0x1c],pmVar2[0x1d],(int)(short)pmVar2[0x1e],pmVar2[0x1f]);
+          if (((_channelData->hasSound & 1) != 0) &&
+             ((local_38 & *(uint *)(_channelFunc_ptr + 0x18)) != 0)) {
+            _channelFunc = *_channelFunc_ptr;
+            if (_channelFunc != 0) {
+              uVar2 = (uint)*(byte *)((int)_channelFunc_ptr + 0x29);
+              if ((_channelFunc & 2) != 0) {
+                _channelFunc = _channelFunc & 0xfffe;
+                FUN_8001b4b0(uVar2,_channelFunc_ptr[0x1c],_channelFunc_ptr[0x1d],
+                             (int)(short)_channelFunc_ptr[0x1e],_channelFunc_ptr[0x1f]);
               }
-              if ((uVar3 & 1) != 0) {
-                FUN_8001b428(uVar1,pmVar2[0x1c],pmVar2[0x1d]);
+              if ((_channelFunc & 1) != 0) {
+                FUN_8001b428(uVar2,_channelFunc_ptr[0x1c],_channelFunc_ptr[0x1d]);
               }
-              if ((uVar3 & CalcLFOVoices1) != 0) {
-                FUN_8001b628(uVar1,pmVar2[0x22]);
+              if ((_channelFunc & CalcLFOVoices1) != 0) {
+                FUN_8001b628(uVar2,_channelFunc_ptr[0x22]);
               }
-              if ((uVar3 & 8) != 0) {
-                FUN_8001b6a4(uVar1,*(uint *)(pmVar2 + 0x26));
-                FUN_8001b720(uVar1,*(uint *)(pmVar2 + 0x28));
+              if ((_channelFunc & 8) != 0) {
+                FUN_8001b6a4(uVar2,*(uint *)(_channelFunc_ptr + 0x26));
+                FUN_8001b720(uVar2,*(uint *)(_channelFunc_ptr + 0x28));
               }
-              if ((uVar3 & CalcLFOVoices2) != 0) {
-                FUN_8001b938(uVar1,(uint)pmVar2[0x30],*(int *)(pmVar2 + 0x2a));
+              if ((_channelFunc & CalcLFOVoices2) != 0) {
+                FUN_8001b938(uVar2,(uint)_channelFunc_ptr[0x30],*(int *)(_channelFunc_ptr + 0x2a));
               }
-              if ((uVar3 & 0x20) != 0) {
-                FUN_8001b79c(uVar1,(uint)pmVar2[0x31]);
+              if ((_channelFunc & 0x20) != 0) {
+                FUN_8001b79c(uVar2,(uint)_channelFunc_ptr[0x31]);
               }
-              if ((uVar3 & CalcReverbVoices) != 0) {
-                FUN_8001b9d4(uVar1,(uint)pmVar2[0x32],*(int *)(pmVar2 + 0x2c));
+              if ((_channelFunc & CalcReverbVoices) != 0) {
+                FUN_8001b9d4(uVar2,(uint)_channelFunc_ptr[0x32],*(int *)(_channelFunc_ptr + 0x2c));
               }
-              if ((uVar3 & 0x80) != 0) {
-                FUN_8001bab8(uVar1,pmVar2[0x33],*(int *)(pmVar2 + 0x2e));
+              if ((_channelFunc & 0x80) != 0) {
+                FUN_8001bab8(uVar2,_channelFunc_ptr[0x33],*(int *)(_channelFunc_ptr + 0x2e));
               }
-              if ((uVar3 & 0x100) != 0) {
-                FUN_8001b8b0(uVar1,pmVar2[0x34]);
+              if ((_channelFunc & 0x100) != 0) {
+                FUN_8001b8b0(uVar2,_channelFunc_ptr[0x34]);
               }
-              if ((uVar3 & CalcLFOVoices1) != 0) {
+              if ((_channelFunc & CalcLFOVoices1) != 0) {
                 ChooseVoice = ChooseVoice | CalcLFOVoices1;
               }
-              if ((uVar3 & CalcLFOVoices2) != 0) {
+              if ((_channelFunc & CalcLFOVoices2) != 0) {
                 ChooseVoice = ChooseVoice | CalcLFOVoices2;
               }
-              if ((uVar3 & CalcReverbVoices) != 0) {
+              if ((_channelFunc & CalcReverbVoices) != 0) {
                 ChooseVoice = ChooseVoice | CalcReverbVoices;
               }
-              *pmVar2 = 0;
+              *_channelFunc_ptr = 0;
             }
           }
-          pmVar2 = pmVar2 + 0xb0;
-          uVar4 = uVar4 - 1;
-          pMVar3 = (MusicDataHeader *)&pMVar3[1].field_0xa8;
-        } while (uVar4 != 0);
+          _channelFunc_ptr = _channelFunc_ptr + 0xb0;
+          ChannelCounter = ChannelCounter - 1;
+          _channelData = _channelData + 1;
+        } while (ChannelCounter != 0);
       }
-      MusToPush = *(MusicDataHeader **)MusToPush;
-    } while (MusToPush != (MusicDataHeader *)0x0);
+      MusToPush = *(MusDataAll **)&MusToPush->HeaderData;
+    } while (MusToPush != (MusDataAll *)0x0);
+  }
+  return;
+}
+
+
+
+void FUN_80014818(void)
+
+{
+  ushort uVar1;
+  uint uVar2;
+  uint uVar3;
+  MusDataAll *pMVar4;
+  uint VoicestoRelease;
+  
+  VoicestoRelease = 0;
+  uVar2 = PitchLFO_onlyInclude | PausedMusicChannels;
+  pMVar4 = LastOpenedMus;
+  if (LastOpenedMus != (MusDataAll *)0x0) {
+    do {
+      uVar1 = *(ushort *)&(pMVar4->HeaderData).field5_0x10;
+      if ((short)uVar1 < 0) {
+        if ((uVar1 & 2) == 0) {
+          uVar3 = ~uVar2 & (pMVar4->HeaderData).ModifiedChannels;
+        }
+        else {
+          uVar3 = (pMVar4->HeaderData).ModifiedChannels;
+        }
+        VoicestoRelease = VoicestoRelease | uVar3;
+        (pMVar4->HeaderData).ModifiedChannels = 0;
+      }
+      pMVar4 = *(MusDataAll **)&pMVar4->HeaderData;
+    } while (pMVar4 != (MusDataAll *)0x0);
+  }
+  if (VoicestoRelease != 0) {
+    SetVoicestoRelease(1,VoicestoRelease);
+  }
+  return;
+}
+
+
+
+void FUN_800148b4(void)
+
+{
+  ushort uVar1;
+  uint uVar2;
+  MusDataAll *pMVar3;
+  uint uVar4;
+  uint uVar5;
+  uint VoicestoRelease;
+  
+  uVar4 = ~(PitchLFO_onlyInclude | PausedMusicChannels);
+  VoicestoRelease = uVar4 & DAT_80032a08 | PausedMusicChannels;
+  pMVar3 = LastOpenedMus;
+  if (LastOpenedMus != (MusDataAll *)0x0) {
+    do {
+      uVar1 = *(ushort *)&(pMVar3->HeaderData).field5_0x10;
+      if ((short)uVar1 < 0) {
+        if ((uVar1 & 2) == 0) {
+          uVar2 = uVar4 & *(uint *)&(pMVar3->HeaderData).field_0x64;
+        }
+        else {
+          uVar2 = *(uint *)&(pMVar3->HeaderData).field_0x64;
+        }
+        VoicestoRelease = VoicestoRelease | uVar2;
+        *(undefined4 *)&(pMVar3->HeaderData).field_0x64 = 0;
+      }
+      pMVar3 = *(MusDataAll **)&pMVar3->HeaderData;
+    } while (pMVar3 != (MusDataAll *)0x0);
+  }
+  uVar4 = uVar4 & DAT_80032a08 | PausedMusicChannels;
+  if (uVar4 != 0) {
+    uVar5 = 0x17;
+    uVar2 = 0x800000;
+    do {
+      if ((uVar4 & uVar2) != 0) {
+        FUN_8001bab8(uVar5,6,3);
+      }
+      uVar5 = uVar5 - 1;
+      uVar2 = 1 << (uVar5 & 0x1f);
+    } while (-1 < (int)uVar5);
+    PausedMusicChannels = 0;
+    DAT_80032a08 = 0;
+  }
+  if (VoicestoRelease != 0) {
+    SetVoicestoRelease(0,VoicestoRelease);
   }
   return;
 }
@@ -6902,8 +8714,8 @@ undefined4 RootCount2Func(void)
   int iVar6;
   uint uVar7;
   uint uVar8;
-  MusicDataHeader *pMVar9;
-  MusicDataHeader *MusToPush;
+  MusicChannelData *pMVar9;
+  MusDataAll *MusToPush;
   chooseVoice _chooseVoice;
   
   Calc_Mus_VoiceCh_Settings();
@@ -6919,18 +8731,19 @@ undefined4 RootCount2Func(void)
   }
   uVar7 = 0;
   ChooseVoice = 0;
-  uVar4 = PitchLFO_onlyInclude | DAT_80032a20;
-  for (MusToPush = LastOpenedMus; MusToPush != (MusicDataHeader *)0x0;
-      MusToPush = *(MusicDataHeader **)MusToPush) {
-    if ((short)*(ushort *)&MusToPush->field_0x10 < 0) {
-      if ((*(ushort *)&MusToPush->field_0x10 & 2) == 0) {
-        uVar5 = ~uVar4 & *(uint *)&MusToPush->field_0x60;
+  uVar4 = PitchLFO_onlyInclude | PausedMusicChannels;
+  for (MusToPush = LastOpenedMus; MusToPush != (MusDataAll *)0x0;
+      MusToPush = *(MusDataAll **)&MusToPush->HeaderData) {
+    uVar3 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
+    if ((short)uVar3 < 0) {
+      if ((uVar3 & 2) == 0) {
+        uVar5 = ~uVar4 & (MusToPush->HeaderData).ModifiedChannels;
       }
       else {
-        uVar5 = *(uint *)&MusToPush->field_0x60;
+        uVar5 = (MusToPush->HeaderData).ModifiedChannels;
       }
       uVar7 = uVar7 | uVar5;
-      *(undefined4 *)&MusToPush->field_0x60 = 0;
+      (MusToPush->HeaderData).ModifiedChannels = 0;
     }
   }
   if (uVar7 != 0) {
@@ -6961,23 +8774,24 @@ undefined4 RootCount2Func(void)
     }
   }
   do {
-    if (MusToPush == (MusicDataHeader *)0x0) {
-      uVar4 = ~(PitchLFO_onlyInclude | DAT_80032a20);
-      uVar7 = uVar4 & DAT_80032a08 | DAT_80032a20;
-      for (MusToPush = LastOpenedMus; MusToPush != (MusicDataHeader *)0x0;
-          MusToPush = *(MusicDataHeader **)MusToPush) {
-        if ((short)*(ushort *)&MusToPush->field_0x10 < 0) {
-          if ((*(ushort *)&MusToPush->field_0x10 & 2) == 0) {
-            uVar5 = uVar4 & *(uint *)&MusToPush->field_0x64;
+    if (MusToPush == (MusDataAll *)0x0) {
+      uVar4 = ~(PitchLFO_onlyInclude | PausedMusicChannels);
+      uVar7 = uVar4 & DAT_80032a08 | PausedMusicChannels;
+      for (MusToPush = LastOpenedMus; MusToPush != (MusDataAll *)0x0;
+          MusToPush = *(MusDataAll **)&MusToPush->HeaderData) {
+        uVar3 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
+        if ((short)uVar3 < 0) {
+          if ((uVar3 & 2) == 0) {
+            uVar5 = uVar4 & *(uint *)&(MusToPush->HeaderData).field_0x64;
           }
           else {
-            uVar5 = *(uint *)&MusToPush->field_0x64;
+            uVar5 = *(uint *)&(MusToPush->HeaderData).field_0x64;
           }
           uVar7 = uVar7 | uVar5;
-          *(undefined4 *)&MusToPush->field_0x64 = 0;
+          *(undefined4 *)&(MusToPush->HeaderData).field_0x64 = 0;
         }
       }
-      uVar4 = uVar4 & DAT_80032a08 | DAT_80032a20;
+      uVar4 = uVar4 & DAT_80032a08 | PausedMusicChannels;
       if (uVar4 != 0) {
         uVar8 = 0x17;
         uVar5 = 0x800000;
@@ -6988,7 +8802,7 @@ undefined4 RootCount2Func(void)
           uVar8 = uVar8 - 1;
           uVar5 = 1 << (uVar8 & 0x1f);
         } while (-1 < (int)uVar8);
-        DAT_80032a20 = 0;
+        PausedMusicChannels = 0;
         DAT_80032a08 = 0;
       }
       if (uVar7 != 0) {
@@ -6996,91 +8810,101 @@ undefined4 RootCount2Func(void)
       }
       return 0;
     }
-    if (*(short *)&MusToPush->field_0x10 < 0) {
-      if ((*(uint *)&MusToPush->field_0x2c != 0) &&
-         (*(uint *)&MusToPush->field_0x2c <= *(uint *)&MusToPush->field_0x24)) {
+    if (*(short *)&(MusToPush->HeaderData).field5_0x10 < 0) {
+      uVar7 = *(uint *)&(MusToPush->HeaderData).field_0x2c;
+      if ((uVar7 != 0) && (uVar7 <= *(uint *)&(MusToPush->HeaderData).field_0x24)) {
         FUN_80013480((undefined4 *)MusToPush);
       }
-      if (*(short *)&MusToPush->field_0x90 != 0) {
-        FUN_80014f18((SuzukiVolStorageStruct *)&MusToPush->field_0x88);
-        *(int *)&MusToPush->field_0x78 =
-             (int)*(short *)&MusToPush->field_0x7e * (int)*(short *)&MusToPush->field_0x8a;
+      if (*(short *)&(MusToPush->HeaderData).field_0x90 != 0) {
+        FUN_80014f18((SuzukiVolStorageStruct *)&(MusToPush->HeaderData).field_0x88);
+        *(int *)&(MusToPush->HeaderData).field_0x78 =
+             (int)*(short *)&(MusToPush->HeaderData).field_0x7e *
+             (int)*(short *)&(MusToPush->HeaderData).field_0x8a;
       }
-      if (*(short *)&MusToPush->field_0x9c != 0) {
-        FUN_80014f18((SuzukiVolStorageStruct *)&MusToPush->field_0x94);
+      if ((MusToPush->HeaderData).field108_0x9c != 0) {
+        FUN_80014f18((SuzukiVolStorageStruct *)&(MusToPush->HeaderData).field106_0x94);
         FUN_80017098(0x100,MusToPush);
       }
-      if (*(short *)&MusToPush->field_0xa8 != 0) {
-        FUN_80014f18((SuzukiVolStorageStruct *)&MusToPush->field_0xa0);
+      if (*(short *)&(MusToPush->HeaderData).field_0xa8 != 0) {
+        FUN_80014f18((SuzukiVolStorageStruct *)&(MusToPush->HeaderData).field_0xa0);
         FUN_80017098(0x200,MusToPush);
       }
-      if (*(short *)&MusToPush->field_0xb4 != 0) {
-        FUN_80014f18((SuzukiVolStorageStruct *)&MusToPush->field_0xac);
+      if (*(short *)&(MusToPush->HeaderData).field_0xb4 != 0) {
+        FUN_80014f18((SuzukiVolStorageStruct *)&(MusToPush->HeaderData).field_0xac);
         FUN_80017098(0x100,MusToPush);
       }
-      *(int *)&MusToPush->field_0x20 = *(int *)&MusToPush->field_0x20 + 1;
-      *(int *)&MusToPush->field_0x28 =
-           (int)*(short *)&MusToPush->field_0x8a + *(int *)&MusToPush->field_0x28;
-      iVar6 = *(int *)&MusToPush->field_0x74 - *(int *)&MusToPush->field_0x78;
-      *(int *)&MusToPush->field_0x74 = iVar6;
+      *(int *)&(MusToPush->HeaderData).field_0x20 = *(int *)&(MusToPush->HeaderData).field_0x20 + 1;
+      *(int *)&(MusToPush->HeaderData).field_0x28 =
+           (int)*(short *)&(MusToPush->HeaderData).field_0x8a +
+           *(int *)&(MusToPush->HeaderData).field_0x28;
+      iVar6 = *(int *)&(MusToPush->HeaderData).field_0x74 -
+              *(int *)&(MusToPush->HeaderData).field_0x78;
+      *(int *)&(MusToPush->HeaderData).field_0x74 = iVar6;
       if (iVar6 < 0) {
-        pMVar9 = MusToPush + 1;
+        pMVar9 = MusToPush->ChannelData;
         do {
-          sVar2 = *(short *)&MusToPush->field_0x36 + -1;
-          *(short *)&MusToPush->field_0x36 = sVar2;
-          *(int *)&MusToPush->field_0x74 = *(int *)&MusToPush->field_0x74 + 0x10000;
+          sVar2 = *(short *)&(MusToPush->HeaderData).field_0x36 + -1;
+          *(short *)&(MusToPush->HeaderData).field_0x36 = sVar2;
+          *(int *)&(MusToPush->HeaderData).field_0x74 =
+               *(int *)&(MusToPush->HeaderData).field_0x74 + 0x10000;
           if (sVar2 == 0) {
-            *(undefined2 *)&MusToPush->field_0x36 = *(undefined2 *)&MusToPush->field_0x3a;
-            uVar3 = *(short *)&MusToPush->field_0x34 + 1;
-            *(ushort *)&MusToPush->field_0x34 = uVar3;
-            if (*(ushort *)&MusToPush->field_0x38 < uVar3) {
-              *(undefined2 *)&MusToPush->field_0x34 = 1;
-              *(short *)&MusToPush->field_0x32 = *(short *)&MusToPush->field_0x32 + 1;
+            *(undefined2 *)&(MusToPush->HeaderData).field_0x36 =
+                 *(undefined2 *)&(MusToPush->HeaderData).field_0x3a;
+            uVar3 = *(short *)&(MusToPush->HeaderData).field_0x34 + 1;
+            *(ushort *)&(MusToPush->HeaderData).field_0x34 = uVar3;
+            if (*(ushort *)&(MusToPush->HeaderData).field_0x38 < uVar3) {
+              *(undefined2 *)&(MusToPush->HeaderData).field_0x34 = 1;
+              *(short *)&(MusToPush->HeaderData).field_0x32 =
+                   *(short *)&(MusToPush->HeaderData).field_0x32 + 1;
             }
           }
-          bVar1 = MusToPush->field_0x16;
+          bVar1 = *(byte *)&(MusToPush->HeaderData).NumChannels;
           if (bVar1 != 0) {
-            FUN_80015138((int)MusToPush,(ushort *)pMVar9,(ushort)bVar1);
-            FUN_80015324((int)MusToPush,(ushort *)pMVar9,(ushort)bVar1);
+            FUN_80015138((int)MusToPush,&pMVar9->hasSound,(ushort)bVar1);
+            FUN_80015324(&MusToPush->HeaderData,&pMVar9->hasSound,(ushort)bVar1);
             FUN_8001749c(MusToPush,(short *)pMVar9,(ushort)bVar1);
-            FUN_80017118((int)MusToPush,(ushort *)pMVar9,(ushort)bVar1);
+            FUN_80017118((int)MusToPush,&pMVar9->hasSound,(ushort)bVar1);
           }
-          if (*(int *)&MusToPush->field_0x58 == 0) {
-            *(ushort *)&MusToPush->field_0x10 = *(ushort *)&MusToPush->field_0x10 & 0x7fff;
+          if ((MusToPush->HeaderData).OwnedChannels == 0) {
+            *(ushort *)&(MusToPush->HeaderData).field5_0x10 =
+                 *(ushort *)&(MusToPush->HeaderData).field5_0x10 & 0x7fff;
             break;
           }
-          *(int *)&MusToPush->field_0x24 = *(int *)&MusToPush->field_0x24 + 1;
-          if (*(int *)&MusToPush->field_0x94 == 0) {
+          *(int *)&(MusToPush->HeaderData).field_0x24 =
+               *(int *)&(MusToPush->HeaderData).field_0x24 + 1;
+          if ((MusToPush->HeaderData).field106_0x94 == 0) {
             FUN_80012338((int)MusToPush);
-            *(ushort *)&MusToPush->field_0x10 = *(ushort *)&MusToPush->field_0x10 | 0x4100;
+            *(ushort *)&(MusToPush->HeaderData).field5_0x10 =
+                 *(ushort *)&(MusToPush->HeaderData).field5_0x10 | 0x4100;
           }
-          if (*(short *)&MusToPush->field_0x32 == *(short *)&MusToPush->field_0x54) {
+          if (*(short *)&(MusToPush->HeaderData).field_0x32 ==
+              *(short *)&(MusToPush->HeaderData).field_0x54) {
             FUN_80012338((int)MusToPush);
           }
-        } while (*(int *)&MusToPush->field_0x74 < 0);
+        } while (*(int *)&(MusToPush->HeaderData).field_0x74 < 0);
       }
     }
-    MusToPush = *(MusicDataHeader **)MusToPush;
+    MusToPush = *(MusDataAll **)&MusToPush->HeaderData;
   } while( true );
 }
 
 
 
-void FUN_80014f18(SuzukiVolStorageStruct *param_1)
+void FUN_80014f18(SuzukiVolStorageStruct *SuzukiMVol)
 
 {
   short sVar1;
   SuzukiVolStore SVar2;
   
-  sVar1 = param_1->ChangeVol;
-  param_1->ChangeVol = sVar1 + -1;
+  sVar1 = SuzukiMVol->ChangeVol;
+  SuzukiMVol->ChangeVol = sVar1 + -1;
   if (sVar1 == 1) {
-    SVar2 = (SuzukiVolStore)((int)param_1[1].hasVolume.field0_0x0 << 0x10);
+    SVar2 = (SuzukiVolStore)((int)SuzukiMVol[1].hasVolume.field0_0x0 << 0x10);
   }
   else {
-    SVar2 = (SuzukiVolStore)((int)param_1->hasVolume + param_1->ChangeInVolume);
+    SVar2 = (SuzukiVolStore)((int)SuzukiMVol->hasVolume + SuzukiMVol->ChangeInVolume);
   }
-  param_1->hasVolume = SVar2;
+  SuzukiMVol->hasVolume = SVar2;
   return;
 }
 
@@ -7089,25 +8913,28 @@ void FUN_80014f18(SuzukiVolStorageStruct *param_1)
 void Calc_Mus_PitchLFO_Voices(void)
 
 {
-  MusicDataHeader *MusToPush;
+  ushort uVar1;
+  MusDataAll *MusToPush;
   uint VoiceBits_SubjectRemoval;
   uint VoiceBits;
   
   VoiceBits = 0;
   VoiceBits_SubjectRemoval = 0;
   MusToPush = LastOpenedMus;
-  if (LastOpenedMus != (MusicDataHeader *)0x0) {
+  if (LastOpenedMus != (MusDataAll *)0x0) {
     do {
-      if ((short)*(ushort *)&MusToPush->field_0x10 < 0) {
-        if ((*(ushort *)&MusToPush->field_0x10 & 1) == 0) {
-          VoiceBits = VoiceBits | MusToPush->LFOVoiceBits;
+      uVar1 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
+      if ((short)uVar1 < 0) {
+        if ((uVar1 & 1) == 0) {
+          VoiceBits = VoiceBits | (MusToPush->HeaderData).LFOVoiceBits;
         }
         else {
-          VoiceBits_SubjectRemoval = VoiceBits_SubjectRemoval | MusToPush->LFOVoiceBits;
+          VoiceBits_SubjectRemoval = VoiceBits_SubjectRemoval | (MusToPush->HeaderData).LFOVoiceBits
+          ;
         }
       }
-      MusToPush = *(MusicDataHeader **)MusToPush;
-    } while (MusToPush != (MusicDataHeader *)0x0);
+      MusToPush = *(MusDataAll **)&MusToPush->HeaderData;
+    } while (MusToPush != (MusDataAll *)0x0);
   }
   VoiceBits = VoiceBits_SubjectRemoval & ~PitchLFO_onlyInclude | VoiceBits;
                     // turn on voices in voiceBits
@@ -7124,25 +8951,28 @@ void Calc_Mus_PitchLFO_Voices(void)
 void Calc_Mus_PitchLFO_Voices2(void)
 
 {
-  MusicDataHeader *MusToPush;
+  ushort uVar1;
+  MusDataAll *MusToPush;
   uint VoiceBits;
   uint VoiceBits_SubjectRemoval;
   
   VoiceBits = 0;
   VoiceBits_SubjectRemoval = 0;
   MusToPush = LastOpenedMus;
-  if (LastOpenedMus != (MusicDataHeader *)0x0) {
+  if (LastOpenedMus != (MusDataAll *)0x0) {
     do {
-      if ((short)*(ushort *)&MusToPush->field_0x10 < 0) {
-        if ((*(ushort *)&MusToPush->field_0x10 & 1) == 0) {
-          VoiceBits = VoiceBits | MusToPush->LFOVoiceBits2;
+      uVar1 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
+      if ((short)uVar1 < 0) {
+        if ((uVar1 & 1) == 0) {
+          VoiceBits = VoiceBits | (MusToPush->HeaderData).NoiseVoiceBits;
         }
         else {
-          VoiceBits_SubjectRemoval = VoiceBits_SubjectRemoval | MusToPush->LFOVoiceBits2;
+          VoiceBits_SubjectRemoval =
+               VoiceBits_SubjectRemoval | (MusToPush->HeaderData).NoiseVoiceBits;
         }
       }
-      MusToPush = *(MusicDataHeader **)MusToPush;
-    } while (MusToPush != (MusicDataHeader *)0x0);
+      MusToPush = *(MusDataAll **)&MusToPush->HeaderData;
+    } while (MusToPush != (MusDataAll *)0x0);
   }
   VoiceBits = VoiceBits_SubjectRemoval & ~PitchLFO_onlyInclude | VoiceBits;
   SpuSetNoiseVoice(1,VoiceBits);
@@ -7155,25 +8985,28 @@ void Calc_Mus_PitchLFO_Voices2(void)
 void Calc_Mus_Reverb_Voices(void)
 
 {
-  MusicDataHeader *MusToPush;
+  ushort uVar1;
+  MusDataAll *MusToPush;
   uint VoiceBits;
   uint VoiceBits_SubjectRemoval;
   
   VoiceBits = 0;
   VoiceBits_SubjectRemoval = 0;
   MusToPush = LastOpenedMus;
-  if (LastOpenedMus != (MusicDataHeader *)0x0) {
+  if (LastOpenedMus != (MusDataAll *)0x0) {
     do {
-      if ((short)*(ushort *)&MusToPush->field_0x10 < 0) {
-        if ((*(ushort *)&MusToPush->field_0x10 & 1) == 0) {
-          VoiceBits = VoiceBits | MusToPush->ReverbVoiceBits;
+      uVar1 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
+      if ((short)uVar1 < 0) {
+        if ((uVar1 & 1) == 0) {
+          VoiceBits = VoiceBits | (MusToPush->HeaderData).ReverbVoiceBits;
         }
         else {
-          VoiceBits_SubjectRemoval = VoiceBits_SubjectRemoval | MusToPush->ReverbVoiceBits;
+          VoiceBits_SubjectRemoval =
+               VoiceBits_SubjectRemoval | (MusToPush->HeaderData).ReverbVoiceBits;
         }
       }
-      MusToPush = *(MusicDataHeader **)MusToPush;
-    } while (MusToPush != (MusicDataHeader *)0x0);
+      MusToPush = *(MusDataAll **)&MusToPush->HeaderData;
+    } while (MusToPush != (MusDataAll *)0x0);
   }
   VoiceBits = VoiceBits_SubjectRemoval & ~PitchLFO_onlyInclude | VoiceBits;
   SpuSetReverbVoice(1,VoiceBits);
@@ -7266,10 +9099,10 @@ void FUN_80015138(int param_1,ushort *param_2,short param_3)
 
 
 
-void FUN_80015324(int param_1,ushort *param_2,short param_3)
+void FUN_80015324(MusicDataHeader *Mus,ushort *param_2,short param_3)
 
 {
-  byte bVar1;
+  MusicInstruction MVar1;
   char cVar2;
   bool bVar3;
   ushort uVar4;
@@ -7278,71 +9111,73 @@ void FUN_80015324(int param_1,ushort *param_2,short param_3)
   ushort *puVar7;
   int iVar8;
   uint uVar9;
-  byte *pbVar10;
-  byte *pbVar11;
-  ushort *puVar12;
-  uint uVar13;
+  MusicInstruction *MusInstrList;
+  MusicInstruction *pMVar10;
+  ushort *puVar11;
+  uint uVar12;
+  MusicInstruction Instruction;
   
-  uVar13 = 1;
-  puVar12 = param_2 + 1;
+  uVar12 = 1;
+  puVar11 = param_2 + 1;
   do {
-    if ((*param_2 != 0) && (bVar3 = false, puVar12[0x39] == 0)) {
+    if ((*param_2 != 0) && (bVar3 = false, puVar11[0x39] == 0)) {
       uVar4 = *param_2;
-      pbVar10 = *(byte **)(puVar12 + 0xb);
+      MusInstrList = *(MusicInstruction **)(puVar11 + 0xb);
       *param_2 = uVar4 & 0xf8ff;
       do {
-        bVar1 = *pbVar10;
-        if (bVar1 < 0x80) {
+        Instruction = *MusInstrList;
+        if (Instruction < 0x80) {
           if ((*param_2 & 8) == 0) {
-            puVar12[0x49] = (ushort)bVar1 << 8;
+            puVar11[0x49] = (ushort)Instruction << 8;
           }
-          *puVar12 = *puVar12 | 0x100;
-          bVar1 = pbVar10[1];
-          cVar2 = (&DAT_80028e70)[bVar1];
-          pbVar11 = pbVar10 + 2;
-          *(char *)((int)puVar12 + 0x7b) = *(char *)(puVar12 + 0x3e) + cVar2;
-          if ((&DAT_80028d8c)[bVar1] == 0) {
-            bVar1 = *pbVar11;
-            pbVar11 = pbVar10 + 3;
-            puVar12[0x39] = (ushort)bVar1;
+          *puVar11 = *puVar11 | 0x100;
+          MVar1 = MusInstrList[1];
+          cVar2 = (&DAT_80028e70)[MVar1];
+          pMVar10 = MusInstrList + 2;
+          *(char *)((int)puVar11 + 0x7b) = *(char *)(puVar11 + 0x3e) + cVar2;
+          if ((&DAT_80028d8c)[MVar1] == 0) {
+            MVar1 = *pMVar10;
+            pMVar10 = MusInstrList + 3;
+            puVar11[0x39] = (ushort)MVar1;
           }
           else {
-            puVar12[0x39] = (ushort)(byte)(&DAT_80028d8c)[bVar1];
+            puVar11[0x39] = (ushort)(byte)(&DAT_80028d8c)[MVar1];
           }
-          puVar12[1] = puVar12[1] | 0x80;
-          puVar12[0x34] = puVar12[0x16];
-          *(uint *)(puVar12 + 0x3f) =
-               ((uint)(byte)(*(char *)(puVar12 + 0x3e) + cVar2) * 0x100 + (int)(short)puVar12[0x42]
-               + (int)(short)puVar12[0x41]) * 0x10000;
-          *puVar12 = *puVar12 | 0x200;
+          puVar11[1] = puVar11[1] | 0x80;
+          puVar11[0x34] = puVar11[0x16];
+          *(uint *)(puVar11 + 0x3f) =
+               ((uint)(byte)(*(char *)(puVar11 + 0x3e) + cVar2) * 0x100 + (int)(short)puVar11[0x42]
+               + (int)(short)puVar11[0x41]) * 0x10000;
+          *puVar11 = *puVar11 | 0x200;
           *param_2 = *param_2 | 0x180;
           if ((uVar4 & 0x400) != 0) {
             bVar3 = true;
-            *puVar12 = *puVar12 | 1;
+            *puVar11 = *puVar11 | 1;
           }
           if ((*param_2 & 0x8000) != 0) {
             *param_2 = *param_2 & 0x7fff;
-            *puVar12 = *puVar12 | 0x300;
-            puVar12[1] = puVar12[1] | 0x1ff;
+            *puVar11 = *puVar11 | 0x300;
+            puVar11[1] = puVar11[1] | 0x1ff;
           }
         }
         else {
-          pbVar11 = (byte *)(*(code *)(&PTR_Rest_80028b0c)[bVar1 - 0x80 & 0xffff])
-                                      (pbVar10 + 1,param_1,param_2);
+          pMVar10 = (MusicInstruction *)
+                    (*(code *)MusicCodePointers[Instruction - 0x80 & 0xffff])
+                              (MusInstrList + 1,Mus,param_2);
           if (*param_2 == 0) {
-            *(uint *)(param_1 + 0x58) = ~uVar13 & *(uint *)(param_1 + 0x58);
+            Mus->OwnedChannels = ~uVar12 & Mus->OwnedChannels;
             break;
           }
         }
-        pbVar10 = pbVar11;
+        MusInstrList = pMVar10;
       } while ((*param_2 & 0x500) == 0);
-      *(byte **)(puVar12 + 0xb) = pbVar11;
+      *(MusicInstruction **)(puVar11 + 0xb) = pMVar10;
       if ((*param_2 & 0x800) != 0) {
         *param_2 = *param_2 | 0x200;
       }
-      puVar7 = param_2 + (uint)puVar12[0x55] * 6 + 0x58;
-      bVar1 = *pbVar11;
-      while (uVar4 = (ushort)bVar1, 0x7f < uVar4) {
+      puVar7 = param_2 + (uint)puVar11[0x55] * 6 + 0x58;
+      MVar1 = *pMVar10;
+      while (uVar4 = (ushort)MVar1, 0x7f < uVar4) {
         if (uVar4 != 0x90) {
           if (uVar4 != 0x80) {
             if (uVar4 == 0x81) {
@@ -7352,17 +9187,17 @@ void FUN_80015324(int param_1,ushort *param_2,short param_3)
             if (1 < (ushort)(uVar4 - 0xb0)) {
               if (uVar4 == 0x99) {
                 if (*(char *)puVar7 != '\0') {
-                  pbVar11 = *(byte **)(puVar7 + 2);
+                  pMVar10 = *(MusicInstruction **)(puVar7 + 2);
                   goto LAB_80015618;
                 }
                 puVar7 = puVar7 + -6;
               }
               if ((uVar4 == 0x9a) && (*(char *)puVar7 == '\0')) {
-                pbVar11 = *(byte **)(puVar7 + 4);
+                pMVar10 = *(MusicInstruction **)(puVar7 + 4);
                 puVar7 = puVar7 + -6;
               }
               else {
-                pbVar11 = pbVar11 + (byte)(&DAT_80028d0c)[(ushort)(uVar4 - 0x80)];
+                pMVar10 = pMVar10 + (byte)(&DAT_80028d0c)[(ushort)(uVar4 - 0x80)];
               }
               goto LAB_80015618;
             }
@@ -7370,10 +9205,10 @@ void FUN_80015324(int param_1,ushort *param_2,short param_3)
           *param_2 = *param_2 & 0xfdff;
           break;
         }
-        pbVar11 = *(byte **)(puVar12 + 0xd);
-        if (pbVar11 == (byte *)0x0) break;
+        pMVar10 = *(MusicInstruction **)(puVar11 + 0xd);
+        if (pMVar10 == (MusicInstruction *)0x0) break;
 LAB_80015618:
-        bVar1 = *pbVar11;
+        MVar1 = *pMVar10;
       }
       if (uVar4 < 0x80) {
         uVar4 = *param_2 | 0x1000;
@@ -7382,12 +9217,12 @@ LAB_80015618:
         uVar4 = *param_2 & 0xefff;
       }
       *param_2 = uVar4;
-      iVar8 = (int)*(char *)(puVar12 + 0x3a) + (uint)puVar12[0x39];
+      iVar8 = (int)*(char *)(puVar11 + 0x3a) + (uint)puVar11[0x39];
       if (iVar8 * 0x10000 < 1) {
-        iVar8 = (uint)puVar12[0x39] + iVar8;
-        *(char *)(puVar12 + 0x3a) = *(char *)(puVar12 + 0x3a) + *(char *)(puVar12 + 0x39);
+        iVar8 = (uint)puVar11[0x39] + iVar8;
+        *(char *)(puVar11 + 0x3a) = *(char *)(puVar11 + 0x3a) + *(char *)(puVar11 + 0x39);
       }
-      uVar9 = (uint)puVar12[0x3c];
+      uVar9 = (uint)puVar11[0x3c];
       uVar4 = (ushort)iVar8;
       if (uVar9 == 0xf) {
         uVar9 = iVar8 - 1;
@@ -7404,22 +9239,22 @@ LAB_80015704:
           goto LAB_80015704;
         }
       }
-      puVar12[0x3b] = uVar6;
-      puVar12[0x39] = uVar4;
+      puVar11[0x3b] = uVar6;
+      puVar11[0x39] = uVar4;
       if (bVar3) {
         iVar8 = 4;
-        if (((puVar12[2] & 4) != 0) &&
-           (iVar5 = ((uint)*(byte *)((int)puVar12 + 0x7b) - (uint)*(byte *)(puVar12 + 0x3d)) *
+        if (((puVar11[2] & 4) != 0) &&
+           (iVar5 = ((uint)*(byte *)((int)puVar11 + 0x7b) - (uint)*(byte *)(puVar11 + 0x3d)) *
                     0x1000000, iVar5 != 0)) {
-          puVar12[2] = puVar12[2] | 1;
-          puVar12[0x52] = puVar12[0x47];
-          *(uint *)(puVar12 + 0x3f) =
-               ((uint)*(byte *)(puVar12 + 0x3d) * 0x100 + (int)(short)puVar12[0x42] +
-               (int)(short)puVar12[0x41]) * 0x10000;
-          *(int *)(puVar12 + 0x4d) = iVar5 / (int)(uint)puVar12[0x47];
+          puVar11[2] = puVar11[2] | 1;
+          puVar11[0x52] = puVar11[0x47];
+          *(uint *)(puVar11 + 0x3f) =
+               ((uint)*(byte *)(puVar11 + 0x3d) * 0x100 + (int)(short)puVar11[0x42] +
+               (int)(short)puVar11[0x41]) * 0x10000;
+          *(int *)(puVar11 + 0x4d) = iVar5 / (int)(uint)puVar11[0x47];
         }
         puVar7 = param_2 + 0x7f;
-        *(undefined *)(puVar12 + 0x3d) = *(undefined *)((int)puVar12 + 0x7b);
+        *(undefined *)(puVar11 + 0x3d) = *(undefined *)((int)puVar11 + 0x7b);
         do {
           uVar4 = *puVar7;
           if (((uVar4 & 1) != 0) && ((uVar4 & 2) != 0)) {
@@ -7428,7 +9263,7 @@ LAB_80015704:
             puVar7[-5] = puVar7[-4];
             puVar7[-3] = puVar7[-2];
             if ((uVar4 & 3) != 0) {
-              *puVar12 = *puVar12 | 0x100;
+              *puVar11 = *puVar11 | 0x100;
             }
             *puVar7 = *puVar7 & 0xfff3;
           }
@@ -7437,14 +9272,1230 @@ LAB_80015704:
         } while (iVar8 != 0);
       }
     }
-    puVar12 = puVar12 + 0xb0;
+    puVar11 = puVar11 + 0xb0;
     param_2 = param_2 + 0xb0;
     param_3 = param_3 + -1;
-    uVar13 = uVar13 << 1;
+    uVar12 = uVar12 << 1;
     if (param_3 == 0) {
       return;
     }
   } while( true );
+}
+
+
+
+undefined4 SMD_NOOP(undefined4 param_1)
+
+{
+  return param_1;
+}
+
+
+
+byte * Rest(byte *param_1,undefined4 param_2,ushort *param_3)
+
+{
+  param_3[0x3a] = (ushort)*param_1;
+  param_3[1] = param_3[1] | 2;
+  *param_3 = *param_3 | 0x400;
+  return param_1 + 1;
+}
+
+
+
+byte * Fermata(byte *param_1,undefined4 param_2,ushort *param_3)
+
+{
+  byte bVar1;
+  
+  bVar1 = *param_1;
+  *param_3 = *param_3 | 0x100;
+  param_3[0x3a] = (ushort)bVar1;
+  return param_1 + 1;
+}
+
+
+
+undefined4 SMD_NOOP2(undefined4 param_1)
+
+{
+  return param_1;
+}
+
+
+
+char * FUN_800158c0(char *param_1,int param_2,int param_3)
+
+{
+  if (*param_1 == *(char *)(param_2 + 0x1d)) {
+    *(char **)(param_3 + 0x1c) = param_1 + 1;
+    *(undefined *)(param_3 + 0x2b) = *(undefined *)(param_3 + 0x7e);
+  }
+  return param_1 + 1;
+}
+
+
+
+int SMD_NOOP3(int param_1)
+
+{
+  return param_1 + 3;
+}
+
+
+
+undefined4 SMD_NOOP4(undefined4 param_1)
+
+{
+  return param_1;
+}
+
+
+
+int Tacet(int param_1,int param_2,undefined2 *param_3)
+
+{
+  int iVar1;
+  uint uVar2;
+  
+  iVar1 = *(int *)(param_3 + 0xe);
+  if (iVar1 == 0) {
+    param_3[1] = param_3[1] & 0xfffc;
+    if ((*(ushort *)(param_2 + 0x10) & 2) == 0) {
+      DAT_80032a08 = DAT_80032a08 | *(uint *)(param_3 + 0x1a);
+    }
+    else {
+      PausedMusicChannels = PausedMusicChannels | *(uint *)(param_3 + 0x1a);
+      uVar2 = ~*(uint *)(param_3 + 0x1a);
+      *(uint *)(param_2 + 0x68) = uVar2 & *(uint *)(param_2 + 0x68);
+      *(uint *)(param_2 + 0x70) = uVar2 & *(uint *)(param_2 + 0x70);
+      *(uint *)(param_2 + 0x6c) = uVar2 & *(uint *)(param_2 + 0x6c);
+      PitchLFO_onlyInclude = uVar2 & PitchLFO_onlyInclude;
+      param_3[2] = param_3[2] | 0x54;
+    }
+    *param_3 = 0;
+    iVar1 = param_1 + -1;
+  }
+  else {
+    param_3[0x14] = param_3[0x14] + 1;
+    param_3[0x3f] = (ushort)*(byte *)((int)param_3 + 0x2b);
+  }
+  return iVar1;
+}
+
+
+
+int Loop(undefined4 param_1,int param_2,undefined2 *param_3,int param_4)
+
+{
+  uint uVar1;
+  
+  param_3[1] = param_3[1] & 0xfffc;
+  if ((*(ushort *)(param_2 + 0x10) & 2) == 0) {
+    DAT_80032a08 = DAT_80032a08 | *(uint *)(param_3 + 0x1a);
+  }
+  else {
+    PausedMusicChannels = PausedMusicChannels | *(uint *)(param_3 + 0x1a);
+    uVar1 = ~*(uint *)(param_3 + 0x1a);
+    *(uint *)(param_2 + 0x68) = uVar1 & *(uint *)(param_2 + 0x68);
+    *(uint *)(param_2 + 0x70) = uVar1 & *(uint *)(param_2 + 0x70);
+    *(uint *)(param_2 + 0x6c) = uVar1 & *(uint *)(param_2 + 0x6c);
+    PitchLFO_onlyInclude = uVar1 & PitchLFO_onlyInclude;
+    param_3[2] = param_3[2] | 0x54;
+  }
+  *param_3 = 0;
+  return param_4 + -1;
+}
+
+
+
+void FUN_800159dc(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  *(undefined4 *)(param_3 + 0x1c) = param_1;
+  *(undefined *)(param_3 + 0x2b) = *(undefined *)(param_3 + 0x7e);
+  return;
+}
+
+
+
+byte * Octave(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 0x7e) = (ushort)*param_1 * 0xc;
+  return param_1 + 1;
+}
+
+
+
+undefined4 Raise_Octave(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  *(short *)(param_3 + 0x7e) = *(short *)(param_3 + 0x7e) + 0xc;
+  return param_1;
+}
+
+
+
+undefined4 Lower_Octave(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  *(short *)(param_3 + 0x7e) = *(short *)(param_3 + 0x7e) + -0xc;
+  return param_1;
+}
+
+
+
+byte * Time_Signature(byte *param_1,int param_2)
+
+{
+  byte bVar1;
+  byte bVar2;
+  
+  bVar1 = param_1[1];
+  bVar2 = *param_1;
+  *(short *)(param_2 + 0x3a) = (short)(0xc0 / ((uint)bVar1 * (uint)*(byte *)(param_2 + 0x15)));
+  *(ushort *)(param_2 + 0x3c) = (ushort)bVar1;
+  *(ushort *)(param_2 + 0x38) = (ushort)bVar2;
+  *(ushort *)(param_2 + 0x3e) = (ushort)bVar2;
+  *(undefined2 *)(param_2 + 0x36) = *(undefined2 *)(param_2 + 0x3a);
+  return param_1 + 2;
+}
+
+
+
+undefined * FUN_80015a88(undefined *param_1,int param_2)
+
+{
+  *(undefined *)(param_2 + 0x1c) = *param_1;
+  return param_1 + 1;
+}
+
+
+
+char * FUN_80015a9c(char *param_1,int param_2)
+
+{
+  *(char *)(param_2 + 0x1c) = *(char *)(param_2 + 0x1c) + *param_1;
+  return param_1 + 1;
+}
+
+
+
+void Repeat(char *param_1,undefined4 param_2,int param_3)
+
+{
+  char *pcVar1;
+  
+  *(short *)(param_3 + 0xac) = *(short *)(param_3 + 0xac) + 1;
+  pcVar1 = (char *)(param_3 + (uint)*(ushort *)(param_3 + 0xac) * 0xc + 0xb0);
+  *pcVar1 = *param_1 + -1;
+  *(char **)(pcVar1 + 4) = param_1 + 1;
+  pcVar1[2] = *(char *)(param_3 + 0x7e);
+  return;
+}
+
+
+
+undefined4 Coda(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  char cVar1;
+  char *pcVar2;
+  
+  pcVar2 = (char *)(param_3 + (uint)*(ushort *)(param_3 + 0xac) * 0xc + 0xb0);
+  cVar1 = *pcVar2;
+  *pcVar2 = cVar1 + -1;
+  if ((char)(cVar1 + -1) == -1) {
+    *(short *)(param_3 + 0xac) = *(short *)(param_3 + 0xac) + -1;
+  }
+  else {
+    *(undefined4 *)(pcVar2 + 8) = param_1;
+    param_1 = *(undefined4 *)(pcVar2 + 4);
+    pcVar2[3] = *(char *)(param_3 + 0x7e);
+    *(ushort *)(param_3 + 0x7e) = (ushort)(byte)pcVar2[2];
+  }
+  return param_1;
+}
+
+
+
+undefined4 To_Coda(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  char *pcVar1;
+  
+  pcVar1 = (char *)(param_3 + (uint)*(ushort *)(param_3 + 0xac) * 0xc + 0xb0);
+  if (*pcVar1 == '\0') {
+    param_1 = *(undefined4 *)(pcVar1 + 8);
+    *(ushort *)(param_3 + 0x7e) = (ushort)(byte)pcVar1[3];
+    *(short *)(param_3 + 0xac) = *(short *)(param_3 + 0xac) + -1;
+  }
+  return param_1;
+}
+
+
+
+int FUN_80015bb8(ushort *param_1)
+
+{
+  PlaySound_FromMus2((MusDataAll *)(uint)*param_1,(uint)*(byte *)(param_1 + 1),0x40);
+  return (int)param_1 + 3;
+}
+
+
+
+ushort * FUN_80015bfc(ushort *param_1)
+
+{
+  AccumulateChannelsToPause((MusicDataHeader *)(uint)*param_1);
+  return param_1 + 1;
+}
+
+
+
+ushort * FUN_80015c38(ushort *param_1,undefined4 param_2,int param_3)
+
+{
+  int iVar1;
+  
+  iVar1 = DAT_80032a00;
+  if ((int)*(short *)(param_3 + 10) == 0) {
+LAB_80015c84:
+    param_1 = (ushort *)
+              (iVar1 + (uint)*(ushort *)
+                              (((uint)*(byte *)(param_1 + 1) +
+                               ((int)((uint)*param_1 << 0x10) >> 0xf)) * 2 + iVar1 + 0x14) + 3);
+  }
+  else {
+    do {
+      if ((uint)*(ushort *)(iVar1 + 10) == (int)*(short *)(param_3 + 10)) goto LAB_80015c84;
+      iVar1 = *(int *)(iVar1 + 0x10);
+    } while (iVar1 != 0);
+  }
+  return param_1;
+}
+
+
+
+byte * Tempo(byte *param_1,int param_2)
+
+{
+  byte bVar1;
+  
+  bVar1 = *param_1;
+  *(uint *)(param_2 + 0x7c) = (uint)bVar1 << 0x10;
+  *(uint *)(param_2 + 0x78) = (uint)bVar1 * (int)*(short *)(param_2 + 0x8a);
+  return param_1 + 1;
+}
+
+
+
+char * FUN_80015cd8(char *param_1,int param_2)
+
+{
+  char cVar1;
+  
+  cVar1 = *param_1;
+  *(undefined4 *)(param_2 + 0x78) = 0;
+  *(int *)(param_2 + 0x7c) = cVar1 * 0x10000 + *(int *)(param_2 + 0x7c);
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_80015d04(byte *param_1,int param_2)
+
+{
+  byte bVar1;
+  byte bVar2;
+  int iVar3;
+  
+  bVar1 = param_1[1];
+  bVar2 = *param_1;
+  *(ushort *)(param_2 + 0x86) = (ushort)bVar1;
+  iVar3 = (uint)bVar1 * 0x10000 - *(int *)(param_2 + 0x7c);
+  if ((bVar2 != 0) && (iVar3 != 0)) {
+    *(ushort *)(param_2 + 0x84) = (ushort)bVar2;
+    *(int *)(param_2 + 0x80) = iVar3 / (int)(uint)bVar2;
+  }
+  return param_1 + 2;
+}
+
+
+
+byte * FUN_80015d44(byte *param_1,MusicDataHeader *param_2)
+
+{
+  param_2->field106_0x94 = (uint)*param_1 << 0x18;
+  FUN_80017098(0x100,(MusDataAll *)param_2);
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_80015d84(byte *param_1,int param_2)
+
+{
+  byte bVar1;
+  byte bVar2;
+  int iVar3;
+  
+  bVar1 = *param_1;
+  bVar2 = param_1[1];
+  iVar3 = (uint)bVar2 * 0x1000000 - *(int *)(param_2 + 0x94);
+  if ((bVar1 != 0) && (iVar3 != 0)) {
+    *(ushort *)(param_2 + 0x9c) = (ushort)bVar1 << 5;
+    *(ushort *)(param_2 + 0x9e) = (ushort)bVar2 << 8;
+    *(int *)(param_2 + 0x98) = iVar3 / (int)((uint)bVar1 << 5);
+  }
+  return param_1 + 2;
+}
+
+
+
+byte * FUN_80015dd0(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 0x7a) = (ushort)*param_1;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_80015de4(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  
+  bVar1 = *param_1;
+  *(byte *)(param_3 + 0x2d) = bVar1;
+  if (bVar1 < 0x19) {
+    *(int *)(param_3 + 0x34) = 1 << (*(byte *)(param_3 + 0x2d) & 0x1f);
+    *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x1ff;
+  }
+  else {
+    *(undefined4 *)(param_3 + 0x34) = 0;
+    *(undefined2 *)(param_3 + 4) = 0;
+  }
+  return param_1 + 1;
+}
+
+
+
+byte * Instrument(byte *param_1,undefined4 param_2,ushort *param_3)
+
+{
+  Set_Instrument((uint)*param_1,param_3);
+  return param_1 + 1;
+}
+
+
+
+char * FUN_80015e68(char *param_1,undefined4 param_2,int param_3)
+
+{
+  if (*param_1 == '\0') {
+    *(undefined *)(param_3 + 0x76) = 0;
+  }
+  else {
+    *(char *)(param_3 + 0x76) = *param_1 + *(char *)(param_3 + 0x76);
+  }
+  return param_1 + 1;
+}
+
+
+
+undefined4 SMD_NOOP5(undefined4 param_1)
+
+{
+  return param_1;
+}
+
+
+
+undefined4 SMD_NOOP6(undefined4 param_1)
+
+{
+  return param_1;
+}
+
+
+
+undefined4 FUN_80015ea8(undefined4 param_1,undefined4 param_2,ushort *param_3)
+
+{
+  *param_3 = *param_3 | 0x800;
+  return param_1;
+}
+
+
+
+undefined4 FUN_80015ec0(undefined4 param_1,undefined4 param_2,ushort *param_3)
+
+{
+  *param_3 = *param_3 & 0xf7ff;
+  return param_1;
+}
+
+
+
+undefined4 FUN_80015ed8(undefined4 param_1,int param_2,int param_3)
+
+{
+  if ((*(byte *)(param_3 + 0x2d) & 1) != 0) {
+    *(uint *)(param_2 + 0x68) = *(uint *)(param_2 + 0x68) | *(uint *)(param_3 + 0x34);
+    *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 4;
+  }
+  return param_1;
+}
+
+
+
+undefined4 FUN_80015f18(undefined4 param_1,int param_2,int param_3)
+
+{
+  *(uint *)(param_2 + 0x68) = ~*(uint *)(param_3 + 0x34) & *(uint *)(param_2 + 0x68);
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 4;
+  return param_1;
+}
+
+
+
+byte * FUN_80015f44(byte *param_1,int param_2,int param_3)
+
+{
+  *(ushort *)(param_2 + 0x1e) = (ushort)*param_1;
+  SpuSetNoiseClock((uint)*(ushort *)(param_2 + 0x1e));
+  *(uint *)(param_2 + 0x6c) = *(uint *)(param_2 + 0x6c) | *(uint *)(param_3 + 0x34);
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_80015fb4(byte *param_1,int param_2,int param_3)
+
+{
+  *(ushort *)(param_2 + 0x1e) = (ushort)*param_1 + *(short *)(param_2 + 0x1e) & 0x3f;
+  SpuSetNoiseClock((uint)*(ushort *)(param_2 + 0x1e));
+  *(uint *)(param_2 + 0x6c) = *(uint *)(param_2 + 0x6c) | *(uint *)(param_3 + 0x34);
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
+  return param_1 + 1;
+}
+
+
+
+undefined4 FUN_80016034(undefined4 param_1,int param_2,int param_3)
+
+{
+  *(uint *)(param_2 + 0x6c) = *(uint *)(param_2 + 0x6c) | *(uint *)(param_3 + 0x34);
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
+  return param_1;
+}
+
+
+
+undefined4 FUN_80016060(undefined4 param_1,int param_2,int param_3)
+
+{
+  *(uint *)(param_2 + 0x6c) = ~*(uint *)(param_3 + 0x34) & *(uint *)(param_2 + 0x6c);
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
+  return param_1;
+}
+
+
+
+byte * FUN_8001608c(byte *param_1,int param_2)
+
+{
+  byte bVar1;
+  byte bVar2;
+  byte bVar3;
+  
+  bVar3 = *param_1;
+  *(ushort *)(param_2 + 0x48) = (ushort)bVar3 << 8;
+  bVar1 = param_1[1];
+  *(int *)(param_2 + 0x4c) = (int)(char)bVar1;
+  bVar2 = param_1[2];
+  *(int *)(param_2 + 0x50) = (int)(char)bVar2;
+  SetReverbParam(10,(short)(((uint)bVar3 << 0x18) >> 0x10),(int)(char)bVar1,(int)(char)bVar2);
+  return param_1 + 3;
+}
+
+
+
+undefined4 Cue(undefined4 param_1,int param_2,int param_3)
+
+{
+  *(uint *)(param_2 + 0x70) = *(uint *)(param_2 + 0x70) | *(uint *)(param_3 + 0x34);
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x40;
+  return param_1;
+}
+
+
+
+undefined4 FUN_80016110(undefined4 param_1,int param_2,int param_3)
+
+{
+  *(uint *)(param_2 + 0x70) = ~*(uint *)(param_3 + 0x34) & *(uint *)(param_2 + 0x70);
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x40;
+  return param_1;
+}
+
+
+
+undefined4 Naturale(undefined4 param_1,undefined4 param_2,ushort *param_3)
+
+{
+  Set_Instrument((uint)*(byte *)(param_3 + 0x16),param_3);
+  return param_1;
+}
+
+
+
+byte * FUN_80016174(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  
+  *(uint *)(param_3 + 0x58) = (uint)*param_1;
+  *(uint *)(param_3 + 0x5c) = (uint)param_1[1];
+  bVar1 = param_1[2];
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x1f0;
+  *(uint *)(param_3 + 0x60) = (uint)bVar1;
+  return param_1 + 3;
+}
+
+
+
+byte * Attack_Time(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  
+  bVar1 = *param_1;
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
+  *(ushort *)(param_3 + 100) = (ushort)bVar1;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_800161c4(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  
+  bVar1 = *param_1;
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x20;
+  *(ushort *)(param_3 + 0x66) = (ushort)bVar1;
+  return param_1 + 1;
+}
+
+
+
+byte * Sustain(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  
+  bVar1 = *param_1;
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x40;
+  *(ushort *)(param_3 + 0x68) = (ushort)bVar1;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_800161fc(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  
+  bVar1 = *param_1;
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x80;
+  *(ushort *)(param_3 + 0x2e) = (ushort)bVar1;
+  *(ushort *)(param_3 + 0x6a) = (ushort)bVar1;
+  return param_1 + 1;
+}
+
+
+
+byte * Sustain2(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  
+  bVar1 = *param_1;
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x100;
+  *(ushort *)(param_3 + 0x6c) = (ushort)bVar1;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_80016238(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  
+  *(ushort *)(param_3 + 0x66) = (ushort)*param_1;
+  bVar1 = param_1[1];
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x120;
+  *(ushort *)(param_3 + 0x6c) = (ushort)bVar1;
+  return param_1 + 2;
+}
+
+
+
+byte * FUN_80016260(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  
+  bVar1 = *param_1;
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
+  *(uint *)(param_3 + 0x58) = (uint)bVar1;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_8001627c(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  
+  bVar1 = *param_1;
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x40;
+  *(uint *)(param_3 + 0x5c) = (uint)bVar1;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_80016298(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  
+  bVar1 = *param_1;
+  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x80;
+  *(uint *)(param_3 + 0x60) = (uint)bVar1;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_800162b4(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  *(short *)(param_3 + 0x86) = (short)((int)((uint)*param_1 << 0x18) >> 0x13);
+  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x200;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_800162d8(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  *(short *)(param_3 + 0x86) =
+       *(short *)(param_3 + 0x86) + (short)((int)((uint)*param_1 << 0x18) >> 0x13);
+  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x200;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_80016304(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  *(short *)(param_3 + 0x86) =
+       *(short *)(param_3 + 0x86) + (short)((int)((uint)*param_1 << 0x18) >> 0x15);
+  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x200;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_80016330(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  
+  bVar1 = *param_1;
+  bVar2 = param_1[1];
+  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x200;
+  *(ushort *)(param_3 + 0x86) =
+       *(short *)(param_3 + 0x86) + (ushort)bVar2 + (short)(((uint)bVar1 << 0x18) >> 0x10);
+  return param_1 + 2;
+}
+
+
+
+byte * FUN_80016364(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  
+  bVar1 = param_1[1];
+  bVar2 = *param_1;
+  if ((bVar2 == 0) || ((int)(char)bVar1 << 0x18 == 0)) {
+    *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) & 0xfffe;
+  }
+  else {
+    *(ushort *)(param_3 + 0xa6) = (ushort)bVar2;
+    *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) | 1;
+    *(int *)(param_3 + 0x9c) = ((int)(char)bVar1 << 0x18) / (int)(uint)bVar2;
+  }
+  return param_1 + 2;
+}
+
+
+
+undefined4 FUN_800163bc(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) ^ 2;
+  return param_1;
+}
+
+
+
+undefined4 FUN_800163d4(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) & 0xfffe;
+  return param_1;
+}
+
+
+
+byte * FUN_800163ec(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  ushort uVar2;
+  
+  bVar1 = *param_1;
+  *(ushort *)(param_3 + 0x90) = (ushort)bVar1;
+  if (bVar1 == 0) {
+    uVar2 = *(ushort *)(param_3 + 6) & 0xfffb;
+  }
+  else {
+    uVar2 = *(ushort *)(param_3 + 6) | 4;
+  }
+  *(ushort *)(param_3 + 6) = uVar2;
+  return param_1 + 1;
+}
+
+
+
+byte * Pitch_Shift(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  int iVar2;
+  int iVar3;
+  
+  iVar3 = (int)(char)param_1[1];
+  bVar1 = *param_1;
+  if ((iVar3 != 0) && (bVar1 != 0)) {
+    iVar2 = iVar3;
+    if (iVar3 < 0) {
+      iVar2 = -iVar3;
+    }
+    iVar3 = FUN_80016bf8(iVar3 * iVar2 * 0x4000,(ushort)bVar1,3);
+    *(int *)(param_3 + 0xec) = iVar3;
+    *(ushort *)(param_3 + 0xf2) = (ushort)bVar1;
+    bVar1 = param_1[2];
+    *(undefined2 *)(param_3 + 0xfa) = 0x100;
+    *(code **)(param_3 + 0xe0) = FUN_80017744;
+    *(undefined *)(param_3 + 0xfd) = 3;
+    *(undefined *)(param_3 + 0xfc) = 0;
+    *(undefined2 *)(param_3 + 0xfe) = 3;
+    *(ushort *)(param_3 + 0xf6) = (ushort)bVar1;
+    FUN_80016dc0(param_3 + 0xe0);
+  }
+  return param_1 + 3;
+}
+
+
+
+byte * FUN_800164d4(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  int iVar3;
+  undefined *puVar4;
+  int iVar5;
+  uint uVar6;
+  
+  iVar5 = (int)(char)param_1[1];
+  bVar1 = param_1[2];
+  bVar2 = *param_1;
+  if ((iVar5 != 0) && (bVar2 != 0)) {
+    iVar3 = iVar5;
+    if (iVar5 < 0) {
+      iVar3 = -iVar5;
+    }
+    uVar6 = bVar1 & 0xf;
+    iVar5 = FUN_80016bf8(iVar5 * iVar3 * 0x4000,(ushort)bVar2,(short)uVar6);
+    *(int *)(param_3 + 0xec) = iVar5;
+    *(undefined2 *)(param_3 + 0xfa) = 0x100;
+    *(ushort *)(param_3 + 0xf2) = (ushort)bVar2;
+    *(undefined2 *)(param_3 + 0xf6) = 0;
+    puVar4 = (&PTR_FUN_80028f54)[uVar6];
+    *(char *)(param_3 + 0xfd) = (char)uVar6;
+    *(undefined *)(param_3 + 0xfc) = 0;
+    *(ushort *)(param_3 + 0xfe) = (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
+    *(undefined **)(param_3 + 0xe0) = puVar4;
+    FUN_80016dc0(param_3 + 0xe0);
+  }
+  return param_1 + 3;
+}
+
+
+
+byte * FUN_800165ac(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  undefined2 uVar1;
+  uint uVar2;
+  
+  uVar2 = *param_1 + 1 & 0xff;
+  if (uVar2 != 0) {
+    uVar1 = (undefined2)(0x100 / uVar2);
+    *(undefined2 *)(param_3 + 0xfa) = uVar1;
+    *(undefined2 *)(param_3 + 0xf8) = uVar1;
+  }
+  return param_1 + 1;
+}
+
+
+
+undefined4 FUN_800165e4(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 0xfe) = *(ushort *)(param_3 + 0xfe) | 1;
+  return param_1;
+}
+
+
+
+undefined4 FUN_800165fc(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 0xfe) = *(ushort *)(param_3 + 0xfe) & 0xfffe;
+  return param_1;
+}
+
+
+
+byte * Dynamic(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  *(uint *)(param_3 + 0x98) = (uint)*param_1 << 0x18;
+  *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) & 0xfff7;
+  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x100;
+  return param_1 + 1;
+}
+
+
+
+char * FUN_80016640(char *param_1,undefined4 param_2,int param_3)
+
+{
+  *(uint *)(param_3 + 0x98) = *param_1 * 0x1000000 + *(int *)(param_3 + 0x98) & 0x7fffffff;
+  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x100;
+  *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) & 0xfff7;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_80016680(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  int iVar2;
+  
+  bVar1 = *param_1;
+  iVar2 = (char)param_1[1] * 0x1000000 - *(int *)(param_3 + 0x98);
+  if ((bVar1 != 0) && (iVar2 != 0)) {
+    *(ushort *)(param_3 + 0xa8) = (ushort)bVar1;
+    *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) | 8;
+    *(int *)(param_3 + 0xa0) = iVar2 / (int)(uint)bVar1;
+  }
+  return param_1 + 2;
+}
+
+
+
+byte * FUN_800166c8(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  int iVar2;
+  
+  bVar1 = *param_1;
+  if (((char)param_1[1] != 0) && (bVar1 != 0)) {
+    iVar2 = FUN_80016bf8((char)param_1[1] * -0x1000000,(ushort)bVar1,2);
+    *(int *)(param_3 + 0x10c) = iVar2;
+    *(ushort *)(param_3 + 0x112) = (ushort)bVar1;
+    bVar1 = param_1[2];
+    *(undefined2 *)(param_3 + 0x11a) = 0x100;
+    *(code **)(param_3 + 0x100) = FUN_800176e4;
+    *(undefined *)(param_3 + 0x11d) = 2;
+    *(undefined *)(param_3 + 0x11c) = 1;
+    *(undefined2 *)(param_3 + 0x11e) = 3;
+    *(ushort *)(param_3 + 0x116) = (ushort)bVar1;
+    FUN_80016dc0(param_3 + 0x100);
+  }
+  return param_1 + 3;
+}
+
+
+
+byte * FUN_8001676c(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  int iVar3;
+  undefined *puVar4;
+  uint uVar5;
+  
+  bVar1 = param_1[2];
+  bVar2 = *param_1;
+  if (((char)param_1[1] != 0) && (bVar2 != 0)) {
+    uVar5 = bVar1 & 0xf;
+    iVar3 = FUN_80016bf8((char)param_1[1] * -0x1000000,(ushort)bVar2,(short)uVar5);
+    *(int *)(param_3 + 0x10c) = iVar3;
+    *(undefined2 *)(param_3 + 0x11a) = 0x100;
+    *(ushort *)(param_3 + 0x112) = (ushort)bVar2;
+    *(undefined2 *)(param_3 + 0x116) = 0;
+    puVar4 = (&PTR_FUN_80028f54)[uVar5];
+    *(char *)(param_3 + 0x11d) = (char)uVar5;
+    *(undefined *)(param_3 + 0x11c) = 1;
+    *(ushort *)(param_3 + 0x11e) = (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
+    *(undefined **)(param_3 + 0x100) = puVar4;
+    FUN_80016dc0(param_3 + 0x100);
+  }
+  return param_1 + 3;
+}
+
+
+
+byte * FUN_80016834(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  undefined2 uVar1;
+  uint uVar2;
+  
+  uVar2 = *param_1 + 1 & 0xff;
+  if (uVar2 != 0) {
+    uVar1 = (undefined2)(0x100 / uVar2);
+    *(undefined2 *)(param_3 + 0x11a) = uVar1;
+    *(undefined2 *)(param_3 + 0x118) = uVar1;
+  }
+  return param_1 + 1;
+}
+
+
+
+undefined4 FUN_8001686c(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 0x11e) = *(ushort *)(param_3 + 0x11e) | 1;
+  return param_1;
+}
+
+
+
+undefined4 FUN_80016884(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 0x11e) = *(ushort *)(param_3 + 0x11e) & 0xfffe;
+  return param_1;
+}
+
+
+
+byte * Balance(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 0x92) = (ushort)*param_1 << 8;
+  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x100;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_800168bc(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 0x92) =
+       *(short *)(param_3 + 0x92) + (short)(((uint)*param_1 << 0x18) >> 0x10) & 0x7fff;
+  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x100;
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_800168ec(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  int iVar2;
+  
+  bVar1 = *param_1;
+  iVar2 = (int)(char)param_1[1] - ((int)((uint)*(ushort *)(param_3 + 0x92) << 0x10) >> 0x18);
+  if ((bVar1 != 0) && (iVar2 != 0)) {
+    *(ushort *)(param_3 + 0xaa) = (ushort)bVar1;
+    *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) | 0x10;
+    *(short *)(param_3 + 0xa4) = (short)((iVar2 * 0x100) / (int)(uint)bVar1);
+  }
+  return param_1 + 2;
+}
+
+
+
+byte * FUN_8001693c(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  undefined2 uVar1;
+  uint uVar2;
+  
+  uVar2 = *param_1 + 1 & 0xff;
+  if (uVar2 != 0) {
+    uVar1 = (undefined2)(0x100 / uVar2);
+    *(undefined2 *)(param_3 + 0x13a) = uVar1;
+    *(undefined2 *)(param_3 + 0x138) = uVar1;
+  }
+  return param_1 + 1;
+}
+
+
+
+byte * FUN_80016974(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  int iVar2;
+  
+  bVar1 = *param_1;
+  if (((char)param_1[1] != 0) && (bVar1 != 0)) {
+    iVar2 = FUN_80016bf8((int)(char)param_1[1] << 0x18,(ushort)bVar1,3);
+    *(int *)(param_3 + 300) = iVar2;
+    *(ushort *)(param_3 + 0x132) = (ushort)bVar1;
+    bVar1 = param_1[2];
+    *(undefined2 *)(param_3 + 0x13a) = 0x100;
+    *(code **)(param_3 + 0x120) = FUN_80017744;
+    *(undefined *)(param_3 + 0x13d) = 3;
+    *(undefined *)(param_3 + 0x13c) = 2;
+    *(undefined2 *)(param_3 + 0x13e) = 3;
+    *(ushort *)(param_3 + 0x136) = (ushort)bVar1;
+    FUN_80016dc0(param_3 + 0x120);
+  }
+  return param_1 + 3;
+}
+
+
+
+byte * FUN_80016a14(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  byte bVar2;
+  int iVar3;
+  undefined *puVar4;
+  uint uVar5;
+  
+  bVar1 = param_1[2];
+  bVar2 = *param_1;
+  if (((char)param_1[1] != 0) && (bVar2 != 0)) {
+    uVar5 = bVar1 & 0xf;
+    iVar3 = FUN_80016bf8((int)(char)param_1[1] << 0x18,(ushort)bVar2,(short)uVar5);
+    *(int *)(param_3 + 300) = iVar3;
+    *(undefined2 *)(param_3 + 0x13a) = 0x100;
+    *(ushort *)(param_3 + 0x132) = (ushort)bVar2;
+    *(undefined2 *)(param_3 + 0x136) = 0;
+    puVar4 = (&PTR_FUN_80028f54)[uVar5];
+    *(char *)(param_3 + 0x13d) = (char)uVar5;
+    *(undefined *)(param_3 + 0x13c) = 2;
+    *(ushort *)(param_3 + 0x13e) = (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
+    *(undefined **)(param_3 + 0x120) = puVar4;
+    FUN_80016dc0(param_3 + 0x120);
+  }
+  return param_1 + 3;
+}
+
+
+
+undefined4 FUN_80016ad8(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 0x13e) = *(ushort *)(param_3 + 0x13e) | 1;
+  return param_1;
+}
+
+
+
+undefined4 FUN_80016af0(undefined4 param_1,undefined4 param_2,int param_3)
+
+{
+  *(ushort *)(param_3 + 0x13e) = *(ushort *)(param_3 + 0x13e) & 0xfffe;
+  return param_1;
+}
+
+
+
+byte * FUN_80016b08(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  undefined4 *puVar2;
+  
+  *(ushort *)(param_3 + 0xae) = (ushort)*param_1;
+  bVar1 = param_1[1];
+  puVar2 = (undefined4 *)(param_3 + (uint)*(ushort *)(param_3 + 0xae) * 0x20 + 0xe0);
+  *(byte *)((int)puVar2 + 0x1d) = bVar1 & 0xf;
+  *puVar2 = (&PTR_FUN_80028f54)[*(byte *)((int)puVar2 + 0x1d)];
+  if ((bVar1 & 0x10) == 0) {
+    *(undefined2 *)((int)puVar2 + 0x1e) = 2;
+  }
+  else {
+    *(undefined2 *)((int)puVar2 + 0x1e) = 0;
+  }
+  bVar1 = param_1[2];
+  *(undefined2 *)((int)puVar2 + 0x1a) = 0x100;
+  *(undefined2 *)((int)puVar2 + 0x16) = 0;
+  *(byte *)(puVar2 + 7) = bVar1;
+  return param_1 + 3;
+}
+
+
+
+byte * FUN_80016b80(byte *param_1,undefined4 param_2,int param_3)
+
+{
+  byte bVar1;
+  int iVar2;
+  int iVar3;
+  
+  bVar1 = *param_1;
+  iVar3 = param_3 + (uint)*(ushort *)(param_3 + 0xae) * 0x20 + 0xe0;
+  iVar2 = FUN_80016bf8((int)(char)param_1[1] << 0x18 | (uint)param_1[2] << 0x10,(ushort)bVar1,
+                       (ushort)*(byte *)(iVar3 + 0x1d));
+  *(int *)(iVar3 + 0xc) = iVar2;
+  *(ushort *)(iVar3 + 0x12) = (ushort)bVar1;
+  return param_1 + 3;
 }
 
 
@@ -7513,51 +10564,51 @@ void Set_Instrument(int param_1,ushort *param_2)
 
 
 
-void FUN_80017098(ushort param_1,MusicDataHeader *param_2)
+void FUN_80017098(ushort param_1,MusDataAll *MusData)
 
 {
-  undefined2 *puVar1;
-  uint uVar2;
-  ushort *puVar3;
-  MusicDataHeader *pMVar4;
+  ushort *puVar1;
+  uint numChannels;
+  ushort *puVar2;
+  MusicChannelData *ChannelData;
   
-  pMVar4 = param_2 + 1;
-  uVar2 = (uint)(byte)param_2->field_0x16;
-  puVar3 = &param_2[1].field1_0x2;
+  ChannelData = MusData->ChannelData;
+  numChannels = (uint)*(byte *)&(MusData->HeaderData).NumChannels;
+  puVar2 = &MusData->ChannelData[0].field1_0x2;
   do {
-    puVar1 = &pMVar4->field0_0x0;
-    pMVar4 = (MusicDataHeader *)&pMVar4[1].field_0xa8;
+    puVar1 = &ChannelData->hasSound;
+    ChannelData = ChannelData + 1;
     if (*puVar1 != 0) {
-      *puVar3 = param_1 | *puVar3;
+      *puVar2 = param_1 | *puVar2;
     }
-    uVar2 = uVar2 - 1;
-    puVar3 = puVar3 + 0xb0;
-  } while (uVar2 != 0);
+    numChannels = numChannels - 1;
+    puVar2 = puVar2 + 0xb0;
+  } while (numChannels != 0);
   return;
 }
 
 
 
-void FUN_800170d8(int param_1,ushort param_2)
+void FUN_800170d8(MusDataAll *MusData,mus_voiceChannelFunc param_2)
 
 {
-  short sVar1;
-  uint uVar2;
-  ushort *puVar3;
-  short *psVar4;
+  ushort *puVar1;
+  uint NumChannels;
+  mus_voiceChannelFunc *pmVar2;
+  MusicChannelData *ChannelData;
   
-  psVar4 = (short *)(param_1 + 0xb8);
-  uVar2 = (uint)*(byte *)(param_1 + 0x16);
-  puVar3 = (ushort *)(param_1 + 0xbc);
+  ChannelData = MusData->ChannelData;
+  NumChannels = (uint)*(byte *)&(MusData->HeaderData).NumChannels;
+  pmVar2 = &MusData->ChannelData[0].channelFunc;
   do {
-    sVar1 = *psVar4;
-    psVar4 = psVar4 + 0xb0;
-    if (sVar1 != 0) {
-      *puVar3 = *puVar3 | param_2;
+    puVar1 = &ChannelData->hasSound;
+    ChannelData = ChannelData + 1;
+    if (*puVar1 != 0) {
+      *pmVar2 = *pmVar2 | param_2;
     }
-    uVar2 = uVar2 - 1;
-    puVar3 = puVar3 + 0xb0;
-  } while (uVar2 != 0);
+    NumChannels = NumChannels - 1;
+    pmVar2 = pmVar2 + 0xb0;
+  } while (NumChannels != 0);
   return;
 }
 
@@ -7579,7 +10630,7 @@ void FUN_80017118(int param_1,ushort *param_2,short param_3)
   uint uVar11;
   
   if ((*(ushort *)(param_1 + 0x10) & 2) == 0) {
-    uVar11 = ~(PitchLFO_onlyInclude | DAT_80032a20);
+    uVar11 = ~(PitchLFO_onlyInclude | PausedMusicChannels);
   }
   else {
     uVar11 = 0xffffffff;
@@ -7744,6 +10795,178 @@ LAB_800175e0:
 
 
 
+void FUN_80017634(int param_1)
+
+{
+  *(ushort *)(param_1 + 0x1e) = *(ushort *)(param_1 + 0x1e) & 0xfffe;
+  return;
+}
+
+
+
+undefined4 FUN_80017648(int param_1)
+
+{
+  short sVar1;
+  undefined4 uVar2;
+  
+  sVar1 = *(short *)(param_1 + 0x10) + -1;
+  *(short *)(param_1 + 0x10) = sVar1;
+  uVar2 = 0;
+  if (sVar1 == 0) {
+    *(undefined2 *)(param_1 + 0x10) = *(undefined2 *)(param_1 + 0x12);
+    if (*(int *)(param_1 + 4) == 0) {
+      uVar2 = *(undefined4 *)(param_1 + 0xc);
+    }
+    *(undefined4 *)(param_1 + 4) = uVar2;
+  }
+  return *(undefined4 *)(param_1 + 4);
+}
+
+
+
+undefined4 FUN_80017690(int param_1)
+
+{
+  short sVar1;
+  int iVar2;
+  
+  sVar1 = *(short *)(param_1 + 0x10) + -1;
+  *(short *)(param_1 + 0x10) = sVar1;
+  if (sVar1 == 0) {
+    iVar2 = *(int *)(param_1 + 0xc);
+    *(undefined2 *)(param_1 + 0x10) = *(undefined2 *)(param_1 + 0x12);
+    if ((*(ushort *)(param_1 + 0x1e) & 8) != 0) {
+      iVar2 = -iVar2;
+    }
+    *(int *)(param_1 + 4) = iVar2;
+    *(ushort *)(param_1 + 0x1e) = *(ushort *)(param_1 + 0x1e) ^ 8;
+  }
+  return *(undefined4 *)(param_1 + 4);
+}
+
+
+
+void FUN_800176e4(int param_1)
+
+{
+  short sVar1;
+  int iVar2;
+  
+  sVar1 = *(short *)(param_1 + 0x10) + -1;
+  *(short *)(param_1 + 0x10) = sVar1;
+  if (sVar1 == 0) {
+    iVar2 = *(int *)(param_1 + 0xc);
+    *(undefined2 *)(param_1 + 0x10) = *(undefined2 *)(param_1 + 0x12);
+    if ((*(ushort *)(param_1 + 0x1e) & 8) != 0) {
+      iVar2 = -iVar2;
+    }
+    *(int *)(param_1 + 8) = iVar2;
+    *(ushort *)(param_1 + 0x1e) = *(ushort *)(param_1 + 0x1e) ^ 8;
+  }
+  *(int *)(param_1 + 4) = *(int *)(param_1 + 4) + *(int *)(param_1 + 8);
+  return;
+}
+
+
+
+void FUN_80017744(int param_1)
+
+{
+  ushort uVar1;
+  short sVar2;
+  
+  uVar1 = *(ushort *)(param_1 + 0x1e);
+  sVar2 = *(short *)(param_1 + 0x10) + -1;
+  *(short *)(param_1 + 0x10) = sVar2;
+  if (sVar2 == 0) {
+    *(undefined2 *)(param_1 + 0x10) = *(undefined2 *)(param_1 + 0x12);
+    sVar2 = *(short *)(param_1 + 0x10);
+    if ((uVar1 & 4) != 0) {
+      sVar2 = sVar2 << 1;
+    }
+    *(short *)(param_1 + 0x10) = sVar2;
+    *(int *)(param_1 + 8) = *(int *)(param_1 + 0xc);
+    if ((uVar1 & 8) != 0) {
+      *(int *)(param_1 + 8) = -*(int *)(param_1 + 0xc);
+    }
+    *(ushort *)(param_1 + 0x1e) = (uVar1 | 4) ^ 8;
+  }
+  *(int *)(param_1 + 4) = *(int *)(param_1 + 4) + *(int *)(param_1 + 8);
+  return;
+}
+
+
+
+undefined4 FUN_800177c0(int param_1)
+
+{
+  short sVar1;
+  
+  sVar1 = *(short *)(param_1 + 0x10) + -1;
+  *(short *)(param_1 + 0x10) = sVar1;
+  if (sVar1 == 0) {
+    *(undefined4 *)(param_1 + 4) = 0;
+    *(undefined2 *)(param_1 + 0x10) = *(undefined2 *)(param_1 + 0x12);
+  }
+  else {
+    *(int *)(param_1 + 4) = *(int *)(param_1 + 4) + *(int *)(param_1 + 0xc);
+  }
+  return *(undefined4 *)(param_1 + 4);
+}
+
+
+
+undefined4 FUN_8001780c(int param_1)
+
+{
+  short sVar1;
+  uint uVar2;
+  
+  FUN_800178f4();
+  sVar1 = *(short *)(param_1 + 0x10) + -1;
+  *(short *)(param_1 + 0x10) = sVar1;
+  if (sVar1 == 0) {
+    *(undefined2 *)(param_1 + 0x10) = *(undefined2 *)(param_1 + 0x12);
+    uVar2 = FUN_800178f4();
+    *(uint *)(param_1 + 4) = (*(int *)(param_1 + 0xc) >> 0xf) * uVar2;
+  }
+  return *(undefined4 *)(param_1 + 4);
+}
+
+
+
+undefined4 FUN_80017878(int param_1)
+
+{
+  short sVar1;
+  uint uVar2;
+  
+  sVar1 = *(short *)(param_1 + 0x10) + -1;
+  *(short *)(param_1 + 0x10) = sVar1;
+  if (sVar1 == 0) {
+    *(undefined2 *)(param_1 + 0x10) = *(undefined2 *)(param_1 + 0x12);
+    uVar2 = FUN_800178f4();
+    *(uint *)(param_1 + 4) = (*(int *)(param_1 + 0xc) >> 0xe) * uVar2 - *(int *)(param_1 + 0xc);
+  }
+  return *(undefined4 *)(param_1 + 4);
+}
+
+
+
+// Possible GS_101.OBJ/GsSetNearClip
+// Possible GS_102.OBJ/GsSetFarClip
+// Possible GS_124.OBJ/GsSetWorkBase
+
+void FUN_800178e4(undefined4 param_1)
+
+{
+  DAT_80032a18 = param_1;
+  return;
+}
+
+
+
 uint FUN_800178f4(void)
 
 {
@@ -7765,18 +10988,18 @@ void Suzuki_Initialisation_Func(ushort param_1)
     SetGlobalMusicVariables((MusicDataHeader *)&GlobalMusicDataUnmoved,0x8000);
     FUN_80014544();
     DAT_80032a18 = 0x12345678;
-    LastOpenedMus = (MusicDataHeader *)0x0;
-    FirstMUS = (MusicDataHeader *)0x0;
+    LastOpenedMus = (MusDataAll *)0x0;
+    FirstMUS = (MusDataAll *)0x0;
     DAT_80032a00 = 0;
     DAT_80032a44 = 0;
     PitchLFO_onlyInclude = 0;
-    DAT_80032a10 = 0;
-    DAT_80032a14 = 0;
+    acc_inactiveChannels = 0;
+    acc_activeChannels = 0;
     DAT_80032a08 = 0;
-    DAT_80032a20 = 0;
+    PausedMusicChannels = 0;
     DAT_80032a1c = 0;
     DAT_80032a58 = 0;
-    FirstMUS = FUN_8001363c();
+    FirstMUS = (MusDataAll *)FUN_8001363c();
     SuzukiSpuAttr.mvolmode.left = 0;
     SuzukiSpuAttr.mvolmode.right = 0;
     SuzukiSpuAttr.mask = 0xc;
@@ -7793,7 +11016,7 @@ void Suzuki_Initialisation_Func(ushort param_1)
     ExitCriticalSection();
     InitSoundType(1);
     GlobalReverb.mode = -1;
-    SetReverbParam(4,(undefined *)0x0,0,0);
+    SetReverbParam(4,0,0,0);
     FUN_800183c0(0,1);
     FUN_80018240(0x3fff,0);
     CalculateChangeInVolume(0x6400,0);
@@ -7825,7 +11048,7 @@ void SetAllVoicesReleaseShift6(void)
       VoiceID = VoiceID + 1;
     } while (VoiceID < 0x18);
     SetVoicestoRelease(0,0xffffff);
-    SetReverbParam(0,(undefined *)0x0,0,0);
+    SetReverbParam(0,0,0,0);
     suzukialways0 = 0;
   }
   return;
@@ -7860,30 +11083,30 @@ void Disable_RootCounter2_Event(void)
 undefined4 * Put_WAVESET_SPU(SoundFontHeader *SoundFontPtr)
 
 {
-  uint uVar1;
-  MusicDataHeader *pMVar2;
-  MusicDataHeader *pMVar3;
-  int iVar4;
-  MusicDataHeader **ppMVar5;
+  undefined4 *WaveFontPtr;
+  MusDataAll *pMVar1;
+  MusDataAll *pMVar2;
+  int iVar3;
+  MusDataAll **ppMVar4;
   
-  uVar1 = Call_SpuMalloc(SoundFontPtr->waveFontSize);
+  WaveFontPtr = Call_SpuMalloc(SoundFontPtr->waveFontSize);
   SPU_DataTransferController
-            (uVar1,(undefined2 *)(SoundFontPtr->FileDesignation + SoundFontPtr->field11_0x18),
+            (WaveFontPtr,(undefined2 *)(SoundFontPtr->FileDesignation + SoundFontPtr->field11_0x18),
              SoundFontPtr->waveFontSize,0x11);
-  pMVar2 = FindSpaceForSMDMUS(SoundFontPtr->waveFontStart);
-  FUN_8001442c((undefined4 *)pMVar2,(undefined4 *)SoundFontPtr,SoundFontPtr->waveFontStart);
-  iVar4 = DAT_80032a44;
-  ppMVar5 = (MusicDataHeader **)&DAT_80032a44;
-  *(uint *)&pMVar2->field_0x28 = uVar1;
-  while (iVar4 != 0) {
-    pMVar3 = *ppMVar5;
-    ppMVar5 = (MusicDataHeader **)&pMVar3->field_0x2c;
-    iVar4 = *(int *)&pMVar3->field_0x2c;
+  pMVar1 = FindSpaceForSMDMUS(SoundFontPtr->waveFontStart);
+  FUN_8001442c((undefined4 *)pMVar1,(undefined4 *)SoundFontPtr,SoundFontPtr->waveFontStart);
+  iVar3 = DAT_80032a44;
+  ppMVar4 = (MusDataAll **)&DAT_80032a44;
+  *(undefined4 **)&(pMVar1->HeaderData).field_0x28 = WaveFontPtr;
+  while (iVar3 != 0) {
+    pMVar2 = *ppMVar4;
+    ppMVar4 = (MusDataAll **)&(pMVar2->HeaderData).field_0x2c;
+    iVar3 = *(int *)&(pMVar2->HeaderData).field_0x2c;
   }
-  *ppMVar5 = pMVar2;
-  *(undefined4 *)&pMVar2->field_0x2c = 0;
+  *ppMVar4 = pMVar1;
+  *(undefined4 *)&(pMVar1->HeaderData).field_0x2c = 0;
   Wait_for_SPU_transfer(0x10);
-  return (undefined4 *)pMVar2;
+  return (undefined4 *)pMVar1;
 }
 
 
@@ -7926,7 +11149,7 @@ void FUN_80017eb8(int param_1)
       iVar3 = iVar1;
     } while (iVar2 != 0);
     if (iVar2 != 0) {
-      FUN_80012914(param_1);
+      Pause_SpecificMUS(param_1);
       if (iVar3 == 0) {
         DAT_80032a00 = *(int *)(param_1 + 0x10);
       }
@@ -7944,7 +11167,7 @@ void InitSoundType(int soundType)
 
 {
   SUZUKIInstr SoundInstr;
-  MusicDataHeader *MusToPush;
+  MusDataAll *MusToPush;
   
   SoundInstr = SuzukiInstrHalf & ~Sound_Type;
   if (soundType == 1) {
@@ -7967,8 +11190,8 @@ void InitSoundType(int soundType)
   Commit_VolChange();
   SpuSetReverbModeParam(&GlobalReverb);
   GlobalReverb.mask = 0;
-  for (MusToPush = LastOpenedMus; MusToPush != (MusicDataHeader *)0x0;
-      MusToPush = *(MusicDataHeader **)MusToPush) {
+  for (MusToPush = LastOpenedMus; MusToPush != (MusDataAll *)0x0;
+      MusToPush = *(MusDataAll **)&MusToPush->HeaderData) {
     FUN_80017098(0x100,MusToPush);
   }
   if ((SuzukiInstrHalf & Lock_Volume) != Off) {
@@ -8024,16 +11247,16 @@ void PutSoundType(int Cdl_Volume)
 
 
 
-void SetReverbParam(uint mode,undefined *param_2,long delay,long feedback)
+void SetReverbParam(uint mode,short VolumeDepth,long delay,long feedback)
 
 {
   SpuReverbAttr ReverbParamTemp;
   
   SpuGetReverbModeParam(&ReverbParamTemp);
   if ((-1 < (int)mode) || (mode = GlobalReverb.mode, ReverbParamTemp.mode != GlobalReverb.mode)) {
-    SuzukiDepthVol = (short)param_2;
     GlobalReverb.delay = delay;
     GlobalReverb.feedback = feedback;
+    SuzukiDepthVol = VolumeDepth;
     if ((int)mode < 10) {
       if ((ReverbParamTemp.mode != mode) || (mode == 0)) {
         SpuSetReverb(0);
@@ -8186,7 +11409,7 @@ undefined4 spuInterruptedRun(void)
 
 
 
-void SPU_DataTransferController(uint param_1,undefined2 *param_2,uint param_3,uint param_4)
+void SPU_DataTransferController(undefined4 *param_1,undefined2 *Data,uint param_3,uint param_4)
 
 {
   long lVar1;
@@ -8196,15 +11419,15 @@ void SPU_DataTransferController(uint param_1,undefined2 *param_2,uint param_3,ui
   Wait_for_SPU_transfer(0x10);
   SuzukiInstrHalf = SuzukiInstrHalf | SPUTransfering;
   SpuSetTransferMode(0);
-  FUN_8001afc4(param_1);
+  FUN_8001afc4((uint)param_1);
   switch(param_4 & 0xf) {
   case 1:
     SuzukiInstrHalf = SuzukiInstrHalf | (SPUTransfering|SPUWriting);
-    FUN_8001af64(param_2,param_3,uVar2);
+    SpuWrite(Data,param_3,uVar2);
     break;
   case 2:
     SuzukiInstrHalf = SuzukiInstrHalf | (SPUTransfering|SPUReading);
-    FUN_80019dd8((uint)param_2,param_3,uVar2);
+    SpuRead((uint)Data,param_3,uVar2);
     break;
   case 3:
     lVar1 = 0;
@@ -8213,7 +11436,7 @@ void SPU_DataTransferController(uint param_1,undefined2 *param_2,uint param_3,ui
     lVar1 = 5;
 LAB_80018618:
     SuzukiInstrHalf = SuzukiInstrHalf | (SPUTransfering|SPUReading);
-    lVar1 = SpuReadDecodedData((SpuDecodedData *)param_2,lVar1);
+    lVar1 = SpuReadDecodedData((SpuDecodedData *)Data,lVar1);
     DAT_80032a40 = (undefined2)lVar1;
   }
   return;
@@ -8242,24 +11465,24 @@ int Wait_for_SPU_transfer(uint param_1)
 // Possible UT_ROFF.OBJ/SsUtReverbOff
 // Possible S_I.OBJ/SpuInit
 
-void FUN_800186c4(void)
+void SsUtReverbOff(void)
 
 {
-  FUN_800186e4(0);
+  SsUtReverb(0);
   return;
 }
 
 
 
-void FUN_800186e4(int param_1)
+void SsUtReverb(int VoiceResetFlag)
 
 {
   undefined2 *puVar1;
   int iVar2;
   
   ResetCallback();
-  FUN_80018858(param_1);
-  if (param_1 == 0) {
+  HardResetSPU(VoiceResetFlag);
+  if (VoiceResetFlag == 0) {
     iVar2 = 0x17;
     puVar1 = &DAT_8002a93a;
     do {
@@ -8277,7 +11500,7 @@ void FUN_800186e4(int param_1)
   DAT_8002a8fc = 0;
   DAT_8002a900 = 0;
   DAT_8002a8ec = DAT_8002adac;
-  FUN_800191c4(0xd1,DAT_8002adac,0);
+  SetVoiceVolumeLeftRight(0xd1,DAT_8002adac,0);
   MaxAllocCount = 0;
   DAT_8002ada4 = 0;
   SPUMemManageTableTop = 0;
@@ -8308,94 +11531,94 @@ void Initialise_SPU_Event(void)
 
 
 
-undefined4 FUN_80018858(int param_1)
+undefined4 HardResetSPU(int VoiceResetFlag)
 
 {
-  undefined *puVar1;
-  undefined *puVar2;
-  uint uVar3;
-  int iVar4;
-  undefined2 *puVar5;
+  uint t;
+  int i;
+  undefined2 *IOVolumePorts;
+  undefined *SPUIOPort;
+  undefined *SPUVoicePort;
   
   *(uint *)PTR_DMA_DPCR_8002ad54 = *(uint *)PTR_DMA_DPCR_8002ad54 | 0xb0000;
-  puVar1 = SPUIOPortAddr;
+  SPUIOPort = SPUIOPortAddr;
   DAT_8002ad60 = 0;
   DAT_8002ad64 = 0;
   CurrentSpuDataTransferInstr = 0;
   *(undefined2 *)(SPUIOPortAddr + 0x180) = 0;
-  *(undefined2 *)(puVar1 + 0x182) = 0;
-  *(undefined2 *)(puVar1 + 0x1aa) = 0;
-  FUN_800193a4();
-  puVar1 = SPUIOPortAddr;
+  *(undefined2 *)(SPUIOPort + 0x182) = 0;
+  *(undefined2 *)(SPUIOPort + 0x1aa) = 0;
+  HoldCPU240();
+  SPUIOPort = SPUIOPortAddr;
   *(undefined2 *)(SPUIOPortAddr + 0x180) = 0;
-  *(undefined2 *)(puVar1 + 0x182) = 0;
-  puVar2 = SPUIOPortAddr;
-  if ((*(ushort *)(puVar1 + 0x1ae) & 0x7ff) != 0) {
-    uVar3 = 1;
+  *(undefined2 *)(SPUIOPort + 0x182) = 0;
+  SPUVoicePort = SPUIOPortAddr;
+  if ((*(ushort *)(SPUIOPort + 0x1ae) & 0x7ff) != 0) {
+    t = 1;
     do {
-      if (0xf00 < uVar3) {
+      if (0xf00 < t) {
                     // WARNING: Subroutine does not return
-        printf(s_SPU_T_O___s__80010044,s_wait__reset__80010054);
+        printf(_s_SPU_T_O___s__,_s_wait__reset__);
       }
-      uVar3 = uVar3 + 1;
+      t = t + 1;
     } while ((*(ushort *)(SPUIOPortAddr + 0x1ae) & 0x7ff) != 0);
   }
-  iVar4 = 0;
-  puVar5 = &DAT_80037080;
+  i = 0;
+  IOVolumePorts = &DAT_80037080;
   DAT_8002ad68 = 2;
-  DAT_8002ad6c = 3;
-  DAT_8002ad70 = 8;
+  VolumeExpFactor = 3;
+  VolumeScaleFactor = 8;
   DAT_8002ad74 = 7;
   *(undefined2 *)(SPUIOPortAddr + 0x1ac) = 4;
-  *(undefined2 *)(puVar2 + 0x184) = 0;
-  *(undefined2 *)(puVar2 + 0x186) = 0;
-  *(undefined2 *)(puVar2 + 0x18c) = 0xffff;
-  *(undefined2 *)(puVar2 + 0x18e) = 0xffff;
-  *(undefined2 *)(puVar2 + 0x198) = 0;
-  *(undefined2 *)(puVar2 + 0x19a) = 0;
+  *(undefined2 *)(SPUVoicePort + 0x184) = 0;
+  *(undefined2 *)(SPUVoicePort + 0x186) = 0;
+  *(undefined2 *)(SPUVoicePort + 0x18c) = 0xffff;
+  *(undefined2 *)(SPUVoicePort + 0x18e) = 0xffff;
+  *(undefined2 *)(SPUVoicePort + 0x198) = 0;
+  *(undefined2 *)(SPUVoicePort + 0x19a) = 0;
   do {
-    *puVar5 = 0;
-    puVar1 = SPUIOPortAddr;
-    iVar4 = iVar4 + 1;
-    puVar5 = puVar5 + 1;
-  } while (iVar4 < 10);
-  if (param_1 == 0) {
+    *IOVolumePorts = 0;
+    SPUIOPort = SPUIOPortAddr;
+    i = i + 1;
+    IOVolumePorts = IOVolumePorts + 1;
+  } while (i < 10);
+  if (VoiceResetFlag == 0) {
     CurrentSpuDataTransferInstr = 0x200;
     *(undefined2 *)(SPUIOPortAddr + 400) = 0;
-    *(undefined2 *)(puVar1 + 0x192) = 0;
-    *(undefined2 *)(puVar1 + 0x194) = 0;
-    *(undefined2 *)(puVar1 + 0x196) = 0;
-    *(undefined2 *)(puVar1 + 0x1b0) = 0;
-    *(undefined2 *)(puVar1 + 0x1b2) = 0;
-    *(undefined2 *)(puVar1 + 0x1b4) = 0;
-    *(undefined2 *)(puVar1 + 0x1b6) = 0;
+    *(undefined2 *)(SPUIOPort + 0x192) = 0;
+    *(undefined2 *)(SPUIOPort + 0x194) = 0;
+    *(undefined2 *)(SPUIOPort + 0x196) = 0;
+    *(undefined2 *)(SPUIOPort + 0x1b0) = 0;
+    *(undefined2 *)(SPUIOPort + 0x1b2) = 0;
+    *(undefined2 *)(SPUIOPort + 0x1b4) = 0;
+    *(undefined2 *)(SPUIOPort + 0x1b6) = 0;
     FUN_80018aec((undefined2 *)&DAT_8002ad84,0x10);
-    iVar4 = 0;
-    puVar5 = (undefined2 *)SPUIOPortAddr;
+    i = 0;
+    IOVolumePorts = (undefined2 *)SPUIOPortAddr;
     do {
-      *puVar5 = 0;
-      puVar5[1] = 0;
-      puVar5[2] = 0x3fff;
-      puVar5[3] = 0x200;
-      puVar5[4] = 0;
-      puVar5[5] = 0;
-      puVar1 = SPUIOPortAddr;
-      iVar4 = iVar4 + 1;
-      puVar5 = puVar5 + 8;
-    } while (iVar4 < 0x18);
+      *IOVolumePorts = 0;
+      IOVolumePorts[1] = 0;
+      IOVolumePorts[2] = 0x3fff;
+      IOVolumePorts[3] = 0x200;
+      IOVolumePorts[4] = 0;
+      IOVolumePorts[5] = 0;
+      SPUIOPort = SPUIOPortAddr;
+      i = i + 1;
+      IOVolumePorts = IOVolumePorts + 8;
+    } while (i < 0x18);
     *(undefined2 *)(SPUIOPortAddr + 0x188) = 0xffff;
-    *(undefined2 *)(puVar1 + 0x18a) = 0xff;
-    FUN_800193a4();
-    FUN_800193a4();
-    FUN_800193a4();
-    FUN_800193a4();
-    puVar1 = SPUIOPortAddr;
+    *(undefined2 *)(SPUIOPort + 0x18a) = 0xff;
+    HoldCPU240();
+    HoldCPU240();
+    HoldCPU240();
+    HoldCPU240();
+    SPUIOPort = SPUIOPortAddr;
     *(undefined2 *)(SPUIOPortAddr + 0x18c) = 0xffff;
-    *(undefined2 *)(puVar1 + 0x18e) = 0xff;
-    FUN_800193a4();
-    FUN_800193a4();
-    FUN_800193a4();
-    FUN_800193a4();
+    *(undefined2 *)(SPUIOPort + 0x18e) = 0xff;
+    HoldCPU240();
+    HoldCPU240();
+    HoldCPU240();
+    HoldCPU240();
   }
   DAT_8002ad78 = 1;
   *(undefined2 *)(SPUIOPortAddr + 0x1aa) = 0xc000;
@@ -8409,84 +11632,117 @@ undefined4 FUN_80018858(int param_1)
 void FUN_80018aec(undefined2 *param_1,uint param_2)
 
 {
-  ushort uVar1;
-  undefined2 uVar2;
-  ushort uVar3;
-  bool bVar4;
-  undefined *puVar5;
-  int iVar6;
-  uint uVar7;
-  uint uVar8;
+  undefined2 uVar1;
+  bool bVar2;
+  int i2;
+  uint uVar3;
+  uint t;
+  undefined *SPUIoPort;
+  ushort SPUStatus;
+  ushort SpuStatusReport;
   
-  uVar1 = *(ushort *)(SPUIOPortAddr + 0x1ae);
+  SPUStatus = *(ushort *)(SPUIOPortAddr + 0x1ae);
   *(undefined2 *)(SPUIOPortAddr + 0x1a6) = CurrentSpuDataTransferInstr;
-  FUN_800193a4();
-  bVar4 = param_2 < 0x41;
+  HoldCPU240();
+  bVar2 = param_2 < 0x41;
   if (param_2 != 0) {
     do {
-      puVar5 = SPUIOPortAddr;
-      uVar8 = param_2;
-      if (!bVar4) {
-        uVar8 = 0x40;
+      SPUIoPort = SPUIOPortAddr;
+      t = param_2;
+      if (!bVar2) {
+        t = 0x40;
       }
-      iVar6 = 0;
-      if (0 < (int)uVar8) {
+      i2 = 0;
+      if (0 < (int)t) {
         do {
-          uVar2 = *param_1;
+          uVar1 = *param_1;
           param_1 = param_1 + 1;
-          iVar6 = iVar6 + 2;
-          *(undefined2 *)(puVar5 + 0x1a8) = uVar2;
-        } while (iVar6 < (int)uVar8);
+          i2 = i2 + 2;
+          *(undefined2 *)(SPUIoPort + 0x1a8) = uVar1;
+        } while (i2 < (int)t);
       }
       *(ushort *)(SPUIOPortAddr + 0x1aa) = *(ushort *)(SPUIOPortAddr + 0x1aa) & 0xffcf | 0x10;
-      FUN_800193a4();
+      HoldCPU240();
       if ((*(ushort *)(SPUIOPortAddr + 0x1ae) & 0x400) != 0) {
-        uVar7 = 1;
+        uVar3 = 1;
         do {
-          if (0xf00 < uVar7) {
+          if (0xf00 < uVar3) {
                     // WARNING: Subroutine does not return
-            printf(s_SPU_T_O___s__80010044,s_wait__wrdy_H__>_L__80010064);
+            printf(_s_SPU_T_O___s__,_s_wait__wrdy_H__>_L__);
           }
-          uVar7 = uVar7 + 1;
+          uVar3 = uVar3 + 1;
         } while ((*(ushort *)(SPUIOPortAddr + 0x1ae) & 0x400) != 0);
       }
-      param_2 = param_2 - uVar8;
-      FUN_800193a4();
-      FUN_800193a4();
-      bVar4 = param_2 < 0x41;
+      param_2 = param_2 - t;
+      HoldCPU240();
+      HoldCPU240();
+      bVar2 = param_2 < 0x41;
     } while (param_2 != 0);
   }
-  puVar5 = SPUIOPortAddr;
+  SPUIoPort = SPUIOPortAddr;
   *(ushort *)(SPUIOPortAddr + 0x1aa) = *(ushort *)(SPUIOPortAddr + 0x1aa) & 0xffcf;
-  uVar3 = *(ushort *)(puVar5 + 0x1ae);
-  uVar8 = 1;
+  SpuStatusReport = *(ushort *)(SPUIoPort + 0x1ae);
+  t = 1;
   while( true ) {
-    if ((uVar3 & 0x7ff) == (uVar1 & 0x7ff)) {
+    if ((SpuStatusReport & 0x7ff) == (SPUStatus & 0x7ff)) {
       return;
     }
-    if (0xf00 < uVar8) break;
-    uVar3 = *(ushort *)(SPUIOPortAddr + 0x1ae);
-    uVar8 = uVar8 + 1;
+    if (0xf00 < t) break;
+    SpuStatusReport = *(ushort *)(SPUIOPortAddr + 0x1ae);
+    t = t + 1;
   }
                     // WARNING: Subroutine does not return
-  printf(s_SPU_T_O___s__80010044,s_wait__dmaf_clear_W__80010078);
+  printf(_s_SPU_T_O___s__,_s_wait__dmaf_clear_W__);
 }
 
 
 
-void FUN_80018d88(undefined4 param_1,undefined2 param_2,int param_3)
+void SPUIRQCallbackFunc(void)
 
 {
-  *(undefined2 *)(SPUIOPortAddr + 0x1a6) = param_2;
-  FUN_800193a4();
-  FUN_800193a4();
+  uint i;
+  undefined *SPUIOPort;
+  
+  if (DAT_8002ad94 == 0) {
+    HoldCPU240();
+    HoldCPU240();
+    HoldCPU240();
+  }
+  SPUIOPort = SPUIOPortAddr;
+  *(ushort *)(SPUIOPortAddr + 0x1aa) = *(ushort *)(SPUIOPortAddr + 0x1aa) & 0xffcf;
+  if ((*(ushort *)(SPUIOPort + 0x1aa) & 0x30) != 0) {
+    i = 1;
+    do {
+      if (0xf00 < i) break;
+      i = i + 1;
+    } while ((*(ushort *)(SPUIOPort + 0x1aa) & 0x30) != 0);
+  }
+  if (SPUCallbackFunc == (code *)0x0) {
+    DeliverEvent(0xf0000009,0x20);
+  }
+  else {
+    (*SPUCallbackFunc)();
+  }
+  return;
+}
+
+
+
+void ReadDecodedData(SpuDecodedData *d_data,undefined2 SPUDestinationAddress,int TransferBlocksize)
+
+{
+  *(undefined2 *)(SPUIOPortAddr + 0x1a6) = SPUDestinationAddress;
+  HoldCPU240();
+  HoldCPU240();
+                    // Set RAM Transfer Mode to DMAread
   *(ushort *)(SPUIOPortAddr + 0x1aa) = *(ushort *)(SPUIOPortAddr + 0x1aa) | 0x30;
-  FUN_800193a4();
-  FUN_800193a4();
+  HoldCPU240();
+  HoldCPU240();
   FUN_80019378();
-  *(undefined4 *)PTR_DMA_SPU_MADR_8002ad48 = param_1;
-  *(uint *)PTR_DMA_SPU_BCR_8002ad4c = param_3 << 0x10 | 0x10;
+  *(SpuDecodedData **)PTR_DMA_SPU_MADR_8002ad48 = d_data;
+  *(uint *)PTR_DMA_SPU_BCR_8002ad4c = TransferBlocksize << 0x10 | 0x10;
   DAT_8002ad94 = 1;
+                    // Force transfer now without DREQ, slice mode
   *(undefined4 *)PTR_DMA_SPU_CHCR_8002ad50 = 0x1000200;
   return;
 }
@@ -8532,7 +11788,7 @@ undefined4 SPUTransferControl(int param_1,uint param_2,uint param_3)
     }
   }
   else if (param_1 == 2) {
-    CurrentSpuDataTransferInstr = (short)(param_2 >> (DAT_8002ad6c & 0x1f));
+    CurrentSpuDataTransferInstr = (short)(param_2 >> (VolumeExpFactor & 0x1f));
     *(short *)(SPUIOPortAddr + 0x1a6) = CurrentSpuDataTransferInstr;
   }
   else if (param_1 == 3) {
@@ -8576,7 +11832,7 @@ uint FUN_800190d4(undefined2 *param_1,uint param_2,uint param_3)
   uint uVar1;
   
   if (DAT_8002ad60 == 0) {
-    uVar1 = (uint)CurrentSpuDataTransferInstr << (DAT_8002ad6c & 0x1f);
+    uVar1 = (uint)CurrentSpuDataTransferInstr << (VolumeExpFactor & 0x1f);
     SPUTransferControl(2,uVar1,param_3);
     SPUTransferControl(1,uVar1,param_3);
     SPUTransferControl(3,(uint)param_1,param_2);
@@ -8594,7 +11850,7 @@ uint BeginTransfertoSPU(uint param_1,uint param_2,uint param_3)
 {
   uint uVar1;
   
-  uVar1 = (uint)CurrentSpuDataTransferInstr << (DAT_8002ad6c & 0x1f);
+  uVar1 = (uint)CurrentSpuDataTransferInstr << (VolumeExpFactor & 0x1f);
   SPUTransferControl(2,uVar1,param_3);
   SPUTransferControl(0,uVar1,param_3);
   SPUTransferControl(3,param_1,param_2);
@@ -8603,14 +11859,17 @@ uint BeginTransfertoSPU(uint param_1,uint param_2,uint param_3)
 
 
 
-void FUN_800191c4(int param_1,uint param_2,int param_3)
+// setVolumeFlag is whether to set voice volume (on) or set voice settings (off)
+
+void SetVoiceVolumeLeftRight(int voiceHalfID,uint voiceHalfSettings,int setVolumeFlag)
 
 {
-  if (param_3 == 0) {
-    *(short *)(SPUIOPortAddr + param_1 * 2) = (short)param_2;
+  if (setVolumeFlag == 0) {
+    *(short *)(SPUIOPortAddr + voiceHalfID * 2) = (short)voiceHalfSettings;
   }
   else {
-    *(short *)(SPUIOPortAddr + param_1 * 2) = (short)(param_2 >> (DAT_8002ad6c & 0x1f));
+    *(short *)(SPUIOPortAddr + voiceHalfID * 2) =
+         (short)(voiceHalfSettings >> (VolumeExpFactor & 0x1f));
   }
   return;
 }
@@ -8623,14 +11882,14 @@ uint FUN_8001920c(int param_1,uint param_2)
   uint uVar1;
   
   if (DAT_8002ad68 != 0) {
-    if (DAT_8002ad70 == 0) {
+    if (VolumeScaleFactor == 0) {
       trap(0x1c00);
     }
-    if (param_2 % DAT_8002ad70 != 0) {
-      param_2 = param_2 + DAT_8002ad70 & ~DAT_8002ad74;
+    if (param_2 % VolumeScaleFactor != 0) {
+      param_2 = param_2 + VolumeScaleFactor & ~DAT_8002ad74;
     }
   }
-  uVar1 = param_2 >> (DAT_8002ad6c & 0x1f);
+  uVar1 = param_2 >> (VolumeExpFactor & 0x1f);
   if (param_1 != -2) {
     if (param_1 == -1) {
       param_2 = uVar1 & 0xffff;
@@ -8662,7 +11921,7 @@ void FUN_80019378(void)
 
 
 
-void FUN_800193a4(void)
+void HoldCPU240(void)
 
 {
   int local_8;
@@ -8688,7 +11947,7 @@ void _SpuDataCallback(void)
 void SsUtReverbOn(void)
 
 {
-  FUN_800186e4(1);
+  SsUtReverb(1);
   return;
 }
 
@@ -8720,7 +11979,7 @@ long SpuInitMalloc(long num,char *top)
   uint uVar1;
   long lVar2;
   
-  uVar1 = DAT_8002ad6c;
+  uVar1 = VolumeExpFactor;
   if (num < 1) {
     lVar2 = S_M_INIT_OBJ_4C();
     return lVar2;
@@ -8769,8 +12028,8 @@ long SpuMalloc(long size)
   if ((size & ~DAT_8002ad74) != 0) {
     size = size + DAT_8002ad74;
   }
-  uVar1 = DAT_8002ad6c & 0x1f;
-  uVar2 = DAT_8002ad6c & 0x1f;
+  uVar1 = VolumeExpFactor & 0x1f;
+  uVar2 = VolumeExpFactor & 0x1f;
   if ((*SPUMemManageTableTop & 0x40000000) != 0) {
     lVar3 = S_M_M_OBJ_12C();
     return lVar3;
@@ -8818,7 +12077,7 @@ uint S_M_M_OBJ_54(void)
   if ((unaff_s1 & ~DAT_8002ad74) != 0) {
     unaff_s1 = unaff_s1 + DAT_8002ad74;
   }
-  uVar9 = ((int)unaff_s1 >> (DAT_8002ad6c & 0x1f)) << (DAT_8002ad6c & 0x1f);
+  uVar9 = ((int)unaff_s1 >> (VolumeExpFactor & 0x1f)) << (VolumeExpFactor & 0x1f);
   if ((*SPUMemManageTableTop & 0x40000000) != 0) {
     uVar9 = S_M_M_OBJ_12C();
     return uVar9;
@@ -9357,7 +12616,7 @@ uint S_SNC_OBJ_24(undefined4 param_1,uint param_2)
 
 
 
-uint FUN_80019dd8(uint param_1,uint param_2,uint param_3)
+uint SpuRead(uint param_1,uint param_2,uint param_3)
 
 {
   if (0x7eff0 < param_2) {
@@ -9462,7 +12721,7 @@ undefined4 FUN_80019f88(int param_1)
   uint uVar2;
   char *SPUSpace;
   
-  uVar2 = param_1 << (DAT_8002ad6c & 0x1f);
+  uVar2 = param_1 << (VolumeExpFactor & 0x1f);
   SPUSpace = SPUMemManageTableTop;
   if (SPUMemManageTableTop == (char *)0x0) {
     return 0;
@@ -9753,7 +13012,7 @@ undefined4 S_SRMP_OBJ_170(void)
   if (in_stack_00000058 != 0) {
     SpuClearReverbWorkArea(DAT_8002a8f4);
   }
-  if ((unaff_s4 != 0) && (FUN_800191c4(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
+  if ((unaff_s4 != 0) && (SetVoiceVolumeLeftRight(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
     *(ushort *)(SPUIOPortAddr + 0x1aa) = *(ushort *)(SPUIOPortAddr + 0x1aa) | 0x80;
   }
   return 0;
@@ -9883,7 +13142,7 @@ S_SRMP_OBJ_180(undefined4 param_1,undefined4 *param_2,uint param_3,undefined4 pa
   if (in_stack_00000058 != 0) {
     SpuClearReverbWorkArea(DAT_8002a8f4);
   }
-  if ((unaff_s4 != 0) && (FUN_800191c4(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
+  if ((unaff_s4 != 0) && (SetVoiceVolumeLeftRight(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
     *(ushort *)(SPUIOPortAddr + 0x1aa) = *(ushort *)(SPUIOPortAddr + 0x1aa) | 0x80;
   }
   return 0;
@@ -9973,7 +13232,7 @@ S_SRMP_OBJ_2AC(undefined4 param_1,undefined4 *param_2,uint param_3,undefined4 pa
   if (in_stack_00000058 != 0) {
     SpuClearReverbWorkArea(DAT_8002a8f4);
   }
-  if ((unaff_s4 != 0) && (FUN_800191c4(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
+  if ((unaff_s4 != 0) && (SetVoiceVolumeLeftRight(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
     *(ushort *)(SPUIOPortAddr + 0x1aa) = *(ushort *)(SPUIOPortAddr + 0x1aa) | 0x80;
   }
   return 0;
@@ -10050,7 +13309,7 @@ undefined4 S_SRMP_OBJ_38C(undefined4 param_1,undefined4 param_2,uint param_3)
   if (in_stack_00000058 != 0) {
     SpuClearReverbWorkArea(DAT_8002a8f4);
   }
-  if ((unaff_s4 != 0) && (FUN_800191c4(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
+  if ((unaff_s4 != 0) && (SetVoiceVolumeLeftRight(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
     *(ushort *)(SPUIOPortAddr + 0x1aa) = *(ushort *)(SPUIOPortAddr + 0x1aa) | 0x80;
   }
   return 0;
@@ -10079,7 +13338,7 @@ undefined4 S_SRMP_OBJ_438(void)
   if (in_stack_00000058 != 0) {
     SpuClearReverbWorkArea(DAT_8002a8f4);
   }
-  if ((unaff_s4 != 0) && (FUN_800191c4(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
+  if ((unaff_s4 != 0) && (SetVoiceVolumeLeftRight(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
     *(ushort *)(SPUIOPortAddr + 0x1aa) = *(ushort *)(SPUIOPortAddr + 0x1aa) | 0x80;
   }
   return 0;
@@ -10104,7 +13363,7 @@ S_SRMP_OBJ_45C(undefined4 param_1,undefined4 param_2,uint param_3,undefined para
   if (param_11 != 0) {
     SpuClearReverbWorkArea(DAT_8002a8f4);
   }
-  if ((unaff_s4 != 0) && (FUN_800191c4(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
+  if ((unaff_s4 != 0) && (SetVoiceVolumeLeftRight(0xd1,DAT_8002a8ec,0), unaff_s7 != 0)) {
     *(ushort *)(SPUIOPortAddr + 0x1aa) = *(ushort *)(SPUIOPortAddr + 0x1aa) | 0x80;
   }
   return 0;
@@ -10314,8 +13573,8 @@ long SpuClearReverbWorkArea(long mode)
     if (iVar5 == 0) {
       if (mode != 0) {
         iVar5 = (&DAT_8002adac)[mode];
-        uVar9 = 0x10000 - iVar5 << (DAT_8002ad6c & 0x1f);
-        uVar10 = iVar5 << (DAT_8002ad6c & 0x1f);
+        uVar9 = 0x10000 - iVar5 << (VolumeExpFactor & 0x1f);
+        uVar10 = iVar5 << (VolumeExpFactor & 0x1f);
         bVar1 = DAT_8002ad60 == 1;
         if (bVar1) {
           DAT_8002ad60 = 0;
@@ -10476,37 +13735,34 @@ long SpuReadDecodedData(SpuDecodedData *d_data,long flag)
   undefined3 extraout_var;
   undefined3 extraout_var_00;
   undefined3 extraout_var_01;
-  undefined in_a3;
-  undefined4 unaff_retaddr;
   
   if (flag == 5) {
-    bVar1 = S_RDD_OBJ_40(d_data,0,0x20,in_a3,unaff_retaddr);
+    bVar1 = S_RDD_OBJ_40(d_data,0,0x20);
     return CONCAT31(extraout_var_00,bVar1);
   }
   if (flag != 6) {
     bVar1 = S_RDD_OBJ_3C(d_data,0);
     return CONCAT31(extraout_var,bVar1);
   }
-  bVar1 = S_RDD_OBJ_40(d_data->voice1,0x100,0x20,in_a3,unaff_retaddr);
+  bVar1 = S_RDD_OBJ_40((SpuDecodedData *)d_data->voice1,0x100,0x20);
   return CONCAT31(extraout_var_01,bVar1);
 }
 
 
 
-bool S_RDD_OBJ_3C(undefined4 param_1,undefined4 param_2)
+bool S_RDD_OBJ_3C(SpuDecodedData *param_1,undefined4 param_2)
 
 {
-  FUN_80018d88(param_1,(undefined2)param_2,0x40);
+  ReadDecodedData(param_1,(undefined2)param_2,0x40);
   return (*(ushort *)(SPUIOPortAddr + 0x1ae) & 0x800) != 0;
 }
 
 
 
-bool S_RDD_OBJ_40(undefined4 param_1,undefined2 param_2,int param_3,undefined param_4,
-                 undefined4 param_5)
+bool S_RDD_OBJ_40(SpuDecodedData *d_data,undefined2 param_2,int param_3)
 
 {
-  FUN_80018d88(param_1,param_2,param_3);
+  ReadDecodedData(d_data,param_2,param_3);
   return (*(ushort *)(SPUIOPortAddr + 0x1ae) & 0x800) != 0;
 }
 
@@ -10595,7 +13851,7 @@ void FUN_8001aef4(uint param_1,undefined2 *param_2,ushort *param_3)
 
 
 
-uint FUN_8001af64(undefined2 *param_1,uint param_2,uint param_3)
+uint SpuWrite(undefined2 *param_1,uint param_2,uint param_3)
 
 {
   if (0x7eff0 < param_2) {
@@ -30070,7 +33326,7 @@ void Get_EFC_FNT(void)
     addr = Get_BIN_as_TIM(57000,0x8800);
     if (addr == (u_long *)0x0) {
       VSync(0);
-      Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+      Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
     }
     else {
       iVar2 = OpenTIM(addr);
@@ -30486,8 +33742,8 @@ void Reset_CDROM_CPURAM(void)
   SetMem(2);
   CdInit();
   CdSetDebug(0);
-  Reset_Pause_CDROM((int)&fileOpenDesc_8004eaf4);
-  fileOpenDesc_8004eaf4.busy = 0;
+  Reset_Pause_CDROM((int)&MRTA_fileopenhdr);
+  MRTA_fileopenhdr.busy = 0;
   return;
 }
 
@@ -30527,7 +33783,7 @@ void Initialise_Game_Environment(void)
   ResetGraph(0);
   SetGraphDebug(0);
   PadInit(0);
-  FUN_800186c4();
+  SsUtReverbOff();
   Reset_CDROM_CPURAM();
   ResetFrameBuffer(0x100,0xf0,0x200,'\0','\0','\0');
   BuildDrawSCEAPDAT();
@@ -30662,7 +33918,7 @@ void ENTDStart_InitUnitData(undefined4 param_1)
   DAT_80047600 = param_1;
   while (iVar1 = Open_ENTD_withEventID(), iVar1 == 0) {
     VSync(0);
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
   }
   while( true ) {
     iVar1 = Get_Current_ENTD_Data_Pointer();
@@ -30671,7 +33927,7 @@ void ENTDStart_InitUnitData(undefined4 param_1)
     }
     if (iVar1 != 0) break;
     VSync(0);
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
   }
   iVar2 = 0;
   Initialize_Party_ID_to_Neg1();
@@ -31125,7 +34381,7 @@ void FUN_800434dc(void)
       }
     }
   }
-  DAT_80057718 = DAT_80057718 + 1;
+  openfile_timer = openfile_timer + 1;
   return;
 }
 
@@ -31236,12 +34492,12 @@ bool FUN_80043a38(void)
 {
   bool bVar1;
   
-  bVar1 = DAT_8004d960 != 0;
+  bVar1 = PTR_8004d960 != (MusDataAll *)0x0;
   if (bVar1) {
-    FUN_80012338(DAT_8004d960);
+    FUN_80012338((int)PTR_8004d960);
     DAT_8004d95c = 0;
     DAT_8004d964 = 0;
-    DAT_8004d960 = 0;
+    PTR_8004d960 = (MusDataAll *)0x0;
   }
   return bVar1;
 }
@@ -31251,24 +34507,24 @@ bool FUN_80043a38(void)
 MusicDataHeader * FUN_80043a90(int param_1,undefined4 param_2,short param_3)
 
 {
-  MusicDataHeader *pMVar1;
+  MusDataAll *pMVar1;
   
   FUN_80043a38();
   if (param_1 == 0) {
-    pMVar1 = (MusicDataHeader *)0x0;
+    pMVar1 = (MusDataAll *)0x0;
   }
   else {
-    pMVar1 = DAT_8004d960;
+    pMVar1 = PTR_8004d960;
     if ((&DAT_8004d98c)[param_1] != 0) {
       DAT_8004d964 = (&DAT_8004d98c)[param_1];
-      DAT_8004d960 = (MusicDataHeader *)(&DAT_8004d970)[param_1];
+      PTR_8004d960 = (MusDataAll *)(&DAT_8004d970)[param_1];
       DAT_8004d95c = param_1;
       DAT_8004d968 = param_2;
-      FUN_800121dc(DAT_8004d960,(short)param_2,param_3);
-      pMVar1 = DAT_8004d960;
+      FUN_800121dc((MusicDataHeader *)PTR_8004d960,(short)param_2,param_3);
+      pMVar1 = PTR_8004d960;
     }
   }
-  return pMVar1;
+  return &pMVar1->HeaderData;
 }
 
 
@@ -31278,9 +34534,9 @@ bool FUN_80043b54(short param_1,short param_2)
 {
   bool bVar1;
   
-  bVar1 = DAT_8004d960 != (MusicDataHeader *)0x0;
+  bVar1 = PTR_8004d960 != (MusDataAll *)0x0;
   if (bVar1) {
-    FUN_80012f08(DAT_8004d960,(int)param_1,param_2);
+    FUN_80012f08(PTR_8004d960,(int)param_1,param_2);
   }
   return bVar1;
 }
@@ -31292,9 +34548,9 @@ bool FUN_80043ba0(short param_1)
 {
   bool bVar1;
   
-  bVar1 = DAT_8004d960 != (MusicDataHeader *)0x0;
+  bVar1 = PTR_8004d960 != (MusDataAll *)0x0;
   if (bVar1) {
-    FUN_80012f08(DAT_8004d960,(int)(short)DAT_8004d968,param_1);
+    FUN_80012f08(PTR_8004d960,(int)(short)DAT_8004d968,param_1);
   }
   return bVar1;
 }
@@ -31306,17 +34562,17 @@ bool FUN_80043be8(undefined4 param_1,short param_2)
 {
   bool bVar1;
   
-  bVar1 = DAT_8004d960 != (MusicDataHeader *)0x0;
+  bVar1 = PTR_8004d960 != (MusDataAll *)0x0;
   if (bVar1) {
     DAT_8004d968 = param_1;
-    FUN_80012f08(DAT_8004d960,(int)(short)param_1,param_2);
+    FUN_80012f08(PTR_8004d960,(int)(short)param_1,param_2);
   }
   return bVar1;
 }
 
 
 
-undefined4 FUN_80043d20(uint param_1)
+undefined4 Play_GNRC_Tune(uint param_1)
 
 {
   if ((param_1 != 0) && (PermanentSoundID == 0)) {
@@ -31333,7 +34589,7 @@ undefined4 FUN_80043d80(short param_1)
 {
   if (PermanentSoundID != 0) {
     if ((PermanentSoundID & 0x80) == 0) {
-      FUN_80012f08(*(MusicDataHeader **)(&DAT_8004d978 + (PermanentSoundID & 0x3f) * 4),0,param_1);
+      FUN_80012f08(*(MusDataAll **)(&DAT_8004d978 + (PermanentSoundID & 0x3f) * 4),0,param_1);
     }
     else {
       PermanentSoundID = 0;
@@ -31375,7 +34631,7 @@ bool FUN_80043de0(void)
     }
   }
   else {
-    uVar2 = FUN_80012e7c(DAT_8004d960);
+    uVar2 = FUN_80012e7c((int)PTR_8004d960);
     bVar1 = false;
     if (CONCAT22(extraout_var,uVar2) == 0) {
       soundID = PermanentSoundID & 0x3f;
@@ -31462,7 +34718,7 @@ void Call_Play_Sound(uint param_1)
 void Call_Play_SoundEffect(MusicDataHeader *param_1)
 
 {
-  Play_SoundEffect(param_1);
+  PlaySound_FromMUS((MusDataAll *)param_1);
   return;
 }
 
@@ -31472,7 +34728,7 @@ void FUN_80044038(uint param_1)
 
 {
   DAT_8004599c = param_1;
-  FUN_80012560(param_1);
+  Play_Sound2(param_1);
   return;
 }
 
@@ -31482,7 +34738,7 @@ void __builtin_delete_a(void)
 
 {
   if (DAT_8004599c != 0) {
-    FUN_80012560(DAT_8004599c);
+    Play_Sound2(DAT_8004599c);
   }
   return;
 }
@@ -31493,7 +34749,7 @@ void __builtin_delete(uint param_1)
 
 {
   if (param_1 != 0) {
-    FUN_80012560(param_1);
+    Play_Sound2(param_1);
   }
   return;
 }
@@ -31504,7 +34760,7 @@ void FUN_800440cc(void)
 
 {
   DAT_8004599c = 0;
-  FUN_80012860();
+  PauseActiveMUS();
   return;
 }
 
@@ -31516,7 +34772,7 @@ void FUN_800440f4(MusicDataHeader *param_1)
   if (param_1 == DAT_8004599c) {
     DAT_8004599c = (MusicDataHeader *)0x0;
   }
-  FUN_80012990(param_1);
+  AccumulateChannelsToPause(param_1);
   return;
 }
 
@@ -31526,7 +34782,7 @@ void FUN_80044128(void)
 
 {
   if (DAT_8004599c != (MusicDataHeader *)0x0) {
-    FUN_80012990(DAT_8004599c);
+    AccumulateChannelsToPause(DAT_8004599c);
   }
   return;
 }
@@ -31813,7 +35069,7 @@ void FUN_80044670(void)
 void Call_CalcFileHead_NNL(int param_1,uint param_2,u_long *param_3)
 
 {
-  Calculate_File_Header_NNL(&fileOpenDesc_8004eaf4,param_1,param_2 >> 0xb,param_3);
+  Calculate_File_Header_NNL(&MRTA_fileopenhdr,param_1,param_2 >> 0xb,param_3);
   return;
 }
 
@@ -31824,7 +35080,7 @@ void Call_CalcFileHead_NNL(int param_1,uint param_2,u_long *param_3)
 int Check_File_Still_Loading(void)
 
 {
-  return fileOpenDesc_8004eaf4.busy;
+  return MRTA_fileopenhdr.busy;
 }
 
 
@@ -31839,16 +35095,16 @@ u_long * Get_SMD(int param_1,uint param_2)
   if (puVar1 == (u_long *)0x0) {
     ERROREXCEPTION_DEPRECATED();
   }
-  while (iVar2 = Calculate_File_Header_NNL(&fileOpenDesc_8004eaf4,param_1,param_2 >> 0xb,puVar1),
+  while (iVar2 = Calculate_File_Header_NNL(&MRTA_fileopenhdr,param_1,param_2 >> 0xb,puVar1),
         iVar2 != 0) {
     VSync(0);
-    FUN_800449ec();
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+    deprecated_000449ec();
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
   }
-  while (fileOpenDesc_8004eaf4.busy != 0) {
+  while (MRTA_fileopenhdr.busy != 0) {
     VSync(0);
-    FUN_800449ec();
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+    deprecated_000449ec();
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
   }
   return puVar1;
 }
@@ -31865,53 +35121,53 @@ u_long * Get_TIM(int param_1,uint param_2)
   if (puVar1 == (u_long *)0x0) {
     ERROREXCEPTION_DEPRECATED();
   }
-  while (iVar2 = Calculate_File_Header_NNL(&fileOpenDesc_8004eaf4,param_1,param_2 >> 0xb,puVar1),
+  while (iVar2 = Calculate_File_Header_NNL(&MRTA_fileopenhdr,param_1,param_2 >> 0xb,puVar1),
         iVar2 != 0) {
     VSync(0);
-    FUN_800449ec();
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+    deprecated_000449ec();
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
   }
-  while (fileOpenDesc_8004eaf4.busy != 0) {
+  while (MRTA_fileopenhdr.busy != 0) {
     VSync(0);
-    FUN_800449ec();
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+    deprecated_000449ec();
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
   }
   return puVar1;
 }
 
 
 
-u_long * Get_File(int param_1,uint param_2,u_long *param_3)
+u_long * Get_File(int LBA,uint filesize,u_long *dest_ptr)
 
 {
   int iVar1;
   
-  while (iVar1 = Calculate_File_Header_NNL(&fileOpenDesc_8004eaf4,param_1,param_2 >> 0xb,param_3),
+  while (iVar1 = Calculate_File_Header_NNL(&MRTA_fileopenhdr,LBA,filesize >> 0xb,dest_ptr),
         iVar1 != 0) {
     VSync(0);
-    FUN_800449ec();
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+    deprecated_000449ec();
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
   }
-  while (fileOpenDesc_8004eaf4.busy != 0) {
+  while (MRTA_fileopenhdr.busy != 0) {
     VSync(0);
-    FUN_800449ec();
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+    deprecated_000449ec();
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
   }
-  return param_3;
+  return dest_ptr;
 }
 
 
 
-u_long * Get_DAT_BIN_as_File(int param_1,uint param_2,u_long *param_3)
+u_long * Get_DAT_BIN_as_File(int LBA,uint filesize,u_long *dest_ptr)
 
 {
-  u_long *puVar1;
+  u_long *t;
   
-  puVar1 = Get_File(param_1,param_2,param_3);
-  if (puVar1 == (u_long *)0x0) {
+  t = Get_File(LBA,filesize,dest_ptr);
+  if (t == (u_long *)0x0) {
     ERROREXCEPTION_DEPRECATED();
   }
-  return puVar1;
+  return t;
 }
 
 
@@ -31945,7 +35201,7 @@ void Call_BIN_Free_FFT(int param_1)
 
 
 
-void FUN_800449ec(void)
+void deprecated_000449ec(void)
 
 {
   return;
@@ -32280,9 +35536,9 @@ void OPEN_WORLD(int param_1)
 void Open_WORLD_File(int param_1,int param_2,u_long *param_3,int param_4)
 
 {
-  _Calculate_File_Header(&fileOpenDesc_8004eaf4,param_1,param_2,param_3,param_4);
-  while (fileOpenDesc_8004eaf4.busy != 0) {
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+  _Calculate_File_Header(&MRTA_fileopenhdr,param_1,param_2,param_3,param_4);
+  while (MRTA_fileopenhdr.busy != 0) {
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
     VSync(0);
   }
   return;
@@ -32514,14 +35770,14 @@ void Initialize_Status_Check_Data(void)
 {
   byte bVar1;
   byte bVar2;
-  byte bVar3;
+  Status1 SVar3;
   uint uVar4;
   int iVar5;
   uint uVar6;
   int iVar7;
   
   Data_Null(&DAT_80059414,0x80);
-  Data_Null(&DAT_800662d0,0x37);
+  Data_Null(&status_check_table[0].Status1,0x37);
   uVar6 = 0;
   iVar7 = 0;
   do {
@@ -32532,37 +35788,37 @@ void Initialize_Status_Check_Data(void)
       uVar4 = uVar6 + 7;
     }
     iVar5 = (int)uVar4 >> 3;
-    bVar3 = (byte)(0x80 >> (uVar6 & 7));
+    SVar3 = (Status1)(0x80 >> (uVar6 & 7));
     if ((bVar1 & 1) != 0) {
-      (&DAT_800662d0)[iVar5] = bVar3 | (&DAT_800662d0)[iVar5];
+      (&status_check_table[0].Status1)[iVar5] = SVar3 | (&status_check_table[0].Status1)[iVar5];
     }
     if ((bVar1 & 2) != 0) {
-      (&DAT_800662d5)[iVar5] = bVar3 | (&DAT_800662d5)[iVar5];
+      (&status_check_table[1].Status1)[iVar5] = SVar3 | (&status_check_table[1].Status1)[iVar5];
     }
     if ((bVar1 & 4) != 0) {
-      (&DAT_800662da)[iVar5] = bVar3 | (&DAT_800662da)[iVar5];
+      (&status_check_table[2].Status1)[iVar5] = SVar3 | (&status_check_table[2].Status1)[iVar5];
     }
     if ((bVar1 & 0x80) != 0) {
-      (&DAT_800662df)[iVar5] = bVar3 | (&DAT_800662df)[iVar5];
+      (&status_check_table[3].Status1)[iVar5] = SVar3 | (&status_check_table[3].Status1)[iVar5];
     }
     if ((bVar2 & 0x80) != 0) {
-      (&DAT_800662e4)[iVar5] = bVar3 | (&DAT_800662e4)[iVar5];
+      (&status_check_table[4].Status1)[iVar5] = SVar3 | (&status_check_table[4].Status1)[iVar5];
     }
     if ((bVar2 & 1) != 0) {
-      (&DAT_800662e9)[iVar5] = bVar3 | (&DAT_800662e9)[iVar5];
+      (&status_check_table[5].Status1)[iVar5] = SVar3 | (&status_check_table[5].Status1)[iVar5];
     }
     if ((bVar2 & 2) != 0) {
-      (&DAT_800662ee)[iVar5] = bVar3 | (&DAT_800662ee)[iVar5];
+      (&status_check_table[6].Status1)[iVar5] = SVar3 | (&status_check_table[6].Status1)[iVar5];
     }
     if ((bVar2 & 4) != 0) {
-      (&DAT_800662f3)[iVar5] = bVar3 | (&DAT_800662f3)[iVar5];
+      (&status_check_table[7].Status1)[iVar5] = SVar3 | (&status_check_table[7].Status1)[iVar5];
     }
     if ((bVar2 & 8) != 0) {
-      (&DAT_800662f8)[iVar5] = bVar3 | (&DAT_800662f8)[iVar5];
+      (&status_check_table[8].Status1)[iVar5] = SVar3 | (&status_check_table[8].Status1)[iVar5];
     }
     iVar7 = iVar7 + 0x10;
     if ((bVar2 & 0x10) != 0) {
-      (&DAT_800662fd)[iVar5] = bVar3 | (&DAT_800662fd)[iVar5];
+      (&status_check_table[9].Status1)[iVar5] = SVar3 | (&status_check_table[9].Status1)[iVar5];
     }
     uVar6 = uVar6 + 1;
   } while ((int)uVar6 < 0x28);
@@ -33697,7 +36953,7 @@ void Transfer_JobData_to_Unit(byte *param_1)
   byte bVar1;
   byte bVar2;
   ushort uVar3;
-  byte *pbVar4;
+  Status1 *pSVar4;
   int iVar5;
   byte *pbVar6;
   
@@ -33725,16 +36981,16 @@ void Transfer_JobData_to_Unit(byte *param_1)
   bVar1 = param_1[5];
   bVar2 = param_1[6];
   if (((bVar1 & 4) != 0) && (iVar5 = 0, (bVar2 & 9) != 0)) {
-    pbVar4 = param_1 + 0x53;
+    pSVar4 = param_1 + 0x53;
     do {
       if ((bVar1 & 4) != 0) {
-        *pbVar4 = *pbVar4 | (&DAT_800662e9)[iVar5];
+        *pSVar4 = *pSVar4 | (&status_check_table[5].Status1)[iVar5];
       }
       if ((bVar2 & 9) != 0) {
-        *pbVar4 = *pbVar4 | (&DAT_800662ee)[iVar5];
+        *pSVar4 = *pSVar4 | (&status_check_table[6].Status1)[iVar5];
       }
       iVar5 = iVar5 + 1;
-      pbVar4 = pbVar4 + 1;
+      pSVar4 = pSVar4 + 1;
     } while (iVar5 < 5);
   }
   StoreArg1_IntoArg2_(pbVar6 + 0x29,param_1 + 0x6d,4);
@@ -35497,17 +38753,17 @@ uint Get_Portrait(byte *param_1,byte *param_2)
 
 
 
-bool PassFail_Roll(int param_1,int param_2)
+bool PassFail_Roll(int chance,int threshold)
 
 {
-  int iVar1;
+  int rng;
   
-  iVar1 = rand();
-  iVar1 = iVar1 * param_1;
-  if (iVar1 < 0) {
-    iVar1 = iVar1 + 0x7fff;
+  rng = rand();
+  rng = rng * chance;
+  if (rng < 0) {
+    rng = rng + 0x7fff;
   }
-  return param_2 <= iVar1 >> 0xf;
+  return threshold <= rng >> 0xf;
 }
 
 
@@ -35544,22 +38800,23 @@ uint Get_Unit_Portrait(byte *param_1,byte *param_2)
 
 
 
-undefined4 Check_HasStatus(int param_1,int param_2)
+bool Check_HasStatus(BattleUnitData *_unit_data,status_legal _status_check)
 
 {
-  byte *pbVar1;
-  int iVar2;
+  StatusList *statuses_to_check;
+  int status_index;
   
-  iVar2 = 0;
-  pbVar1 = &DAT_800662d0 + param_2 * 5;
+  status_index = 0;
+  statuses_to_check = status_check_table + _status_check;
   do {
-    if ((*(byte *)(param_1 + iVar2 + 0x58) & *pbVar1) != 0) {
-      return 1;
+    if (((_unit_data->AllActionUnitData).JobLevels[status_index + -0x7a] &
+        statuses_to_check->Status1) != empty) {
+      return true;
     }
-    iVar2 = iVar2 + 1;
-    pbVar1 = pbVar1 + 1;
-  } while (iVar2 < 5);
-  return 0;
+    status_index = status_index + 1;
+    statuses_to_check = (StatusList *)&statuses_to_check->Status2;
+  } while (status_index < 5);
+  return false;
 }
 
 
@@ -35803,7 +39060,7 @@ void Increment_CasualtyInjure_Counters(int param_1)
   if ((*(byte *)(param_1 + 0x1ba) & 0x30) != 0) {
     uVar2 = 0x61;
   }
-  uVar1 = FUN_BATTLE_BIN__8013b590(uVar2);
+  uVar1 = GetScriptVariable((EventVar)uVar2);
   if ((int)uVar1 < 9999) {
     uVar1 = uVar1 + 1;
   }
@@ -37167,7 +40424,7 @@ void FUN_BATTLE_BIN__8006a20c(int param_1,int param_2,undefined2 param_3)
     *(char *)(param_1 + 0x81) = cVar3;
   }
 LAB_BATTLE_BIN__8006a30c:
-  if (DAT_BATTLE_BIN__800960e4 != 0x2d) {
+  if (BattleGameState != Case2d) {
     *(undefined2 *)(param_1 + 0x70) = param_3;
     FUN_BATTLE_BIN__80082df8(param_1);
   }
@@ -37627,7 +40884,7 @@ LAB_BATTLE_BIN__8006b160:
     if (iVar7 >> 0xc < 0x2a - sVar1) break;
     *(undefined *)((int)param_1 + 0x7f) = 0x1a;
 LAB_BATTLE_BIN__8006b608:
-    if (DAT_BATTLE_BIN__800960e4 != 0x2d) {
+    if (BattleGameState != Case2d) {
       FUN_BATTLE_BIN__80081978(0x1f,*(undefined2 *)(param_1 + 0x1c),(int)param_1);
     }
     break;
@@ -38408,7 +41665,7 @@ void FUN_BATTLE_BIN__8006c4f8(int *param_1)
              *(ushort *)(param_1 + 0x77));
   uVar2 = FUN_BATTLE_BIN__8006c2bc((int)param_1);
   FUN_BATTLE_BIN__8006af7c(param_1);
-  if (DAT_BATTLE_BIN__800960e4 != 0x34) {
+  if (BattleGameState != Case34) {
     FUN_BATTLE_BIN__8006c024(param_1,uVar2);
   }
   bVar1 = FUN_BATTLE_BIN__8006c41c(uVar2,(int)param_1);
@@ -38449,7 +41706,7 @@ void FUN_BATTLE_BIN__8006c4f8(int *param_1)
     param_1[0xb] = 0;
     *(undefined2 *)(param_1 + 2) = 2;
     *(undefined *)((int)param_1 + 0x7f) = (&DAT_BATTLE_BIN__80093ca8)[uVar2];
-    if (DAT_BATTLE_BIN__800960e4 != 0x2d) {
+    if (BattleGameState != Case2d) {
       FUN_BATTLE_BIN__80081978(0x20,*(undefined2 *)(param_1 + 0x1c),(int)param_1);
     }
   }
@@ -38457,7 +41714,7 @@ void FUN_BATTLE_BIN__8006c4f8(int *param_1)
     param_1[0xb] = 0;
     *(undefined2 *)(param_1 + 2) = 2;
     *(undefined *)((int)param_1 + 0x7f) = (&DAT_BATTLE_BIN__80093ca8)[uVar2];
-    if (DAT_BATTLE_BIN__800960e4 != 0x2d) {
+    if (BattleGameState != Case2d) {
       FUN_BATTLE_BIN__80081978(0x20,*(undefined2 *)(param_1 + 0x1c),(int)param_1);
     }
   }
@@ -38482,7 +41739,7 @@ void FUN_BATTLE_BIN__8006c790(int *param_1)
             ((int)param_1,(int)(param_1 + 0x76),(uint)*(ushort *)(param_1 + 0x78),
              *(ushort *)(param_1 + 0x77));
   iVar1 = FUN_BATTLE_BIN__8006c2bc((int)param_1);
-  if (DAT_BATTLE_BIN__800960e4 != 0x34) {
+  if (BattleGameState != Case34) {
     FUN_BATTLE_BIN__8006be8c(param_1,iVar1);
   }
   if (-1 < param_1[0xb]) {
@@ -38623,7 +41880,7 @@ void FUN_BATTLE_BIN__8006cad0(int *param_1)
   
   uVar2 = FUN_BATTLE_BIN__8006c2bc((int)param_1);
   FUN_BATTLE_BIN__8006af7c(param_1);
-  if (DAT_BATTLE_BIN__800960e4 != 0x34) {
+  if (BattleGameState != Case34) {
     FUN_BATTLE_BIN__8006c024(param_1,uVar2);
   }
   bVar1 = FUN_BATTLE_BIN__8006c878(uVar2,(int)param_1);
@@ -38701,7 +41958,7 @@ void FUN_BATTLE_BIN__8006cc94(int *param_1)
   
   iVar3 = FUN_BATTLE_BIN__8006c2bc((int)param_1);
   FUN_BATTLE_BIN__8006af7c(param_1);
-  if (DAT_BATTLE_BIN__800960e4 != 0x34) {
+  if (BattleGameState != Case34) {
     FUN_BATTLE_BIN__8006be8c(param_1,iVar3);
   }
   bVar2 = FUN_BATTLE_BIN__8006cbb8(iVar3,(int)param_1);
@@ -38806,7 +42063,7 @@ void FUN_BATTLE_BIN__8006d060(int *param_1)
   
   iVar4 = FUN_BATTLE_BIN__8006c2bc((int)param_1);
   FUN_BATTLE_BIN__8006af7c(param_1);
-  if (DAT_BATTLE_BIN__800960e4 != 0x34) {
+  if (BattleGameState != Case34) {
     FUN_BATTLE_BIN__8006be8c(param_1,iVar4);
   }
   bVar3 = FUN_BATTLE_BIN__8006cbb8(iVar4,(int)param_1);
@@ -38844,7 +42101,7 @@ void FUN_BATTLE_BIN__8006d1a0(int *param_1)
   
   iVar2 = FUN_BATTLE_BIN__8006c2bc((int)param_1);
   FUN_BATTLE_BIN__8006af7c(param_1);
-  if (DAT_BATTLE_BIN__800960e4 != 0x34) {
+  if (BattleGameState != Case34) {
     FUN_BATTLE_BIN__8006be8c(param_1,iVar2);
   }
   bVar1 = FUN_BATTLE_BIN__8006c878(iVar2,(int)param_1);
@@ -38885,7 +42142,7 @@ void FUN_BATTLE_BIN__8006d288(int *param_1)
   
   uVar3 = FUN_BATTLE_BIN__8006c2bc((int)param_1);
   FUN_BATTLE_BIN__8006af7c(param_1);
-  if (DAT_BATTLE_BIN__800960e4 != 0x34) {
+  if (BattleGameState != Case34) {
     FUN_BATTLE_BIN__8006c024(param_1,uVar3);
   }
   bVar2 = FUN_BATTLE_BIN__8006c41c(uVar3,(int)param_1);
@@ -39765,18 +43022,18 @@ void FUN_BATTLE_BIN__8006e6b0(int param_1,int param_2)
       DAT_BATTLE_BIN__800961bc == iVar3) {
     return;
   }
-  if (DAT_BATTLE_BIN__800960e4 != 0xd) {
-    if (DAT_BATTLE_BIN__800960e4 < 0xe) {
-      if (DAT_BATTLE_BIN__800960e4 != 0) {
+  if (BattleGameState != CloseMoveHelp) {
+    if ((int)BattleGameState < 0xe) {
+      if (BattleGameState != FreeCursor) {
         return;
       }
     }
     else {
-      if (DAT_BATTLE_BIN__800960e4 == 0x17) {
+      if (BattleGameState == TargettingRange) {
         FUN_BATTLE_BIN__8006e5c0();
         return;
       }
-      if (DAT_BATTLE_BIN__800960e4 != 0x20) {
+      if (BattleGameState != Case20) {
         return;
       }
     }
@@ -39952,19 +43209,19 @@ LAB_BATTLE_BIN__8006edfc:
   }
   Call_Play_Sound(3);
   DAT_BATTLE_BIN__800961c0 = 0;
-  if (DAT_BATTLE_BIN__800960e4 != 0xd) {
-    if (DAT_BATTLE_BIN__800960e4 < 0xe) {
-      if (DAT_BATTLE_BIN__800960e4 != 0) {
+  if (BattleGameState != CloseMoveHelp) {
+    if ((int)BattleGameState < 0xe) {
+      if (BattleGameState != FreeCursor) {
         DAT_BATTLE_BIN__800961c0 = 0;
         return 1;
       }
     }
     else {
-      if (DAT_BATTLE_BIN__800960e4 == 0x17) {
+      if (BattleGameState == TargettingRange) {
         FUN_BATTLE_BIN__8006e5c0();
         return 1;
       }
-      if (DAT_BATTLE_BIN__800960e4 != 0x20) {
+      if (BattleGameState != Case20) {
         DAT_BATTLE_BIN__800961c0 = 0;
         return 1;
       }
@@ -40165,7 +43422,7 @@ void FUN_BATTLE_BIN__8006f320(void)
     if ((int)DAT_BATTLE_BIN__800c7c60 < iVar1 * 0x10000 >> 0x10) goto LAB_BATTLE_BIN__8006f46c;
     DAT_BATTLE_BIN__800a7786 = (ushort)DAT_BATTLE_BIN__800c7c60 & 0xfff;
     if ((DAT_80045948 & 4) != 0) {
-      if (DAT_BATTLE_BIN__800960e4 != 0x34) {
+      if (BattleGameState != Case34) {
         FUN_BATTLE_BIN__8006f13c((DAT_BATTLE_BIN__800c7c60 & 0xfe0) - 0x400);
       }
       goto LAB_BATTLE_BIN__8006f46c;
@@ -40180,7 +43437,7 @@ void FUN_BATTLE_BIN__8006f320(void)
     goto LAB_BATTLE_BIN__8006f46c;
     DAT_BATTLE_BIN__800a7786 = (ushort)DAT_BATTLE_BIN__800c7c60 & 0xfff;
     if ((DAT_80045948 & 8) != 0) {
-      if (DAT_BATTLE_BIN__800960e4 != 0x34) {
+      if (BattleGameState != Case34) {
         FUN_BATTLE_BIN__8006f13c((DAT_BATTLE_BIN__800c7c60 & 0xfe0) + 0x400);
       }
       goto LAB_BATTLE_BIN__8006f46c;
@@ -40704,7 +43961,7 @@ void FUN_BATTLE_BIN__800702e4(void)
   int iVar3;
   int iVar4;
   
-  if (DAT_BATTLE_BIN__800960e4 == 0x15) {
+  if (BattleGameState == CrystalLearn) {
     piVar2 = FUN_BATTLE_BIN__8007a2b8
                        (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
     iVar3 = 0;
@@ -40720,8 +43977,8 @@ void FUN_BATTLE_BIN__800702e4(void)
        (DAT_BATTLE_BIN__800c7c6c < 0xb0)) goto LAB_BATTLE_BIN__80070614;
   }
   else {
-    if (((DAT_BATTLE_BIN__800960e4 == 0x11) || (DAT_BATTLE_BIN__800960e4 == 0x13)) ||
-       (DAT_BATTLE_BIN__800960e4 == 0x1c)) {
+    if (((BattleGameState == UnitMoving) || (BattleGameState == WaitDirection)) ||
+       (BattleGameState == PreAttackAnim1)) {
       piVar2 = FUN_BATTLE_BIN__8007a218();
       iVar3 = (uint)((byte)(&DAT_BATTLE_BIN__8009474b)[(uint)*(byte *)((int)piVar2 + 6) * 4] >> 1) *
               _DAT_BATTLE_BIN__800c7ca4;
@@ -40746,7 +44003,7 @@ LAB_BATTLE_BIN__80070614:
       Store_3_Words(&DAT_BATTLE_BIN__800a1c48,0,0,0);
       return;
     }
-    if (0x28 < DAT_BATTLE_BIN__800960e4) goto LAB_BATTLE_BIN__80070614;
+    if (0x28 < (int)BattleGameState) goto LAB_BATTLE_BIN__80070614;
     if (DAT_BATTLE_BIN__800960cc != 0) {
       return;
     }
@@ -40948,7 +44205,7 @@ void FUN_BATTLE_BIN__80070998(void)
 
 {
   DAT_80045980 = 2;
-  DAT_BATTLE_BIN__800960e4 = 0x34;
+  BattleGameState = Case34;
   FUN_BATTLE_BIN__8008d1c8();
   FUN_BATTLE_BIN__8013f4a8();
   FUN_BATTLE_BIN__800683d4();
@@ -41001,7 +44258,7 @@ LAB_BATTLE_BIN__80070b18:
   iVar2 = FUN_BATTLE_BIN__801419b8(8,uVar3,(uint)bVar1,0,1);
 LAB_BATTLE_BIN__80070b3c:
   if (iVar2 == 2) {
-    DAT_BATTLE_BIN__800960e8 = DAT_BATTLE_BIN__800960e4;
+    DAT_BATTLE_BIN__800960e8 = BattleGameState;
     FUN_BATTLE_BIN__80070998();
   }
   return iVar2 == 2;
@@ -41033,7 +44290,7 @@ void FUN_BATTLE_BIN__80070b7c(int param_1)
 
 
 
-void FUN_BATTLE_BIN__80070c04(void)
+void SetActionMenuScript(void)
 
 {
   bool bVar1;
@@ -41048,7 +44305,7 @@ void FUN_BATTLE_BIN__80070c04(void)
   FUN_BATTLE_BIN__80070b7c((int)piVar2);
   bVar1 = FUN_BATTLE_BIN__80070a38((int)piVar3);
   if (CONCAT31(extraout_var,bVar1) == 0) {
-    DAT_BATTLE_BIN__800960e4 = 3;
+    BattleGameState = IdlingActionMenus;
     DAT_BATTLE_BIN__80098db8 = 0;
     FUN_BATTLE_BIN__80070820((int)piVar2);
   }
@@ -41057,14 +44314,14 @@ void FUN_BATTLE_BIN__80070c04(void)
 
 
 
-void FUN_BATTLE_BIN__80070c78(void)
+void FreeCursorSelect(void)
 
 {
   int *piVar1;
   
   DAT_80045980 = 1;
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0;
+  BattleGameState = FreeCursor;
   DAT_BATTLE_BIN__800960ec = 0;
   FUN_BATTLE_BIN__8006e55c();
   FUN_BATTLE_BIN__800683c0();
@@ -41081,7 +44338,7 @@ void FUN_BATTLE_BIN__80070cdc(void)
 
 {
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 1;
+  BattleGameState = HighlightUnits;
   DAT_BATTLE_BIN__800960ec = 1;
   FUN_BATTLE_BIN__8013d0ac();
   return;
@@ -41105,7 +44362,7 @@ int FUN_BATTLE_BIN__80070d18(void)
       if (4 < (int)uVar2) {
         uVar2 = 4;
       }
-      uVar3 = FUN_BATTLE_BIN__8013b590(0x70);
+      uVar3 = GetScriptVariable(CurrentCrystalCount);
       iVar4 = DAT_BATTLE_BIN__80093cac;
       if (uVar2 != uVar3) {
         FUN_BATTLE_BIN__8013b644(0x70,uVar2);
@@ -41136,7 +44393,7 @@ bool FUN_BATTLE_BIN__80070ddc(void)
   
   iVar1 = FUN_BATTLE_BIN__80070d18();
   if (iVar1 != 0) {
-    DAT_BATTLE_BIN__800960e4 = 0x30;
+    BattleGameState = Case30;
     DAT_80045980 = 1;
   }
   return iVar1 != 0;
@@ -41151,7 +44408,7 @@ bool FUN_BATTLE_BIN__80070e24(void)
   
   iVar1 = FUN_BATTLE_BIN__80070d18();
   if (iVar1 != 0) {
-    DAT_BATTLE_BIN__800960e4 = 0x31;
+    BattleGameState = Case31;
     DAT_80045980 = 1;
   }
   return iVar1 != 0;
@@ -41239,7 +44496,7 @@ void FUN_BATTLE_BIN__80071008(undefined4 param_1,int *param_2,undefined4 param_3
       DAT_BATTLE_BIN__8009611c = (uint)*(byte *)(piVar2 + 1);
       FUN_BATTLE_BIN__80070b7c((int)piVar2);
       if (piVar2[0x4d] == 0) {
-        FUN_BATTLE_BIN__80070c78();
+        FreeCursorSelect();
       }
       else {
         FUN_BATTLE_BIN__8013f900((uint)*(byte *)(piVar2[0x4d] + 0x18a));
@@ -41253,7 +44510,7 @@ void FUN_BATTLE_BIN__80071008(undefined4 param_1,int *param_2,undefined4 param_3
           bVar1 = FUN_BATTLE_BIN__80070a38((int)piVar2);
           if (CONCAT31(extraout_var_00,bVar1) == 0) {
             FUN_BATTLE_BIN__8013d634(1,0xff,0xff);
-            DAT_BATTLE_BIN__800960e4 = 0x27;
+            BattleGameState = Case27;
             FUN_BATTLE_BIN__8019ae30();
             DAT_BATTLE_BIN__800e4e8c = 1;
           }
@@ -41267,7 +44524,7 @@ void FUN_BATTLE_BIN__80071008(undefined4 param_1,int *param_2,undefined4 param_3
           Call_Play_Sound(0x71);
           FUN_BATTLE_BIN__80068768();
           FUN_BATTLE_BIN__800686b0();
-          FUN_BATTLE_BIN__80070c04();
+          SetActionMenuScript();
         }
       }
     }
@@ -41287,7 +44544,7 @@ void FUN_BATTLE_BIN__800711a4(void)
   int iVar5;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0xb;
+  BattleGameState = CaseB;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   FUN_BATTLE_BIN__800683d4();
   DAT_BATTLE_BIN__80098db8 = 0;
@@ -41335,7 +44592,7 @@ void FUN_BATTLE_BIN__800712d8(void)
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 5;
+  BattleGameState = DisableMoveAct;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   *(undefined2 *)(piVar1 + 2) = 0;
   *(undefined *)(piVar1 + 0x6d) = 0;
@@ -41348,12 +44605,12 @@ void FUN_BATTLE_BIN__800712d8(void)
 
 
 
-void FUN_BATTLE_BIN__8007134c(void)
+void HighlightUnitsTeam(void)
 
 {
   FUN_BATTLE_BIN__8006eedc();
   DAT_BATTLE_BIN__800960c4 = DAT_BATTLE_BIN__800960c0;
-  DAT_BATTLE_BIN__800960e4 = 2;
+  BattleGameState = OpenActionMenus;
   DAT_BATTLE_BIN__800960c0 = 2;
   FUN_BATTLE_BIN__80068634();
   FUN_BATTLE_BIN__800683d4();
@@ -41373,7 +44630,7 @@ void FUN_BATTLE_BIN__800713a0(void)
   piVar1 = FUN_BATTLE_BIN__8007a218();
   DAT_BATTLE_BIN__8009611c = (uint)*(byte *)(piVar1 + 1);
   FUN_BATTLE_BIN__800683e4((int)piVar1);
-  DAT_BATTLE_BIN__800960e4 = 4;
+  BattleGameState = MenuToTargetting;
   if (piVar1 != (int *)0x0) {
     iVar2 = piVar1[0x4d];
     if (iVar2 == 0) goto code_r0x8007140c;
@@ -41398,7 +44655,7 @@ void FUN_BATTLE_BIN__80071434(void)
                      (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
   if (piVar1 != (int *)0x0) {
     FUN_BATTLE_BIN__8006eef0();
-    DAT_BATTLE_BIN__800960e4 = 4;
+    BattleGameState = MenuToTargetting;
     FUN_BATTLE_BIN__8013d634(3,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0);
     uVar2 = FUN_BATTLE_BIN__8018114c((uint)*(byte *)(piVar1[0x4d] + 0x18a));
     if (DAT_BATTLE_BIN__800960fc != 0) {
@@ -41442,11 +44699,11 @@ void FUN_BATTLE_BIN__800714f4(void)
 
 
 
-void FUN_BATTLE_BIN__800715a8(void)
+void OpenHelpMenu(void)
 
 {
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 6;
+  BattleGameState = OpenHelpMenu;
   DAT_BATTLE_BIN__800960ec = 1;
   FUN_BATTLE_BIN__8013d0ac();
   return;
@@ -41460,7 +44717,7 @@ void FUN_BATTLE_BIN__800715e8(void)
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eedc();
-  DAT_BATTLE_BIN__800960e4 = 7;
+  BattleGameState = MiniMenu;
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
   FUN_BATTLE_BIN__80174b8c((uint)*(byte *)(piVar1[0x4d] + 0x18a));
   FUN_BATTLE_BIN__800ec718(1);
@@ -41472,11 +44729,11 @@ void FUN_BATTLE_BIN__800715e8(void)
 
 
 
-void FUN_BATTLE_BIN__80071668(void)
+void FreeCursorMiniMenu(void)
 
 {
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 8;
+  BattleGameState = MiniMenuHelp;
   FUN_BATTLE_BIN__8013d4dc();
   return;
 }
@@ -41487,7 +44744,7 @@ void FUN_BATTLE_BIN__8007169c(void)
 
 {
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 8;
+  BattleGameState = MiniMenuHelp;
   FUN_BATTLE_BIN__800ec718(0);
   FUN_BATTLE_BIN__8013d610();
   return;
@@ -41495,11 +44752,11 @@ void FUN_BATTLE_BIN__8007169c(void)
 
 
 
-void FUN_BATTLE_BIN__800716dc(void)
+void OpenMiniMenuHelp(void)
 
 {
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 9;
+  BattleGameState = Case9;
   DAT_BATTLE_BIN__800960ec = 1;
   FUN_BATTLE_BIN__8013d0ac();
   return;
@@ -41515,7 +44772,7 @@ void FUN_BATTLE_BIN__8007171c(int param_1)
   undefined4 uVar3;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 10;
+  BattleGameState = CaseA;
   uVar1 = FUN_BATTLE_BIN__80183544(param_1);
   if (-1 < (int)uVar1) {
     piVar2 = FUN_BATTLE_BIN__8007a724((ushort)uVar1 & 0xff);
@@ -41543,7 +44800,7 @@ void FUN_BATTLE_BIN__800717cc(void)
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0xc;
+  BattleGameState = UnitMove;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   FUN_BATTLE_BIN__801419b8
             (1,0,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,*(byte *)((int)piVar1 + 0x13d) & 8);
@@ -41558,7 +44815,7 @@ void FUN_BATTLE_BIN__80071824(void)
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0xe;
+  BattleGameState = CaseE;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   FUN_BATTLE_BIN__801419b8
             (1,2,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,*(byte *)((int)piVar1 + 0x13d) & 8);
@@ -41589,7 +44846,7 @@ void FUN_BATTLE_BIN__8007187c(void)
   }
   else {
     FUN_BATTLE_BIN__800ec718(1);
-    DAT_BATTLE_BIN__800960e4 = 0xd;
+    BattleGameState = CloseMoveHelp;
     *(undefined2 *)(piVar2 + 2) = 0;
     FUN_BATTLE_BIN__8006e55c();
   }
@@ -41598,13 +44855,13 @@ void FUN_BATTLE_BIN__8007187c(void)
 
 
 
-void FUN_BATTLE_BIN__8007192c(void)
+void OpenIllegalMoveHelp(void)
 
 {
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0xf;
+  BattleGameState = IllegalMoveMenu;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   FUN_BATTLE_BIN__801419b8
             (2,2,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,*(byte *)((int)piVar1 + 0x13d) & 8);
@@ -41613,7 +44870,7 @@ void FUN_BATTLE_BIN__8007192c(void)
 
 
 
-void FUN_BATTLE_BIN__80071984(void)
+void SetupUnitMoving(void)
 
 {
   int *piVar1;
@@ -41622,7 +44879,7 @@ void FUN_BATTLE_BIN__80071984(void)
   uint uVar4;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x10;
+  BattleGameState = UnitMovingSetup;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   piVar2 = FUN_BATTLE_BIN__8007a1d4();
   iVar3 = 2;
@@ -41677,7 +44934,7 @@ void FUN_BATTLE_BIN__80071ab8(void)
   int *piVar2;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x11;
+  BattleGameState = UnitMoving;
   FUN_BATTLE_BIN__8006e55c();
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
   FUN_BATTLE_BIN__80071a7c((int)piVar1);
@@ -41695,7 +44952,7 @@ void FUN_BATTLE_BIN__80071ab8(void)
 
 
 
-void FUN_BATTLE_BIN__80071b4c(void)
+void CheckUnitMoving(void)
 
 {
   bool bVar1;
@@ -41706,7 +44963,7 @@ void FUN_BATTLE_BIN__80071b4c(void)
   uint uVar6;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x12;
+  BattleGameState = MoveConfirmMenu;
   piVar3 = FUN_BATTLE_BIN__8007a218();
   piVar4 = FUN_BATTLE_BIN__8007a1d4();
   FUN_BATTLE_BIN__8013aedc(0x3c);
@@ -41754,7 +45011,7 @@ void FUN_BATTLE_BIN__80071c8c(void)
   int *piVar1;
   
   DAT_80045980 = 1;
-  DAT_BATTLE_BIN__800960e4 = 0x25;
+  BattleGameState = Case25;
   DAT_BATTLE_BIN__80098db8 = 0;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   FUN_BATTLE_BIN__800683e4((int)piVar1);
@@ -41835,7 +45092,7 @@ bool FUN_BATTLE_BIN__80071de8(int param_1)
     FUN_BATTLE_BIN__80082cc4(param_1);
     FUN_BATTLE_BIN__800683e4(param_1);
     FUN_BATTLE_BIN__80068ab4(param_1);
-    FUN_80043d20(1);
+    Play_GNRC_Tune(1);
   }
   return bVar1;
 }
@@ -41856,7 +45113,7 @@ bool FUN_BATTLE_BIN__80071e68(int param_1)
     FUN_BATTLE_BIN__80082cc4(param_1);
     FUN_BATTLE_BIN__800683e4(param_1);
     FUN_BATTLE_BIN__80068ab4(param_1);
-    FUN_80043d20(3);
+    Play_GNRC_Tune(3);
   }
   return bVar1;
 }
@@ -41865,7 +45122,7 @@ bool FUN_BATTLE_BIN__80071e68(int param_1)
 
 // WARNING: Globals starting with '_' overlap smaller symbols at the same address
 
-undefined4 FUN_BATTLE_BIN__80071ee8(void)
+undefined4 MainPostMovement(void)
 
 {
   byte bVar1;
@@ -41892,7 +45149,7 @@ undefined4 FUN_BATTLE_BIN__80071ee8(void)
   uVar13 = (uint)*(byte *)(piVar3[0x4d] + 0x18a);
   FUN_BATTLE_BIN__801419b8(0xc,0,uVar13,0,0);
   uVar6 = DAT_BATTLE_BIN__80096208;
-  DAT_BATTLE_BIN__800960e4 = 0x15;
+  BattleGameState = CrystalLearn;
   DAT_BATTLE_BIN__80098db8 = 0;
   uVar5 = DAT_BATTLE_BIN__80096208 & 1;
   *(undefined2 *)(piVar4 + 2) = 0;
@@ -41971,7 +45228,7 @@ undefined4 FUN_BATTLE_BIN__80071ee8(void)
           FUN_BATTLE_BIN__801419b8
                     (0xf,_DAT_BATTLE_BIN__80096210 & 0xff,(uint)*(byte *)(piVar3[0x4d] + 0x18a),0,1)
           ;
-          FUN_80043d20(2);
+          Play_GNRC_Tune(2);
           return 1;
         }
         iVar11 = piVar3[0x4d];
@@ -42059,7 +45316,7 @@ void FUN_BATTLE_BIN__800723d4(void)
     DAT_BATTLE_BIN__80096208 = FUN_BATTLE_BIN__8017ffc0((BattleUnitData *)piVar1[0x4d]);
   }
   DAT_BATTLE_BIN__80096204 = 0;
-  FUN_BATTLE_BIN__80071ee8();
+  MainPostMovement();
   if (DAT_BATTLE_BIN__80096208 != 0) {
     FUN_BATTLE_BIN__800683d4();
   }
@@ -42079,7 +45336,7 @@ void FUN_BATTLE_BIN__80072460(void)
   FUN_BATTLE_BIN__8006eef0();
   piVar1 = FUN_BATTLE_BIN__8007a218();
   DAT_BATTLE_BIN__80096218 = (int)*(short *)(piVar1 + 0x1c);
-  DAT_BATTLE_BIN__800960e4 = 0x13;
+  BattleGameState = WaitDirection;
   *(undefined2 *)(piVar1 + 2) = 0;
   if ((*(char *)(piVar1 + 0x4c) == '\x01') &&
      (piVar2 = FUN_BATTLE_BIN__8007a6e4((ushort)*(byte *)((int)piVar1 + 0x131)),
@@ -42123,7 +45380,7 @@ void FUN_BATTLE_BIN__80072544(void)
   uVar6 = (uint)*(byte *)(piVar2[0x4d] + 0x18a);
   iVar3 = FUN_BATTLE_BIN__801419b8(8,2,uVar6,0,1);
   if ((iVar3 == 2) && (uVar4 = FUN_BATTLE_BIN__80142ba4(), uVar4 != 0)) {
-    DAT_BATTLE_BIN__800960e8 = DAT_BATTLE_BIN__800960e4;
+    DAT_BATTLE_BIN__800960e8 = BattleGameState;
     FUN_BATTLE_BIN__801419b8(8,0,(uint)*(byte *)(piVar2[0x4d] + 0x18a),0,1);
     FUN_BATTLE_BIN__80070998();
   }
@@ -42131,7 +45388,7 @@ void FUN_BATTLE_BIN__80072544(void)
     iVar3 = piVar2[0x4d];
     bVar1 = FUN_BATTLE_BIN__801832cc(iVar3);
     if ((bVar1 & 0xf) == 0) {
-      DAT_BATTLE_BIN__800960e4 = 0x14;
+      BattleGameState = WaitMenu;
       FUN_BATTLE_BIN__8006e55c();
       FUN_BATTLE_BIN__801419b8
                 (3,0,(uint)*(byte *)(piVar2[0x4d] + 0x18a),0,*(byte *)((int)piVar2 + 0x13d) & 8);
@@ -42313,7 +45570,7 @@ void FUN_BATTLE_BIN__80072ad0(void)
   int *piVar1;
   
   DAT_80045980 = 1;
-  DAT_BATTLE_BIN__800960e4 = 0x26;
+  BattleGameState = JPEXPGain;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   if (piVar1 != (int *)0x0) {
     *(undefined2 *)(piVar1 + 2) = 0;
@@ -42334,13 +45591,13 @@ void FUN_BATTLE_BIN__80072b14(int param_1)
 
 
 
-void FUN_BATTLE_BIN__80072b50(void)
+void ExecuteAction(void)
 
 {
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x16;
+  BattleGameState = ActionExecuteSetup;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   FUN_BATTLE_BIN__801419b8
             (1,(uint)(piVar1[0x5d] == 3),(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,
@@ -42367,7 +45624,7 @@ void FUN_BATTLE_BIN__80072bf0(void)
   undefined3 extraout_var_00;
   uint uVar5;
   
-  DAT_BATTLE_BIN__800960e4 = 0x2d;
+  BattleGameState = Case2d;
   piVar2 = FUN_BATTLE_BIN__8007a1d4();
   uVar5 = (uint)*(ushort *)(piVar2 + 0x4e);
   *(undefined2 *)(piVar2 + 2) = 0;
@@ -42410,7 +45667,7 @@ bool FUN_BATTLE_BIN__80072ce8(void)
   bool bVar1;
   int iVar2;
   
-  DAT_BATTLE_BIN__800960e4 = 0x2f;
+  BattleGameState = ResumeAttackPhaseControl;
   DAT_80045980 = 1;
   FUN_BATTLE_BIN__8007a1d4();
   bVar1 = DAT_BATTLE_BIN__80096244 != 0;
@@ -42623,7 +45880,7 @@ void FUN_BATTLE_BIN__800732c8(undefined4 param_1,int *param_2,undefined4 param_3
   uint uVar6;
   int *unaff_s3;
   
-  DAT_BATTLE_BIN__800960e4 = 0x2e;
+  BattleGameState = BattleMessageDisplay;
   DAT_80045980 = 1;
   DAT_BATTLE_BIN__80098db8 = 0;
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
@@ -42632,14 +45889,14 @@ void FUN_BATTLE_BIN__800732c8(undefined4 param_1,int *param_2,undefined4 param_3
   *(undefined *)(piVar1 + 0xb4) = 0;
   FUN_BATTLE_BIN__8013aedc(0x3c);
   if (*(char *)((int)piVar1 + 0x1a2) == '\x06') {
-    FUN_80043d20(2);
+    Play_GNRC_Tune(2);
     uVar6 = 0x1838;
     uVar3 = (uint)*(byte *)(piVar1[0x4d] + 0x18a);
     uVar4 = 0;
     iVar5 = 1;
   }
   else if (*(char *)((int)piVar1 + 0x1a2) == '\t') {
-    FUN_80043d20(2);
+    Play_GNRC_Tune(2);
     uVar6 = 0x1828;
     uVar3 = (uint)*(byte *)(piVar1[0x4d] + 0x18a);
     uVar4 = 0;
@@ -42658,7 +45915,7 @@ void FUN_BATTLE_BIN__800732c8(undefined4 param_1,int *param_2,undefined4 param_3
           uVar6 = (uint)(byte)(&DAT_BATTLE_BIN__80093e12)[piVar1[0x5c] * 3];
           if (uVar6 != 0) {
             if (uVar6 != 6) goto LAB_BATTLE_BIN__80073440;
-            FUN_80043d20(2);
+            Play_GNRC_Tune(2);
           }
           break;
         }
@@ -42705,7 +45962,7 @@ void FUN_BATTLE_BIN__800734cc(void)
   int *piVar2;
   ushort local_18 [4];
   
-  DAT_BATTLE_BIN__800960e4 = 0x28;
+  BattleGameState = LearnAbilityOnHit;
   DAT_80045980 = 1;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   FUN_BATTLE_BIN__801419b8(10,0,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,0);
@@ -42898,7 +46155,7 @@ undefined4 FUN_BATTLE_BIN__800739cc(void)
     if (DAT_BATTLE_BIN__80096214 == 1) {
       iVar2 = FUN_BATTLE_BIN__8017c9b8((uint)*(byte *)(piVar1[0x4d] + 0x18a));
       if (iVar2 == 0) {
-        DAT_BATTLE_BIN__800960e4 = 0x29;
+        BattleGameState = DoEffectDamageDisp;
         DAT_BATTLE_BIN__8009611c = (uint)*(byte *)(piVar1 + 1);
         FUN_BATTLE_BIN__8014175c(piVar1[0x4d] + 0x16e,(uint)*(byte *)(piVar1[0x4d] + 0x18a),1);
         *(undefined *)((int)piVar1 + 0x1b5) = 0;
@@ -42932,7 +46189,7 @@ LAB_BATTLE_BIN__80073b4c:
       unaff_s1 = FUN_BATTLE_BIN__8017defc((uint)*(byte *)(piVar1[0x4d] + 0x18a),local_2e);
 LAB_BATTLE_BIN__80073af0:
       if (unaff_s1 != 0xffffffff) {
-        DAT_BATTLE_BIN__800960e4 = 0x29;
+        BattleGameState = DoEffectDamageDisp;
         piVar3 = FUN_BATTLE_BIN__8007a724((ushort)unaff_s1);
         DAT_BATTLE_BIN__8009611c = (uint)*(byte *)(piVar3 + 1);
         local_2f = 0;
@@ -42965,7 +46222,7 @@ void FUN_BATTLE_BIN__80073b9c(void)
   int iVar6;
   
   DAT_80045980 = 1;
-  DAT_BATTLE_BIN__800960e4 = 0x2c;
+  BattleGameState = SecondaryEffect;
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
   *(undefined2 *)(piVar1 + 2) = 0;
   if (*(char *)((int)piVar1 + 0x1b5) == '\0') {
@@ -43081,7 +46338,7 @@ void FUN_BATTLE_BIN__80073eec(void)
   FUN_BATTLE_BIN__80083758((uint)*(byte *)((int)piVar2 + 0x1ab),(int)piVar2);
   if (((((int)sVar1 == 0) || (uVar4 == (int)sVar1)) && (uVar4 != 0x200)) &&
      ((uVar4 != 0 && (uVar3 = FUN_BATTLE_BIN__801a1814(uVar4), uVar3 == 0)))) {
-    DAT_BATTLE_BIN__800960e4 = 0x2b;
+    BattleGameState = StartEffectFileOpen;
     FUN_BATTLE_BIN__800736d4(uVar4,(int)piVar2);
   }
   else {
@@ -43096,7 +46353,7 @@ void FUN_BATTLE_BIN__80073fb8(void)
 
 {
   DAT_80045980 = 1;
-  DAT_BATTLE_BIN__800960e4 = 0x2a;
+  BattleGameState = OpenSP2Files;
   DAT_BATTLE_BIN__80098d70 = 0;
   return;
 }
@@ -43109,7 +46366,7 @@ void FUN_BATTLE_BIN__80073fe0(void)
   int *piVar1;
   
   FUN_BATTLE_BIN__800ec718(0);
-  DAT_BATTLE_BIN__800960e4 = 0x1c;
+  BattleGameState = PreAttackAnim1;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   *(undefined2 *)(piVar1 + 2) = 0;
   if ((&DAT_BATTLE_BIN__80093e10)[(uint)*(ushort *)(piVar1 + 0x4e) * 3] == '\0') {
@@ -43132,12 +46389,12 @@ void FUN_BATTLE_BIN__80074068(void)
   undefined3 extraout_var;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x1d;
+  BattleGameState = Case1d;
   DAT_BATTLE_BIN__80098db8 = 0;
   piVar2 = FUN_BATTLE_BIN__8007a218();
   bVar1 = FUN_BATTLE_BIN__80070a38((int)piVar2);
   if (CONCAT31(extraout_var,bVar1) == 0) {
-    DAT_BATTLE_BIN__800960e4 = 0x1d;
+    BattleGameState = Case1d;
     FUN_BATTLE_BIN__80070820((int)piVar2);
   }
   return;
@@ -43161,7 +46418,7 @@ void FUN_BATTLE_BIN__800740d4(void)
   if (uVar2 == 1) {
 LAB_BATTLE_BIN__80074184:
     FUN_BATTLE_BIN__8006eef0();
-    DAT_BATTLE_BIN__800960e4 = 0x1e;
+    BattleGameState = CommenceAtkPhaseCtrl;
     DAT_BATTLE_BIN__80098db8 = 0;
     *(byte *)(piVar1 + 0x4f) = *(byte *)(piVar1 + 0x4f) | 2;
     if ((&DAT_BATTLE_BIN__80093e10)[(uint)*(ushort *)(piVar1 + 0x4e) * 3] == '\0') {
@@ -43195,7 +46452,7 @@ void FUN_BATTLE_BIN__80074204(void)
   int iVar5;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x1e;
+  BattleGameState = CommenceAtkPhaseCtrl;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   iVar2 = piVar1[0x4d];
   iVar3 = *(int *)(iVar2 + 0x172);
@@ -43216,7 +46473,7 @@ void FUN_BATTLE_BIN__80074204(void)
 
 
 
-void FUN_BATTLE_BIN__80074308(void)
+void SelectTargetTile(void)
 
 {
   int *piVar1;
@@ -43252,7 +46509,7 @@ LAB_BATTLE_BIN__8007437c:
     else {
       FUN_BATTLE_BIN__8006eedc();
       DAT_BATTLE_BIN__800960c4 = DAT_BATTLE_BIN__800960c0;
-      DAT_BATTLE_BIN__800960e4 = 0x19;
+      BattleGameState = AbilityPrvwHandling;
       DAT_BATTLE_BIN__800960c0 = 2;
       FUN_BATTLE_BIN__800ec718(7);
       FUN_BATTLE_BIN__8006e634();
@@ -43278,7 +46535,7 @@ void FUN_BATTLE_BIN__80074470(void)
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x18;
+  BattleGameState = IllegalRange;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   FUN_BATTLE_BIN__801419b8
             (4,5,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,*(byte *)((int)piVar1 + 0x13d) & 8);
@@ -43298,7 +46555,7 @@ int FUN_BATTLE_BIN__800744c8(void)
   case 0:
   case 1:
     FUN_BATTLE_BIN__8006eef0();
-    DAT_BATTLE_BIN__800960e4 = 0x17;
+    BattleGameState = TargettingRange;
     FUN_BATTLE_BIN__800ec718(2);
     FUN_BATTLE_BIN__8006e5c0();
     if ((*(byte *)((int)piVar1 + 0x13d) & 8) == 0) {
@@ -43310,7 +46567,7 @@ int FUN_BATTLE_BIN__800744c8(void)
     break;
   case 2:
     FUN_BATTLE_BIN__8006eef0();
-    FUN_BATTLE_BIN__80074308();
+    SelectTargetTile();
     FUN_BATTLE_BIN__8006e5c0();
     break;
   case -1:
@@ -43331,7 +46588,7 @@ void FUN_BATTLE_BIN__800745ac(void)
   uint uVar4;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x1b;
+  BattleGameState = ConfirmAction;
   piVar1 = FUN_BATTLE_BIN__8007a218();
   piVar2 = FUN_BATTLE_BIN__8007a2b8
                      (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
@@ -43420,7 +46677,7 @@ void FUN_BATTLE_BIN__800747b8(void)
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x1f;
+  BattleGameState = Case1f;
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
   FUN_BATTLE_BIN__801419b8(1,0,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,1);
   FUN_BATTLE_BIN__800683c0();
@@ -43435,7 +46692,7 @@ void FUN_BATTLE_BIN__80074814(void)
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x20;
+  BattleGameState = Case20;
   FUN_BATTLE_BIN__8006e55c();
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
   FUN_BATTLE_BIN__800746ac((uint)*(byte *)((int)piVar1 + 0x1b6));
@@ -43452,7 +46709,7 @@ void FUN_BATTLE_BIN__8007485c(void)
   uint uVar3;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x21;
+  BattleGameState = Case21;
   piVar1 = FUN_BATTLE_BIN__8007a2b8
                      (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
   if ((piVar1 != (int *)0x0) && (piVar1[0x4d] != 0)) {
@@ -43483,7 +46740,7 @@ void FUN_BATTLE_BIN__80074930(void)
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x22;
+  BattleGameState = Case22;
   piVar1 = FUN_BATTLE_BIN__8007a2b8
                      (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
   if ((piVar1 != (int *)0x0) && (piVar1[0x4d] != 0)) {
@@ -43502,7 +46759,7 @@ void FUN_BATTLE_BIN__800749c8(void)
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x23;
+  BattleGameState = Case23;
   FUN_BATTLE_BIN__8013d634(1,0xff,0xff);
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
   FUN_BATTLE_BIN__801419b8(1,0,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,1);
@@ -43519,7 +46776,7 @@ void FUN_BATTLE_BIN__80074a3c(void)
   int *piVar1;
   
   FUN_BATTLE_BIN__8006eef0();
-  DAT_BATTLE_BIN__800960e4 = 0x24;
+  BattleGameState = Case24;
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
   piVar1 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(piVar1[0x4d] + 0x1b9));
   FUN_BATTLE_BIN__800683e4((int)piVar1);
@@ -43532,15 +46789,13 @@ void FUN_BATTLE_BIN__80074a3c(void)
 
 
 
-// WARNING: Globals starting with '_' overlap smaller symbols at the same address
-
-void FUN_BATTLE_BIN__80074b38(undefined4 param_1,undefined4 param_2)
+void QueueCloseBattle_Bin(undefined4 param_1,int CloseFlag)
 
 {
   DAT_80045980 = 2;
-  DAT_BATTLE_BIN__800960e4 = 0x3b;
-  _DAT_BATTLE_BIN__8009610c = param_1;
-  DAT_BATTLE_BIN__800a778c = param_2;
+  BattleGameState = CloseBattle;
+  DAT_BATTLE_BIN__8009610c = param_1;
+  CloseBattleVar = CloseFlag;
   return;
 }
 
@@ -43599,7 +46854,7 @@ void FUN_BATTLE_BIN__80074bf8(undefined4 param_1,undefined4 param_2,undefined4 p
             if ((DAT_8004594c & 0x10) != 0) {
               FUN_BATTLE_BIN__80068794();
               Call_Play_Sound(1);
-              FUN_BATTLE_BIN__80071668();
+              FreeCursorMiniMenu();
             }
           }
           else if ((DAT_800473ac & 0x1c0) != 0xc0) {
@@ -43629,7 +46884,7 @@ void FUN_BATTLE_BIN__80074bf8(undefined4 param_1,undefined4 param_2,undefined4 p
           piVar2 = FUN_BATTLE_BIN__8007a218();
           if (piVar2 != (int *)0x0) {
             FUN_BATTLE_BIN__800683e4((int)piVar2);
-            FUN_BATTLE_BIN__80070c04();
+            SetActionMenuScript();
           }
         }
         else {
@@ -43639,7 +46894,7 @@ void FUN_BATTLE_BIN__80074bf8(undefined4 param_1,undefined4 param_2,undefined4 p
     }
     else {
       FUN_BATTLE_BIN__80068794();
-      FUN_BATTLE_BIN__8007134c();
+      HighlightUnitsTeam();
     }
   }
   else {
@@ -43660,7 +46915,7 @@ void FUN_BATTLE_BIN__80074dd0(undefined4 param_1,undefined4 param_2,undefined4 p
   uVar1 = FUN_BATTLE_BIN__8013d578();
   if (uVar1 != 2) {
     DAT_BATTLE_BIN__800960ec = 0;
-    FUN_BATTLE_BIN__80070c78();
+    FreeCursorSelect();
   }
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar2 = (uint *)Get_OTAG_List();
@@ -43675,7 +46930,7 @@ void FUN_BATTLE_BIN__80074e2c(undefined4 param_1,undefined4 param_2,undefined4 p
 {
   if ((DAT_80045950 & 0x80) != 0) {
     DAT_BATTLE_BIN__800960c0 = DAT_BATTLE_BIN__800960c4;
-    FUN_BATTLE_BIN__80070c78();
+    FreeCursorSelect();
     FUN_BATTLE_BIN__80068494();
   }
   FUN_BATTLE_BIN__8006f28c();
@@ -43727,10 +46982,10 @@ void FUN_BATTLE_BIN__80074f5c(undefined4 param_1,undefined4 param_2,undefined4 p
   
   uVar3 = FUN_BATTLE_BIN__8013d578();
   if (uVar3 == 0) {
-    FUN_BATTLE_BIN__80070c78();
+    FreeCursorSelect();
   }
   if ((DAT_8004594c & 0x100) != 0) {
-    FUN_BATTLE_BIN__800715a8();
+    OpenHelpMenu();
   }
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar4 = (uint *)Get_OTAG_List();
@@ -43753,7 +47008,7 @@ LAB_BATTLE_BIN__800752a0:
     }
     if (iVar8 < 0x13) {
       if (iVar8 != 0xf) {
-        FUN_BATTLE_BIN__80070c04();
+        SetActionMenuScript();
         return;
       }
 LAB_BATTLE_BIN__800752b4:
@@ -43823,11 +47078,11 @@ LAB_BATTLE_BIN__800750a0:
         if ((int)uVar3 < 0) goto LAB_BATTLE_BIN__80075280;
       }
       else if (uVar3 != 3) goto LAB_BATTLE_BIN__80075280;
-      FUN_BATTLE_BIN__80072b50();
+      ExecuteAction();
       return;
     }
 LAB_BATTLE_BIN__80075280:
-    FUN_BATTLE_BIN__80074308();
+    SelectTargetTile();
     return;
   case 2:
     iVar8 = piVar5[1];
@@ -43942,11 +47197,11 @@ void FUN_BATTLE_BIN__80075310(undefined4 param_1,undefined4 param_2,undefined4 p
         if ((int)uVar5 < 0) goto LAB_BATTLE_BIN__800755b0;
       }
       else if (uVar5 != 3) goto LAB_BATTLE_BIN__800755b0;
-      FUN_BATTLE_BIN__80072b50();
+      ExecuteAction();
       return;
     }
 LAB_BATTLE_BIN__800755b0:
-    FUN_BATTLE_BIN__80074308();
+    SelectTargetTile();
     return;
   case 2:
     FUN_BATTLE_BIN__80183e00((uint)*(byte *)(piVar3[0x4d] + 0x18a));
@@ -44011,7 +47266,7 @@ void FUN_BATTLE_BIN__80075690(undefined4 param_1,undefined4 param_2,undefined4 p
     DAT_BATTLE_BIN__800960c0 = DAT_BATTLE_BIN__800960c4;
     param_1 = 2;
     Call_Play_Sound(2);
-    FUN_BATTLE_BIN__80070c78();
+    FreeCursorSelect();
   }
   FUN_BATTLE_BIN__8006f28c();
   FUN_BATTLE_BIN__8006f634();
@@ -44034,7 +47289,7 @@ void FUN_BATTLE_BIN__8007571c(undefined4 param_1,undefined4 param_2,undefined4 p
   if ((DAT_8004594c & 0x100) == 0) {
     if (uVar1 == 0) {
       DAT_BATTLE_BIN__800960c0 = DAT_800473ac & 7;
-      FUN_BATTLE_BIN__80070c78();
+      FreeCursorSelect();
     }
     else if (99 < (int)uVar1) {
       uVar1 = uVar1 - 100;
@@ -44042,7 +47297,7 @@ void FUN_BATTLE_BIN__8007571c(undefined4 param_1,undefined4 param_2,undefined4 p
     }
   }
   else {
-    FUN_BATTLE_BIN__800716dc();
+    OpenMiniMenuHelp();
   }
   FUN_BATTLE_BIN__80074bac(uVar1,param_2,param_3,param_4);
   puVar2 = (uint *)Get_OTAG_List();
@@ -44061,7 +47316,7 @@ void FUN_BATTLE_BIN__800757c4(undefined4 param_1,undefined4 param_2,undefined4 p
   uVar1 = FUN_BATTLE_BIN__8013d578();
   if (uVar1 != 2) {
     DAT_BATTLE_BIN__800960ec = 0;
-    FUN_BATTLE_BIN__80071668();
+    FreeCursorMiniMenu();
   }
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar2 = (uint *)Get_OTAG_List();
@@ -44147,7 +47402,7 @@ void FUN_BATTLE_BIN__80075910(undefined4 param_1,undefined4 param_2,undefined4 p
       FUN_BATTLE_BIN__800ec718(0);
       piVar9 = piVar3 + 0x27;
       if (piVar5 == (int *)0x0) {
-        FUN_BATTLE_BIN__80070c04();
+        SetActionMenuScript();
       }
       else {
         DAT_BATTLE_BIN__800961b4 = (int)*(short *)(piVar2 + 0x57);
@@ -44181,7 +47436,7 @@ void FUN_BATTLE_BIN__80075910(undefined4 param_1,undefined4 param_2,undefined4 p
           } while (piVar5 != piVar2);
         }
         piVar3[0xe] = 0x2000;
-        FUN_BATTLE_BIN__80071984();
+        SetupUnitMoving();
       }
     }
   }
@@ -44211,7 +47466,7 @@ void FUN_BATTLE_BIN__80075910(undefined4 param_1,undefined4 param_2,undefined4 p
                                  (byte)DAT_BATTLE_BIN__800961b8);
       piVar5 = piVar3 + 0x27;
       if (piVar2 == (int *)0x0) {
-        FUN_BATTLE_BIN__8007192c();
+        OpenIllegalMoveHelp();
       }
       else {
         if ((((uint)piVar2 | (uint)piVar5) & 3) == 0) {
@@ -44245,7 +47500,7 @@ void FUN_BATTLE_BIN__80075910(undefined4 param_1,undefined4 param_2,undefined4 p
         piVar3[0xe] = 0x2000;
         FUN_BATTLE_BIN__800ec718(0);
         Call_Play_Sound(1);
-        FUN_BATTLE_BIN__80071984();
+        SetupUnitMoving();
       }
     }
   }
@@ -44344,7 +47599,7 @@ void FUN_BATTLE_BIN__80075db0(undefined4 param_1,undefined4 param_2,undefined4 p
       ((uint)*(byte *)(piVar1 + 0x27) <= (uint)piVar1[0x26])) && (DAT_BATTLE_BIN__8009612c == 0)) {
     piVar3 = (int *)(uint)*(byte *)(piVar1 + 1);
     FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar1 + 1));
-    FUN_BATTLE_BIN__80071b4c();
+    CheckUnitMoving();
   }
   FUN_BATTLE_BIN__80074bac(piVar3,param_2,param_3,param_4);
   puVar2 = (uint *)Get_OTAG_List();
@@ -44761,7 +48016,7 @@ LAB_BATTLE_BIN__80076764:
       DAT_BATTLE_BIN__80096208 = DAT_BATTLE_BIN__80096208 & 0xfffffffe;
       FUN_BATTLE_BIN__8019ae30();
     }
-    FUN_BATTLE_BIN__80071ee8();
+    MainPostMovement();
   }
   return;
 }
@@ -44830,7 +48085,7 @@ void FUN_BATTLE_BIN__800769b0(undefined4 param_1,undefined4 param_2,undefined4 p
     puVar4 = FUN_BATTLE_BIN__80183fb4
                        (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
     if ((puVar4[5] & 0x40) != 0) {
-      FUN_BATTLE_BIN__80074308();
+      SelectTargetTile();
       return;
     }
     FUN_BATTLE_BIN__80074470();
@@ -44853,7 +48108,7 @@ void FUN_BATTLE_BIN__800769b0(undefined4 param_1,undefined4 param_2,undefined4 p
     }
     piVar5 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar2 + 0x167));
     if (piVar5 == (int *)0x0) {
-      FUN_BATTLE_BIN__80070c04();
+      SetActionMenuScript();
       return;
     }
     FUN_BATTLE_BIN__8006e6b0((int)piVar2,(int)piVar5);
@@ -44867,7 +48122,7 @@ void FUN_BATTLE_BIN__800769b0(undefined4 param_1,undefined4 param_2,undefined4 p
     uVar8 = (uint)*(byte *)((int)piVar5 + 0x7e);
   }
   FUN_BATTLE_BIN__80183fb4(uVar6,uVar7,uVar8);
-  FUN_BATTLE_BIN__80074308();
+  SelectTargetTile();
   return;
 }
 
@@ -44903,7 +48158,7 @@ void FUN_BATTLE_BIN__80076be8(undefined4 param_1,undefined4 param_2,undefined4 p
   if (uVar1 != 2) {
     DAT_BATTLE_BIN__800960ec = 0;
     FUN_BATTLE_BIN__8006eedc();
-    DAT_BATTLE_BIN__800960e4 = 0x19;
+    BattleGameState = AbilityPrvwHandling;
   }
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar2 = (uint *)Get_OTAG_List();
@@ -45578,7 +48833,7 @@ void FUN_BATTLE_BIN__80077ca4(undefined4 param_1,undefined4 param_2,undefined4 p
       piVar2 = FUN_BATTLE_BIN__8007a1d4();
       FUN_BATTLE_BIN__800683e4((int)piVar2);
       FUN_BATTLE_BIN__80068494();
-      FUN_BATTLE_BIN__80070c04();
+      SetActionMenuScript();
       return;
     }
     if ((DAT_8004594c & 0x10) == 0) {
@@ -45659,7 +48914,7 @@ void FUN_BATTLE_BIN__80077e88(undefined4 param_1,undefined4 param_2,undefined4 p
       FUN_BATTLE_BIN__8014171c
                 (*(byte *)(piVar3[0x4d] + 0x18a),(uint)*(byte *)(piVar2[0x4d] + 0x18a));
       FUN_BATTLE_BIN__800683e4((int)piVar2);
-      FUN_BATTLE_BIN__80070c04();
+      SetActionMenuScript();
       return;
     }
     if (iVar4 != 0xff) {
@@ -45708,7 +48963,7 @@ void FUN_BATTLE_BIN__80078030(undefined4 param_1,undefined4 param_2,undefined4 p
   if (((DAT_8004594c & 0x20) != 0) || ((DAT_8004594c & 0x40) != 0)) {
     piVar2 = FUN_BATTLE_BIN__8007a1d4();
     FUN_BATTLE_BIN__800683e4((int)piVar2);
-    FUN_BATTLE_BIN__80070c04();
+    SetActionMenuScript();
   }
   return;
 }
@@ -45774,7 +49029,7 @@ void FUN_BATTLE_BIN__80078148(undefined4 param_1,undefined4 param_2,undefined4 p
       uVar5 = FUN_BATTLE_BIN__80142ba4();
       uVar6 = 8;
       if (uVar5 != 0) {
-        DAT_BATTLE_BIN__800960e8 = DAT_BATTLE_BIN__800960e4;
+        DAT_BATTLE_BIN__800960e8 = BattleGameState;
         FUN_BATTLE_BIN__801419b8(8,0,(uint)*(byte *)(piVar3[0x4d] + 0x18a),0,1);
         FUN_BATTLE_BIN__80070998();
         return;
@@ -45784,7 +49039,7 @@ void FUN_BATTLE_BIN__80078148(undefined4 param_1,undefined4 param_2,undefined4 p
   else {
     bVar1 = FUN_BATTLE_BIN__80183d70((uint)*(byte *)(piVar3[0x4d] + 0x18a));
     if (CONCAT31(extraout_var,bVar1) != 1) {
-      FUN_BATTLE_BIN__80070c04();
+      SetActionMenuScript();
       return;
     }
     iVar4 = piVar3[0x4d];
@@ -45837,7 +49092,7 @@ void FUN_BATTLE_BIN__80078328(undefined4 param_1,undefined4 param_2,undefined4 p
       FUN_BATTLE_BIN__800711a4();
     }
     else {
-      FUN_BATTLE_BIN__80070c04();
+      SetActionMenuScript();
     }
   }
   return;
@@ -45889,7 +49144,7 @@ void FUN_BATTLE_BIN__80078504(undefined4 param_1,undefined4 param_2,undefined4 p
   FUN_BATTLE_BIN__80086dc4();
   FUN_BATTLE_BIN__8008f208();
   if (DAT_BATTLE_BIN__8009612c == 0) {
-    DAT_BATTLE_BIN__800960e4 = DAT_BATTLE_BIN__800960e8;
+    BattleGameState = DAT_BATTLE_BIN__800960e8;
     DAT_80045980 = DAT_8004d958;
   }
   return;
@@ -45907,7 +49162,7 @@ void FUN_BATTLE_BIN__800785ac(undefined4 param_1,undefined4 param_2,undefined4 p
   undefined uVar4;
   ushort uVar5;
   int *piVar6;
-  undefined4 uVar7;
+  int CloseFlag;
   
   FUN_BATTLE_BIN__80086b44();
   if (DAT_BATTLE_BIN__800960f0 != 1) {
@@ -45934,21 +49189,21 @@ void FUN_BATTLE_BIN__800785ac(undefined4 param_1,undefined4 param_2,undefined4 p
     goto switchD_BATTLE_BIN__80078650_caseD_1;
   case 9:
     FUN_BATTLE_BIN__8008d950();
-    uVar7 = 1;
+    CloseFlag = 1;
     break;
   case 10:
     FUN_BATTLE_BIN__8008d950();
-    uVar7 = 0;
+    CloseFlag = 0;
     break;
   case 0xb:
     FUN_BATTLE_BIN__8008d950();
-    uVar7 = 2;
+    CloseFlag = 2;
     break;
   case 0x13:
     FUN_BATTLE_BIN__8008d950();
-    uVar7 = 3;
+    CloseFlag = 3;
   }
-  FUN_BATTLE_BIN__80074b38(8,uVar7);
+  QueueCloseBattle_Bin(8,CloseFlag);
 switchD_BATTLE_BIN__80078650_caseD_1:
   if (DAT_BATTLE_BIN__800961b0 != 0) {
     uVar5 = DAT_BATTLE_BIN__800961b0;
@@ -46004,10 +49259,10 @@ void FUN_BATTLE_BIN__800787fc(undefined4 param_1,undefined4 param_2,undefined4 p
   AddPrim(pvVar1,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
   pvVar1 = (void *)Get_OTAG_List();
   AddPrim(pvVar1,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
-  DAT_BATTLE_BIN__800961b0 = DAT_BATTLE_BIN__800961b0 + DAT_BATTLE_BIN__8009610c;
+  DAT_BATTLE_BIN__800961b0 = DAT_BATTLE_BIN__800961b0 + (short)DAT_BATTLE_BIN__8009610c;
   if (0x101 < (short)DAT_BATTLE_BIN__800961b0) {
     DAT_BATTLE_BIN__800961b0 = 0xff;
-    DAT_BATTLE_BIN__800960e4 = 0x36;
+    BattleGameState = Case36;
     DAT_BATTLE_BIN__800960f4 = 0;
     FUN_BATTLE_BIN__800787dc();
     FUN_BATTLE_BIN__80087064();
@@ -46037,10 +49292,10 @@ void FUN_BATTLE_BIN__80078964(undefined4 param_1,undefined4 param_2,undefined4 p
   AddPrim(pvVar1,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
   pvVar1 = (void *)Get_OTAG_List();
   AddPrim(pvVar1,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
-  DAT_BATTLE_BIN__800961b0 = DAT_BATTLE_BIN__800961b0 + DAT_BATTLE_BIN__8009610c;
+  DAT_BATTLE_BIN__800961b0 = DAT_BATTLE_BIN__800961b0 + (short)DAT_BATTLE_BIN__8009610c;
   if (0x101 < (short)DAT_BATTLE_BIN__800961b0) {
     DAT_BATTLE_BIN__800961b0 = 0xff;
-    DAT_BATTLE_BIN__800960e4 = 0x39;
+    BattleGameState = Case39;
     DAT_BATTLE_BIN__800960f4 = 0;
     FUN_BATTLE_BIN__800787dc();
     FUN_BATTLE_BIN__80087064();
@@ -46070,7 +49325,7 @@ void FUN_BATTLE_BIN__80078acc(undefined4 param_1,undefined4 param_2,undefined4 p
   AddPrim(pvVar1,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
   pvVar1 = (void *)Get_OTAG_List();
   AddPrim(pvVar1,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
-  DAT_BATTLE_BIN__800961b0 = DAT_BATTLE_BIN__800961b0 + DAT_BATTLE_BIN__8009610c;
+  DAT_BATTLE_BIN__800961b0 = DAT_BATTLE_BIN__800961b0 + (short)DAT_BATTLE_BIN__8009610c;
   return;
 }
 
@@ -46091,7 +49346,7 @@ void FUN_BATTLE_BIN__80078bf4(undefined4 param_1,undefined4 param_2,undefined4 *
   pvVar1 = (void *)Get_OTAG_List();
   AddPrim(pvVar1,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
   if (DAT_BATTLE_BIN__800960f4 == 0xd) {
-    DAT_BATTLE_BIN__800960e4 = 0x37;
+    BattleGameState = Case37;
     DAT_BATTLE_BIN__800961b0 = 0xff;
   }
   return;
@@ -46102,7 +49357,7 @@ void FUN_BATTLE_BIN__80078bf4(undefined4 param_1,undefined4 param_2,undefined4 *
 void FUN_BATTLE_BIN__80078d20(undefined4 param_1,undefined4 param_2,undefined4 *param_3)
 
 {
-  undefined4 uVar1;
+  GameStateVar GVar1;
   void *pvVar2;
   
   DAT_BATTLE_BIN__800960f4 =
@@ -46114,11 +49369,11 @@ void FUN_BATTLE_BIN__80078d20(undefined4 param_1,undefined4 param_2,undefined4 *
   AddPrim(pvVar2,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
   pvVar2 = (void *)Get_OTAG_List();
   AddPrim(pvVar2,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
-  uVar1 = DAT_BATTLE_BIN__800960e8;
+  GVar1 = DAT_BATTLE_BIN__800960e8;
   if (DAT_BATTLE_BIN__800960f4 == 0xd) {
-    DAT_BATTLE_BIN__800960e8 = 0;
+    DAT_BATTLE_BIN__800960e8 = FreeCursor;
     DAT_BATTLE_BIN__800961b0 = 0xff;
-    DAT_BATTLE_BIN__800960e4 = uVar1;
+    BattleGameState = GVar1;
   }
   return;
 }
@@ -46128,7 +49383,7 @@ void FUN_BATTLE_BIN__80078d20(undefined4 param_1,undefined4 param_2,undefined4 *
 void FUN_BATTLE_BIN__80078e58(undefined4 param_1,undefined4 param_2,undefined4 param_3,uint param_4)
 
 {
-  undefined4 uVar1;
+  GameStateVar GVar1;
   void *pvVar2;
   uint uVar3;
   undefined uVar4;
@@ -46147,14 +49402,14 @@ void FUN_BATTLE_BIN__80078e58(undefined4 param_1,undefined4 param_2,undefined4 p
   AddPrim(pvVar2,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
   pvVar2 = (void *)Get_OTAG_List();
   AddPrim(pvVar2,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
-  uVar1 = DAT_BATTLE_BIN__800960e8;
+  GVar1 = DAT_BATTLE_BIN__800960e8;
   uVar3 = (uint)DAT_BATTLE_BIN__800961b0;
-  DAT_BATTLE_BIN__800961b0 = (ushort)(uVar3 - DAT_BATTLE_BIN__8009610c);
-  if ((int)((uVar3 - DAT_BATTLE_BIN__8009610c) * 0x10000) < 1) {
+  DAT_BATTLE_BIN__800961b0 = (ushort)(uVar3 - (ushort)DAT_BATTLE_BIN__8009610c);
+  if ((int)((uVar3 - (ushort)DAT_BATTLE_BIN__8009610c) * 0x10000) < 1) {
     DAT_BATTLE_BIN__800961b0 = 0;
-    DAT_BATTLE_BIN__800960e8 = 0;
+    DAT_BATTLE_BIN__800960e8 = FreeCursor;
     DAT_80045980 = 1;
-    DAT_BATTLE_BIN__800960e4 = uVar1;
+    BattleGameState = GVar1;
   }
   return;
 }
@@ -46164,16 +49419,16 @@ void FUN_BATTLE_BIN__80078e58(undefined4 param_1,undefined4 param_2,undefined4 p
 void FUN_BATTLE_BIN__80078fb4(undefined4 param_1,undefined4 param_2,undefined4 param_3,uint param_4)
 
 {
-  short sVar1;
-  uint *puVar2;
+  GameStateVar GVar1;
+  short sVar2;
+  uint *puVar3;
   undefined2 extraout_var;
   void *pvVar4;
   uint uVar5;
   undefined uVar6;
   ushort uVar7;
   int *piVar8;
-  undefined4 uVar9;
-  int iVar3;
+  int iVar9;
   
   FUN_BATTLE_BIN__80086b44();
   if (DAT_BATTLE_BIN__800960f0 != 1) {
@@ -46187,25 +49442,25 @@ void FUN_BATTLE_BIN__80078fb4(undefined4 param_1,undefined4 param_2,undefined4 p
   }
   FUN_BATTLE_BIN__80086dc4();
   FUN_BATTLE_BIN__8008f208();
-  puVar2 = (uint *)Get_OTAG_List();
+  puVar3 = (uint *)Get_OTAG_List();
   piVar8 = DAT_80045944;
-  sVar1 = FUN_BATTLE_BIN__80142d58(puVar2,(uint)DAT_80045944);
-  iVar3 = CONCAT22(extraout_var,sVar1);
-  if (iVar3 != 1) {
-    if (iVar3 < 2) {
-      if (iVar3 == 0) {
-        FUN_BATTLE_BIN__80071008(puVar2,piVar8,param_3,param_4);
+  sVar2 = FUN_BATTLE_BIN__80142d58(puVar3,(uint)DAT_80045944);
+  iVar9 = CONCAT22(extraout_var,sVar2);
+  if (iVar9 != 1) {
+    if (iVar9 < 2) {
+      if (iVar9 == 0) {
+        FUN_BATTLE_BIN__80071008(puVar3,piVar8,param_3,param_4);
       }
     }
     else {
-      if (iVar3 == 9) {
-        uVar9 = 0;
+      if (iVar9 == 9) {
+        iVar9 = 0;
       }
       else {
-        if (iVar3 != 10) goto LAB_BATTLE_BIN__800790a0;
-        uVar9 = 1;
+        if (iVar9 != 10) goto LAB_BATTLE_BIN__800790a0;
+        iVar9 = 1;
       }
-      FUN_BATTLE_BIN__80074b38(8,uVar9);
+      QueueCloseBattle_Bin(8,iVar9);
     }
   }
 LAB_BATTLE_BIN__800790a0:
@@ -46221,13 +49476,13 @@ LAB_BATTLE_BIN__800790a0:
   AddPrim(pvVar4,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
   pvVar4 = (void *)Get_OTAG_List();
   AddPrim(pvVar4,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
-  uVar9 = DAT_BATTLE_BIN__800960e8;
+  GVar1 = DAT_BATTLE_BIN__800960e8;
   uVar5 = (uint)DAT_BATTLE_BIN__800961b0;
-  DAT_BATTLE_BIN__800961b0 = (ushort)(uVar5 - DAT_BATTLE_BIN__8009610c);
-  if ((int)((uVar5 - DAT_BATTLE_BIN__8009610c) * 0x10000) < 1) {
+  DAT_BATTLE_BIN__800961b0 = (ushort)(uVar5 - (ushort)DAT_BATTLE_BIN__8009610c);
+  if ((int)((uVar5 - (ushort)DAT_BATTLE_BIN__8009610c) * 0x10000) < 1) {
     DAT_BATTLE_BIN__800961b0 = 0;
-    DAT_BATTLE_BIN__800960e8 = 0;
-    DAT_BATTLE_BIN__800960e4 = uVar9;
+    DAT_BATTLE_BIN__800960e8 = FreeCursor;
+    BattleGameState = GVar1;
   }
   return;
 }
@@ -46305,14 +49560,14 @@ void FUN_BATTLE_BIN__800792a0(void)
   local_70._4_4_ = DAT_BATTLE_BIN__800676a4;
   FUN_BATTLE_BIN__8009386c(0x100,0xf0,0x200,'\0','\0','\0');
   cVar15 = DAT_800473a0;
-  iVar2 = FUN_BATTLE_BIN__8013b590(0x51);
+  iVar2 = GetScriptVariable(0x51);
   if (iVar2 != 0) {
     cVar15 = '\0';
   }
   bVar1 = FUN_BATTLE_BIN__8013d320();
   DAT_BATTLE_BIN__80096108 = CONCAT31(extraout_var,bVar1);
   BuildNowLoading_128_00(DAT_BATTLE_BIN__80096108);
-  pMVar3 = (MusicDataHeader *)FUN_BATTLE_BIN__8013b590(0x33);
+  pMVar3 = (MusicDataHeader *)GetScriptVariable(CurrentMap);
   DAT_BATTLE_BIN__800960f4 = 0;
   DAT_BATTLE_BIN__800e6aa4 = 0;
   DAT_BATTLE_BIN__80096104 = pMVar3;
@@ -46474,8 +49729,8 @@ LAB_BATTLE_BIN__80079918:
     ScreenPolarity = (uint)(ScreenPolarity == 0);
     iVar2 = Get_OTAG_List();
     DAT_80045984 = FUN_BATTLE_BIN__80093bf0(iVar2 + 0x5fc);
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
-    FUN_800449ec();
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
+    deprecated_000449ec();
   } while( true );
 }
 
@@ -46540,182 +49795,182 @@ void BATTLE_main(void)
       else {
         DAT_BATTLE_BIN__8009612c = 2;
       }
-      switch(DAT_BATTLE_BIN__800960e4) {
+      switch(BattleGameState) {
       default:
         FUN_BATTLE_BIN__80074bf8(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 1:
+      case HighlightUnits:
         FUN_BATTLE_BIN__80074dd0(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 2:
+      case OpenActionMenus:
         FUN_BATTLE_BIN__80074e2c(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 3:
+      case IdlingActionMenus:
         FUN_BATTLE_BIN__80074e94(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 4:
+      case MenuToTargetting:
         FUN_BATTLE_BIN__80074f5c(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 5:
+      case DisableMoveAct:
         FUN_BATTLE_BIN__80075310(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 6:
+      case OpenHelpMenu:
         FUN_BATTLE_BIN__800755fc(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 7:
+      case MiniMenu:
         FUN_BATTLE_BIN__80075690(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 8:
+      case MiniMenuHelp:
         FUN_BATTLE_BIN__8007571c(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 9:
+      case Case9:
         FUN_BATTLE_BIN__800757c4(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 10:
+      case CaseA:
         FUN_BATTLE_BIN__80075820(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0xb:
+      case CaseB:
         FUN_BATTLE_BIN__8007843c(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0xc:
+      case UnitMove:
         FUN_BATTLE_BIN__8007587c(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0xd:
+      case CloseMoveHelp:
         FUN_BATTLE_BIN__80075910(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0xe:
+      case CaseE:
         FUN_BATTLE_BIN__80075c34(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0xf:
+      case IllegalMoveMenu:
         FUN_BATTLE_BIN__80075ca0(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x10:
+      case UnitMovingSetup:
         FUN_BATTLE_BIN__80075d0c(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x11:
+      case UnitMoving:
         FUN_BATTLE_BIN__80075db0(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x12:
+      case MoveConfirmMenu:
         FUN_BATTLE_BIN__800761cc(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x13:
+      case WaitDirection:
         FUN_BATTLE_BIN__80076430(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x14:
+      case WaitMenu:
         FUN_BATTLE_BIN__8007629c(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x15:
+      case CrystalLearn:
         FUN_BATTLE_BIN__80076658(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x16:
+      case ActionExecuteSetup:
         FUN_BATTLE_BIN__8007691c(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x17:
+      case TargettingRange:
         FUN_BATTLE_BIN__800769b0(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x18:
+      case IllegalRange:
         FUN_BATTLE_BIN__80076b7c(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x19:
+      case AbilityPrvwHandling:
         FUN_BATTLE_BIN__80076c50(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x1a:
+      case Case1a:
         FUN_BATTLE_BIN__80076be8(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x1b:
+      case ConfirmAction:
         FUN_BATTLE_BIN__80076d84(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x1c:
+      case PreAttackAnim1:
         FUN_BATTLE_BIN__80076f14(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x1d:
+      case Case1d:
         FUN_BATTLE_BIN__80076fd0(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x1e:
+      case CommenceAtkPhaseCtrl:
         FUN_BATTLE_BIN__80077098(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x1f:
+      case Case1f:
         FUN_BATTLE_BIN__80077c38(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x20:
+      case Case20:
         FUN_BATTLE_BIN__80077ca4(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x21:
+      case Case21:
         FUN_BATTLE_BIN__80077e1c(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x22:
+      case Case22:
         FUN_BATTLE_BIN__80077e88(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x23:
+      case Case23:
         FUN_BATTLE_BIN__80077f68(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x24:
+      case Case24:
         FUN_BATTLE_BIN__80078030(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x25:
+      case Case25:
         FUN_BATTLE_BIN__800780a0(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x26:
+      case JPEXPGain:
         FUN_BATTLE_BIN__80078148(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x27:
+      case Case27:
         FUN_BATTLE_BIN__80078328(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x28:
+      case LearnAbilityOnHit:
         FUN_BATTLE_BIN__800779a0(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x29:
+      case DoEffectDamageDisp:
         FUN_BATTLE_BIN__80077134(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x2a:
+      case OpenSP2Files:
         FUN_BATTLE_BIN__800771a0(pRVar7,pRVar4,(int)puVar5,(uint)puVar6);
         break;
-      case 0x2b:
+      case StartEffectFileOpen:
         FUN_BATTLE_BIN__80077314((uint)pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x2c:
+      case SecondaryEffect:
         FUN_BATTLE_BIN__80077378(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x2d:
+      case Case2d:
         FUN_BATTLE_BIN__800773f8(pRVar7,(int *)pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x2e:
+      case BattleMessageDisplay:
         FUN_BATTLE_BIN__80077760(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x2f:
+      case ResumeAttackPhaseControl:
         FUN_BATTLE_BIN__800777ec(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x30:
+      case Case30:
         FUN_BATTLE_BIN__80077bd8(pRVar7,(int *)pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x31:
+      case Case31:
         FUN_BATTLE_BIN__80077c08(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x33:
+      case Case33:
         FUN_BATTLE_BIN__80078504(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x34:
+      case Case34:
         FUN_BATTLE_BIN__800785ac(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x35:
+      case Case35:
         FUN_BATTLE_BIN__800787fc(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x36:
+      case Case36:
         FUN_BATTLE_BIN__80078bf4(pRVar7,pRVar4,puVar5);
         break;
-      case 0x37:
+      case Case37:
         FUN_BATTLE_BIN__80078e58(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x38:
+      case Case38:
         FUN_BATTLE_BIN__80078964(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x39:
+      case Case39:
         FUN_BATTLE_BIN__80078d20(pRVar7,pRVar4,puVar5);
         break;
-      case 0x3a:
+      case Case3a:
         FUN_BATTLE_BIN__80078fb4(pRVar7,pRVar4,puVar5,(uint)puVar6);
         break;
-      case 0x3b:
+      case CloseBattle:
         FUN_BATTLE_BIN__80078acc(pRVar7,pRVar4,puVar5,(uint)puVar6);
       }
       FUN_BATTLE_BIN__8006ef00(pRVar7,(uint)pRVar4);
@@ -46724,8 +49979,8 @@ void BATTLE_main(void)
       FUN_BATTLE_BIN__8006f9ac();
       FUN_BATTLE_BIN__800912a4();
       FUN_80043de0();
-      if (DAT_BATTLE_BIN__800960e4 == 0x3b) break;
-      Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+      if (BattleGameState == CloseBattle) break;
+      Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
       ScreenPolarity = (uint)(ScreenPolarity == 0);
       DAT_80045994 = DAT_80045994 + 1;
       FUN_BATTLE_BIN__80092f98();
@@ -46746,7 +50001,7 @@ void BATTLE_main(void)
         iVar1 = iVar1 + 1;
         puVar5 = puVar5 + 0x1d59;
       } while (iVar1 < 2);
-      if ((DAT_BATTLE_BIN__800960e4 == 0x33) || (DAT_BATTLE_BIN__800960e4 == 0x2d)) {
+      if ((BattleGameState == Case33) || (BattleGameState == Case2d)) {
         if (DAT_80045980 == 1) {
           DAT_8004598c = 0;
         }
@@ -46763,11 +50018,11 @@ void BATTLE_main(void)
       }
 LAB_BATTLE_BIN__8007a15c:
       DAT_80045990 = 0;
-      FUN_800449ec();
+      deprecated_000449ec();
     }
     FUN_BATTLE_BIN__800787dc();
     FUN_BATTLE_BIN__80087064();
-    if (DAT_BATTLE_BIN__800a778c != 0) {
+    if (CloseBattleVar != 0) {
       DrawSync(0);
       VSync(0);
       DrawSync(0);
@@ -49169,7 +52424,7 @@ void FUN_BATTLE_BIN__8007e9a8(int *param_1)
     return;
   }
   if ((param_1[0x20] & 0x10000000U) == 0) {
-    if (DAT_BATTLE_BIN__800960e4 == 0x15) goto LAB_BATTLE_BIN__8007eb4c;
+    if (BattleGameState == CrystalLearn) goto LAB_BATTLE_BIN__8007eb4c;
     if (*(short *)(param_1 + 0x1d) != 0) {
       iVar2 = (int)*(short *)(param_1 + 0x1d) - (uint)(ushort)DAT_80045980;
       *(short *)(param_1 + 0x1d) = (short)iVar2;
@@ -51010,8 +54265,8 @@ void FUN_BATTLE_BIN__80081d54(int *param_1,int param_2,int param_3)
     uVar9 = 0xfff4;
   }
   if ((DAT_BATTLE_BIN__800b6698 & 2) != 0) goto switchD_BATTLE_BIN__80081ee0_caseD_0;
-  uVar5 = FUN_BATTLE_BIN__8013b590(0x23);
-  iVar6 = FUN_BATTLE_BIN__8013b590(0x24);
+  uVar5 = GetScriptVariable(Weather);
+  iVar6 = GetScriptVariable(DayNight);
   if (iVar6 == 0) {
     if ((DAT_BATTLE_BIN__800b6698 & 1) == 0) {
       switch(uVar5) {
@@ -51819,7 +55074,7 @@ void FUN_BATTLE_BIN__800831b8(int param_1)
     if ((byte)(&DAT_BATTLE_BIN__80094749)[(uint)*(byte *)(param_1 + 6) * 4] - 2 < 2) {
       FUN_BATTLE_BIN__80068a94(param_1);
     }
-    if ((DAT_BATTLE_BIN__800960e4 != 0x34) && (*(int *)(param_1 + 0x134) != 0)) {
+    if ((BattleGameState != Case34) && (*(int *)(param_1 + 0x134) != 0)) {
       bVar1 = *(byte *)(*(int *)(param_1 + 0x134) + 6);
       if ((bVar1 & 0x80) == 0) {
         pMVar4 = (MusicDataHeader *)0x45;
@@ -51838,7 +55093,7 @@ LAB_BATTLE_BIN__800832fc:
   if ((*(uint *)(param_1 + 0x14c) & 9) != 0) {
     FUN_BATTLE_BIN__80068a74(param_1);
   }
-  if (DAT_BATTLE_BIN__800960e4 == 0x34) {
+  if (BattleGameState == Case34) {
     sVar3 = 0x75;
     if ((*(uint *)(param_1 + 0x14c) & 0x40) == 0) {
       if ((*(uint *)(param_1 + 0x154) & 0x40) != 0) {
@@ -52823,7 +56078,7 @@ switchD_BATTLE_BIN__80084930_caseD_c7:
     uVar13 = 0;
     goto switchD_BATTLE_BIN__80084930_caseD_c2;
   case 0xde:
-    if (DAT_BATTLE_BIN__800960e4 == 0x34) goto switchD_BATTLE_BIN__80084930_caseD_c2;
+    if (BattleGameState == Case34) goto switchD_BATTLE_BIN__80084930_caseD_c2;
     iVar8 = (int)*(short *)(param_1 + 0x1a0);
     if (((((iVar8 == 0) || (iVar8 == 0x16f)) || (iVar8 - 0x8aU < 8)) ||
         ((iVar8 - 0xd5U < 3 || (uVar3 = (uint)uVar16, iVar8 - 0x18aU < 0x14)))) &&
@@ -53911,19 +57166,19 @@ void FUN_BATTLE_BIN__80086dc4(void)
 {
   int *piVar1;
   
-  switch(DAT_BATTLE_BIN__800960e4) {
-  case 0:
-  case 2:
-  case 3:
-  case 4:
-  case 5:
-  case 7:
-  case 0xc:
-  case 0xd:
-  case 0x16:
-  case 0x17:
-  case 0x19:
-  case 0x1b:
+  switch(BattleGameState) {
+  case FreeCursor:
+  case OpenActionMenus:
+  case IdlingActionMenus:
+  case MenuToTargetting:
+  case DisableMoveAct:
+  case MiniMenu:
+  case UnitMove:
+  case CloseMoveHelp:
+  case ActionExecuteSetup:
+  case TargettingRange:
+  case AbilityPrvwHandling:
+  case ConfirmAction:
     if ((((DAT_BATTLE_BIN__800960cc == 0) && (DAT_BATTLE_BIN__800960d4 == 0)) &&
         (DAT_BATTLE_BIN__800960c8 == 0)) &&
        ((DAT_BATTLE_BIN__800a1c48 | DAT_BATTLE_BIN__800a1c4c | DAT_BATTLE_BIN__800a1c50) == 0)) {
@@ -55003,7 +58258,7 @@ void FUN_BATTLE_BIN__80088868(void)
   undefined *puVar2;
   
   DAT_80049c18 = 0;
-  iVar1 = FUN_BATTLE_BIN__8013b590(0x1fe);
+  iVar1 = GetScriptVariable(DebugBattleNext);
   if (iVar1 == 0) {
     if (DAT_BATTLE_BIN__80096108 != 0) {
       puVar2 = &DAT_800459a0;
@@ -55589,50 +58844,44 @@ undefined4 FUN_BATTLE_BIN__8008c114(undefined4 param_1,int param_2)
 
 
 
-// WARNING: Globals starting with '_' overlap smaller symbols at the same address
-
 void FUN_BATTLE_BIN__8008c2dc(undefined4 param_1,int param_2)
 
 {
-  DAT_BATTLE_BIN__800960e8 = DAT_BATTLE_BIN__800960e4;
+  DAT_BATTLE_BIN__800960e8 = BattleGameState;
   DAT_BATTLE_BIN__80096104 = param_1;
-  DAT_BATTLE_BIN__800960e4 = 0x35;
-  _DAT_BATTLE_BIN__8009610c = 0x100;
+  BattleGameState = Case35;
+  DAT_BATTLE_BIN__8009610c = 0x100;
   if (param_2 != 0) {
-    _DAT_BATTLE_BIN__8009610c = 0x100 / param_2;
+    DAT_BATTLE_BIN__8009610c = 0x100 / param_2;
   }
   return;
 }
 
 
-
-// WARNING: Globals starting with '_' overlap smaller symbols at the same address
 
 void FUN_BATTLE_BIN__8008c320(undefined4 param_1,int param_2)
 
 {
-  DAT_BATTLE_BIN__800960e8 = DAT_BATTLE_BIN__800960e4;
+  DAT_BATTLE_BIN__800960e8 = BattleGameState;
   DAT_BATTLE_BIN__80096104 = param_1;
-  DAT_BATTLE_BIN__800960e4 = 0x38;
-  _DAT_BATTLE_BIN__8009610c = 0x100;
+  BattleGameState = Case38;
+  DAT_BATTLE_BIN__8009610c = 0x100;
   if (param_2 != 0) {
-    _DAT_BATTLE_BIN__8009610c = 0x100 / param_2;
+    DAT_BATTLE_BIN__8009610c = 0x100 / param_2;
   }
   return;
 }
 
 
 
-// WARNING: Globals starting with '_' overlap smaller symbols at the same address
-
 void FUN_BATTLE_BIN__8008c364(int param_1)
 
 {
-  DAT_BATTLE_BIN__800960e8 = DAT_BATTLE_BIN__800960e4;
-  DAT_BATTLE_BIN__800960e4 = 0x3a;
-  _DAT_BATTLE_BIN__8009610c = 0x100;
+  DAT_BATTLE_BIN__800960e8 = BattleGameState;
+  BattleGameState = Case3a;
+  DAT_BATTLE_BIN__8009610c = 0x100;
   if (param_1 != 0) {
-    _DAT_BATTLE_BIN__8009610c = 0x100 / param_1;
+    DAT_BATTLE_BIN__8009610c = 0x100 / param_1;
   }
   return;
 }
@@ -56403,7 +59652,7 @@ void FUN_BATTLE_BIN__8008e6d8(void)
 {
   int iVar1;
   
-  DAT_80047600 = FUN_BATTLE_BIN__8013b590(0x32);
+  DAT_80047600 = GetScriptVariable(CurrentENTD);
   if (DAT_800459dc == 1) {
     iVar1 = 0xfa;
   }
@@ -56498,9 +59747,9 @@ void FUN_BATTLE_BIN__8008e80c(void)
   uVar5 = puVar10[5];
   puVar12[4] = uRam80068258;
   puVar12[5] = uVar5;
-  uVar2 = FUN_BATTLE_BIN__8013b590(0x2e);
-  iVar3 = FUN_BATTLE_BIN__8013b590(0x2f);
-  iVar4 = FUN_BATTLE_BIN__8013b590(0x23);
+  uVar2 = GetScriptVariable(Month);
+  iVar3 = GetScriptVariable(Day);
+  iVar4 = GetScriptVariable(Weather);
   iVar7 = 0;
   puVar11 = local_48;
   puVar9 = local_50;
@@ -56603,7 +59852,7 @@ int FUN_BATTLE_BIN__8008ea6c(MusicDataHeader *param_1,int param_2,undefined4 *pa
   case 0xb:
     if (DAT_80045978 != 1) {
       param_1 = (MusicDataHeader *)0x1fe;
-      iVar2 = FUN_BATTLE_BIN__8013b590(0x1fe);
+      iVar2 = GetScriptVariable(DebugBattleNext);
       if (iVar2 == 0) goto switchD_BATTLE_BIN__8008ea9c_caseD_9;
     }
     FUN_80043f50();
@@ -56696,7 +59945,7 @@ int FUN_BATTLE_BIN__8008ec70(MusicDataHeader *param_1,int param_2,undefined4 *pa
     }
     break;
   case 7:
-    iVar2 = FUN_BATTLE_BIN__8013b590(0x1fe);
+    iVar2 = GetScriptVariable(DebugBattleNext);
     if (iVar2 == 0) {
       do {
         bVar1 = FUN_BATTLE_BIN__80088904();
@@ -56731,7 +59980,7 @@ int FUN_BATTLE_BIN__8008ec70(MusicDataHeader *param_1,int param_2,undefined4 *pa
   case 0xb:
     if (DAT_80045978 != 1) {
       param_1 = (MusicDataHeader *)0x1fe;
-      iVar2 = FUN_BATTLE_BIN__8013b590(0x1fe);
+      iVar2 = GetScriptVariable(DebugBattleNext);
       if (iVar2 == 0) goto switchD_BATTLE_BIN__8008eca4_caseD_1;
     }
     FUN_80043f50();
@@ -58744,7 +61993,7 @@ undefined4 FUN_BATTLE_BIN__80093654(void)
   int *piVar2;
   
   DAT_80045944 = PadRead(1);
-  iVar1 = FUN_BATTLE_BIN__8013b590(0x1fc);
+  iVar1 = GetScriptVariable(BraveStoryRecord);
   if (iVar1 != 0) {
     FUN_BATTLE_BIN__80142d2c(&DAT_80045944);
   }
@@ -58765,7 +62014,7 @@ undefined4 FUN_BATTLE_BIN__80093654(void)
     DAT_80045974 = 0;
   }
   DAT_80045948 = DAT_80045944;
-  if (((((DAT_8004594c & 0x10) != 0) && (DAT_BATTLE_BIN__800960e4 != 0x34)) &&
+  if (((((DAT_8004594c & 0x10) != 0) && (BattleGameState != Case34)) &&
       (piVar2 = FUN_BATTLE_BIN__8007a218(), DAT_BATTLE_BIN__800e4e8c != 0)) &&
      ((DAT_BATTLE_BIN__800960f8 == 0 && ((*(byte *)((int)piVar2 + 0x13d) & 8) == 0)))) {
     Call_Play_Sound(0x71);
@@ -58847,8 +62096,7 @@ uint FUN_BATTLE_BIN__80093a98(u_long *param_1)
   }
   else {
     DrawSync(0);
-    if ((DAT_BATTLE_BIN__800960e4 == 0x33) ||
-       (mode = DAT_80045980, DAT_BATTLE_BIN__800960e4 == 0x2d)) {
+    if ((BattleGameState == Case33) || (mode = DAT_80045980, BattleGameState == Case2d)) {
       mode = 4;
       if ((DAT_8004598c < 0x10) && (mode = 3, DAT_8004598c == 0)) {
         mode = 2;
@@ -61558,7 +64806,7 @@ LAB_BATTLE_BIN__800eed70:
     FUN_BATTLE_BIN__800eeaf8(0x8c);
     break;
   case 0x8b:
-    uVar1 = FUN_BATTLE_BIN__8013b590(0x23);
+    uVar1 = GetScriptVariable(Weather);
     DAT_BATTLE_BIN__800f79bc = 0;
     uVar1 = uVar1 & 7;
     if (uVar1 < 2) {
@@ -63403,9 +66651,9 @@ undefined4 FUN_BATTLE_BIN__800f34c4(int param_1,int *param_2)
   else {
     uVar5 = 0x8b;
     if (cVar1 != -0x75) {
-      uVar2 = FUN_BATTLE_BIN__8013b590((uint)*(byte *)param_2);
-      uVar3 = FUN_BATTLE_BIN__8013b590(0x23);
-      uVar4 = FUN_BATTLE_BIN__8013b590(0x24);
+      uVar2 = GetScriptVariable((ushort)*(byte *)param_2);
+      uVar3 = GetScriptVariable(Weather);
+      uVar4 = GetScriptVariable(DayNight);
       uVar3 = FUN_BATTLE_BIN__800f2618
                         (*(byte *)(param_2 + 1),(ushort)*(byte *)((int)param_2 + 2),
                          (ushort)uVar2 & 0xfff | (ushort)((uVar3 & 7) << 0xc) |
@@ -63476,35 +66724,36 @@ int FUN_BATTLE_BIN__800f3718(uint param_1,uint param_2)
   byte bVar6;
   byte bVar7;
   char cVar8;
-  uint *puVar9;
-  undefined4 *puVar10;
-  int iVar11;
-  undefined4 uVar12;
-  uint uVar13;
+  EventVar EVar9;
+  uint *puVar10;
+  undefined4 *puVar11;
+  int iVar12;
+  undefined4 uVar13;
   uint uVar14;
   uint uVar15;
   uint uVar16;
   uint uVar17;
-  int iVar18;
-  byte *pbVar19;
-  int iVar20;
-  byte *pbVar21;
-  undefined4 uVar22;
-  byte *pbVar23;
-  byte bVar24;
-  undefined4 uVar25;
-  uint *puVar26;
-  u_long *puVar27;
-  byte *pbVar28;
-  int *piVar29;
+  uint uVar18;
+  int iVar19;
+  byte *pbVar20;
+  int iVar21;
+  byte *pbVar22;
+  undefined4 uVar23;
+  byte *pbVar24;
+  byte bVar25;
+  undefined4 uVar26;
+  uint *puVar27;
+  u_long *puVar28;
+  byte *pbVar29;
+  int *piVar30;
   
-  uVar13 = param_1;
+  uVar14 = param_1;
   if (DAT_BATTLE_BIN__800f5c58 == 0) {
     param_2 = param_2 - 0x73;
     switch(param_2) {
     case 0:
-      iVar11 = Check_File_Still_Loading();
-      if (iVar11 != 0) {
+      iVar12 = Check_File_Still_Loading();
+      if (iVar12 != 0) {
         return 0;
       }
       DAT_BATTLE_BIN__80121ffc = (u_long *)BIN_Malloc_FFT(0x20000);
@@ -63512,8 +66761,8 @@ int FUN_BATTLE_BIN__800f3718(uint param_1,uint param_2)
         param_2 = 0x3c2;
         FUN_80044a00();
       }
-      uVar13 = param_1 & 0xffff;
-      FUN_BATTLE_BIN__800f3638(uVar13);
+      uVar14 = param_1 & 0xffff;
+      FUN_BATTLE_BIN__800f3638(uVar14);
       goto LAB_BATTLE_BIN__800f384c;
     default:
       break;
@@ -63522,12 +66771,12 @@ int FUN_BATTLE_BIN__800f3718(uint param_1,uint param_2)
     case 0x26:
       DAT_BATTLE_BIN__800f5c54 = '\x01';
 switchD_BATTLE_BIN__800f3764_caseD_75:
-      iVar11 = Check_File_Still_Loading();
-      if (iVar11 != 0) {
+      iVar12 = Check_File_Still_Loading();
+      if (iVar12 != 0) {
         return 0;
       }
       DAT_BATTLE_BIN__80121ffc = (u_long *)BIN_Malloc_FFT(0x20000);
-      uVar13 = 2;
+      uVar14 = 2;
       if (DAT_BATTLE_BIN__80121ffc == (u_long *)0x0) {
         param_2 = 0x3c2;
         FUN_80044a00();
@@ -63544,9 +66793,9 @@ switchD_BATTLE_BIN__800f3764_caseD_75:
         DAT_BATTLE_BIN__800f5c58 = 0xf;
       }
       else {
-        uVar13 = param_1 & 0xffff;
-        puVar10 = FUN_BATTLE_BIN__800f3638(uVar13);
-        if (puVar10 != &DAT_BATTLE_BIN__80124604) {
+        uVar14 = param_1 & 0xffff;
+        puVar11 = FUN_BATTLE_BIN__800f3638(uVar14);
+        if (puVar11 != &DAT_BATTLE_BIN__80124604) {
           return 0;
         }
 LAB_BATTLE_BIN__800f384c:
@@ -63557,217 +66806,216 @@ LAB_BATTLE_BIN__800f384c:
       }
     }
   }
-  uVar17 = DAT_BATTLE_BIN__800f5c5c - 0x74;
+  uVar18 = DAT_BATTLE_BIN__800f5c5c - 0x74;
   if (DAT_BATTLE_BIN__800f5c5c == 0) {
     if (DAT_BATTLE_BIN__800f5c58 != 1) {
-      iVar11 = 0x3c0;
+      iVar12 = 0x3c0;
       if (DAT_BATTLE_BIN__800f5c58 != 0xf) {
         return DAT_BATTLE_BIN__800f5c58;
       }
       DAT_BATTLE_BIN__800fbdf4 = (int *)0x0;
       DAT_BATTLE_BIN__800f5c58 = 1;
       do {
-        (&DAT_BATTLE_BIN__800f7a65)[iVar11] = 0;
-        iVar11 = iVar11 + -0x14;
-      } while (-1 < iVar11);
+        (&DAT_BATTLE_BIN__800f7a65)[iVar12] = 0;
+        iVar12 = iVar12 + -0x14;
+      } while (-1 < iVar12);
       if (0x7f < DAT_BATTLE_BIN__80124608._1_1_) {
         return DAT_BATTLE_BIN__800f5c58;
       }
-      pbVar28 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 1);
-      iVar11 = 0;
+      pbVar29 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 1);
+      iVar12 = 0;
       do {
-        if (*pbVar28 == 0x2e) {
-          uVar12 = FUN_BATTLE_BIN__8013b590
-                             ((int)*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar11));
-          uVar13 = FUN_BATTLE_BIN__8013b590(0x23);
-          uVar17 = FUN_BATTLE_BIN__8013b590(0x24);
-          uVar13 = FUN_BATTLE_BIN__800f2618
-                             (*(byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar11),
-                              *(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar11 + 2),
-                              (ushort)uVar12 & 0xfff | (ushort)((uVar13 & 7) << 0xc) |
-                              (ushort)((uVar17 & 1) << 0xf));
-          iVar18 = 0;
-          if ((uVar13 & 0xffff) != 0) {
+        if (*pbVar29 == 0x2e) {
+          uVar13 = GetScriptVariable(*(EventVar *)((int)&DAT_BATTLE_BIN__80124604 + iVar12));
+          uVar14 = GetScriptVariable(Weather);
+          uVar18 = GetScriptVariable(DayNight);
+          uVar14 = FUN_BATTLE_BIN__800f2618
+                             (*(byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar12),
+                              *(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar12 + 2),
+                              (ushort)uVar13 & 0xfff | (ushort)((uVar14 & 7) << 0xc) |
+                              (ushort)((uVar18 & 1) << 0xf));
+          iVar19 = 0;
+          if ((uVar14 & 0xffff) != 0) {
             do {
-              iVar20 = iVar18 + (uint)*(byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar11 + 1) * 0x14;
-              iVar18 = iVar18 + 1;
+              iVar21 = iVar19 + (uint)*(byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar12 + 1) * 0x14;
+              iVar19 = iVar19 + 1;
                     // Possible PsyQ macro: setLineF3()
-              (&DAT_BATTLE_BIN__800fa6c6)[iVar20] = 0x48;
-            } while (iVar18 < 0xe);
+              (&DAT_BATTLE_BIN__800fa6c6)[iVar21] = 0x48;
+            } while (iVar19 < 0xe);
           }
-          bVar24 = 0;
-          pbVar19 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar11 + 2);
-          pbVar21 = &DAT_BATTLE_BIN__800fa6c6 + (uint)*pbVar28 * 0x14;
+          bVar25 = 0;
+          pbVar20 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar12 + 2);
+          pbVar22 = &DAT_BATTLE_BIN__800fa6c6 + (uint)*pbVar29 * 0x14;
           do {
-            bVar6 = *pbVar19;
-            pbVar19 = pbVar19 + 1;
-            bVar7 = *pbVar21;
-            pbVar21 = pbVar21 + 1;
-            bVar24 = bVar24 | bVar7 ^ bVar6;
-          } while ((int)pbVar19 < (int)(&DAT_BATTLE_BIN__80124618 + iVar11));
-          if (bVar24 != 0) {
-            iVar18 = (uint)*pbVar28 * 0x14;
-            uVar12 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124608 + iVar11);
-            uVar22 = *(undefined4 *)((int)&DAT_BATTLE_BIN__8012460c + iVar11);
-            uVar25 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124610 + iVar11);
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a60 + iVar18) =
-                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124604 + iVar11);
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a64 + iVar18) = uVar12;
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a68 + iVar18) = uVar22;
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a6c + iVar18) = uVar25;
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a70 + iVar18) =
-                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124614 + iVar11);
+            bVar6 = *pbVar20;
+            pbVar20 = pbVar20 + 1;
+            bVar7 = *pbVar22;
+            pbVar22 = pbVar22 + 1;
+            bVar25 = bVar25 | bVar7 ^ bVar6;
+          } while ((int)pbVar20 < (int)(&DAT_BATTLE_BIN__80124618 + iVar12));
+          if (bVar25 != 0) {
+            iVar19 = (uint)*pbVar29 * 0x14;
+            uVar13 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124608 + iVar12);
+            uVar23 = *(undefined4 *)((int)&DAT_BATTLE_BIN__8012460c + iVar12);
+            uVar26 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124610 + iVar12);
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a60 + iVar19) =
+                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124604 + iVar12);
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a64 + iVar19) = uVar13;
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a68 + iVar19) = uVar23;
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a6c + iVar19) = uVar26;
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a70 + iVar19) =
+                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124614 + iVar12);
           }
         }
-        pbVar28 = pbVar28 + 0x14;
-        iVar11 = iVar11 + 0x14;
-      } while (*pbVar28 < 0x80);
+        pbVar29 = pbVar29 + 0x14;
+        iVar12 = iVar12 + 0x14;
+      } while (*pbVar29 < 0x80);
       if (0x7f < DAT_BATTLE_BIN__80124608._1_1_) {
         return DAT_BATTLE_BIN__800f5c58;
       }
-      pbVar28 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 1);
-      iVar11 = 0;
+      pbVar29 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 1);
+      iVar12 = 0;
       do {
-        if (*pbVar28 == 0x2f) {
-          uVar12 = FUN_BATTLE_BIN__8013b590
-                             ((int)*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar11));
-          uVar13 = FUN_BATTLE_BIN__8013b590(0x23);
-          uVar17 = FUN_BATTLE_BIN__8013b590(0x24);
-          uVar13 = FUN_BATTLE_BIN__800f2618
-                             (*(byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar11),
-                              *(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar11 + 2),
-                              (ushort)uVar12 & 0xfff | (ushort)((uVar13 & 7) << 0xc) |
-                              (ushort)((uVar17 & 1) << 0xf));
-          iVar18 = 0;
-          if ((uVar13 & 0xffff) != 0) {
+        if (*pbVar29 == 0x2f) {
+          uVar13 = GetScriptVariable(*(EventVar *)((int)&DAT_BATTLE_BIN__80124604 + iVar12));
+          uVar14 = GetScriptVariable(Weather);
+          uVar18 = GetScriptVariable(DayNight);
+          uVar14 = FUN_BATTLE_BIN__800f2618
+                             (*(byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar12),
+                              *(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar12 + 2),
+                              (ushort)uVar13 & 0xfff | (ushort)((uVar14 & 7) << 0xc) |
+                              (ushort)((uVar18 & 1) << 0xf));
+          iVar19 = 0;
+          if ((uVar14 & 0xffff) != 0) {
             do {
-              iVar20 = iVar18 + (uint)*(byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar11 + 1) * 0x14;
-              iVar18 = iVar18 + 1;
+              iVar21 = iVar19 + (uint)*(byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar12 + 1) * 0x14;
+              iVar19 = iVar19 + 1;
                     // Possible PsyQ macro: setLineF3()
-              (&DAT_BATTLE_BIN__800fa6c6)[iVar20] = 0x48;
-            } while (iVar18 < 0xe);
+              (&DAT_BATTLE_BIN__800fa6c6)[iVar21] = 0x48;
+            } while (iVar19 < 0xe);
           }
-          bVar24 = 0;
-          pbVar19 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar11 + 2);
-          pbVar21 = &DAT_BATTLE_BIN__800fa6c6 + (uint)*pbVar28 * 0x14;
+          bVar25 = 0;
+          pbVar20 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar12 + 2);
+          pbVar22 = &DAT_BATTLE_BIN__800fa6c6 + (uint)*pbVar29 * 0x14;
           do {
-            bVar6 = *pbVar19;
-            pbVar19 = pbVar19 + 1;
-            bVar7 = *pbVar21;
-            pbVar21 = pbVar21 + 1;
-            bVar24 = bVar24 | bVar7 ^ bVar6;
-          } while ((int)pbVar19 < (int)(&DAT_BATTLE_BIN__80124618 + iVar11));
-          if (bVar24 != 0) {
-            iVar18 = (uint)*pbVar28 * 0x14;
-            uVar12 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124608 + iVar11);
-            uVar22 = *(undefined4 *)((int)&DAT_BATTLE_BIN__8012460c + iVar11);
-            uVar25 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124610 + iVar11);
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a60 + iVar18) =
-                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124604 + iVar11);
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a64 + iVar18) = uVar12;
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a68 + iVar18) = uVar22;
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a6c + iVar18) = uVar25;
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a70 + iVar18) =
-                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124614 + iVar11);
+            bVar6 = *pbVar20;
+            pbVar20 = pbVar20 + 1;
+            bVar7 = *pbVar22;
+            pbVar22 = pbVar22 + 1;
+            bVar25 = bVar25 | bVar7 ^ bVar6;
+          } while ((int)pbVar20 < (int)(&DAT_BATTLE_BIN__80124618 + iVar12));
+          if (bVar25 != 0) {
+            iVar19 = (uint)*pbVar29 * 0x14;
+            uVar13 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124608 + iVar12);
+            uVar23 = *(undefined4 *)((int)&DAT_BATTLE_BIN__8012460c + iVar12);
+            uVar26 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124610 + iVar12);
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a60 + iVar19) =
+                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124604 + iVar12);
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a64 + iVar19) = uVar13;
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a68 + iVar19) = uVar23;
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a6c + iVar19) = uVar26;
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a70 + iVar19) =
+                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124614 + iVar12);
           }
         }
-        pbVar28 = pbVar28 + 0x14;
-        iVar11 = iVar11 + 0x14;
-      } while (*pbVar28 < 0x80);
-      iVar11 = 0;
+        pbVar29 = pbVar29 + 0x14;
+        iVar12 = iVar12 + 0x14;
+      } while (*pbVar29 < 0x80);
+      iVar12 = 0;
       if (0x7f < DAT_BATTLE_BIN__80124608._1_1_) {
         return DAT_BATTLE_BIN__800f5c58;
       }
-      pbVar28 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 2);
-      pbVar19 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 1);
+      pbVar29 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 2);
+      pbVar20 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 1);
       do {
-        if (((*pbVar19 == 0x17) &&
-            ((*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar11) == 0x22 ||
-             (*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar11) == 0x30)))) &&
-           (bVar24 = 0, *(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar11 + 2) == 0)) {
-          pbVar23 = &DAT_BATTLE_BIN__800fa892;
-          pbVar21 = pbVar28;
+        if (((*pbVar20 == 0x17) &&
+            ((*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar12) == 0x22 ||
+             (*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar12) == 0x30)))) &&
+           (bVar25 = 0, *(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar12 + 2) == 0)) {
+          pbVar24 = &DAT_BATTLE_BIN__800fa892;
+          pbVar22 = pbVar29;
           do {
-            bVar6 = *pbVar21;
-            pbVar21 = pbVar21 + 1;
-            bVar7 = *pbVar23;
-            pbVar23 = pbVar23 + 1;
-            bVar24 = bVar24 | bVar7 ^ bVar6;
-          } while ((int)pbVar21 < (int)(pbVar28 + 0xe));
-          if (bVar24 != 0) {
-            iVar18 = (uint)*pbVar19 * 0x14;
-            uVar12 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124608 + iVar11);
-            uVar22 = *(undefined4 *)((int)&DAT_BATTLE_BIN__8012460c + iVar11);
-            uVar25 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124610 + iVar11);
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a60 + iVar18) =
-                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124604 + iVar11);
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a64 + iVar18) = uVar12;
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a68 + iVar18) = uVar22;
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a6c + iVar18) = uVar25;
-            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a70 + iVar18) =
-                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124614 + iVar11);
+            bVar6 = *pbVar22;
+            pbVar22 = pbVar22 + 1;
+            bVar7 = *pbVar24;
+            pbVar24 = pbVar24 + 1;
+            bVar25 = bVar25 | bVar7 ^ bVar6;
+          } while ((int)pbVar22 < (int)(pbVar29 + 0xe));
+          if (bVar25 != 0) {
+            iVar19 = (uint)*pbVar20 * 0x14;
+            uVar13 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124608 + iVar12);
+            uVar23 = *(undefined4 *)((int)&DAT_BATTLE_BIN__8012460c + iVar12);
+            uVar26 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124610 + iVar12);
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a60 + iVar19) =
+                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124604 + iVar12);
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a64 + iVar19) = uVar13;
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a68 + iVar19) = uVar23;
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a6c + iVar19) = uVar26;
+            *(undefined4 *)(&DAT_BATTLE_BIN__800f7a70 + iVar19) =
+                 *(undefined4 *)((int)&DAT_BATTLE_BIN__80124614 + iVar12);
           }
         }
-        pbVar19 = pbVar19 + 0x14;
-        iVar11 = iVar11 + 0x14;
-        pbVar28 = pbVar28 + 0x14;
-      } while (*pbVar19 < 0x80);
+        pbVar20 = pbVar20 + 0x14;
+        iVar12 = iVar12 + 0x14;
+        pbVar29 = pbVar29 + 0x14;
+      } while (*pbVar20 < 0x80);
       if (0x7f < DAT_BATTLE_BIN__80124608._1_1_) {
         return DAT_BATTLE_BIN__800f5c58;
       }
-      pbVar28 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 2);
-      pbVar19 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 1);
-      iVar11 = 0;
+      pbVar29 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 2);
+      pbVar20 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 1);
+      iVar12 = 0;
       do {
-        if (((*pbVar19 != 0) &&
-            ((uVar13 = (uint)*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar11), uVar13 != 0x22 ||
-             (*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar11 + 2) != 0)))) &&
-           ((uVar13 != 0x30 || (*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar11 + 2) != 0)))) {
-          uVar12 = FUN_BATTLE_BIN__8013b590(uVar13);
-          uVar13 = FUN_BATTLE_BIN__8013b590(0x23);
-          uVar17 = FUN_BATTLE_BIN__8013b590(0x24);
-          uVar13 = FUN_BATTLE_BIN__800f2618
-                             (*(byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar11),
-                              *(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar11 + 2),
-                              (ushort)uVar12 & 0xfff | (ushort)((uVar13 & 7) << 0xc) |
-                              (ushort)((uVar17 & 1) << 0xf));
-          bVar24 = 0;
-          if ((uVar13 & 0xffff) != 0) {
-            pbVar23 = &DAT_BATTLE_BIN__800fa6c6 + (uint)*pbVar19 * 0x14;
-            pbVar21 = pbVar28;
+        if (((*pbVar20 != 0) &&
+            ((EVar9 = *(EventVar *)((int)&DAT_BATTLE_BIN__80124604 + iVar12), EVar9 != 0x22 ||
+             (*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar12 + 2) != 0)))) &&
+           ((EVar9 != MapArrangement ||
+            (*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar12 + 2) != 0)))) {
+          uVar13 = GetScriptVariable(EVar9);
+          uVar14 = GetScriptVariable(Weather);
+          uVar18 = GetScriptVariable(DayNight);
+          uVar14 = FUN_BATTLE_BIN__800f2618
+                             (*(byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar12),
+                              *(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar12 + 2),
+                              (ushort)uVar13 & 0xfff | (ushort)((uVar14 & 7) << 0xc) |
+                              (ushort)((uVar18 & 1) << 0xf));
+          bVar25 = 0;
+          if ((uVar14 & 0xffff) != 0) {
+            pbVar24 = &DAT_BATTLE_BIN__800fa6c6 + (uint)*pbVar20 * 0x14;
+            pbVar22 = pbVar29;
             do {
-              bVar6 = *pbVar21;
-              pbVar21 = pbVar21 + 1;
-              bVar7 = *pbVar23;
-              pbVar23 = pbVar23 + 1;
-              bVar24 = bVar24 | bVar7 ^ bVar6;
-            } while ((int)pbVar21 < (int)(pbVar28 + 0xe));
-            if (bVar24 == 0) {
-              (&DAT_BATTLE_BIN__800f7a65)[(uint)*pbVar19 * 0x14] = 0;
+              bVar6 = *pbVar22;
+              pbVar22 = pbVar22 + 1;
+              bVar7 = *pbVar24;
+              pbVar24 = pbVar24 + 1;
+              bVar25 = bVar25 | bVar7 ^ bVar6;
+            } while ((int)pbVar22 < (int)(pbVar29 + 0xe));
+            if (bVar25 == 0) {
+              (&DAT_BATTLE_BIN__800f7a65)[(uint)*pbVar20 * 0x14] = 0;
             }
             else {
-              iVar18 = (uint)*pbVar19 * 0x14;
-              uVar12 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124608 + iVar11);
-              uVar22 = *(undefined4 *)((int)&DAT_BATTLE_BIN__8012460c + iVar11);
-              uVar25 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124610 + iVar11);
-              *(undefined4 *)(&DAT_BATTLE_BIN__800f7a60 + iVar18) =
-                   *(undefined4 *)((int)&DAT_BATTLE_BIN__80124604 + iVar11);
-              *(undefined4 *)(&DAT_BATTLE_BIN__800f7a64 + iVar18) = uVar12;
-              *(undefined4 *)(&DAT_BATTLE_BIN__800f7a68 + iVar18) = uVar22;
-              *(undefined4 *)(&DAT_BATTLE_BIN__800f7a6c + iVar18) = uVar25;
-              *(undefined4 *)(&DAT_BATTLE_BIN__800f7a70 + iVar18) =
-                   *(undefined4 *)((int)&DAT_BATTLE_BIN__80124614 + iVar11);
+              iVar19 = (uint)*pbVar20 * 0x14;
+              uVar13 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124608 + iVar12);
+              uVar23 = *(undefined4 *)((int)&DAT_BATTLE_BIN__8012460c + iVar12);
+              uVar26 = *(undefined4 *)((int)&DAT_BATTLE_BIN__80124610 + iVar12);
+              *(undefined4 *)(&DAT_BATTLE_BIN__800f7a60 + iVar19) =
+                   *(undefined4 *)((int)&DAT_BATTLE_BIN__80124604 + iVar12);
+              *(undefined4 *)(&DAT_BATTLE_BIN__800f7a64 + iVar19) = uVar13;
+              *(undefined4 *)(&DAT_BATTLE_BIN__800f7a68 + iVar19) = uVar23;
+              *(undefined4 *)(&DAT_BATTLE_BIN__800f7a6c + iVar19) = uVar26;
+              *(undefined4 *)(&DAT_BATTLE_BIN__800f7a70 + iVar19) =
+                   *(undefined4 *)((int)&DAT_BATTLE_BIN__80124614 + iVar12);
             }
           }
         }
-        pbVar19 = pbVar19 + 0x14;
-        iVar11 = iVar11 + 0x14;
-        pbVar28 = pbVar28 + 0x14;
-      } while (*pbVar19 < 0x80);
+        pbVar20 = pbVar20 + 0x14;
+        iVar12 = iVar12 + 0x14;
+        pbVar29 = pbVar29 + 0x14;
+      } while (*pbVar20 < 0x80);
       return DAT_BATTLE_BIN__800f5c58;
     }
-    iVar11 = Check_File_Still_Loading();
-    if (iVar11 != 0) {
+    iVar12 = Check_File_Still_Loading();
+    if (iVar12 != 0) {
       return DAT_BATTLE_BIN__800f5c58;
     }
     while ((((byte)(&DAT_BATTLE_BIN__800f7a65)[(int)DAT_BATTLE_BIN__800fbdf4 * 0x14] == 0 &&
@@ -63839,24 +67087,24 @@ LAB_BATTLE_BIN__800f384c:
       DAT_BATTLE_BIN__800f6cc8 = 1;
       return DAT_BATTLE_BIN__800f5c58;
     }
-    iVar11 = 0;
+    iVar12 = 0;
     if (DAT_BATTLE_BIN__80124608._1_1_ < 0x80) {
-      pbVar28 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 1);
+      pbVar29 = (byte *)((int)&DAT_BATTLE_BIN__80124608 + 1);
       do {
-        bVar24 = *pbVar28;
-        pbVar28 = pbVar28 + 0x14;
-        if (bVar24 == 0) break;
-        iVar11 = iVar11 + 1;
-      } while (*pbVar28 < 0x80);
+        bVar25 = *pbVar29;
+        pbVar29 = pbVar29 + 0x14;
+        if (bVar25 == 0) break;
+        iVar12 = iVar12 + 1;
+      } while (*pbVar29 < 0x80);
     }
-    DAT_BATTLE_BIN__800fbdf4 = &DAT_BATTLE_BIN__80124604 + (iVar11 + 1) * 5;
+    DAT_BATTLE_BIN__800fbdf4 = &DAT_BATTLE_BIN__80124604 + (iVar12 + 1) * 5;
     DAT_BATTLE_BIN__800f7bcd = 0;
     DAT_BATTLE_BIN__800f7be1 = 0;
     DAT_BATTLE_BIN__800f7bf5 = 0;
     DAT_BATTLE_BIN__800f7c09 = 0;
     DAT_BATTLE_BIN__800f7c1d = 0;
     DAT_BATTLE_BIN__800f7c31 = 0;
-    cVar8 = *(char *)((int)&DAT_BATTLE_BIN__80124608 + (iVar11 + 1) * 0x14 + 1);
+    cVar8 = *(char *)((int)&DAT_BATTLE_BIN__80124608 + (iVar12 + 1) * 0x14 + 1);
     while (cVar8 != '\0') {
       FUN_BATTLE_BIN__800f34c4(2,DAT_BATTLE_BIN__800fbdf4);
       cVar8 = *(char *)((int)DAT_BATTLE_BIN__800fbdf4 + 5);
@@ -63867,175 +67115,175 @@ LAB_BATTLE_BIN__800f384c:
     BIN_Free_FFT((int)DAT_BATTLE_BIN__80121ffc);
     return DAT_BATTLE_BIN__800f5c58;
   }
-  iVar11 = DAT_BATTLE_BIN__800f5c58;
-  switch(uVar17) {
+  iVar12 = DAT_BATTLE_BIN__800f5c58;
+  switch(uVar18) {
   case 0:
-    iVar18 = Check_File_Still_Loading();
-    iVar11 = DAT_BATTLE_BIN__800f5c58;
-    if (iVar18 == 0) {
-      iVar18 = 0;
-      puVar26 = &DAT_BATTLE_BIN__80124604;
+    iVar19 = Check_File_Still_Loading();
+    iVar12 = DAT_BATTLE_BIN__800f5c58;
+    if (iVar19 == 0) {
+      iVar19 = 0;
+      puVar27 = &DAT_BATTLE_BIN__80124604;
       DAT_BATTLE_BIN__800f5c5c = 0;
-      uVar16 = 0;
-      puVar27 = DAT_BATTLE_BIN__80121ffc;
+      uVar17 = 0;
+      puVar28 = DAT_BATTLE_BIN__80121ffc;
       do {
-        uVar15 = (int)puVar27 + 3U & 3;
-        uVar14 = (uint)puVar27 & 3;
-        uVar14 = (*(int *)(((int)puVar27 + 3U) - uVar15) << (3 - uVar15) * 8 |
-                 uVar16 & 0xffffffffU >> (uVar15 + 1) * 8) & -1 << (4 - uVar14) * 8 |
-                 *(uint *)((int)puVar27 - uVar14) >> uVar14 * 8;
-        uVar16 = (int)puVar27 + 7U & 3;
-        uVar15 = (uint)(puVar27 + 1) & 3;
-        uVar17 = (*(int *)(((int)puVar27 + 7U) - uVar16) << (3 - uVar16) * 8 |
+        uVar16 = (int)puVar28 + 3U & 3;
+        uVar15 = (uint)puVar28 & 3;
+        uVar15 = (*(int *)(((int)puVar28 + 3U) - uVar16) << (3 - uVar16) * 8 |
                  uVar17 & 0xffffffffU >> (uVar16 + 1) * 8) & -1 << (4 - uVar15) * 8 |
-                 *(uint *)((int)(puVar27 + 1) - uVar15) >> uVar15 * 8;
-        uVar16 = (int)puVar27 + 0xbU & 3;
-        uVar15 = (uint)(puVar27 + 2) & 3;
-        uVar13 = (*(int *)(((int)puVar27 + 0xbU) - uVar16) << (3 - uVar16) * 8 |
-                 uVar13 & 0xffffffffU >> (uVar16 + 1) * 8) & -1 << (4 - uVar15) * 8 |
-                 *(uint *)((int)(puVar27 + 2) - uVar15) >> uVar15 * 8;
-        uVar16 = (int)puVar27 + 0xfU & 3;
-        uVar15 = (uint)(puVar27 + 3) & 3;
-        param_2 = (*(int *)(((int)puVar27 + 0xfU) - uVar16) << (3 - uVar16) * 8 |
-                  param_2 & 0xffffffffU >> (uVar16 + 1) * 8) & -1 << (4 - uVar15) * 8 |
-                  *(uint *)((int)(puVar27 + 3) - uVar15) >> uVar15 * 8;
-        uVar16 = (int)puVar26 + 3U & 3;
-        puVar9 = (uint *)(((int)puVar26 + 3U) - uVar16);
-        *puVar9 = *puVar9 & -1 << (uVar16 + 1) * 8 | uVar14 >> (3 - uVar16) * 8;
-        *puVar26 = uVar14;
-        uVar16 = (int)puVar26 + 7U & 3;
-        puVar9 = (uint *)(((int)puVar26 + 7U) - uVar16);
-        *puVar9 = *puVar9 & -1 << (uVar16 + 1) * 8 | uVar17 >> (3 - uVar16) * 8;
-        puVar26[1] = uVar17;
-        uVar16 = (int)puVar26 + 0xbU & 3;
-        puVar9 = (uint *)(((int)puVar26 + 0xbU) - uVar16);
-        *puVar9 = *puVar9 & -1 << (uVar16 + 1) * 8 | uVar13 >> (3 - uVar16) * 8;
-        puVar26[2] = uVar13;
-        uVar16 = (int)puVar26 + 0xfU & 3;
-        puVar9 = (uint *)(((int)puVar26 + 0xfU) - uVar16);
-        *puVar9 = *puVar9 & -1 << (uVar16 + 1) * 8 | param_2 >> (3 - uVar16) * 8;
-        puVar26[3] = param_2;
-        uVar16 = (int)puVar27 + 0x13U & 3;
-        uVar15 = (uint)(puVar27 + 4) & 3;
-        uVar15 = (*(int *)(((int)puVar27 + 0x13U) - uVar16) << (3 - uVar16) * 8 |
-                 uVar14 & 0xffffffffU >> (uVar16 + 1) * 8) & -1 << (4 - uVar15) * 8 |
-                 *(uint *)((int)(puVar27 + 4) - uVar15) >> uVar15 * 8;
-        uVar16 = (int)puVar26 + 0x13U & 3;
-        puVar9 = (uint *)(((int)puVar26 + 0x13U) - uVar16);
-        *puVar9 = *puVar9 & -1 << (uVar16 + 1) * 8 | uVar15 >> (3 - uVar16) * 8;
-        puVar26[4] = uVar15;
-        puVar26 = puVar26 + 5;
-        iVar18 = iVar18 + 1;
-        uVar16 = (uint)(iVar18 < 0x96);
+                 *(uint *)((int)puVar28 - uVar15) >> uVar15 * 8;
+        uVar17 = (int)puVar28 + 7U & 3;
+        uVar16 = (uint)(puVar28 + 1) & 3;
+        uVar18 = (*(int *)(((int)puVar28 + 7U) - uVar17) << (3 - uVar17) * 8 |
+                 uVar18 & 0xffffffffU >> (uVar17 + 1) * 8) & -1 << (4 - uVar16) * 8 |
+                 *(uint *)((int)(puVar28 + 1) - uVar16) >> uVar16 * 8;
+        uVar17 = (int)puVar28 + 0xbU & 3;
+        uVar16 = (uint)(puVar28 + 2) & 3;
+        uVar14 = (*(int *)(((int)puVar28 + 0xbU) - uVar17) << (3 - uVar17) * 8 |
+                 uVar14 & 0xffffffffU >> (uVar17 + 1) * 8) & -1 << (4 - uVar16) * 8 |
+                 *(uint *)((int)(puVar28 + 2) - uVar16) >> uVar16 * 8;
+        uVar17 = (int)puVar28 + 0xfU & 3;
+        uVar16 = (uint)(puVar28 + 3) & 3;
+        param_2 = (*(int *)(((int)puVar28 + 0xfU) - uVar17) << (3 - uVar17) * 8 |
+                  param_2 & 0xffffffffU >> (uVar17 + 1) * 8) & -1 << (4 - uVar16) * 8 |
+                  *(uint *)((int)(puVar28 + 3) - uVar16) >> uVar16 * 8;
+        uVar17 = (int)puVar27 + 3U & 3;
+        puVar10 = (uint *)(((int)puVar27 + 3U) - uVar17);
+        *puVar10 = *puVar10 & -1 << (uVar17 + 1) * 8 | uVar15 >> (3 - uVar17) * 8;
+        *puVar27 = uVar15;
+        uVar17 = (int)puVar27 + 7U & 3;
+        puVar10 = (uint *)(((int)puVar27 + 7U) - uVar17);
+        *puVar10 = *puVar10 & -1 << (uVar17 + 1) * 8 | uVar18 >> (3 - uVar17) * 8;
+        puVar27[1] = uVar18;
+        uVar17 = (int)puVar27 + 0xbU & 3;
+        puVar10 = (uint *)(((int)puVar27 + 0xbU) - uVar17);
+        *puVar10 = *puVar10 & -1 << (uVar17 + 1) * 8 | uVar14 >> (3 - uVar17) * 8;
+        puVar27[2] = uVar14;
+        uVar17 = (int)puVar27 + 0xfU & 3;
+        puVar10 = (uint *)(((int)puVar27 + 0xfU) - uVar17);
+        *puVar10 = *puVar10 & -1 << (uVar17 + 1) * 8 | param_2 >> (3 - uVar17) * 8;
+        puVar27[3] = param_2;
+        uVar17 = (int)puVar28 + 0x13U & 3;
+        uVar16 = (uint)(puVar28 + 4) & 3;
+        uVar16 = (*(int *)(((int)puVar28 + 0x13U) - uVar17) << (3 - uVar17) * 8 |
+                 uVar15 & 0xffffffffU >> (uVar17 + 1) * 8) & -1 << (4 - uVar16) * 8 |
+                 *(uint *)((int)(puVar28 + 4) - uVar16) >> uVar16 * 8;
+        uVar17 = (int)puVar27 + 0x13U & 3;
+        puVar10 = (uint *)(((int)puVar27 + 0x13U) - uVar17);
+        *puVar10 = *puVar10 & -1 << (uVar17 + 1) * 8 | uVar16 >> (3 - uVar17) * 8;
+        puVar27[4] = uVar16;
         puVar27 = puVar27 + 5;
-        iVar11 = DAT_BATTLE_BIN__800f5c58;
-      } while (uVar16 != 0);
+        iVar19 = iVar19 + 1;
+        uVar17 = (uint)(iVar19 < 0x96);
+        puVar28 = puVar28 + 5;
+        iVar12 = DAT_BATTLE_BIN__800f5c58;
+      } while (uVar17 != 0);
     }
     break;
   case 4:
-    iVar18 = Check_File_Still_Loading();
-    iVar11 = DAT_BATTLE_BIN__800f5c58;
-    if ((iVar18 == 0) && (iVar11 = 0x9b, DAT_BATTLE_BIN__800f5c54 == '\0')) {
+    iVar19 = Check_File_Still_Loading();
+    iVar12 = DAT_BATTLE_BIN__800f5c58;
+    if ((iVar19 == 0) && (iVar12 = 0x9b, DAT_BATTLE_BIN__800f5c54 == '\0')) {
       DAT_BATTLE_BIN__800f5c5c = 0;
       FUN_BATTLE_BIN__800f26bc
                 ((&DAT_BATTLE_BIN__800f7a65)[(int)DAT_BATTLE_BIN__800fbdf4 * 0x14],
                  (int *)DAT_BATTLE_BIN__80121ffc);
-      iVar11 = (int)DAT_BATTLE_BIN__800fbdf4 * 0x14;
-      uVar13 = *(uint *)(&DAT_BATTLE_BIN__800f7a60 + iVar11);
-      uVar17 = *(uint *)(&DAT_BATTLE_BIN__800f7a64 + iVar11);
-      uVar16 = *(uint *)(&DAT_BATTLE_BIN__800f7a68 + iVar11);
-      uVar15 = *(uint *)(&DAT_BATTLE_BIN__800f7a6c + iVar11);
-      uVar14 = iVar11 + 0x800fa6c3U & 3;
-      puVar26 = (uint *)((iVar11 + 0x800fa6c3U) - uVar14);
-      *puVar26 = *puVar26 & -1 << (uVar14 + 1) * 8 | uVar13 >> (3 - uVar14) * 8;
-      *(uint *)(iVar11 + -0x7ff05940) = uVar13;
-      puVar1 = &DAT_BATTLE_BIN__800fa6c7 + iVar11;
-      uVar13 = (uint)puVar1 & 3;
-      *(uint *)(puVar1 + -uVar13) =
-           *(uint *)(puVar1 + -uVar13) & -1 << (uVar13 + 1) * 8 | uVar17 >> (3 - uVar13) * 8;
-      *(uint *)(iVar11 + -0x7ff0593c) = uVar17;
-      uVar13 = iVar11 + 0x800fa6cbU & 3;
-      puVar26 = (uint *)((iVar11 + 0x800fa6cbU) - uVar13);
-      *puVar26 = *puVar26 & -1 << (uVar13 + 1) * 8 | uVar16 >> (3 - uVar13) * 8;
-      *(uint *)(iVar11 + -0x7ff05938) = uVar16;
-      uVar13 = iVar11 + 0x800fa6cfU & 3;
-      puVar26 = (uint *)((iVar11 + 0x800fa6cfU) - uVar13);
-      *puVar26 = *puVar26 & -1 << (uVar13 + 1) * 8 | uVar15 >> (3 - uVar13) * 8;
-      *(uint *)(iVar11 + -0x7ff05934) = uVar15;
-      uVar13 = *(uint *)(&DAT_BATTLE_BIN__800f7a70 + iVar11);
-      uVar17 = iVar11 + 0x800fa6d3U & 3;
-      puVar26 = (uint *)((iVar11 + 0x800fa6d3U) - uVar17);
-      *puVar26 = *puVar26 & -1 << (uVar17 + 1) * 8 | uVar13 >> (3 - uVar17) * 8;
-      *(uint *)(iVar11 + -0x7ff05930) = uVar13;
+      iVar12 = (int)DAT_BATTLE_BIN__800fbdf4 * 0x14;
+      uVar14 = *(uint *)(&DAT_BATTLE_BIN__800f7a60 + iVar12);
+      uVar18 = *(uint *)(&DAT_BATTLE_BIN__800f7a64 + iVar12);
+      uVar17 = *(uint *)(&DAT_BATTLE_BIN__800f7a68 + iVar12);
+      uVar16 = *(uint *)(&DAT_BATTLE_BIN__800f7a6c + iVar12);
+      uVar15 = iVar12 + 0x800fa6c3U & 3;
+      puVar27 = (uint *)((iVar12 + 0x800fa6c3U) - uVar15);
+      *puVar27 = *puVar27 & -1 << (uVar15 + 1) * 8 | uVar14 >> (3 - uVar15) * 8;
+      *(uint *)(iVar12 + -0x7ff05940) = uVar14;
+      puVar1 = &DAT_BATTLE_BIN__800fa6c7 + iVar12;
+      uVar14 = (uint)puVar1 & 3;
+      *(uint *)(puVar1 + -uVar14) =
+           *(uint *)(puVar1 + -uVar14) & -1 << (uVar14 + 1) * 8 | uVar18 >> (3 - uVar14) * 8;
+      *(uint *)(iVar12 + -0x7ff0593c) = uVar18;
+      uVar14 = iVar12 + 0x800fa6cbU & 3;
+      puVar27 = (uint *)((iVar12 + 0x800fa6cbU) - uVar14);
+      *puVar27 = *puVar27 & -1 << (uVar14 + 1) * 8 | uVar17 >> (3 - uVar14) * 8;
+      *(uint *)(iVar12 + -0x7ff05938) = uVar17;
+      uVar14 = iVar12 + 0x800fa6cfU & 3;
+      puVar27 = (uint *)((iVar12 + 0x800fa6cfU) - uVar14);
+      *puVar27 = *puVar27 & -1 << (uVar14 + 1) * 8 | uVar16 >> (3 - uVar14) * 8;
+      *(uint *)(iVar12 + -0x7ff05934) = uVar16;
+      uVar14 = *(uint *)(&DAT_BATTLE_BIN__800f7a70 + iVar12);
+      uVar18 = iVar12 + 0x800fa6d3U & 3;
+      puVar27 = (uint *)((iVar12 + 0x800fa6d3U) - uVar18);
+      *puVar27 = *puVar27 & -1 << (uVar18 + 1) * 8 | uVar14 >> (3 - uVar18) * 8;
+      *(uint *)(iVar12 + -0x7ff05930) = uVar14;
       DAT_BATTLE_BIN__800fbdf4 = (int *)((int)DAT_BATTLE_BIN__800fbdf4 + 1);
-      iVar11 = DAT_BATTLE_BIN__800f5c58;
+      iVar12 = DAT_BATTLE_BIN__800f5c58;
     }
     break;
   case 5:
     if (DAT_BATTLE_BIN__800f7980 != DAT_BATTLE_BIN__8011a2d4) {
-      iVar11 = 0;
-      iVar18 = 0;
-      piVar29 = &DAT_BATTLE_BIN__800f7994;
+      iVar12 = 0;
+      iVar19 = 0;
+      piVar30 = &DAT_BATTLE_BIN__800f7994;
       iRam800f7984 = 0;
       iRam800f7988 = 0;
       iRam800f798c = 0;
       iRam800f7990 = 0;
       do {
-        iVar20 = *piVar29;
-        piVar29 = piVar29 + 1;
-        if (iVar20 != 0) {
+        iVar21 = *piVar30;
+        piVar30 = piVar30 + 1;
+        if (iVar21 != 0) {
           func_0x800f5578();
         }
-        iRam800f7984 = (uint)*(ushort *)((int)&DAT_BATTLE_BIN__800fbe90 + iVar18) + iRam800f7984;
-        iRam800f7988 = (uint)*(ushort *)((int)&DAT_BATTLE_BIN__800fbe92 + iVar18) + iRam800f7988;
-        iVar11 = iVar11 + 1;
-        iRam800f798c = (uint)*(ushort *)((int)&DAT_BATTLE_BIN__800fbe94 + iVar18) + iRam800f798c;
-        iRam800f7990 = (uint)*(ushort *)((int)&DAT_BATTLE_BIN__800fbe96 + iVar18) + iRam800f7990;
-        iVar18 = iVar18 + 0x98;
-      } while (iVar11 < 9);
+        iRam800f7984 = (uint)*(ushort *)((int)&DAT_BATTLE_BIN__800fbe90 + iVar19) + iRam800f7984;
+        iRam800f7988 = (uint)*(ushort *)((int)&DAT_BATTLE_BIN__800fbe92 + iVar19) + iRam800f7988;
+        iVar12 = iVar12 + 1;
+        iRam800f798c = (uint)*(ushort *)((int)&DAT_BATTLE_BIN__800fbe94 + iVar19) + iRam800f798c;
+        iRam800f7990 = (uint)*(ushort *)((int)&DAT_BATTLE_BIN__800fbe96 + iVar19) + iRam800f7990;
+        iVar19 = iVar19 + 0x98;
+      } while (iVar12 < 9);
       DAT_BATTLE_BIN__800f5c5c = 0x91;
-      iVar11 = DAT_BATTLE_BIN__800f5c58;
+      iVar12 = DAT_BATTLE_BIN__800f5c58;
     }
     break;
   case 0x1d:
     if (DAT_BATTLE_BIN__800f7980 == DAT_BATTLE_BIN__8011a2d4) {
       return DAT_BATTLE_BIN__800f5c58;
     }
-    iVar11 = 0;
-    iVar18 = 0;
-    piVar29 = &DAT_BATTLE_BIN__800f7994;
+    iVar12 = 0;
+    iVar19 = 0;
+    piVar30 = &DAT_BATTLE_BIN__800f7994;
     iRam800f7984 = 0;
     iRam800f7988 = 0;
     iRam800f798c = 0;
     iRam800f7990 = 0;
     do {
-      iVar11 = iVar11 + 1;
-      if (*piVar29 != 0) {
+      iVar12 = iVar12 + 1;
+      if (*piVar30 != 0) {
         func_0x800f5578();
       }
-      *piVar29 = 0;
-      puVar2 = (ushort *)((int)&DAT_BATTLE_BIN__800fbe90 + iVar18);
-      puVar3 = (ushort *)((int)&DAT_BATTLE_BIN__800fbe92 + iVar18);
-      puVar4 = (ushort *)((int)&DAT_BATTLE_BIN__800fbe94 + iVar18);
-      puVar5 = (ushort *)((int)&DAT_BATTLE_BIN__800fbe96 + iVar18);
-      iVar18 = iVar18 + 0x98;
+      *piVar30 = 0;
+      puVar2 = (ushort *)((int)&DAT_BATTLE_BIN__800fbe90 + iVar19);
+      puVar3 = (ushort *)((int)&DAT_BATTLE_BIN__800fbe92 + iVar19);
+      puVar4 = (ushort *)((int)&DAT_BATTLE_BIN__800fbe94 + iVar19);
+      puVar5 = (ushort *)((int)&DAT_BATTLE_BIN__800fbe96 + iVar19);
+      iVar19 = iVar19 + 0x98;
       iRam800f7984 = (uint)*puVar2 + iRam800f7984;
       iRam800f7988 = (uint)*puVar3 + iRam800f7988;
       iRam800f798c = (uint)*puVar4 + iRam800f798c;
       iRam800f7990 = (uint)*puVar5 + iRam800f7990;
-      piVar29 = piVar29 + 1;
-    } while (iVar11 < 9);
+      piVar30 = piVar30 + 1;
+    } while (iVar12 < 9);
     goto code_r0x800f4a98;
   case 0x1e:
-    iVar18 = Check_File_Still_Loading();
-    iVar11 = DAT_BATTLE_BIN__800f5c58;
-    if (iVar18 == 0) {
+    iVar19 = Check_File_Still_Loading();
+    iVar12 = DAT_BATTLE_BIN__800f5c58;
+    if (iVar19 == 0) {
       if (DAT_BATTLE_BIN__800f6aac != '\0') {
         FUN_BATTLE_BIN__800f26bc(0x32,(int *)&DAT_BATTLE_BIN__800f6a7c);
       }
       DAT_BATTLE_BIN__800f6aac = '\0';
       DAT_BATTLE_BIN__800f5c5c = 0x93;
-      iVar11 = DAT_BATTLE_BIN__800f5c58;
+      iVar12 = DAT_BATTLE_BIN__800f5c58;
     }
     break;
   case 0x1f:
@@ -64047,9 +67295,9 @@ LAB_BATTLE_BIN__800f384c:
     }
 code_r0x800f4a98:
     DAT_BATTLE_BIN__800f5c5c = 0;
-    iVar11 = DAT_BATTLE_BIN__800f5c58;
+    iVar12 = DAT_BATTLE_BIN__800f5c58;
   }
-  return iVar11;
+  return iVar12;
 }
 
 
@@ -64088,10 +67336,9 @@ int FUN_BATTLE_BIN__800f4acc(int param_1)
           bVar1 = *pbVar7;
           pbVar7 = pbVar7 + 0x14;
           if (bVar1 == 0x30) {
-            uVar3 = FUN_BATTLE_BIN__8013b590
-                              ((int)*(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar6));
-            uVar4 = FUN_BATTLE_BIN__8013b590(0x23);
-            uVar5 = FUN_BATTLE_BIN__8013b590(0x24);
+            uVar3 = GetScriptVariable(*(EventVar *)((int)&DAT_BATTLE_BIN__80124604 + iVar6));
+            uVar4 = GetScriptVariable(Weather);
+            uVar5 = GetScriptVariable(DayNight);
             uVar4 = FUN_BATTLE_BIN__800f2618
                               (*(byte *)((int)&DAT_BATTLE_BIN__80124608 + iVar6),
                                *(short *)((int)&DAT_BATTLE_BIN__80124604 + iVar6 + 2),
@@ -64860,8 +68107,8 @@ void FUN_BATTLE_BIN__8012da0c(ushort param_1,uint param_2)
   uint UnitID;
   BattleUnitData *pBVar3;
   
-  iVar2 = FUN_BATTLE_BIN__8013b590(0x1fd);
-  if ((iVar2 == 0) && (iVar2 = FUN_BATTLE_BIN__8013b590(0x6f), iVar2 != 0)) {
+  iVar2 = GetScriptVariable(BattleToStart);
+  if ((iVar2 == 0) && (iVar2 = GetScriptVariable(ShopAvailability), iVar2 != 0)) {
     UnitID = FUN_BATTLE_BIN__8008cdd0(param_1);
     if ((-1 < (int)UnitID) && (param_2 < 500)) {
       pBVar3 = GetUnitDataPointer(UnitID);
@@ -64894,7 +68141,7 @@ void FUN_BATTLE_BIN__8012db00(undefined4 param_1,uint param_2)
   uint uVar2;
   BattleUnitData *pBVar3;
   
-  iVar1 = FUN_BATTLE_BIN__8013b590(0x1fd);
+  iVar1 = GetScriptVariable(BattleToStart);
   if (((iVar1 == 0) && (uVar2 = FUN_BATTLE_BIN__8008cdd0((ushort)param_1), -1 < (int)uVar2)) &&
      (pBVar3 = GetUnitDataPointer(uVar2), (pBVar3->CurActionTargetData).field_0x14 != '\0')) {
     uVar2 = GetMiscIDByMiscID((byte)(pBVar3->CurActionTargetData).field_0x14 & 0x1f);
@@ -64930,7 +68177,7 @@ bool FUN_BATTLE_BIN__8012dc84(void)
 {
   int iVar1;
   
-  iVar1 = FUN_BATTLE_BIN__8013b590(0x27);
+  iVar1 = GetScriptVariable(CurrentEvent);
   return iVar1 - 0x19aU < 0x10;
 }
 
@@ -64963,7 +68210,7 @@ void FUN_BATTLE_BIN__8012df98(uint param_1)
   
   if ((param_1 == 0) ||
      ((bVar1 = FUN_BATTLE_BIN__8012dc84(), CONCAT31(extraout_var,bVar1) != 0 &&
-      (uVar2 = FUN_BATTLE_BIN__8013b590(0x29), (uVar2 & 0x5000) != 0)))) {
+      (uVar2 = GetScriptVariable(TutorialVar2), (uVar2 & 0x5000) != 0)))) {
     DAT_BATTLE_BIN__8016d9a8 = 0;
     DAT_BATTLE_BIN__8016d9ac = 0;
     DAT_BATTLE_BIN__8016d9b0 = 0;
@@ -65068,7 +68315,7 @@ void FUN_BATTLE_BIN__8012e65c(void)
   do {
     if (((*piVar13 != -1) &&
         (piVar6 = *(int **)(&DAT_BATTLE_BIN__8016eacc + (iVar12 + DAT_BATTLE_BIN__80166014) * 4),
-        *piVar6 == 1)) && ((&DAT_BATTLE_BIN__801698b4)[piVar6[1] * 0x100] != 0)) {
+        *piVar6 == 1)) && (BattleThreads[piVar6[1]].isRunning != 0)) {
       FUN_BATTLE_BIN__8012e64c((int)(piVar6 + 0xe),*(undefined *)(piVar6 + 0x45));
       FUN_BATTLE_BIN__8012e64c((int)(piVar6 + 0x13),*(undefined *)(piVar6 + 0x45));
       FUN_BATTLE_BIN__8012e64c((int)(piVar6 + 0x18),*(undefined *)(piVar6 + 0x45));
@@ -65310,7 +68557,7 @@ LAB_BATTLE_BIN__8012ec40:
       NoteworthyValue = NoteworthyValue + 1;
     } while (NoteworthyValue < 0x10 - iVar4);
   }
-  FUN_BATTLE_BIN__8014c958();
+  Thread_stop();
   return;
 }
 
@@ -65610,22 +68857,23 @@ void FUN_BATTLE_BIN__8013aedc(undefined2 param_1)
 
 
 
-undefined4 FUN_BATTLE_BIN__8013b590(uint param_1)
+undefined4 GetScriptVariable(EventVar param_1)
 
 {
   uint uVar1;
   uint uVar2;
   undefined4 uVar3;
+  undefined2 in_register_00000012;
   undefined4 uVar4;
   
   uVar4 = *(undefined4 *)PTR_DAT_BATTLE_BIN__80165f9c;
-  if (param_1 == 0x22) {
-    uVar1 = FUN_BATTLE_BIN__8013b590(0x24);
-    uVar2 = FUN_BATTLE_BIN__8013b590(0x23);
+  if (CONCAT22(in_register_00000012,param_1) == 0x22) {
+    uVar1 = GetScriptVariable(DayNight);
+    uVar2 = GetScriptVariable(Weather);
     FUN_BATTLE_BIN__8013b644(0x22,(uVar1 & 1) << 0xf | (uVar2 & 7) << 0xc);
   }
   FUN_BATTLE_BIN__8014a018(0xbe,0,0);
-  FUN_BATTLE_BIN__8014a018(0xb1,0,param_1);
+  FUN_BATTLE_BIN__8014a018(0xb1,0,CONCAT22(in_register_00000012,param_1));
   uVar3 = *(undefined4 *)PTR_DAT_BATTLE_BIN__80165f9c;
   *(undefined4 *)PTR_DAT_BATTLE_BIN__80165f9c = uVar4;
   return uVar3;
@@ -65923,8 +69171,8 @@ void FUN_BATTLE_BIN__8013cf58(uint param_1)
       *(undefined2 *)(DAT_BATTLE_BIN__80173cb8 + 0x218) = 0;
       DAT_BATTLE_BIN__801669e8 = 0;
       FUN_BATTLE_BIN__8013f76c();
-      FUN_BATTLE_BIN__8014c8a0(3,&DAT_BATTLE_BIN__8013ccf4);
-      FUN_BATTLE_BIN__8014ca38(3,param_1,0,0);
+      Thread_initialize(3,(func *)&DAT_BATTLE_BIN__8013ccf4);
+      Thread_storeParams3(3,param_1,0,0);
     }
     DAT_BATTLE_BIN__80169200 = 0;
   }
@@ -65940,17 +69188,17 @@ void FUN_BATTLE_BIN__8013d0ac(void)
   int iVar2;
   undefined3 extraout_var;
   
-  iVar2 = FUN_BATTLE_BIN__8014cc94(8);
-  if (((iVar2 != 0) || (iVar2 = FUN_BATTLE_BIN__8014cc94(3), iVar2 != 0)) &&
+  iVar2 = Thread_checkThisRunning(8);
+  if (((iVar2 != 0) || (iVar2 = Thread_checkThisRunning(3), iVar2 != 0)) &&
      (DAT_BATTLE_BIN__80165f84 != 10)) {
     DAT_BATTLE_BIN__80169200 = 1;
   }
   if (((DAT_BATTLE_BIN__80166050 == 0) && (DAT_BATTLE_BIN__80165f74 == 0)) &&
      ((bVar1 = FUN_BATTLE_BIN__8008e17c(), CONCAT31(extraout_var,bVar1) == 0 &&
-      ((DAT_BATTLE_BIN__8016600c == 0 && (iVar2 = FUN_BATTLE_BIN__8014cc94(3), iVar2 == 0)))))) {
+      ((DAT_BATTLE_BIN__8016600c == 0 && (iVar2 = Thread_checkThisRunning(3), iVar2 == 0)))))) {
     DAT_BATTLE_BIN__8016602c = 1;
-    FUN_BATTLE_BIN__8014c8a0(3,&DAT_BATTLE_BIN__8013c284);
-    FUN_BATTLE_BIN__8014ca38(3,0,0,0);
+    Thread_initialize(3,(func *)&DAT_BATTLE_BIN__8013c284);
+    Thread_storeParams3(3,0,0,0);
   }
   return;
 }
@@ -66066,10 +69314,10 @@ bool FUN_BATTLE_BIN__8013d320(void)
     FUN_BATTLE_BIN__8013d278(0x2a,0);
     FUN_801c9488();
     FUN_801c9ec0();
-    FUN_BATTLE_BIN__8014c8a0(6,&DAT_801c3f44);
+    Thread_initialize(6,(func *)&DAT_801c3f44);
   }
   else {
-    FUN_BATTLE_BIN__8014c8a0(6,&DAT_BATTLE_BIN__8013d1f8);
+    Thread_initialize(6,(func *)&DAT_BATTLE_BIN__8013d1f8);
   }
   return iVar2 != 0;
 }
@@ -66081,14 +69329,14 @@ void FUN_BATTLE_BIN__8013d4dc(void)
 {
   int iVar1;
   
-  iVar1 = FUN_BATTLE_BIN__8014cc94(8);
-  if (((iVar1 == 0) && (iVar1 = FUN_BATTLE_BIN__8014cc94(7), iVar1 == 0)) &&
+  iVar1 = Thread_checkThisRunning(8);
+  if (((iVar1 == 0) && (iVar1 = Thread_checkThisRunning(7), iVar1 == 0)) &&
      (DAT_BATTLE_BIN__80166048 == 0)) {
     DAT_BATTLE_BIN__80165f84 = 10;
     DAT_BATTLE_BIN__80173cb8 = &DAT_BATTLE_BIN__80166b10;
-    FUN_BATTLE_BIN__8014c8a0(8,&DAT_BATTLE_BIN__8013bfbc);
-    FUN_BATTLE_BIN__8014ca38(8,DAT_BATTLE_BIN__80173cb8 + 600,0,0);
-    DAT_BATTLE_BIN__8016b8b8 = 0x42;
+    Thread_initialize(8,(func *)&DAT_BATTLE_BIN__8013bfbc);
+    Thread_storeParams3(8,DAT_BATTLE_BIN__80173cb8 + 600,0,0);
+    BattleThreads[8].TaskID = 0x42;
   }
   return;
 }
@@ -66104,12 +69352,12 @@ uint FUN_BATTLE_BIN__8013d578(void)
   
   uVar1 = (uint)DAT_BATTLE_BIN__8016604a;
   if (uVar1 == 0) {
-    iVar2 = FUN_BATTLE_BIN__8014cc94(3);
+    iVar2 = Thread_checkThisRunning(3);
     uVar1 = 2;
     if (iVar2 == 0) {
       iVar2 = 4;
       do {
-        if ((iVar2 != 3) && (iVar3 = FUN_BATTLE_BIN__8014cc94(iVar2), iVar3 != 0)) break;
+        if ((iVar2 != 3) && (iVar3 = Thread_checkThisRunning(iVar2), iVar3 != 0)) break;
         iVar2 = iVar2 + 1;
       } while (iVar2 < 10);
       if (DAT_BATTLE_BIN__80165ff6 == 1) {
@@ -66150,11 +69398,11 @@ void FUN_BATTLE_BIN__8013d634(int param_1,int param_2,int param_3)
       DAT_BATTLE_BIN__8014d066 = (undefined2)param_3;
       DAT_BATTLE_BIN__8014d09a = DAT_BATTLE_BIN__8014d066;
     }
-    iVar1 = FUN_BATTLE_BIN__8014cc94(2);
+    iVar1 = Thread_checkThisRunning(2);
     if (iVar1 == 0) {
-      FUN_BATTLE_BIN__8014c8a0(2,&DAT_BATTLE_BIN__8013d704);
+      Thread_initialize(2,(func *)&DAT_BATTLE_BIN__8013d704);
     }
-    FUN_BATTLE_BIN__8014ca38(2,param_1,0,0);
+    Thread_storeParams3(2,param_1,0,0);
   }
   return;
 }
@@ -66196,7 +69444,7 @@ void FUN_BATTLE_BIN__8013efac(void)
 void FUN_BATTLE_BIN__8013eff4(void)
 
 {
-  PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98 = &DAT_BATTLE_BIN__8016986c;
+  Thread_0_Addr = BattleThreads;
   DAT_BATTLE_BIN__80173c98 = &DAT_BATTLE_BIN__8014e614;
   DAT_BATTLE_BIN__80173f5c = &DAT_BATTLE_BIN__8014d5d4;
   DAT_BATTLE_BIN__80173ca4 = &DAT_8004a6bc;
@@ -66218,7 +69466,7 @@ void FUN_BATTLE_BIN__8013f080(void)
   FUN_BATTLE_BIN__8012e320();
   FUN_BATTLE_BIN__8012e9c0();
   FUN_BATTLE_BIN__8012ee3c();
-  FUN_BATTLE_BIN__8014c994();
+  Thread_clearAll();
   return;
 }
 
@@ -66380,19 +69628,19 @@ void FUN_BATTLE_BIN__8013f3fc(void)
   
   FUN_BATTLE_BIN__8013f168();
   DAT_BATTLE_BIN__80165fda = 1;
-  iVar1 = FUN_BATTLE_BIN__8013b590(0x1fd);
+  iVar1 = GetScriptVariable(BattleToStart);
   if (iVar1 != 0) {
     FUN_BATTLE_BIN__80143a9c();
     FUN_BATTLE_BIN__8013f0c0();
     DAT_BATTLE_BIN__80165fdc = 0;
     DAT_BATTLE_BIN__80166054 = 0;
   }
-  iVar1 = FUN_BATTLE_BIN__8013b590(0x27);
+  iVar1 = GetScriptVariable(CurrentEvent);
   if (iVar1 != 0) {
     DAT_BATTLE_BIN__80165fdc = 0;
     DAT_BATTLE_BIN__80166054 = 0;
     FUN_BATTLE_BIN__8008efb4(2,0,0,0,2);
-    FUN_BATTLE_BIN__8014c8a0(1,&DAT_BATTLE_BIN__80143b80);
+    Thread_initialize(1,(func *)&DAT_BATTLE_BIN__80143b80);
   }
   return;
 }
@@ -66405,7 +69653,7 @@ void FUN_BATTLE_BIN__8013f4a8(void)
   int iVar1;
   
   FUN_BATTLE_BIN__8013f168();
-  iVar1 = FUN_BATTLE_BIN__8014cc94(1);
+  iVar1 = Thread_checkThisRunning(1);
   if (iVar1 == 0) {
     FUN_BATTLE_BIN__80143a9c();
     FUN_BATTLE_BIN__8013f0c0();
@@ -66421,7 +69669,7 @@ void FUN_BATTLE_BIN__8013f4f8(uint *param_1,uint param_2)
 
 {
   FUN_BATTLE_BIN__80142d58(param_1,param_2);
-  FUN_BATTLE_BIN__8014ca1c(6);
+  Thread_checkRunning(6);
   return;
 }
 
@@ -66451,10 +69699,10 @@ uint FUN_BATTLE_BIN__8013f520(uint *param_1,uint param_2)
   FUN_BATTLE_BIN__80142d58(param_1,param_2);
   FUN_BATTLE_BIN__8013b898();
   uVar2 = FUN_BATTLE_BIN__801411b4();
-  iVar4 = FUN_BATTLE_BIN__8014cc94(8);
-  if ((((iVar4 == 0) || (DAT_BATTLE_BIN__8016b8b8 == 0x42)) &&
-      (iVar4 = FUN_BATTLE_BIN__8014cc94(7), iVar4 == 0)) &&
-     (iVar4 = FUN_BATTLE_BIN__8014cc94(6), iVar4 == 0)) {
+  iVar4 = Thread_checkThisRunning(8);
+  if ((((iVar4 == 0) || (BattleThreads[8].TaskID == 0x42)) &&
+      (iVar4 = Thread_checkThisRunning(7), iVar4 == 0)) &&
+     (iVar4 = Thread_checkThisRunning(6), iVar4 == 0)) {
     if (DAT_BATTLE_BIN__8016922a != 1) {
       return uVar2;
     }
@@ -66742,8 +69990,8 @@ void FUN_BATTLE_BIN__80141654(undefined4 param_1)
 
 {
   FUN_BATTLE_BIN__8013f76c();
-  FUN_BATTLE_BIN__8014c8a0(4,&DAT_BATTLE_BIN__80141464);
-  FUN_BATTLE_BIN__8014ca38(4,param_1,0,0);
+  Thread_initialize(4,(func *)&DAT_BATTLE_BIN__80141464);
+  Thread_storeParams3(4,param_1,0,0);
   return;
 }
 
@@ -66794,7 +70042,7 @@ void FUN_BATTLE_BIN__8014175c(int param_1,uint param_2,int param_3)
       (((local_1c->field_0x5 & 2) != 0 &&
        ((((pBVar2->AllActionUnitData).CurrentStatuses.Status3 & (Frog|Transparent)) == empty &&
         ((DAT_800473ac & 0x60000) == 0)))))))) {
-    uVar4 = FUN_BATTLE_BIN__8013b590(0x21);
+    uVar4 = GetScriptVariable(0x21);
     iVar3 = 5;
     if ((uVar4 & 0xf) < 4) {
       DAT_BATTLE_BIN__8014d308 = *(ushort *)(param_1 + 2) & 0x1ff;
@@ -66881,10 +70129,10 @@ FUN_BATTLE_BIN__80141b0c(int param_1,uint param_2,uint param_3,uint param_4,int 
   DAT_BATTLE_BIN__8014d324 = 0;
   pBVar2 = GetUnitDataPointer(param_3);
   if (param_1 == 8) {
-    uVar3 = FUN_BATTLE_BIN__8013b590(0x27);
+    uVar3 = GetScriptVariable(CurrentEvent);
     if ((0xf < uVar3 - 0x19a) && (DAT_BATTLE_BIN__80165ff6 == 0)) {
       if (param_2 == 1) goto LAB_BATTLE_BIN__80141e30;
-      iVar4 = FUN_BATTLE_BIN__8014cc94(1);
+      iVar4 = Thread_checkThisRunning(1);
       iVar8 = 0;
       if (iVar4 == 0) {
         uVar6 = 0;
@@ -66898,7 +70146,7 @@ FUN_BATTLE_BIN__80141b0c(int param_1,uint param_2,uint param_3,uint param_4,int 
         } while ((int)uVar6 < 3);
         uVar6 = FUN_BATTLE_BIN__80183374();
         if ((((int)uVar6 < 0) || (iVar8 != 0)) &&
-           (iVar4 = FUN_BATTLE_BIN__8013b590(0x1fd), iVar4 == 0)) {
+           (iVar4 = GetScriptVariable(BattleToStart), iVar4 == 0)) {
           if (param_2 == 2) {
             DAT_BATTLE_BIN__80173c74 = 400;
             return 2;
@@ -66911,7 +70159,7 @@ FUN_BATTLE_BIN__80141b0c(int param_1,uint param_2,uint param_3,uint param_4,int 
           return 2;
         }
         if (DAT_BATTLE_BIN__80173cb0 == 0) {
-          iVar4 = FUN_BATTLE_BIN__8013b590(0x1fd);
+          iVar4 = GetScriptVariable(BattleToStart);
           if (iVar4 != 0) {
             if (param_2 == 2) {
               DAT_BATTLE_BIN__80173c74 = 0x191;
@@ -66919,7 +70167,7 @@ FUN_BATTLE_BIN__80141b0c(int param_1,uint param_2,uint param_3,uint param_4,int 
             }
             FUN_BATTLE_BIN__8013d634(0,0xff,0xff);
             DAT_BATTLE_BIN__80166048 = 1;
-            iVar4 = FUN_BATTLE_BIN__8013b590(0x1fe);
+            iVar4 = GetScriptVariable(DebugBattleNext);
             if (iVar4 == 0) {
               uVar3 = 0x191;
             }
@@ -66948,7 +70196,7 @@ FUN_BATTLE_BIN__80141b0c(int param_1,uint param_2,uint param_3,uint param_4,int 
           iVar4 = FUN_BATTLE_BIN__801425b0();
           if (iVar4 != 0) {
             if (param_2 == 2) {
-              DAT_BATTLE_BIN__80173c74 = FUN_BATTLE_BIN__8013b590(0x27);
+              DAT_BATTLE_BIN__80173c74 = GetScriptVariable(CurrentEvent);
               FUN_BATTLE_BIN__8013b644(0x27,uVar3);
               return 2;
             }
@@ -67050,8 +70298,8 @@ LAB_BATTLE_BIN__801421b4:
       }
       if (param_1 == 5) {
         DAT_BATTLE_BIN__8014d308 = *(ushort *)(param_6 + 2) & 0x1ff;
-        FUN_BATTLE_BIN__8014c8a0(4,&DAT_BATTLE_BIN__8013bdcc);
-        FUN_BATTLE_BIN__8014ca38(4,param_3,DAT_BATTLE_BIN__8014d308,0);
+        Thread_initialize(4,(func *)&DAT_BATTLE_BIN__8013bdcc);
+        Thread_storeParams3(4,param_3,DAT_BATTLE_BIN__8014d308,0);
         DAT_BATTLE_BIN__8014d318 = param_1;
         DAT_BATTLE_BIN__8014d31c = param_2;
         return 1;
@@ -67146,7 +70394,7 @@ LAB_BATTLE_BIN__801421b4:
             DAT_BATTLE_BIN__80165ef8 = param_2;
             pPVar5 = Get_Item_DataPointer(param_2);
             DAT_BATTLE_BIN__80165efc = (uint)((ushort)pPVar5->Price >> 2);
-            iVar4 = FUN_BATTLE_BIN__8013b590(0x2c);
+            iVar4 = GetScriptVariable(WarFunds);
             FUN_BATTLE_BIN__8013b644(0x2c,(uint)((ushort)pPVar5->Price >> 2) + iVar4);
             FUN_BATTLE_BIN__80141654(0x26);
             DAT_BATTLE_BIN__8014d318 = param_1;
@@ -67323,13 +70571,15 @@ undefined4 FUN_BATTLE_BIN__80142694(int param_1,uint param_2,uint param_3,uint p
   BattleUnitData *pBVar4;
   BattleUnitData *pBVar5;
   undefined3 extraout_var;
-  int iVar6;
+  EventVar EVar6;
+  int iVar7;
   
-  if ((param_1 == 1) && (uVar2 = FUN_BATTLE_BIN__8013b590(param_2), uVar2 == param_3)) {
+  EVar6 = (EventVar)param_2;
+  if ((param_1 == 1) && (uVar2 = GetScriptVariable(EVar6), uVar2 == param_3)) {
     return 1;
   }
-  if (((param_1 != 2) || (iVar3 = FUN_BATTLE_BIN__8013b590(param_2), iVar3 < (int)param_3)) &&
-     ((param_1 != 3 || (iVar3 = FUN_BATTLE_BIN__8013b590(param_2), (int)param_3 < iVar3)))) {
+  if (((param_1 != 2) || (iVar3 = GetScriptVariable(EVar6), iVar3 < (int)param_3)) &&
+     ((param_1 != 3 || (iVar3 = GetScriptVariable(EVar6), (int)param_3 < iVar3)))) {
     if ((param_1 - 4U < 7) &&
        (pBVar4 = FUN_BATTLE_BIN__80142508(param_2), pBVar4 != (BattleUnitData *)0xffffffff)) {
       if (param_1 == 4) {
@@ -67386,41 +70636,41 @@ undefined4 FUN_BATTLE_BIN__80142694(int param_1,uint param_2,uint param_3,uint p
           pBVar5 = pBVar4;
           iVar3 = 0;
           do {
-            iVar6 = iVar3 + 1;
+            iVar7 = iVar3 + 1;
             if ((pBVar5->AllActionUnitData).Head == param_2) {
               return 1;
             }
             pBVar5 = (BattleUnitData *)(&(pBVar4->AllActionUnitData).UnitID + iVar3);
-            iVar3 = iVar6;
-          } while (iVar6 < 7);
+            iVar3 = iVar7;
+          } while (iVar7 < 7);
         }
         uVar2 = uVar2 + 1;
       } while ((int)uVar2 < 4);
     }
-    if (((param_1 != 0xe) || (iVar3 = FUN_BATTLE_BIN__8013b590(0x2c), iVar3 < (int)param_3)) &&
-       ((param_1 != 0xf || (iVar3 = FUN_BATTLE_BIN__8013b590(0x2c), (int)param_3 < iVar3)))) {
+    if (((param_1 != 0xe) || (iVar3 = GetScriptVariable(WarFunds), iVar3 < (int)param_3)) &&
+       ((param_1 != 0xf || (iVar3 = GetScriptVariable(WarFunds), (int)param_3 < iVar3)))) {
       if (param_1 == 0x10) {
-        iVar3 = FUN_BATTLE_BIN__8013b590(0x2e);
+        iVar3 = GetScriptVariable(Month);
         if (iVar3 < (int)param_2) {
           return 1;
         }
-        uVar2 = FUN_BATTLE_BIN__8013b590(0x2e);
-        if ((uVar2 == param_2) && (iVar3 = FUN_BATTLE_BIN__8013b590(0x2f), iVar3 <= (int)param_3)) {
+        uVar2 = GetScriptVariable(Month);
+        if ((uVar2 == param_2) && (iVar3 = GetScriptVariable(Day), iVar3 <= (int)param_3)) {
           return 1;
         }
       }
       if (param_1 == 0x11) {
-        iVar3 = FUN_BATTLE_BIN__8013b590(0x2e);
+        iVar3 = GetScriptVariable(Month);
         if ((int)param_2 < iVar3) {
           return 1;
         }
-        uVar2 = FUN_BATTLE_BIN__8013b590(0x2e);
-        if ((uVar2 == param_2) && (iVar3 = FUN_BATTLE_BIN__8013b590(0x2f), (int)param_3 <= iVar3)) {
+        uVar2 = GetScriptVariable(Month);
+        if ((uVar2 == param_2) && (iVar3 = GetScriptVariable(Day), (int)param_3 <= iVar3)) {
           return 1;
         }
       }
-      if (((((param_1 != 0x12) || (iVar3 = FUN_BATTLE_BIN__8013b590(0x62), iVar3 < (int)param_2)) &&
-           ((param_1 != 0x13 || (iVar3 = FUN_BATTLE_BIN__8013b590(0x62), (int)param_2 < iVar3)))) &&
+      if (((((param_1 != 0x12) || (iVar3 = GetScriptVariable(NumInjured), iVar3 < (int)param_2)) &&
+           ((param_1 != 0x13 || (iVar3 = GetScriptVariable(NumInjured), (int)param_2 < iVar3)))) &&
           ((param_1 != 0x16 || (uVar2 = FUN_BATTLE_BIN__80183374(), uVar2 != 0)))) &&
          ((param_1 != 0x18 ||
           ((((pBVar4 = FUN_BATTLE_BIN__80142508(param_2), pBVar4 == (BattleUnitData *)0xffffffff ||
@@ -67465,7 +70715,7 @@ undefined2 FUN_BATTLE_BIN__80142b5c(void)
     uVar1 = 0;
   }
   else {
-    iVar2 = FUN_BATTLE_BIN__8013b590(0x27);
+    iVar2 = GetScriptVariable(CurrentEvent);
     uVar1 = *(undefined2 *)(&DAT_8004e5d0 + iVar2 * 2);
   }
   return uVar1;
@@ -67491,9 +70741,9 @@ void FUN_BATTLE_BIN__80142c24(uint *param_1)
     MidState_QuitSound_GetStack();
   }
   uVar2 = *param_1;
-  uVar1 = FUN_BATTLE_BIN__8013b590(0x29);
+  uVar1 = GetScriptVariable(TutorialVar2);
   *param_1 = (uVar1 ^ 0xffff) & *param_1;
-  uVar1 = FUN_BATTLE_BIN__8013b590(0x2a);
+  uVar1 = GetScriptVariable(TutorialVar3);
   *param_1 = uVar2 & 0xffff0000 | uVar1 | *param_1;
   return;
 }
@@ -67503,12 +70753,12 @@ void FUN_BATTLE_BIN__80142c24(uint *param_1)
 void FUN_BATTLE_BIN__80142ca8(void)
 
 {
-  if ((DAT_BATTLE_BIN__80165ff6 == 2) && (DAT_BATTLE_BIN__80174038 != 0)) {
+  if ((DAT_BATTLE_BIN__80165ff6 == 2) && (Current_Thread != 0)) {
     if (DAT_BATTLE_BIN__801697d0 == 0) {
       DAT_BATTLE_BIN__8016d9b8 = 0;
     }
     DAT_BATTLE_BIN__801697d0 = DAT_BATTLE_BIN__8016d9b8;
-    if (*(int *)(&DAT_BATTLE_BIN__801698b8 + DAT_BATTLE_BIN__80174038 * 0x400) == 1) {
+    if (BattleThreads[Current_Thread].TaskID == 1) {
       DAT_BATTLE_BIN__801697d0 = DAT_BATTLE_BIN__8016d9b4;
     }
   }
@@ -67559,7 +70809,7 @@ short FUN_BATTLE_BIN__80142d58(uint *param_1,uint param_2)
   iVar8 = 1;
   if (DAT_BATTLE_BIN__8016d9c0 != 0) {
     do {
-      iVar5 = FUN_BATTLE_BIN__8014cc94(iVar8);
+      iVar5 = Thread_checkThisRunning(iVar8);
       if (iVar5 != 0) break;
       iVar8 = iVar8 + 1;
     } while (iVar8 < 0x10);
@@ -67570,13 +70820,13 @@ short FUN_BATTLE_BIN__80142d58(uint *param_1,uint param_2)
         DAT_BATTLE_BIN__8016d9c0 = 0;
         return 0;
       }
-      iVar8 = FUN_BATTLE_BIN__8013b590(0x1fc);
+      iVar8 = GetScriptVariable(BraveStoryRecord);
       if (iVar8 != 0) {
         DAT_BATTLE_BIN__8016d9c0 = 0;
         FUN_BATTLE_BIN__8013b644(0x1fc,0);
         return 9;
       }
-      iVar8 = FUN_BATTLE_BIN__8013b590(0x27);
+      iVar8 = GetScriptVariable(CurrentEvent);
       if (iVar8 == 0x147) {
         return 0x13;
       }
@@ -67666,15 +70916,15 @@ short FUN_BATTLE_BIN__80142d58(uint *param_1,uint param_2)
     DAT_BATTLE_BIN__80166050 = 5;
   }
   do {
-    uVar6 = FUN_BATTLE_BIN__8014cc94(iVar8);
+    uVar6 = Thread_checkThisRunning(iVar8);
     *(char *)(iVar8 + -0x7fe9253c) = (char)uVar6;
     iVar8 = iVar8 + 1;
   } while (iVar8 < 0x10);
   iVar8 = 1;
-  FUN_BATTLE_BIN__8014ca80();
+  Thread_doNext();
   do {
     bVar1 = *(byte *)(iVar8 + -0x7fe9253c);
-    uVar7 = FUN_BATTLE_BIN__8014cc94(iVar8);
+    uVar7 = Thread_checkThisRunning(iVar8);
     iVar8 = iVar8 + 1;
     if (bVar1 != uVar7) {
       DAT_BATTLE_BIN__80166050 = 5;
@@ -67723,7 +70973,7 @@ short FUN_BATTLE_BIN__80142d58(uint *param_1,uint param_2)
       }
       else {
         do {
-          iVar5 = FUN_BATTLE_BIN__8014cc94(iVar8);
+          iVar5 = Thread_checkThisRunning(iVar8);
           if (iVar5 != 0) break;
           iVar8 = iVar8 + 1;
         } while (iVar8 < 0x10);
@@ -67791,12 +71041,12 @@ LAB_BATTLE_BIN__801435a0:
     goto LAB_BATTLE_BIN__801435a0;
   }
   if ((DAT_BATTLE_BIN__80165fe0 == 1) && (DAT_BATTLE_BIN__8016605c == 0)) {
-    uVar4 = FUN_BATTLE_BIN__8013b590(0x33);
+    uVar4 = GetScriptVariable(CurrentMap);
     FUN_BATTLE_BIN__800f3718(uVar4,0x99);
   }
   else {
     if (DAT_BATTLE_BIN__80165fe0 != 2) goto LAB_BATTLE_BIN__80143644;
-    uVar4 = FUN_BATTLE_BIN__8013b590(0x33);
+    uVar4 = GetScriptVariable(CurrentMap);
     iVar3 = FUN_BATTLE_BIN__800f3718(uVar4,0x9c);
     if (iVar3 != 0x9b) goto LAB_BATTLE_BIN__80143644;
   }
@@ -67807,7 +71057,7 @@ LAB_BATTLE_BIN__80143644:
     FUN_BATTLE_BIN__800f0be0(0x9a,1,1,1);
   }
   else if (DAT_BATTLE_BIN__8016605c == 3) {
-    uVar4 = FUN_BATTLE_BIN__8013b590(0x33);
+    uVar4 = GetScriptVariable(CurrentMap);
     iVar3 = FUN_BATTLE_BIN__800f3718(uVar4,0x76);
     if (iVar3 == 0) {
       DAT_BATTLE_BIN__8016605c = 0;
@@ -67939,6 +71189,26 @@ void FUN_BATTLE_BIN__80143a9c(void)
 
 
 
+int find_next_inactive_thread(int param_1)
+
+{
+  int t;
+  int thread;
+  
+  if (0xf < param_1) {
+    for (thread = Current_Thread + 1; thread < 0x10; thread = thread + 1) {
+      t = Thread_checkThisRunning(thread);
+      if (t == 0) {
+        return thread;
+      }
+    }
+    param_1 = Thread_stop();
+  }
+  return param_1;
+}
+
+
+
 void FUN_BATTLE_BIN__8014a018(uint param_1,uint param_2,uint param_3)
 
 {
@@ -67998,7 +71268,7 @@ void FUN_BATTLE_BIN__8014a018(uint param_1,uint param_2,uint param_3)
     if (0xb5 < (int)param_1) {
       if ((int)param_1 < 0xb8) {
         if (unaff_s1 == 0) {
-          FUN_BATTLE_BIN__8014c958();
+          Thread_stop();
         }
         uVar6 = (int)uVar3 / (int)unaff_s1;
       }
@@ -68019,7 +71289,7 @@ void FUN_BATTLE_BIN__8014a018(uint param_1,uint param_2,uint param_3)
   if (DAT_BATTLE_BIN__801660a3 == '\0') {
     if (0x3bf < (int)param_2) {
       DAT_BATTLE_BIN__801660a3 = 1;
-      uVar3 = FUN_BATTLE_BIN__8013b590(param_2);
+      uVar3 = GetScriptVariable((EventVar)param_2);
       DAT_BATTLE_BIN__801660a3 = '\0';
       if (0xb < uVar3) {
         DAT_BATTLE_BIN__801660a3 = 0;
@@ -68028,7 +71298,7 @@ void FUN_BATTLE_BIN__8014a018(uint param_1,uint param_2,uint param_3)
     }
     if (DAT_BATTLE_BIN__801660a3 == '\0') {
       DAT_BATTLE_BIN__801660a3 = 1;
-      iVar4 = FUN_BATTLE_BIN__8013b590(0x1fc);
+      iVar4 = GetScriptVariable(BraveStoryRecord);
       DAT_BATTLE_BIN__801660a3 = '\0';
       if ((((((iVar4 != 0) && (0x1f < param_2 - 0x70)) && (3 < param_2 - 0x1fc)) &&
            ((param_2 != 0x66 && (7 < param_2 - 0x32)))) &&
@@ -68083,7 +71353,7 @@ undefined * FUN_BATTLE_BIN__8014a2ec(int param_1)
         unaff_s0 = PTR_DAT_BATTLE_BIN__80165f9c + (iVar1 >> 3) * 4 + 0x25c;
       }
       else {
-        FUN_BATTLE_BIN__8014c958();
+        Thread_stop();
       }
     }
   }
@@ -68106,7 +71376,7 @@ uint FUN_BATTLE_BIN__8014a39c(uint param_1)
       uVar1 = (param_1 & 7) << 2;
     }
     else {
-      FUN_BATTLE_BIN__8014c958();
+      Thread_stop();
     }
   }
   return uVar1;
@@ -68206,100 +71476,260 @@ void FUN_BATTLE_BIN__8014bf54(undefined *param_1,undefined *param_2,int param_3)
 
 
 
-void FUN_BATTLE_BIN__8014c8a0(int param_1,undefined4 param_2)
+void Thread_wait(int numThreads)
 
 {
-  undefined *puVar1;
-  undefined4 uVar2;
+  int thread;
   
-  uVar2 = FUN_BATTLE_BIN__8014cbb4();
-  puVar1 = PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98;
-  *(undefined4 *)(PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98 + param_1 * 0x400 + 0x38) =
-       uVar2;
-  *(undefined **)(puVar1 + param_1 * 0x400 + 0x3c) = puVar1 + param_1 * 0x400 + 0x3f0;
-  *(undefined **)(puVar1 + param_1 * 0x400 + 0x40) = puVar1 + param_1 * 0x400 + 0x3f0;
-  *(undefined4 *)(puVar1 + param_1 * 0x400 + 0x44) = param_2;
-  *(undefined4 *)(puVar1 + param_1 * 0x400 + 0x48) = 1;
-  *(undefined4 *)(puVar1 + param_1 * 0x400 + 0x4c) = 0;
-  *(undefined4 *)(puVar1 + param_1 * 0x400 + 0xc) = 0;
-  *(undefined4 *)(puVar1 + param_1 * 0x400 + 0x50) = 0;
-  *(undefined4 *)(puVar1 + param_1 * 0x400 + 0x54) = 0;
-  *(undefined4 *)(puVar1 + param_1 * 0x400 + 0x58) = 0;
-  *(undefined4 *)(puVar1 + param_1 * 0x400 + 0x5c) = 0;
-  *(undefined4 *)(puVar1 + param_1 * 0x400 + 0x60) = 0;
-  *(undefined4 *)(puVar1 + param_1 * 0x400 + 100) = 0;
-  *(undefined4 *)(puVar1 + param_1 * 0x400 + 0x68) = 0;
+  thread = 0;
+  if (0 < numThreads) {
+    do {
+      thread = thread + 1;
+      Thread_doNext();
+    } while (thread < numThreads);
+  }
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__8014c958(void)
+void Thread_initialize(int threadID,func *funcPtr)
 
 {
-  undefined *puVar1;
-  int iVar2;
+  int globalPointer;
+  Thread *Threads;
   
-  iVar2 = DAT_BATTLE_BIN__80174038;
-  puVar1 = PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98;
-  *(undefined4 *)
-   (PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98 + DAT_BATTLE_BIN__80174038 * 0x400 + 0x48) = 0
-  ;
-  *(undefined4 *)(puVar1 + iVar2 * 0x400 + 0x4c) = 0;
-  FUN_BATTLE_BIN__8014ca80();
+  globalPointer = getGlobalPointer();
+  Threads = Thread_0_Addr;
+  Thread_0_Addr[threadID].r28 = globalPointer;
+  Threads[threadID].r29 = (int)&Threads[threadID].initial_sp_gp;
+  Threads[threadID].r30 = (int)&Threads[threadID].initial_sp_gp;
+  Threads[threadID].r31 = (int)funcPtr;
+  Threads[threadID].isRunning = 1;
+  Threads[threadID].TaskID = 0;
+  Threads[threadID].isAvailable = 0;
+  Threads[threadID].field20_0x50 = 0;
+  Threads[threadID].field21_0x54 = 0;
+  Threads[threadID].field22_0x58 = 0;
+  Threads[threadID].field23_0x5c = 0;
+  Threads[threadID].field24_0x60 = 0;
+  Threads[threadID].field25_0x64 = 0;
+  Threads[threadID].field26_0x68 = 0;
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__8014c994(void)
+void Thread_setRunning(int threadID)
 
 {
-  undefined4 *puVar1;
-  int iVar2;
+  Thread_0_Addr[threadID].isRunning = 1;
+  return;
+}
+
+
+
+void Thread_notRunning(int threadID)
+
+{
+  Thread_0_Addr[threadID].isRunning = 0;
+  return;
+}
+
+
+
+void Thread_stop(void)
+
+{
+  int cur_thread;
+  Thread *threads;
   
-  iVar2 = 0xfff;
-  puVar1 = (undefined4 *)(PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98 + 0x3ffc);
+  cur_thread = Current_Thread;
+  threads = Thread_0_Addr;
+  Thread_0_Addr[Current_Thread].isRunning = 0;
+  threads[cur_thread].TaskID = 0;
+  Thread_doNext();
+  return;
+}
+
+
+
+void Thread_clearAll(void)
+
+{
+  undefined4 *clearAddr;
+  int clearAmount;
+  
+  clearAmount = 0xfff;
+  clearAddr = (undefined4 *)&Thread_0_Addr[0xf].field_0x3fc;
   do {
-    *puVar1 = 0;
-    iVar2 = iVar2 + -1;
-    puVar1 = puVar1 + -1;
-  } while (-1 < iVar2);
-  DAT_BATTLE_BIN__80174038 = 0;
-  *(undefined4 *)(PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98 + 0x48) = 1;
+    *clearAddr = 0;
+    clearAmount = clearAmount + -1;
+    clearAddr = clearAddr + -1;
+  } while (-1 < clearAmount);
+  Current_Thread = 0;
+  Thread_0_Addr->isRunning = 1;
   return;
 }
 
 
 
-undefined4 FUN_BATTLE_BIN__8014ca1c(int param_1)
+void Thread_waitFor(int threadID)
 
 {
-  return *(undefined4 *)(PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98 + param_1 * 0x400 + 0x48)
-  ;
+  do {
+    Thread_doNext();
+  } while (Thread_0_Addr[threadID].isRunning != 0);
+  return;
 }
 
 
 
-void FUN_BATTLE_BIN__8014ca38(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4)
+int Thread_checkRunning(int threadID)
 
 {
-  undefined4 *puVar1;
+  return Thread_0_Addr[threadID].isRunning;
+}
+
+
+
+void Thread_storeParams3(int threadID,int param1,int param2,int param3)
+
+{
+  Thread *Thread;
   
-  puVar1 = (undefined4 *)(PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98 + param_1 * 0x400);
-  *puVar1 = param_2;
-  puVar1[1] = param_3;
-  puVar1[2] = param_4;
+  Thread = Thread_0_Addr + threadID;
+  Thread->Param1 = param1;
+  Thread->Param2 = param2;
+  Thread->Param3 = param3;
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__8014ca80(void)
+void Thread_storeParams4(int threadID,int param1,int param2,int param3,int param4)
 
 {
-  int *piVar1;
-  undefined *puVar2;
+  Thread *thread;
+  
+  thread = Thread_0_Addr + threadID;
+  thread->Param1 = param1;
+  thread->Param2 = param2;
+  thread->Param3 = param3;
+  thread->isAvailable = param4;
+  return;
+}
+
+
+
+void Thread_doNext(void)
+
+{
+  Thread *CurrentThread;
+  int unaff_s0;
+  int unaff_s1;
+  int unaff_s2;
+  int unaff_s3;
+  int unaff_s4;
+  int unaff_s5;
+  int unaff_s6;
+  int unaff_s7;
+  int in_k0;
+  int in_k1;
+  int unaff_s8;
+  int unaff_retaddr;
+  undefined auStackX_0 [16];
+  Thread *nextThread;
+  
+  CurrentThread = Thread_0_Addr + Current_Thread;
+  CurrentThread->r16 = unaff_s0;
+  CurrentThread->r17 = unaff_s1;
+  CurrentThread->r18 = unaff_s2;
+  CurrentThread->r19 = unaff_s3;
+  CurrentThread->r20 = unaff_s4;
+  CurrentThread->r21 = unaff_s5;
+  CurrentThread->r22 = unaff_s6;
+  CurrentThread->r23 = unaff_s7;
+  CurrentThread->r26 = in_k0;
+  CurrentThread->r27 = in_k1;
+  CurrentThread->r28 = (int)register0x00000070;
+  CurrentThread->r29 = (int)register0x00000074;
+  CurrentThread->r30 = unaff_s8;
+  CurrentThread->r31 = unaff_retaddr;
+  do {
+    Current_Thread = Current_Thread + 1;
+    if (Current_Thread == 0x10) {
+      Current_Thread = 0;
+      break;
+    }
+    nextThread = CurrentThread + 1;
+    CurrentThread = CurrentThread + 1;
+  } while (nextThread->isRunning == 0);
+  FUN_BATTLE_BIN__80142ca8();
+  return;
+}
+
+
+
+void getGlobalPointer(void)
+
+{
+  return;
+}
+
+
+
+int Thread_getParam1(void)
+
+{
+  return Thread_0_Addr[Current_Thread].Param1;
+}
+
+
+
+int Thread_getParam2(void)
+
+{
+  return Thread_0_Addr[Current_Thread].Param2;
+}
+
+
+
+int Thread_getParam3(void)
+
+{
+  return Thread_0_Addr[Current_Thread].Param3;
+}
+
+
+
+int Thread_checkPrevRunning(void)
+
+{
+  return Thread_0_Addr[Current_Thread + -1].isRunning;
+}
+
+
+
+int Thread_checkThisRunning(int threadID)
+
+{
+  return Thread_0_Addr[threadID].isRunning;
+}
+
+
+
+uint FUN_BATTLE_BIN__8014ccb8(int param_1,int param_2,uint param_3)
+
+{
+  bool bVar1;
+  ulonglong uVar2;
+  int iVar3;
+  int iVar4;
+  uint uVar5;
+  uint uVar6;
+  uint uVar7;
+  uint uVar8;
   undefined4 unaff_s0;
   undefined4 unaff_s1;
   undefined4 unaff_s2;
@@ -68308,55 +71738,66 @@ void FUN_BATTLE_BIN__8014ca80(void)
   undefined4 unaff_s5;
   undefined4 unaff_s6;
   undefined4 unaff_s7;
-  undefined4 in_k0;
-  undefined4 in_k1;
-  undefined4 unaff_s8;
-  undefined4 unaff_retaddr;
-  undefined auStackX_0 [16];
+  int iVar9;
+  int iVar10;
   
-  puVar2 = PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98 + DAT_BATTLE_BIN__80174038 * 0x400;
-  *(undefined4 *)(puVar2 + 0x10) = unaff_s0;
-  *(undefined4 *)(puVar2 + 0x14) = unaff_s1;
-  *(undefined4 *)(puVar2 + 0x18) = unaff_s2;
-  *(undefined4 *)(puVar2 + 0x1c) = unaff_s3;
-  *(undefined4 *)(puVar2 + 0x20) = unaff_s4;
-  *(undefined4 *)(puVar2 + 0x24) = unaff_s5;
-  *(undefined4 *)(puVar2 + 0x28) = unaff_s6;
-  *(undefined4 *)(puVar2 + 0x2c) = unaff_s7;
-  *(undefined4 *)(puVar2 + 0x30) = in_k0;
-  *(undefined4 *)(puVar2 + 0x34) = in_k1;
-  *(BADSPACEBASE **)(puVar2 + 0x38) = register0x00000070;
-  *(BADSPACEBASE **)(puVar2 + 0x3c) = register0x00000074;
-  *(undefined4 *)(puVar2 + 0x40) = unaff_s8;
-  *(undefined4 *)(puVar2 + 0x44) = unaff_retaddr;
-  do {
-    DAT_BATTLE_BIN__80174038 = DAT_BATTLE_BIN__80174038 + 1;
-    if (DAT_BATTLE_BIN__80174038 == 0x10) {
-      DAT_BATTLE_BIN__80174038 = 0;
-      break;
+  uVar2 = (longlong)param_1 * (longlong)param_2;
+  iVar10 = (int)(uVar2 >> 0x20);
+  DAT_1f800000 = unaff_s0;
+  DAT_1f800004 = unaff_s1;
+  DAT_1f800008 = unaff_s2;
+  DAT_1f80000c = unaff_s3;
+  DAT_1f800010 = unaff_s4;
+  DAT_1f800014 = unaff_s5;
+  DAT_1f800018 = unaff_s6;
+  DAT_1f80001c = unaff_s7;
+  uVar6 = 0;
+  uVar7 = 0;
+  uVar8 = 0;
+  if (-(iVar10 >> 0x1f) != 0) {
+    iVar3 = (int)(uVar2 ^ 0xffffffffffffffff) + 1;
+    uVar2 = CONCAT44(iVar10,iVar3) ^ 0xffffffff00000000;
+    if (iVar3 == 0) {
+      uVar6 = 1;
+      uVar2 = CONCAT44(iVar10,iVar3) ^ 0xffffffff00000000;
     }
-    piVar1 = (int *)(puVar2 + 0x448);
-    puVar2 = puVar2 + 0x400;
-  } while (*piVar1 == 0);
-  FUN_BATTLE_BIN__80142ca8();
-  return;
-}
-
-
-
-void FUN_BATTLE_BIN__8014cbb4(void)
-
-{
-  return;
-}
-
-
-
-undefined4 FUN_BATTLE_BIN__8014cc94(int param_1)
-
-{
-  return *(undefined4 *)(PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98 + param_1 * 0x400 + 0x48)
-  ;
+  }
+  uVar5 = (uint)(uVar2 >> 0x20);
+  iVar4 = (int)uVar2;
+  iVar3 = (int)param_3 >> 0x1f;
+  if (-iVar3 != 0) {
+    param_3 = param_3 ^ 0xffffffff;
+    iVar4 = iVar4 + 1;
+  }
+  iVar9 = 0x40;
+  do {
+    uVar6 = uVar6 << 1;
+    if ((int)uVar5 < 0) {
+      uVar6 = uVar6 | 1;
+    }
+    uVar5 = uVar5 << 1;
+    if (iVar4 < 0) {
+      uVar5 = uVar5 | 1;
+    }
+    iVar4 = iVar4 << 1;
+    bVar1 = (int)param_3 <= (int)uVar6;
+    if (bVar1) {
+      uVar6 = uVar6 - param_3;
+    }
+    uVar8 = uVar8 << 1;
+    if ((int)uVar7 < 0) {
+      uVar8 = uVar8 | 1;
+    }
+    uVar7 = uVar7 << 1 | (uint)bVar1;
+    iVar9 = iVar9 + -1;
+  } while (iVar9 != 0);
+  if (-iVar3 != -(iVar10 >> 0x1f)) {
+    if ((uVar8 != 0) && (uVar8 != 0xffffffff)) {
+      DAT_BATTLE_BIN__80173f58 = 1;
+    }
+    uVar7 = (uVar7 ^ 0xffffffff) + 1;
+  }
+  return uVar7;
 }
 
 
@@ -68369,8 +71810,8 @@ void FUN_BATTLE_BIN__8014ceb4(void)
   undefined auStackX_0 [16];
   
   DAT_BATTLE_BIN__8014cf5c = unaff_retaddr;
-  if (DAT_BATTLE_BIN__80174038 != 0) {
-    iVar1 = *(int *)(PTR_DAT_BATTLE_BIN__8016986c_BATTLE_BIN__80165f98 + 0x3c);
+  if (Current_Thread != 0) {
+    iVar1 = Thread_0_Addr->r29;
     *(BADSPACEBASE **)(iVar1 + -0xc) = register0x00000074;
     *(undefined4 *)(iVar1 + -8) = unaff_retaddr;
     (*DAT_BATTLE_BIN__80173ca8)();
@@ -68406,10 +71847,12 @@ undefined4 FUN_BATTLE_BIN__80174370(void)
 undefined4 FUN_BATTLE_BIN__801743c8(int param_1)
 
 {
-  int iVar1;
+  bool bVar1;
+  undefined3 extraout_var;
   undefined4 uVar2;
   
-  if ((*(byte *)(param_1 + 3) - 0x5e < 3) && (iVar1 = Check_HasStatus(param_1,10), iVar1 == 0)) {
+  if ((*(byte *)(param_1 + 3) - 0x5e < 3) &&
+     (bVar1 = Check_HasStatus((BattleUnitData *)param_1,0x9), CONCAT31(extraout_var,bVar1) == 0)) {
     uVar2 = 2;
     if (*(char *)(param_1 + 0x182) == '\0') {
       uVar2 = 1;
@@ -68614,7 +72057,7 @@ void FUN_BATTLE_BIN__80174430(uint param_1)
     puVar4[0x16] = 1;
   }
   iVar18 = 0xf;
-  local_30 = UnitBattleData[param_1].CurActionUnitData.field_0x2e;
+  local_30 = UnitBattleData[param_1].CurActionUnitData.ModifiedENTDTeam;
   puVar13 = pbVar19 + 0x69;
   puVar4[0x1a] = DAT_BATTLE_BIN__8018f4fc;
   do {
@@ -70995,36 +74438,37 @@ char FUN_BATTLE_BIN__801797b4(BattleUnitData *param_1)
 
 {
   byte bVar1;
-  bool bVar2;
-  char cVar3;
-  int iVar4;
-  char cVar5;
+  Movements3 MVar2;
+  bool bVar3;
+  char cVar4;
+  int iVar5;
+  char cVar6;
   
-  bVar2 = false;
-  iVar4 = GetUnitTileID(param_1);
-  iVar4 = iVar4 * 8;
+  bVar3 = false;
+  iVar5 = GetUnitTileID(param_1);
+  iVar5 = iVar5 * 8;
   bVar1 = (param_1->CurActionTargetData).field_0x14;
-  cVar3 = (&DAT_BATTLE_BIN__8018f8ce)[iVar4] * '\x02' + ((&DAT_BATTLE_BIN__8018f8cf)[iVar4] & 0x1f);
-  cVar5 = ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar4] >> 5) * '\x02';
+  cVar4 = (&DAT_BATTLE_BIN__8018f8ce)[iVar5] * '\x02' + ((&DAT_BATTLE_BIN__8018f8cf)[iVar5] & 0x1f);
+  cVar6 = ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar5] >> 5) * '\x02';
   if ((bVar1 & 0x80) != 0) {
     param_1 = UnitBattleData + (bVar1 & 0x1f);
-    cVar3 = cVar3 + '\x02';
+    cVar4 = cVar4 + '\x02';
   }
-  bVar1 = (param_1->AllActionUnitData).field_0x95;
-  if (((bVar1 & 8) != 0) ||
+  MVar2 = (param_1->AllActionUnitData).Movements3;
+  if (((MVar2 & Float) != None) ||
      (((param_1->AllActionUnitData).CurrentStatuses.Status3 & Float) != empty)) {
-    cVar3 = cVar3 + '\x02';
-    bVar2 = true;
+    cVar4 = cVar4 + '\x02';
+    bVar3 = true;
   }
-  if ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar4] >> 5 != 0) {
-    if ((bVar2) || ((bVar1 & 0x80) != 0)) {
-      cVar3 = cVar3 + cVar5;
+  if ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar5] >> 5 != 0) {
+    if ((bVar3) || ((MVar2 & Walk_on_Water) != None)) {
+      cVar4 = cVar4 + cVar6;
     }
-    else if ((bVar1 & 0x40) != 0) {
-      cVar3 = cVar5 + cVar3 + -2;
+    else if ((MVar2 & Move_in_Water) != None) {
+      cVar4 = cVar6 + cVar4 + -2;
     }
   }
-  return cVar3;
+  return cVar4;
 }
 
 
@@ -71606,7 +75050,7 @@ void FUN_BATTLE_BIN__8017a6dc(BattleUnitData *param_1,uint param_2)
   EVar1 = (param_1->AllActionUnitData).EntdTeamFlags;
   do {
     if ((param_1->AllActionUnitData).UnitID != 0xff) {
-      EVar2 = EVar1 ^ (param_1->CurActionUnitData).field_0x2e;
+      EVar2 = EVar1 ^ (param_1->CurActionUnitData).ModifiedENTDTeam;
       iVar3 = GetUnitTileID(param_1);
       if (((param_2 & 0x80) != 0) &&
          ((EVar2 & light_blue) ==
@@ -71692,7 +75136,7 @@ uint FUN_BATTLE_BIN__8017a8c0(CurActionTargetData *param_1)
     break;
   case Item:
     unaff_s2 = 4;
-    if (((*(byte *)((int)&UnitBattleData[uVar1].AllActionUnitData.Supports + 2) & 8) == 0) &&
+    if (((UnitBattleData[uVar1].AllActionUnitData.Supports3 & Throw_Item) == None) &&
        (UnitBattleData[uVar1].AllActionUnitData.JobID != Mime)) {
       unaff_s2 = 1;
       iVar3 = 2;
@@ -72462,7 +75906,7 @@ void FUN_BATTLE_BIN__8017bc78(uint param_1,char param_2,char param_3,char param_
   do {
     bVar3 = FUN_BATTLE_BIN__8017bdd0(uVar6,local_30);
     if (CONCAT31(extraout_var,bVar3) == 0) {
-      EVar5 = EVar1 ^ (&UnitBattleData[0].CurActionUnitData.field_0x2e)[iVar7];
+      EVar5 = EVar1 ^ (&UnitBattleData[0].CurActionUnitData.ModifiedENTDTeam)[iVar7];
       if ((param_1 & 0xff) == uVar6) {
         EVar5 = ~(is_ramza|immortal|player_control|light_blue|random_present|always_present);
       }
@@ -72640,8 +76084,8 @@ void FUN_BATTLE_BIN__8017c044(int param_1,int param_2,int param_3)
 undefined4 * FUN_BATTLE_BIN__8017c158(undefined4 *param_1,uint param_2)
 
 {
-  ushort uVar1;
-  byte bVar2;
+  Movements3 MVar1;
+  ushort uVar2;
   undefined2 uVar3;
   BattleUnitData *pBVar4;
   int iVar5;
@@ -72660,9 +76104,9 @@ undefined4 * FUN_BATTLE_BIN__8017c158(undefined4 *param_1,uint param_2)
   pBVar6 = UnitBattleData;
   UnitBattlePtr = UnitBattleData + param_2;
   if (((param_2 < 0x15) && (UnitBattleData[param_2].AllActionUnitData.UnitID != 0xff)) &&
-     (uVar1._0_1_ = UnitBattleData[param_2].AllActionUnitData.CurrentStatuses.Status1,
-     uVar1._1_1_ = UnitBattleData[param_2].AllActionUnitData.CurrentStatuses.Status2,
-     (uVar1 & 0x140) == 0)) {
+     (uVar2._0_1_ = UnitBattleData[param_2].AllActionUnitData.CurrentStatuses.Status1,
+     uVar2._1_1_ = UnitBattleData[param_2].AllActionUnitData.CurrentStatuses.Status2,
+     (uVar2 & 0x140) == 0)) {
     uVar10 = param_2;
     if (2 < UnitBattleData[param_2].AllActionUnitData.JobID - 0x5e) {
       uVar10 = param_2 | 0x20;
@@ -72672,13 +76116,13 @@ undefined4 * FUN_BATTLE_BIN__8017c158(undefined4 *param_1,uint param_2)
     pBVar4 = UnitBattleData + param_2;
     uVar3._0_1_ = (pBVar4->AllActionUnitData).MapX;
     uVar3._1_1_ = (pBVar4->AllActionUnitData).MapY;
-    uVar1 = *(ushort *)&UnitBattleData[param_2].AllActionUnitData.MapY;
-    local_18._0_3_ = CONCAT12(local_18._2_1_ & 0x80 | (byte)(uVar1 >> 0xf),uVar3);
+    uVar2 = *(ushort *)&UnitBattleData[param_2].AllActionUnitData.MapY;
+    local_18._0_3_ = CONCAT12(local_18._2_1_ & 0x80 | (byte)(uVar2 >> 0xf),uVar3);
     do {
       if (((uVar7 != param_2) && ((pBVar6->AllActionUnitData).UnitID != 0xff)) &&
          (((pBVar6->AllActionUnitData).MapX == (pBVar4->AllActionUnitData).MapX &&
           (((pBVar6->AllActionUnitData).MapY == UnitBattleData[param_2].AllActionUnitData.MapY &&
-           (*(ushort *)&(pBVar6->AllActionUnitData).MapY >> 0xf == uVar1 >> 0xf)))))) {
+           (*(ushort *)&(pBVar6->AllActionUnitData).MapY >> 0xf == uVar2 >> 0xf)))))) {
         cVar8 = '\x02';
         if ((uVar10 & 0x20) != 0) {
           UnitBattlePtr = pBVar6;
@@ -72694,29 +76138,29 @@ undefined4 * FUN_BATTLE_BIN__8017c158(undefined4 *param_1,uint param_2)
     if (((UnitBattlePtr->AllActionUnitData).CurrentStatuses.Status3 & (Frog|Chicken)) == empty) {
       local_14 = cVar8 + '\x06';
     }
-    bVar9 = (UnitBattlePtr->AllActionUnitData).field_0x95;
+    MVar1 = (UnitBattlePtr->AllActionUnitData).Movements3;
     iVar5 = GetUnitTileID(UnitBattlePtr);
     iVar5 = iVar5 * 8;
     local_13 = (&DAT_BATTLE_BIN__8018f8ce)[iVar5] * '\x02' +
                ((&DAT_BATTLE_BIN__8018f8cf)[iVar5] & 0x1f);
-    bVar2 = (byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar5] >> 5;
-    if (bVar2 == 0) {
+    bVar9 = (byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar5] >> 5;
+    if (bVar9 == 0) {
       if (((UnitBattlePtr->AllActionUnitData).CurrentStatuses.Status3 & Float) != empty) {
         local_13 = local_13 + '\x02';
       }
     }
     else if (((UnitBattlePtr->AllActionUnitData).CurrentStatuses.Status3 & Float) == empty) {
-      if ((bVar9 & 0x80) == 0) {
-        if ((bVar9 & 0x40) != 0) {
-          local_13 = local_13 + bVar2 * '\x02' + -2;
+      if ((MVar1 & Walk_on_Water) == None) {
+        if ((MVar1 & Move_in_Water) != None) {
+          local_13 = local_13 + bVar9 * '\x02' + -2;
         }
       }
       else {
-        local_13 = local_13 + bVar2 * '\x02';
+        local_13 = local_13 + bVar9 * '\x02';
       }
     }
     else {
-      local_13 = local_13 + bVar2 * '\x02' + '\x02';
+      local_13 = local_13 + bVar9 * '\x02' + '\x02';
     }
     local_12 = local_13 + local_14;
     if (((UnitBattlePtr->AllActionUnitData).CurrentStatuses.Status1 & Dead) == empty)
@@ -72762,17 +76206,18 @@ uint FUN_BATTLE_BIN__8017c45c
                (CurActionTargetData *param_1,CurActionTargetData *param_2,uint param_3)
 
 {
-  bool bVar1;
-  AbilityIDByte AVar2;
-  byte bVar3;
-  int iVar4;
+  Supports4 SVar1;
+  bool bVar2;
+  AbilityIDByte AVar3;
+  byte bVar4;
+  int iVar5;
   undefined3 extraout_var;
-  uint uVar5;
-  AbilityID AVar6;
-  int iVar7;
-  uint uVar8;
+  uint uVar6;
+  AbilityID AVar7;
+  int iVar8;
+  uint uVar9;
   uint unaff_s2;
-  BattleUnitData *pBVar9;
+  BattleUnitData *pBVar10;
   byte unaff_s7;
   byte local_40;
   SkillsetID local_3f;
@@ -72784,15 +76229,15 @@ uint FUN_BATTLE_BIN__8017c45c
   byte local_35;
   
   BATTLE_Unit_Targetting_to_Temp(param_1,(CurActionTargetData *)&local_40);
-  uVar5 = (uint)local_40;
-  if (0x14 < uVar5) {
+  uVar6 = (uint)local_40;
+  if (0x14 < uVar6) {
     return 0xffffffff;
   }
-  pBVar9 = UnitBattleData + uVar5;
-  if (UnitBattleData[uVar5].AllActionUnitData.UnitID == 0xff) {
+  pBVar10 = UnitBattleData + uVar6;
+  if (UnitBattleData[uVar6].AllActionUnitData.UnitID == 0xff) {
     return 0xffffffff;
   }
-  bVar1 = false;
+  bVar2 = false;
   if (local_36 == 6) {
     if (0x14 < local_35) {
       return 0xffffffff;
@@ -72817,33 +76262,33 @@ uint FUN_BATTLE_BIN__8017c45c
     if ((param_3 & 1) == 0) {
       return 1;
     }
-    FUN_BATTLE_BIN__8017c954((int)pBVar9,(uint)local_38,1);
-    UnitBattleData[uVar5].CurActionTargetData.ActUnavailable = 1;
+    FUN_BATTLE_BIN__8017c954((int)pBVar10,(uint)local_38,1);
+    UnitBattleData[uVar6].CurActionTargetData.ActUnavailable = 1;
     return 1;
   case Throw:
-    iVar7 = 0x17e;
-    iVar4 = 0x17e0000;
+    iVar8 = 0x17e;
+    iVar5 = 0x17e0000;
     do {
-      AVar6 = (AbilityID)iVar7;
-      iVar7 = iVar7 + 1;
-      if ((&SecondaryAbilityData[0x155].CT)[iVar4 >> 0x10] == PrimaryItemData[local_38].ItemType)
+      AVar7 = (AbilityID)iVar8;
+      iVar8 = iVar8 + 1;
+      if ((&SecondaryAbilityData[0x155].CT)[iVar5 >> 0x10] == PrimaryItemData[local_38].ItemType)
       break;
-      iVar4 = iVar7 * 0x10000;
-      AVar6 = (AbilityID)iVar7;
-    } while (iVar7 * 0x10000 >> 0x10 < 0x18a);
-    if (AVar6 == LevelJump2) {
+      iVar5 = iVar8 * 0x10000;
+      AVar7 = (AbilityID)iVar8;
+    } while (iVar8 * 0x10000 >> 0x10 < 0x18a);
+    if (AVar7 == LevelJump2) {
       return 0xffffffff;
     }
     BATTLE_Unit_Targetting_to_Temp((CurActionTargetData *)&local_40,param_2);
-    param_2->AttackToUse = AVar6;
+    param_2->AttackToUse = AVar7;
     if (param_3 == 0) {
       return 1;
     }
     if ((param_3 & 1) == 0) {
       return 1;
     }
-    FUN_BATTLE_BIN__8017c954((int)pBVar9,(uint)local_38,1);
-    UnitBattleData[uVar5].CurActionTargetData.ActUnavailable = 1;
+    FUN_BATTLE_BIN__8017c954((int)pBVar10,(uint)local_38,1);
+    UnitBattleData[uVar6].CurActionTargetData.ActUnavailable = 1;
     return 1;
   case Math:
     if (7 < (ushort)(local_3c - 0x19eU)) {
@@ -72862,11 +76307,11 @@ uint FUN_BATTLE_BIN__8017c45c
     if ((param_3 & 1) == 0) {
       return 1;
     }
-    UnitBattleData[uVar5].CurActionTargetData.ActUnavailable = 1;
+    UnitBattleData[uVar6].CurActionTargetData.ActUnavailable = 1;
     return 1;
   case Geomancy:
-    AVar2 = FUN_BATTLE_BIN__8017f2d8(pBVar9);
-    local_3e = (AbilityID)CONCAT31(extraout_var,AVar2);
+    AVar3 = FUN_BATTLE_BIN__8017f2d8(pBVar10);
+    local_3e = (AbilityID)CONCAT31(extraout_var,AVar3);
     break;
   default:
     goto switchD_BATTLE_BIN__8017c540_caseD_5;
@@ -72876,43 +76321,43 @@ uint FUN_BATTLE_BIN__8017c45c
       return 0xffffffff;
     }
     if ((param_3 & 1) != 0) {
-      FUN_BATTLE_BIN__8017c954((int)pBVar9,(uint)local_38,1);
+      FUN_BATTLE_BIN__8017c954((int)pBVar10,(uint)local_38,1);
     }
     break;
   case Attack:
     BATTLE_Unit_Targetting_to_Temp((CurActionTargetData *)&local_40,param_2);
     if ((param_3 != 0) && ((param_3 & 1) != 0)) {
-      UnitBattleData[uVar5].CurActionTargetData.ActUnavailable = 1;
+      UnitBattleData[uVar6].CurActionTargetData.ActUnavailable = 1;
     }
     param_2->AttackToUse = None;
     return 1;
   case Jump:
     BATTLE_Unit_Targetting_to_Temp((CurActionTargetData *)&local_40,param_2);
     if (param_3 != 0) {
-      uVar8 = 0x32 / UnitBattleData[uVar5].AllActionUnitData.SP;
-      bVar3 = (byte)uVar8;
-      if (uVar8 == 0) {
-        bVar3 = 1;
+      uVar9 = 0x32 / UnitBattleData[uVar6].AllActionUnitData.SP;
+      bVar4 = (byte)uVar9;
+      if (uVar9 == 0) {
+        bVar4 = 1;
       }
-      UnitBattleData[uVar5].AllActionUnitData.CurAbCT = bVar3;
+      UnitBattleData[uVar6].AllActionUnitData.CurAbCT = bVar4;
       if ((param_3 & 1) != 0) {
-        UnitBattleData[uVar5].CurActionTargetData.ActUnavailable = 1;
-        UnitBattleData[uVar5].CurActionTargetData.MoveUnavailable = 1;
-        Status_InflictionRemoval((int)pBVar9,6);
+        UnitBattleData[uVar6].CurActionTargetData.ActUnavailable = 1;
+        UnitBattleData[uVar6].CurActionTargetData.MoveUnavailable = 1;
+        Status_InflictionRemoval((int)pBVar10,6);
       }
     }
     param_2->AttackToUse = LevelJump2;
     return 3;
   case Aim:
-    uVar8 = (uint)local_3e;
-    if (7 < uVar8 - 0x196) {
+    uVar9 = (uint)local_3e;
+    if (7 < uVar9 - 0x196) {
       return 0xffffffff;
     }
     BATTLE_Unit_Targetting_to_Temp((CurActionTargetData *)&local_40,param_2);
-    unaff_s2 = (uint)(&SecondaryAbilityData[0x139].Y)[(int)(uVar8 << 0x10) >> 0xf];
-    bVar1 = true;
+    unaff_s2 = (uint)(&SecondaryAbilityData[0x139].Y)[(int)(uVar9 << 0x10) >> 0xf];
+    bVar2 = true;
     if ((param_3 & 1) != 0) {
-      UnitBattleData[uVar5].CurActionTargetData.MoveUnavailable = 1;
+      UnitBattleData[uVar6].CurActionTargetData.MoveUnavailable = 1;
     }
     unaff_s7 = 0;
     break;
@@ -72921,36 +76366,36 @@ uint FUN_BATTLE_BIN__8017c45c
   case EqChng:
     return 2;
   }
-  AVar6 = local_3e;
-  if (!bVar1) {
+  AVar7 = local_3e;
+  if (!bVar2) {
     if (FrogAttack < local_3e) {
 switchD_BATTLE_BIN__8017c540_caseD_5:
       return 0xffffffff;
     }
     BATTLE_Unit_Targetting_to_Temp((CurActionTargetData *)&local_40,param_2);
-    unaff_s2 = SecondaryAbilityData[(short)AVar6].CT & 0x7f;
-    unaff_s7 = SecondaryAbilityData[(short)AVar6].field_0x5 & 4;
-    bVar3 = *(byte *)((int)&UnitBattleData[uVar5].AllActionUnitData.Supports + 3);
-    if ((SecondaryAbilityData[(short)AVar6].field_0x5 & 4) == 0) {
-      if ((bVar3 & 8) != 0) {
+    unaff_s2 = SecondaryAbilityData[(short)AVar7].CT & 0x7f;
+    unaff_s7 = SecondaryAbilityData[(short)AVar7].field_0x5 & 4;
+    SVar1 = UnitBattleData[uVar6].AllActionUnitData.Supports4;
+    if ((SecondaryAbilityData[(short)AVar7].field_0x5 & 4) == 0) {
+      if ((SVar1 & Short_Charge) != None) {
         unaff_s2 = unaff_s2 + 1 >> 1;
       }
-      if ((bVar3 & 4) != 0) {
+      if ((SVar1 & Non-Charge) != None) {
         unaff_s2 = 0;
       }
     }
   }
   if ((((param_3 != 0) &&
-       (UnitBattleData[uVar5].AllActionUnitData.CurAbCT = (byte)unaff_s2, (param_3 & 1) != 0)) &&
+       (UnitBattleData[uVar6].AllActionUnitData.CurAbCT = (byte)unaff_s2, (param_3 & 1) != 0)) &&
       (DAT_BATTLE_BIN__8018f5f0 == 0)) &&
-     (UnitBattleData[uVar5].CurActionTargetData.ActUnavailable = 1, (unaff_s2 & 0xff) != 0)) {
+     (UnitBattleData[uVar6].CurActionTargetData.ActUnavailable = 1, (unaff_s2 & 0xff) != 0)) {
     if (unaff_s7 == 0) {
-      uVar5 = 5;
+      uVar6 = 5;
     }
     else {
-      uVar5 = 8;
+      uVar6 = 8;
     }
-    Status_InflictionRemoval((int)pBVar9,uVar5);
+    Status_InflictionRemoval((int)pBVar10,uVar6);
   }
   return (uint)((unaff_s2 & 0xff) == 0);
 }
@@ -72967,7 +76412,7 @@ undefined4 FUN_BATTLE_BIN__8017c954(int param_1,uint param_2,int param_3)
     if (param_3 == 0) {
       return 0;
     }
-    if (DAT_BATTLE_BIN__8018f5fc != 0) {
+    if (ActionState != 0) {
       return 0;
     }
     (&DAT_800596e0)[param_2 & 0xff] = (&DAT_800596e0)[param_2 & 0xff] + -1;
@@ -73004,7 +76449,7 @@ int FUN_BATTLE_BIN__8017c9b8(int param_1)
       DAT_BATTLE_BIN__80193d44 = UnitBattleData[param_1].CurActionTargetData.AttackToUse;
       DAT_BATTLE_BIN__8018f8c8 = param_1;
       do {
-        (pBVar4->CurActionUnitData).ReactionID = 0;
+        (pBVar4->CurActionUnitData).ReactionID = None;
         (pBVar4->CurActionTargetData).field_0x1b = 0;
         iVar2 = iVar2 + 1;
         pBVar4 = pBVar4 + 1;
@@ -73048,8 +76493,8 @@ undefined4 FUN_BATTLE_BIN__8017cacc(int param_1,int param_2,int *param_3,undefin
          ((((pBVar8->AllActionUnitData).HP != (pBVar8->AllActionUnitData).MaxHP &&
            (((pBVar8->AllActionUnitData).CurrentStatuses.Status1 & (Jump|Dead|Crystal)) == empty))
           && ((((pBVar8->AllActionUnitData).CurrentStatuses.Status2 & (Treasure|Petrify)) == empty
-              && (((pBVar8->CurActionUnitData).field_0x2e & light_blue) == (EVar4 & light_blue))))))
-         ) {
+              && (((pBVar8->CurActionUnitData).ModifiedENTDTeam & light_blue) ==
+                  (EVar4 & light_blue))))))) {
         *param_4 = (char)iVar7;
         param_4 = param_4 + 1;
         DAT_BATTLE_BIN__80193878 = DAT_BATTLE_BIN__80193878 + 1;
@@ -73133,7 +76578,7 @@ int FUN_BATTLE_BIN__8017cd24(CurActionTargetData *param_1,undefined *param_2)
   }
   else {
     iVar1 = FUN_BATTLE_BIN__8017aaf8(param_1);
-    if (((iVar1 != -1) && ((bVar5 & 8) != 0)) && (DAT_BATTLE_BIN__8018f5fc == 0)) {
+    if (((iVar1 != -1) && ((bVar5 & 8) != 0)) && (ActionState == 0)) {
       FUN_BATTLE_BIN__8017d708();
     }
   }
@@ -73176,10 +76621,10 @@ undefined4 FUN_BATTLE_BIN__8017ce44(int param_1,undefined *param_2)
   }
   pBVar8 = UnitBattleData + param_1;
   FUN_BATTLE_BIN__8018bd74(&UnitBattleData[param_1].CurActionUnitData.HitFlag);
-  UnitBattleData[param_1].CurActionUnitData.HitFlag = false;
+  UnitBattleData[param_1].CurActionUnitData.HitFlag = 0;
   UnitBattleData[param_1].CurActionUnitData.EvadeType = 8;
   FUN_BATTLE_BIN__8018bd74(&CasCurActData.HitFlag);
-  CasCurActData.HitFlag = false;
+  CasCurActData.HitFlag = 0;
   param_2[0x22] = 0;
   param_2[0x16] = 0;
   param_2[0x13] = 0;
@@ -73340,9 +76785,12 @@ void FUN_BATTLE_BIN__8017d410(int param_1,int param_2,char param_3)
 {
   if ((ActionMenus[*(byte *)(param_1 + 0x16f)] == DrawOut) && (*(char *)(param_1 + 3) != ']')) {
     if ((param_3 == '\0') || ((CasCurActData._16_2_ & 8) != 0)) {
-      CasCurActData._16_2_ = 8;
-      CasCurActData._37_1_ = 1;
-      CasCurActData.HitFlag = true;
+      CasCurActData.UniqueEffect1 = Stole_Target_Item;
+      CasCurActData.UniqueEffect2 =
+           ~(Minus_Level|Secondary_Proc|Elem_Absorb|Elem_Weak|Katana_Broken|UNUSED|Knockback|
+            Hit_Golem);
+      CasCurActData.AttackType = StatAlter;
+      CasCurActData.HitFlag = 1;
     }
     else if ((CasCurActData._16_2_ & 0x1000) != 0) {
       *(undefined *)(param_2 + 0x23) = *(undefined *)(param_2 + 0x23);
@@ -73396,7 +76844,7 @@ void FUN_BATTLE_BIN__8017d4a0(int param_1)
       unaff_s0 = (uint)SecondaryAbilityData[iVar2].X;
       uVar3 = (uint)SecondaryAbilityData[iVar2].Formula;
     }
-    if ((uVar3 - 0x1e < 2) && (DAT_BATTLE_BIN__8018f5fc == 0)) {
+    if ((uVar3 - 0x1e < 2) && (ActionState == 0)) {
       iVar2 = rand();
       iVar2 = unaff_s0 * iVar2;
       if (iVar2 < 0) {
@@ -73612,7 +77060,7 @@ int FUN_BATTLE_BIN__8017da20(BattleUnitData *param_1)
   if (DAT_BATTLE_BIN__8018f5f0 == 0) {
     Status_InflictionRemoval((int)param_1,0xff);
   }
-  iVar4 = FUN_BATTLE_BIN__8018130c(param_1);
+  iVar4 = CheckIfCanAct(param_1);
   if (((param_1->AllActionUnitData).CurrentStatuses.Status5 & Dont_Act) != empty) {
     iVar4 = 1;
   }
@@ -73640,14 +77088,14 @@ int FUN_BATTLE_BIN__8017da20(BattleUnitData *param_1)
       return 0;
     }
     CurrentAbilityData.MPUsed = SecondaryAbilityData[(short)AVar3].MPCost;
-    if ((*(byte *)((int)&(param_1->AllActionUnitData).Supports + 1) & 0x80) != 0) {
+    if (((param_1->AllActionUnitData).Supports2 & Half_of_MP) != None) {
       CurrentAbilityData.MPUsed = CurrentAbilityData.MPUsed >> 1;
     }
     sVar2 = (param_1->AllActionUnitData).MP;
     if (sVar2 < (short)(ushort)CurrentAbilityData.MPUsed) {
       return 3;
     }
-    if (DAT_BATTLE_BIN__8018f5fc != 2) {
+    if (ActionState != 2) {
       (param_1->AllActionUnitData).MP = sVar2 - (ushort)CurrentAbilityData.MPUsed;
     }
   }
@@ -73800,7 +77248,7 @@ uint FUN_BATTLE_BIN__8017defc(uint param_1,undefined2 *param_2)
     if (iVar4 == 0) {
       iVar4 = 0;
       do {
-        (pBVar9->CurActionUnitData).ReactionID = 0;
+        (pBVar9->CurActionUnitData).ReactionID = None;
         (pBVar9->CurActionTargetData).field_0x1b = 0;
         iVar4 = iVar4 + 1;
         pBVar9 = pBVar9 + 1;
@@ -73822,7 +77270,7 @@ uint FUN_BATTLE_BIN__8017defc(uint param_1,undefined2 *param_2)
       dVar5 = FUN_BATTLE_BIN__8017d850((int)local_38,(int)(UnitBattleData + param_1));
       if ((dVar5 == 1) && (uVar7 = (uint)local_38[0], uVar7 != param_1)) {
         pBVar9 = UnitBattleData + uVar7;
-        if ((*(byte *)((int)&UnitBattleData[uVar7].AllActionUnitData.Reactions + 3) & 1) == 0) {
+        if ((UnitBattleData[uVar7].AllActionUnitData.Reactions4 & Hamedo) == None) {
           return 0xffffffff;
         }
         bVar3 = FUN_BATTLE_BIN__8018d384((int)pBVar9);
@@ -73886,13 +77334,13 @@ int FUN_BATTLE_BIN__8017e178(AbilityID *param_1)
       if (iVar9 == DAT_BATTLE_BIN__8018f8c8) goto LAB_BATTLE_BIN__8017e54c;
       UnitBattlePtr = UnitBattleData + iVar9;
       src = &UnitBattleData[iVar9].CurActionTargetData;
-      iVar2 = FUN_BATTLE_BIN__8018130c(UnitBattlePtr);
+      iVar2 = CheckIfCanAct(UnitBattlePtr);
       if ((iVar2 != 0) || (UnitBattleData[iVar9].AllActionUnitData.UnitID == 0xff))
       goto LAB_BATTLE_BIN__8017e54c;
       iVar2 = FUN_BATTLE_BIN__8018c968((int)UnitBattlePtr);
       AVar1 = UnitBattleData[iVar9].CurActionUnitData.ReactionID;
-      if ((((iVar2 != 0) || (DAT_BATTLE_BIN__8018f5fc == 1)) && (AVar1 != Reflect(Reaction))) ||
-         (AVar1 == None)) goto LAB_BATTLE_BIN__8017e54c;
+      if ((((iVar2 != 0) || (ActionState == 1)) && (AVar1 != Reflect(Reaction))) || (AVar1 == None))
+      goto LAB_BATTLE_BIN__8017e54c;
       DAT_BATTLE_BIN__8018f5f0 = 1;
       BATTLE_Unit_Targetting_to_Temp(src,(CurActionTargetData *)&DAT_BATTLE_BIN__80193848);
       bVar8 = (byte)iVar9;
@@ -73903,7 +77351,7 @@ int FUN_BATTLE_BIN__8017e178(AbilityID *param_1)
       uVar7 = 1;
       UnitBattleData[iVar9].CurActionTargetData.AttackToUse = DAT_BATTLE_BIN__80192d9c;
       uVar5 = UnitBattleData[iVar9].CurActionUnitData.ReactionVar;
-      UnitBattleData[iVar9].CurActionUnitData.ReactionID = 0;
+      UnitBattleData[iVar9].CurActionUnitData.ReactionID = None;
       switch(AVar1) {
       case MeatboneSlash:
         uVar3 = FUN_BATTLE_BIN__8017e650((int)UnitBattlePtr,1,0,1);
@@ -74167,12 +77615,13 @@ undefined4 FUN_BATTLE_BIN__8017e7e4(int param_1,byte *param_2)
         }
         iVar7 = iVar7 + 1;
       } while (iVar7 < 0x15);
-      if ((*(byte *)((int)&UnitBattleData[param_1].AllActionUnitData.Supports + 1) & 0x40) != 0) {
+      if ((UnitBattleData[param_1].AllActionUnitData.Supports2 & Gained_JP-UP) != None) {
         iVar4 = (iVar4 * 3) / 2;
       }
       FUN_BATTLE_BIN__8017ea80
-                (param_1,iVar4,UnitBattleData[param_1].CurActionUnitData.field_0x2e & 0x30,
-                 local_30[0]);
+                (param_1,iVar4,
+                 UnitBattleData[param_1].CurActionUnitData.ModifiedENTDTeam & light_blue,local_30[0]
+                );
       uVar9 = FUN_BATTLE_BIN__8017ea28((int)pBVar8,uVar9,local_30);
       if (uVar9 != uVar5) {
         param_2[3] = (byte)uVar9;
@@ -74237,7 +77686,7 @@ undefined4 FUN_BATTLE_BIN__8017ea80(int param_1,int param_2,byte param_3,uint pa
     if ((EVar1 & monster) != 0) {
       return 0xffffffff;
     }
-    if ((UnitBattleData[param_1].CurActionUnitData.field_0x2e & 0x30) != param_3) {
+    if ((UnitBattleData[param_1].CurActionUnitData.ModifiedENTDTeam & light_blue) != param_3) {
       return 0xffffffff;
     }
     if ((param_4 == 0x11) && ((EVar1 & female) != 0)) {
@@ -74569,7 +78018,7 @@ LAB_BATTLE_BIN__8017f570:
       UnitBattleData[UnitBattleID].AllActionUnitData.ENTDID = JVar4;
       if (param_2 != 0) {
         UnitBattleData[UnitBattleID].AllActionUnitData.EntdTeamFlags = player_control|red;
-        UnitBattleData[UnitBattleID].CurActionUnitData.field_0x2e = 0x18;
+        UnitBattleData[UnitBattleID].CurActionUnitData.ModifiedENTDTeam = player_control|red;
         UnitBattleData[UnitBattleID].AllActionUnitData.TeamPalette = 1;
       }
       if ((CurrentUnitPartyID[iVar7 + 3] & 0x10) == 0) {
@@ -74668,13 +78117,14 @@ undefined4 FUN_BATTLE_BIN__8017f6c4(int param_1)
     if (2 < ((&DAT_BATTLE_BIN__8018f8cf)[iVar4] & 0x1f)) {
       return 0xffffffff;
     }
-    if ((((UnitBattleData[param_1].AllActionUnitData.field_0x94 & 0x10) != 0) &&
+    if ((((UnitBattleData[param_1].AllActionUnitData.Movements2 & Cannot_Enter_Water) != None) &&
         (((&DAT_BATTLE_BIN__8018f8cf)[iVar4] & 0xe0) != 0)) &&
-       ((UnitBattleData[param_1].AllActionUnitData.field_0x95 & 8) == 0)) {
+       ((UnitBattleData[param_1].AllActionUnitData.Movements3 & Float) == None)) {
       return 0xffffffff;
     }
     if ((2 < (byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar4] >> 5) &&
-       ((UnitBattleData[param_1].AllActionUnitData.field_0x95 & 0xd8) == 0)) {
+       ((UnitBattleData[param_1].AllActionUnitData.Movements3 &
+        (Float|Move_Underwater|Move_in_Water|Walk_on_Water)) == None)) {
       return 0xffffffff;
     }
     if ((((&DAT_BATTLE_BIN__8018f8cc)[iVar4] & 0x3f) != 0x12) &&
@@ -74733,7 +78183,7 @@ void FUN_BATTLE_BIN__8017f8a0(char *param_1)
   DAT_BATTLE_BIN__80193844 = 0;
   DAT_BATTLE_BIN__80193920 = 0;
   Get_Highest_PlayerUnit_Level();
-  local_50 = FUN_BATTLE_BIN__8013b590(0x39);
+  local_50 = GetScriptVariable(0x39);
   if (local_50 < 10) {
     local_50 = 9 - local_50;
   }
@@ -74983,56 +78433,57 @@ uint FUN_BATTLE_BIN__8017ffc0(BattleUnitData *param_1)
 
 {
   byte bVar1;
-  uint uVar2;
-  int iVar3;
-  byte *pbVar4;
-  uint uVar5;
-  int iVar6;
-  BattleUnitData *pBVar7;
+  Movements3 MVar2;
+  uint uVar3;
+  int iVar4;
+  byte *pbVar5;
+  uint uVar6;
+  int iVar7;
+  BattleUnitData *pBVar8;
   
-  uVar2 = FUN_BATTLE_BIN__8017dca8
+  uVar3 = FUN_BATTLE_BIN__8017dca8
                     ((uint)(param_1->AllActionUnitData).MapX,(uint)(param_1->AllActionUnitData).MapY
                      ,(uint)(*(ushort *)&(param_1->AllActionUnitData).MapY >> 0xf),0x41);
   bVar1 = (param_1->CurActionTargetData).field_0x14;
-  uVar2 = ~uVar2 >> 0x1f;
-  pBVar7 = param_1;
+  uVar3 = ~uVar3 >> 0x1f;
+  pBVar8 = param_1;
   if ((bVar1 & 0x80) != 0) {
-    uVar5 = bVar1 & 0x1f;
-    pBVar7 = UnitBattleData + uVar5;
-    TarCurActPtr = &UnitBattleData[uVar5].CurActionUnitData;
-    TarBattlePtr = pBVar7;
+    uVar6 = bVar1 & 0x1f;
+    pBVar8 = UnitBattleData + uVar6;
+    TarCurActPtr = &UnitBattleData[uVar6].CurActionUnitData;
+    TarBattlePtr = pBVar8;
     FUN_BATTLE_BIN__8018bd74(&TarCurActPtr->HitFlag);
-    iVar3 = 0;
+    iVar4 = 0;
     do {
-      iVar6 = iVar3 + 1;
-      (&(TarCurActPtr->StatusRemoval).Status1)[iVar3] = (&DAT_800662fd)[iVar3];
-      iVar3 = iVar6;
-    } while (iVar6 < 5);
-    iVar3 = FUN_BATTLE_BIN__80184b24(0);
-    if (iVar3 != 0) {
-      TarCurActPtr->field_0x25 = 8;
-      uVar2 = uVar2 | 0x400;
-      FUN_BATTLE_BIN__8018e07c((uint)UnitBattleData[uVar5].CurActionTargetData.UnitID2,0);
+      iVar7 = iVar4 + 1;
+      (&(TarCurActPtr->StatusRemoval).Status1)[iVar4] = (&status_check_table[9].Status1)[iVar4];
+      iVar4 = iVar7;
+    } while (iVar7 < 5);
+    iVar4 = FUN_BATTLE_BIN__80184b24(0);
+    if (iVar4 != 0) {
+      TarCurActPtr->AttackType = StatusChange;
+      uVar3 = uVar3 | 0x400;
+      FUN_BATTLE_BIN__8018e07c((uint)UnitBattleData[uVar6].CurActionTargetData.UnitID2,0);
     }
   }
-  bVar1 = (pBVar7->AllActionUnitData).field_0x95;
-  pbVar4 = FUN_BATTLE_BIN__801802c8
+  MVar2 = (pBVar8->AllActionUnitData).Movements3;
+  pbVar5 = FUN_BATTLE_BIN__801802c8
                      ((param_1->AllActionUnitData).MapX,(param_1->AllActionUnitData).MapY,
                       (byte)((ushort)*(undefined2 *)&(param_1->AllActionUnitData).MapY >> 0xf));
-  if (((bVar1 & 1) == 0) || ((*pbVar4 & 1) == 0)) {
-    if ((*pbVar4 & 2) != 0) {
-      uVar2 = uVar2 | 8;
+  if (((MVar2 & Move-Find_Item) == None) || ((*pbVar5 & 1) == 0)) {
+    if ((*pbVar5 & 2) != 0) {
+      uVar3 = uVar3 | 8;
     }
   }
   else {
-    uVar2 = uVar2 | 4;
+    uVar3 = uVar3 | 4;
   }
-  iVar3 = FUN_BATTLE_BIN__80180178(param_1,0);
-  if (iVar3 != 0) {
-    uVar2 = uVar2 | 0x10;
+  iVar4 = FUN_BATTLE_BIN__80180178(param_1,0);
+  if (iVar4 != 0) {
+    uVar3 = uVar3 | 0x10;
   }
-  uVar5 = FUN_BATTLE_BIN__80180134((int)param_1);
-  return uVar2 | uVar5;
+  uVar6 = FUN_BATTLE_BIN__80180134((int)param_1);
+  return uVar3 | uVar6;
 }
 
 
@@ -75109,7 +78560,7 @@ undefined4 * FUN_BATTLE_BIN__80180230(int param_1)
   else {
     DAT_BATTLE_BIN__8018f8a4 = puVar2[3];
   }
-  uVar3 = FUN_BATTLE_BIN__8013b590(0x33);
+  uVar3 = GetScriptVariable(CurrentMap);
   FUN_BATTLE_BIN__801804c4(uVar3,(uint)(byte)puVar2[1],1);
   DAT_BATTLE_BIN__8018f8a0 = 0;
   return &DAT_BATTLE_BIN__8018f8a0;
@@ -75153,7 +78604,7 @@ undefined1 * FUN_BATTLE_BIN__801802c8(byte param_1,byte param_2,byte param_3)
   if (iVar6 != 4) {
     DAT_BATTLE_BIN__8018f8a9 = (undefined)iVar6;
     if ((pbVar5[1] & 0x20) == 0) {
-      uVar4 = FUN_BATTLE_BIN__8013b590(0x33);
+      uVar4 = GetScriptVariable(CurrentMap);
       bVar3 = FUN_BATTLE_BIN__801804c4(uVar4,iVar6,0);
       if (CONCAT31(extraout_var,bVar3) != 0) {
         DAT_BATTLE_BIN__8018f8a8 = DAT_BATTLE_BIN__8018f8a8 | 1;
@@ -75569,7 +79020,7 @@ undefined4 FUN_BATTLE_BIN__801811f8(BattleUnitData *param_1)
   }
   else {
     SVar8 = (param_1->AllActionUnitData).CurrentStatuses.Status5;
-    uVar5 = FUN_BATTLE_BIN__8018130c(param_1);
+    uVar5 = CheckIfCanAct(param_1);
     SVar8 = (param_1->CurActionTargetData).MoveUnavailable | SVar8 & Dont_Move;
     uVar7 = (uint)(param_1->CurActionTargetData).ActUnavailable;
     if ((param_1->CurActionTargetData).CurrentATUnit == 0) {
@@ -75599,7 +79050,7 @@ undefined4 FUN_BATTLE_BIN__801811f8(BattleUnitData *param_1)
 
 
 
-int FUN_BATTLE_BIN__8018130c(BattleUnitData *param_1)
+int CheckIfCanAct(BattleUnitData *param_1)
 
 {
   int iVar1;
@@ -75613,7 +79064,9 @@ int FUN_BATTLE_BIN__8018130c(BattleUnitData *param_1)
     if ((1 < (byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar2 * 8] >> 5) &&
        ((iVar1 = 0,
         ((param_1->AllActionUnitData).CurrentStatuses.Status3 & (Frog|Chicken|Float)) == empty &&
-        (iVar1 = 0, ((param_1->AllActionUnitData).field_0x95 & 200) == 0)))) {
+        (iVar1 = 0,
+        ((param_1->AllActionUnitData).Movements3 & (Float|Move_in_Water|Walk_on_Water)) == None))))
+    {
       iVar1 = (uint)(((param_1->CurActionTargetData).field_0x14 & 0x80) == 0) << 1;
     }
   }
@@ -75659,15 +79112,16 @@ int FUN_BATTLE_BIN__801817c0
               undefined4 param_6,byte *param_7,undefined *param_8)
 
 {
-  byte bVar1;
-  undefined uVar2;
-  BattleUnitData *pBVar3;
-  uint uVar4;
-  int iVar6;
-  byte bVar7;
-  uint uVar8;
-  byte *pbVar9;
-  int iVar10;
+  Supports4 SVar1;
+  byte bVar2;
+  undefined uVar3;
+  BattleUnitData *pBVar4;
+  uint uVar5;
+  int iVar7;
+  byte bVar8;
+  uint uVar9;
+  byte *pbVar10;
+  int iVar11;
   byte abStack_120 [160];
   uint local_80;
   SkillsetID local_78;
@@ -75680,9 +79134,9 @@ int FUN_BATTLE_BIN__801817c0
   int local_40;
   int local_38;
   int local_30;
-  uint uVar5;
+  uint uVar6;
   
-  iVar10 = 0;
+  iVar11 = 0;
   local_50 = 0;
   local_48 = 0;
   local_40 = 0;
@@ -75692,19 +79146,19 @@ int FUN_BATTLE_BIN__801817c0
   local_78 = param_2;
   local_70 = param_3;
   local_68 = param_4;
-  pBVar3 = FUN_BATTLE_BIN__801810d4(param_1);
-  if (pBVar3 == (BattleUnitData *)0x0) {
+  pBVar4 = FUN_BATTLE_BIN__801810d4(param_1);
+  if (pBVar4 == (BattleUnitData *)0x0) {
     return 0;
   }
-  if (((pBVar3->AllActionUnitData).CurrentStatuses.Status3 & Frog) != empty) {
+  if (((pBVar4->AllActionUnitData).CurrentStatuses.Status3 & Frog) != empty) {
     local_30 = 1;
   }
-  if ((*(byte *)((int)&(pBVar3->AllActionUnitData).Supports + 1) & 0x80) != 0) {
+  if (((pBVar4->AllActionUnitData).Supports2 & Half_of_MP) != None) {
     local_38 = 1;
   }
-  bVar7 = *(byte *)((int)&(pBVar3->AllActionUnitData).Supports + 3);
-  if ((bVar7 & 4) == 0) {
-    if ((bVar7 & 8) != 0) {
+  SVar1 = (pBVar4->AllActionUnitData).Supports4;
+  if ((SVar1 & Non-Charge) == None) {
+    if ((SVar1 & Short_Charge) != None) {
       local_40 = 1;
     }
   }
@@ -75712,89 +79166,89 @@ int FUN_BATTLE_BIN__801817c0
     local_40 = 2;
   }
   FUN_BATTLE_BIN__8018370c((char *)abStack_120,0);
-  bVar7 = (pBVar3->CurActionTargetData).field_0x16;
-  if ((bVar7 & 4) != 0) {
+  bVar8 = (pBVar4->CurActionTargetData).field_0x16;
+  if ((bVar8 & 4) != 0) {
     local_50 = 1;
   }
-  if ((bVar7 & 8) != 0) {
+  if ((bVar8 & 8) != 0) {
     local_48 = 1;
   }
-  if (((pBVar3->AllActionUnitData).EntdGenderFlags & monster) == 0) {
+  if (((pBVar4->AllActionUnitData).EntdGenderFlags & monster) == 0) {
     if ((byte)(local_78 + ~DEPRECATED) < 0x13) {
-      iVar6 = local_78 - 5;
+      iVar7 = local_78 - 5;
       goto LAB_BATTLE_BIN__80181940;
     }
-    iVar6 = 0;
-    if ((local_78 == (pBVar3->AllActionUnitData).PrimarySkillset) ||
-       (local_78 == (pBVar3->AllActionUnitData).SpecialSkillset)) goto LAB_BATTLE_BIN__80181940;
+    iVar7 = 0;
+    if ((local_78 == (pBVar4->AllActionUnitData).PrimarySkillset) ||
+       (local_78 == (pBVar4->AllActionUnitData).SpecialSkillset)) goto LAB_BATTLE_BIN__80181940;
   }
-  iVar6 = -1;
+  iVar7 = -1;
 LAB_BATTLE_BIN__80181940:
-  if (iVar6 == -1) {
+  if (iVar7 == -1) {
     local_60 = 0xffffff;
   }
   else {
-    local_60 = GetKnownAbilities((int)pBVar3,iVar6);
+    local_60 = GetKnownAbilities((int)pBVar4,iVar7);
   }
-  uVar8 = 0;
-  pbVar9 = local_68;
+  uVar9 = 0;
+  pbVar10 = local_68;
   do {
-    if ((local_60 & 0x800000 >> (uVar8 & 0x1f)) != 0) {
-      uVar4 = Get_Abiltity_from_Skillset((uint)local_78,uVar8);
-      local_58 = (short)uVar4;
+    if ((local_60 & 0x800000 >> (uVar9 & 0x1f)) != 0) {
+      uVar5 = Get_Abiltity_from_Skillset((uint)local_78,uVar9);
+      local_58 = (short)uVar5;
       if ((local_30 == 0) || (local_58 == 0x1d)) {
-        iVar6 = (int)local_58;
-        if (iVar6 != 0) {
-          if ((uVar4 - 1 & 0xffff) < 0x16f) {
-            if ((((SecondaryAbilityData[iVar6].field_0x6 & 8) != 0) && (local_48 == 0)) ||
-               (((SecondaryAbilityData[iVar6].field_0x6 & 4) != 0 && (local_50 == 0))))
+        iVar7 = (int)local_58;
+        if (iVar7 != 0) {
+          if ((uVar5 - 1 & 0xffff) < 0x16f) {
+            if ((((SecondaryAbilityData[iVar7].field_0x6 & 8) != 0) && (local_48 == 0)) ||
+               (((SecondaryAbilityData[iVar7].field_0x6 & 4) != 0 && (local_50 == 0))))
             goto LAB_BATTLE_BIN__80181b1c;
-            bVar7 = SecondaryAbilityData[iVar6].MPCost;
+            bVar8 = SecondaryAbilityData[iVar7].MPCost;
             if (local_38 != 0) {
-              bVar7 = (byte)((int)(bVar7 + 1) >> 1);
+              bVar8 = (byte)((int)(bVar8 + 1) >> 1);
             }
-            bVar1 = SecondaryAbilityData[iVar6].field_0x5;
-            uVar4 = SecondaryAbilityData[iVar6].CT & 0x7f;
-            if ((bVar1 & 4) == 0) {
+            bVar2 = SecondaryAbilityData[iVar7].field_0x5;
+            uVar5 = SecondaryAbilityData[iVar7].CT & 0x7f;
+            if ((bVar2 & 4) == 0) {
               if (local_40 == 1) {
-                uVar4 = (int)(uVar4 + 1) >> 1;
+                uVar5 = (int)(uVar5 + 1) >> 1;
               }
               if (local_40 == 2) {
-                uVar4 = 0;
+                uVar5 = 0;
               }
             }
-            uVar5 = FUN_BATTLE_BIN__80181720(local_80,uVar4,abStack_120);
-            uVar2 = (undefined)uVar5;
-            *pbVar9 = bVar7;
-            *param_5 = (byte)uVar4;
-            *param_7 = bVar1 >> 7 | (byte)((bVar1 & 0x20) >> 4);
+            uVar6 = FUN_BATTLE_BIN__80181720(local_80,uVar5,abStack_120);
+            uVar3 = (undefined)uVar6;
+            *pbVar10 = bVar8;
+            *param_5 = (byte)uVar5;
+            *param_7 = bVar2 >> 7 | (byte)((bVar2 & 0x20) >> 4);
 LAB_BATTLE_BIN__80181af0:
-            *param_8 = uVar2;
+            *param_8 = uVar3;
           }
-          else if ((uVar4 - 0x196 & 0xffff) < 8) {
-            bVar7 = (&SecondaryAbilityData[0x139].Y)[iVar6 * 2];
-            uVar4 = FUN_BATTLE_BIN__80181720(local_80,(uint)bVar7,abStack_120);
-            uVar2 = (undefined)uVar4;
-            *pbVar9 = 0;
-            *param_5 = bVar7;
+          else if ((uVar5 - 0x196 & 0xffff) < 8) {
+            bVar8 = (&SecondaryAbilityData[0x139].Y)[iVar7 * 2];
+            uVar5 = FUN_BATTLE_BIN__80181720(local_80,(uint)bVar8,abStack_120);
+            uVar3 = (undefined)uVar5;
+            *pbVar10 = 0;
+            *param_5 = bVar8;
             *param_7 = 0;
             goto LAB_BATTLE_BIN__80181af0;
           }
           param_8 = param_8 + 1;
           param_7 = param_7 + 1;
           param_5 = param_5 + 1;
-          pbVar9 = pbVar9 + 1;
-          iVar10 = iVar10 + 1;
+          pbVar10 = pbVar10 + 1;
+          iVar11 = iVar11 + 1;
           *local_70 = local_58;
           local_70 = local_70 + 1;
         }
       }
     }
 LAB_BATTLE_BIN__80181b1c:
-    uVar8 = uVar8 + 1;
-    if (0xf < (int)uVar8) {
+    uVar9 = uVar9 + 1;
+    if (0xf < (int)uVar9) {
       *local_70 = -1;
-      return iVar10;
+      return iVar11;
     }
   } while( true );
 }
@@ -75814,323 +79268,324 @@ uint FUN_BATTLE_BIN__801827f0(int param_1)
   undefined2 *puVar5;
   BattleUnitData *pBVar6;
   uint uVar7;
-  undefined *puVar8;
-  JobID *pJVar9;
-  int iVar10;
+  AttackType *pAVar8;
+  undefined *puVar9;
+  JobID *pJVar10;
   int iVar11;
-  uint uVar12;
+  int iVar12;
   uint uVar13;
   uint uVar14;
-  char *pcVar15;
-  uint uVar16;
+  uint uVar15;
+  char *pcVar16;
+  uint uVar17;
   int local_30;
   
-  uVar16 = 0;
+  uVar17 = 0;
   local_30 = 0;
   if (param_1 == 1) {
-    iVar10 = 3;
+    iVar11 = 3;
     puVar5 = &DAT_BATTLE_BIN__8018f5fa;
     DAT_BATTLE_BIN__8018f518 = 0;
     DAT_BATTLE_BIN__8018f520 = 0xffffffff;
     do {
       *puVar5 = 0;
-      iVar10 = iVar10 + -1;
+      iVar11 = iVar11 + -1;
       puVar5 = puVar5 + -1;
-    } while (-1 < iVar10);
+    } while (-1 < iVar11);
     CurrentAbilityData.ActionPerformed = false;
-    iVar10 = 0;
+    iVar11 = 0;
     pBVar6 = UnitBattleData;
     do {
       (pBVar6->AllActionUnitData).CT = 0;
       (pBVar6->CurActionTargetData).CurrentATUnit = 0;
       (pBVar6->CurActionTargetData).field_0x1b = 0;
       (pBVar6->AllActionUnitData).CurAbCT = 0xff;
-      iVar10 = iVar10 + 1;
+      iVar11 = iVar11 + 1;
       pBVar6 = pBVar6 + 1;
-    } while (iVar10 < 0x15);
+    } while (iVar11 < 0x15);
     FUN_BATTLE_BIN__8018e628();
     return 0xe000;
   }
   if (param_1 == 2) {
-    uVar16 = 0;
+    uVar17 = 0;
     pBVar6 = UnitBattleData;
     while ((((pBVar6->AllActionUnitData).UnitID == 0xff ||
             (((pBVar6->AllActionUnitData).CurrentStatuses.Status1 & (Jump|Dead|Crystal)) != empty))
            || (((pBVar6->AllActionUnitData).CurrentStatuses.Status2 & (Treasure|Petrify)) != empty))
           ) {
-      uVar16 = uVar16 + 1;
+      uVar17 = uVar17 + 1;
       pBVar6 = pBVar6 + 1;
-      if (0x14 < (int)uVar16) {
+      if (0x14 < (int)uVar17) {
         return 0xdf00;
       }
     }
-    return uVar16 | 0xd000;
+    return uVar17 | 0xd000;
   }
   do {
     uVar1 = DAT_BATTLE_BIN__8018f518;
     switch(DAT_BATTLE_BIN__8018f518) {
     case 0:
+      iVar12 = 0;
       iVar11 = 0;
-      iVar10 = 0;
       do {
         bVar3 = FUN_BATTLE_BIN__801832cc
-                          ((int)(&UnitBattleData[0].AllActionUnitData.BaseClass + iVar10));
+                          ((int)(&UnitBattleData[0].AllActionUnitData.BaseClass + iVar11));
         if ((bVar3 & 1) == 0) {
-          bVar2 = (&UnitBattleData[0].AllActionUnitData.SP)[iVar10];
-          uVar14 = (uint)bVar2;
+          bVar2 = (&UnitBattleData[0].AllActionUnitData.SP)[iVar11];
+          uVar15 = (uint)bVar2;
           if ((bVar3 & 0x20) == 0) {
             if ((bVar3 & 0x10) != 0) {
-              uVar14 = uVar14 + (bVar2 >> 1);
+              uVar15 = uVar15 + (bVar2 >> 1);
             }
           }
           else {
-            uVar14 = (uint)(bVar2 >> 1);
+            uVar15 = (uint)(bVar2 >> 1);
           }
-          uVar14 = uVar14 + (&UnitBattleData[0].AllActionUnitData.CT)[iVar10];
-          if (0xfe < uVar14) {
-            uVar14 = 0xfe;
+          uVar15 = uVar15 + (&UnitBattleData[0].AllActionUnitData.CT)[iVar11];
+          if (0xfe < uVar15) {
+            uVar15 = 0xfe;
           }
-          (&UnitBattleData[0].AllActionUnitData.CT)[iVar10] = (byte)uVar14;
+          (&UnitBattleData[0].AllActionUnitData.CT)[iVar11] = (byte)uVar15;
         }
-        iVar11 = iVar11 + 1;
-        iVar10 = iVar10 + 0x1c0;
-      } while (iVar11 < 0x15);
+        iVar12 = iVar12 + 1;
+        iVar11 = iVar11 + 0x1c0;
+      } while (iVar12 < 0x15);
       DAT_BATTLE_BIN__8018f518 = 1;
       uVar1 = DAT_BATTLE_BIN__8018f518;
       break;
     case 1:
-      uVar14 = 99;
-      uVar13 = 0xff;
-      uVar12 = 0;
+      uVar15 = 99;
+      uVar14 = 0xff;
+      uVar13 = 0;
       pBVar6 = UnitBattleData;
       do {
         bVar3 = FUN_BATTLE_BIN__801832cc((int)pBVar6);
-        if (((bVar3 & 1) == 0) && (uVar7 = (uint)(pBVar6->AllActionUnitData).CT, uVar14 < uVar7)) {
-          uVar14 = uVar7;
-          uVar13 = uVar12;
+        if (((bVar3 & 1) == 0) && (uVar7 = (uint)(pBVar6->AllActionUnitData).CT, uVar15 < uVar7)) {
+          uVar15 = uVar7;
+          uVar14 = uVar13;
         }
-        uVar12 = uVar12 + 1;
+        uVar13 = uVar13 + 1;
         pBVar6 = pBVar6 + 1;
-      } while ((int)uVar12 < 0x15);
-      if (uVar13 == 0xff) {
+      } while ((int)uVar13 < 0x15);
+      if (uVar14 == 0xff) {
         uVar1 = 2;
         break;
       }
-      pBVar6 = UnitBattleData + uVar13;
-      if ((UnitBattleData[uVar13].AllActionUnitData.CurrentStatuses.Status1 & Jump) == empty) {
-        if (UnitBattleData[uVar13].AllActionUnitData.CT == 0xff) {
-          UnitBattleData[uVar13].AllActionUnitData.CT = 0;
+      pBVar6 = UnitBattleData + uVar14;
+      if ((UnitBattleData[uVar14].AllActionUnitData.CurrentStatuses.Status1 & Jump) == empty) {
+        if (UnitBattleData[uVar14].AllActionUnitData.CT == 0xff) {
+          UnitBattleData[uVar14].AllActionUnitData.CT = 0;
         }
         else {
-          UnitBattleData[uVar13].AllActionUnitData.CT = (char)uVar14 + (char)(uVar14 / 100) * -100;
+          UnitBattleData[uVar14].AllActionUnitData.CT = (char)uVar15 + (char)(uVar15 / 100) * -100;
         }
-        uVar14 = FUN_BATTLE_BIN__80183078(uVar13,(int)pBVar6);
-        if ((uVar14 != 0) && (uVar16 = uVar13 | 0x300, (uVar14 & 1) != 0)) {
-          if (uVar14 == 1) {
+        uVar15 = FUN_BATTLE_BIN__80183078(uVar14,(int)pBVar6);
+        if ((uVar15 != 0) && (uVar17 = uVar14 | 0x300, (uVar15 & 1) != 0)) {
+          if (uVar15 == 1) {
             Increment_CasualtyInjure_Counters((int)pBVar6);
-            return uVar16;
+            return uVar17;
           }
-          return uVar16;
+          return uVar17;
         }
         bVar3 = FUN_BATTLE_BIN__801832cc((int)pBVar6);
-        if (((bVar3 & 7) == 0) || (uVar14 == 2)) {
-          UnitBattleData[uVar13].CurActionTargetData.CurrentATUnit = 1;
-          UnitBattleData[uVar13].CurActionTargetData.MoveUnavailable = 0;
-          UnitBattleData[uVar13].CurActionTargetData.ActUnavailable = 0;
-          UnitBattleData[uVar13].AllActionUnitData.ActiveUnit = 1;
+        if (((bVar3 & 7) == 0) || (uVar15 == 2)) {
+          UnitBattleData[uVar14].CurActionTargetData.CurrentATUnit = 1;
+          UnitBattleData[uVar14].CurActionTargetData.MoveUnavailable = 0;
+          UnitBattleData[uVar14].CurActionTargetData.ActUnavailable = 0;
+          UnitBattleData[uVar14].AllActionUnitData.ActiveUnit = 1;
           DAT_BATTLE_BIN__8018f51c = DAT_BATTLE_BIN__8018f518;
-          if (uVar14 == 0) {
-            uVar16 = uVar13 | 0x100;
+          if (uVar15 == 0) {
+            uVar17 = uVar14 | 0x100;
           }
           DAT_BATTLE_BIN__8018f518 = 10;
-          DAT_BATTLE_BIN__8018f520 = uVar13;
-          return uVar16;
+          DAT_BATTLE_BIN__8018f520 = uVar14;
+          return uVar17;
         }
       }
       else {
-        UnitBattleData[uVar13].AllActionUnitData.CT = 99;
+        UnitBattleData[uVar14].AllActionUnitData.CT = 99;
       }
       goto LAB_BATTLE_BIN__80183038;
     case 2:
-      iVar10 = 0;
+      iVar11 = 0;
       pBVar6 = UnitBattleData;
       do {
         bVar3 = FUN_BATTLE_BIN__801832cc((int)pBVar6);
-        iVar10 = iVar10 + 1;
+        iVar11 = iVar11 + 1;
         if ((((bVar3 & 0xf) == 0) && (bVar3 = (pBVar6->AllActionUnitData).CurAbCT, bVar3 != 0xff))
            && (bVar3 != 0)) {
           (pBVar6->AllActionUnitData).CurAbCT = bVar3 - 1;
         }
         pBVar6 = pBVar6 + 1;
-      } while (iVar10 < 0x15);
+      } while (iVar11 < 0x15);
       DAT_BATTLE_BIN__8018f518 = 3;
       uVar1 = DAT_BATTLE_BIN__8018f518;
       break;
     case 3:
-      uVar14 = 0;
-      iVar10 = 0;
+      uVar15 = 0;
+      iVar11 = 0;
       do {
-        pJVar9 = &UnitBattleData[0].AllActionUnitData.BaseClass + iVar10;
-        bVar3 = FUN_BATTLE_BIN__801832cc((int)pJVar9);
+        pJVar10 = &UnitBattleData[0].AllActionUnitData.BaseClass + iVar11;
+        bVar3 = FUN_BATTLE_BIN__801832cc((int)pJVar10);
         if (((bVar3 & 0xf) == 0) &&
-           (UnitBattleData[0].AllActionUnitData.SecondarySkillsetName[iVar10 + 9] == '\0')) {
-          if ((UnitBattleData[0].AllActionUnitData.JobLevels[iVar10 + -0x7a] & 1) == 0) {
-            UnitBattleData[0].AllActionUnitData.SecondarySkillsetName[iVar10 + 9] = -1;
+           (UnitBattleData[0].AllActionUnitData.SecondarySkillsetName[iVar11 + 9] == '\0')) {
+          if ((UnitBattleData[0].AllActionUnitData.JobLevels[iVar11 + -0x7a] & 1) == 0) {
+            UnitBattleData[0].AllActionUnitData.SecondarySkillsetName[iVar11 + 9] = -1;
           }
           else {
-            Transfer_Last_Ability_Used_CT((int)pJVar9);
-            UnitBattleData[0].AllActionUnitData.SecondarySkillsetName[iVar10 + 9] =
-                 (&UnitBattleData[0].CurActionTargetData.AbilityCT)[iVar10];
+            Transfer_Last_Ability_Used_CT((int)pJVar10);
+            UnitBattleData[0].AllActionUnitData.SecondarySkillsetName[iVar11 + 9] =
+                 (&UnitBattleData[0].CurActionTargetData.AbilityCT)[iVar11];
           }
           DAT_BATTLE_BIN__8018f518 = 9;
 LAB_BATTLE_BIN__80182c70:
-          return uVar14 | 0x200;
+          return uVar15 | 0x200;
         }
-        uVar14 = uVar14 + 1;
-        iVar10 = iVar10 + 0x1c0;
-      } while ((int)uVar14 < 0x15);
+        uVar15 = uVar15 + 1;
+        iVar11 = iVar11 + 0x1c0;
+      } while ((int)uVar15 < 0x15);
       uVar1 = 4;
       break;
     case 4:
-      iVar10 = 0;
+      iVar11 = 0;
       pBVar6 = UnitBattleData;
       do {
         if (((pBVar6->AllActionUnitData).UnitID != 0xff) &&
            (((pBVar6->AllActionUnitData).CurrentStatuses.Status1 & Jump) == empty)) {
-          FUN_BATTLE_BIN__8018d910(iVar10);
+          FUN_BATTLE_BIN__8018d910(iVar11);
         }
-        iVar10 = iVar10 + 1;
+        iVar11 = iVar11 + 1;
         pBVar6 = pBVar6 + 1;
-      } while (iVar10 < 0x15);
+      } while (iVar11 < 0x15);
       DAT_BATTLE_BIN__8018f518 = 5;
       uVar1 = DAT_BATTLE_BIN__8018f518;
       break;
     case 5:
-      iVar10 = 0;
-      puVar8 = &DAT_BATTLE_BIN__8018f8b0;
+      iVar11 = 0;
+      pAVar8 = &DAT_BATTLE_BIN__8018f8b0;
       pBVar6 = UnitBattleData;
       do {
-        *puVar8 = 0;
-        iVar10 = iVar10 + 1;
+        *pAVar8 = 0;
+        iVar11 = iVar11 + 1;
         if (((pBVar6->AllActionUnitData).UnitID != 0xff) &&
            (((pBVar6->AllActionUnitData).CurrentStatuses.Status1 & Jump) == empty)) {
-          *puVar8 = (pBVar6->CurActionUnitData).field_0x25;
+          *pAVar8 = (pBVar6->CurActionUnitData).AttackType;
         }
-        puVar8 = puVar8 + 1;
+        pAVar8 = pAVar8 + 1;
         pBVar6 = pBVar6 + 1;
-      } while (iVar10 < 0x15);
+      } while (iVar11 < 0x15);
       DAT_BATTLE_BIN__8018f518 = 6;
       uVar1 = DAT_BATTLE_BIN__8018f518;
       break;
     case 6:
-      uVar14 = 0;
+      uVar15 = 0;
       do {
-        if ((&DAT_BATTLE_BIN__8018f8b0)[uVar14] != '\0') {
-          (&DAT_BATTLE_BIN__8018f8b0)[uVar14] = 0;
-          return uVar14 | 0x300;
+        if ((&DAT_BATTLE_BIN__8018f8b0)[uVar15] != '\0') {
+          (&DAT_BATTLE_BIN__8018f8b0)[uVar15] = 0;
+          return uVar15 | 0x300;
         }
-        uVar14 = uVar14 + 1;
-      } while ((int)uVar14 < 0x15);
+        uVar15 = uVar15 + 1;
+      } while ((int)uVar15 < 0x15);
       DAT_BATTLE_BIN__8018f518 = 0;
       uVar1 = DAT_BATTLE_BIN__8018f518;
       break;
     case 9:
       bVar3 = 0xfe;
-      uVar14 = 0xff;
-      uVar13 = 0;
-      iVar10 = 0;
+      uVar15 = 0xff;
+      uVar14 = 0;
+      iVar11 = 0;
       pBVar6 = UnitBattleData;
       do {
         bVar2 = FUN_BATTLE_BIN__801832cc((int)pBVar6);
         pBVar6 = pBVar6 + 1;
         if (((bVar2 & 1) == 0) &&
-           (bVar2 = (&UnitBattleData[0].AllActionUnitData.CT)[iVar10], bVar3 < bVar2)) {
-          uVar14 = uVar13;
+           (bVar2 = (&UnitBattleData[0].AllActionUnitData.CT)[iVar11], bVar3 < bVar2)) {
+          uVar15 = uVar14;
           bVar3 = bVar2;
         }
-        uVar13 = uVar13 + 1;
-        iVar10 = iVar10 + 0x1c0;
-      } while ((int)uVar13 < 0x15);
-      if (uVar14 != 0xff) {
-        UnitBattleData[uVar14].CurActionTargetData.CurrentATUnit = 1;
-        UnitBattleData[uVar14].AllActionUnitData.ActiveUnit = 1;
-        UnitBattleData[uVar14].AllActionUnitData.CT = 0;
-        UnitBattleData[uVar14].CurActionTargetData.MoveUnavailable = 0;
-        UnitBattleData[uVar14].CurActionTargetData.ActUnavailable = 0;
+        uVar14 = uVar14 + 1;
+        iVar11 = iVar11 + 0x1c0;
+      } while ((int)uVar14 < 0x15);
+      if (uVar15 != 0xff) {
+        UnitBattleData[uVar15].CurActionTargetData.CurrentATUnit = 1;
+        UnitBattleData[uVar15].AllActionUnitData.ActiveUnit = 1;
+        UnitBattleData[uVar15].AllActionUnitData.CT = 0;
+        UnitBattleData[uVar15].CurActionTargetData.MoveUnavailable = 0;
+        UnitBattleData[uVar15].CurActionTargetData.ActUnavailable = 0;
         DAT_BATTLE_BIN__8018f518 = 10;
         DAT_BATTLE_BIN__8018f51c = 9;
-        DAT_BATTLE_BIN__8018f520 = uVar14;
-        return uVar14 | 0x100;
+        DAT_BATTLE_BIN__8018f520 = uVar15;
+        return uVar15 | 0x100;
       }
       DAT_BATTLE_BIN__8018f51c = 3;
       uVar1 = 0xd;
       break;
     case 10:
-      uVar14 = 0;
+      uVar15 = 0;
       pBVar6 = UnitBattleData;
       do {
         if ((pBVar6->CurActionTargetData).CurrentATUnit != 0) {
           bVar3 = FUN_BATTLE_BIN__801832cc((int)pBVar6);
           bVar4 = FUN_BATTLE_BIN__80183d10(pBVar6);
           if (((bVar3 & 1) == 0) && (CONCAT31(extraout_var,bVar4) == 0)) {
-            return uVar14 | 0x100;
+            return uVar15 | 0x100;
           }
-          FUN_BATTLE_BIN__80183c6c(uVar14);
+          FUN_BATTLE_BIN__80183c6c(uVar15);
           (pBVar6->CurActionTargetData).CurrentATUnit = 0;
         }
         pBVar6 = pBVar6 + 1;
-        uVar14 = uVar14 + 1;
-      } while ((int)uVar14 < 0x15);
+        uVar15 = uVar15 + 1;
+      } while ((int)uVar15 < 0x15);
       uVar1 = 0x13;
       break;
     case 0xd:
       uVar1 = DAT_BATTLE_BIN__8018f51c;
       if (CurrentAbilityData.ActionPerformed != false) {
-        iVar10 = 0;
-        puVar8 = &DAT_BATTLE_BIN__8018f8b0;
+        iVar11 = 0;
+        puVar9 = &DAT_BATTLE_BIN__8018f8b0;
         pBVar6 = UnitBattleData;
         do {
-          *puVar8 = 0;
-          iVar10 = iVar10 + 1;
+          *puVar9 = 0;
+          iVar11 = iVar11 + 1;
           if (((pBVar6->AllActionUnitData).JobID == Mime) &&
              ((pBVar6->AllActionUnitData).UnitID != 0xff)) {
-            *puVar8 = 1;
+            *puVar9 = 1;
           }
-          puVar8 = puVar8 + 1;
+          puVar9 = puVar9 + 1;
           pBVar6 = pBVar6 + 1;
-        } while (iVar10 < 0x15);
+        } while (iVar11 < 0x15);
         DAT_BATTLE_BIN__8018f518 = 0xe;
         uVar1 = DAT_BATTLE_BIN__8018f518;
       }
       break;
     case 0xe:
       CurrentAbilityData.ActionPerformed = false;
-      uVar14 = 0;
-      pcVar15 = &DAT_BATTLE_BIN__8018f8b0;
+      uVar15 = 0;
+      pcVar16 = &DAT_BATTLE_BIN__8018f8b0;
       pBVar6 = UnitBattleData;
       do {
-        if ((*pcVar15 != '\0') && ((pBVar6->AllActionUnitData).UnitID != 0xff)) {
-          *pcVar15 = '\0';
-          iVar10 = FUN_BATTLE_BIN__8018f038(pBVar6);
-          if (iVar10 == 1) goto LAB_BATTLE_BIN__80182c70;
-          if (iVar10 == -1) {
-            return uVar14 | 0x500;
+        if ((*pcVar16 != '\0') && ((pBVar6->AllActionUnitData).UnitID != 0xff)) {
+          *pcVar16 = '\0';
+          iVar11 = FUN_BATTLE_BIN__8018f038(pBVar6);
+          if (iVar11 == 1) goto LAB_BATTLE_BIN__80182c70;
+          if (iVar11 == -1) {
+            return uVar15 | 0x500;
           }
         }
-        pcVar15 = pcVar15 + 1;
-        uVar14 = uVar14 + 1;
+        pcVar16 = pcVar16 + 1;
+        uVar15 = uVar15 + 1;
         pBVar6 = pBVar6 + 1;
         uVar1 = DAT_BATTLE_BIN__8018f51c;
-      } while ((int)uVar14 < 0x15);
+      } while ((int)uVar15 < 0x15);
       break;
     case 0xf:
       DAT_BATTLE_BIN__8018f518 = 0x11;
       uVar1 = DAT_BATTLE_BIN__8018f518;
       if (DAT_BATTLE_BIN__8018f520 != 0xffffffff) {
-        iVar10 = FUN_BATTLE_BIN__8018da88(UnitBattleData + DAT_BATTLE_BIN__8018f520);
+        iVar11 = FUN_BATTLE_BIN__8018da88(UnitBattleData + DAT_BATTLE_BIN__8018f520);
 LAB_BATTLE_BIN__80182f1c:
         uVar1 = DAT_BATTLE_BIN__8018f518;
-        if (iVar10 != 0) {
+        if (iVar11 != 0) {
           return DAT_BATTLE_BIN__8018f520 | 0x300;
         }
       }
@@ -76139,7 +79594,7 @@ LAB_BATTLE_BIN__80182f1c:
       DAT_BATTLE_BIN__8018f518 = 0xd;
       uVar1 = DAT_BATTLE_BIN__8018f518;
       if (DAT_BATTLE_BIN__8018f520 != 0xffffffff) {
-        iVar10 = FUN_BATTLE_BIN__8018d868(UnitBattleData + DAT_BATTLE_BIN__8018f520);
+        iVar11 = FUN_BATTLE_BIN__8018d868(UnitBattleData + DAT_BATTLE_BIN__8018f520);
         goto LAB_BATTLE_BIN__80182f1c;
       }
       break;
@@ -76147,7 +79602,7 @@ LAB_BATTLE_BIN__80182f1c:
       DAT_BATTLE_BIN__8018f518 = 0xf;
       uVar1 = DAT_BATTLE_BIN__8018f518;
       if (DAT_BATTLE_BIN__8018f520 != 0xffffffff) {
-        iVar10 = FUN_BATTLE_BIN__8018d7c8(UnitBattleData + DAT_BATTLE_BIN__8018f520);
+        iVar11 = FUN_BATTLE_BIN__8018d7c8(UnitBattleData + DAT_BATTLE_BIN__8018f520);
         goto LAB_BATTLE_BIN__80182f1c;
       }
     }
@@ -76157,7 +79612,7 @@ LAB_BATTLE_BIN__80182f1c:
       return 0xff00;
     }
 LAB_BATTLE_BIN__80183038:
-    if (uVar16 != 0) {
+    if (uVar17 != 0) {
       return 0xff00;
     }
   } while( true );
@@ -76184,7 +79639,7 @@ int FUN_BATTLE_BIN__80183078(undefined4 param_1,int param_2)
     *(undefined *)(param_2 + 0x1b1) = 0x48;
     *(ushort *)(param_2 + 0x192) = *(ushort *)(param_2 + 0x2a) / 10;
   }
-  else if (((*(byte *)(param_2 + 0x58) & 0x20) == 0) || (DAT_BATTLE_BIN__8018f5fc != 0)) {
+  else if (((*(byte *)(param_2 + 0x58) & 0x20) == 0) || (ActionState != 0)) {
     if ((*(byte *)(param_2 + 0x5c) & 1) != 0) {
       cVar5 = *(char *)(param_2 + 0x6c) + -1;
       if (cVar5 == '\0') {
@@ -76257,12 +79712,13 @@ int FUN_BATTLE_BIN__80183078(undefined4 param_1,int param_2)
 byte FUN_BATTLE_BIN__801832cc(int param_1)
 
 {
-  int iVar1;
+  bool bVar1;
+  undefined3 extraout_var;
   byte bVar2;
   
   if (*(char *)(param_1 + 1) != -1) {
-    iVar1 = Check_HasStatus(param_1,3);
-    if (iVar1 != 0) {
+    bVar1 = Check_HasStatus((BattleUnitData *)param_1,freeze_ct);
+    if (CONCAT31(extraout_var,bVar1) != 0) {
       return 1;
     }
     if ((*(byte *)(param_1 + 0x182) & 0x40) == 0) {
@@ -76288,59 +79744,65 @@ uint FUN_BATTLE_BIN__80183374(void)
 
 {
   char cVar1;
-  byte bVar2;
-  int iVar3;
-  BattleUnitData *pBVar4;
+  ENTD_team_conflict EVar2;
+  bool bVar3;
+  undefined3 extraout_var;
+  undefined3 extraout_var_00;
+  BattleUnitData *_unit_data;
+  int iVar4;
   int iVar5;
   int iVar6;
   int iVar7;
-  int iVar8;
   
-  iVar6 = 0;
-  iVar7 = 0;
   iVar5 = 0;
-  iVar8 = 0;
+  iVar6 = 0;
+  iVar4 = 0;
+  iVar7 = 0;
   do {
-    if (((((&UnitBattleData[0].CurActionUnitData.field_0x2e)[iVar8] & 3) == 3) &&
-        (cVar1 = (&UnitBattleData[0].CurActionTargetData.field_0x15)[iVar8], cVar1 != -1)) &&
-       (iVar3 = Check_HasStatus((int)(&UnitBattleData[0].AllActionUnitData.BaseClass + iVar8),1),
-       (uint)(cVar1 == -0x80) + iVar3 != 0)) {
-      if (((&UnitBattleData[0].CurActionUnitData.field_0x2e)[iVar8] & 0x30) == 0) {
-        iVar6 = iVar6 + 1;
+    if (((((&UnitBattleData[0].CurActionUnitData.ModifiedENTDTeam)[iVar7] & is_ramza) == is_ramza)
+        && (cVar1 = (&UnitBattleData[0].CurActionTargetData.field_0x15)[iVar7], cVar1 != -1)) &&
+       (bVar3 = Check_HasStatus((BattleUnitData *)
+                                (&UnitBattleData[0].AllActionUnitData.BaseClass + iVar7),
+                                team_loss_enemy),
+       (uint)(cVar1 == -0x80) + CONCAT31(extraout_var,bVar3) != 0)) {
+      if (((&UnitBattleData[0].CurActionUnitData.ModifiedENTDTeam)[iVar7] & light_blue) ==
+          ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) {
+        iVar5 = iVar5 + 1;
       }
       else {
-        iVar7 = iVar7 + 1;
+        iVar6 = iVar6 + 1;
       }
     }
-    iVar5 = iVar5 + 1;
-    iVar8 = iVar8 + 0x1c0;
-  } while (iVar5 < 0x15);
-  if (iVar6 == 0) {
-    if (iVar7 != 0) {
+    iVar4 = iVar4 + 1;
+    iVar7 = iVar7 + 0x1c0;
+  } while (iVar4 < 0x15);
+  if (iVar5 == 0) {
+    if (iVar6 != 0) {
       return 0;
     }
-    iVar7 = 0;
-    pBVar4 = UnitBattleData;
-    iVar5 = 0;
     iVar6 = 0;
+    _unit_data = UnitBattleData;
+    iVar4 = 0;
+    iVar5 = 0;
     do {
-      if ((pBVar4->AllActionUnitData).UnitID != 0xff) {
-        bVar2 = (pBVar4->CurActionUnitData).field_0x2e;
-        iVar8 = Check_HasStatus((int)pBVar4,0);
-        if (iVar8 == 0) {
-          if ((bVar2 & 0x30) == 0) {
-            iVar5 = iVar5 + 1;
+      if ((_unit_data->AllActionUnitData).UnitID != 0xff) {
+        EVar2 = (_unit_data->CurActionUnitData).ModifiedENTDTeam;
+        bVar3 = Check_HasStatus(_unit_data,is_dead);
+        if (CONCAT31(extraout_var_00,bVar3) == 0) {
+          if ((EVar2 & light_blue) ==
+              ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) {
+            iVar4 = iVar4 + 1;
           }
           else {
-            iVar6 = iVar6 + 1;
+            iVar5 = iVar5 + 1;
           }
         }
       }
-      iVar7 = iVar7 + 1;
-      pBVar4 = pBVar4 + 1;
-    } while (iVar7 < 0x15);
-    if (iVar5 != 0) {
-      return (uint)(iVar6 != 0);
+      iVar6 = iVar6 + 1;
+      _unit_data = _unit_data + 1;
+    } while (iVar6 < 0x15);
+    if (iVar4 != 0) {
+      return (uint)(iVar5 != 0);
     }
   }
   return 0xffffffff;
@@ -76668,7 +80130,7 @@ bool FUN_BATTLE_BIN__80183d10(BattleUnitData *param_1)
   bool bVar3;
   uint uVar4;
   
-  uVar4 = FUN_BATTLE_BIN__8018130c(param_1);
+  uVar4 = CheckIfCanAct(param_1);
   SVar1 = (param_1->CurActionTargetData).MoveUnavailable;
   SVar2 = (param_1->CurActionTargetData).ActUnavailable;
   bVar3 = false;
@@ -76860,9 +80322,9 @@ void FUN_BATTLE_BIN__8018430c(void)
 {
   byte *pbVar1;
   
-  TarCurActPtr->HitFlag = false;
+  TarCurActPtr->HitFlag = 0;
   TarCurActPtr->EvadeType = 7;
-  pbVar1 = &TarCurActPtr->field60_0x2b;
+  pbVar1 = &TarCurActPtr->hi_hit_;
   TarCurActPtr->Hit_ = 0;
   *pbVar1 = 0;
   return;
@@ -76873,7 +80335,7 @@ void FUN_BATTLE_BIN__8018430c(void)
 void FUN_BATTLE_BIN__8018433c(void)
 
 {
-  TarCurActPtr->HitFlag = false;
+  TarCurActPtr->HitFlag = 0;
   TarCurActPtr->EvadeType = 6;
   return;
 }
@@ -76889,17 +80351,17 @@ undefined4 FUN_BATTLE_BIN__80184360(void)
   bool bVar4;
   undefined3 extraout_var;
   undefined4 uVar5;
-  uint uVar6;
+  uint threshold;
   
-  uVar6 = (uint)CurrentAbilityData.CurrentAbilityFuncData.X;
+  threshold = (uint)CurrentAbilityData.CurrentAbilityFuncData.X;
   sVar1._0_1_ = TarCurActPtr->Hit_;
-  sVar1._1_1_ = TarCurActPtr->field60_0x2b;
-  uVar2 = (undefined2)((int)((int)sVar1 * uVar6) / 100);
-  bVar4 = DAT_BATTLE_BIN__8018f5fc == 0;
-  pbVar3 = &TarCurActPtr->field60_0x2b;
+  sVar1._1_1_ = TarCurActPtr->hi_hit_;
+  uVar2 = (undefined2)((int)((int)sVar1 * threshold) / 100);
+  bVar4 = ActionState == 0;
+  pbVar3 = &TarCurActPtr->hi_hit_;
   TarCurActPtr->Hit_ = (char)uVar2;
   *pbVar3 = (char)((ushort)uVar2 >> 8);
-  if ((bVar4) && (bVar4 = PassFail_Roll(100,uVar6), CONCAT31(extraout_var,bVar4) != 0)) {
+  if ((bVar4) && (bVar4 = PassFail_Roll(100,threshold), CONCAT31(extraout_var,bVar4) != 0)) {
     FUN_BATTLE_BIN__8018433c();
     uVar5 = 1;
   }
@@ -76915,14 +80377,16 @@ void FUN_BATTLE_BIN__801843ec(void)
 
 {
   ENTD_team_conflict EVar1;
-  uint uVar2;
-  uint uVar3;
-  int iVar4;
-  int iVar5;
-  uint uVar6;
+  ushort uVar2;
+  UniqueEffect2 *pUVar3;
+  uint uVar4;
+  uint uVar5;
+  int iVar6;
   int iVar7;
-  int iVar8;
-  uint uVar9;
+  uint uVar8;
+  int iVar9;
+  int iVar10;
+  uint uVar11;
   
   if (CurrentAbilityData.CanKnockback) {
     EVar1 = (TarBattlePtr->AllActionUnitData).EntdTeamFlags;
@@ -76930,59 +80394,63 @@ void FUN_BATTLE_BIN__801843ec(void)
            ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) &&
          ((EVar1 & is_ramza) != is_ramza)) && (TarBattlePtr != CasBattlePtr)) &&
        ((TarBattlePtr->CurActionTargetData).field_0x14 == '\0')) {
-      uVar9 = (uint)(TarBattlePtr->AllActionUnitData).MapX;
-      uVar6 = (uint)(TarBattlePtr->AllActionUnitData).MapY;
-      iVar8 = uVar9 - (CasBattlePtr->AllActionUnitData).MapX;
-      iVar7 = uVar6 - (CasBattlePtr->AllActionUnitData).MapY;
-      iVar5 = iVar8;
-      if (iVar8 < 0) {
-        iVar5 = -iVar8;
+      uVar11 = (uint)(TarBattlePtr->AllActionUnitData).MapX;
+      uVar8 = (uint)(TarBattlePtr->AllActionUnitData).MapY;
+      iVar10 = uVar11 - (CasBattlePtr->AllActionUnitData).MapX;
+      iVar9 = uVar8 - (CasBattlePtr->AllActionUnitData).MapY;
+      iVar7 = iVar10;
+      if (iVar10 < 0) {
+        iVar7 = -iVar10;
       }
-      iVar4 = iVar7;
-      if (iVar7 < 0) {
-        iVar4 = -iVar7;
+      iVar6 = iVar9;
+      if (iVar9 < 0) {
+        iVar6 = -iVar9;
       }
-      if (iVar5 + iVar4 != 0) {
-        if (iVar4 < iVar5) {
-          iVar5 = 3;
-          if (iVar8 < 1) {
-            iVar5 = 1;
-            uVar9 = uVar9 - 1;
+      if (iVar7 + iVar6 != 0) {
+        if (iVar6 < iVar7) {
+          iVar7 = 3;
+          if (iVar10 < 1) {
+            iVar7 = 1;
+            uVar11 = uVar11 - 1;
           }
           else {
-            uVar9 = uVar9 + 1;
+            uVar11 = uVar11 + 1;
           }
         }
         else {
-          iVar5 = 2;
-          if (iVar7 < 1) {
-            iVar5 = 0;
-            uVar6 = uVar6 - 1;
+          iVar7 = 2;
+          if (iVar9 < 1) {
+            iVar7 = 0;
+            uVar8 = uVar8 - 1;
           }
           else {
-            uVar6 = uVar6 + 1;
+            uVar8 = uVar8 + 1;
           }
         }
-        uVar2 = FUN_BATTLE_BIN__80184610(iVar5,uVar9,uVar6);
-        if (-1 < (int)uVar2) {
-          iVar5 = (uVar2 * 0x100 + uVar6 * DAT_BATTLE_BIN__800e4e9c + uVar9) * 8;
-          if (((((&DAT_BATTLE_BIN__8018f8d2)[iVar5] & 2) == 0) &&
-              (((&DAT_BATTLE_BIN__8018f8cf)[iVar5] & 0xe0) == 0)) &&
-             ((((&DAT_BATTLE_BIN__8018f8cf)[iVar5] & 0x1f) < 3 &&
-              ((((&DAT_BATTLE_BIN__8018f8cc)[iVar5] & 0x3f) != 0x12 &&
-               (((&DAT_BATTLE_BIN__8018f8cc)[iVar5] & 0x3f) != 0x1c)))))) {
-            uVar3 = FUN_BATTLE_BIN__8017f020((int)TarBattlePtr);
+        uVar4 = FUN_BATTLE_BIN__80184610(iVar7,uVar11,uVar8);
+        if (-1 < (int)uVar4) {
+          iVar7 = (uVar4 * 0x100 + uVar8 * DAT_BATTLE_BIN__800e4e9c + uVar11) * 8;
+          if (((((&DAT_BATTLE_BIN__8018f8d2)[iVar7] & 2) == 0) &&
+              (((&DAT_BATTLE_BIN__8018f8cf)[iVar7] & 0xe0) == 0)) &&
+             ((((&DAT_BATTLE_BIN__8018f8cf)[iVar7] & 0x1f) < 3 &&
+              ((((&DAT_BATTLE_BIN__8018f8cc)[iVar7] & 0x3f) != 0x12 &&
+               (((&DAT_BATTLE_BIN__8018f8cc)[iVar7] & 0x3f) != 0x1c)))))) {
+            uVar5 = FUN_BATTLE_BIN__8017f020((int)TarBattlePtr);
             CurrentAbilityData._81_1_ = 0x81;
-            if (((uVar3 & 0x80) != 0) &&
+            if (((uVar5 & 0x80) != 0) &&
                (CurrentAbilityData._81_1_ = 0x81,
                ((TarBattlePtr->AllActionUnitData).CurrentStatuses.Status3 & (Frog|Chicken)) == empty
                )) {
               CurrentAbilityData._81_1_ = 0x82;
             }
-            CurrentAbilityData.TarNewMapX = (byte)uVar9;
-            CurrentAbilityData.TarNewMapY = (byte)uVar6;
-            CurrentAbilityData.TarNewMapZ = (byte)uVar2;
-            *(ushort *)&TarCurActPtr->field_0x10 = *(ushort *)&TarCurActPtr->field_0x10 | 0x4000;
+            CurrentAbilityData.TarNewMapX = (byte)uVar11;
+            CurrentAbilityData.TarNewMapY = (byte)uVar8;
+            CurrentAbilityData.TarNewMapZ = (byte)uVar4;
+            uVar2._0_1_ = TarCurActPtr->UniqueEffect1;
+            uVar2._1_1_ = TarCurActPtr->UniqueEffect2;
+            pUVar3 = &TarCurActPtr->UniqueEffect2;
+            TarCurActPtr->UniqueEffect1 = (char)(uVar2 | 0x4000);
+            *pUVar3 = (char)((uVar2 | 0x4000) >> 8);
           }
         }
       }
@@ -77099,84 +80567,84 @@ LAB_BATTLE_BIN__80184868:
 
 
 
-undefined4 FUN_BATTLE_BIN__801848d8(uint param_1,uint param_2,byte param_3,byte param_4)
+int AttackEvadeCalc(uint ItemEvade,uint BaseHit,byte EvadeType,ItemID ItemID)
 
 {
   bool bVar1;
   undefined3 extraout_var;
-  undefined4 uVar2;
+  int PassFail;
   
-  bVar1 = PassFail_Roll(param_2 & 0xffff,param_1 & 0xffff);
-  uVar2 = 0;
-  if ((CONCAT31(extraout_var,bVar1) == 0) && (uVar2 = 0, DAT_BATTLE_BIN__8018f5fc == 0)) {
-    TarCurActPtr->HitFlag = false;
-    TarCurActPtr->EvadeType = param_3;
-    uVar2 = 1;
-    TarCurActPtr->ItemBreakID = param_4;
+  bVar1 = PassFail_Roll(BaseHit & 0xffff,ItemEvade & 0xffff);
+  PassFail = 0;
+  if ((CONCAT31(extraout_var,bVar1) == 0) && (PassFail = 0, ActionState == 0)) {
+    TarCurActPtr->HitFlag = 0;
+    TarCurActPtr->EvadeType = EvadeType;
+    PassFail = 1;
+    TarCurActPtr->ItemBreakID = ItemID;
   }
-  return uVar2;
+  return PassFail;
 }
 
 
 
-void FUN_BATTLE_BIN__80184964(void)
+void ZodiacCompat(void)
 
 {
-  ENTD_gender EVar1;
-  ENTD_gender EVar2;
-  ushort uVar3;
-  ushort uVar4;
-  uint uVar5;
-  ushort uVar6;
-  short sVar7;
-  byte bVar8;
+  ushort ZodiacDiff;
+  short CompatDet;
+  byte Compatability;
+  uint AbPower;
+  ENTD_gender CasGender;
+  ushort CasZodiac;
+  ENTD_gender TarGender;
+  ushort TarZodiac;
   
-  uVar3 = (CasBattlePtr->AllActionUnitData).Birthday >> 0xc;
-  uVar4 = (TarBattlePtr->AllActionUnitData).Birthday >> 0xc;
-  if (uVar3 == 0xc) {
+  CasZodiac = (CasBattlePtr->AllActionUnitData).Birthday >> 0xc;
+  TarZodiac = (TarBattlePtr->AllActionUnitData).Birthday >> 0xc;
+  if (CasZodiac == 0xc) {
     return;
   }
-  if (uVar4 == 0xc) {
+  if (TarZodiac == 0xc) {
     return;
   }
-  uVar6 = uVar3 - uVar4;
-  if (uVar3 <= uVar4) {
-    uVar6 = uVar4 - uVar3;
+  ZodiacDiff = CasZodiac - TarZodiac;
+  if (CasZodiac <= TarZodiac) {
+    ZodiacDiff = TarZodiac - CasZodiac;
   }
-  bVar8 = (&DAT_BATTLE_BIN__8018f600)[uVar6];
-  if (bVar8 == 3) {
-    EVar1 = (CasBattlePtr->AllActionUnitData).EntdGenderFlags;
-    bVar8 = 1;
-    if ((EVar1 & monster) == 0) {
-      EVar2 = (TarBattlePtr->AllActionUnitData).EntdGenderFlags;
-      if (((EVar2 & monster) == 0) &&
-         (bVar8 = 5, (EVar1 & (female|male)) == (EVar2 & (female|male)))) {
-        bVar8 = 4;
+  Compatability = (&CompatModifier)[ZodiacDiff];
+  if (Compatability == 3) {
+    CasGender = (CasBattlePtr->AllActionUnitData).EntdGenderFlags;
+    Compatability = 1;
+    if ((CasGender & monster) == 0) {
+      TarGender = (TarBattlePtr->AllActionUnitData).EntdGenderFlags;
+      if (((TarGender & monster) == 0) &&
+         (Compatability = 5, (CasGender & (female|male)) == (TarGender & (female|male)))) {
+        Compatability = 4;
       }
     }
   }
-  uVar5 = CurrentAbilityData.AbPower * 0x19;
-  if (bVar8 == 2) {
-    CurrentAbilityData.AbPower = CurrentAbilityData.AbPower + (short)((uVar5 & 0xffff) / 100);
+  AbPower = CurrentAbilityData.AbPower * 0x19;
+  if (Compatability == 2) {
+    CurrentAbilityData.AbPower = CurrentAbilityData.AbPower + (short)((AbPower & 0xffff) / 100);
   }
   else {
-    if (bVar8 < 3) {
-      if (bVar8 != 1) goto LAB_BATTLE_BIN__80184afc;
-      sVar7 = (short)((uVar5 & 0xffff) / 100);
+    if (Compatability < 3) {
+      if (Compatability != 1) goto RoundUpFromZero;
+      CompatDet = (short)((AbPower & 0xffff) / 100);
     }
     else {
-      if (bVar8 != 4) {
-        if (bVar8 == 5) {
-          CurrentAbilityData.AbPower = CurrentAbilityData.AbPower + (short)((uVar5 & 0xffff) / 0x32)
-          ;
+      if (Compatability != 4) {
+        if (Compatability == 5) {
+          CurrentAbilityData.AbPower =
+               CurrentAbilityData.AbPower + (short)((AbPower & 0xffff) / 0x32);
         }
-        goto LAB_BATTLE_BIN__80184afc;
+        goto RoundUpFromZero;
       }
-      sVar7 = (short)((uVar5 & 0xffff) / 0x32);
+      CompatDet = (short)((AbPower & 0xffff) / 0x32);
     }
-    CurrentAbilityData.AbPower = CurrentAbilityData.AbPower - sVar7;
+    CurrentAbilityData.AbPower = CurrentAbilityData.AbPower - CompatDet;
   }
-LAB_BATTLE_BIN__80184afc:
+RoundUpFromZero:
   if (CurrentAbilityData.AbPower < 1) {
     CurrentAbilityData.AbPower = 1;
   }
@@ -77235,7 +80703,8 @@ int FUN_BATTLE_BIN__80184b24(int param_1)
       if ((EVar1 & immortal) !=
           ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) {
         (&(TarCurActPtr->StatusInfliction).Status1)[iVar8] =
-             (&(TarCurActPtr->StatusInfliction).Status1)[iVar8] & ~(&DAT_800662ee)[iVar8];
+             (&(TarCurActPtr->StatusInfliction).Status1)[iVar8] &
+             ~(&status_check_table[6].Status1)[iVar8];
       }
     }
     iVar7 = iVar8 + 1;
@@ -77312,15 +80781,18 @@ void FUN_BATTLE_BIN__80184e40(void)
   CurActionUnitData *pCVar1;
   CurActionUnitData *pCVar2;
   
-  TarCurActPtr->HitFlag = false;
+  TarCurActPtr->HitFlag = 0;
   pCVar1 = TarCurActPtr;
   TarCurActPtr->EvadeType = 5;
   pCVar2 = TarCurActPtr;
   pCVar1->HPDamage = 0;
   pCVar1->Hit_ = 0;
-  pCVar1->field60_0x2b = 0;
-  *(undefined2 *)&pCVar1->field_0x10 = 0;
-  pCVar2->field_0x25 = 0;
+  pCVar1->hi_hit_ = 0;
+  pCVar1->UniqueEffect1 =
+       ~(Golem|Moldball|Break_Item|Stole_Target_Item|Stolen_Item|Poached|SwitchTeam|Plus_Level);
+  pCVar1->UniqueEffect2 =
+       ~(Minus_Level|Secondary_Proc|Elem_Absorb|Elem_Weak|Katana_Broken|UNUSED|Knockback|Hit_Golem);
+  pCVar2->AttackType = 0;
   FUN_BATTLE_BIN__8018bcf0();
   FUN_BATTLE_BIN__8018bd34();
   return;
@@ -77332,22 +80804,37 @@ void FUN_BATTLE_BIN__80184e98(byte param_1)
 
 {
   short *psVar1;
-  CurActionUnitData *pCVar2;
-  int iVar3;
+  ushort uVar2;
+  ushort uVar3;
+  UniqueEffect2 *pUVar4;
+  CurActionUnitData *pCVar5;
+  int iVar6;
   
-  if (((TarBattlePtr->AllActionUnitData).AbsorbElem & param_1) != 0) {
-    *(ushort *)&TarCurActPtr->field_0x10 = *(ushort *)&TarCurActPtr->field_0x10 | 0x400;
+  if (((TarBattlePtr->AllActionUnitData).AbsorbElem & param_1) !=
+      ~(Dark|Holy|Water|Earth|Wind|Ice|Lightning|Fire)) {
+    uVar2._0_1_ = TarCurActPtr->UniqueEffect1;
+    uVar2._1_1_ = TarCurActPtr->UniqueEffect2;
+    pUVar4 = &TarCurActPtr->UniqueEffect2;
+    TarCurActPtr->UniqueEffect1 = (char)(uVar2 | 0x400);
+    *pUVar4 = (char)((uVar2 | 0x400) >> 8);
   }
-  if (((TarBattlePtr->AllActionUnitData).NullElem & param_1) == 0) {
-    if (((TarBattlePtr->AllActionUnitData).HalfElem & param_1) != 0) {
-      iVar3 = (uint)(ushort)TarCurActPtr->HPDamage << 0x10;
-      TarCurActPtr->HPDamage = (short)((iVar3 >> 0x10) - (iVar3 >> 0x1f) >> 1);
+  if (((TarBattlePtr->AllActionUnitData).NullElem & param_1) ==
+      ~(Dark|Holy|Water|Earth|Wind|Ice|Lightning|Fire)) {
+    if (((TarBattlePtr->AllActionUnitData).HalfElem & param_1) !=
+        ~(Dark|Holy|Water|Earth|Wind|Ice|Lightning|Fire)) {
+      iVar6 = (uint)(ushort)TarCurActPtr->HPDamage << 0x10;
+      TarCurActPtr->HPDamage = (short)((iVar6 >> 0x10) - (iVar6 >> 0x1f) >> 1);
     }
-    pCVar2 = TarCurActPtr;
-    if (((TarBattlePtr->AllActionUnitData).DoubleElem & param_1) != 0) {
+    pCVar5 = TarCurActPtr;
+    if (((TarBattlePtr->AllActionUnitData).WeakElem & param_1) !=
+        ~(Dark|Holy|Water|Earth|Wind|Ice|Lightning|Fire)) {
+      uVar3._0_1_ = TarCurActPtr->UniqueEffect1;
+      uVar3._1_1_ = TarCurActPtr->UniqueEffect2;
       psVar1 = &TarCurActPtr->HPDamage;
-      *(ushort *)&TarCurActPtr->field_0x10 = *(ushort *)&TarCurActPtr->field_0x10 | 0x800;
-      pCVar2->HPDamage = (short)((int)*psVar1 << 1);
+      pUVar4 = &TarCurActPtr->UniqueEffect2;
+      TarCurActPtr->UniqueEffect1 = (char)(uVar3 | 0x800);
+      *pUVar4 = (char)((uVar3 | 0x800) >> 8);
+      pCVar5->HPDamage = (short)((int)*psVar1 << 1);
     }
   }
   else {
@@ -77358,18 +80845,18 @@ void FUN_BATTLE_BIN__80184e98(byte param_1)
 
 
 
-void FUN_BATTLE_BIN__80184f9c(void)
+void EquipEvPhys(void)
 
 {
   ItemID IVar1;
-  ItemID IVar2;
-  bool bVar3;
-  int iVar4;
+  bool bVar2;
+  int iVar3;
+  ItemID ItemID;
   
-  bVar3 = false;
-  if ((*(byte *)((int)&(TarBattlePtr->AllActionUnitData).Reactions + 3) & 0x40) != 0) {
-    iVar4 = FUN_BATTLE_BIN__8018130c(TarBattlePtr);
-    bVar3 = iVar4 == 0;
+  bVar2 = false;
+  if (((TarBattlePtr->AllActionUnitData).Reactions4 & Weapon_Guard) != None) {
+    iVar3 = CheckIfCanAct(TarBattlePtr);
+    bVar2 = iVar3 == 0;
   }
   CurrentAbilityData.BaseHitRate = 100;
   CurrentAbilityData.AccEv = 0;
@@ -77377,29 +80864,29 @@ void FUN_BATTLE_BIN__80184f9c(void)
   CurrentAbilityData.LHEv = 0;
   CurrentAbilityData.CEv = (TarBattlePtr->AllActionUnitData).CEv;
   if (((TarBattlePtr->AllActionUnitData).EntdGenderFlags & monster) == 0) {
-    IVar1 = (TarBattlePtr->AllActionUnitData).Accessory;
-    if ((PrimaryItemData[IVar1].field_0x3 & 8) != 0) {
-      CurrentAbilityData.AccEv = AccessorySecondary[PrimaryItemData[IVar1].SecondID].PhysicalEvade;
+    ItemID = (TarBattlePtr->AllActionUnitData).Accessory;
+    if ((PrimaryItemData[ItemID].field_0x3 & 8) != 0) {
+      CurrentAbilityData.AccEv = AccessorySecondary[PrimaryItemData[ItemID].SecondID].PhysicalEvade;
     }
-    IVar1 = (TarBattlePtr->AllActionUnitData).RHWeapon;
-    IVar2 = (TarBattlePtr->AllActionUnitData).RHShield;
-    if (((PrimaryItemData[IVar1].field_0x3 & 0x80) == 0) || (!bVar3)) {
-      if ((PrimaryItemData[IVar2].field_0x3 & 0x40) != 0) {
-        CurrentAbilityData.RHEv = ShieldSecondary[PrimaryItemData[IVar2].SecondID].PhysicalEvade;
+    ItemID = (TarBattlePtr->AllActionUnitData).RHWeapon;
+    IVar1 = (TarBattlePtr->AllActionUnitData).RHShield;
+    if (((PrimaryItemData[ItemID].field_0x3 & 0x80) == 0) || (!bVar2)) {
+      if ((PrimaryItemData[IVar1].field_0x3 & 0x40) != 0) {
+        CurrentAbilityData.RHEv = ShieldSecondary[PrimaryItemData[IVar1].SecondID].PhysicalEvade;
       }
     }
     else {
-      CurrentAbilityData.RHEv = WeaponSecondary[PrimaryItemData[IVar1].SecondID].Evade;
+      CurrentAbilityData.RHEv = WeaponSecondary[PrimaryItemData[ItemID].SecondID].Evade;
     }
-    IVar1 = (TarBattlePtr->AllActionUnitData).LHWeapon;
-    IVar2 = (TarBattlePtr->AllActionUnitData).LHShield;
-    if (((PrimaryItemData[IVar1].field_0x3 & 0x80) == 0) || (!bVar3)) {
-      if ((PrimaryItemData[IVar2].field_0x3 & 0x40) != 0) {
-        CurrentAbilityData.LHEv = ShieldSecondary[PrimaryItemData[IVar2].SecondID].PhysicalEvade;
+    ItemID = (TarBattlePtr->AllActionUnitData).LHWeapon;
+    IVar1 = (TarBattlePtr->AllActionUnitData).LHShield;
+    if (((PrimaryItemData[ItemID].field_0x3 & 0x80) == 0) || (!bVar2)) {
+      if ((PrimaryItemData[IVar1].field_0x3 & 0x40) != 0) {
+        CurrentAbilityData.LHEv = ShieldSecondary[PrimaryItemData[IVar1].SecondID].PhysicalEvade;
       }
     }
     else {
-      CurrentAbilityData.LHEv = WeaponSecondary[PrimaryItemData[IVar1].SecondID].Evade;
+      CurrentAbilityData.LHEv = WeaponSecondary[PrimaryItemData[ItemID].SecondID].Evade;
     }
   }
   return;
@@ -77436,10 +80923,10 @@ void FUN_BATTLE_BIN__801851c4(void)
 
 
 
-void FUN_BATTLE_BIN__801852e4(void)
+void CheckConcentrate(void)
 
 {
-  if ((*(byte *)((int)&(CasBattlePtr->AllActionUnitData).Supports + 1) & 1) != 0) {
+  if (((CasBattlePtr->AllActionUnitData).Supports2 & Concentrate) != None) {
     Data_Null(&CurrentAbilityData.AccEv,4);
   }
   return;
@@ -77447,35 +80934,34 @@ void FUN_BATTLE_BIN__801852e4(void)
 
 
 
-void FUN_BATTLE_BIN__80185328(void)
+void DarkConfuseCheck(void)
 
 {
   if (((CasBattlePtr->AllActionUnitData).CurrentStatuses.Status2 & (Confusion|Darkness)) != empty) {
     CurrentAbilityData.BaseHitRate = CurrentAbilityData.BaseHitRate >> 1;
   }
-  FUN_BATTLE_BIN__801854b8();
+  TransparentCheck();
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__8018537c(void)
+void AbandonCalc(void)
 
 {
-  int iVar1;
+  int t;
   
-  iVar1 = FUN_BATTLE_BIN__8018130c(TarBattlePtr);
-  if ((iVar1 == 0) &&
-     ((*(byte *)((int)&(TarBattlePtr->AllActionUnitData).Reactions + 3) & 0x10) != 0)) {
+  t = CheckIfCanAct(TarBattlePtr);
+  if ((t == 0) && (((TarBattlePtr->AllActionUnitData).Reactions4 & Abandon) != None)) {
     CurrentAbilityData.BaseHitRate = CurrentAbilityData.BaseHitRate >> 1;
-    TarCurActPtr->ReactionID = 0x1c1;
+    TarCurActPtr->ReactionID = Abandon;
   }
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__801853f4(void)
+void PhysEvStatuses(void)
 
 {
   if (((TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1 & (Performing|Charging)) != empty
@@ -77493,7 +80979,7 @@ void FUN_BATTLE_BIN__801853f4(void)
 
 
 
-void FUN_BATTLE_BIN__801854b8(void)
+void TransparentCheck(void)
 
 {
   if (((CasBattlePtr->AllActionUnitData).CurrentStatuses.Status3 & Transparent) != empty) {
@@ -77504,7 +80990,7 @@ void FUN_BATTLE_BIN__801854b8(void)
 
 
 
-void FUN_BATTLE_BIN__801854fc(void)
+void FacingEvCalc(void)
 
 {
   uint uVar1;
@@ -77597,15 +81083,15 @@ LAB_BATTLE_BIN__801856ec:
 // WARNING: Removing unreachable block (ram,0x801857b4)
 // WARNING: Removing unreachable block (ram,0x801857f4)
 
-void FUN_BATTLE_BIN__80185738(void)
+void BowWeatherCalc(void)
 
 {
   int iVar1;
   int iVar2;
   
   if (PrimaryItemData[CurrentAbilityData.UsedItem3].ItemType - 0xb < 2) {
-    iVar1 = FUN_BATTLE_BIN__8013b590(0x23);
-    iVar2 = FUN_BATTLE_BIN__8013b590(0x24);
+    iVar1 = GetScriptVariable(Weather);
+    iVar2 = GetScriptVariable(DayNight);
     if (iVar2 == 1) {
       CurrentAbilityData.BaseHitRate = (byte)((int)((uint)CurrentAbilityData.BaseHitRate * 3) >> 2);
     }
@@ -77621,57 +81107,56 @@ void FUN_BATTLE_BIN__80185738(void)
 void FUN_BATTLE_BIN__80185814(void)
 
 {
-  short sVar1;
-  undefined2 uVar2;
-  byte *pbVar3;
-  int iVar4;
-  ItemID IVar5;
-  uint uVar6;
+  byte *pbVar1;
+  int failBool;
+  ItemID ActiveWeapon;
+  uint BaseHit;
+  short AbHitPercent;
+  undefined2 finalHit_;
   
   if ((CurrentAbilityData.UsedAbility2 != None) &&
      ((CurrentAbilityData.CurrentAbilityFuncData._6_1_ & 2) == 0)) {
     return;
   }
-  uVar6 = (uint)CurrentAbilityData.BaseHitRate;
-  if (((CurrentAbilityData.AccEv < uVar6) && (CurrentAbilityData.RHEv < uVar6)) &&
-     (CurrentAbilityData.LHEv < uVar6)) {
-    if (CurrentAbilityData.CEv < uVar6) {
-      sVar1._0_1_ = TarCurActPtr->Hit_;
-      sVar1._1_1_ = TarCurActPtr->field60_0x2b;
-      uVar2 = (undefined2)
-              ((((((int)((uVar6 - CurrentAbilityData.AccEv) * 100) / (int)uVar6) *
-                  ((int)((uVar6 - CurrentAbilityData.RHEv) * 100) / (int)uVar6) *
-                  ((int)((uVar6 - CurrentAbilityData.LHEv) * 100) / (int)uVar6) *
-                 ((int)((uVar6 - CurrentAbilityData.CEv) * 100) / (int)uVar6)) / 1000000) *
-               (int)sVar1) / 100);
-      pbVar3 = &TarCurActPtr->field60_0x2b;
-      TarCurActPtr->Hit_ = (char)uVar2;
-      *pbVar3 = (char)((ushort)uVar2 >> 8);
+  BaseHit = (uint)CurrentAbilityData.BaseHitRate;
+  if (((CurrentAbilityData.AccEv < BaseHit) && (CurrentAbilityData.RHEv < BaseHit)) &&
+     (CurrentAbilityData.LHEv < BaseHit)) {
+    if (CurrentAbilityData.CEv < BaseHit) {
+      AbHitPercent._0_1_ = TarCurActPtr->Hit_;
+      AbHitPercent._1_1_ = TarCurActPtr->hi_hit_;
+      finalHit_ = (undefined2)
+                  ((((((int)((BaseHit - CurrentAbilityData.AccEv) * 100) / (int)BaseHit) *
+                      ((int)((BaseHit - CurrentAbilityData.RHEv) * 100) / (int)BaseHit) *
+                      ((int)((BaseHit - CurrentAbilityData.LHEv) * 100) / (int)BaseHit) *
+                     ((int)((BaseHit - CurrentAbilityData.CEv) * 100) / (int)BaseHit)) / 1000000) *
+                   (int)AbHitPercent) / 100);
+      pbVar1 = &TarCurActPtr->hi_hit_;
+      TarCurActPtr->Hit_ = (char)finalHit_;
+      *pbVar1 = (char)((ushort)finalHit_ >> 8);
       goto LAB_BATTLE_BIN__801859d4;
     }
   }
-  TarCurActPtr->HitFlag = false;
-  pbVar3 = &TarCurActPtr->field60_0x2b;
+  TarCurActPtr->HitFlag = 0;
+  pbVar1 = &TarCurActPtr->hi_hit_;
   TarCurActPtr->Hit_ = 0;
-  *pbVar3 = 0;
+  *pbVar1 = 0;
 LAB_BATTLE_BIN__801859d4:
-  iVar4 = FUN_BATTLE_BIN__801848d8
-                    ((uint)CurrentAbilityData.AccEv,uVar6,1,
-                     (TarBattlePtr->AllActionUnitData).Accessory);
-  if (iVar4 == 0) {
-    IVar5 = (TarBattlePtr->AllActionUnitData).RHWeapon;
-    if (IVar5 == NONE_ENTD) {
-      IVar5 = (TarBattlePtr->AllActionUnitData).RHShield;
+  failBool = AttackEvadeCalc((uint)CurrentAbilityData.AccEv,BaseHit,1,
+                             (TarBattlePtr->AllActionUnitData).Accessory);
+  if (failBool == 0) {
+    ActiveWeapon = (TarBattlePtr->AllActionUnitData).RHWeapon;
+    if (ActiveWeapon == NONE_ENTD) {
+      ActiveWeapon = (TarBattlePtr->AllActionUnitData).RHShield;
     }
-    iVar4 = FUN_BATTLE_BIN__801848d8((uint)CurrentAbilityData.RHEv,uVar6,2,IVar5);
-    if (iVar4 == 0) {
-      IVar5 = (TarBattlePtr->AllActionUnitData).LHWeapon;
-      if (IVar5 == NONE_ENTD) {
-        IVar5 = (TarBattlePtr->AllActionUnitData).LHShield;
+    failBool = AttackEvadeCalc((uint)CurrentAbilityData.RHEv,BaseHit,2,ActiveWeapon);
+    if (failBool == 0) {
+      ActiveWeapon = (TarBattlePtr->AllActionUnitData).LHWeapon;
+      if (ActiveWeapon == NONE_ENTD) {
+        ActiveWeapon = (TarBattlePtr->AllActionUnitData).LHShield;
       }
-      iVar4 = FUN_BATTLE_BIN__801848d8((uint)CurrentAbilityData.LHEv,uVar6,3,IVar5);
-      if (iVar4 == 0) {
-        FUN_BATTLE_BIN__801848d8((uint)CurrentAbilityData.CEv,uVar6,4,0xff);
+      failBool = AttackEvadeCalc((uint)CurrentAbilityData.LHEv,BaseHit,3,ActiveWeapon);
+      if (failBool == 0) {
+        AttackEvadeCalc((uint)CurrentAbilityData.CEv,BaseHit,4,NONE_ENTD);
       }
     }
   }
@@ -77911,7 +81396,7 @@ void FUN_BATTLE_BIN__80185fa4(void)
   int iVar1;
   
   if (((CasBattlePtr->AllActionUnitData).BoostElem & CurrentAbilityData.CurrentWeaponFuncData._6_1_)
-      != 0) {
+      != ~(Dark|Holy|Water|Earth|Wind|Ice|Lightning|Fire)) {
     iVar1 = CurrentAbilityData.AbPower * 5;
     if (iVar1 < 0) {
       iVar1 = iVar1 + 3;
@@ -77929,7 +81414,8 @@ void FUN_BATTLE_BIN__80185ffc(void)
   int iVar1;
   
   if (((CasBattlePtr->AllActionUnitData).BoostElem &
-      CurrentAbilityData.CurrentAbilityFuncData.Element) != 0) {
+      CurrentAbilityData.CurrentAbilityFuncData.Element) !=
+      ~(Dark|Holy|Water|Earth|Wind|Ice|Lightning|Fire)) {
     iVar1 = CurrentAbilityData.AbPower * 5;
     if (iVar1 < 0) {
       iVar1 = iVar1 + 3;
@@ -77948,13 +81434,13 @@ void FUN_BATTLE_BIN__80186054(void)
       ((CurrentAbilityData.CurrentWeaponFuncData._1_1_ & 4) != 0)) && (CurrentAbilityData._hands)) {
     CurrentAbilityData.AbPower = (short)((int)CurrentAbilityData.AbPower << 1);
   }
-  if ((*(byte *)((int)&(CasBattlePtr->AllActionUnitData).Supports + 1) & 0x10) != 0) {
+  if (((CasBattlePtr->AllActionUnitData).Supports2 & Attack_UP) != None) {
     CurrentAbilityData.AbPower =
          (short)((ulonglong)((longlong)((int)CurrentAbilityData.AbPower << 2) * 0x55555556) >> 0x20)
          - (short)(((int)CurrentAbilityData.AbPower << 2) >> 0x1f);
   }
   if ((CurrentAbilityData.UsedItem3 == None) &&
-     ((*(byte *)((int)&(CasBattlePtr->AllActionUnitData).Supports + 2) & 0x20) != 0)) {
+     (((CasBattlePtr->AllActionUnitData).Supports3 & Martial_Arts) != None)) {
     CurrentAbilityData.AbPower = (short)((CurrentAbilityData.AbPower * 3) / 2);
   }
   return;
@@ -77965,12 +81451,12 @@ void FUN_BATTLE_BIN__80186054(void)
 void FUN_BATTLE_BIN__8018614c(void)
 
 {
-  if ((*(byte *)((int)&(CasBattlePtr->AllActionUnitData).Supports + 1) & 0x10) != 0) {
+  if (((CasBattlePtr->AllActionUnitData).Supports2 & Attack_UP) != None) {
     CurrentAbilityData.AbPower =
          (short)((ulonglong)((longlong)((int)CurrentAbilityData.AbPower << 2) * 0x55555556) >> 0x20)
          - (short)(((int)CurrentAbilityData.AbPower << 2) >> 0x1f);
   }
-  if (((*(byte *)((int)&(CasBattlePtr->AllActionUnitData).Supports + 2) & 0x20) != 0) &&
+  if ((((CasBattlePtr->AllActionUnitData).Supports3 & Martial_Arts) != None) &&
      (PrimaryItemData[CurrentAbilityData.UsedItem3].ItemType == 0)) {
     CurrentAbilityData.AbPower = (short)((CurrentAbilityData.AbPower * 3) / 2);
   }
@@ -77982,7 +81468,7 @@ void FUN_BATTLE_BIN__8018614c(void)
 void FUN_BATTLE_BIN__80186204(void)
 
 {
-  if ((*(byte *)((int)&(CasBattlePtr->AllActionUnitData).Supports + 1) & 4) != 0) {
+  if (((CasBattlePtr->AllActionUnitData).Supports2 & Magic_Attack_UP) != None) {
     CurrentAbilityData.AbPower =
          (short)((ulonglong)((longlong)((int)CurrentAbilityData.AbPower << 2) * 0x55555556) >> 0x20)
          - (short)(((int)CurrentAbilityData.AbPower << 2) >> 0x1f);
@@ -78009,7 +81495,7 @@ void FUN_BATTLE_BIN__80186254(void)
 void FUN_BATTLE_BIN__801862cc(void)
 
 {
-  if ((*(byte *)((int)&(TarBattlePtr->AllActionUnitData).Supports + 1) & 8) != 0) {
+  if (((TarBattlePtr->AllActionUnitData).Supports2 & Defense_UP) != None) {
     CurrentAbilityData.AbPower =
          (short)((ulonglong)((longlong)((int)CurrentAbilityData.AbPower << 1) * 0x55555556) >> 0x20)
          - (short)(((int)CurrentAbilityData.AbPower << 1) >> 0x1f);
@@ -78022,7 +81508,7 @@ void FUN_BATTLE_BIN__801862cc(void)
 void FUN_BATTLE_BIN__8018631c(void)
 
 {
-  if ((*(byte *)((int)&(TarBattlePtr->AllActionUnitData).Supports + 1) & 2) != 0) {
+  if (((TarBattlePtr->AllActionUnitData).Supports2 & Magic_Defense_UP) != None) {
     CurrentAbilityData.AbPower =
          (short)((ulonglong)((longlong)((int)CurrentAbilityData.AbPower << 1) * 0x55555556) >> 0x20)
          - (short)(((int)CurrentAbilityData.AbPower << 1) >> 0x1f);
@@ -78077,7 +81563,7 @@ void FUN_BATTLE_BIN__801864f8(void)
   
   bVar1 = FUN_BATTLE_BIN__8018eed8(100,4);
   if (CONCAT31(extraout_var,bVar1) == 0) {
-    TarCurActPtr->CritFlag = true;
+    TarCurActPtr->CritFlag = 1;
     iVar2 = FUN_BATTLE_BIN__8018eea0();
     iVar2 = iVar2 * CurrentAbilityData.AbPower;
     if (iVar2 < 0) {
@@ -78099,7 +81585,7 @@ void FUN_BATTLE_BIN__80186568(void)
   
   pCVar2 = TarCurActPtr;
   sVar1 = CurrentAbilityData.AbPower * CurrentAbilityData.UnitPower;
-  TarCurActPtr->field_0x25 = 0x80;
+  TarCurActPtr->AttackType = HPDamage;
   pCVar2->HPDamage = sVar1;
   return;
 }
@@ -78114,7 +81600,7 @@ void FUN_BATTLE_BIN__8018659c(void)
   sVar1 = CurrentAbilityData.AbPower;
   if (CurrentAbilityData.UsedAbility2 != Golem) {
     CurrentAbilityData.AbPower = CurrentAbilityData.UnitPower;
-    FUN_BATTLE_BIN__80184964();
+    ZodiacCompat();
     CurrentAbilityData.UnitPower = CurrentAbilityData.AbPower;
   }
   CurrentAbilityData.AbPower = sVar1;
@@ -78134,7 +81620,7 @@ void FUN_BATTLE_BIN__80186624(void)
   pCVar2 = TarCurActPtr;
   uVar1 = (TarBattlePtr->AllActionUnitData).MaxHP;
   uVar3 = (uint)CurrentAbilityData.CurrentAbilityFuncData.Y;
-  TarCurActPtr->field_0x25 = TarCurActPtr->field_0x25 | 0x80;
+  TarCurActPtr->AttackType = TarCurActPtr->AttackType | HPDamage;
   pCVar2->HPDamage = (short)((uVar1 * uVar3 + 99) / 100);
   return;
 }
@@ -78152,7 +81638,7 @@ void FUN_BATTLE_BIN__8018668c(void)
   uVar1 = (TarBattlePtr->AllActionUnitData).MaxMP;
   uVar3 = (uint)CurrentAbilityData.CurrentAbilityFuncData.Y;
                     // Possible PsyQ macro: setPolyF3()
-  TarCurActPtr->field_0x25 = 0x20;
+  TarCurActPtr->AttackType = MPDamage;
   pCVar2->MPDamage = (short)((uVar1 * uVar3 + 99) / 100);
   return;
 }
@@ -78168,7 +81654,7 @@ void FUN_BATTLE_BIN__801866ec(void)
   else {
     TarCurActPtr->HPDamage = (TarBattlePtr->AllActionUnitData).HP - 1;
   }
-  TarCurActPtr->field_0x25 = 0x80;
+  TarCurActPtr->AttackType = HPDamage;
   return;
 }
 
@@ -78187,7 +81673,7 @@ void FUN_BATTLE_BIN__80186744(void)
   ;
   if ((((TarBattlePtr->AllActionUnitData).EntdTeamFlags & light_blue) ==
        ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) &&
-     (iVar4 = FUN_BATTLE_BIN__8013b590(0x2c), iVar4 < iVar5)) {
+     (iVar4 = GetScriptVariable(WarFunds), iVar4 < iVar5)) {
     iVar5 = iVar4;
   }
   pCVar2 = CasCurActPtr;
@@ -78195,13 +81681,13 @@ void FUN_BATTLE_BIN__80186744(void)
     FUN_BATTLE_BIN__8018430c();
   }
   else {
-    CasCurActPtr->HitFlag = true;
+    CasCurActPtr->HitFlag = 1;
     pCVar3 = CasCurActPtr;
     pCVar2->GilLost = (short)iVar5;
-    pCVar3->field_0x25 = 1;
+    pCVar3->AttackType = StatAlter;
     pCVar2 = TarCurActPtr;
     sVar1 = CasCurActPtr->GilLost;
-    TarCurActPtr->field_0x25 = 1;
+    TarCurActPtr->AttackType = StatAlter;
     pCVar2->GilLost = -sVar1;
   }
   return;
@@ -78228,10 +81714,10 @@ void FUN_BATTLE_BIN__80186814(void)
   }
   else {
     CasCurActPtr->StolenEXP = bVar2;
-    CasCurActPtr->HitFlag = true;
-    CasCurActPtr->field_0x25 = 1;
+    CasCurActPtr->HitFlag = 1;
+    CasCurActPtr->AttackType = StatAlter;
     TarCurActPtr->StolenEXP = bVar2 + 0x80;
-    TarCurActPtr->field_0x25 = 1;
+    TarCurActPtr->AttackType = StatAlter;
   }
   return;
 }
@@ -78254,8 +81740,8 @@ void FUN_BATTLE_BIN__8018691c(void)
     iVar4 = iVar4 + 0x7fff;
   }
   sVar3 = ((short)(iVar4 >> 0xf) + 1) * CurrentAbilityData.AbPower;
-  TarCurActPtr->field_0x25 = 0x80;
-  bVar2 = DAT_BATTLE_BIN__8018f5fc == 0;
+  TarCurActPtr->AttackType = HPDamage;
+  bVar2 = ActionState == 0;
   pCVar1->HPDamage = sVar3;
   if (bVar2) {
     iVar4 = FUN_BATTLE_BIN__8018eea0();
@@ -78282,28 +81768,28 @@ void FUN_BATTLE_BIN__801869ec(void)
   switch(CurrentAbilityData.UsedAbility2) {
   case AngelSong:
     TarCurActPtr->MPRecovery = CurrentAbilityData.AbPower + CurrentAbilityData.UnitPower;
-    pCVar1->field_0x25 = 0x10;
+    pCVar1->AttackType = MPRecovery;
     return;
   case LifeSong:
     TarCurActPtr->HPRecovery = CurrentAbilityData.AbPower + CurrentAbilityData.UnitPower;
-    pCVar1->field_0x25 = 0x40;
+    pCVar1->AttackType = HPRecovery;
     return;
   case CheerSong:
-    TarCurActPtr->field_0x12 = 0x81;
+    TarCurActPtr->SPChange = 0x81;
     break;
   case BattleSong:
-    TarCurActPtr->field_0x14 = 0x81;
+    TarCurActPtr->PAChange = 0x81;
     break;
   case MagicSong:
-    TarCurActPtr->field_0x15 = 0x81;
+    TarCurActPtr->MAChange = 0x81;
     break;
   case NamelessSong:
     _8_InflictStatus();
     return;
   case LastSong:
-    TarCurActPtr->field_0x13 = 0xff;
+    TarCurActPtr->CTChange = Quick;
   }
-  TarCurActPtr->field_0x25 = 1;
+  TarCurActPtr->AttackType = StatAlter;
   return;
 }
 
@@ -78318,28 +81804,28 @@ void FUN_BATTLE_BIN__80186af8(void)
   switch(CurrentAbilityData.UsedAbility2) {
   case WitchHunt:
     TarCurActPtr->MPDamage = CurrentAbilityData.AbPower + CurrentAbilityData.UnitPower;
-    pCVar1->field_0x25 = 0x20;
+    pCVar1->AttackType = MPDamage;
     return;
   case Wiznaibus:
     TarCurActPtr->HPDamage = CurrentAbilityData.AbPower + CurrentAbilityData.UnitPower;
-    pCVar1->field_0x25 = 0x80;
+    pCVar1->AttackType = HPDamage;
     return;
   case SlowDance:
-    TarCurActPtr->field_0x12 = 1;
+    TarCurActPtr->SPChange = 1;
     break;
   case PolkaPolka:
-    TarCurActPtr->field_0x14 = 1;
+    TarCurActPtr->PAChange = 1;
     break;
   case Disillusion:
-    TarCurActPtr->field_0x15 = 1;
+    TarCurActPtr->MAChange = 1;
     break;
   case NamelessDance:
     _8_InflictStatus();
     return;
   case LastDance:
-    TarCurActPtr->field_0x13 = 0x7f;
+    TarCurActPtr->CTChange = Value;
   }
-  TarCurActPtr->field_0x25 = 1;
+  TarCurActPtr->AttackType = StatAlter;
   return;
 }
 
@@ -78350,19 +81836,19 @@ void FUN_BATTLE_BIN__80186c04(void)
 {
   switch(CurrentAbilityData.UsedAbility2) {
   case Persuade:
-    TarCurActPtr->field_0x13 = 0x7f;
+    TarCurActPtr->CTChange = Value;
     break;
   case Praise:
-    TarCurActPtr->field_0x16 = CurrentAbilityData.CurrentAbilityFuncData.Y | 0x80;
+    TarCurActPtr->BraveChange = CurrentAbilityData.CurrentAbilityFuncData.Y | Bonus;
     break;
   case Threaten:
-    TarCurActPtr->field_0x16 = CurrentAbilityData.CurrentAbilityFuncData.Y & 0x7f;
+    TarCurActPtr->BraveChange = CurrentAbilityData.CurrentAbilityFuncData.Y & Value;
     break;
   case Preach:
-    TarCurActPtr->field_0x17 = CurrentAbilityData.CurrentAbilityFuncData.Y | 0x80;
+    TarCurActPtr->FaithChange = CurrentAbilityData.CurrentAbilityFuncData.Y | Bonus;
     break;
   case Solution:
-    TarCurActPtr->field_0x17 = CurrentAbilityData.CurrentAbilityFuncData.Y & 0x7f;
+    TarCurActPtr->FaithChange = CurrentAbilityData.CurrentAbilityFuncData.Y & Value;
     break;
   default:
     _8_InflictStatus();
@@ -78371,7 +81857,7 @@ void FUN_BATTLE_BIN__80186c04(void)
     FUN_BATTLE_BIN__80186744();
     return;
   }
-  TarCurActPtr->field_0x25 = 1;
+  TarCurActPtr->AttackType = StatAlter;
   return;
 }
 
@@ -78380,14 +81866,14 @@ void FUN_BATTLE_BIN__80186c04(void)
 void _B_Scream(void)
 
 {
-  byte bVar1;
+  StatChange SVar1;
   
-  TarCurActPtr->field_0x16 = CurrentAbilityData.CurrentAbilityFuncData.X | 0x80;
-  bVar1 = CurrentAbilityData.CurrentAbilityFuncData.Y | 0x80;
-  TarCurActPtr->field_0x14 = bVar1;
-  TarCurActPtr->field_0x15 = bVar1;
-  TarCurActPtr->field_0x12 = bVar1;
-  TarCurActPtr->field_0x25 = 1;
+  TarCurActPtr->BraveChange = CurrentAbilityData.CurrentAbilityFuncData.X | Bonus;
+  SVar1 = CurrentAbilityData.CurrentAbilityFuncData.Y | Bonus;
+  TarCurActPtr->PAChange = SVar1;
+  TarCurActPtr->MAChange = SVar1;
+  TarCurActPtr->SPChange = SVar1;
+  TarCurActPtr->AttackType = StatAlter;
   return;
 }
 
@@ -78402,12 +81888,12 @@ void _C_Wish(void)
   
   pCVar3 = CasCurActPtr;
   uVar2 = (CasBattlePtr->AllActionUnitData).MaxHP;
-  CasCurActPtr->field_0x25 = 0x80;
+  CasCurActPtr->AttackType = HPDamage;
   pCVar3->HPDamage = uVar2 / 5;
-  CasCurActPtr->HitFlag = true;
+  CasCurActPtr->HitFlag = 1;
   pCVar3 = TarCurActPtr;
   sVar1 = CasCurActPtr->HPDamage;
-  TarCurActPtr->field_0x25 = 0x40;
+  TarCurActPtr->AttackType = HPRecovery;
   pCVar3->HPRecovery = (short)((int)sVar1 << 1);
   return;
 }
@@ -78424,7 +81910,7 @@ void _3_RevengeDMG(void)
   pCVar3 = TarCurActPtr;
   uVar1 = (CasBattlePtr->AllActionUnitData).MaxHP;
   uVar2 = (CasBattlePtr->AllActionUnitData).HP;
-  TarCurActPtr->field_0x25 = 0x80;
+  TarCurActPtr->AttackType = HPDamage;
   pCVar3->HPDamage = uVar1 - uVar2;
   return;
 }
@@ -78434,8 +81920,8 @@ void _3_RevengeDMG(void)
 void FUN_BATTLE_BIN__80186ea4(void)
 
 {
-  TarCurActPtr->field_0x16 = CurrentAbilityData.CurrentAbilityFuncData.Y & 0x7f;
-  TarCurActPtr->field_0x25 = 1;
+  TarCurActPtr->BraveChange = CurrentAbilityData.CurrentAbilityFuncData.Y & Value;
+  TarCurActPtr->AttackType = StatAlter;
   return;
 }
 
@@ -78502,7 +81988,7 @@ void FUN_BATTLE_BIN__80186ff8(void)
     (TarCurActPtr->StatusRemoval).Status3 = (TarCurActPtr->StatusRemoval).Status3 | Oil;
     iVar3 = FUN_BATTLE_BIN__80184b24(0);
     if (iVar3 != 0) {
-      TarCurActPtr->field_0x25 = 8;
+      TarCurActPtr->AttackType = StatusChange;
     }
   }
   bVar1 = (TarBattlePtr->CurActionTargetData).field_0x14;
@@ -78524,19 +82010,22 @@ void FUN_BATTLE_BIN__80186ff8(void)
 void FUN_BATTLE_BIN__801870fc(void)
 
 {
-  short sVar1;
-  CurActionUnitData *pCVar2;
+  ushort uVar1;
+  short sVar2;
+  CurActionUnitData *pCVar3;
   
-  pCVar2 = TarCurActPtr;
+  pCVar3 = TarCurActPtr;
   if (TarCurActPtr->EvadeType != 5) {
-    if ((*(ushort *)&TarCurActPtr->field_0x10 & 0x400) == 0) {
-      TarCurActPtr->field_0x25 = 0x80;
+    uVar1._0_1_ = TarCurActPtr->UniqueEffect1;
+    uVar1._1_1_ = TarCurActPtr->UniqueEffect2;
+    if ((uVar1 & 0x400) == 0) {
+      TarCurActPtr->AttackType = HPDamage;
     }
     else {
-      sVar1 = TarCurActPtr->HPDamage;
+      sVar2 = TarCurActPtr->HPDamage;
       TarCurActPtr->HPDamage = 0;
-      pCVar2->field_0x25 = 0x40;
-      pCVar2->HPRecovery = sVar1;
+      pCVar3->AttackType = HPRecovery;
+      pCVar3->HPRecovery = sVar2;
     }
   }
   return;
@@ -78576,24 +82065,24 @@ void FUN_BATTLE_BIN__80187248(void)
   if (((TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1 & Undead) == empty) {
     FUN_BATTLE_BIN__8018ba44();
     pCVar2 = CasCurActPtr;
-    if (TarCurActPtr->HitFlag != false) {
+    if (TarCurActPtr->HitFlag != 0) {
       CasCurActPtr->HPRecovery = TarCurActPtr->HPDamage;
-      pCVar2->field_0x25 = 0x40;
-      CasCurActPtr->HitFlag = true;
-      TarCurActPtr->field_0x25 = 0x80;
+      pCVar2->AttackType = HPRecovery;
+      CasCurActPtr->HitFlag = 1;
+      TarCurActPtr->AttackType = HPDamage;
     }
   }
   else {
     FUN_BATTLE_BIN__8018ba44();
     pCVar2 = CasCurActPtr;
-    if (TarCurActPtr->HitFlag != false) {
+    if (TarCurActPtr->HitFlag != 0) {
       CasCurActPtr->HPDamage = TarCurActPtr->HPDamage;
-      pCVar2->field_0x25 = 0x80;
-      CasCurActPtr->HitFlag = true;
+      pCVar2->AttackType = HPDamage;
+      CasCurActPtr->HitFlag = 1;
       pCVar2 = TarCurActPtr;
       sVar1 = TarCurActPtr->HPDamage;
       TarCurActPtr->HPDamage = 0;
-      pCVar2->field_0x25 = 0x40;
+      pCVar2->AttackType = HPRecovery;
       pCVar2->HPRecovery = sVar1;
     }
   }
@@ -78611,15 +82100,15 @@ void FUN_BATTLE_BIN__80187350(void)
   
   pCVar2 = TarCurActPtr;
   if (((TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1 & Undead) == empty) {
-    TarCurActPtr->field_0x25 = TarCurActPtr->field_0x25 & 0x7f;
+    TarCurActPtr->AttackType = TarCurActPtr->AttackType & ~HPDamage;
     pCVar3 = TarCurActPtr;
     sVar1 = pCVar2->HPDamage;
     pCVar2->HPDamage = 0;
     pCVar2->HPRecovery = sVar1;
-    pCVar3->field_0x25 = pCVar3->field_0x25 | 0x40;
+    pCVar3->AttackType = pCVar3->AttackType | HPRecovery;
   }
   else {
-    TarCurActPtr->field_0x25 = 0x80;
+    TarCurActPtr->AttackType = HPDamage;
     DAT_BATTLE_BIN__80193860 = 0;
   }
   return;
@@ -78637,14 +82126,14 @@ void FUN_BATTLE_BIN__801873d8(void)
   pCVar2 = TarCurActPtr;
   if (((TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1 & Undead) == empty) {
     if (((TarBattlePtr->AllActionUnitData).ImmuneStatuses.Status1 & Dead) == empty) {
-      TarCurActPtr->field_0x25 = 0x80;
+      TarCurActPtr->AttackType = HPDamage;
     }
     else {
       FUN_BATTLE_BIN__8018430c();
     }
   }
   else {
-    TarCurActPtr->field_0x25 = 0x40;
+    TarCurActPtr->AttackType = HPRecovery;
     pCVar3 = TarCurActPtr;
     sVar1 = pCVar2->HPDamage;
     pCVar2->HPDamage = 0;
@@ -78665,14 +82154,14 @@ void FUN_BATTLE_BIN__8018746c(void)
   pCVar2 = TarCurActPtr;
   sVar1 = TarCurActPtr->HPDamage;
   TarCurActPtr->HPDamage = 0;
-  pCVar2->field_0x25 = 0x20;
+  pCVar2->AttackType = MPDamage;
   pCVar2->MPDamage = sVar1;
   FUN_BATTLE_BIN__8018ba44();
   pCVar2 = CasCurActPtr;
-  if (TarCurActPtr->HitFlag != false) {
+  if (TarCurActPtr->HitFlag != 0) {
     CasCurActPtr->MPRecovery = TarCurActPtr->MPDamage;
-    pCVar2->field_0x25 = 0x10;
-    CasCurActPtr->HitFlag = true;
+    pCVar2->AttackType = MPRecovery;
+    CasCurActPtr->HitFlag = 1;
   }
   return;
 }
@@ -78688,7 +82177,7 @@ void FUN_BATTLE_BIN__801874ec(void)
   pCVar2 = TarCurActPtr;
   sVar1 = TarCurActPtr->HPDamage;
   TarCurActPtr->HPDamage = 0;
-  pCVar2->field_0x25 = 0x10;
+  pCVar2->AttackType = MPRecovery;
   pCVar2->MPRecovery = sVar1;
   return;
 }
@@ -78704,20 +82193,20 @@ void FUN_BATTLE_BIN__80187510(void)
   CurActionUnitData *pCVar4;
   bool bVar5;
   undefined3 extraout_var;
-  int iVar6;
+  int threshold;
   
   pCVar4 = TarCurActPtr;
-  iVar3 = DAT_BATTLE_BIN__8018f5fc;
-  iVar6 = (int)TarCurActPtr->HPDamage;
-  if (iVar6 < 100) {
+  iVar3 = ActionState;
+  threshold = (int)TarCurActPtr->HPDamage;
+  if (threshold < 100) {
     sVar1._0_1_ = TarCurActPtr->Hit_;
-    sVar1._1_1_ = TarCurActPtr->field60_0x2b;
+    sVar1._1_1_ = TarCurActPtr->hi_hit_;
     TarCurActPtr->HPDamage = 0;
-    uVar2 = (undefined2)((iVar6 * sVar1) / 100);
+    uVar2 = (undefined2)((threshold * sVar1) / 100);
     pCVar4->Hit_ = (char)uVar2;
-    pCVar4->field60_0x2b = (char)((ushort)uVar2 >> 8);
-    if (((iVar3 == 0) || (iVar6 == 0)) &&
-       (bVar5 = PassFail_Roll(100,iVar6), CONCAT31(extraout_var,bVar5) != 0)) {
+    pCVar4->hi_hit_ = (char)((ushort)uVar2 >> 8);
+    if (((iVar3 == 0) || (threshold == 0)) &&
+       (bVar5 = PassFail_Roll(100,threshold), CONCAT31(extraout_var,bVar5) != 0)) {
       FUN_BATTLE_BIN__8018433c();
       TarCurActPtr->HPDamage = 0;
     }
@@ -78757,10 +82246,10 @@ void FUN_BATTLE_BIN__80187638(void)
 {
   byte *pbVar1;
   
-  if ((*(byte *)((int)&(TarBattlePtr->AllActionUnitData).Supports + 2) & 4) != 0) {
-    TarCurActPtr->HitFlag = false;
+  if (((TarBattlePtr->AllActionUnitData).Supports3 & Maintenance) != None) {
+    TarCurActPtr->HitFlag = 0;
     TarCurActPtr->EvadeType = 7;
-    pbVar1 = &TarCurActPtr->field60_0x2b;
+    pbVar1 = &TarCurActPtr->hi_hit_;
     TarCurActPtr->Hit_ = 0;
     *pbVar1 = 0;
   }
@@ -78772,12 +82261,17 @@ void FUN_BATTLE_BIN__80187638(void)
 void FUN_BATTLE_BIN__80187690(void)
 
 {
-  bool bVar1;
+  ushort uVar1;
+  UniqueEffect2 *pUVar2;
+  bool bVar3;
   undefined3 extraout_var;
   
-  if ((DAT_BATTLE_BIN__8018f5fc == 0) &&
-     (bVar1 = PassFail_Roll(100,0x13), CONCAT31(extraout_var,bVar1) == 0)) {
-    *(ushort *)&TarCurActPtr->field_0x10 = *(ushort *)&TarCurActPtr->field_0x10 | 0x200;
+  if ((ActionState == 0) && (bVar3 = PassFail_Roll(100,0x13), CONCAT31(extraout_var,bVar3) == 0)) {
+    uVar1._0_1_ = TarCurActPtr->UniqueEffect1;
+    uVar1._1_1_ = TarCurActPtr->UniqueEffect2;
+    pUVar2 = &TarCurActPtr->UniqueEffect2;
+    TarCurActPtr->UniqueEffect1 = (char)(uVar1 | 0x200);
+    *pUVar2 = (char)((uVar1 | 0x200) >> 8);
   }
   return;
 }
@@ -78856,8 +82350,8 @@ void FUN_BATTLE_BIN__80187730(void)
 void FUN_BATTLE_BIN__8018783c(void)
 
 {
-  TarCurActPtr->field_0x13 = 0xff;
-  TarCurActPtr->field_0x25 = 1;
+  TarCurActPtr->CTChange = Quick;
+  TarCurActPtr->AttackType = StatAlter;
   return;
 }
 
@@ -78868,20 +82362,20 @@ void FUN_BATTLE_BIN__80187860(void)
 {
   if ((CurrentAbilityData.UsedAbility2 == PowerBreak) ||
      (CurrentAbilityData.UsedAbility2 == PowerRuin)) {
-    TarCurActPtr->field_0x14 = CurrentAbilityData.CurrentAbilityFuncData.X & 0x7f;
+    TarCurActPtr->PAChange = CurrentAbilityData.CurrentAbilityFuncData.X & Value;
   }
   else if ((CurrentAbilityData.UsedAbility2 == MindBreak) ||
           (CurrentAbilityData.UsedAbility2 == MindRuin)) {
-    TarCurActPtr->field_0x15 = CurrentAbilityData.CurrentAbilityFuncData.X & 0x7f;
+    TarCurActPtr->MAChange = CurrentAbilityData.CurrentAbilityFuncData.X & Value;
   }
   else {
     if ((CurrentAbilityData.UsedAbility2 != SpeedBreak) &&
        (CurrentAbilityData.UsedAbility2 != SpeedRuin)) {
       return;
     }
-    TarCurActPtr->field_0x12 = CurrentAbilityData.CurrentAbilityFuncData.X & 0x7f;
+    TarCurActPtr->SPChange = CurrentAbilityData.CurrentAbilityFuncData.X & Value;
   }
-  TarCurActPtr->field_0x25 = TarCurActPtr->field_0x25 | 1;
+  TarCurActPtr->AttackType = TarCurActPtr->AttackType | StatAlter;
   return;
 }
 
@@ -78890,20 +82384,27 @@ void FUN_BATTLE_BIN__80187860(void)
 void FUN_BATTLE_BIN__80187910(void)
 
 {
-  bool bVar1;
+  UniqueEffect2 *pUVar1;
+  bool bVar2;
   undefined3 extraout_var;
   
   if ((CasBattlePtr->AllActionUnitData).JobID != Mime) {
-    CasCurActPtr->HitFlag = true;
+    CasCurActPtr->HitFlag = 1;
     CasCurActPtr->ItemBreakID = (CasBattlePtr->CurActionTargetData).UsedItem;
     CasCurActPtr->EvadeType = 8;
-    if ((DAT_BATTLE_BIN__8018f5fc == 0) &&
-       (bVar1 = PassFail_Roll(100,(uint)CurrentAbilityData.CurrentWeaponFuncData.WeaponPower),
-       CONCAT31(extraout_var,bVar1) != 0)) {
-      *(undefined2 *)&CasCurActPtr->field_0x10 = 8;
+    if ((ActionState == 0) &&
+       (bVar2 = PassFail_Roll(100,(uint)CurrentAbilityData.CurrentWeaponFuncData.WeaponPower),
+       CONCAT31(extraout_var,bVar2) != 0)) {
+      pUVar1 = &CasCurActPtr->UniqueEffect2;
+      CasCurActPtr->UniqueEffect1 = Stole_Target_Item;
+      *pUVar1 = ~(Minus_Level|Secondary_Proc|Elem_Absorb|Elem_Weak|Katana_Broken|UNUSED|Knockback|
+                 Hit_Golem);
     }
     else {
-      *(undefined2 *)&CasCurActPtr->field_0x10 = 0x1000;
+      pUVar1 = &CasCurActPtr->UniqueEffect2;
+      CasCurActPtr->UniqueEffect1 =
+           ~(Golem|Moldball|Break_Item|Stole_Target_Item|Stolen_Item|Poached|SwitchTeam|Plus_Level);
+      *pUVar1 = Katana_Broken;
     }
   }
   return;
@@ -78920,20 +82421,21 @@ undefined4 FUN_BATTLE_BIN__801879c8(void)
   uint uVar4;
   uint uVar5;
   
-  TarCurActPtr->field_0x19 = 0xfe;
+  TarCurActPtr->RemoveEquipmentFlags =
+       LeftHandShield|LeftHandWeapon|RightHandShield|RightHandWeapon|Accessory|Armor|Helmet;
   if (((TarBattlePtr->AllActionUnitData).EntdGenderFlags & monster) == 0) {
     if (((CurrentAbilityData.UsedAbility2 == HeadBreak) ||
         (CurrentAbilityData.UsedAbility2 == BlastarPunch)) ||
        (CurrentAbilityData.UsedAbility2 == StealHelmet)) {
       if ((TarBattlePtr->AllActionUnitData).Head == NONE_ENTD) goto LAB_BATTLE_BIN__80187c88;
-      TarCurActPtr->field_0x19 = 0x80;
+      TarCurActPtr->RemoveEquipmentFlags = Helmet;
       IVar2 = (TarBattlePtr->AllActionUnitData).Head;
     }
     else if (((CurrentAbilityData.UsedAbility2 == ArmorBreak) ||
              (CurrentAbilityData.UsedAbility2 == ShellburstStab)) ||
             (CurrentAbilityData.UsedAbility2 == StealArmor)) {
       if ((TarBattlePtr->AllActionUnitData).Body == NONE_ENTD) goto LAB_BATTLE_BIN__80187c88;
-      TarCurActPtr->field_0x19 = 0x40;
+      TarCurActPtr->RemoveEquipmentFlags = Armor;
       IVar2 = (TarBattlePtr->AllActionUnitData).Body;
     }
     else {
@@ -78942,7 +82444,7 @@ undefined4 FUN_BATTLE_BIN__801879c8(void)
         if ((CurrentAbilityData.UsedAbility2 == IcewolfBite) ||
            (CurrentAbilityData.UsedAbility2 == StealAccessory)) {
           if ((TarBattlePtr->AllActionUnitData).Accessory != NONE_ENTD) {
-            TarCurActPtr->field_0x19 = 0x20;
+            TarCurActPtr->RemoveEquipmentFlags = Accessory;
             IVar2 = (TarBattlePtr->AllActionUnitData).Accessory;
             goto LAB_BATTLE_BIN__80187c80;
           }
@@ -78963,11 +82465,11 @@ undefined4 FUN_BATTLE_BIN__801879c8(void)
             }
             if ((uVar4 != 0xffffffff) || (uVar5 != 0xffffffff)) {
               if ((int)uVar4 < (int)uVar5) {
-                TarCurActPtr->field_0x19 = 4;
+                TarCurActPtr->RemoveEquipmentFlags = LeftHandWeapon;
                 IVar2 = (TarBattlePtr->AllActionUnitData).LHWeapon;
               }
               else {
-                TarCurActPtr->field_0x19 = 0x10;
+                TarCurActPtr->RemoveEquipmentFlags = RightHandWeapon;
                 IVar2 = (TarBattlePtr->AllActionUnitData).RHWeapon;
               }
               goto LAB_BATTLE_BIN__80187c80;
@@ -78978,11 +82480,11 @@ undefined4 FUN_BATTLE_BIN__801879c8(void)
       }
       if ((TarBattlePtr->AllActionUnitData).RHShield == NONE_ENTD) {
         if ((TarBattlePtr->AllActionUnitData).LHShield == NONE_ENTD) goto LAB_BATTLE_BIN__80187c88;
-        TarCurActPtr->field_0x19 = 2;
+        TarCurActPtr->RemoveEquipmentFlags = LeftHandShield;
         IVar2 = (TarBattlePtr->AllActionUnitData).LHShield;
       }
       else {
-        TarCurActPtr->field_0x19 = 8;
+        TarCurActPtr->RemoveEquipmentFlags = RightHandShield;
         IVar2 = (TarBattlePtr->AllActionUnitData).RHShield;
       }
     }
@@ -78993,7 +82495,7 @@ LAB_BATTLE_BIN__80187c80:
   else {
 LAB_BATTLE_BIN__80187c88:
     uVar1 = 0xffffffff;
-    TarCurActPtr->field_0x19 = 0;
+    TarCurActPtr->RemoveEquipmentFlags = 0;
   }
   return uVar1;
 }
@@ -79003,43 +82505,54 @@ LAB_BATTLE_BIN__80187c88:
 void FUN_BATTLE_BIN__80187ca0(void)
 
 {
-  undefined *puVar1;
+  AttackType *pAVar1;
   ushort uVar2;
-  CurActionUnitData *pCVar3;
-  int iVar4;
+  ushort uVar3;
+  ushort uVar4;
+  UniqueEffect2 *pUVar5;
+  CurActionUnitData *pCVar6;
+  int iVar7;
   
-  if (((((TarCurActPtr->field_0x25 & 0x80) != 0) &&
-       (iVar4 = ((uint)(TarBattlePtr->AllActionUnitData).HP - (int)TarCurActPtr->HPDamage) +
+  if (((((TarCurActPtr->AttackType & HPDamage) != 0) &&
+       (iVar7 = ((uint)(TarBattlePtr->AllActionUnitData).HP - (int)TarCurActPtr->HPDamage) +
                 (int)TarCurActPtr->HPRecovery,
        ((TarBattlePtr->AllActionUnitData).EntdGenderFlags & (female|male)) == 0)) &&
       ((*(short *)(&DAT_BATTLE_BIN__8018f5f4 +
-                  (((byte)(TarBattlePtr->CurActionUnitData).field_0x2e & 0x30) >> 3)) == 0 ||
+                  (((TarBattlePtr->CurActionUnitData).ModifiedENTDTeam & 0x30) >> 3)) == 0 ||
        ((CurrentAbilityData.CurrentAbilityFuncData._5_1_ & 8) == 0)))) &&
      ((uVar2._0_1_ = (TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1,
       uVar2._1_1_ = (TarBattlePtr->AllActionUnitData).CurrentStatuses.Status2, (uVar2 & 0x8020) == 0
       && (((TarBattlePtr->AllActionUnitData).CurrentStatuses.Status4 & Wall) == empty)))) {
-    if (((iVar4 < 1) || (((TarCurActPtr->StatusInfliction).Status1 & Dead) != empty)) &&
-       (((*(byte *)((int)&(CasBattlePtr->AllActionUnitData).Supports + 2) & 0x40) != 0 &&
+    if (((iVar7 < 1) || (((TarCurActPtr->StatusInfliction).Status1 & Dead) != empty)) &&
+       ((((CasBattlePtr->AllActionUnitData).Supports3 & Secret_Hunt) != None &&
         (((TarBattlePtr->AllActionUnitData).EntdTeamFlags & immortal) ==
          ~(is_ramza|immortal|player_control|light_blue|random_present|always_present))))) {
       if ((TarBattlePtr->AllActionUnitData).JobID - 0x5e < 0x30) {
         FUN_BATTLE_BIN__8018bd34();
         FUN_BATTLE_BIN__8018bcf0();
-        *(ushort *)&TarCurActPtr->field_0x10 = *(ushort *)&TarCurActPtr->field_0x10 | 0x20;
+        uVar3._0_1_ = TarCurActPtr->UniqueEffect1;
+        uVar3._1_1_ = TarCurActPtr->UniqueEffect2;
+        pUVar5 = &TarCurActPtr->UniqueEffect2;
+        TarCurActPtr->UniqueEffect1 = (char)(uVar3 | 0x20);
+        *pUVar5 = (char)((uVar3 | 0x20) >> 8);
         CurrentAbilityData._114_1_ = 6;
       }
     }
-    else if ((0 < iVar4) &&
-            ((iVar4 <= (int)((TarBattlePtr->AllActionUnitData).MaxHP / 5) &&
-             ((*(byte *)((int)&(CasBattlePtr->AllActionUnitData).Supports + 2) & 0x80) != 0)))) {
+    else if ((0 < iVar7) &&
+            ((iVar7 <= (int)((TarBattlePtr->AllActionUnitData).MaxHP / 5) &&
+             (((CasBattlePtr->AllActionUnitData).Supports3 & Train) != None)))) {
       (TarCurActPtr->StatusInfliction).Status2 = (TarCurActPtr->StatusInfliction).Status2 | Invite;
-      iVar4 = FUN_BATTLE_BIN__80184b24(0);
-      pCVar3 = TarCurActPtr;
-      if (iVar4 != 0) {
-        puVar1 = &TarCurActPtr->field_0x25;
-        *(ushort *)&TarCurActPtr->field_0x10 = *(ushort *)&TarCurActPtr->field_0x10 | 0x40;
+      iVar7 = FUN_BATTLE_BIN__80184b24(0);
+      pCVar6 = TarCurActPtr;
+      if (iVar7 != 0) {
+        uVar4._0_1_ = TarCurActPtr->UniqueEffect1;
+        uVar4._1_1_ = TarCurActPtr->UniqueEffect2;
+        pAVar1 = &TarCurActPtr->AttackType;
+        pUVar5 = &TarCurActPtr->UniqueEffect2;
+        TarCurActPtr->UniqueEffect1 = (char)(uVar4 | 0x40);
+        *pUVar5 = (char)((uVar4 | 0x40) >> 8);
         CurrentAbilityData._114_1_ = 9;
-        pCVar3->field_0x25 = *puVar1 | 8;
+        pCVar6->AttackType = *pAVar1 | StatusChange;
       }
     }
   }
@@ -79048,11 +82561,11 @@ void FUN_BATTLE_BIN__80187ca0(void)
 
 
 
-void FUN_BATTLE_BIN__80187eb4(void)
+void ApplyStatusPreserveAttack(void)
 
 {
   byte bVar1;
-  bbool bVar2;
+  byte bVar2;
   byte bVar3;
   byte bVar4;
   byte *pbVar5;
@@ -79060,12 +82573,12 @@ void FUN_BATTLE_BIN__80187eb4(void)
   
   bVar1 = TarCurActPtr->EvadeType;
   bVar3 = TarCurActPtr->Hit_;
-  bVar4 = TarCurActPtr->field60_0x2b;
+  bVar4 = TarCurActPtr->hi_hit_;
   bVar2 = TarCurActPtr->HitFlag;
   _8_InflictStatus();
   TarCurActPtr->HitFlag = bVar2;
   pCVar6 = TarCurActPtr;
-  pbVar5 = &TarCurActPtr->field60_0x2b;
+  pbVar5 = &TarCurActPtr->hi_hit_;
   TarCurActPtr->Hit_ = bVar3;
   *pbVar5 = bVar4;
   pCVar6->EvadeType = bVar1;
@@ -79080,138 +82593,144 @@ void _8_InflictStatus(void)
   Status1 *pSVar1;
   Status1 *pSVar2;
   short sVar3;
-  byte *pbVar4;
-  byte bVar5;
-  bool bVar6;
-  undefined2 uVar7;
-  int iVar8;
-  uint uVar9;
+  ushort uVar4;
+  byte *pbVar5;
+  UniqueEffect2 *pUVar6;
+  byte bVar7;
+  bool bVar8;
+  undefined2 uVar9;
+  int iVar10;
+  uint uVar11;
   undefined3 extraout_var;
-  byte bVar10;
-  Status1 SVar11;
-  uint *puVar12;
-  int iVar13;
-  uint uVar14;
+  byte bVar12;
+  Status1 SVar13;
+  uint *puVar14;
+  int iVar15;
+  uint uVar16;
   uint auStack_400b8 [65536];
   uint local_b8 [40];
   
-  bVar10 = CurrentAbilityData.CurrentAbilityInflictions._0_1_;
+  bVar12 = CurrentAbilityData.CurrentAbilityInflictions._0_1_;
   if ((CurrentAbilityData.CurrentAbilityInflictions._0_1_ & 0x20) != 0) {
     sVar3._0_1_ = TarCurActPtr->Hit_;
-    sVar3._1_1_ = TarCurActPtr->field60_0x2b;
-    iVar8 = (int)sVar3;
-    if (iVar8 < 0) {
-      iVar8 = iVar8 + 3;
+    sVar3._1_1_ = TarCurActPtr->hi_hit_;
+    iVar10 = (int)sVar3;
+    if (iVar10 < 0) {
+      iVar10 = iVar10 + 3;
     }
-    uVar7 = (undefined2)(iVar8 >> 2);
-    pbVar4 = &TarCurActPtr->field60_0x2b;
-    TarCurActPtr->Hit_ = (char)uVar7;
-    *pbVar4 = (char)((ushort)uVar7 >> 8);
+    uVar9 = (undefined2)(iVar10 >> 2);
+    pbVar5 = &TarCurActPtr->hi_hit_;
+    TarCurActPtr->Hit_ = (char)uVar9;
+    *pbVar5 = (char)((ushort)uVar9 >> 8);
   }
-  bVar5 = bVar10 & 0x80;
-  if (((bVar10 & 0x60) != 0) && (bVar5 = bVar10 & 0x80, DAT_BATTLE_BIN__8018f5fc != 0)) {
-    bVar10 = 0;
-    bVar5 = 0x80;
+  bVar7 = bVar12 & 0x80;
+  if (((bVar12 & 0x60) != 0) && (bVar7 = bVar12 & 0x80, ActionState != 0)) {
+    bVar12 = 0;
+    bVar7 = 0x80;
   }
-  iVar8 = 0;
-  if (bVar5 == 0) {
-    iVar8 = 0;
-    if ((bVar10 & 0x40) == 0) {
-      uVar14 = 0;
-      if ((bVar10 & 0x20) == 0) {
-        if ((bVar10 & 0x10) != 0) {
+  iVar10 = 0;
+  if (bVar7 == 0) {
+    iVar10 = 0;
+    if ((bVar12 & 0x40) == 0) {
+      uVar16 = 0;
+      if ((bVar12 & 0x20) == 0) {
+        if ((bVar12 & 0x10) != 0) {
           do {
-            uVar9 = uVar14 + 1;
-            (&(TarCurActPtr->StatusRemoval).Status1)[uVar14] =
-                 (&(TarCurActPtr->StatusRemoval).Status1)[uVar14] |
-                 (&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[uVar14];
-            uVar14 = uVar9;
-          } while ((int)uVar9 < 5);
+            uVar11 = uVar16 + 1;
+            (&(TarCurActPtr->StatusRemoval).Status1)[uVar16] =
+                 (&(TarCurActPtr->StatusRemoval).Status1)[uVar16] |
+                 (&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[uVar16];
+            uVar16 = uVar11;
+          } while ((int)uVar11 < 5);
         }
       }
       else {
         do {
-          uVar9 = uVar14;
-          if ((int)uVar14 < 0) {
-            uVar9 = uVar14 + 7;
+          uVar11 = uVar16;
+          if ((int)uVar16 < 0) {
+            uVar11 = uVar16 + 7;
           }
-          iVar8 = (int)uVar9 >> 3;
-          uVar9 = 0x80 >> (uVar14 & 7);
-          if ((((&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[iVar8] & uVar9)
+          iVar10 = (int)uVar11 >> 3;
+          uVar11 = 0x80 >> (uVar16 & 7);
+          if ((((&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[iVar10] & uVar11)
                != 0) &&
-             ((bVar6 = PassFail_Roll(100,0x18), CONCAT31(extraout_var,bVar6) != 0 ||
-              (DAT_BATTLE_BIN__8018f5fc == 2)))) {
-            (&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[iVar8] =
-                 (&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[iVar8] ^
-                 (Status1)uVar9;
+             ((bVar8 = PassFail_Roll(100,0x18), CONCAT31(extraout_var,bVar8) != 0 ||
+              (ActionState == 2)))) {
+            (&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[iVar10] =
+                 (&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[iVar10] ^
+                 (Status1)uVar11;
           }
-          uVar14 = uVar14 + 1;
-        } while ((int)uVar14 < 0x28);
-        iVar8 = 0;
+          uVar16 = uVar16 + 1;
+        } while ((int)uVar16 < 0x28);
+        iVar10 = 0;
         do {
-          iVar13 = iVar8 + 1;
-          (&(TarCurActPtr->StatusInfliction).Status1)[iVar8] =
-               (&(TarCurActPtr->StatusInfliction).Status1)[iVar8] |
-               (&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[iVar8];
-          iVar8 = iVar13;
-        } while (iVar13 < 5);
+          iVar15 = iVar10 + 1;
+          (&(TarCurActPtr->StatusInfliction).Status1)[iVar10] =
+               (&(TarCurActPtr->StatusInfliction).Status1)[iVar10] |
+               (&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[iVar10];
+          iVar10 = iVar15;
+        } while (iVar15 < 5);
       }
     }
     else {
-      uVar14 = 0;
-      puVar12 = local_b8;
+      uVar16 = 0;
+      puVar14 = local_b8;
       do {
-        uVar9 = uVar14;
-        if ((int)uVar14 < 0) {
-          uVar9 = uVar14 + 7;
+        uVar11 = uVar16;
+        if ((int)uVar16 < 0) {
+          uVar11 = uVar16 + 7;
         }
         if (((uint)(&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)
-                   [(int)uVar9 >> 3] & 0x80 >> (uVar14 & 7)) != 0) {
-          *puVar12 = uVar14;
-          puVar12 = puVar12 + 1;
-          iVar8 = iVar8 + 1;
+                   [(int)uVar11 >> 3] & 0x80 >> (uVar16 & 7)) != 0) {
+          *puVar14 = uVar16;
+          puVar14 = puVar14 + 1;
+          iVar10 = iVar10 + 1;
         }
-        uVar14 = uVar14 + 1;
-      } while ((int)uVar14 < 0x28);
-      iVar13 = FUN_BATTLE_BIN__8018eea0();
-      iVar13 = iVar13 * iVar8;
-      if (iVar13 < 0) {
-        iVar13 = iVar13 + 0x7fff;
+        uVar16 = uVar16 + 1;
+      } while ((int)uVar16 < 0x28);
+      iVar15 = FUN_BATTLE_BIN__8018eea0();
+      iVar15 = iVar15 * iVar10;
+      if (iVar15 < 0) {
+        iVar15 = iVar15 + 0x7fff;
       }
-      uVar9 = local_b8[iVar13 >> 0xf];
-      uVar14 = uVar9;
-      if ((int)uVar9 < 0) {
-        uVar14 = uVar9 + 7;
+      uVar11 = local_b8[iVar15 >> 0xf];
+      uVar16 = uVar11;
+      if ((int)uVar11 < 0) {
+        uVar16 = uVar11 + 7;
       }
-      (&(TarCurActPtr->StatusInfliction).Status1)[(int)uVar14 >> 3] =
-           (&(TarCurActPtr->StatusInfliction).Status1)[(int)uVar14 >> 3] |
-           (Status1)(0x80 >> (uVar9 & 7));
+      (&(TarCurActPtr->StatusInfliction).Status1)[(int)uVar16 >> 3] =
+           (&(TarCurActPtr->StatusInfliction).Status1)[(int)uVar16 >> 3] |
+           (Status1)(0x80 >> (uVar11 & 7));
     }
   }
   else {
     do {
-      iVar13 = iVar8 + 1;
-      (&(TarCurActPtr->StatusInfliction).Status1)[iVar8] =
-           (&(TarCurActPtr->StatusInfliction).Status1)[iVar8] |
-           (&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[iVar8];
-      iVar8 = iVar13;
-    } while (iVar13 < 5);
+      iVar15 = iVar10 + 1;
+      (&(TarCurActPtr->StatusInfliction).Status1)[iVar10] =
+           (&(TarCurActPtr->StatusInfliction).Status1)[iVar10] |
+           (&CurrentAbilityData.CurrentAbilityInflictions.field4_0x1.Status1)[iVar10];
+      iVar10 = iVar15;
+    } while (iVar15 < 5);
   }
-  SVar11 = empty;
-  iVar8 = 0;
+  SVar13 = empty;
+  iVar10 = 0;
   do {
-    pSVar1 = &(TarCurActPtr->StatusInfliction).Status1 + iVar8;
-    pSVar2 = &(TarCurActPtr->StatusRemoval).Status1 + iVar8;
-    iVar8 = iVar8 + 1;
-    SVar11 = SVar11 | *pSVar1 | *pSVar2;
-  } while (iVar8 < 5);
-  if ((SVar11 == empty) || (iVar8 = FUN_BATTLE_BIN__80184b24(0), iVar8 == 0)) {
+    pSVar1 = &(TarCurActPtr->StatusInfliction).Status1 + iVar10;
+    pSVar2 = &(TarCurActPtr->StatusRemoval).Status1 + iVar10;
+    iVar10 = iVar10 + 1;
+    SVar13 = SVar13 | *pSVar1 | *pSVar2;
+  } while (iVar10 < 5);
+  if ((SVar13 == empty) || (iVar10 = FUN_BATTLE_BIN__80184b24(0), iVar10 == 0)) {
     FUN_BATTLE_BIN__8018430c();
   }
   else {
-    TarCurActPtr->field_0x25 = TarCurActPtr->field_0x25 | 8;
+    TarCurActPtr->AttackType = TarCurActPtr->AttackType | StatusChange;
     if (((TarCurActPtr->StatusInfliction).Status2 & Invite) != empty) {
-      *(ushort *)&TarCurActPtr->field_0x10 = *(ushort *)&TarCurActPtr->field_0x10 | 0x40;
+      uVar4._0_1_ = TarCurActPtr->UniqueEffect1;
+      uVar4._1_1_ = TarCurActPtr->UniqueEffect2;
+      pUVar6 = &TarCurActPtr->UniqueEffect2;
+      TarCurActPtr->UniqueEffect1 = (char)(uVar4 | 0x40);
+      *pUVar6 = (char)((uVar4 | 0x40) >> 8);
     }
   }
   return;
@@ -79227,7 +82746,7 @@ void _9_ItemMPHeal(void)
   
   pCVar2 = TarCurActPtr;
   bVar1 = ItemSecondary[CurrentAbilityData.UsedItem4].Z;
-  TarCurActPtr->field_0x25 = 0x10;
+  TarCurActPtr->AttackType = MPRecovery;
   pCVar2->MPRecovery = (ushort)bVar1 * 10;
   return;
 }
@@ -79245,7 +82764,7 @@ void FUN_BATTLE_BIN__801882c8(void)
   pCVar2 = TarCurActPtr;
   TarCurActPtr->HPDamage = (TarBattlePtr->AllActionUnitData).MaxHP;
   uVar1 = (pBVar3->AllActionUnitData).MaxMP;
-  pCVar2->field_0x25 = 0x90;
+  pCVar2->AttackType = MPRecovery|HPDamage;
   pCVar2->MPRecovery = uVar1;
   return;
 }
@@ -79265,16 +82784,15 @@ void FUN_BATTLE_BIN__801882f8(void)
   
   iVar6 = FUN_BATTLE_BIN__8018c920(TarBattlePtr);
   pBVar3 = TarBattlePtr;
-  if (((iVar6 == 0) &&
-      ((*(byte *)((int)&(TarBattlePtr->AllActionUnitData).Reactions + 3) & 0x20) != 0)) &&
+  if (((iVar6 == 0) && (((TarBattlePtr->AllActionUnitData).Reactions4 & Finger_Guard) != None)) &&
      ((iVar6 = 100 - (uint)(TarBattlePtr->AllActionUnitData).Brave, uVar5 = (undefined2)iVar6,
-      pbVar1 = &TarCurActPtr->field60_0x2b, TarCurActPtr->Hit_ = (char)uVar5,
+      pbVar1 = &TarCurActPtr->hi_hit_, TarCurActPtr->Hit_ = (char)uVar5,
       *pbVar1 = (char)((ushort)uVar5 >> 8), iVar6 == 0 ||
       ((bVar4 = FUN_BATTLE_BIN__8018d384((int)pBVar3), CONCAT31(extraout_var,bVar4) == 0 &&
-       (DAT_BATTLE_BIN__8018f5fc == 0)))))) {
-    TarCurActPtr->HitFlag = false;
+       (ActionState == 0)))))) {
+    TarCurActPtr->HitFlag = 0;
     pCVar2 = TarCurActPtr;
-    TarCurActPtr->ReactionID = 0x1c0;
+    TarCurActPtr->ReactionID = FingerGuard;
     pCVar2->EvadeType = 0xb;
   }
   return;
@@ -79297,15 +82815,15 @@ void FUN_BATTLE_BIN__801883ac(void)
   iVar7 = FUN_BATTLE_BIN__8018c920(TarBattlePtr);
   pBVar3 = TarBattlePtr;
   if ((((iVar7 == 0) && ((CasBattlePtr->AllActionUnitData).JobID != Mime)) &&
-      ((*(byte *)((int)&(TarBattlePtr->AllActionUnitData).Reactions + 3) & 8) != 0)) &&
+      (((TarBattlePtr->AllActionUnitData).Reactions4 & Catch) != None)) &&
      ((iVar7 = 100 - (uint)(TarBattlePtr->AllActionUnitData).Brave, uVar6 = (undefined2)iVar7,
-      pbVar1 = &TarCurActPtr->field60_0x2b, TarCurActPtr->Hit_ = (char)uVar6,
+      pbVar1 = &TarCurActPtr->hi_hit_, TarCurActPtr->Hit_ = (char)uVar6,
       *pbVar1 = (char)((ushort)uVar6 >> 8), iVar7 == 0 ||
       ((bVar5 = FUN_BATTLE_BIN__8018d384((int)pBVar3), CONCAT31(extraout_var,bVar5) == 0 &&
-       (DAT_BATTLE_BIN__8018f5fc == 0)))))) {
-    TarCurActPtr->HitFlag = false;
+       (ActionState == 0)))))) {
+    TarCurActPtr->HitFlag = 0;
     pCVar2 = TarCurActPtr;
-    TarCurActPtr->ReactionID = 0x1c2;
+    TarCurActPtr->ReactionID = Catch;
     IVar4 = CurrentAbilityData.UsedItem3;
     pCVar2->EvadeType = 0xd;
     pCVar2->ReactionVar = (ushort)IVar4;
@@ -79315,41 +82833,44 @@ void FUN_BATTLE_BIN__801883ac(void)
 
 
 
-bool FUN_BATTLE_BIN__80188488(void)
+bool CalcHitPercent(void)
 
 {
   FUN_BATTLE_BIN__80185814();
-  return TarCurActPtr->HitFlag == false;
+  return TarCurActPtr->HitFlag == 0;
 }
 
 
 
-bool FUN_BATTLE_BIN__801884c0(void)
+int FUN_BATTLE_BIN__801884c0(void)
 
 {
-  bool bVar1;
+  ushort uVar1;
+  uint uVar2;
   
   FUN_BATTLE_BIN__80187690();
-  bVar1 = false;
-  if (DAT_BATTLE_BIN__8018f5fc != 2) {
-    bVar1 = (*(ushort *)&TarCurActPtr->field_0x10 & 0x200) == 0;
+  uVar2 = 0;
+  if (ActionState != 2) {
+    uVar1._0_1_ = TarCurActPtr->UniqueEffect1;
+    uVar1._1_1_ = TarCurActPtr->UniqueEffect2;
+    uVar2 = (uint)((uVar1 & 0x200) == 0);
   }
-  return bVar1;
+  return uVar2;
 }
 
 
 
-void FUN_BATTLE_BIN__80188510(void)
+void PhysicalEvadeCalc(void)
 
 {
-  FUN_BATTLE_BIN__80184f9c();
-  FUN_BATTLE_BIN__801852e4();
-  FUN_BATTLE_BIN__80185328();
-  FUN_BATTLE_BIN__8018537c();
-  FUN_BATTLE_BIN__801853f4();
-  FUN_BATTLE_BIN__80185738();
-  FUN_BATTLE_BIN__801854fc();
-  FUN_BATTLE_BIN__80188488();
+  EquipEvPhys();
+  CheckConcentrate();
+  DarkConfuseCheck();
+  AbandonCalc();
+  PhysEvStatuses();
+  BowWeatherCalc();
+  FacingEvCalc();
+  CalcHitPercent();
   return;
 }
 
@@ -79358,13 +82879,13 @@ void FUN_BATTLE_BIN__80188510(void)
 void FUN_BATTLE_BIN__80188568(void)
 
 {
-  FUN_BATTLE_BIN__80184f9c();
-  FUN_BATTLE_BIN__801852e4();
-  FUN_BATTLE_BIN__80185328();
-  FUN_BATTLE_BIN__8018537c();
-  FUN_BATTLE_BIN__801853f4();
-  FUN_BATTLE_BIN__801854fc();
-  FUN_BATTLE_BIN__80188488();
+  EquipEvPhys();
+  CheckConcentrate();
+  DarkConfuseCheck();
+  AbandonCalc();
+  PhysEvStatuses();
+  FacingEvCalc();
+  CalcHitPercent();
   return;
 }
 
@@ -79374,10 +82895,10 @@ void FUN_BATTLE_BIN__801885b8(void)
 
 {
   FUN_BATTLE_BIN__801851c4();
-  FUN_BATTLE_BIN__801854b8();
-  FUN_BATTLE_BIN__8018537c();
-  FUN_BATTLE_BIN__801853f4();
-  FUN_BATTLE_BIN__80188488();
+  TransparentCheck();
+  AbandonCalc();
+  PhysEvStatuses();
+  CalcHitPercent();
   return;
 }
 
@@ -79390,28 +82911,28 @@ void FUN_BATTLE_BIN__801885f8(void)
   FUN_BATTLE_BIN__80186254();
   FUN_BATTLE_BIN__801862cc();
   FUN_BATTLE_BIN__8018636c();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   return;
 }
 
 
 
-bool FUN_BATTLE_BIN__80188638(void)
+int WeaponDamageCalc(void)
 
 {
-  bool bVar1;
+  int iVar1;
   
   FUN_BATTLE_BIN__80185a9c();
   FUN_BATTLE_BIN__80185f80();
   FUN_BATTLE_BIN__80185fa4();
   FUN_BATTLE_BIN__801886a4();
   FUN_BATTLE_BIN__80186fd0();
-  bVar1 = true;
-  if (TarCurActPtr->HitFlag != false) {
+  iVar1 = 1;
+  if (TarCurActPtr->HitFlag != 0) {
     FUN_BATTLE_BIN__801870fc();
-    bVar1 = FUN_BATTLE_BIN__801884c0();
+    iVar1 = FUN_BATTLE_BIN__801884c0();
   }
-  return bVar1;
+  return iVar1;
 }
 
 
@@ -79436,7 +82957,7 @@ bool FUN_BATTLE_BIN__801886d4(void)
   FUN_BATTLE_BIN__801885f8();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187510();
-  return TarCurActPtr->HitFlag == false;
+  return TarCurActPtr->HitFlag == 0;
 }
 
 
@@ -79457,7 +82978,7 @@ void FUN_BATTLE_BIN__80188744(void)
   FUN_BATTLE_BIN__80186204();
   FUN_BATTLE_BIN__8018631c();
   FUN_BATTLE_BIN__80186460();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   return;
 }
 
@@ -79469,7 +82990,7 @@ bool FUN_BATTLE_BIN__8018877c(void)
   FUN_BATTLE_BIN__80186568();
   FUN_BATTLE_BIN__80186ed0();
   FUN_BATTLE_BIN__80186ff8();
-  return TarCurActPtr->HitFlag == false;
+  return TarCurActPtr->HitFlag == 0;
 }
 
 
@@ -79477,18 +82998,15 @@ bool FUN_BATTLE_BIN__8018877c(void)
 int FUN_BATTLE_BIN__801887c4(void)
 
 {
-  bool bVar1;
-  undefined3 extraout_var;
-  int iVar2;
+  int iVar1;
   
   FUN_BATTLE_BIN__801870fc();
-  bVar1 = FUN_BATTLE_BIN__801884c0();
-  iVar2 = CONCAT31(extraout_var,bVar1);
-  if (iVar2 == 0) {
-    FUN_BATTLE_BIN__80187eb4();
-    iVar2 = 0;
+  iVar1 = FUN_BATTLE_BIN__801884c0();
+  if (iVar1 == 0) {
+    ApplyStatusPreserveAttack();
+    iVar1 = 0;
   }
-  return iVar2;
+  return iVar1;
 }
 
 
@@ -79497,11 +83015,11 @@ bool FUN_BATTLE_BIN__80188800(void)
 
 {
   FUN_BATTLE_BIN__80186204();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187150();
   FUN_BATTLE_BIN__80187510();
-  return TarCurActPtr->HitFlag == false;
+  return TarCurActPtr->HitFlag == 0;
 }
 
 
@@ -79513,7 +83031,7 @@ void FUN_BATTLE_BIN__80188858(void)
 
 {
   FUN_BATTLE_BIN__80186204();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   FUN_BATTLE_BIN__80186568();
   return;
 }
@@ -79536,7 +83054,7 @@ bool FUN_BATTLE_BIN__80188888(void)
        (short)((int)((int)TarCurActPtr->HPDamage * (uint)CurrentAbilityData.CasEffectiveFaith) / 100
               );
   FUN_BATTLE_BIN__80187510();
-  return TarCurActPtr->HitFlag == false;
+  return TarCurActPtr->HitFlag == 0;
 }
 
 
@@ -79576,7 +83094,7 @@ bool FUN_BATTLE_BIN__801889cc(void)
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187150();
   FUN_BATTLE_BIN__80187510();
-  return TarCurActPtr->HitFlag == false;
+  return TarCurActPtr->HitFlag == 0;
 }
 
 
@@ -79590,7 +83108,7 @@ bool FUN_BATTLE_BIN__80188a24(void)
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187150();
   FUN_BATTLE_BIN__80187510();
-  return TarCurActPtr->HitFlag == false;
+  return TarCurActPtr->HitFlag == 0;
 }
 
 
@@ -79603,7 +83121,7 @@ bool FUN_BATTLE_BIN__80188a84(void)
   FUN_BATTLE_BIN__80188744();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187510();
-  return TarCurActPtr->HitFlag == false;
+  return TarCurActPtr->HitFlag == 0;
 }
 
 
@@ -79614,7 +83132,7 @@ void FUN_BATTLE_BIN__80188adc(void)
   FUN_BATTLE_BIN__80186254();
   FUN_BATTLE_BIN__801862cc();
   FUN_BATTLE_BIN__8018636c();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   return;
 }
 
@@ -79627,7 +83145,7 @@ bool FUN_BATTLE_BIN__80188b14(void)
   FUN_BATTLE_BIN__80188adc();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187510();
-  return TarCurActPtr->HitFlag == false;
+  return TarCurActPtr->HitFlag == 0;
 }
 
 
@@ -79635,13 +83153,11 @@ bool FUN_BATTLE_BIN__80188b14(void)
 void _1_Weapon(void)
 
 {
-  bool bVar1;
-  int iVar2;
-  undefined3 extraout_var;
+  int ReturnTemp;
   
-  iVar2 = FUN_BATTLE_BIN__80188510();
-  if ((iVar2 == 0) && (bVar1 = FUN_BATTLE_BIN__80188638(), CONCAT31(extraout_var,bVar1) == 0)) {
-    FUN_BATTLE_BIN__80187eb4();
+  ReturnTemp = PhysicalEvadeCalc();
+  if ((ReturnTemp == 0) && (ReturnTemp = WeaponDamageCalc(), ReturnTemp == 0)) {
+    ApplyStatusPreserveAttack();
   }
   return;
 }
@@ -79651,12 +83167,10 @@ void _1_Weapon(void)
 void _2_SpellWeapon(void)
 
 {
-  bool bVar1;
-  int iVar2;
-  undefined3 extraout_var;
+  int iVar1;
   
-  iVar2 = FUN_BATTLE_BIN__80188510();
-  if ((iVar2 == 0) && (bVar1 = FUN_BATTLE_BIN__80188638(), CONCAT31(extraout_var,bVar1) == 0)) {
+  iVar1 = PhysicalEvadeCalc();
+  if ((iVar1 == 0) && (iVar1 = WeaponDamageCalc(), iVar1 == 0)) {
     FUN_BATTLE_BIN__801876e4();
   }
   return;
@@ -79701,18 +83215,16 @@ void _4_MagicGun(void)
 void _5_Weapon2(void)
 
 {
-  bool bVar1;
-  int iVar2;
-  undefined3 extraout_var;
+  int iVar1;
   
-  iVar2 = FUN_BATTLE_BIN__80188568();
-  if (iVar2 == 0) {
+  iVar1 = FUN_BATTLE_BIN__80188568();
+  if (iVar1 == 0) {
     FUN_BATTLE_BIN__80185a9c();
     FUN_BATTLE_BIN__80185f80();
     FUN_BATTLE_BIN__801886a4();
-    bVar1 = FUN_BATTLE_BIN__801884c0();
-    if (CONCAT31(extraout_var,bVar1) == 0) {
-      FUN_BATTLE_BIN__80187eb4();
+    iVar1 = FUN_BATTLE_BIN__801884c0();
+    if (iVar1 == 0) {
+      ApplyStatusPreserveAttack();
     }
   }
   return;
@@ -79725,7 +83237,7 @@ void _6_AbsorbWeapon(void)
 {
   int iVar1;
   
-  iVar1 = FUN_BATTLE_BIN__80188510();
+  iVar1 = PhysicalEvadeCalc();
   if (iVar1 == 0) {
     FUN_BATTLE_BIN__80185a9c();
     FUN_BATTLE_BIN__80185f80();
@@ -79741,7 +83253,7 @@ void _7_HealWeapon(void)
 
 {
   FUN_BATTLE_BIN__80185a9c();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   FUN_BATTLE_BIN__80185f80();
   FUN_BATTLE_BIN__801885f8();
   FUN_BATTLE_BIN__80186568();
@@ -79768,7 +83280,7 @@ void _8_DamageSpell(void)
       FUN_BATTLE_BIN__80187150();
       iVar2 = FUN_BATTLE_BIN__8018871c();
       if (iVar2 == 0) {
-        FUN_BATTLE_BIN__80187eb4();
+        ApplyStatusPreserveAttack();
       }
     }
   }
@@ -79789,8 +83301,8 @@ void _9_DemiSpell(void)
     FUN_BATTLE_BIN__80186624();
     FUN_BATTLE_BIN__80186ed0();
     FUN_BATTLE_BIN__80186ff8();
-    if ((TarCurActPtr->HitFlag != false) && (iVar2 = FUN_BATTLE_BIN__8018871c(), iVar2 == 0)) {
-      FUN_BATTLE_BIN__80187eb4();
+    if ((TarCurActPtr->HitFlag != 0) && (iVar2 = FUN_BATTLE_BIN__8018871c(), iVar2 == 0)) {
+      ApplyStatusPreserveAttack();
     }
   }
   return;
@@ -79885,11 +83397,11 @@ void _E_DeathSpell(void)
     FUN_BATTLE_BIN__8018631c();
     FUN_BATTLE_BIN__80186460();
   }
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187150();
   FUN_BATTLE_BIN__80187510();
-  if ((TarCurActPtr->HitFlag != false) && (iVar1 = FUN_BATTLE_BIN__8018acdc(), iVar1 != 0)) {
+  if ((TarCurActPtr->HitFlag != 0) && (iVar1 = FUN_BATTLE_BIN__8018acdc(), iVar1 != 0)) {
     FUN_BATTLE_BIN__80186624();
     FUN_BATTLE_BIN__801873d8();
   }
@@ -79968,15 +83480,19 @@ void _3_None(void)
 void _4_Golem(void)
 
 {
-  CurActionUnitData *pCVar1;
-  bool bVar2;
+  UniqueEffect2 *pUVar1;
+  CurActionUnitData *pCVar2;
+  bool bVar3;
   undefined3 extraout_var;
   
-  bVar2 = FUN_BATTLE_BIN__80188888();
-  pCVar1 = TarCurActPtr;
-  if (CONCAT31(extraout_var,bVar2) == 0) {
-    *(undefined2 *)&TarCurActPtr->field_0x10 = 1;
-    pCVar1->field_0x25 = 1;
+  bVar3 = FUN_BATTLE_BIN__80188888();
+  pCVar2 = TarCurActPtr;
+  if (CONCAT31(extraout_var,bVar3) == 0) {
+    pUVar1 = &TarCurActPtr->UniqueEffect2;
+    TarCurActPtr->UniqueEffect1 = Golem;
+    *pUVar1 = ~(Minus_Level|Secondary_Proc|Elem_Absorb|Elem_Weak|Katana_Broken|UNUSED|Knockback|
+               Hit_Golem);
+    pCVar2->AttackType = StatAlter;
   }
   return;
 }
@@ -79992,8 +83508,8 @@ void _5_Return2(void)
   
   iVar2 = FUN_BATTLE_BIN__801885b8();
   if ((iVar2 == 0) && (bVar1 = FUN_BATTLE_BIN__801889cc(), CONCAT31(extraout_var,bVar1) == 0)) {
-    TarCurActPtr->field_0x13 = 0x7f;
-    TarCurActPtr->field_0x25 = 1;
+    TarCurActPtr->CTChange = Value;
+    TarCurActPtr->AttackType = StatAlter;
   }
   return;
 }
@@ -80014,7 +83530,7 @@ void _6_Mute(void)
      (bVar3 = FUN_BATTLE_BIN__801889cc(), pCVar2 = TarCurActPtr, CONCAT31(extraout_var,bVar3) == 0))
   {
     sVar1 = (TarBattlePtr->AllActionUnitData).MP;
-    TarCurActPtr->field_0x25 = 0x20;
+    TarCurActPtr->AttackType = MPDamage;
     pCVar2->MPDamage = sVar1;
   }
   return;
@@ -80057,18 +83573,24 @@ void _9_None(void)
 void _A_ZalbagRuin(void)
 
 {
-  int iVar1;
+  ushort uVar1;
+  UniqueEffect2 *pUVar2;
+  int iVar3;
   
-  iVar1 = FUN_BATTLE_BIN__801885b8();
-  if (iVar1 == 0) {
+  iVar3 = FUN_BATTLE_BIN__801885b8();
+  if (iVar3 == 0) {
     FUN_BATTLE_BIN__80185c94();
     FUN_BATTLE_BIN__80185ffc();
     FUN_BATTLE_BIN__80188744();
     FUN_BATTLE_BIN__8018659c();
     FUN_BATTLE_BIN__80187150();
     FUN_BATTLE_BIN__80187510();
-    if (TarCurActPtr->HitFlag == false) {
-      *(ushort *)&TarCurActPtr->field_0x10 = *(ushort *)&TarCurActPtr->field_0x10 & 0xfffb;
+    if (TarCurActPtr->HitFlag == 0) {
+      uVar1._0_1_ = TarCurActPtr->UniqueEffect1;
+      uVar1._1_1_ = TarCurActPtr->UniqueEffect2;
+      pUVar2 = &TarCurActPtr->UniqueEffect2;
+      TarCurActPtr->UniqueEffect1 = (char)(uVar1 & 0xfffb);
+      *pUVar2 = (char)((uVar1 & 0xfffb) >> 8);
     }
     else {
       FUN_BATTLE_BIN__80187860();
@@ -80101,7 +83623,7 @@ void _C_Song(void)
   int iVar1;
   
   FUN_BATTLE_BIN__801875fc();
-  if ((TarCurActPtr->HitFlag != false) && (iVar1 = FUN_BATTLE_BIN__80184360(), iVar1 == 0)) {
+  if ((TarCurActPtr->HitFlag != 0) && (iVar1 = FUN_BATTLE_BIN__80184360(), iVar1 == 0)) {
     FUN_BATTLE_BIN__80185c94();
     FUN_BATTLE_BIN__801869ec();
   }
@@ -80116,7 +83638,7 @@ void _D_Dance(void)
   int iVar1;
   
   FUN_BATTLE_BIN__801875fc();
-  if ((TarCurActPtr->HitFlag != false) && (iVar1 = FUN_BATTLE_BIN__80184360(), iVar1 == 0)) {
+  if ((TarCurActPtr->HitFlag != 0) && (iVar1 = FUN_BATTLE_BIN__80184360(), iVar1 == 0)) {
     FUN_BATTLE_BIN__80185a9c();
     FUN_BATTLE_BIN__80186af8();
   }
@@ -80171,7 +83693,7 @@ void _F_Untruth(void)
                         (100 - (uint)CurrentAbilityData.CasEffectiveFaith)) / 10000);
       iVar2 = FUN_BATTLE_BIN__8018871c();
       if (iVar2 == 0) {
-        FUN_BATTLE_BIN__80187eb4();
+        ApplyStatusPreserveAttack();
       }
     }
   }
@@ -80205,7 +83727,7 @@ void _1_DmgMPKatana(void)
   FUN_BATTLE_BIN__80188744();
   pCVar2 = TarCurActPtr;
   sVar1 = CurrentAbilityData.AbPower * CurrentAbilityData.UnitPower;
-  TarCurActPtr->field_0x25 = 0x20;
+  TarCurActPtr->AttackType = MPDamage;
   pCVar2->MPDamage = sVar1;
   return;
 }
@@ -80252,25 +83774,34 @@ void _4_Geomancy(void)
 void _5_EquipBreak(void)
 
 {
-  bool bVar1;
-  int iVar2;
+  UniqueEffect2 *pUVar1;
+  bool bVar2;
+  int iVar3;
   undefined3 extraout_var;
   
-  iVar2 = FUN_BATTLE_BIN__801879c8();
-  if (iVar2 == 0) {
+  iVar3 = FUN_BATTLE_BIN__801879c8();
+  if (iVar3 == 0) {
     CurrentAbilityData.DefaultToAbility00 = false;
-    iVar2 = FUN_BATTLE_BIN__80188510();
-    if (iVar2 == 0) {
+    iVar3 = PhysicalEvadeCalc();
+    if (iVar3 == 0) {
       FUN_BATTLE_BIN__80185e5c();
-      bVar1 = FUN_BATTLE_BIN__801886d4();
-      if (CONCAT31(extraout_var,bVar1) == 0) {
+      bVar2 = FUN_BATTLE_BIN__801886d4();
+      if (CONCAT31(extraout_var,bVar2) == 0) {
         FUN_BATTLE_BIN__80187638();
-        if (TarCurActPtr->HitFlag != false) {
-          *(undefined2 *)&TarCurActPtr->field_0x10 = 4;
+        if (TarCurActPtr->HitFlag != 0) {
+          pUVar1 = &TarCurActPtr->UniqueEffect2;
+          TarCurActPtr->UniqueEffect1 = Break_Item;
+          *pUVar1 = ~(Minus_Level|Secondary_Proc|Elem_Absorb|Elem_Weak|Katana_Broken|UNUSED|
+                      Knockback|Hit_Golem);
         }
       }
       else {
-        *(undefined2 *)&TarCurActPtr->field_0x10 = 0;
+        pUVar1 = &TarCurActPtr->UniqueEffect2;
+        TarCurActPtr->UniqueEffect1 =
+             ~(Golem|Moldball|Break_Item|Stole_Target_Item|Stolen_Item|Poached|SwitchTeam|Plus_Level
+              );
+        *pUVar1 = ~(Minus_Level|Secondary_Proc|Elem_Absorb|Elem_Weak|Katana_Broken|UNUSED|Knockback|
+                   Hit_Golem);
       }
     }
   }
@@ -80286,20 +83817,24 @@ void _5_EquipBreak(void)
 void _6_EquipSteal(void)
 
 {
-  bool bVar1;
-  int iVar2;
+  UniqueEffect2 *pUVar1;
+  bool bVar2;
+  int iVar3;
   undefined3 extraout_var;
   
-  iVar2 = FUN_BATTLE_BIN__801879c8();
-  if (iVar2 == 0) {
-    iVar2 = FUN_BATTLE_BIN__80188510();
-    if (iVar2 == 0) {
+  iVar3 = FUN_BATTLE_BIN__801879c8();
+  if (iVar3 == 0) {
+    iVar3 = PhysicalEvadeCalc();
+    if (iVar3 == 0) {
       FUN_BATTLE_BIN__80185e30();
-      bVar1 = FUN_BATTLE_BIN__80188b14();
-      if (CONCAT31(extraout_var,bVar1) == 0) {
+      bVar2 = FUN_BATTLE_BIN__80188b14();
+      if (CONCAT31(extraout_var,bVar2) == 0) {
         FUN_BATTLE_BIN__80187638();
-        if (TarCurActPtr->HitFlag != false) {
-          *(undefined2 *)&TarCurActPtr->field_0x10 = 0x10;
+        if (TarCurActPtr->HitFlag != 0) {
+          pUVar1 = &TarCurActPtr->UniqueEffect2;
+          TarCurActPtr->UniqueEffect1 = Stolen_Item;
+          *pUVar1 = ~(Minus_Level|Secondary_Proc|Elem_Absorb|Elem_Weak|Katana_Broken|UNUSED|
+                      Knockback|Hit_Golem);
         }
       }
     }
@@ -80320,7 +83855,7 @@ void _7_GilSteal(void)
   int iVar2;
   undefined3 extraout_var;
   
-  iVar2 = FUN_BATTLE_BIN__80188510();
+  iVar2 = PhysicalEvadeCalc();
   if (iVar2 == 0) {
     FUN_BATTLE_BIN__80185e30();
     bVar1 = FUN_BATTLE_BIN__80188b14();
@@ -80338,17 +83873,17 @@ void _8_ExpSteal(void)
 {
   int iVar1;
   
-  iVar1 = FUN_BATTLE_BIN__80188510();
+  iVar1 = PhysicalEvadeCalc();
   if (iVar1 == 0) {
     FUN_BATTLE_BIN__80185e30();
     FUN_BATTLE_BIN__8018614c();
     FUN_BATTLE_BIN__80186254();
     FUN_BATTLE_BIN__801862cc();
     FUN_BATTLE_BIN__8018636c();
-    FUN_BATTLE_BIN__80184964();
+    ZodiacCompat();
     FUN_BATTLE_BIN__8018659c();
     FUN_BATTLE_BIN__80187510();
-    if ((TarCurActPtr->HitFlag != false) || (DAT_BATTLE_BIN__8018f5fc != 0)) {
+    if ((TarCurActPtr->HitFlag != 0) || (ActionState != 0)) {
       FUN_BATTLE_BIN__80186814();
     }
   }
@@ -80361,10 +83896,10 @@ void _9_HeartSteal(void)
 
 {
   FUN_BATTLE_BIN__80185d80();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187510();
-  if (TarCurActPtr->HitFlag != false) {
+  if (TarCurActPtr->HitFlag != 0) {
     if (((TarBattlePtr->AllActionUnitData).EntdGenderFlags & (monster|female|male)) ==
         ((CasBattlePtr->AllActionUnitData).EntdGenderFlags & (monster|female|male))) {
       FUN_BATTLE_BIN__8018430c();
@@ -80383,16 +83918,15 @@ void _A_TalkSkill(void)
 {
   FUN_BATTLE_BIN__801875fc();
   if ((((TarBattlePtr->AllActionUnitData).EntdGenderFlags & monster) != 0) &&
-     ((*(byte *)((int)&(CasBattlePtr->AllActionUnitData).Supports + 2) & 0x10) == 0)) {
+     (((CasBattlePtr->AllActionUnitData).Supports3 & Monster_Talk) == None)) {
     FUN_BATTLE_BIN__8018430c();
   }
-  if ((TarCurActPtr->HitFlag != false) &&
-     (FUN_BATTLE_BIN__801882f8(), TarCurActPtr->HitFlag != false)) {
+  if ((TarCurActPtr->HitFlag != 0) && (FUN_BATTLE_BIN__801882f8(), TarCurActPtr->HitFlag != 0)) {
     FUN_BATTLE_BIN__80185d80();
-    FUN_BATTLE_BIN__80184964();
+    ZodiacCompat();
     FUN_BATTLE_BIN__8018659c();
     FUN_BATTLE_BIN__80187510();
-    if (TarCurActPtr->HitFlag != false) {
+    if (TarCurActPtr->HitFlag != 0) {
       FUN_BATTLE_BIN__80186c04();
     }
   }
@@ -80408,7 +83942,7 @@ void _B_StatBreak(void)
   int iVar2;
   undefined3 extraout_var;
   
-  iVar2 = FUN_BATTLE_BIN__80188510();
+  iVar2 = PhysicalEvadeCalc();
   if (iVar2 == 0) {
     FUN_BATTLE_BIN__80185e04();
     bVar1 = FUN_BATTLE_BIN__801886d4();
@@ -80428,7 +83962,7 @@ void _C_MPBreak(void)
   int iVar2;
   undefined3 extraout_var;
   
-  iVar2 = FUN_BATTLE_BIN__80188510();
+  iVar2 = PhysicalEvadeCalc();
   if (iVar2 == 0) {
     FUN_BATTLE_BIN__80185e04();
     bVar1 = FUN_BATTLE_BIN__801886d4();
@@ -80446,15 +83980,15 @@ void _D_HolySword(void)
 {
   int iVar1;
   
-  iVar1 = FUN_BATTLE_BIN__80188510();
+  iVar1 = PhysicalEvadeCalc();
   if (iVar1 == 0) {
     FUN_BATTLE_BIN__80185e5c();
     FUN_BATTLE_BIN__80185fa4();
     FUN_BATTLE_BIN__801886a4();
     FUN_BATTLE_BIN__80186fd0();
-    if (TarCurActPtr->HitFlag != false) {
+    if (TarCurActPtr->HitFlag != 0) {
       FUN_BATTLE_BIN__801870fc();
-      FUN_BATTLE_BIN__80187eb4();
+      ApplyStatusPreserveAttack();
     }
   }
   return;
@@ -80465,20 +83999,24 @@ void _D_HolySword(void)
 void _E_MightySword(void)
 
 {
-  int iVar1;
+  UniqueEffect2 *pUVar1;
+  int iVar2;
   
-  iVar1 = FUN_BATTLE_BIN__80188510();
-  if (iVar1 == 0) {
-    iVar1 = FUN_BATTLE_BIN__801879c8();
-    if (iVar1 == 0) {
+  iVar2 = PhysicalEvadeCalc();
+  if (iVar2 == 0) {
+    iVar2 = FUN_BATTLE_BIN__801879c8();
+    if (iVar2 == 0) {
       FUN_BATTLE_BIN__80187638();
-      if (TarCurActPtr->HitFlag != false) {
-        *(undefined2 *)&TarCurActPtr->field_0x10 = 4;
+      if (TarCurActPtr->HitFlag != 0) {
+        pUVar1 = &TarCurActPtr->UniqueEffect2;
+        TarCurActPtr->UniqueEffect1 = Break_Item;
+        *pUVar1 = ~(Minus_Level|Secondary_Proc|Elem_Absorb|Elem_Weak|Katana_Broken|UNUSED|Knockback|
+                   Hit_Golem);
         FUN_BATTLE_BIN__80185dd8();
         FUN_BATTLE_BIN__80185fa4();
         FUN_BATTLE_BIN__801886a4();
         FUN_BATTLE_BIN__80186fd0();
-        if (TarCurActPtr->HitFlag != false) {
+        if (TarCurActPtr->HitFlag != 0) {
           FUN_BATTLE_BIN__801870fc();
         }
       }
@@ -80498,7 +84036,7 @@ void _F_DarkSword(void)
 {
   int iVar1;
   
-  iVar1 = FUN_BATTLE_BIN__80188510();
+  iVar1 = PhysicalEvadeCalc();
   if (iVar1 == 0) {
     FUN_BATTLE_BIN__80185dd8();
     FUN_BATTLE_BIN__801886a4();
@@ -80514,7 +84052,7 @@ void _0_NightSword(void)
 {
   int iVar1;
   
-  iVar1 = FUN_BATTLE_BIN__80188510();
+  iVar1 = PhysicalEvadeCalc();
   if (iVar1 == 0) {
     FUN_BATTLE_BIN__80185dd8();
     FUN_BATTLE_BIN__801886a4();
@@ -80528,12 +84066,10 @@ void _0_NightSword(void)
 void _1_Barehand(void)
 
 {
-  bool bVar1;
-  int iVar2;
-  undefined3 extraout_var;
+  int iVar1;
   
-  iVar2 = FUN_BATTLE_BIN__80188510();
-  if (iVar2 == 0) {
+  iVar1 = PhysicalEvadeCalc();
+  if (iVar1 == 0) {
     FUN_BATTLE_BIN__80185d00();
     FUN_BATTLE_BIN__80185ffc();
     FUN_BATTLE_BIN__8018614c();
@@ -80542,11 +84078,11 @@ void _1_Barehand(void)
     FUN_BATTLE_BIN__80186568();
     FUN_BATTLE_BIN__80186ed0();
     FUN_BATTLE_BIN__80186ff8();
-    if (TarCurActPtr->HitFlag != false) {
+    if (TarCurActPtr->HitFlag != 0) {
       FUN_BATTLE_BIN__801870fc();
-      bVar1 = FUN_BATTLE_BIN__801884c0();
-      if (CONCAT31(extraout_var,bVar1) == 0) {
-        FUN_BATTLE_BIN__80187eb4();
+      iVar1 = FUN_BATTLE_BIN__801884c0();
+      if (iVar1 == 0) {
+        ApplyStatusPreserveAttack();
       }
     }
   }
@@ -80563,7 +84099,7 @@ void _2_BarehandRND(void)
   CurActionUnitData *pCVar3;
   int iVar4;
   
-  iVar4 = FUN_BATTLE_BIN__80188510();
+  iVar4 = PhysicalEvadeCalc();
   if (iVar4 == 0) {
     FUN_BATTLE_BIN__80185d00();
     FUN_BATTLE_BIN__8018614c();
@@ -80579,7 +84115,7 @@ void _2_BarehandRND(void)
     CurrentAbilityData.RdmDmgMod = (char)(iVar4 >> 0xf) + 1;
     psVar1 = &TarCurActPtr->HPDamage;
     uVar2 = (ushort)CurrentAbilityData.RdmDmgMod;
-    TarCurActPtr->field_0x25 = 0x80;
+    TarCurActPtr->AttackType = HPDamage;
     pCVar3->HPDamage = *psVar1 * uVar2;
   }
   return;
@@ -80593,10 +84129,10 @@ void _3_Stigma(void)
   FUN_BATTLE_BIN__80185dac();
   FUN_BATTLE_BIN__8018614c();
   FUN_BATTLE_BIN__80186254();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187510();
-  if (TarCurActPtr->HitFlag != false) {
+  if (TarCurActPtr->HitFlag != 0) {
     _8_InflictStatus();
   }
   return;
@@ -80613,13 +84149,13 @@ void _4_Chakra(void)
   
   FUN_BATTLE_BIN__80185e04();
   FUN_BATTLE_BIN__8018614c();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   FUN_BATTLE_BIN__80186568();
   pCVar2 = TarCurActPtr;
   sVar1 = TarCurActPtr->HPDamage;
   TarCurActPtr->HPDamage = 0;
   pCVar2->HPRecovery = sVar1;
-  pCVar2->field_0x25 = 0x50;
+  pCVar2->AttackType = MPRecovery|HPRecovery;
   iVar3 = (uint)(ushort)pCVar2->HPRecovery << 0x10;
   pCVar2->MPRecovery = (short)((iVar3 >> 0x10) - (iVar3 >> 0x1f) >> 1);
   return;
@@ -80634,10 +84170,10 @@ void _5_Revive(void)
   
   FUN_BATTLE_BIN__80185dac();
   FUN_BATTLE_BIN__8018614c();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187510();
-  if ((TarCurActPtr->HitFlag != false) && (iVar1 = FUN_BATTLE_BIN__8018acdc(), iVar1 != 0)) {
+  if ((TarCurActPtr->HitFlag != 0) && (iVar1 = FUN_BATTLE_BIN__8018acdc(), iVar1 != 0)) {
     FUN_BATTLE_BIN__80186624();
     FUN_BATTLE_BIN__80187350();
   }
@@ -80651,7 +84187,7 @@ void _7_KnockbackRND(void)
 {
   int iVar1;
   
-  iVar1 = FUN_BATTLE_BIN__80188510();
+  iVar1 = PhysicalEvadeCalc();
   if (iVar1 == 0) {
     FUN_BATTLE_BIN__80185e04();
     FUN_BATTLE_BIN__8018614c();
@@ -80701,7 +84237,7 @@ void _F_AimLimb(void)
   FUN_BATTLE_BIN__801885f8();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187510();
-  if (TarCurActPtr->HitFlag != false) {
+  if (TarCurActPtr->HitFlag != 0) {
     _8_InflictStatus();
   }
   return;
@@ -80716,7 +84252,7 @@ void _0_SealEvil(void)
   FUN_BATTLE_BIN__801885f8();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187510();
-  if (TarCurActPtr->HitFlag != false) {
+  if (TarCurActPtr->HitFlag != 0) {
     if (((TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1 & Undead) == empty) {
       FUN_BATTLE_BIN__8018430c();
     }
@@ -80758,15 +84294,15 @@ void _2_Work(void)
   uint uVar3;
   
   FUN_BATTLE_BIN__80185e04();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   sVar1 = CurrentAbilityData.AbPower * CurrentAbilityData.UnitPower;
   TarCurActPtr->HPDamage = sVar1;
   pCVar2 = CasCurActPtr;
   uVar3 = (uint)CurrentAbilityData.CurrentAbilityFuncData.X;
-  CasCurActPtr->HitFlag = true;
+  CasCurActPtr->HitFlag = 1;
   pCVar2->HPDamage = (short)((int)sVar1 / (int)uVar3);
-  TarCurActPtr->field_0x25 = 0x80;
-  CasCurActPtr->field_0x25 = 0x80;
+  TarCurActPtr->AttackType = HPDamage;
+  CasCurActPtr->AttackType = HPDamage;
   return;
 }
 
@@ -80788,7 +84324,7 @@ void _7_BloodSuck(void)
 {
   FUN_BATTLE_BIN__80186624();
   FUN_BATTLE_BIN__80187248();
-  FUN_BATTLE_BIN__80187eb4();
+  ApplyStatusPreserveAttack();
   return;
 }
 
@@ -80877,7 +84413,7 @@ void _D_MonAbsorb(void)
   int iVar2;
   undefined3 extraout_var;
   
-  iVar2 = FUN_BATTLE_BIN__80188510();
+  iVar2 = PhysicalEvadeCalc();
   if (iVar2 == 0) {
     FUN_BATTLE_BIN__80185d80();
     bVar1 = FUN_BATTLE_BIN__80188b14();
@@ -80913,7 +84449,7 @@ void _F_GoblinPunch(void)
   int iVar2;
   undefined3 extraout_var;
   
-  iVar2 = FUN_BATTLE_BIN__80188510();
+  iVar2 = PhysicalEvadeCalc();
   if (iVar2 == 0) {
     FUN_BATTLE_BIN__80185d80();
     bVar1 = FUN_BATTLE_BIN__80188b14();
@@ -80933,7 +84469,7 @@ void _0_MonPhysSpell(void)
   int iVar2;
   undefined3 extraout_var;
   
-  iVar2 = FUN_BATTLE_BIN__80188510();
+  iVar2 = PhysicalEvadeCalc();
   if (iVar2 == 0) {
     FUN_BATTLE_BIN__80185d80();
     bVar1 = FUN_BATTLE_BIN__80188b14();
@@ -80952,10 +84488,10 @@ void _1_MonEsuna(void)
   FUN_BATTLE_BIN__80185d80();
   FUN_BATTLE_BIN__80185ffc();
   FUN_BATTLE_BIN__80186204();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187510();
-  if (TarCurActPtr->HitFlag != false) {
+  if (TarCurActPtr->HitFlag != 0) {
     _8_InflictStatus();
   }
   return;
@@ -80971,15 +84507,15 @@ void _2_SelfDestruct(void)
   pCVar1 = TarCurActPtr;
   if (TarBattlePtr == CasBattlePtr) {
     TarCurActPtr->HPDamage = (TarBattlePtr->AllActionUnitData).HP;
-    pCVar1->field_0x25 = 0x80;
+    pCVar1->AttackType = HPDamage;
   }
   else {
     TarCurActPtr->HPDamage =
          (CasBattlePtr->AllActionUnitData).MaxHP - (CasBattlePtr->AllActionUnitData).HP;
-    pCVar1->field_0x25 = 0x80;
+    pCVar1->AttackType = HPDamage;
   }
   if (TarBattlePtr != CasBattlePtr) {
-    FUN_BATTLE_BIN__80187eb4();
+    ApplyStatusPreserveAttack();
   }
   return;
 }
@@ -80998,8 +84534,8 @@ void _3_Hurricane(void)
     FUN_BATTLE_BIN__80186624();
     FUN_BATTLE_BIN__80186ed0();
     FUN_BATTLE_BIN__80186ff8();
-    if ((TarCurActPtr->HitFlag != false) && (iVar2 = FUN_BATTLE_BIN__8018871c(), iVar2 == 0)) {
-      FUN_BATTLE_BIN__80187eb4();
+    if ((TarCurActPtr->HitFlag != 0) && (iVar2 = FUN_BATTLE_BIN__8018871c(), iVar2 == 0)) {
+      ApplyStatusPreserveAttack();
     }
   }
   return;
@@ -81030,8 +84566,8 @@ void _5_Beaking(void)
   
   iVar2 = FUN_BATTLE_BIN__801885b8();
   if ((iVar2 == 0) && (bVar1 = FUN_BATTLE_BIN__80188a84(), CONCAT31(extraout_var,bVar1) == 0)) {
-    TarCurActPtr->field_0x14 = CurrentAbilityData.CurrentAbilityFuncData.Y & 0x7f;
-    TarCurActPtr->field_0x25 = 1;
+    TarCurActPtr->PAChange = CurrentAbilityData.CurrentAbilityFuncData.Y & Value;
+    TarCurActPtr->AttackType = StatAlter;
   }
   return;
 }
@@ -81047,8 +84583,8 @@ void _6_Circle(void)
   
   iVar2 = FUN_BATTLE_BIN__801885b8();
   if ((iVar2 == 0) && (bVar1 = FUN_BATTLE_BIN__80188a84(), CONCAT31(extraout_var,bVar1) == 0)) {
-    TarCurActPtr->field_0x15 = CurrentAbilityData.CurrentAbilityFuncData.Y & 0x7f;
-    TarCurActPtr->field_0x25 = 1;
+    TarCurActPtr->MAChange = CurrentAbilityData.CurrentAbilityFuncData.Y & Value;
+    TarCurActPtr->AttackType = StatAlter;
   }
   return;
 }
@@ -81066,19 +84602,22 @@ void _7_PleaseEat(void)
   FUN_BATTLE_BIN__80187350();
   pCVar1 = TarCurActPtr;
   if ((TarBattlePtr->AllActionUnitData).Level < 99) {
-    TarCurActPtr->field_0x25 = 1;
+    TarCurActPtr->AttackType = StatAlter;
     pBVar3 = TarBattlePtr;
     TarBattlePtr = CasBattlePtr;
     pCVar2 = TarCurActPtr;
     TarCurActPtr = CasCurActPtr;
-    *(undefined2 *)&pCVar1->field_0x10 = 0x80;
-    TarCurActPtr->HitFlag = true;
+    pCVar1->UniqueEffect1 = Plus_Level;
+    pCVar1->UniqueEffect2 =
+         ~(Minus_Level|Secondary_Proc|Elem_Absorb|Elem_Weak|Katana_Broken|UNUSED|Knockback|Hit_Golem
+          );
+    TarCurActPtr->HitFlag = 1;
     _8_InflictStatus();
     TarCurActPtr = pCVar2;
     TarBattlePtr = pBVar3;
   }
   else {
-    TarCurActPtr->field_0x25 = 0;
+    TarCurActPtr->AttackType = 0;
     FUN_BATTLE_BIN__8018430c();
   }
   return;
@@ -81089,23 +84628,27 @@ void _7_PleaseEat(void)
 void _8_Moldball(void)
 
 {
-  CurActionUnitData *pCVar1;
+  UniqueEffect2 *pUVar1;
+  CurActionUnitData *pCVar2;
   
   FUN_BATTLE_BIN__80185d80();
   FUN_BATTLE_BIN__80185ffc();
   FUN_BATTLE_BIN__80186204();
-  FUN_BATTLE_BIN__80184964();
+  ZodiacCompat();
   FUN_BATTLE_BIN__8018659c();
   FUN_BATTLE_BIN__80187510();
-  pCVar1 = TarCurActPtr;
-  if (TarCurActPtr->HitFlag != false) {
+  pCVar2 = TarCurActPtr;
+  if (TarCurActPtr->HitFlag != 0) {
     if ((((((TarBattlePtr->AllActionUnitData).EntdTeamFlags & immortal) ==
            ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) &&
          ((TarBattlePtr->CurActionTargetData).field_0x14 == '\0')) &&
         ((byte)((TarBattlePtr->AllActionUnitData).BaseClass + Minitaurus) < 3)) &&
        (2 < (byte)((TarBattlePtr->AllActionUnitData).JobID + Taiju))) {
-      *(undefined2 *)&TarCurActPtr->field_0x10 = 2;
-      pCVar1->field_0x25 = 1;
+      pUVar1 = &TarCurActPtr->UniqueEffect2;
+      TarCurActPtr->UniqueEffect1 = Moldball;
+      *pUVar1 = ~(Minus_Level|Secondary_Proc|Elem_Absorb|Elem_Weak|Katana_Broken|UNUSED|Knockback|
+                 Hit_Golem);
+      pCVar2->AttackType = StatAlter;
     }
     else {
       FUN_BATTLE_BIN__8018430c();
@@ -81119,19 +84662,23 @@ void _8_Moldball(void)
 void _9_LevelBlast(void)
 
 {
-  CurActionUnitData *pCVar1;
-  bool bVar2;
-  int iVar3;
+  UniqueEffect2 *pUVar1;
+  CurActionUnitData *pCVar2;
+  bool bVar3;
+  int iVar4;
   undefined3 extraout_var;
   
-  iVar3 = FUN_BATTLE_BIN__801885b8();
-  if ((iVar3 == 0) && (bVar2 = FUN_BATTLE_BIN__80188a84(), CONCAT31(extraout_var,bVar2) == 0)) {
+  iVar4 = FUN_BATTLE_BIN__801885b8();
+  if ((iVar4 == 0) && (bVar3 = FUN_BATTLE_BIN__80188a84(), CONCAT31(extraout_var,bVar3) == 0)) {
     if ((TarBattlePtr->AllActionUnitData).Level < 2) {
       FUN_BATTLE_BIN__8018430c();
     }
-    pCVar1 = TarCurActPtr;
-    *(undefined2 *)&TarCurActPtr->field_0x10 = 0x100;
-    pCVar1->field_0x25 = 1;
+    pCVar2 = TarCurActPtr;
+    pUVar1 = &TarCurActPtr->UniqueEffect2;
+    TarCurActPtr->UniqueEffect1 =
+         ~(Golem|Moldball|Break_Item|Stole_Target_Item|Stolen_Item|Poached|SwitchTeam|Plus_Level);
+    *pUVar1 = Minus_Level;
+    pCVar2->AttackType = StatAlter;
   }
   return;
 }
@@ -81142,7 +84689,7 @@ void _A_DragonTame(void)
 
 {
   FUN_BATTLE_BIN__801875bc();
-  if (TarCurActPtr->HitFlag != false) {
+  if (TarCurActPtr->HitFlag != 0) {
     _8_InflictStatus();
   }
   return;
@@ -81154,9 +84701,9 @@ void _B_DragonCare(void)
 
 {
   FUN_BATTLE_BIN__801875bc();
-  if (TarCurActPtr->HitFlag != false) {
+  if (TarCurActPtr->HitFlag != 0) {
     _C_Wish();
-    FUN_BATTLE_BIN__80187eb4();
+    ApplyStatusPreserveAttack();
   }
   return;
 }
@@ -81167,7 +84714,7 @@ void _C_DragonPowerUp(void)
 
 {
   FUN_BATTLE_BIN__801875bc();
-  if (TarCurActPtr->HitFlag != false) {
+  if (TarCurActPtr->HitFlag != 0) {
     _B_Scream();
   }
   return;
@@ -81179,7 +84726,7 @@ void _D_DragonLevelUp(void)
 
 {
   FUN_BATTLE_BIN__801875bc();
-  if (TarCurActPtr->HitFlag != false) {
+  if (TarCurActPtr->HitFlag != 0) {
     FUN_BATTLE_BIN__8018783c();
   }
   return;
@@ -81268,13 +84815,13 @@ void _3_Throw(void)
   int iVar1;
   
   FUN_BATTLE_BIN__801883ac();
-  if ((TarCurActPtr->HitFlag != false) && (iVar1 = FUN_BATTLE_BIN__80188510(), iVar1 == 0)) {
+  if ((TarCurActPtr->HitFlag != 0) && (iVar1 = PhysicalEvadeCalc(), iVar1 == 0)) {
     CurrentAbilityData.UnitPower = (short)CurrentAbilityData.CurrentWeaponFuncData.WeaponPower;
     CurrentAbilityData.AbPower = (short)(CasBattlePtr->AllActionUnitData).SP;
     FUN_BATTLE_BIN__80188adc();
     FUN_BATTLE_BIN__80186568();
     FUN_BATTLE_BIN__80186fd0();
-    if (TarCurActPtr->HitFlag != false) {
+    if (TarCurActPtr->HitFlag != 0) {
       FUN_BATTLE_BIN__801870fc();
     }
   }
@@ -81302,8 +84849,8 @@ void FUN_BATTLE_BIN__8018ac74(int param_1)
 {
   CasCurActPtr = &CasCurActData;
   if ((*(char *)(param_1 + 0x16f) == '\x12') && ((*(byte *)(param_1 + 0x1bd) & 0x10) != 0)) {
-    CasCurActData.HitFlag = true;
-    CasCurActData._37_1_ = CasCurActData._37_1_ | 8;
+    CasCurActData.HitFlag = 1;
+    CasCurActData.AttackType = CasCurActData.AttackType | StatusChange;
     CasCurActData.StatusRemoval.Status3 = CasCurActData.StatusRemoval.Status3 | Transparent;
   }
   return;
@@ -81316,9 +84863,9 @@ undefined4 FUN_BATTLE_BIN__8018acdc(void)
 {
   undefined4 uVar1;
   
-  FUN_BATTLE_BIN__80187eb4();
+  ApplyStatusPreserveAttack();
   uVar1 = 1;
-  if (((TarCurActPtr->field_0x25 & 8) == 0) &&
+  if (((TarCurActPtr->AttackType & StatusChange) == 0) &&
      (uVar1 = 1, ((TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1 & Undead) == empty)) {
     FUN_BATTLE_BIN__80184e40();
     uVar1 = 0;
@@ -81362,7 +84909,7 @@ void FUN_BATTLE_BIN__8018adf4(void)
 {
   FUN_BATTLE_BIN__8018bd74(&TarCurActPtr->HitFlag);
   FUN_BATTLE_BIN__8018bd74(&CasCurActPtr->HitFlag);
-  CasCurActPtr->HitFlag = false;
+  CasCurActPtr->HitFlag = 0;
   return;
 }
 
@@ -81378,7 +84925,7 @@ void FUN_BATTLE_BIN__8018ae3c(void)
   
   FUN_BATTLE_BIN__8018adf4();
   CurrentAbilityData._81_1_ = CurrentAbilityData._81_1_ & 0x7f;
-  TarCurActPtr->field_0x25 = 1;
+  TarCurActPtr->AttackType = StatAlter;
   pCVar2 = TarCurActPtr;
   uVar1._0_1_ = (TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1;
   uVar1._1_1_ = (TarBattlePtr->AllActionUnitData).CurrentStatuses.Status2;
@@ -81394,7 +84941,7 @@ void FUN_BATTLE_BIN__8018ae3c(void)
     }
     TarCurActPtr->HPDamage = (short)iVar4;
     if (iVar4 != 0) {
-      pCVar2->field_0x25 = pCVar2->field_0x25 | 0x80;
+      pCVar2->AttackType = pCVar2->AttackType | HPDamage;
     }
   }
   return;
@@ -81407,10 +84954,10 @@ undefined4 FUN_BATTLE_BIN__8018af2c(void)
 {
   CurActionUnitData *pCVar1;
   int iVar2;
-  undefined uVar3;
+  AttackType AVar3;
   short sVar4;
   
-  uVar3 = 1;
+  AVar3 = StatAlter;
   if ((short)DAT_BATTLE_BIN__80192d9c == 0x1b8) {
     CasBattlePtr = UnitBattleData + DAT_BATTLE_BIN__8018f8c8;
   }
@@ -81421,13 +84968,13 @@ undefined4 FUN_BATTLE_BIN__8018af2c(void)
   pCVar1 = CasCurActPtr;
   switch((int)((DAT_BATTLE_BIN__80192d9c - 0x1a6) * 0x10000) >> 0x10) {
   case 0:
-    TarCurActPtr->field_0x14 = 0x81;
+    TarCurActPtr->PAChange = 0x81;
     break;
   case 1:
-    TarCurActPtr->field_0x15 = 0x81;
+    TarCurActPtr->MAChange = 0x81;
     break;
   case 2:
-    TarCurActPtr->field_0x12 = 0x81;
+    TarCurActPtr->SPChange = 0x81;
     break;
   case 3:
     (TarCurActPtr->StatusInfliction).Status3 = Transparent;
@@ -81443,37 +84990,37 @@ undefined4 FUN_BATTLE_BIN__8018af2c(void)
 LAB_BATTLE_BIN__8018b070:
     iVar2 = FUN_BATTLE_BIN__80184b24(0);
     if (iVar2 != 0) {
-      uVar3 = 8;
+      AVar3 = StatusChange;
     }
     break;
   case 7:
-    TarCurActPtr->field_0x16 = 0x83;
+    TarCurActPtr->BraveChange = 0x83;
     break;
   case 8:
-    TarCurActPtr->field_0x17 = 0x83;
+    TarCurActPtr->FaithChange = 0x83;
     break;
   case 9:
-    uVar3 = 0x40;
+    AVar3 = HPRecovery;
     TarCurActPtr->HPRecovery =
          (TarBattlePtr->AllActionUnitData).MaxHP - (TarBattlePtr->AllActionUnitData).HP;
     break;
   case 10:
-    uVar3 = 0x10;
+    AVar3 = MPRecovery;
     TarCurActPtr->MPRecovery =
          (TarBattlePtr->AllActionUnitData).MaxMP - (TarBattlePtr->AllActionUnitData).MP;
     break;
   case 0xb:
-    TarCurActPtr->field_0x13 = 0xff;
+    TarCurActPtr->CTChange = Quick;
     break;
   case 0xc:
-    uVar3 = 0x80;
+    AVar3 = HPDamage;
     TarCurActPtr->HPDamage = (CasBattlePtr->AllActionUnitData).MaxHP;
     break;
   default:
-    TarCurActPtr->field_0x25 = 0;
+    TarCurActPtr->AttackType = 0;
     return 0xffffffff;
   case 0x10:
-    uVar3 = 0x10;
+    AVar3 = MPRecovery;
     TarCurActPtr->MPRecovery = TarCurActPtr->ReactionVar;
     break;
   case 0x11:
@@ -81487,21 +85034,23 @@ LAB_BATTLE_BIN__8018b070:
       sVar4 = (short)((int)((uint)(ushort)(CasBattlePtr->CurActionUnitData).ReactionVar +
                             DAT_BATTLE_BIN__80193878 + -1) / DAT_BATTLE_BIN__80193878);
     }
-    uVar3 = 0x40;
+    AVar3 = HPRecovery;
     TarCurActPtr->HPRecovery = sVar4;
     break;
   case 0x18:
     sVar4 = (CasBattlePtr->CurActionUnitData).ReactionVar;
-    uVar3 = 0x80;
+    AVar3 = HPDamage;
     TarCurActPtr->HPDamage = sVar4;
     pCVar1->HPRecovery = sVar4;
-    pCVar1->field_0x25 = 0x40;
-    CasCurActPtr->HitFlag = true;
+    pCVar1->AttackType = HPRecovery;
+    CasCurActPtr->HitFlag = 1;
   }
-  TarCurActPtr->field_0x25 = uVar3;
+  TarCurActPtr->AttackType = AVar3;
   FUN_BATTLE_BIN__8018ba44();
-  if (*(short *)&TarCurActPtr->field_0x10 != 0) {
-    TarCurActPtr->field_0x25 = TarCurActPtr->field_0x25 | 1;
+  sVar4._0_1_ = TarCurActPtr->UniqueEffect1;
+  sVar4._1_1_ = TarCurActPtr->UniqueEffect2;
+  if (sVar4 != 0) {
+    TarCurActPtr->AttackType = TarCurActPtr->AttackType | StatAlter;
   }
   CurrentAbilityData.ReactionID2 = 0;
   return 1;
@@ -81547,6 +85096,7 @@ void FUN_BATTLE_BIN__8018b274(int param_1)
 int PreFormulaSetup(CurActionTargetData *CasCurActData,byte TarID)
 
 {
+  short sVar1;
   AbilityIDByte AbilityID;
   int Success;
   int TileID;
@@ -81607,10 +85157,10 @@ int PreFormulaSetup(CurActionTargetData *CasCurActData,byte TarID)
         CurrentAbilityData.UsedAbility2 = CurrentAbilityData.ReactionID2;
         UsedSkillsetType = Default;
       }
-      TarCurActPtr->field_0x18 =
-           PrimaryAbilityData[(short)TempTargettingData.AttackToUse].field_0x4 & 3;
+      TarCurActPtr->StatusMissMessageByte =
+           PrimaryAbilityData[(short)TempTargettingData.AttackToUse].field_0x4 & (Failed|Guarded);
       if ((PrimaryAbilityData[(short)TempTargettingData.AttackToUse].field_0x7 & 1) != 0) {
-        TarCurActPtr->field_0x18 = TarCurActPtr->field_0x18 + -0x80;
+        TarCurActPtr->StatusMissMessageByte = TarCurActPtr->StatusMissMessageByte + AnimateOnMiss;
       }
       if (UsedSkillsetType == DrawOut) {
         TempTargettingData.AttackToUse = TempTargettingData.UsedItem + Float;
@@ -81671,7 +85221,7 @@ int PreFormulaSetup(CurActionTargetData *CasCurActData,byte TarID)
       case Attack:
         AbilityFormula = WeaponSecondary[UsedItem].Formula;
         if (((CurrentAbilityData.CurrentWeaponFuncData._1_1_ & 4) != 0) &&
-           ((*(byte *)((int)&(CasBattlePtr->AllActionUnitData).Supports + 2) & 2) != 0)) {
+           (((CasBattlePtr->AllActionUnitData).Supports3 & Two_Hands) != None)) {
           if (((CasBattlePtr->AllActionUnitData).RHWeapon == NONE_ENTD) &&
              ((CasBattlePtr->AllActionUnitData).RHShield == NONE_ENTD)) {
             CurrentAbilityData._hands = true;
@@ -81697,7 +85247,7 @@ int PreFormulaSetup(CurActionTargetData *CasCurActData,byte TarID)
       FUN_BATTLE_BIN__8018b9f8();
       CurrentAbilityData.Formula = AbilityFormula;
       FUN_BATTLE_BIN__8018c9e4();
-      if (TarCurActPtr->HitFlag == false) {
+      if (TarCurActPtr->HitFlag == 0) {
         Success = 1;
       }
       else {
@@ -81709,9 +85259,11 @@ int PreFormulaSetup(CurActionTargetData *CasCurActData,byte TarID)
           CurrentAbilityData.UsedItem3 = None;
         }
         FUN_BATTLE_BIN__8018ba44();
+        sVar1._0_1_ = TarCurActPtr->UniqueEffect1;
+        sVar1._1_1_ = TarCurActPtr->UniqueEffect2;
         Success = 0;
-        if (*(short *)&TarCurActPtr->field_0x10 != 0) {
-          TarCurActPtr->field_0x25 = TarCurActPtr->field_0x25 | 1;
+        if (sVar1 != 0) {
+          TarCurActPtr->AttackType = TarCurActPtr->AttackType | StatAlter;
           Success = 0;
         }
       }
@@ -81782,9 +85334,9 @@ void FUN_BATTLE_BIN__8018ba44(void)
   }
   else {
     sVar2._0_1_ = TarCurActPtr->Hit_;
-    sVar2._1_1_ = TarCurActPtr->field60_0x2b;
+    sVar2._1_1_ = TarCurActPtr->hi_hit_;
     if (sVar2 == 0) {
-      TarCurActPtr->HitFlag = false;
+      TarCurActPtr->HitFlag = 0;
     }
     if (999 < TarCurActPtr->HPDamage) {
       TarCurActPtr->HPDamage = 999;
@@ -81803,14 +85355,16 @@ void FUN_BATTLE_BIN__8018ba44(void)
       FUN_BATTLE_BIN__8018bcf0();
     }
     pCVar4 = TarCurActPtr;
-    if ((((TarCurActPtr->field_0x25 != '\0') && (TarCurActPtr->HitFlag != false)) &&
+    if ((((TarCurActPtr->AttackType != 0) && (TarCurActPtr->HitFlag != 0)) &&
         (DAT_BATTLE_BIN__8018f5f0 == 0)) &&
        ((*(short *)(&DAT_BATTLE_BIN__8018f5f4 +
-                   (((byte)(TarBattlePtr->CurActionUnitData).field_0x2e & 0x30) >> 4) * 2) != 0 &&
+                   (((TarBattlePtr->CurActionUnitData).ModifiedENTDTeam & 0x30) >> 4) * 2) != 0 &&
         ((CurrentAbilityData.CurrentAbilityFuncData._5_1_ & 8) != 0)))) {
       TarCurActPtr->EvadeType = 10;
       pCVar5 = TarCurActPtr;
-      *(undefined2 *)&pCVar4->field_0x10 = 0x8000;
+      pCVar4->UniqueEffect1 =
+           ~(Golem|Moldball|Break_Item|Stole_Target_Item|Stolen_Item|Poached|SwitchTeam|Plus_Level);
+      pCVar4->UniqueEffect2 = Hit_Golem;
       FUN_BATTLE_BIN__8018bdd4((int)pCVar5);
       FUN_BATTLE_BIN__8018bd34();
     }
@@ -81823,10 +85377,17 @@ void FUN_BATTLE_BIN__8018ba44(void)
 void FUN_BATTLE_BIN__8018bcf0(void)
 
 {
+  ushort uVar1;
+  UniqueEffect2 *pUVar2;
+  
   if (CurrentAbilityData.CanPerformReaction != 0) {
     CurrentAbilityData.ReactionID2 = 0;
     CurrentAbilityData.CanPerformReaction = 0;
-    *(ushort *)&TarCurActPtr->field_0x10 = *(ushort *)&TarCurActPtr->field_0x10 & 0xfdff;
+    uVar1._0_1_ = TarCurActPtr->UniqueEffect1;
+    uVar1._1_1_ = TarCurActPtr->UniqueEffect2;
+    pUVar2 = &TarCurActPtr->UniqueEffect2;
+    TarCurActPtr->UniqueEffect1 = (char)(uVar1 & 0xfdff);
+    *pUVar2 = (char)((uVar1 & 0xfdff) >> 8);
   }
   return;
 }
@@ -81836,9 +85397,16 @@ void FUN_BATTLE_BIN__8018bcf0(void)
 void FUN_BATTLE_BIN__8018bd34(void)
 
 {
+  ushort uVar1;
+  UniqueEffect2 *pUVar2;
+  
   if ((CurrentAbilityData._81_1_ & 0x80) != 0) {
     CurrentAbilityData._81_1_ = 0;
-    *(ushort *)&TarCurActPtr->field_0x10 = *(ushort *)&TarCurActPtr->field_0x10 & 0xbfff;
+    uVar1._0_1_ = TarCurActPtr->UniqueEffect1;
+    uVar1._1_1_ = TarCurActPtr->UniqueEffect2;
+    pUVar2 = &TarCurActPtr->UniqueEffect2;
+    TarCurActPtr->UniqueEffect1 = (char)(uVar1 & 0xbfff);
+    *pUVar2 = (char)((uVar1 & 0xbfff) >> 8);
   }
   return;
 }
@@ -81885,20 +85453,24 @@ int FUN_BATTLE_BIN__8018be08(int param_1)
   bool bVar1;
   byte bVar2;
   ushort uVar3;
-  int iVar4;
-  CurActionUnitData *pCVar5;
-  BattleUnitData *pBVar6;
-  uint uVar7;
-  uint uVar8;
-  uint uVar9;
-  uint uVar10;
-  byte *pbVar11;
+  ushort uVar4;
+  ushort uVar5;
+  ushort uVar6;
+  ushort uVar7;
+  int iVar8;
+  CurActionUnitData *pCVar9;
+  BattleUnitData *pBVar10;
+  uint uVar11;
   uint uVar12;
   uint uVar13;
   uint uVar14;
-  uint uVar15;
-  int iVar16;
+  byte *pbVar15;
+  uint uVar16;
   uint uVar17;
+  uint uVar18;
+  uint uVar19;
+  int iVar20;
+  uint uVar21;
   byte local_28 [8];
   byte local_20 [16];
   
@@ -81918,114 +85490,118 @@ int FUN_BATTLE_BIN__8018be08(int param_1)
         UnitBattleData[param_1].CurActionTargetData.field_0x1b = 1;
       }
       FUN_BATTLE_BIN__8018cb00();
-      if (TarCurActPtr->ReactionID == 0x1c2) {
+      if (TarCurActPtr->ReactionID == Catch) {
         FUN_BATTLE_BIN__8018e9e8((int)TarBattlePtr,(uint)*(byte *)&TarCurActPtr->ReactionVar);
       }
-      if (TarCurActPtr->HitFlag == false) {
+      if (TarCurActPtr->HitFlag == 0) {
         return 0;
       }
-      if ((*(ushort *)&TarCurActPtr->field_0x10 & 0x8000) != 0) {
-        iVar16 = (uint)*(ushort *)
+      uVar3._0_1_ = TarCurActPtr->UniqueEffect1;
+      uVar3._1_1_ = TarCurActPtr->UniqueEffect2;
+      if ((uVar3 & 0x8000) != 0) {
+        iVar20 = (uint)*(ushort *)
                         (&DAT_BATTLE_BIN__8018f5f4 +
-                        (((byte)(TarBattlePtr->CurActionUnitData).field_0x2e & 0x30) >> 3)) -
+                        (((TarBattlePtr->CurActionUnitData).ModifiedENTDTeam & 0x30) >> 3)) -
                  (int)TarCurActPtr->HPDamage;
-        if (iVar16 < 0) {
-          iVar16 = 0;
+        if (iVar20 < 0) {
+          iVar20 = 0;
         }
         *(ushort *)
          (&DAT_BATTLE_BIN__8018f5f4 +
-         (((byte)(TarBattlePtr->CurActionUnitData).field_0x2e & 0x30) >> 3)) = (ushort)iVar16;
+         (((TarBattlePtr->CurActionUnitData).ModifiedENTDTeam & 0x30) >> 3)) = (ushort)iVar20;
         return 0;
       }
-      bVar1 = (*(ushort *)&TarCurActPtr->field_0x10 & 1) != 0;
+      bVar1 = (uVar3 & 1) != 0;
       if (bVar1) {
         *(ushort *)
          (&DAT_BATTLE_BIN__8018f5f4 +
          (((TarBattlePtr->AllActionUnitData).EntdTeamFlags & 0x30) >> 3)) =
              (TarBattlePtr->AllActionUnitData).MaxHP;
       }
-      uVar15 = (uint)bVar1;
+      uVar19 = (uint)bVar1;
       FUN_BATTLE_BIN__8018cc34();
-      pBVar6 = TarBattlePtr;
-      pCVar5 = TarCurActPtr;
-      uVar14 = (uint)(TarBattlePtr->AllActionUnitData).HP;
-      uVar17 = (uVar14 - (int)TarCurActPtr->HPDamage) + (int)TarCurActPtr->HPRecovery;
-      if ((int)uVar17 < 0) {
-        uVar17 = 0;
+      pBVar10 = TarBattlePtr;
+      pCVar9 = TarCurActPtr;
+      uVar18 = (uint)(TarBattlePtr->AllActionUnitData).HP;
+      uVar21 = (uVar18 - (int)TarCurActPtr->HPDamage) + (int)TarCurActPtr->HPRecovery;
+      if ((int)uVar21 < 0) {
+        uVar21 = 0;
       }
-      uVar10 = (uint)(TarBattlePtr->AllActionUnitData).MaxHP;
-      if ((int)uVar10 < (int)uVar17) {
-        uVar17 = uVar10;
+      uVar14 = (uint)(TarBattlePtr->AllActionUnitData).MaxHP;
+      if ((int)uVar14 < (int)uVar21) {
+        uVar21 = uVar14;
       }
-      uVar13 = (uint)(ushort)(TarBattlePtr->AllActionUnitData).MP;
-      uVar10 = (uVar13 - (int)TarCurActPtr->MPDamage) + (int)TarCurActPtr->MPRecovery;
-      if ((int)uVar10 < 0) {
-        uVar10 = 0;
+      uVar17 = (uint)(ushort)(TarBattlePtr->AllActionUnitData).MP;
+      uVar14 = (uVar17 - (int)TarCurActPtr->MPDamage) + (int)TarCurActPtr->MPRecovery;
+      if ((int)uVar14 < 0) {
+        uVar14 = 0;
       }
-      uVar12 = (uint)(TarBattlePtr->AllActionUnitData).MaxMP;
-      if ((int)uVar12 < (int)uVar10) {
-        uVar10 = uVar12;
+      uVar16 = (uint)(TarBattlePtr->AllActionUnitData).MaxMP;
+      if ((int)uVar16 < (int)uVar14) {
+        uVar14 = uVar16;
       }
-      if ((uVar14 != uVar17) || (uVar13 != uVar10)) {
-        uVar15 = 1;
+      if ((uVar18 != uVar21) || (uVar17 != uVar14)) {
+        uVar19 = 1;
       }
-      (TarBattlePtr->AllActionUnitData).HP = (ushort)uVar17;
-      (pBVar6->AllActionUnitData).MP = (short)uVar10;
+      (TarBattlePtr->AllActionUnitData).HP = (ushort)uVar21;
+      (pBVar10->AllActionUnitData).MP = (short)uVar14;
+      uVar18 = FUN_BATTLE_BIN__8018d570
+                         ((uint)pCVar9->SPChange,&(pBVar10->AllActionUnitData).OriginalSP,0x32,1);
       uVar14 = FUN_BATTLE_BIN__8018d570
-                         ((uint)(byte)pCVar5->field_0x12,&(pBVar6->AllActionUnitData).OriginalSP,
-                          0x32,1);
-      uVar10 = FUN_BATTLE_BIN__8018d570
-                         ((uint)(byte)TarCurActPtr->field_0x13,&(TarBattlePtr->AllActionUnitData).CT
-                          ,0xff,0);
-      uVar13 = FUN_BATTLE_BIN__8018d570
-                         ((uint)(byte)TarCurActPtr->field_0x14,
-                          &(TarBattlePtr->AllActionUnitData).OriginalPA,99,1);
+                         ((uint)TarCurActPtr->CTChange,&(TarBattlePtr->AllActionUnitData).CT,0xff,0)
+      ;
+      uVar17 = FUN_BATTLE_BIN__8018d570
+                         ((uint)TarCurActPtr->PAChange,&(TarBattlePtr->AllActionUnitData).OriginalPA
+                          ,99,1);
+      uVar16 = FUN_BATTLE_BIN__8018d570
+                         ((uint)TarCurActPtr->MAChange,&(TarBattlePtr->AllActionUnitData).OriginalMA
+                          ,99,1);
+      uVar11 = FUN_BATTLE_BIN__8018d570
+                         ((uint)TarCurActPtr->BraveChange,&(TarBattlePtr->AllActionUnitData).Brave,
+                          100,-(uint)((byte)(TarBattlePtr->CurActionTargetData).field_0x14 >> 7) &
+                              10);
       uVar12 = FUN_BATTLE_BIN__8018d570
-                         ((uint)(byte)TarCurActPtr->field_0x15,
-                          &(TarBattlePtr->AllActionUnitData).OriginalMA,99,1);
-      uVar7 = FUN_BATTLE_BIN__8018d570
-                        ((uint)(byte)TarCurActPtr->field_0x16,
-                         &(TarBattlePtr->AllActionUnitData).Brave,100,
-                         -(uint)((byte)(TarBattlePtr->CurActionTargetData).field_0x14 >> 7) & 10);
-      uVar8 = FUN_BATTLE_BIN__8018d570
-                        ((uint)(byte)TarCurActPtr->field_0x17,
-                         &(TarBattlePtr->AllActionUnitData).Faith,100,0);
-      uVar9 = FUN_BATTLE_BIN__8018d3c0();
-      uVar9 = uVar15 | uVar14 | uVar10 | uVar13 | uVar12 | uVar7 | uVar8 | uVar9;
-      if ((*(ushort *)&TarCurActPtr->field_0x10 & 8) != 0) {
+                         ((uint)TarCurActPtr->FaithChange,&(TarBattlePtr->AllActionUnitData).Faith,
+                          100,0);
+      uVar13 = FUN_BATTLE_BIN__8018d3c0();
+      uVar4._0_1_ = TarCurActPtr->UniqueEffect1;
+      uVar4._1_1_ = TarCurActPtr->UniqueEffect2;
+      uVar13 = uVar19 | uVar18 | uVar14 | uVar17 | uVar16 | uVar11 | uVar12 | uVar13;
+      if ((uVar4 & 8) != 0) {
         FUN_BATTLE_BIN__8018e9e8
                   ((int)TarBattlePtr,(uint)(TarBattlePtr->CurActionTargetData).UsedItem);
       }
       if ((TarCurActPtr->GilLost != 0) || (TarCurActPtr->StolenEXP != 0)) {
-        uVar9 = uVar9 | 1;
+        uVar13 = uVar13 | 1;
       }
       FUN_BATTLE_BIN__8018ea98((int)TarBattlePtr,(int)TarCurActPtr->GilLost,0);
       FUN_BATTLE_BIN__8018eb50((int)TarBattlePtr,(uint)TarCurActPtr->StolenEXP);
       if (TarCurActPtr->StolenJP != 0) {
         FUN_BATTLE_BIN__8018dff8((int)TarBattlePtr);
       }
-      uVar14 = FUN_BATTLE_BIN__8018c85c();
-      uVar15 = FUN_BATTLE_BIN__8018c680();
-      uVar15 = uVar9 | uVar14 | uVar15;
-      if (((*(ushort *)&TarCurActPtr->field_0x10 & 2) != 0) &&
-         (uVar15 = uVar15 | 1, DAT_BATTLE_BIN__8018f5fc == 0)) {
+      uVar18 = FUN_BATTLE_BIN__8018c85c();
+      uVar19 = FUN_BATTLE_BIN__8018c680();
+      uVar5._0_1_ = TarCurActPtr->UniqueEffect1;
+      uVar5._1_1_ = TarCurActPtr->UniqueEffect2;
+      uVar19 = uVar13 | uVar18 | uVar19;
+      if (((uVar5 & 2) != 0) && (uVar19 = uVar19 | 1, ActionState == 0)) {
         FUN_BATTLE_BIN__80180f40((int)TarBattlePtr);
       }
-      if ((uVar17 == 0) &&
-         (uVar3._0_1_ = (TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1,
-         uVar3._1_1_ = (TarBattlePtr->AllActionUnitData).CurrentStatuses.Status2,
-         (uVar3 & 0x160) == 0)) {
+      if ((uVar21 == 0) &&
+         (uVar6._0_1_ = (TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1,
+         uVar6._1_1_ = (TarBattlePtr->AllActionUnitData).CurrentStatuses.Status2,
+         (uVar6 & 0x160) == 0)) {
         FUN_BATTLE_BIN__8018bdd4((int)TarCurActPtr);
         (TarCurActPtr->StatusInfliction).Status1 = Dead;
         FUN_BATTLE_BIN__8018e07c(param_1,1);
-        if (DAT_BATTLE_BIN__8018f5fc == 0) {
+        if (ActionState == 0) {
           (TarBattlePtr->AllActionUnitData).KOCount = (TarBattlePtr->AllActionUnitData).KOCount + 1;
         }
         FUN_BATTLE_BIN__8018d620(2);
         bVar2 = (TarBattlePtr->CurActionTargetData).field_0x14;
       }
       else {
-        if ((int)((TarBattlePtr->AllActionUnitData).MaxHP / 5) < (int)uVar17) {
+        if ((int)((TarBattlePtr->AllActionUnitData).MaxHP / 5) < (int)uVar21) {
           (TarCurActPtr->StatusRemoval).Status3 = (TarCurActPtr->StatusRemoval).Status3 | Critical;
         }
         else {
@@ -82039,70 +85615,72 @@ int FUN_BATTLE_BIN__8018be08(int param_1)
         else {
           (TarCurActPtr->StatusRemoval).Status3 = (TarCurActPtr->StatusRemoval).Status3 | Chicken;
         }
-        if ((TarCurActPtr->field_0x25 & 0x80) != 0) {
+        if ((TarCurActPtr->AttackType & HPDamage) != 0) {
           (TarCurActPtr->StatusRemoval).Status5 =
                (TarCurActPtr->StatusRemoval).Status5 | (Sleep|Charm);
           (TarCurActPtr->StatusRemoval).Status3 =
                (TarCurActPtr->StatusRemoval).Status3 | Transparent;
           (TarCurActPtr->StatusRemoval).Status2 = (TarCurActPtr->StatusRemoval).Status2 | Confusion;
         }
-        if (((*(ushort *)&TarCurActPtr->field_0x10 & 0x4000) != 0) &&
-           (iVar16 = FUN_BATTLE_BIN__80180178(TarBattlePtr,0), iVar16 != 0)) {
+        uVar7._0_1_ = TarCurActPtr->UniqueEffect1;
+        uVar7._1_1_ = TarCurActPtr->UniqueEffect2;
+        if (((uVar7 & 0x4000) != 0) &&
+           (iVar20 = FUN_BATTLE_BIN__80180178(TarBattlePtr,0), iVar20 != 0)) {
           (TarCurActPtr->StatusRemoval).Status1 = (TarCurActPtr->StatusRemoval).Status1 | Charging;
           (TarBattlePtr->AllActionUnitData).CurAbCT = 0xff;
         }
         FUN_BATTLE_BIN__80184b24(0);
-        iVar16 = 0;
-        pbVar11 = local_28;
+        iVar20 = 0;
+        pbVar15 = local_28;
         do {
-          iVar4 = iVar16 + -0x7a;
-          iVar16 = iVar16 + 1;
-          *pbVar11 = (TarBattlePtr->AllActionUnitData).JobLevels[iVar4];
-          pbVar11 = pbVar11 + 1;
-        } while (iVar16 < 5);
-        iVar16 = 0;
-        pbVar11 = local_20;
+          iVar8 = iVar20 + -0x7a;
+          iVar20 = iVar20 + 1;
+          *pbVar15 = (TarBattlePtr->AllActionUnitData).JobLevels[iVar8];
+          pbVar15 = pbVar15 + 1;
+        } while (iVar20 < 5);
+        iVar20 = 0;
+        pbVar15 = local_20;
         do {
-          iVar4 = iVar16 + -0x75;
-          iVar16 = iVar16 + 1;
-          *pbVar11 = (TarBattlePtr->AllActionUnitData).JobLevels[iVar4];
-          pbVar11 = pbVar11 + 1;
-        } while (iVar16 < 0x10);
+          iVar8 = iVar20 + -0x75;
+          iVar20 = iVar20 + 1;
+          *pbVar15 = (TarBattlePtr->AllActionUnitData).JobLevels[iVar8];
+          pbVar15 = pbVar15 + 1;
+        } while (iVar20 < 0x10);
         FUN_BATTLE_BIN__8018e07c(param_1,0);
-        iVar16 = 0;
+        iVar20 = 0;
         if ((((TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1 & Dead) == empty) ||
            ((local_28[0] & 0x20) != 0)) {
-          pbVar11 = local_28;
+          pbVar15 = local_28;
           do {
-            iVar4 = iVar16 + -0x7a;
-            iVar16 = iVar16 + 1;
-            if ((TarBattlePtr->AllActionUnitData).JobLevels[iVar4] != *pbVar11) {
-              uVar15 = 1;
+            iVar8 = iVar20 + -0x7a;
+            iVar20 = iVar20 + 1;
+            if ((TarBattlePtr->AllActionUnitData).JobLevels[iVar8] != *pbVar15) {
+              uVar19 = 1;
               break;
             }
-            pbVar11 = pbVar11 + 1;
-          } while (iVar16 < 5);
-          iVar16 = 0;
-          pbVar11 = local_20;
+            pbVar15 = pbVar15 + 1;
+          } while (iVar20 < 5);
+          iVar20 = 0;
+          pbVar15 = local_20;
           do {
-            iVar4 = iVar16 + -0x75;
-            iVar16 = iVar16 + 1;
-            if ((TarBattlePtr->AllActionUnitData).JobLevels[iVar4] != *pbVar11) {
-              uVar15 = 1;
+            iVar8 = iVar20 + -0x75;
+            iVar20 = iVar20 + 1;
+            if ((TarBattlePtr->AllActionUnitData).JobLevels[iVar8] != *pbVar15) {
+              uVar19 = 1;
               break;
             }
-            pbVar11 = pbVar11 + 1;
-          } while (iVar16 < 0x10);
+            pbVar15 = pbVar15 + 1;
+          } while (iVar20 < 0x10);
         }
         else {
-          uVar15 = 2;
-          if (DAT_BATTLE_BIN__8018f5fc == 0) {
+          uVar19 = 2;
+          if (ActionState == 0) {
             (TarBattlePtr->AllActionUnitData).KOCount =
                  (TarBattlePtr->AllActionUnitData).KOCount + 1;
           }
         }
-        FUN_BATTLE_BIN__8018d620(uVar15);
-        if (uVar15 != 0) {
+        FUN_BATTLE_BIN__8018d620(uVar19);
+        if (uVar19 != 0) {
           (TarBattlePtr->CurActionTargetData).field_0x1b = 2;
         }
         FUN_BATTLE_BIN__8018ccd8();
@@ -82124,30 +85702,33 @@ int FUN_BATTLE_BIN__8018c680(void)
 {
   JobID JVar1;
   byte bVar2;
-  bool bVar3;
+  ushort uVar3;
+  bool bVar4;
   undefined3 extraout_var;
-  int iVar4;
+  int iVar5;
   
-  if (DAT_BATTLE_BIN__8018f5fc == 0) {
-    if ((*(ushort *)&TarCurActPtr->field_0x10 & 0x20) == 0) {
+  if (ActionState == 0) {
+    uVar3._0_1_ = TarCurActPtr->UniqueEffect1;
+    uVar3._1_1_ = TarCurActPtr->UniqueEffect2;
+    if ((uVar3 & 0x20) == 0) {
       return 0;
     }
     if ((TarBattlePtr->AllActionUnitData).JobID - 0x5e < 0x30) {
       JVar1 = (TarBattlePtr->AllActionUnitData).JobID;
-      bVar3 = PassFail_Roll(0x100,0x1f);
-      iVar4 = (JVar1 - 0x5e) * 2;
-      if (CONCAT31(extraout_var,bVar3) == 0) {
-        bVar2 = (&DAT_80066065)[iVar4];
+      bVar4 = PassFail_Roll(0x100,0x1f);
+      iVar5 = (JVar1 - 0x5e) * 2;
+      if (CONCAT31(extraout_var,bVar4) == 0) {
+        bVar2 = (&DAT_80066065)[iVar5];
       }
       else {
-        bVar2 = (&DAT_80066064)[iVar4];
+        bVar2 = (&DAT_80066064)[iVar5];
       }
       if ((byte)(&DAT_80059494)[bVar2] == 0xff) {
         return 0xff;
       }
-      iVar4 = (byte)(&DAT_80059494)[bVar2] + 1;
-      (&DAT_80059494)[bVar2] = (char)iVar4;
-      return iVar4;
+      iVar5 = (byte)(&DAT_80059494)[bVar2] + 1;
+      (&DAT_80059494)[bVar2] = (char)iVar5;
+      return iVar5;
     }
   }
   return 0;
@@ -82192,29 +85773,32 @@ void FUN_BATTLE_BIN__8018c758(JobID *param_1)
 undefined4 FUN_BATTLE_BIN__8018c85c(void)
 
 {
-  uint uVar1;
-  int iVar2;
+  ushort uVar1;
+  uint uVar2;
+  int iVar3;
   
-  if ((*(ushort *)&TarCurActPtr->field_0x10 & 0x80) == 0) {
-    if ((*(ushort *)&TarCurActPtr->field_0x10 & 0x100) == 0) {
+  uVar1._0_1_ = TarCurActPtr->UniqueEffect1;
+  uVar1._1_1_ = TarCurActPtr->UniqueEffect2;
+  if ((uVar1 & 0x80) == 0) {
+    if ((uVar1 & 0x100) == 0) {
       return 0;
     }
-    uVar1 = (TarBattlePtr->AllActionUnitData).Level - 1;
-    iVar2 = 1;
-    if ((int)uVar1 < 1) {
-      uVar1 = 1;
+    uVar2 = (TarBattlePtr->AllActionUnitData).Level - 1;
+    iVar3 = 1;
+    if ((int)uVar2 < 1) {
+      uVar2 = 1;
     }
   }
   else {
-    uVar1 = (TarBattlePtr->AllActionUnitData).Level + 1;
-    iVar2 = 0;
-    if (99 < uVar1) {
-      uVar1 = 99;
+    uVar2 = (TarBattlePtr->AllActionUnitData).Level + 1;
+    iVar3 = 0;
+    if (99 < uVar2) {
+      uVar2 = 99;
     }
   }
-  if (DAT_BATTLE_BIN__8018f5fc == 0) {
-    (TarBattlePtr->AllActionUnitData).Level = (byte)uVar1;
-    LevelUp_Section((int)TarBattlePtr,iVar2);
+  if (ActionState == 0) {
+    (TarBattlePtr->AllActionUnitData).Level = (byte)uVar2;
+    LevelUp_Section((int)TarBattlePtr,iVar3);
   }
   return 1;
 }
@@ -82228,7 +85812,7 @@ void FUN_BATTLE_BIN__8018c920(BattleUnitData *param_1)
   
   iVar1 = FUN_BATTLE_BIN__8018c968((int)param_1);
   if ((iVar1 == 0) && (iVar1 = FUN_BATTLE_BIN__8018c9a0((int)param_1), iVar1 == 0)) {
-    FUN_BATTLE_BIN__8018130c(param_1);
+    CheckIfCanAct(param_1);
   }
   return;
 }
@@ -82238,15 +85822,18 @@ void FUN_BATTLE_BIN__8018c920(BattleUnitData *param_1)
 undefined4 FUN_BATTLE_BIN__8018c968(int param_1)
 
 {
-  undefined4 uVar1;
+  bool bVar1;
+  undefined3 extraout_var;
+  undefined4 uVar2;
   
   if (DAT_BATTLE_BIN__8018f5f0 == 0) {
-    uVar1 = Check_HasStatus(param_1,4);
+    bVar1 = Check_HasStatus((BattleUnitData *)param_1,can_act);
+    uVar2 = CONCAT31(extraout_var,bVar1);
   }
   else {
-    uVar1 = 1;
+    uVar2 = 1;
   }
-  return uVar1;
+  return uVar2;
 }
 
 
@@ -82269,7 +85856,7 @@ int FUN_BATTLE_BIN__8018c9a0(int param_1)
 void FUN_BATTLE_BIN__8018c9e4(void)
 
 {
-  byte bVar1;
+  Reactions4 RVar1;
   int iVar2;
   
   if (((DAT_BATTLE_BIN__8018f5f0 == 0) && (CurrentAbilityData.Formula != HealWeapon)) &&
@@ -82278,12 +85865,12 @@ void FUN_BATTLE_BIN__8018c9e4(void)
        (CurrentAbilityData.ReactionID2 == 0)) {
       FUN_BATTLE_BIN__8018cfe8();
     }
-    if (((TarCurActPtr->ReactionID == 0) &&
+    if (((TarCurActPtr->ReactionID == None) &&
         (iVar2 = FUN_BATTLE_BIN__8018c968((int)TarBattlePtr), iVar2 == 0)) &&
-       (iVar2 = FUN_BATTLE_BIN__8018130c(TarBattlePtr), iVar2 == 0)) {
-      bVar1 = *(byte *)((int)&(TarBattlePtr->AllActionUnitData).Reactions + 3);
-      if ((bVar1 & 4) == 0) {
-        if ((bVar1 & 2) != 0) {
+       (iVar2 = CheckIfCanAct(TarBattlePtr), iVar2 == 0)) {
+      RVar1 = (TarBattlePtr->AllActionUnitData).Reactions4;
+      if ((RVar1 & Blade_Grasp) == None) {
+        if ((RVar1 & Arrow_Guard) != None) {
           FUN_BATTLE_BIN__8018d0e8();
         }
       }
@@ -82300,73 +85887,75 @@ void FUN_BATTLE_BIN__8018c9e4(void)
 void FUN_BATTLE_BIN__8018cb00(void)
 
 {
-  byte bVar1;
-  int iVar2;
-  short sVar3;
-  byte bVar4;
+  Reactions1 RVar1;
+  Reactions2 RVar2;
+  Reactions3 RVar3;
+  int iVar4;
+  short sVar5;
+  byte bVar6;
   
   if (CurrentAbilityData.Formula == HealWeapon) {
     return;
   }
-  iVar2 = FUN_BATTLE_BIN__8018c920(TarBattlePtr);
-  if (iVar2 == 0) {
-    bVar1 = *(byte *)&(TarBattlePtr->AllActionUnitData).Reactions;
-    bVar4 = 0x10;
-    if ((bVar1 & 0x10) == 0) {
-      if ((bVar1 & 8) == 0) {
-        bVar4 = 0x10;
-        if ((bVar1 & 4) == 0) {
-          if ((bVar1 & 1) == 0) {
-            bVar1 = *(byte *)((int)&(TarBattlePtr->AllActionUnitData).Reactions + 1);
-            if ((bVar1 & 0x80) != 0) {
+  iVar4 = FUN_BATTLE_BIN__8018c920(TarBattlePtr);
+  if (iVar4 == 0) {
+    RVar1 = (TarBattlePtr->AllActionUnitData).Reactions1;
+    bVar6 = 0x10;
+    if ((RVar1 & Sunken_State) == None) {
+      if ((RVar1 & Caution) == None) {
+        bVar6 = 0x10;
+        if ((RVar1 & Dragon_Spirit) == None) {
+          if ((RVar1 & Brave_UP) == None) {
+            RVar2 = (TarBattlePtr->AllActionUnitData).Reactions2;
+            if ((RVar2 & Face_UP) != None) {
               FUN_BATTLE_BIN__8018cf74(0x1ae);
               return;
             }
-            bVar4 = 0x10;
-            if ((bVar1 & 2) == 0) {
-              bVar4 = 0x80;
-              if ((bVar1 & 1) == 0) {
-                bVar4 = *(byte *)((int)&(TarBattlePtr->AllActionUnitData).Reactions + 2);
-                if ((bVar4 & 0x80) != 0) {
+            bVar6 = 0x10;
+            if ((RVar2 & Counter_Tackle) == None) {
+              bVar6 = 0x80;
+              if ((RVar2 & Counter_Flood) == None) {
+                RVar3 = (TarBattlePtr->AllActionUnitData).Reactions3;
+                if ((RVar3 & Absorb_Used_MP) != None) {
                   FUN_BATTLE_BIN__8018cf74(0x1b6);
                   return;
                 }
-                sVar3 = 0x1ba;
-                if ((bVar4 & 8) == 0) {
-                  sVar3 = 0x1b3;
-                  if ((bVar1 & 4) == 0) {
+                sVar5 = 0x1ba;
+                if ((RVar3 & Counter) == None) {
+                  sVar5 = 0x1b3;
+                  if ((RVar2 & Counter_Magic) == None) {
                     return;
                   }
-                  bVar4 = 0x40;
+                  bVar6 = 0x40;
                 }
                 else {
-                  bVar4 = 0x10;
+                  bVar6 = 0x10;
                 }
               }
               else {
-                sVar3 = 0x1b5;
+                sVar5 = 0x1b5;
               }
             }
             else {
-              sVar3 = 0x1b4;
+              sVar5 = 0x1b4;
             }
           }
           else {
-            sVar3 = 0x1ad;
+            sVar5 = 0x1ad;
           }
         }
         else {
-          sVar3 = 0x1ab;
+          sVar5 = 0x1ab;
         }
       }
       else {
-        sVar3 = 0x1aa;
+        sVar5 = 0x1aa;
       }
     }
     else {
-      sVar3 = 0x1a9;
+      sVar5 = 0x1a9;
     }
-    FUN_BATTLE_BIN__8018ce04(sVar3,bVar4);
+    FUN_BATTLE_BIN__8018ce04(sVar5,bVar6);
     return;
   }
   return;
@@ -82377,15 +85966,15 @@ void FUN_BATTLE_BIN__8018cb00(void)
 void FUN_BATTLE_BIN__8018cc34(void)
 
 {
-  byte bVar1;
+  Reactions3 RVar1;
   int iVar2;
   
   if ((CurrentAbilityData.Formula != HealWeapon) &&
      (iVar2 = FUN_BATTLE_BIN__8018c920(TarBattlePtr), iVar2 == 0)) {
-    bVar1 = *(byte *)((int)&(TarBattlePtr->AllActionUnitData).Reactions + 2);
-    if ((bVar1 & 1) == 0) {
-      if ((bVar1 & 2) == 0) {
-        if ((*(byte *)((int)&(TarBattlePtr->AllActionUnitData).Reactions + 3) & 0x80) != 0) {
+    RVar1 = (TarBattlePtr->AllActionUnitData).Reactions3;
+    if ((RVar1 & MP_Switch) == None) {
+      if ((RVar1 & Distribute) == None) {
+        if (((TarBattlePtr->AllActionUnitData).Reactions4 & Damage_Split) != None) {
           FUN_BATTLE_BIN__8018d318();
         }
       }
@@ -82405,61 +85994,63 @@ void FUN_BATTLE_BIN__8018cc34(void)
 void FUN_BATTLE_BIN__8018ccd8(void)
 
 {
-  byte bVar1;
-  int iVar2;
-  short sVar3;
+  Reactions1 RVar1;
+  Reactions2 RVar2;
+  Reactions3 RVar3;
+  int iVar4;
+  short sVar5;
   
   if (CurrentAbilityData.Formula == HealWeapon) {
     return;
   }
-  iVar2 = FUN_BATTLE_BIN__8018c920(TarBattlePtr);
-  if (iVar2 != 0) {
+  iVar4 = FUN_BATTLE_BIN__8018c920(TarBattlePtr);
+  if (iVar4 != 0) {
     return;
   }
-  bVar1 = *(byte *)&(TarBattlePtr->AllActionUnitData).Reactions;
-  if ((bVar1 & 0x80) == 0) {
-    if ((bVar1 & 0x40) == 0) {
-      if ((bVar1 & 0x20) == 0) {
-        if ((bVar1 & 2) == 0) {
-          bVar1 = *(byte *)((int)&(TarBattlePtr->AllActionUnitData).Reactions + 1);
-          if ((bVar1 & 0x40) != 0) {
+  RVar1 = (TarBattlePtr->AllActionUnitData).Reactions1;
+  if ((RVar1 & PA_Save) == None) {
+    if ((RVar1 & MA_Save) == None) {
+      if ((RVar1 & Speed_Save) == None) {
+        if ((RVar1 & Regenerator) == None) {
+          RVar2 = (TarBattlePtr->AllActionUnitData).Reactions2;
+          if ((RVar2 & HP_Restore) != None) {
             FUN_BATTLE_BIN__8018cef4(0x1af);
             return;
           }
-          if ((bVar1 & 0x20) != 0) {
+          if ((RVar2 & MP_Restore) != None) {
             FUN_BATTLE_BIN__8018cef4(0x1b0);
             return;
           }
-          if ((bVar1 & 0x10) != 0) {
+          if ((RVar2 & Critical_Quick) != None) {
             FUN_BATTLE_BIN__8018cef4(0x1b1);
             return;
           }
-          if ((bVar1 & 8) != 0) {
+          if ((RVar2 & Meatbone_Slash) != None) {
             FUN_BATTLE_BIN__8018cef4(0x1b2);
             return;
           }
-          bVar1 = *(byte *)((int)&(TarBattlePtr->AllActionUnitData).Reactions + 2);
-          sVar3 = 0x1b7;
-          if (((bVar1 & 0x40) == 0) && (sVar3 = 0x1b9, (bVar1 & 0x10) == 0)) {
+          RVar3 = (TarBattlePtr->AllActionUnitData).Reactions3;
+          sVar5 = 0x1b7;
+          if (((RVar3 & Gilgame_Heart) == None) && (sVar5 = 0x1b9, (RVar3 & Auto_Potion) == None)) {
             return;
           }
         }
         else {
-          sVar3 = 0x1ac;
+          sVar5 = 0x1ac;
         }
       }
       else {
-        sVar3 = 0x1a8;
+        sVar5 = 0x1a8;
       }
     }
     else {
-      sVar3 = 0x1a7;
+      sVar5 = 0x1a7;
     }
   }
   else {
-    sVar3 = 0x1a6;
+    sVar5 = 0x1a6;
   }
-  FUN_BATTLE_BIN__8018ce88(sVar3);
+  FUN_BATTLE_BIN__8018ce88(sVar5);
   return;
 }
 
@@ -82492,7 +86083,7 @@ void FUN_BATTLE_BIN__8018ce88(short param_1)
   bool bVar3;
   undefined3 extraout_var;
   
-  if (((TarCurActPtr->field_0x25 & 0x80) != 0) &&
+  if (((TarCurActPtr->AttackType & HPDamage) != 0) &&
      (bVar3 = FUN_BATTLE_BIN__8018d384((int)TarBattlePtr), pCVar2 = TarCurActPtr,
      CONCAT31(extraout_var,bVar3) == 0)) {
     psVar1 = &TarCurActPtr->HPDamage;
@@ -82511,7 +86102,7 @@ void FUN_BATTLE_BIN__8018cef4(short param_1)
   undefined3 extraout_var;
   
   if (((((TarBattlePtr->AllActionUnitData).CurrentStatuses.Status3 & Critical) != empty) &&
-      ((TarCurActPtr->field_0x25 & 0x80) != 0)) &&
+      ((TarCurActPtr->AttackType & HPDamage) != 0)) &&
      (bVar1 = FUN_BATTLE_BIN__8018d384((int)TarBattlePtr), CONCAT31(extraout_var,bVar1) == 0)) {
     TarCurActPtr->ReactionID = param_1;
   }
@@ -82547,11 +86138,11 @@ void FUN_BATTLE_BIN__8018cfe8(void)
   pCVar1 = TarCurActPtr;
   if ((CurrentAbilityData.UsedSkillset2 != Math) &&
      ((CurrentAbilityData.CurrentAbilityFuncData._5_1_ & 0x80) != 0)) {
-    TarCurActPtr->ReactionID = 0x1b8;
+    TarCurActPtr->ReactionID = Reflect(Reaction);
     AVar2 = CurrentAbilityData.UsedAbility2;
     pCVar1->Hit_ = 0;
-    pCVar1->field60_0x2b = 0;
-    pCVar1->HitFlag = false;
+    pCVar1->hi_hit_ = 0;
+    pCVar1->HitFlag = 0;
     pCVar1->ReactionVar = AVar2;
     TarCurActPtr->EvadeType = 9;
   }
@@ -82571,10 +86162,10 @@ void FUN_BATTLE_BIN__8018d050(void)
   if ((CurrentAbilityData.CurrentAbilityFuncData._6_1_ & 0x10) != 0) {
     *(ushort *)&TarCurActPtr->Hit_ = 100 - (ushort)(TarBattlePtr->AllActionUnitData).Brave;
     bVar2 = FUN_BATTLE_BIN__8018d384((int)pBVar1);
-    if ((CONCAT31(extraout_var,bVar2) == 0) && (DAT_BATTLE_BIN__8018f5fc == 0)) {
-      TarCurActPtr->HitFlag = false;
+    if ((CONCAT31(extraout_var,bVar2) == 0) && (ActionState == 0)) {
+      TarCurActPtr->HitFlag = 0;
       TarCurActPtr->EvadeType = 0xb;
-      TarCurActPtr->ReactionID = 0x1c3;
+      TarCurActPtr->ReactionID = BladeGrasp;
     }
   }
   return;
@@ -82594,10 +86185,10 @@ void FUN_BATTLE_BIN__8018d0e8(void)
      (PrimaryItemData[CurrentAbilityData.UsedItem3].ItemType - 0xb < 2)) {
     *(ushort *)&TarCurActPtr->Hit_ = 100 - (ushort)(TarBattlePtr->AllActionUnitData).Brave;
     bVar2 = FUN_BATTLE_BIN__8018d384((int)pBVar1);
-    if ((CONCAT31(extraout_var,bVar2) == 0) && (DAT_BATTLE_BIN__8018f5fc == 0)) {
-      TarCurActPtr->HitFlag = false;
+    if ((CONCAT31(extraout_var,bVar2) == 0) && (ActionState == 0)) {
+      TarCurActPtr->HitFlag = 0;
       TarCurActPtr->EvadeType = 4;
-      TarCurActPtr->ReactionID = 0x1c4;
+      TarCurActPtr->ReactionID = ArrowGuard;
     }
   }
   return;
@@ -82616,18 +86207,18 @@ void FUN_BATTLE_BIN__8018d1b8(void)
   
   if ((((TarCurActPtr->HPDamage != 0) && ((TarBattlePtr->AllActionUnitData).MP != 0)) &&
       (bVar3 = FUN_BATTLE_BIN__8018d384((int)TarBattlePtr), pCVar1 = TarCurActPtr,
-      CONCAT31(extraout_var,bVar3) == 0)) && (DAT_BATTLE_BIN__8018f5fc == 0)) {
+      CONCAT31(extraout_var,bVar3) == 0)) && (ActionState == 0)) {
     sVar4 = TarCurActPtr->MPDamage + TarCurActPtr->HPDamage;
     TarCurActPtr->MPDamage = sVar4;
     if (999 < sVar4) {
       pCVar1->MPDamage = 999;
     }
     pCVar1 = TarCurActPtr;
-    TarCurActPtr->field_0x25 = TarCurActPtr->field_0x25 & 0x7f;
+    TarCurActPtr->AttackType = TarCurActPtr->AttackType & ~HPDamage;
     pCVar2 = TarCurActPtr;
     pCVar1->HPDamage = 0;
-    pCVar2->field_0x25 = pCVar2->field_0x25 | 0x20;
-    TarCurActPtr->ReactionID = 0x1bd;
+    pCVar2->AttackType = pCVar2->AttackType | MPDamage;
+    TarCurActPtr->ReactionID = MPSwitch;
   }
   return;
 }
@@ -82649,7 +86240,7 @@ void FUN_BATTLE_BIN__8018d2a8(void)
      (bVar2 = FUN_BATTLE_BIN__8018d384((int)TarBattlePtr), pCVar1 = TarCurActPtr,
      CONCAT31(extraout_var,bVar2) == 0)) {
     TarCurActPtr->ReactionVar = (short)iVar3;
-    pCVar1->ReactionID = 0x1bc;
+    pCVar1->ReactionID = Distribute;
   }
   return;
 }
@@ -82670,7 +86261,7 @@ void FUN_BATTLE_BIN__8018d318(void)
     pCVar2 = TarCurActPtr;
     if (CONCAT31(extraout_var,bVar3) == 0) {
       TarCurActPtr->ReactionVar = (ushort)(sVar1 + 1U) >> 1;
-      pCVar2->ReactionID = 0x1be;
+      pCVar2->ReactionID = DamageSplit;
     }
   }
   return;
@@ -82683,7 +86274,7 @@ bool FUN_BATTLE_BIN__8018d384(int param_1)
 {
   bool bVar1;
   
-  if (DAT_BATTLE_BIN__8018f5fc == 0) {
+  if (ActionState == 0) {
     bVar1 = PassFail_Roll(100,(uint)*(byte *)(param_1 + 0x24));
   }
   else {
@@ -82697,46 +86288,53 @@ bool FUN_BATTLE_BIN__8018d384(int param_1)
 undefined4 FUN_BATTLE_BIN__8018d3c0(void)
 
 {
-  undefined4 uVar1;
-  uint uVar2;
-  uint uVar3;
-  int iVar4;
+  ushort uVar1;
+  ushort uVar2;
+  undefined4 uVar3;
+  uint uVar4;
+  uint uVar5;
+  int iVar6;
   
-  iVar4 = 0;
-  if ((*(ushort *)&TarCurActPtr->field_0x10 & 0x14) == 0) {
-    uVar1 = 0;
+  uVar1._0_1_ = TarCurActPtr->UniqueEffect1;
+  uVar1._1_1_ = TarCurActPtr->UniqueEffect2;
+  iVar6 = 0;
+  if ((uVar1 & 0x14) == 0) {
+    uVar3 = 0;
   }
   else {
-    uVar3 = 0;
+    uVar5 = 0;
     do {
-      if (((uint)(byte)TarCurActPtr->field_0x19 & 0x80 >> (uVar3 & 0x1f)) != 0) {
-        uVar2 = (uint)(&(TarBattlePtr->AllActionUnitData).Head)[uVar3];
-        if (((uVar2 != 0) && (uVar2 != 0xff)) && ((PrimaryItemData[uVar2].field_0x3 & 1) == 0)) {
-          (&(TarBattlePtr->AllActionUnitData).Head)[uVar3] = NONE_ENTD;
-          iVar4 = iVar4 + 1;
-          if ((*(ushort *)&TarCurActPtr->field_0x10 & 0x10) != 0) {
-            FUN_BATTLE_BIN__8018e9e8((int)CasBattlePtr,uVar2);
+      if (((uint)TarCurActPtr->RemoveEquipmentFlags & 0x80 >> (uVar5 & 0x1f)) != 0) {
+        uVar4 = (uint)(&(TarBattlePtr->AllActionUnitData).Head)[uVar5];
+        if (((uVar4 != 0) && (uVar4 != 0xff)) && ((PrimaryItemData[uVar4].field_0x3 & 1) == 0)) {
+          (&(TarBattlePtr->AllActionUnitData).Head)[uVar5] = NONE_ENTD;
+          uVar2._0_1_ = TarCurActPtr->UniqueEffect1;
+          uVar2._1_1_ = TarCurActPtr->UniqueEffect2;
+          iVar6 = iVar6 + 1;
+          if ((uVar2 & 0x10) != 0) {
+            FUN_BATTLE_BIN__8018e9e8((int)CasBattlePtr,uVar4);
           }
         }
       }
-      uVar3 = uVar3 + 1;
-    } while ((int)uVar3 < 7);
-    uVar1 = 0;
-    if (iVar4 != 0) {
-      if (DAT_BATTLE_BIN__8018f5fc == 0) {
+      uVar5 = uVar5 + 1;
+    } while ((int)uVar5 < 7);
+    uVar3 = 0;
+    if (iVar6 != 0) {
+      if (ActionState == 0) {
         Equipment_StatusRSM_Prep_LevelUp((int)TarBattlePtr);
       }
-      if ((TarCurActPtr->field_0x19 == '\x10') || (uVar1 = 1, TarCurActPtr->field_0x19 == '\x04')) {
+      if ((TarCurActPtr->RemoveEquipmentFlags == RightHandWeapon) ||
+         (uVar3 = 1, TarCurActPtr->RemoveEquipmentFlags == LeftHandWeapon)) {
         if ((((TarBattlePtr->AllActionUnitData).CurrentStatuses.Status1 & Charging) != empty) &&
            (((TarBattlePtr->AllActionUnitData).CurAbCT != 0xff &&
             ((TarBattlePtr->CurActionTargetData).SkillsetOfAttack == Charge)))) {
           (TarCurActPtr->StatusRemoval).Status1 = (TarCurActPtr->StatusRemoval).Status1 | Charging;
         }
-        uVar1 = 1;
+        uVar3 = 1;
       }
     }
   }
-  return uVar1;
+  return uVar3;
 }
 
 
@@ -82808,7 +86406,7 @@ void FUN_BATTLE_BIN__8018d620(int param_1)
     if ((int)(uVar1 * 0x10000) < 1) {
       uVar1 = 1;
     }
-    if ((*(byte *)((int)&(CasBattlePtr->AllActionUnitData).Supports + 1) & 0x20) != 0) {
+    if (((CasBattlePtr->AllActionUnitData).Supports2 & Gained_EXP-UP) != None) {
       uVar1 = (uVar1 << 0x10) >> 0xf;
     }
     iVar2 = uVar1 << 0x10;
@@ -82837,7 +86435,7 @@ int FUN_BATTLE_BIN__8018d70c(int param_1)
     if (UnitBattleData[param_1].AllActionUnitData.UnitID != 0xff) {
       StoreArg1_IntoArg2_(&CasCurActData.HitFlag,&TarCurActPtr->HitFlag,0x2c);
       iVar1 = FUN_BATTLE_BIN__8018be08(param_1);
-      if (TarCurActPtr->HitFlag != false) {
+      if (TarCurActPtr->HitFlag != 0) {
         return iVar1;
       }
       TarCurActPtr->EvadeType = 8;
@@ -82849,13 +86447,13 @@ int FUN_BATTLE_BIN__8018d70c(int param_1)
 
 
 
-undefined FUN_BATTLE_BIN__8018d7c8(BattleUnitData *param_1)
+AttackType FUN_BATTLE_BIN__8018d7c8(BattleUnitData *param_1)
 
 {
   Status4 SVar1;
   CurActionUnitData *pCVar2;
   byte bVar3;
-  undefined uVar4;
+  AttackType AVar4;
   undefined3 extraout_var;
   
   bVar3 = FUN_BATTLE_BIN__8018da44((int)param_1);
@@ -82868,39 +86466,39 @@ undefined FUN_BATTLE_BIN__8018d7c8(BattleUnitData *param_1)
   if ((SVar1 & Poison) == empty) {
     if ((SVar1 & Regen) == empty) goto LAB_BATTLE_BIN__8018d844;
     TarCurActPtr->HPRecovery = (param_1->AllActionUnitData).MaxHP >> 3;
-    uVar4 = 0x40;
+    AVar4 = HPRecovery;
   }
   else {
     TarCurActPtr->HPDamage = (param_1->AllActionUnitData).MaxHP >> 3;
-    uVar4 = 0x80;
+    AVar4 = HPDamage;
   }
-  pCVar2->field_0x25 = uVar4;
+  pCVar2->AttackType = AVar4;
 LAB_BATTLE_BIN__8018d844:
-  return TarCurActPtr->field_0x25;
+  return TarCurActPtr->AttackType;
 }
 
 
 
-undefined FUN_BATTLE_BIN__8018d868(BattleUnitData *param_1)
+AttackType FUN_BATTLE_BIN__8018d868(BattleUnitData *param_1)
 
 {
   byte bVar1;
-  undefined uVar2;
+  AttackType AVar2;
   undefined3 extraout_var;
   
   bVar1 = FUN_BATTLE_BIN__8018da44((int)param_1);
-  uVar2 = 0;
+  AVar2 = 0;
   if (CONCAT31(extraout_var,bVar1) == 0) {
     FUN_BATTLE_BIN__8018da04(param_1);
     if ((((param_1->CurActionTargetData).ActUnavailable != 0) &&
         (((TarBattlePtr->CurActionUnitData).FinalInflictStatus.Status3 & Transparent) != empty)) &&
        ((TarBattlePtr->AllActionUnitData).ActiveUnit != 0)) {
       (TarCurActPtr->StatusRemoval).Status3 = Transparent;
-      TarCurActPtr->field_0x25 = 8;
+      TarCurActPtr->AttackType = StatusChange;
     }
-    uVar2 = TarCurActPtr->field_0x25;
+    AVar2 = TarCurActPtr->AttackType;
   }
-  return uVar2;
+  return AVar2;
 }
 
 
@@ -82933,7 +86531,7 @@ void FUN_BATTLE_BIN__8018d910(int param_1)
   } while ((int)uVar4 < 0xf);
   iVar3 = FUN_BATTLE_BIN__80184b24(0);
   if (iVar3 != 0) {
-    TarCurActPtr->field_0x25 = 8;
+    TarCurActPtr->AttackType = StatusChange;
   }
   return;
 }
@@ -82995,7 +86593,7 @@ undefined4 FUN_BATTLE_BIN__8018da88(BattleUnitData *param_1)
         (TarCurActPtr->StatusInfliction).Status4 = Poison;
         iVar4 = FUN_BATTLE_BIN__80184b24(0);
         if (iVar4 != 0) {
-          TarCurActPtr->field_0x25 = 8;
+          TarCurActPtr->AttackType = StatusChange;
           return 1;
         }
       }
@@ -83012,15 +86610,16 @@ byte FUN_BATTLE_BIN__8018dbb0(BattleUnitData *param_1)
   byte bVar1;
   byte bVar2;
   ushort uVar3;
-  CurActionUnitData *pCVar4;
-  undefined1 *puVar5;
-  int iVar6;
+  UniqueEffect2 *pUVar4;
+  CurActionUnitData *pCVar5;
+  undefined1 *puVar6;
+  int iVar7;
   
-  puVar5 = FUN_BATTLE_BIN__801802c8
+  puVar6 = FUN_BATTLE_BIN__801802c8
                      ((param_1->AllActionUnitData).MapX,(param_1->AllActionUnitData).MapY,
                       (byte)((ushort)*(undefined2 *)&(param_1->AllActionUnitData).MapY >> 0xf));
   bVar1 = (param_1->CurActionTargetData).field_0x14;
-  bVar2 = puVar5[4];
+  bVar2 = puVar6[4];
   if ((bVar1 & 0x40) != 0) {
     param_1 = UnitBattleData + (bVar1 & 0x1f);
   }
@@ -83028,18 +86627,21 @@ byte FUN_BATTLE_BIN__8018dbb0(BattleUnitData *param_1)
   TarCurActPtr = &param_1->CurActionUnitData;
   TarBattlePtr = param_1;
   FUN_BATTLE_BIN__8018bd74(&TarCurActPtr->HitFlag);
-  pCVar4 = TarCurActPtr;
+  pCVar5 = TarCurActPtr;
   if (bVar2 == 1) {
     (TarCurActPtr->StatusInfliction).Status5 = Death_Sentence;
-    iVar6 = FUN_BATTLE_BIN__80184b24(0);
+    iVar7 = FUN_BATTLE_BIN__80184b24(0);
   }
   else {
     if (bVar2 < 2) {
       if (bVar2 != 0) {
         return 0xff;
       }
-      TarCurActPtr->field_0x25 = 1;
-      *(undefined2 *)&TarCurActPtr->field_0x10 = 0x100;
+      TarCurActPtr->AttackType = StatAlter;
+      pUVar4 = &TarCurActPtr->UniqueEffect2;
+      TarCurActPtr->UniqueEffect1 =
+           ~(Golem|Moldball|Break_Item|Stole_Target_Item|Stolen_Item|Poached|SwitchTeam|Plus_Level);
+      *pUVar4 = Minus_Level;
       return 0;
     }
     if (bVar2 != 2) {
@@ -83047,18 +86649,18 @@ byte FUN_BATTLE_BIN__8018dbb0(BattleUnitData *param_1)
         return 0xff;
       }
       uVar3 = (param_1->AllActionUnitData).MaxHP;
-      TarCurActPtr->field_0x25 = 0x80;
-      pCVar4->HPDamage = uVar3 / 5;
+      TarCurActPtr->AttackType = HPDamage;
+      pCVar5->HPDamage = uVar3 / 5;
       return 3;
     }
     (TarCurActPtr->StatusInfliction).Status5 = Sleep;
-    iVar6 = FUN_BATTLE_BIN__80184b24(0);
+    iVar7 = FUN_BATTLE_BIN__80184b24(0);
   }
-  if (iVar6 == 0) {
+  if (iVar7 == 0) {
     FUN_BATTLE_BIN__8018430c();
   }
   else {
-    TarCurActPtr->field_0x25 = 8;
+    TarCurActPtr->AttackType = StatusChange;
   }
   return bVar2;
 }
@@ -83070,7 +86672,8 @@ undefined4 FUN_BATTLE_BIN__8018dd44(BattleUnitData *param_1)
 {
   ushort uVar1;
   CurActionUnitData *pCVar2;
-  int iVar3;
+  bool bVar3;
+  undefined3 extraout_var;
   undefined4 uVar4;
   uint uVar5;
   
@@ -83078,9 +86681,9 @@ undefined4 FUN_BATTLE_BIN__8018dd44(BattleUnitData *param_1)
   TarCurActPtr = &param_1->CurActionUnitData;
   TarBattlePtr = param_1;
   FUN_BATTLE_BIN__8018bd74(&TarCurActPtr->HitFlag);
-  iVar3 = Check_HasStatus((int)param_1,4);
+  bVar3 = Check_HasStatus(param_1,can_act);
   uVar4 = 0xffffffff;
-  if (iVar3 == 0) {
+  if (CONCAT31(extraout_var,bVar3) == 0) {
     uVar5 = FUN_BATTLE_BIN__80180134((int)param_1);
     pCVar2 = TarCurActPtr;
     if ((uVar5 & 0x20) == 0) {
@@ -83091,29 +86694,29 @@ undefined4 FUN_BATTLE_BIN__8018dd44(BattleUnitData *param_1)
           }
           uVar5 = FUN_BATTLE_BIN__8017f0ec((int)TarBattlePtr);
           TarCurActPtr->StolenJP = (byte)uVar5;
-          if ((*(byte *)((int)&(TarBattlePtr->AllActionUnitData).Supports + 1) & 0x40) != 0) {
+          if (((TarBattlePtr->AllActionUnitData).Supports2 & Gained_JP-UP) != None) {
             TarCurActPtr->StolenJP = TarCurActPtr->StolenJP << 1;
           }
         }
         else {
           uVar5 = FUN_BATTLE_BIN__8017f0ec((int)TarBattlePtr);
           TarCurActPtr->StolenEXP = (byte)uVar5;
-          if ((*(byte *)((int)&(TarBattlePtr->AllActionUnitData).Supports + 1) & 0x20) != 0) {
+          if (((TarBattlePtr->AllActionUnitData).Supports2 & Gained_EXP-UP) != None) {
             TarCurActPtr->StolenEXP = TarCurActPtr->StolenEXP << 1;
           }
         }
-        TarCurActPtr->field_0x25 = 1;
+        TarCurActPtr->AttackType = StatAlter;
       }
       else {
         uVar1 = (param_1->AllActionUnitData).MaxMP;
-        TarCurActPtr->field_0x25 = 0x10;
+        TarCurActPtr->AttackType = MPRecovery;
         pCVar2->MPRecovery = (short)((uVar1 + 9) / 10);
       }
     }
     else {
       uVar1 = (param_1->AllActionUnitData).MaxHP;
                     // Possible PsyQ macro: setLineF2()
-      TarCurActPtr->field_0x25 = 0x40;
+      TarCurActPtr->AttackType = HPRecovery;
       pCVar2->HPRecovery = (short)((uVar1 + 9) / 10);
     }
     uVar4 = 0;
@@ -83343,15 +86946,17 @@ void FUN_BATTLE_BIN__8018e310(int param_1,int param_2)
                    (is_ramza|immortal|player_control|random_present|always_present) |
                    (CasBattlePtr->AllActionUnitData).EntdTeamFlags & light_blue,
              pBVar6 = TarBattlePtr, uVar12 == 9)) {
-            EVar3 = (TarBattlePtr->CurActionUnitData).field_0x2e;
+            EVar3 = (TarBattlePtr->CurActionUnitData).ModifiedENTDTeam;
             EVar4 = (CasBattlePtr->AllActionUnitData).EntdTeamFlags;
-            TarCurActPtr->ReactionID = 0;
-            (pBVar6->CurActionUnitData).field_0x2e =
+            TarCurActPtr->ReactionID = None;
+            (pBVar6->CurActionUnitData).ModifiedENTDTeam =
                  EVar3 & (is_ramza|immortal|random_present|always_present) | EVar4 & light_blue;
             (TarBattlePtr->CurActionUnitData).AutoBattle = 0;
             (TarBattlePtr->CurActionUnitData).MainTargetID = 0;
           }
-          if ((((TarBattlePtr->CurActionUnitData).field_0x2e & 0x30) == 0) && (uVar12 - 1 < 2)) {
+          if ((((TarBattlePtr->CurActionUnitData).ModifiedENTDTeam & light_blue) ==
+               ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) &&
+             (uVar12 - 1 < 2)) {
             DAT_BATTLE_BIN__80193898 = 1;
           }
         }
@@ -83372,7 +86977,7 @@ void FUN_BATTLE_BIN__8018e310(int param_1,int param_2)
 void FUN_BATTLE_BIN__8018e5e4(void)
 
 {
-  DAT_BATTLE_BIN__8018f5fc = 1;
+  ActionState = 1;
   CurrentAbilityData.Hamedo = 0;
   StoreArg1_IntoArg2_(&CurrentAbilityData.CasFacing,&DAT_BATTLE_BIN__80193d24,0x1e);
   return;
@@ -83383,7 +86988,7 @@ void FUN_BATTLE_BIN__8018e5e4(void)
 void FUN_BATTLE_BIN__8018e628(void)
 
 {
-  DAT_BATTLE_BIN__8018f5fc = 0;
+  ActionState = 0;
   StoreArg1_IntoArg2_(&DAT_BATTLE_BIN__80193d24,&CurrentAbilityData.CasFacing,0x1e);
   return;
 }
@@ -83396,7 +87001,7 @@ int FUN_BATTLE_BIN__8018e660(void)
   int iVar1;
   int iVar2;
   
-  iVar1 = FUN_BATTLE_BIN__8013b590(0x23);
+  iVar1 = GetScriptVariable(Weather);
   iVar2 = 0;
   if ((((DAT_BATTLE_BIN__800b6698 & 2) == 0) && (iVar2 = iVar1, 1 < iVar1)) &&
      ((DAT_BATTLE_BIN__800b6698 & 1) != 0)) {
@@ -83413,61 +87018,63 @@ int FUN_BATTLE_BIN__8018e6b8(int param_1,short *param_2)
   ENTD_gender EVar1;
   SkillsetID SVar2;
   bool bVar3;
-  int iVar4;
-  int iVar5;
   undefined3 extraout_var;
-  int iVar6;
-  uint uVar7;
-  JobID *pJVar8;
-  JobID *pJVar9;
+  int iVar4;
+  undefined3 extraout_var_00;
+  int iVar5;
+  uint uVar6;
+  int iVar7;
+  byte *pbVar8;
+  byte *pbVar9;
+  BattleUnitData *_unit_data;
   int iVar10;
   int iVar11;
-  JobID local_30 [8];
+  byte local_30 [8];
   
-  if ((CurrentAbilityData.Hamedo == 0) && (iVar6 = (int)DAT_BATTLE_BIN__80193d44, iVar6 != 0)) {
+  if ((CurrentAbilityData.Hamedo == 0) && (iVar5 = (int)DAT_BATTLE_BIN__80193d44, iVar5 != 0)) {
     iVar10 = 0;
-    if ((PrimaryAbilityData[iVar6].field_0x3 & 0x20) == 0) {
+    if ((PrimaryAbilityData[iVar5].field_0x3 & 0x20) == 0) {
       return -1;
     }
     iVar11 = 0;
     do {
       if ((((param_1 != iVar10) &&
-           (pJVar8 = &UnitBattleData[0].AllActionUnitData.BaseClass + iVar11,
-           ((&UnitBattleData[0].CurActionTargetData.field_0x1b)[iVar11] & 2) != 0)) &&
+           (_unit_data = (BattleUnitData *)(&UnitBattleData[0].AllActionUnitData.BaseClass + iVar11)
+           , ((&UnitBattleData[0].CurActionTargetData.field_0x1b)[iVar11] & 2) != 0)) &&
           (EVar1 = (&UnitBattleData[0].AllActionUnitData.EntdGenderFlags)[iVar11],
           (&UnitBattleData[0].CurActionTargetData.field_0x1b)[iVar11] = 4, (EVar1 & monster) == 0))
-         && (iVar4 = Check_HasStatus((int)pJVar8,4), iVar4 == 0)) {
-        uVar7 = (uint)(&UnitBattleData[0].AllActionUnitData.JobID)[iVar11];
+         && (bVar3 = Check_HasStatus(_unit_data,can_act), CONCAT31(extraout_var,bVar3) == 0)) {
+        uVar6 = (uint)(&UnitBattleData[0].AllActionUnitData.JobID)[iVar11];
         SVar2 = (&UnitBattleData[0].AllActionUnitData.PrimarySkillset)[iVar11];
-        if (uVar7 < 0x4a) {
-          iVar4 = 0;
+        if (uVar6 < 0x4a) {
+          iVar7 = 0;
         }
         else {
-          iVar4 = uVar7 - 0x4a;
+          iVar7 = uVar6 - 0x4a;
         }
-        pJVar8 = pJVar8 + iVar4 * 3 + 0x99;
-        pJVar9 = local_30;
+        pbVar8 = (_unit_data->AllActionUnitData).JobLevels + iVar7 * 3 + -0x39;
+        pbVar9 = local_30;
         do {
-          *pJVar9 = *pJVar8;
-          pJVar9 = pJVar9 + 1;
-          pJVar8 = pJVar8 + 1;
-        } while ((int)pJVar9 < (int)(local_30 + 3));
-        iVar4 = 0;
+          *pbVar9 = *pbVar8;
+          pbVar9 = pbVar9 + 1;
+          pbVar8 = pbVar8 + 1;
+        } while ((int)pbVar9 < (int)(local_30 + 3));
+        iVar7 = 0;
         do {
-          iVar5 = iVar4;
-          if (iVar4 < 0) {
-            iVar5 = iVar4 + 7;
+          iVar4 = iVar7;
+          if (iVar7 < 0) {
+            iVar4 = iVar7 + 7;
           }
-          if (((((uint)local_30[iVar5 >> 3] & 0x80 >> (iVar4 + (iVar5 >> 3) * -8 & 0x1fU)) == 0) &&
-              (uVar7 = Get_Abiltity_from_Skillset((uint)SVar2,iVar4),
-              (uVar7 & 0xffff) == (int)DAT_BATTLE_BIN__80193d44)) &&
-             (bVar3 = PassFail_Roll(100,(uint)PrimaryAbilityData[iVar6].Chance_to_Learn),
-             CONCAT31(extraout_var,bVar3) == 0)) {
+          if (((((uint)local_30[iVar4 >> 3] & 0x80 >> (iVar7 + (iVar4 >> 3) * -8 & 0x1fU)) == 0) &&
+              (uVar6 = Get_Abiltity_from_Skillset((uint)SVar2,iVar7),
+              (uVar6 & 0xffff) == (int)DAT_BATTLE_BIN__80193d44)) &&
+             (bVar3 = PassFail_Roll(100,(uint)PrimaryAbilityData[iVar5].Chance_to_Learn),
+             CONCAT31(extraout_var_00,bVar3) == 0)) {
             *param_2 = DAT_BATTLE_BIN__80193d44;
             return iVar10;
           }
-          iVar4 = iVar4 + 1;
-        } while (iVar4 < 0x18);
+          iVar7 = iVar7 + 1;
+        } while (iVar7 < 0x18);
       }
       iVar10 = iVar10 + 1;
       iVar11 = iVar11 + 0x1c0;
@@ -83528,7 +87135,7 @@ void FUN_BATTLE_BIN__8018e8ac(int param_1)
 void FUN_BATTLE_BIN__8018e9bc(int param_1,int param_2,int param_3)
 
 {
-  if (DAT_BATTLE_BIN__8018f5fc == 0) {
+  if (ActionState == 0) {
     FUN_BATTLE_BIN__80068e80(param_1,param_2,param_3);
   }
   return;
@@ -83543,9 +87150,8 @@ int FUN_BATTLE_BIN__8018e9e8(int param_1,uint param_2)
   uint uVar2;
   uint uVar3;
   
-  if ((((DAT_BATTLE_BIN__8018f5fc == 0) &&
-       (uVar3 = param_2 & 0xff, (*(byte *)(param_1 + 0x1ba) & 0x30) == 0)) && (uVar3 != 0)) &&
-     (uVar3 != 0xff)) {
+  if ((((ActionState == 0) && (uVar3 = param_2 & 0xff, (*(byte *)(param_1 + 0x1ba) & 0x30) == 0)) &&
+      (uVar3 != 0)) && (uVar3 != 0xff)) {
     uVar2 = Get_Equip_Quantity((byte)uVar3,1);
     iVar1 = 0;
     if ((int)uVar2 < 99) {
@@ -83569,11 +87175,11 @@ int FUN_BATTLE_BIN__8018ea98(int param_1,int param_2,uint param_3)
   int iVar1;
   uint uVar2;
   
-  if ((DAT_BATTLE_BIN__8018f5fc == 0) && ((*(byte *)(param_1 + 5) & 0x30) == 0)) {
+  if ((ActionState == 0) && ((*(byte *)(param_1 + 5) & 0x30) == 0)) {
     if ((param_3 & 0xff) != 0) {
       param_2 = param_2 + (uint)((ushort)PrimaryItemData[param_3 & 0xff].Price >> 2);
     }
-    iVar1 = FUN_BATTLE_BIN__8013b590(0x2c);
+    iVar1 = GetScriptVariable(WarFunds);
     uVar2 = iVar1 + param_2;
     if ((int)uVar2 < 100000000) {
       if ((int)uVar2 < 0) {
@@ -83600,7 +87206,7 @@ void FUN_BATTLE_BIN__8018eb50(int param_1,uint param_2)
   int iVar2;
   undefined uVar3;
   
-  if (DAT_BATTLE_BIN__8018f5fc == 0) {
+  if (ActionState == 0) {
     if ((param_2 & 0x80) == 0) {
       uVar1 = (uint)*(byte *)(param_1 + 0x21) + (param_2 & 0xff);
       uVar3 = (undefined)uVar1;
@@ -83692,7 +87298,7 @@ int FUN_BATTLE_BIN__8018eea0(void)
 {
   int iVar1;
   
-  if (DAT_BATTLE_BIN__8018f5fc == 0) {
+  if (ActionState == 0) {
     iVar1 = rand();
   }
   else {
@@ -83803,7 +87409,7 @@ undefined4 FUN_BATTLE_BIN__8018f038(BattleUnitData *param_1)
         (param_1->AllActionUnitData).RHWeapon = CurrentAbilityData.CasRHW;
         (param_1->AllActionUnitData).LHWeapon = CurrentAbilityData.CasLHW;
         uVar5 = FUN_BATTLE_BIN__8017a8c0((CurActionTargetData *)local_40);
-        uVar2 = DAT_BATTLE_BIN__8018f5fc;
+        uVar2 = ActionState;
         if (((uVar5 == 0xffffffff) || (uVar5 == 3)) ||
            (((int)uVar5 < 2 &&
             (((&DAT_BATTLE_BIN__8018f8d1)
@@ -83814,13 +87420,13 @@ undefined4 FUN_BATTLE_BIN__8018f038(BattleUnitData *param_1)
           (param_1->AllActionUnitData).LHWeapon = NONE_ENTD;
         }
         else {
-          DAT_BATTLE_BIN__8018f5fc = 2;
+          ActionState = 2;
           uVar5 = FUN_BATTLE_BIN__8017c45c
                             ((CurActionTargetData *)local_40,&param_1->CurActionTargetData,1);
           (param_1->AllActionUnitData).CurAbCT = 0xff;
           Inflicted_Status_Changes((int)param_1,0,0xd,1);
           uVar4 = 1;
-          DAT_BATTLE_BIN__8018f5fc = uVar2;
+          ActionState = uVar2;
           if ((int)uVar5 < 0) {
             uVar4 = 0xffffffff;
             (param_1->AllActionUnitData).RHWeapon = NONE_ENTD;
@@ -84088,7 +87694,7 @@ undefined4 FUN_BATTLE_BIN__80194314(void)
       iVar3 = FUN_BATTLE_BIN__80196ce8(uVar6);
       if (iVar3 == 0) {
         if ((uVar6 == DAT_BATTLE_BIN__801a01f2) ||
-           (((&UnitBattleData[0].CurActionUnitData.field_0x2e)[iVar7] & 0x30) ==
+           (((&UnitBattleData[0].CurActionUnitData.ModifiedENTDTeam)[iVar7] & light_blue) ==
             DAT_BATTLE_BIN__801a01fd)) {
           (&DAT_BATTLE_BIN__801a0bf8)[iVar2] = 0;
         }
@@ -84113,7 +87719,8 @@ undefined4 FUN_BATTLE_BIN__80194314(void)
               *(ushort *)((int)&UnitBattleData[0].AllActionUnitData.MaxMP + iVar7) >> 1) {
             (&DAT_BATTLE_BIN__801a0bf7)[iVar2] = (&DAT_BATTLE_BIN__801a0bf7)[iVar2] | 2;
           }
-          if ((DAT_BATTLE_BIN__801a01fd != 0) &&
+          if ((DAT_BATTLE_BIN__801a01fd !=
+               ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) &&
              (*(ushort *)((int)&UnitBattleData[0].AllActionUnitData.MP + iVar7) <
               (ushort)(byte)(&DAT_BATTLE_BIN__801a0bf9)[iVar2])) {
             (&DAT_BATTLE_BIN__801a0bf7)[iVar2] = (&DAT_BATTLE_BIN__801a0bf7)[iVar2] | 2;
@@ -84565,7 +88172,8 @@ LAB_BATTLE_BIN__80194fc4:
               (ushort)UnitBattleData[uVar16].AllActionUnitData.MP)) {
             SVar1 = ActionMenus[*(byte *)(puVar13 + 1)];
             if ((((SVar1 == Item) || (SVar1 == DrawOut)) || (sVar3 == 0x17e)) || (sVar3 == 0x189)) {
-              if ((UnitBattleData[uVar16].CurActionUnitData.field_0x2e & 0x30) == 0) {
+              if ((UnitBattleData[uVar16].CurActionUnitData.ModifiedENTDTeam & light_blue) ==
+                  ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) {
                 if ((&DAT_800596e0)[DAT_BATTLE_BIN__8019f3ca] != '\0') {
 LAB_BATTLE_BIN__801951ec:
                   uVar2 = puVar13[1];
@@ -84623,7 +88231,9 @@ LAB_BATTLE_BIN__801951ec:
                            SecondaryItemData[iVar18 + 0x10].UsedItemID) &&
                          (uVar10 = (uint)(&PrimaryItemData[0].ReqLevel)[iVar12],
                          (int)uVar9 <= (int)uVar10)) {
-                        if ((UnitBattleData[uVar16].CurActionUnitData.field_0x2e & 0x30) == 0) {
+                        if ((UnitBattleData[uVar16].CurActionUnitData.ModifiedENTDTeam & light_blue)
+                            == ~(is_ramza|immortal|player_control|light_blue|random_present|
+                                always_present)) {
                           bVar5 = (byte)(&DAT_800596e0)[iVar11] < 5;
                         }
                         else {
@@ -84825,7 +88435,7 @@ void FUN_BATTLE_BIN__801957c0(int param_1,uint param_2)
 void FUN_BATTLE_BIN__80195878(ushort *param_1)
 
 {
-  byte bVar1;
+  Supports4 SVar1;
   undefined1 *puVar2;
   uint uVar3;
   byte *pbVar4;
@@ -84845,7 +88455,7 @@ void FUN_BATTLE_BIN__80195878(ushort *param_1)
   switch(uVar8) {
   case 1:
     uVar7 = (uint)ItemSecondary[uVar3 - 0x170].InflictStatusID;
-    if ((*(byte *)((int)&UnitBattleData[uVar6].AllActionUnitData.Supports + 2) & 8) == 0) {
+    if ((UnitBattleData[uVar6].AllActionUnitData.Supports3 & Throw_Item) == None) {
       DAT_BATTLE_BIN__8019f3c8 = 1;
     }
     else {
@@ -84944,7 +88554,7 @@ LAB_BATTLE_BIN__80195974:
     uVar7 = (uint)SecondaryAbilityData[uVar3].InflictStatus;
     DAT_BATTLE_BIN__8019f3d4 = SecondaryAbilityData[uVar3].Element;
     DAT_BATTLE_BIN__8019f3d5 = SecondaryAbilityData[uVar3].MPCost;
-    if ((*(byte *)((int)&UnitBattleData[uVar6].AllActionUnitData.Supports + 1) & 0x80) != 0) {
+    if ((UnitBattleData[uVar6].AllActionUnitData.Supports2 & Half_of_MP) != None) {
       DAT_BATTLE_BIN__8019f3d5 = DAT_BATTLE_BIN__8019f3d5 >> 1;
     }
     if ((SecondaryAbilityData[uVar3].field_0x3 & 0x20) == 0) {
@@ -84958,9 +88568,9 @@ LAB_BATTLE_BIN__80195974:
     }
     if ((SecondaryAbilityData[uVar3].field_0x5 & 4) != 0) goto LAB_BATTLE_BIN__80195d44;
   }
-  bVar1 = *(byte *)((int)&UnitBattleData[uVar6].AllActionUnitData.Supports + 3);
-  if ((bVar1 & 0x80) == 0) {
-    if ((bVar1 & 0x40) != 0) {
+  SVar1 = UnitBattleData[uVar6].AllActionUnitData.Supports4;
+  if ((SVar1 & Monster_Skill) == None) {
+    if ((SVar1 & Defend) != None) {
       DAT_BATTLE_BIN__8019f3c5 = 0;
     }
   }
@@ -87695,8 +91305,8 @@ LAB_BATTLE_BIN__8019a138:
                 return;
               }
               UnitBattleData[param_1].CurActionUnitData.MainTargetID = (byte)iVar5;
-              if (((&UnitBattleData[0].CurActionUnitData.field_0x2e)[iVar6] & 0x30) ==
-                  (UnitBattleData[param_1].CurActionUnitData.field_0x2e & 0x30)) {
+              if (((&UnitBattleData[0].CurActionUnitData.ModifiedENTDTeam)[iVar6] & light_blue) ==
+                  (UnitBattleData[param_1].CurActionUnitData.ModifiedENTDTeam & light_blue)) {
                 (&DAT_BATTLE_BIN__801a0d65)[param_1] = 0xe;
                 return;
               }
@@ -87936,8 +91546,7 @@ int FUN_BATTLE_BIN__8019a5f8(int param_1,uint param_2,int param_3)
            (PrimaryAbilityData[uVar12].field_0x7 & 0x80) != 0)) {
           if (uVar12 < 0x170) {
             bVar4 = SecondaryAbilityData[uVar12].MPCost;
-            if ((*(byte *)((int)&UnitBattleData[param_1].AllActionUnitData.Supports + 1) & 0x80) !=
-                0) {
+            if ((UnitBattleData[param_1].AllActionUnitData.Supports2 & Half_of_MP) != None) {
               bVar4 = bVar4 >> 1;
             }
             if (((ushort)bVar4 <= UnitBattleData[param_1].AllActionUnitData.MaxMP) &&
@@ -88501,11 +92110,12 @@ bool FUN_BATTLE_BIN__8019b4f4(byte *param_1)
 
 {
   bool bVar1;
+  undefined3 extraout_var;
   int iVar2;
   int iVar3;
-  JobID *pJVar4;
+  BattleUnitData *_unit_data;
+  int iVar4;
   int iVar5;
-  int iVar6;
   
   if ((DAT_BATTLE_BIN__801a0d7d == '\0') ||
      (bVar1 = false,
@@ -88516,34 +92126,35 @@ bool FUN_BATTLE_BIN__8019b4f4(byte *param_1)
       bVar1 = FUN_BATTLE_BIN__8019b754(param_1);
     }
     else {
-      iVar6 = 0;
+      iVar5 = 0;
       if ((DAT_BATTLE_BIN__8019f3d0 & 0x8000000) == 0) {
         bVar1 = true;
       }
       else {
-        iVar5 = 0;
+        iVar4 = 0;
         do {
-          pJVar4 = &UnitBattleData[0].AllActionUnitData.BaseClass + iVar5;
-          if (((((&UnitBattleData[0].AllActionUnitData.UnitID)[iVar5] != 0xff) &&
-               ((UnitBattleData[0].AllActionUnitData.JobLevels[iVar5 + -0x40] & 0x80) != 0)) &&
-              (((&UnitBattleData[0].CurActionUnitData.field_0x2e)[iVar5] & 0x30) ==
-               DAT_BATTLE_BIN__801a01fd)) && (iVar2 = Check_HasStatus((int)pJVar4,4), iVar2 == 0)) {
-            iVar2 = (uint)(&UnitBattleData[0].AllActionUnitData.MapX)[iVar5] - (uint)*param_1;
-            if (iVar2 < 0) {
-              iVar2 = -iVar2;
-            }
-            iVar3 = (uint)(&UnitBattleData[0].AllActionUnitData.MapY)[iVar5] - (uint)param_1[2];
+          _unit_data = (BattleUnitData *)(&UnitBattleData[0].AllActionUnitData.BaseClass + iVar4);
+          if (((((&UnitBattleData[0].AllActionUnitData.UnitID)[iVar4] != 0xff) &&
+               ((UnitBattleData[0].AllActionUnitData.JobLevels[iVar4 + -0x40] & 0x80) != 0)) &&
+              (((&UnitBattleData[0].CurActionUnitData.ModifiedENTDTeam)[iVar4] & light_blue) ==
+               DAT_BATTLE_BIN__801a01fd)) &&
+             (bVar1 = Check_HasStatus(_unit_data,can_act), CONCAT31(extraout_var,bVar1) == 0)) {
+            iVar3 = (uint)(&UnitBattleData[0].AllActionUnitData.MapX)[iVar4] - (uint)*param_1;
             if (iVar3 < 0) {
               iVar3 = -iVar3;
             }
-            if ((iVar2 + iVar3 < 2) &&
-               (iVar2 = FUN_BATTLE_BIN__8019b6b0(param_1,(int)pJVar4), iVar2 + 2U < 5)) {
+            iVar2 = (uint)(&UnitBattleData[0].AllActionUnitData.MapY)[iVar4] - (uint)param_1[2];
+            if (iVar2 < 0) {
+              iVar2 = -iVar2;
+            }
+            if ((iVar3 + iVar2 < 2) &&
+               (iVar3 = FUN_BATTLE_BIN__8019b6b0(param_1,(int)_unit_data), iVar3 + 2U < 5)) {
               return true;
             }
           }
-          iVar6 = iVar6 + 1;
-          iVar5 = iVar5 + 0x1c0;
-        } while (iVar6 < 0x15);
+          iVar5 = iVar5 + 1;
+          iVar4 = iVar4 + 0x1c0;
+        } while (iVar5 < 0x15);
         bVar1 = false;
       }
     }
@@ -89288,7 +92899,8 @@ void FUN_BATTLE_BIN__8019cb94(void)
 
 {
   byte bVar1;
-  int iVar2;
+  bool bVar2;
+  undefined3 extraout_var;
   int iVar3;
   undefined1 *puVar4;
   int iVar5;
@@ -89296,6 +92908,7 @@ void FUN_BATTLE_BIN__8019cb94(void)
   uint uVar7;
   uint uVar8;
   int iVar9;
+  int iVar10;
   
   iVar5 = 0;
   puVar4 = &DAT_BATTLE_BIN__8019f3c4;
@@ -89305,16 +92918,17 @@ void FUN_BATTLE_BIN__8019cb94(void)
     iVar5 = iVar5 + 1;
     puVar4 = puVar4 + 2;
   } while (iVar5 < 0x12);
-  iVar9 = 0;
+  iVar10 = 0;
   iVar5 = 0;
   do {
     if (((((&UnitBattleData[0].AllActionUnitData.UnitID)[iVar5] != 0xff) &&
          ((UnitBattleData[0].AllActionUnitData.JobLevels[iVar5 + -0x40] & 0x80) != 0)) &&
-        (((&UnitBattleData[0].CurActionUnitData.field_0x2e)[iVar5] & 0x30) ==
+        (((&UnitBattleData[0].CurActionUnitData.ModifiedENTDTeam)[iVar5] & light_blue) ==
          DAT_BATTLE_BIN__801a01fd)) &&
-       (iVar2 = Check_HasStatus((int)(&UnitBattleData[0].AllActionUnitData.BaseClass + iVar5),4),
-       iVar2 == 0)) {
-      iVar2 = 0;
+       (bVar2 = Check_HasStatus((BattleUnitData *)
+                                (&UnitBattleData[0].AllActionUnitData.BaseClass + iVar5),can_act),
+       CONCAT31(extraout_var,bVar2) == 0)) {
+      iVar9 = 0;
       bVar1 = (&DAT_BATTLE_BIN__8018f8ce)
               [((uint)(*(ushort *)(&UnitBattleData[0].AllActionUnitData.MapY + iVar5) >> 0xf) *
                 0x100 + (uint)(&UnitBattleData[0].AllActionUnitData.MapY)[iVar5] *
@@ -89322,10 +92936,10 @@ void FUN_BATTLE_BIN__8019cb94(void)
                (uint)(&UnitBattleData[0].AllActionUnitData.MapX)[iVar5]) * 8];
       do {
         uVar8 = (uint)(&UnitBattleData[0].AllActionUnitData.MapX)[iVar5] +
-                (uint)(byte)(&DAT_BATTLE_BIN__8019f358)[iVar2];
+                (uint)(byte)(&DAT_BATTLE_BIN__8019f358)[iVar9];
         if ((uVar8 < DAT_BATTLE_BIN__801a01fe) &&
            (uVar7 = (uint)(&UnitBattleData[0].AllActionUnitData.MapY)[iVar5] +
-                    (uint)(byte)(&DAT_BATTLE_BIN__8019f359)[iVar2], uVar7 < DAT_BATTLE_BIN__801a01ff
+                    (uint)(byte)(&DAT_BATTLE_BIN__8019f359)[iVar9], uVar7 < DAT_BATTLE_BIN__801a01ff
            )) {
           iVar6 = 0;
           puVar4 = &DAT_BATTLE_BIN__8019f3c4;
@@ -89341,12 +92955,12 @@ void FUN_BATTLE_BIN__8019cb94(void)
             puVar4 = puVar4 + 0x24;
           } while (iVar6 < 1);
         }
-        iVar2 = iVar2 + 2;
-      } while (iVar2 < 8);
+        iVar9 = iVar9 + 2;
+      } while (iVar9 < 8);
     }
-    iVar9 = iVar9 + 1;
+    iVar10 = iVar10 + 1;
     iVar5 = iVar5 + 0x1c0;
-  } while (iVar9 < 0x15);
+  } while (iVar10 < 0x15);
   return;
 }
 
@@ -89990,7 +93604,7 @@ void FUN_BATTLE_BIN__8019dd8c(byte *param_1,int param_2)
         while (bVar1 != 0xff) {
           uVar5 = (uint)local_5e[local_38[0]];
           sVar3._0_1_ = UnitBattleData[uVar5].CurActionUnitData.Hit_;
-          sVar3._1_1_ = UnitBattleData[uVar5].CurActionUnitData.field60_0x2b;
+          sVar3._1_1_ = UnitBattleData[uVar5].CurActionUnitData.hi_hit_;
           if (sVar3 < 1) goto LAB_BATTLE_BIN__8019e024;
           if ((PrimaryAbilityData[sVar2].field_0x5 & 0x80) != 0) goto LAB_BATTLE_BIN__8019df1c;
           iVar4 = FUN_BATTLE_BIN__80196ce8(uVar5);
@@ -90227,29 +93841,30 @@ bool FUN_BATTLE_BIN__8019e5d8(uint param_1,int param_2)
 
 {
   bool bVar1;
-  Status1 SVar2;
-  byte bVar3;
+  ElemAffinity EVar2;
+  Status1 SVar3;
   byte bVar4;
-  int iVar5;
+  byte bVar5;
   int iVar6;
-  uint uVar7;
-  undefined1 *puVar8;
-  uint uVar9;
-  byte bVar10;
-  uint uVar11;
-  int iVar12;
-  uint uVar13;
-  int iVar14;
-  BattleUnitData *pBVar15;
+  int iVar7;
+  uint uVar8;
+  undefined1 *puVar9;
+  uint uVar10;
+  byte bVar11;
+  uint uVar12;
+  int iVar13;
+  uint uVar14;
+  int iVar15;
+  BattleUnitData *pBVar16;
   
-  pBVar15 = UnitBattleData + param_1;
-  iVar5 = param_1 * 0x10;
-  uVar9 = (uint)DAT_BATTLE_BIN__8019f3c5;
-  if (((DAT_BATTLE_BIN__8019f3d0 & 0x20000000) != 0) && ((&DAT_BATTLE_BIN__801a0bf8)[iVar5] == '\0')
+  pBVar16 = UnitBattleData + param_1;
+  iVar6 = param_1 * 0x10;
+  uVar10 = (uint)DAT_BATTLE_BIN__8019f3c5;
+  if (((DAT_BATTLE_BIN__8019f3d0 & 0x20000000) != 0) && ((&DAT_BATTLE_BIN__801a0bf8)[iVar6] == '\0')
      ) {
     return false;
   }
-  if (((DAT_BATTLE_BIN__8019f3d0 & 0x40000000) != 0) && ((&DAT_BATTLE_BIN__801a0bf8)[iVar5] != '\0')
+  if (((DAT_BATTLE_BIN__8019f3d0 & 0x40000000) != 0) && ((&DAT_BATTLE_BIN__801a0bf8)[iVar6] != '\0')
      ) {
     return false;
   }
@@ -90258,35 +93873,35 @@ bool FUN_BATTLE_BIN__8019e5d8(uint param_1,int param_2)
     return false;
   }
   if (((param_2 != 0) && ((DAT_BATTLE_BIN__8019f3d0 & 0x4000) != 0)) &&
-     (iVar6 = FUN_BATTLE_BIN__8019ef24(uVar9,(int)pBVar15,0x26), iVar6 != 0)) {
+     (iVar7 = FUN_BATTLE_BIN__8019ef24(uVar10,(int)pBVar16,0x26), iVar7 != 0)) {
     return false;
   }
   if (((DAT_BATTLE_BIN__8019f3d0 & 0x400) != 0) &&
-     (iVar6 = FUN_BATTLE_BIN__8019ef24(uVar9,(int)pBVar15,0x21), iVar6 != 0)) {
+     (iVar7 = FUN_BATTLE_BIN__8019ef24(uVar10,(int)pBVar16,0x21), iVar7 != 0)) {
     return false;
   }
-  iVar6 = FUN_BATTLE_BIN__8019ef24(uVar9,(int)pBVar15,5);
-  if (iVar6 != 0) {
+  iVar7 = FUN_BATTLE_BIN__8019ef24(uVar10,(int)pBVar16,5);
+  if (iVar7 != 0) {
     return false;
   }
   bVar1 = false;
   if ((DAT_BATTLE_BIN__8019f3d0 & 0x20) != 0) {
     bVar1 = (DAT_BATTLE_BIN__8019f3cb & 0x20) != 0;
   }
-  if (((&DAT_BATTLE_BIN__801a0bf7)[iVar5] & 0x40) != 0) {
-    uVar11 = (uint)DAT_BATTLE_BIN__8019f3c5;
-    uVar7 = FUN_BATTLE_BIN__80199b98((int)pBVar15);
-    if ((int)uVar11 < (int)uVar7) {
+  if (((&DAT_BATTLE_BIN__801a0bf7)[iVar6] & 0x40) != 0) {
+    uVar12 = (uint)DAT_BATTLE_BIN__8019f3c5;
+    uVar8 = FUN_BATTLE_BIN__80199b98((int)pBVar16);
+    if ((int)uVar12 < (int)uVar8) {
       return (bool)0;
     }
     if (bVar1) {
       return false;
     }
   }
-  if (((&DAT_BATTLE_BIN__801a0bf7)[iVar5] & 0x20) != 0) {
-    uVar7 = (uint)DAT_BATTLE_BIN__8019f3c5;
-    iVar6 = FUN_BATTLE_BIN__80199c88((int)pBVar15);
-    if (iVar6 < (int)uVar7) {
+  if (((&DAT_BATTLE_BIN__801a0bf7)[iVar6] & 0x20) != 0) {
+    uVar8 = (uint)DAT_BATTLE_BIN__8019f3c5;
+    iVar7 = FUN_BATTLE_BIN__80199c88((int)pBVar16);
+    if (iVar7 < (int)uVar8) {
       return (bool)0;
     }
     if (!bVar1) {
@@ -90301,8 +93916,8 @@ bool FUN_BATTLE_BIN__8019e5d8(uint param_1,int param_2)
       return false;
     }
   }
-  iVar6 = FUN_BATTLE_BIN__8019ef24(uVar9,(int)pBVar15,0x1f);
-  if (iVar6 != 0) {
+  iVar7 = FUN_BATTLE_BIN__8019ef24(uVar10,(int)pBVar16,0x1f);
+  if (iVar7 != 0) {
     if ((DAT_BATTLE_BIN__8019f3d0 & 0x20) == 0) {
       return false;
     }
@@ -90310,21 +93925,21 @@ bool FUN_BATTLE_BIN__8019e5d8(uint param_1,int param_2)
       return false;
     }
   }
-  if ((DAT_BATTLE_BIN__8019f3d4 != empty) &&
+  if ((DAT_BATTLE_BIN__8019f3d4 != ~(Dark|Holy|Water|Earth|Wind|Ice|Lightning|Fire)) &&
      ((DAT_BATTLE_BIN__8019f3d4 ==
        (DAT_BATTLE_BIN__8019f3d4 & UnitBattleData[param_1].AllActionUnitData.NullElem) ||
-      ((DAT_BATTLE_BIN__8019f3d4 == Charging &&
+      ((DAT_BATTLE_BIN__8019f3d4 == Earth &&
        ((UnitBattleData[param_1].AllActionUnitData.CurrentStatuses.Status3 & Float) != empty)))))) {
     return false;
   }
   if ((DAT_BATTLE_BIN__8019f3d0 & 2) != 0) {
     if ((DAT_BATTLE_BIN__8019f3d0 & 0x2000) == 0) {
-      if ((&DAT_BATTLE_BIN__801a0bf8)[iVar5] == '\0') {
-        iVar6 = FUN_BATTLE_BIN__8019ef24(uVar9,(int)pBVar15,0x22);
-        if (iVar6 != 0) {
-          iVar6 = FUN_BATTLE_BIN__8019efb0((int)pBVar15,0x22);
+      if ((&DAT_BATTLE_BIN__801a0bf8)[iVar6] == '\0') {
+        iVar7 = FUN_BATTLE_BIN__8019ef24(uVar10,(int)pBVar16,0x22);
+        if (iVar7 != 0) {
+          iVar7 = FUN_BATTLE_BIN__8019efb0((int)pBVar16,0x22);
           bVar1 = true;
-          if (iVar6 != 0) goto LAB_BATTLE_BIN__8019e934;
+          if (iVar7 != 0) goto LAB_BATTLE_BIN__8019e934;
         }
         bVar1 = false;
 LAB_BATTLE_BIN__8019e934:
@@ -90334,8 +93949,8 @@ LAB_BATTLE_BIN__8019e934:
               empty) {
             return true;
           }
-          iVar6 = FUN_BATTLE_BIN__8019ef24(uVar9,(int)pBVar15,0x23);
-          if (iVar6 != 0) {
+          iVar7 = FUN_BATTLE_BIN__8019ef24(uVar10,(int)pBVar16,0x23);
+          if (iVar7 != 0) {
             return (bool)1;
           }
           if (bVar1) {
@@ -90343,7 +93958,8 @@ LAB_BATTLE_BIN__8019e934:
           }
         }
         if (((UnitBattleData[param_1].AllActionUnitData.AbsorbElem & DAT_BATTLE_BIN__8019f3d4) !=
-             empty) && (((&DAT_BATTLE_BIN__801a0bf7)[iVar5] & 1) != 0)) {
+             ~(Dark|Holy|Water|Earth|Wind|Ice|Lightning|Fire)) &&
+           (((&DAT_BATTLE_BIN__801a0bf7)[iVar6] & 1) != 0)) {
           return true;
         }
         if (((UnitBattleData[param_1].AllActionUnitData.CurrentStatuses.Status2 &
@@ -90358,15 +93974,15 @@ LAB_BATTLE_BIN__8019e934:
         }
         return true;
       }
-      SVar2 = UnitBattleData[param_1].AllActionUnitData.AbsorbElem & DAT_BATTLE_BIN__8019f3d4;
+      EVar2 = UnitBattleData[param_1].AllActionUnitData.AbsorbElem & DAT_BATTLE_BIN__8019f3d4;
 LAB_BATTLE_BIN__8019e8fc:
-      if (SVar2 != empty) {
+      if (EVar2 != ~(Dark|Holy|Water|Earth|Wind|Ice|Lightning|Fire)) {
         return true;
       }
     }
     else {
-      if ((&DAT_BATTLE_BIN__801a0bf8)[iVar5] != '\0') {
-        SVar2 = UnitBattleData[param_1].AllActionUnitData.CurrentStatuses.Status1 & Undead;
+      if ((&DAT_BATTLE_BIN__801a0bf8)[iVar6] != '\0') {
+        EVar2 = UnitBattleData[param_1].AllActionUnitData.CurrentStatuses.Status1 & Wind;
         goto LAB_BATTLE_BIN__8019e8fc;
       }
       if ((UnitBattleData[param_1].AllActionUnitData.CurrentStatuses.Status1 & Undead) == empty) {
@@ -90379,25 +93995,25 @@ LAB_BATTLE_BIN__8019e8fc:
       return true;
     }
     if (((DAT_BATTLE_BIN__8019f3d0 & 0x40) != 0) &&
-       ((ushort)(byte)(&DAT_BATTLE_BIN__801a0bfa)[iVar5] <
+       ((ushort)(byte)(&DAT_BATTLE_BIN__801a0bfa)[iVar6] <
         (ushort)UnitBattleData[param_1].AllActionUnitData.MP)) {
       return true;
     }
   }
   if ((DAT_BATTLE_BIN__8019f3d0 & 1) != 0) {
     if ((DAT_BATTLE_BIN__8019f3d0 & 0x2000) == 0) {
-      SVar2 = (&DAT_BATTLE_BIN__801a0bf8)[iVar5];
+      SVar3 = (&DAT_BATTLE_BIN__801a0bf8)[iVar6];
     }
     else {
-      if ((&DAT_BATTLE_BIN__801a0bf8)[iVar5] != '\0') {
+      if ((&DAT_BATTLE_BIN__801a0bf8)[iVar6] != '\0') {
         if ((UnitBattleData[param_1].AllActionUnitData.CurrentStatuses.Status1 & Undead) != empty) {
           return true;
         }
         return true;
       }
-      SVar2 = UnitBattleData[param_1].AllActionUnitData.CurrentStatuses.Status1 & Undead;
+      SVar3 = UnitBattleData[param_1].AllActionUnitData.CurrentStatuses.Status1 & Undead;
     }
-    if (SVar2 != empty) {
+    if (SVar3 != empty) {
       return true;
     }
     if ((UnitBattleData[param_1].AllActionUnitData.CurrentStatuses.Status5 & Death_Sentence) !=
@@ -90405,14 +94021,14 @@ LAB_BATTLE_BIN__8019e8fc:
       if ((DAT_BATTLE_BIN__8019f3d0 & 0x10) == 0) {
         return false;
       }
-      uVar9 = _DAT_BATTLE_BIN__8019f3cc >> 8 & 0x20;
+      uVar10 = _DAT_BATTLE_BIN__8019f3cc >> 8 & 0x20;
       goto LAB_BATTLE_BIN__8019eeec;
     }
-    if (((DAT_BATTLE_BIN__8019f3d0 & 0x80) != 0) && (((&DAT_BATTLE_BIN__801a0bf7)[iVar5] & 1) != 0))
+    if (((DAT_BATTLE_BIN__8019f3d0 & 0x80) != 0) && (((&DAT_BATTLE_BIN__801a0bf7)[iVar6] & 1) != 0))
     {
       return true;
     }
-    if (((DAT_BATTLE_BIN__8019f3d0 & 0x40) != 0) && (((&DAT_BATTLE_BIN__801a0bf7)[iVar5] & 2) != 0))
+    if (((DAT_BATTLE_BIN__8019f3d0 & 0x40) != 0) && (((&DAT_BATTLE_BIN__801a0bf7)[iVar6] & 2) != 0))
     {
       return true;
     }
@@ -90426,131 +94042,131 @@ LAB_BATTLE_BIN__8019e8fc:
     }
   }
   if ((DAT_BATTLE_BIN__8019f3d0 & 0x10) != 0) {
-    puVar8 = &DAT_BATTLE_BIN__8019f3c4;
-    iVar6 = 0;
+    puVar9 = &DAT_BATTLE_BIN__8019f3c4;
+    iVar7 = 0;
     do {
-      bVar10 = puVar8[7] ^ puVar8[7] & (pBVar15->AllActionUnitData).JobLevels[iVar6 + -0x7a];
-      if ((bVar10 != 0) &&
-         (bVar10 = bVar10 ^ bVar10 & (pBVar15->AllActionUnitData).JobLevels[iVar6 + -0x7f],
-         bVar10 != 0)) {
-        if (iVar6 == 2) {
-          bVar3 = bVar10 & 2;
-          if (((bVar10 & 0x20) != 0) &&
-             (bVar3 = bVar10 & 2, ((&DAT_BATTLE_BIN__801a0bf7)[iVar5] & 1) == 0)) {
-            bVar10 = bVar10 ^ 0x20;
-            bVar3 = bVar10 & 2;
+      bVar11 = puVar9[7] ^ puVar9[7] & (pBVar16->AllActionUnitData).JobLevels[iVar7 + -0x7a];
+      if ((bVar11 != 0) &&
+         (bVar11 = bVar11 ^ bVar11 & (pBVar16->AllActionUnitData).JobLevels[iVar7 + -0x7f],
+         bVar11 != 0)) {
+        if (iVar7 == 2) {
+          bVar4 = bVar11 & 2;
+          if (((bVar11 & 0x20) != 0) &&
+             (bVar4 = bVar11 & 2, ((&DAT_BATTLE_BIN__801a0bf7)[iVar6] & 1) == 0)) {
+            bVar11 = bVar11 ^ 0x20;
+            bVar4 = bVar11 & 2;
           }
-          if ((bVar3 != 0) && ((&DAT_BATTLE_BIN__801a0bf8)[iVar5] == '\0')) {
-            bVar10 = bVar10 ^ 2;
+          if ((bVar4 != 0) && ((&DAT_BATTLE_BIN__801a0bf8)[iVar6] == '\0')) {
+            bVar11 = bVar11 ^ 2;
           }
-          if (((&DAT_BATTLE_BIN__801a0bf7)[iVar5] & 0x80) == 0) {
-            bVar10 = bVar10 & 0xbf;
-          }
-        }
-        else if (iVar6 < 3) {
-          if (iVar6 == 1) {
-            bVar3 = bVar10 & 0x20;
-            if (((bVar10 & 8) != 0) &&
-               (bVar3 = bVar10 & 0x20, (&DAT_BATTLE_BIN__801a0bfc)[iVar5] == '\0')) {
-              bVar10 = bVar10 ^ 8;
-              bVar3 = bVar10 & 0x20;
-            }
-            if ((bVar3 != 0) && ((byte)(&DAT_BATTLE_BIN__801a0bfd)[iVar5] < 2)) {
-              bVar10 = bVar10 ^ 0x20;
-            }
+          if (((&DAT_BATTLE_BIN__801a0bf7)[iVar6] & 0x80) == 0) {
+            bVar11 = bVar11 & 0xbf;
           }
         }
-        else if (iVar6 == 3) {
-          if (((bVar10 & 0x40) != 0) && (((&DAT_BATTLE_BIN__801a0bf7)[iVar5] & 1) == 0)) {
-            bVar10 = bVar10 ^ 0x40;
+        else if (iVar7 < 3) {
+          if (iVar7 == 1) {
+            bVar4 = bVar11 & 0x20;
+            if (((bVar11 & 8) != 0) &&
+               (bVar4 = bVar11 & 0x20, (&DAT_BATTLE_BIN__801a0bfc)[iVar6] == '\0')) {
+              bVar11 = bVar11 ^ 8;
+              bVar4 = bVar11 & 0x20;
+            }
+            if ((bVar4 != 0) && ((byte)(&DAT_BATTLE_BIN__801a0bfd)[iVar6] < 2)) {
+              bVar11 = bVar11 ^ 0x20;
+            }
           }
-          bVar3 = bVar10;
-          if (((&DAT_BATTLE_BIN__801a0bf7)[iVar5] & 0x80) == 0) {
-            bVar3 = bVar10 & 0xce;
+        }
+        else if (iVar7 == 3) {
+          if (((bVar11 & 0x40) != 0) && (((&DAT_BATTLE_BIN__801a0bf7)[iVar6] & 1) == 0)) {
+            bVar11 = bVar11 ^ 0x40;
           }
-          bVar4 = bVar10 & 0xc;
-          bVar10 = bVar3;
-          if ((bVar4 != 0) &&
+          bVar4 = bVar11;
+          if (((&DAT_BATTLE_BIN__801a0bf7)[iVar6] & 0x80) == 0) {
+            bVar4 = bVar11 & 0xce;
+          }
+          bVar5 = bVar11 & 0xc;
+          bVar11 = bVar4;
+          if ((bVar5 != 0) &&
              (((UnitBattleData[param_1].AllActionUnitData.CurrentStatuses.Status4 & Stop) != empty
               || ((UnitBattleData[param_1].AllActionUnitData.CurrentStatuses.Status5 & Sleep) !=
                   empty)))) {
-            bVar10 = bVar3 & 0xf3;
+            bVar11 = bVar4 & 0xf3;
           }
         }
-        else if ((iVar6 == 4) && (((&DAT_BATTLE_BIN__801a0bf7)[iVar5] & 0x80) == 0)) {
-          bVar10 = bVar10 & 0x7d;
+        else if ((iVar7 == 4) && (((&DAT_BATTLE_BIN__801a0bf7)[iVar6] & 0x80) == 0)) {
+          bVar11 = bVar11 & 0x7d;
         }
-        if (bVar10 != 0) {
+        if (bVar11 != 0) {
           return true;
         }
       }
-      iVar14 = iVar6 + 1;
-      puVar8 = &DAT_BATTLE_BIN__8019f3c5 + iVar6;
-      iVar6 = iVar14;
-    } while (iVar14 < 5);
+      iVar15 = iVar7 + 1;
+      puVar9 = &DAT_BATTLE_BIN__8019f3c5 + iVar7;
+      iVar7 = iVar15;
+    } while (iVar15 < 5);
   }
   if ((DAT_BATTLE_BIN__8019f3d0 & 0x20) != 0) {
-    puVar8 = &DAT_BATTLE_BIN__8019f3c4;
-    iVar6 = 0;
+    puVar9 = &DAT_BATTLE_BIN__8019f3c4;
+    iVar7 = 0;
     do {
-      SVar2 = puVar8[7] & (pBVar15->AllActionUnitData).JobLevels[iVar6 + -0x7a];
-      if (SVar2 != empty) {
-        uVar7 = (uint)(byte)(SVar2 ^ SVar2 & (&(pBVar15->AllActionUnitData).InnateStatuses.Status1)
-                                             [iVar6]);
-        if (uVar7 != 0) {
-          if (2 < iVar6) {
-            uVar11 = 0;
+      SVar3 = puVar9[7] & (pBVar16->AllActionUnitData).JobLevels[iVar7 + -0x7a];
+      if (SVar3 != empty) {
+        uVar8 = (uint)(byte)(SVar3 ^ SVar3 & (&(pBVar16->AllActionUnitData).InnateStatuses.Status1)
+                                             [iVar7]);
+        if (uVar8 != 0) {
+          if (2 < iVar7) {
+            uVar12 = 0;
             do {
-              uVar13 = 0x80 >> (uVar11 & 0x1f);
-              if ((uVar7 & uVar13) != 0) {
-                iVar12 = iVar6 * 8 + uVar11;
-                iVar14 = FUN_BATTLE_BIN__8019ef24(uVar9,(int)pBVar15,iVar12);
-                if ((iVar14 == 0) ||
-                   (iVar14 = FUN_BATTLE_BIN__8019efb0((int)pBVar15,iVar12), iVar14 == 0)) {
-                  uVar7 = uVar7 ^ uVar13;
+              uVar14 = 0x80 >> (uVar12 & 0x1f);
+              if ((uVar8 & uVar14) != 0) {
+                iVar13 = iVar7 * 8 + uVar12;
+                iVar15 = FUN_BATTLE_BIN__8019ef24(uVar10,(int)pBVar16,iVar13);
+                if ((iVar15 == 0) ||
+                   (iVar15 = FUN_BATTLE_BIN__8019efb0((int)pBVar16,iVar13), iVar15 == 0)) {
+                  uVar8 = uVar8 ^ uVar14;
                 }
               }
-              uVar11 = uVar11 + 1;
-            } while ((int)uVar11 < 8);
+              uVar12 = uVar12 + 1;
+            } while ((int)uVar12 < 8);
           }
-          if (iVar6 == 1) {
-            uVar11 = uVar7 & 0x20;
-            if (((uVar7 & 8) != 0) &&
-               (uVar11 = uVar7 & 0x20, (&DAT_BATTLE_BIN__801a0bfc)[iVar5] == '\0')) {
-              uVar7 = uVar7 ^ 8;
-              uVar11 = uVar7 & 0x20;
+          if (iVar7 == 1) {
+            uVar12 = uVar8 & 0x20;
+            if (((uVar8 & 8) != 0) &&
+               (uVar12 = uVar8 & 0x20, (&DAT_BATTLE_BIN__801a0bfc)[iVar6] == '\0')) {
+              uVar8 = uVar8 ^ 8;
+              uVar12 = uVar8 & 0x20;
             }
-            if ((uVar11 != 0) && ((&DAT_BATTLE_BIN__801a0bfd)[iVar5] == '\0')) {
-              uVar7 = uVar7 ^ 0x20;
+            if ((uVar12 != 0) && ((&DAT_BATTLE_BIN__801a0bfd)[iVar6] == '\0')) {
+              uVar8 = uVar8 ^ 0x20;
             }
           }
-          else if (((iVar6 == 2) && ((uVar7 & 2) != 0)) &&
-                  ((&DAT_BATTLE_BIN__801a0bf8)[iVar5] != '\0')) {
-            uVar7 = uVar7 ^ 2;
+          else if (((iVar7 == 2) && ((uVar8 & 2) != 0)) &&
+                  ((&DAT_BATTLE_BIN__801a0bf8)[iVar6] != '\0')) {
+            uVar8 = uVar8 ^ 2;
           }
-          if (uVar7 != 0) {
+          if (uVar8 != 0) {
             return true;
           }
         }
       }
-      iVar14 = iVar6 + 1;
-      puVar8 = &DAT_BATTLE_BIN__8019f3c5 + iVar6;
-      iVar6 = iVar14;
-    } while (iVar14 < 5);
+      iVar15 = iVar7 + 1;
+      puVar9 = &DAT_BATTLE_BIN__8019f3c5 + iVar7;
+      iVar7 = iVar15;
+    } while (iVar15 < 5);
   }
   if ((DAT_BATTLE_BIN__8019f3d0 & 8) != 0) {
     if (((DAT_BATTLE_BIN__8019f3c6 != 0x76) && (DAT_BATTLE_BIN__8019f3c6 != 0x92)) &&
        (DAT_BATTLE_BIN__8019f3c6 != 0x96)) {
       return true;
     }
-    uVar9 = rand();
-    if ((uVar9 & 1) == 0) {
+    uVar10 = rand();
+    if ((uVar10 & 1) == 0) {
       return true;
     }
   }
-  uVar9 = DAT_BATTLE_BIN__8019f3d0 & 4;
+  uVar10 = DAT_BATTLE_BIN__8019f3d0 & 4;
 LAB_BATTLE_BIN__8019eeec:
-  return uVar9 != 0;
+  return uVar10 != 0;
 }
 
 
@@ -93460,7 +97076,7 @@ uint FUN_BATTLE_BIN__801aff18(uint param_1,short *param_2,uint param_3)
       if ((UnitID == 0xffffffff) ||
          (pBVar7 = GetUnitDataPointer(UnitID),
          ((pBVar6->AllActionUnitData).EntdTeamFlags & light_blue) ==
-         ((pBVar7->CurActionUnitData).field_0x2e & light_blue))) {
+         ((pBVar7->CurActionUnitData).ModifiedENTDTeam & light_blue))) {
         if (UnitID_00 == 0xffffffff) {
           param_3 = 0xffffffff;
           uVar8 = local_3c;
@@ -93475,7 +97091,7 @@ uint FUN_BATTLE_BIN__801aff18(uint param_1,short *param_2,uint param_3)
           DAT_BATTLE_BIN__801b8b64 = UnitID_00;
           DAT_BATTLE_BIN__801bbf3c = uVar1;
           if ((((pBVar6->AllActionUnitData).EntdTeamFlags & light_blue) ==
-               ((pBVar7->CurActionUnitData).field_0x2e & light_blue)) &&
+               ((pBVar7->CurActionUnitData).ModifiedENTDTeam & light_blue)) &&
              (DAT_BATTLE_BIN__801b8b94 = uVar9, UnitID == 0xffffffff)) {
             DAT_BATTLE_BIN__801b8b7c = local_90;
             DAT_BATTLE_BIN__801b8b80 = local_8c;
@@ -93731,7 +97347,7 @@ undefined4 OPEN_Main(int param_1)
 {
   FUN_OPEN__80068684(param_1);
   while ((DAT_OPEN__8008e53c & 1) != 0) {
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
     FUN_OPEN__80068b74();
     FUN_OPEN__80067484();
     FUN_OPEN__8006854c();
@@ -93743,7 +97359,7 @@ undefined4 OPEN_Main(int param_1)
     FUN_OPEN__80067d84();
     VSync(0);
     FUN_OPEN__80067c1c();
-    FUN_800449ec();
+    deprecated_000449ec();
   }
   SetDispMask(0);
   FUN_OPEN__80068638(0xc0,0x78);
@@ -93757,7 +97373,7 @@ void OPEN_EndCredits_Main(void)
 {
   FUN_OPEN__800686dc();
   while ((DAT_OPEN__8008e53c & 1) != 0) {
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
     FUN_OPEN__80068b74();
     FUN_OPEN__80067484();
     FUN_OPEN__8006e8b0(DAT_8004e5bc * 0x40 + -0x7ff79fe8,DAT_8004e5bc);
@@ -93767,7 +97383,7 @@ void OPEN_EndCredits_Main(void)
     VSync(DAT_OPEN__8008fc14);
     FUN_OPEN__80067c1c();
     DrawOTag((u_long *)((DAT_8004e5bc ^ 1) * 0x40 + -0x7ff79fac));
-    FUN_800449ec();
+    deprecated_000449ec();
   }
   PostCredits_ReturnFRAME();
   SetDispMask(0);
@@ -93914,13 +97530,13 @@ void FUN_OPEN__800676f8(int param_1)
   DecDCToutCallback(in_a1);
   StSetRing((u_long *)&DAT_80115a00,0x30);
   StSetStream(1,0,0xffffffff,(func1 *)0x0,(func2 *)0x0);
-  Calculate_File_Header_NNL(&fileOpenDesc_8004eaf4,param_1,1,(u_long *)0x0);
-  while (fileOpenDesc_8004eaf4.busy != 0) {
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+  Calculate_File_Header_NNL(&MRTA_fileopenhdr,param_1,1,(u_long *)0x0);
+  while (MRTA_fileopenhdr.busy != 0) {
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
     VSync(0);
   }
   do {
-    iVar1 = CdControl('\x02',&fileOpenDesc_8004eaf4.CdlLOC.minute,(u_char *)0x0);
+    iVar1 = CdControl('\x02',&MRTA_fileopenhdr.CdlLOC.minute,(u_char *)0x0);
   } while (iVar1 == 0);
   return;
 }
@@ -94735,11 +98351,11 @@ void OPEN_NewFileHeader(fileOpenDesc *param_1,int param_2,int param_3,u_long *pa
 void OPEN_OpenFile(void)
 
 {
-  if (fileOpenDesc_8004eaf4.busy != 0) {
+  if (MRTA_fileopenhdr.busy != 0) {
     do {
-      Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+      Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
       VSync(0);
-    } while (fileOpenDesc_8004eaf4.busy != 0);
+    } while (MRTA_fileopenhdr.busy != 0);
   }
   return;
 }
@@ -94749,13 +98365,13 @@ void OPEN_OpenFile(void)
 void OPEN_OpenMainMenuGraphics_To_FrameBuffer(void)
 
 {
-  OPEN_NewFileHeader(&fileOpenDesc_8004eaf4,0x1505d,0x11,DAT_OPEN__800855a8);
+  OPEN_NewFileHeader(&MRTA_fileopenhdr,0x1505d,0x11,DAT_OPEN__800855a8);
   OPEN_OpenFile();
   Put_OPNTEX_To_FrameBuffer((int)DAT_OPEN__800855a8);
-  OPEN_NewFileHeader(&fileOpenDesc_8004eaf4,0x1506e,0x11,DAT_OPEN__800855a8);
+  OPEN_NewFileHeader(&MRTA_fileopenhdr,0x1506e,0x11,DAT_OPEN__800855a8);
   OPEN_OpenFile();
   Put_OPNTEX_To_FrameBuffer((int)DAT_OPEN__800855a8);
-  OPEN_NewFileHeader(&fileOpenDesc_8004eaf4,0x1507f,0x21,DAT_OPEN__800855a8);
+  OPEN_NewFileHeader(&MRTA_fileopenhdr,0x1507f,0x21,DAT_OPEN__800855a8);
   OPEN_OpenFile();
   Put_OPNTEX_To_FrameBuffer((int)DAT_OPEN__800855a8);
   New_FileHeader_OPENBK(0,DAT_OPEN__800855a8);
@@ -94770,7 +98386,7 @@ void FUN_OPEN__80069b6c(void)
 {
   RECT local_10;
   
-  OPEN_NewFileHeader(&fileOpenDesc_8004eaf4,0x150c2,0x11,DAT_OPEN__800855a8);
+  OPEN_NewFileHeader(&MRTA_fileopenhdr,0x150c2,0x11,DAT_OPEN__800855a8);
   OPEN_OpenFile();
   Put_OPNTEX_To_FrameBuffer((int)DAT_OPEN__800855a8);
   New_FileHeader_OPENBK(6,DAT_OPEN__800852a4);
@@ -94781,7 +98397,7 @@ void FUN_OPEN__80069b6c(void)
   local_10.h = 0xf0;
   LoadImage(&local_10,DAT_OPEN__800852a4);
   DrawSync(0);
-  OPEN_NewFileHeader(&fileOpenDesc_8004eaf4,0x150d3,0x170,DAT_OPEN__800852a4);
+  OPEN_NewFileHeader(&MRTA_fileopenhdr,0x150d3,0x170,DAT_OPEN__800852a4);
   OPEN_OpenFile();
   return;
 }
@@ -94793,7 +98409,7 @@ void New_FileHeader_OPENBK(int param_1,u_long *param_2)
 {
   if (param_1 != DAT_OPEN__80085ca8) {
     DAT_OPEN__80085ca8 = param_1;
-    OPEN_NewFileHeader(&fileOpenDesc_8004eaf4,*(int *)(&DAT_OPEN__80073f58 + param_1 * 4) + 0x15243,
+    OPEN_NewFileHeader(&MRTA_fileopenhdr,*(int *)(&DAT_OPEN__80073f58 + param_1 * 4) + 0x15243,
                        *(int *)(&DAT_OPEN__80073f5c + param_1 * 4) -
                        *(int *)(&DAT_OPEN__80073f58 + param_1 * 4),param_2);
   }
@@ -95471,16 +99087,16 @@ void FUN_OPEN__8006f228(void)
     DAT_OPEN__8008fbc4 = DAT_OPEN__8008fbc4 + iVar2;
     goto LAB_OPEN__8006f3e0;
   case 4:
-    CdIntToPos(0x2f551,&fileOpenDesc_8004eaf4.CdlLOC);
-    CdControlF('\x15',&fileOpenDesc_8004eaf4.CdlLOC.minute);
+    CdIntToPos(0x2f551,&MRTA_fileopenhdr.CdlLOC);
+    CdControlF('\x15',&MRTA_fileopenhdr.CdlLOC.minute);
     puVar3 = (uint *)&DAT_OPEN__8008fbc4;
-    DAT_80057718 = 0;
+    openfile_timer = 0;
     uVar1 = DAT_OPEN__8008fbc4 + 1;
     goto LAB_OPEN__8006f3dc;
   case 5:
     iVar2 = FUN_OPEN__80069d38();
     DAT_OPEN__8008fbc4 = DAT_OPEN__8008fbc4 + iVar2;
-    if ((0x78 < DAT_80057718) && (DAT_OPEN__8008fbc4 == 5)) {
+    if ((0x78 < openfile_timer) && (DAT_OPEN__8008fbc4 == 5)) {
       Reset_CD_Subsystems();
       DAT_OPEN__8008fbc4 = 0;
     }
@@ -96891,7 +100507,7 @@ undefined WLDCORE_Entrypoint(void)
     FUN_WLDCORE__80067c2c();
     FUN_WLDCORE__80069400(0,0x10);
     while ((DAT_8004d950 & 1) != 0) {
-      Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+      Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
       FUN_WLDCORE__80090e20();
       DAT_8004e5bc = GsGetActiveBuff();
       FUN_WORLD__800e1a88(DAT_8004e5bc * 0xe000 + -0x7ff60ce4);
@@ -96906,7 +100522,7 @@ undefined WLDCORE_Entrypoint(void)
         FUN_WLDCORE__800677a4();
       }
       SetDispMask((uint)((DAT_8004d950 & 0x40) == 0));
-      FUN_800449ec();
+      deprecated_000449ec();
     }
   } while ((DAT_8004d950 & 0x10000) != 0);
   FUN_WLDCORE__800682a0();
@@ -97429,9 +101045,9 @@ void FUN_WLDCORE__80068640(void)
 
 {
   if ((DAT_8004d950 & 0x10000) == 0) {
-    FUN_WLDCORE__800685e0(&fileOpenDesc_8004eaf4,73000,0x86,DAT_WLDCORE__800c72f4);
-    while (fileOpenDesc_8004eaf4.busy != 0) {
-      FUN_WLDCORE__8006872c((int)&fileOpenDesc_8004eaf4);
+    FUN_WLDCORE__800685e0(&MRTA_fileopenhdr,73000,0x86,DAT_WLDCORE__800c72f4);
+    while (MRTA_fileopenhdr.busy != 0) {
+      FUN_WLDCORE__8006872c((int)&MRTA_fileopenhdr);
     }
   }
   return;
@@ -97442,12 +101058,12 @@ void FUN_WLDCORE__80068640(void)
 void FUN_WLDCORE__800686c8(void)
 
 {
-  if (fileOpenDesc_8004eaf4.busy != 0) {
+  if (MRTA_fileopenhdr.busy != 0) {
     do {
-      Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+      Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
       FUN_WLDCORE__80090e20();
       VSync(0);
-    } while (fileOpenDesc_8004eaf4.busy != 0);
+    } while (MRTA_fileopenhdr.busy != 0);
   }
   return;
 }
@@ -97471,11 +101087,11 @@ void FUN_WLDCORE__8006872c(int param_1)
   case 1:
     local_28[0] = 0x80;
     CdControl('\x0e',local_28,(u_char *)0x0);
-    DAT_80057718 = 0;
+    openfile_timer = 0;
     iVar1 = *(int *)(param_1 + 4) + 1;
     break;
   case 2:
-    if (DAT_80057718 < 4) {
+    if (openfile_timer < 4) {
       return;
     }
     iVar1 = *(int *)(param_1 + 4) + 1;
@@ -97591,7 +101207,7 @@ void FUN_WLDCORE__80068ab4(int param_1)
     FUN_WLDCORE__800686c8();
     DAT_WLDCORE__800d0af0 = param_1;
     FUN_WLDCORE__800685e0
-              (&fileOpenDesc_8004eaf4,*(int *)(&DAT_WLDCORE__8009e0ec + param_1 * 4) + 0x11dae,
+              (&MRTA_fileopenhdr,*(int *)(&DAT_WLDCORE__8009e0ec + param_1 * 4) + 0x11dae,
                *(int *)(&DAT_WLDCORE__8009e0f0 + param_1 * 4) -
                *(int *)(&DAT_WLDCORE__8009e0ec + param_1 * 4),DAT_WLDCORE__800bb988);
   }
@@ -97608,7 +101224,7 @@ void FUN_WLDCORE__80068bc4(int param_1)
     FUN_WLDCORE__800686c8();
     DAT_WLDCORE__800d0af4 = param_1;
     FUN_WLDCORE__800685e0
-              (&fileOpenDesc_8004eaf4,*(int *)(&DAT_WLDCORE__8009e470 + param_1 * 4) + 0x11f59,
+              (&MRTA_fileopenhdr,*(int *)(&DAT_WLDCORE__8009e470 + param_1 * 4) + 0x11f59,
                *(int *)(&DAT_WLDCORE__8009e474 + param_1 * 4) -
                *(int *)(&DAT_WLDCORE__8009e470 + param_1 * 4),(u_long *)&DAT_WLDCORE__800bc2f4);
   }
@@ -97620,7 +101236,7 @@ void FUN_WLDCORE__80068bc4(int param_1)
 void FUN_WLDCORE__80068d40(void)
 
 {
-  FUN_WLDCORE__800685e0(&fileOpenDesc_8004eaf4,DAT_800459c8,1,(u_long *)0x0);
+  FUN_WLDCORE__800685e0(&MRTA_fileopenhdr,DAT_800459c8,1,(u_long *)0x0);
   return;
 }
 
@@ -101609,7 +105225,7 @@ void FUN_WLDCORE__80090d50(undefined4 param_1,undefined4 param_2)
 {
   if (0xf < DAT_WLDCORE__800d462c) {
     do {
-      Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+      Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
       FUN_WLDCORE__80090e20();
       VSync(0);
     } while (0xf < DAT_WLDCORE__800d462c);
@@ -101665,7 +105281,7 @@ LAB_WLDCORE__80090e34:
       DAT_WLDCORE__800d462c = DAT_WLDCORE__800d462c + -1;
       goto LAB_WLDCORE__80090e34;
     case 1:
-      if (fileOpenDesc_8004eaf4.busy == 0) {
+      if (MRTA_fileopenhdr.busy == 0) {
         uVar8 = (int)(DAT_WLDCORE__800d4628 & 0xf00) >> 8;
         uVar2 = (&DAT_WLDCORE__800d4630)[uVar8];
         SMDID = DAT_WLDCORE__800d4628 & 0xff;
@@ -101714,7 +105330,7 @@ LAB_WLDCORE__80090e34:
       (&DAT_WLDCORE__800d4630)[uVar2] = 0;
       break;
     case 0x10:
-      if (fileOpenDesc_8004eaf4.busy != 0) {
+      if (MRTA_fileopenhdr.busy != 0) {
         return;
       }
       break;
@@ -101761,7 +105377,7 @@ void FUN_WLDCORE__800911cc(void)
 
 {
   while ((DAT_WLDCORE__800d462c != 0 || (DAT_WLDCORE__800d4624 != 0))) {
-    Open_File_to_RAM_Centre((int)&fileOpenDesc_8004eaf4);
+    Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
     FUN_WLDCORE__80090e20();
     VSync(0);
   }
@@ -103412,58 +107028,58 @@ void FUN_WORLD__800e4268(undefined2 *param_1,undefined2 *param_2,byte *param_3)
     pPVar4 = (PartyUnit *)((int)pPVar2->JobJP + iVar6 + -0x6d);
     iVar6 = iVar7;
   } while (iVar7 < 0x10);
-  _DAT_1f80001c = (byte *)0xffffffff;
+  DAT_1f80001c = (byte *)0xffffffff;
   _DAT_1f800024 = &DAT_WORLD__801531d8;
-  _DAT_1f800018 = 0;
-  _DAT_1f800004 = 0;
-  _DAT_1f800008 = 0;
-  _DAT_1f80000c = 0;
+  DAT_1f800018 = 0;
+  DAT_1f800004 = 0;
+  DAT_1f800008 = 0;
+  DAT_1f80000c = 0;
   DAT_1f800028 = 0xffff;
 LAB_WORLD__800e433c:
-  while ((uVar1 = DAT_1f800028, pbVar5 = _DAT_1f80001c, DAT_1f800000 = (uint)*param_3,
+  while ((uVar1 = DAT_1f800028, pbVar5 = DAT_1f80001c, DAT_1f800000 = (uint)*param_3,
          DAT_1f800000 == 0xf8 || (DAT_1f800000 - 0xfe < 2))) {
-    if (_DAT_1f800008 < _DAT_1f800004) {
-      _DAT_1f800008 = _DAT_1f800004;
+    if (DAT_1f800008 < DAT_1f800004) {
+      DAT_1f800008 = DAT_1f800004;
     }
     if (1 < DAT_1f800000 - 0xfe) {
-      _DAT_1f800004 = 0;
-      _DAT_1f80000c = _DAT_1f80000c + 1;
+      DAT_1f800004 = 0;
+      DAT_1f80000c = DAT_1f80000c + 1;
       goto LAB_WORLD__800e44fc;
     }
-    if (_DAT_1f80001c == (byte *)0xffffffff) {
-      _DAT_1f800004 = 0;
-      _DAT_1f80000c = _DAT_1f80000c + 1;
-      *param_1 = _DAT_1f800008;
-      *param_2 = _DAT_1f80000c;
+    if (DAT_1f80001c == (byte *)0xffffffff) {
+      DAT_1f800004 = 0;
+      DAT_1f80000c = DAT_1f80000c + 1;
+      *param_1 = (undefined2)DAT_1f800008;
+      *param_2 = (undefined2)DAT_1f80000c;
       return;
     }
-    _DAT_1f80001c = (byte *)0xffffffff;
+    DAT_1f80001c = (byte *)0xffffffff;
     param_3 = pbVar5;
   }
   if (DAT_1f800000 == 0xfa) {
-    _DAT_1f800004 = _DAT_1f800004 + 1;
+    DAT_1f800004 = DAT_1f800004 + 1;
 LAB_WORLD__800e44fc:
-    _DAT_1f800010 = FUN_WORLD__800e41fc(DAT_1f800000,*_DAT_1f800024);
-    if (_DAT_1f800010 != 0xffffffff) {
-      _DAT_1f80001c = param_3 + 1;
+    DAT_1f800010 = FUN_WORLD__800e41fc(DAT_1f800000,*_DAT_1f800024);
+    if (DAT_1f800010 != 0xffffffff) {
+      DAT_1f80001c = param_3 + 1;
       if (DAT_1f800000 == 0xe0) {
         param_3 = &DAT_WORLD__801a2458;
       }
       else {
-        param_3 = (byte *)WORLD_LoadTextPrep(_DAT_1f800010);
+        param_3 = (byte *)WORLD_LoadTextPrep(DAT_1f800010);
       }
       _DAT_1f800024 = _DAT_1f800024 + 1;
       goto LAB_WORLD__800e433c;
     }
     if (((DAT_1f800000 & 0xf0) == 0xf0) && (pbVar5 = param_3 + 3, (DAT_1f800000 & 0xf) < 4)) {
-      _DAT_1f800018 = (uint)(param_3[1] >> 5) + (*param_3 & 3) * 8 + 4;
-      _DAT_1f800014 = (uint)param_3[2] + (param_3[1] & 0xf) * 0xfe;
-      param_3 = param_3 + -_DAT_1f800014;
-      _DAT_1f80001c = pbVar5;
+      DAT_1f800018 = (uint)(param_3[1] >> 5) + (*param_3 & 3) * 8 + 4;
+      DAT_1f800014 = (uint)param_3[2] + (param_3[1] & 0xf) * 0xfe;
+      param_3 = param_3 + -DAT_1f800014;
+      DAT_1f80001c = pbVar5;
       goto LAB_WORLD__800e433c;
     }
     if ((DAT_1f800000 & 0xf0) < 0xd0) {
-      _DAT_1f800004 = _DAT_1f800004 + 1;
+      DAT_1f800004 = DAT_1f800004 + 1;
     }
   }
   else {
@@ -103473,14 +107089,14 @@ LAB_WORLD__800e44fc:
       goto LAB_WORLD__800e44fc;
     }
     if (DAT_1f800000 == 0xe4) {
-      _DAT_1f800010 = *_DAT_1f800024;
+      DAT_1f800010 = *_DAT_1f800024;
       if (DAT_1f800028 == 0xffff) {
-        iVar6 = FUN_WORLD__800e6f14(_DAT_1f800010);
-        _DAT_1f800004 = iVar6 + _DAT_1f800004;
+        iVar6 = FUN_WORLD__800e6f14(DAT_1f800010);
+        DAT_1f800004 = iVar6 + DAT_1f800004;
       }
       else {
         DAT_1f800028 = 0xffff;
-        _DAT_1f800004 = _DAT_1f800004 + uVar1;
+        DAT_1f800004 = DAT_1f800004 + uVar1;
       }
       _DAT_1f800024 = _DAT_1f800024 + 1;
       goto LAB_WORLD__800e44fc;
@@ -103488,14 +107104,14 @@ LAB_WORLD__800e44fc:
     if (DAT_1f800000 == 0xe6) {
       param_3 = FUN_WORLD__800e4bf4(0x1f800000,(int)param_3);
       uVar1 = DAT_1f800028;
-      _DAT_1f800010 = (&DAT_WORLD__801531d8)[*param_3];
+      DAT_1f800010 = (&DAT_WORLD__801531d8)[*param_3];
       if (DAT_1f800028 == 0xffff) {
-        iVar6 = FUN_WORLD__800e6f14(_DAT_1f800010);
-        _DAT_1f800004 = iVar6 + _DAT_1f800004;
+        iVar6 = FUN_WORLD__800e6f14(DAT_1f800010);
+        DAT_1f800004 = iVar6 + DAT_1f800004;
       }
       else {
         DAT_1f800028 = 0xffff;
-        _DAT_1f800004 = _DAT_1f800004 + uVar1;
+        DAT_1f800004 = DAT_1f800004 + uVar1;
       }
       goto LAB_WORLD__800e44fc;
     }
@@ -103538,64 +107154,63 @@ void FUN_WORLD__800e4668(undefined2 *param_1,undefined2 *param_2,byte *param_3)
     pPVar3 = (PartyUnit *)((int)pPVar1->JobJP + iVar5 + -0x6d);
     iVar5 = iVar6;
   } while (iVar6 < 0x10);
-  _DAT_1f80001c = (byte *)0xffffffff;
+  DAT_1f80001c = (byte *)0xffffffff;
   _DAT_1f800024 = &DAT_WORLD__801531d8;
-  _DAT_1f800018 = 0;
-  _DAT_1f800004 = 0;
-  _DAT_1f800008 = 0;
-  _DAT_1f80000c = 0;
+  DAT_1f800018 = 0;
+  DAT_1f800004 = 0;
+  DAT_1f800008 = 0;
+  DAT_1f80000c = 0;
   DAT_1f800028 = 0xffff;
   DAT_1f80002c = 0;
 LAB_WORLD__800e4744:
   while ((DAT_1f800000 = (uint)*param_3, DAT_1f800000 == 0xf8 || (DAT_1f800000 - 0xfe < 2))) {
-    (&DAT_WORLD__801a246c)[_DAT_1f80000c] = _DAT_1f800004;
-    pbVar4 = _DAT_1f80001c;
-    if (_DAT_1f800008 < _DAT_1f800004) {
-      _DAT_1f800008 = _DAT_1f800004;
+    (&DAT_WORLD__801a246c)[DAT_1f80000c] = DAT_1f800004;
+    pbVar4 = DAT_1f80001c;
+    if (DAT_1f800008 < DAT_1f800004) {
+      DAT_1f800008 = DAT_1f800004;
     }
     if (1 < DAT_1f800000 - 0xfe) {
-      _DAT_1f800004 = 0;
-      _DAT_1f80000c = _DAT_1f80000c + 1;
+      DAT_1f800004 = 0;
+      DAT_1f80000c = DAT_1f80000c + 1;
       goto LAB_WORLD__800e4954;
     }
-    if (_DAT_1f80001c == (byte *)0xffffffff) {
-      _DAT_1f800004 = 0;
-      _DAT_1f80000c = _DAT_1f80000c + 1;
-      *param_1 = _DAT_1f800008;
-      *param_2 = _DAT_1f80000c;
+    if (DAT_1f80001c == (byte *)0xffffffff) {
+      DAT_1f800004 = 0;
+      DAT_1f80000c = DAT_1f80000c + 1;
+      *param_1 = (undefined2)DAT_1f800008;
+      *param_2 = (undefined2)DAT_1f80000c;
       return;
     }
-    _DAT_1f80001c = (byte *)0xffffffff;
+    DAT_1f80001c = (byte *)0xffffffff;
     param_3 = pbVar4;
   }
   if (DAT_1f800000 == 0xfa) {
-    _DAT_1f800004 = _DAT_1f800004 + 4;
+    DAT_1f800004 = DAT_1f800004 + 4;
 LAB_WORLD__800e4954:
-    _DAT_1f800010 = FUN_WORLD__800e41fc(DAT_1f800000,*_DAT_1f800024);
-    if (_DAT_1f800010 != 0xffffffff) {
-      _DAT_1f80001c = param_3 + 1;
+    DAT_1f800010 = FUN_WORLD__800e41fc(DAT_1f800000,*_DAT_1f800024);
+    if (DAT_1f800010 != 0xffffffff) {
+      DAT_1f80001c = param_3 + 1;
       if (DAT_1f800000 == 0xe0) {
         param_3 = &DAT_WORLD__801a2458;
       }
       else {
-        param_3 = (byte *)WORLD_LoadTextPrep(_DAT_1f800010);
+        param_3 = (byte *)WORLD_LoadTextPrep(DAT_1f800010);
       }
       _DAT_1f800024 = _DAT_1f800024 + 1;
       goto LAB_WORLD__800e4744;
     }
     uVar7 = DAT_1f800000 & 0xf0;
     if ((uVar7 == 0xf0) && (pbVar4 = param_3 + 3, (DAT_1f800000 & 0xf) < 4)) {
-      _DAT_1f800018 = (uint)(param_3[1] >> 5) + (*param_3 & 3) * 8 + 4;
-      _DAT_1f800014 = (uint)param_3[2] + (param_3[1] & 0xf) * 0xfe;
-      param_3 = param_3 + -_DAT_1f800014;
-      _DAT_1f80001c = pbVar4;
+      DAT_1f800018 = (uint)(param_3[1] >> 5) + (*param_3 & 3) * 8 + 4;
+      DAT_1f800014 = (uint)param_3[2] + (param_3[1] & 0xf) * 0xfe;
+      param_3 = param_3 + -DAT_1f800014;
+      DAT_1f80001c = pbVar4;
       goto LAB_WORLD__800e4744;
     }
     if (uVar7 < 0xd0) {
       uVar7 = DAT_1f80002c & 0xf;
       DAT_1f80002c = 0;
-      _DAT_1f800004 =
-           (uint)(byte)(&DAT_WORLD__801533e0)[uVar7 * 0xd0 + DAT_1f800000] + _DAT_1f800004;
+      DAT_1f800004 = (uint)(byte)(&DAT_WORLD__801533e0)[uVar7 * 0xd0 + DAT_1f800000] + DAT_1f800004;
     }
     else if (uVar7 == 0xd0) {
       DAT_1f80002c = DAT_1f800000;
@@ -103611,30 +107226,30 @@ LAB_WORLD__800e4954:
       goto LAB_WORLD__800e4954;
     }
     if (DAT_1f800000 == 0xe4) {
-      _DAT_1f800010 = *_DAT_1f800024;
+      DAT_1f800010 = *_DAT_1f800024;
       if (DAT_1f800028 == 0xffff) {
-        iVar5 = FUN_WORLD__800e6f14(_DAT_1f800010);
-        _DAT_1f800004 = iVar5 * 6 + _DAT_1f800004;
+        iVar5 = FUN_WORLD__800e6f14(DAT_1f800010);
+        DAT_1f800004 = iVar5 * 6 + DAT_1f800004;
       }
       else {
         iVar5 = DAT_1f800028 * 6;
         DAT_1f800028 = 0xffff;
-        _DAT_1f800004 = iVar5 + _DAT_1f800004;
+        DAT_1f800004 = iVar5 + DAT_1f800004;
       }
       _DAT_1f800024 = _DAT_1f800024 + 1;
       goto LAB_WORLD__800e4954;
     }
     if (DAT_1f800000 == 0xe6) {
       param_3 = FUN_WORLD__800e4bf4(0x1f800000,(int)param_3);
-      _DAT_1f800010 = (&DAT_WORLD__801531d8)[*param_3];
+      DAT_1f800010 = (&DAT_WORLD__801531d8)[*param_3];
       if (DAT_1f800028 == 0xffff) {
-        iVar5 = FUN_WORLD__800e6f14(_DAT_1f800010);
-        _DAT_1f800004 = iVar5 * 6 + _DAT_1f800004;
+        iVar5 = FUN_WORLD__800e6f14(DAT_1f800010);
+        DAT_1f800004 = iVar5 * 6 + DAT_1f800004;
       }
       else {
         iVar5 = DAT_1f800028 * 6;
         DAT_1f800028 = 0xffff;
-        _DAT_1f800004 = iVar5 + _DAT_1f800004;
+        DAT_1f800004 = iVar5 + DAT_1f800004;
       }
       goto LAB_WORLD__800e4954;
     }
@@ -104444,8 +108059,6 @@ undefined4 Check_Thread_Status2_WORLD(int param_1)
 
 
 
-// WARNING: Globals starting with '_' overlap smaller symbols at the same address
-
 uint FUN_WORLD__80100188(int param_1,int param_2,uint param_3)
 
 {
@@ -104471,13 +108084,13 @@ uint FUN_WORLD__80100188(int param_1,int param_2,uint param_3)
   uVar2 = (longlong)param_1 * (longlong)param_2;
   iVar10 = (int)(uVar2 >> 0x20);
   DAT_1f800000 = unaff_s0;
-  _DAT_1f800004 = unaff_s1;
-  _DAT_1f800008 = unaff_s2;
-  _DAT_1f80000c = unaff_s3;
-  _DAT_1f800010 = unaff_s4;
-  _DAT_1f800014 = unaff_s5;
-  _DAT_1f800018 = unaff_s6;
-  _DAT_1f80001c = unaff_s7;
+  DAT_1f800004 = unaff_s1;
+  DAT_1f800008 = unaff_s2;
+  DAT_1f80000c = unaff_s3;
+  DAT_1f800010 = unaff_s4;
+  DAT_1f800014 = unaff_s5;
+  DAT_1f800018 = unaff_s6;
+  DAT_1f80001c = unaff_s7;
   uVar6 = 0;
   uVar7 = 0;
   uVar8 = 0;
@@ -108564,7 +112177,7 @@ void FUN_WORLD__80125cfc(int param_1,int param_2)
   DRAWENV DStack_70;
   
   iVar3 = *DAT_WORLD__801cd528;
-  FUN_800449ec();
+  deprecated_000449ec();
   DAT_WORLD__801cd1cc = 0;
   DAT_WORLD__801cd864 = 0;
   DAT_WORLD__801cd1d0 = 0;
@@ -113852,7 +117465,7 @@ void FUN_ATTACK__801c3b00(void)
   undefined4 local_10 [2];
   
   local_10[0] = DAT_ATTACK__801bf000;
-  iVar2 = FUN_BATTLE_BIN__8013b590(0x27);
+  iVar2 = GetScriptVariable(CurrentEvent);
   if ((DAT_80173cb0 == 0) || (iVar2 - 0x19aU < 0x10)) goto LAB_ATTACK__801c3c80;
   if ((DAT_80165fd4 == 0) && (DAT_80165fd6 == 0)) {
 LAB_ATTACK__801c3bf4:
@@ -116658,7 +120271,7 @@ void FUN_BUNIT__801c76cc(int param_1,int param_2)
   int iVar3;
   
   iVar3 = *DAT_BUNIT__801ecacc;
-  FUN_800449ec();
+  deprecated_000449ec();
   DAT_BUNIT__801eca20 = 0;
   DAT_BUNIT__801eca7c = 0;
   DAT_BUNIT__801eca28 = 0;
@@ -119852,8 +123465,8 @@ void FUN_JOBSTTS__801e0b2c(int param_1)
   if (0 < DAT_JOBSTTS__801fa818) {
     FUN_BATTLE_BIN__80134020();
     FUN_BATTLE_BIN__80133fe8((int *)&DAT_JOBSTTS__801e5508);
-    FUN_BATTLE_BIN__8014c8a0(1,&DAT_801308c0);
-    FUN_BATTLE_BIN__8014ca38(1,param_1 + 0x38,DAT_JOBSTTS__801fa818,0);
+    Thread_initialize(1,(func *)&DAT_801308c0);
+    Thread_storeParams3(1,param_1 + 0x38,DAT_JOBSTTS__801fa818,0);
     DAT_80166028 = 1;
   }
   return;
@@ -119993,7 +123606,7 @@ void FUN_JOBSTTS__801e0ee8(void)
   FUN_JOBSTTS__801e0ba8();
   iVar2 = FUN_JOBSTTS__801e457c();
   if (6 < iVar2 - 1U) {
-    iVar3 = FUN_BATTLE_BIN__8014ca1c(1);
+    iVar3 = Thread_checkRunning(1);
     if (iVar3 != 0) {
       DAT_JOBSTTS__801fa720 = 0;
       DAT_JOBSTTS__801fa7d4 = 0;

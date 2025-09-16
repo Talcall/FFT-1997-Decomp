@@ -958,6 +958,1284 @@ struct Thread {
     undefined field939_0x3ff;
 };
 
+typedef struct PrimaryAbilityData PrimaryAbilityData, *PPrimaryAbilityData;
+
+struct PrimaryAbilityData {
+    short JP cost;
+    byte Chance to Learn;
+    int AbilityType:4;
+    int LearnOnHit:1;
+    int DisplayName:1;
+    int LearnWithJP:1;
+    int AITargetAllies:1;
+    int AITargetEnemies:1;
+    int AIUnequips:1;
+    int AIAltersStats:1;
+    int AIAddStatus:1;
+    int AICancelStatus:1;
+    int AIMP:1;
+    int AIHP:1;
+    int AISilencable:1;
+    int AIEvadeable:1;
+    int AIFaith:1;
+    int AIRandomHits:1;
+    int AIHasChargeTime:1;
+    int AIUndeadReverse:1;
+    int AIReflectable:1;
+    int AITargetMap:1;
+    int AIPhysical:1;
+    int AIMagic:1;
+    int AI3DirRange:1;
+    int AI3DirMelee:1;
+    int AINonPierce:1;
+    int AILinear:1;
+    int AIObstacle:1;
+    int AIArc:1;
+    int EvadeMotion:1;
+    int WeaponRange:1;
+    int AIRequiresMS:1; // not sure if this really does affect monster skill usage in any way
+    int AIOnlyEnemies:1;
+    int AIOnlyAllies:1;
+    int AIUsable:1;
+};
+
+typedef struct MusicChannelInner MusicChannelInner, *PMusicChannelInner;
+
+typedef struct MusicChannelRepeat MusicChannelRepeat, *PMusicChannelRepeat;
+
+struct MusicChannelRepeat {
+    byte remaining_loopcount;
+    undefined field1_0x1;
+    byte octave; // Created by retype action
+    byte coda_octave;
+    byte * loop_index; // Created by retype action
+    byte * coda_index;
+};
+
+struct MusicChannelInner {
+    uint using_channels;
+    uint using_channels2;
+    short left_volume_setting;
+    short right_volume_setting;
+    short left_sweep_type;
+    short right_sweep_type;
+    undefined field6_0x10;
+    undefined field7_0x11;
+    undefined field8_0x12;
+    undefined field9_0x13;
+    short ADPCM_samplerate; // Created by retype action
+    undefined field11_0x16;
+    undefined field12_0x17;
+    undefined field13_0x18;
+    undefined field14_0x19;
+    undefined field15_0x1a;
+    undefined field16_0x1b;
+    uint ADPCM_Start_addr;
+    uint ADPCM_Repeat_addr; // Created by retype action
+    int attack_mode; // Created by retype action
+    uint sustain_mode; // Created by retype action
+    uint release_mode;
+    ushort attack_shiftstep;
+    short decay_shift;
+    short sustain_flags; // Created by retype action
+    short release_flags;
+    short sus_lvl;
+    undefined field27_0x3a;
+    undefined field28_0x3b;
+    undefined field29_0x3c;
+    undefined field30_0x3d;
+    undefined field31_0x3e;
+    undefined field32_0x3f;
+    short fermata_notelength;
+    undefined field34_0x42;
+    undefined field35_0x43;
+    undefined field36_0x44;
+    undefined field37_0x45;
+    short field38_0x46;
+    undefined field39_0x48;
+    undefined1 current_notepitch; // Created by retype action
+    short octave;
+    undefined1 scaled_pitch; // Created by retype action
+    undefined field43_0x4d;
+    undefined field44_0x4e;
+    undefined field45_0x4f;
+    short field46_0x50;
+    undefined field47_0x52;
+    undefined field48_0x53;
+    undefined field49_0x54;
+    undefined field50_0x55;
+    undefined field51_0x56;
+    undefined field52_0x57;
+    uint field53_0x58;
+    short field54_0x5c;
+    short Vol_Bal; // Created by retype action
+    short field56_0x60;
+    undefined field57_0x62;
+    undefined field58_0x63;
+    short vol_left;
+    short vol_right;
+    undefined field61_0x68;
+    undefined field62_0x69;
+    undefined field63_0x6a;
+    undefined field64_0x6b;
+    int _vol_delta;
+    undefined field66_0x70;
+    undefined field67_0x71;
+    short note_length;
+    short note_fermata_length;
+    undefined field70_0x76;
+    undefined field71_0x77;
+    short repeat_count; // Created by retype action
+    undefined field73_0x7a;
+    byte note_pitch;
+    struct MusicChannelRepeat repeatData[2];
+    undefined field76_0x94;
+    undefined field77_0x95;
+    undefined field78_0x96;
+    undefined field79_0x97;
+    uint dynamic;
+    undefined field81_0x9c;
+    undefined field82_0x9d;
+    undefined field83_0x9e;
+    undefined field84_0x9f;
+    undefined field85_0xa0;
+    undefined field86_0xa1;
+    undefined field87_0xa2;
+    undefined field88_0xa3;
+    undefined field89_0xa4;
+    undefined field90_0xa5;
+    undefined field91_0xa6;
+    undefined field92_0xa7;
+    undefined field93_0xa8;
+    undefined field94_0xa9;
+    undefined field95_0xaa;
+    undefined field96_0xab;
+    undefined field97_0xac;
+    undefined field98_0xad;
+    undefined field99_0xae;
+    undefined field100_0xaf;
+    undefined field101_0xb0;
+    undefined field102_0xb1;
+    undefined field103_0xb2;
+    undefined field104_0xb3;
+    undefined field105_0xb4;
+    undefined field106_0xb5;
+    undefined field107_0xb6;
+    undefined field108_0xb7;
+    int Pitchshift_Intensity; // Created by retype action
+    undefined field110_0xbc;
+    undefined field111_0xbd;
+    short Pitchshift_Speed; // Created by retype action
+    undefined field113_0xc0;
+    undefined field114_0xc1;
+    short Pitchshift_Delay; // Created by retype action
+    undefined field116_0xc4;
+    undefined field117_0xc5;
+    short field118_0xc6;
+    undefined field119_0xc8;
+    undefined field120_0xc9;
+    undefined field121_0xca;
+    undefined field122_0xcb;
+    undefined field123_0xcc;
+    undefined field124_0xcd;
+    undefined field125_0xce;
+    undefined field126_0xcf;
+    undefined field127_0xd0;
+    undefined field128_0xd1;
+    undefined field129_0xd2;
+    undefined field130_0xd3;
+    undefined field131_0xd4;
+    undefined field132_0xd5;
+    undefined field133_0xd6;
+    undefined field134_0xd7;
+    int field135_0xd8;
+    undefined field136_0xdc;
+    undefined field137_0xdd;
+    short field138_0xde;
+    undefined field139_0xe0;
+    undefined field140_0xe1;
+    short field141_0xe2;
+    short field142_0xe4;
+    short field143_0xe6;
+    undefined field144_0xe8;
+    undefined field145_0xe9;
+    short field146_0xea;
+    int pitchshift_intensity; // Created by retype action
+    undefined field148_0xf0;
+    undefined field149_0xf1;
+    short pitchshift_speed; // Created by retype action
+    undefined field151_0xf4;
+    undefined field152_0xf5;
+    short pitchshift_delay;
+    short field154_0xf8;
+    short field155_0xfa;
+    undefined field156_0xfc;
+    undefined field157_0xfd;
+    short field158_0xfe;
+    undefined field159_0x100;
+    undefined field160_0x101;
+    short field161_0x102;
+    short field162_0x104;
+    short field163_0x106;
+    undefined field164_0x108;
+    undefined field165_0x109;
+    short field166_0x10a;
+    undefined field167_0x10c;
+    undefined field168_0x10d;
+    undefined field169_0x10e;
+    undefined field170_0x10f;
+    undefined field171_0x110;
+    undefined field172_0x111;
+    undefined field173_0x112;
+    undefined field174_0x113;
+    undefined field175_0x114;
+    undefined field176_0x115;
+    undefined field177_0x116;
+    undefined field178_0x117;
+    undefined field179_0x118;
+    undefined field180_0x119;
+    undefined field181_0x11a;
+    undefined field182_0x11b;
+    undefined field183_0x11c;
+    undefined field184_0x11d;
+    undefined field185_0x11e;
+    undefined field186_0x11f;
+    undefined field187_0x120;
+    undefined field188_0x121;
+    undefined field189_0x122;
+    undefined field190_0x123;
+    undefined field191_0x124;
+    undefined field192_0x125;
+    undefined field193_0x126;
+    undefined field194_0x127;
+    undefined field195_0x128;
+    undefined field196_0x129;
+    undefined field197_0x12a;
+    undefined field198_0x12b;
+};
+
+typedef struct PrimaryItemData PrimaryItemData, *PPrimaryItemData;
+
+struct PrimaryItemData {
+    byte Palette;
+    byte SpriteID;
+    byte ReqLevel;
+    int NA:1;
+    int Rare:1;
+    int NA:1;
+    int Accessory:1;
+    int Armor:1;
+    int Headgear:1;
+    int Shield:1;
+    int Weapon:1;
+    byte SecondID;
+    byte ItemType;
+    undefined field13_0x6;
+    byte ItemAttr;
+    short Price;
+    byte ShopAvailability;
+    undefined field17_0xb;
+};
+
+typedef unsigned short    wchar16;
+typedef enum SUZUKIchannel_flags {
+    action4=4,
+    note_active=128,
+    hold_note=256,
+    action200=512,
+    rest_note=1024,
+    action800=2048,
+    change_instrument=32768
+} SUZUKIchannel_flags;
+
+typedef enum Status2 {
+    empty=0,
+    Treasure=1,
+    Cursed=2,
+    Blood_Suck=4,
+    Silence=8,
+    Confusion=16,
+    Darkness=32,
+    Invite=64,
+    Petrify=128
+} Status2;
+
+typedef enum Status3 {
+    empty=0,
+    Critical=1,
+    Frog=2,
+    Chicken=4,
+    Berserk=8,
+    Transparent=16,
+    Reraise=32,
+    Float=64,
+    Oil=128
+} Status3;
+
+typedef enum Status4 {
+    empty=0,
+    Wall=1,
+    Stop=2,
+    Slow=4,
+    Haste=8,
+    Shell=16,
+    Protect=32,
+    Regen=64,
+    Poison=128
+} Status4;
+
+typedef enum Status5 {
+    empty=0,
+    Death_Sentence=1,
+    Reflect=2,
+    Dont_Act=4,
+    Dont_Move=8,
+    Sleep=16,
+    Charm=32,
+    Innocent=64,
+    Faith=128
+} Status5;
+
+typedef enum SUZUKInoteflags3 {
+    stop_instrument=4,
+    attacktime_change=16,
+    actionflag20=32,
+    sustain_change=64,
+    actionflag80=128,
+    sustain2_change=256
+} SUZUKInoteflags3;
+
+typedef enum SUZUKInoteflags4 {
+    default_dynamic=8
+} SUZUKInoteflags4;
+
+typedef enum FormulaID {
+    Weapon=1,
+    SpellWeapon=2,
+    GunWeapon=3,
+    MagicGun=4,
+    Weapon2=5,
+    AbsorbWeapon=6,
+    HealWeapon=7,
+    DamageSpell=8,
+    DemiSpell=9,
+    AilmentSpell=10,
+    BoonSpell=11,
+    HealSpell=12,
+    RaiseSpell=13,
+    DeathSpell=14,
+    MPAbsorbSpell=15,
+    AbsorbSpell=16,
+    11=17,
+    Quick=18,
+    13=19,
+    Golem=20,
+    Return2=21,
+    Mute=22,
+    Gravi2=23,
+    18=24,
+    19=25,
+    ZalbagRuin=26,
+    ZalbagMPRuin=27,
+    Song=28,
+    Dance=29,
+    Truth=30,
+    Untruth=31,
+    DmgKatana=32,
+    DmgMPKatana=33,
+    BoonKatana=34,
+    HealKatana=35,
+    Geomancy=36,
+    EquipBreak=37,
+    EquipSteal=38,
+    GilSteal=39,
+    EXPSteal=40,
+    HeartSteal=41,
+    TalkSkill=42,
+    StatBreak=43,
+    MPBreak=44,
+    HolySword=45,
+    MightySword=46,
+    DarkSword=47,
+    NightSword=48,
+    Barehand=49,
+    BarehandRND=50,
+    Stigma=51,
+    Chakra=52,
+    Revive=53,
+    PlusPA=54,
+    KnockbackRND=55,
+    InflictStatus=56,
+    PlusSP=57,
+    PlusBrave=58,
+    Scream=59,
+    Wish=60,
+    MonStatus=61,
+    GraviUnused=62,
+    AimLimb=63,
+    SealEvil=64,
+    GalaxyStop=65,
+    Work=66,
+    RevengeDMG=67,
+    Difference=68,
+    Climhazzard=69,
+    46=70,
+    BloodSuck=71,
+    ItemHeal=72,
+    ItemMPHeal=73,
+    Elixir=74,
+    PhoenixDown=75,
+    MonHeal=76,
+    MonAbsorb=77,
+    Bracelet=78,
+    GoblinPunch=79,
+    MonPhysSpell=80,
+    MonEsuna=81,
+    SelfDestruct=82,
+    Hurricane=83,
+    MagicSpirit=84,
+    Beaking=85,
+    Circle=86,
+    PleaseEat=87,
+    Moldball=88,
+    LevelBlast=89,
+    DragonTame=90,
+    DragonCare=91,
+    DragonPowerUP=92,
+    DragonLevelUP=93,
+    HydraBracelet=94,
+    Nanoflare=95,
+    HydraStatusUnused=96,
+    Foxbird=97,
+    FrightLook=98,
+    Throw=99,
+    Jump=100
+} FormulaID;
+
+typedef struct SuzukiVolStorageStruct SuzukiVolStorageStruct, *PSuzukiVolStorageStruct;
+
+typedef struct SuzukiVolStore SuzukiVolStore, *PSuzukiVolStore;
+
+struct SuzukiVolStore {
+    short field0_0x0;
+    short Volume;
+};
+
+struct SuzukiVolStorageStruct {
+    struct SuzukiVolStore hasVolume;
+    undefined4 ChangeInVolume;
+    short ChangeVol;
+};
+
+typedef struct MusicChannelData MusicChannelData, *PMusicChannelData;
+
+typedef struct MusicChannelIntermediary MusicChannelIntermediary, *PMusicChannelIntermediary;
+
+typedef enum SUZUKIintermediary_flags {
+    rest_note=2,
+    action80=128,
+    volume_change=256,
+    playing_note=512
+} SUZUKIintermediary_flags;
+
+typedef struct MusicChannelSecondary MusicChannelSecondary, *PMusicChannelSecondary;
+
+typedef enum mus_voiceChannelFunc {
+    Adjust_Voice_Vol_Both=1,
+    Set_Sweep_VolMode=2,
+    CalcLFOVoices=4,
+    Set_ADPCM_Addrs=8,
+    CalcNoiseVoices=16,
+    Adjust_Voice_Decay_Shift=32,
+    CalcReverbVoices=64,
+    Adjust_Release=128,
+    Adjust_Sustain_Level=256
+} mus_voiceChannelFunc;
+
+typedef enum MusicInstruction {
+    PlayNote=127,
+    Instruction=128,
+    Rest=128,
+    Fermata=129,
+    EndBar=144,
+    Loop=145,
+    Octave=148,
+    RaiseOctave=149,
+    LowerOctave=150,
+    TimeSignature=151,
+    Repeat=152,
+    Coda=153,
+    ToCoda=154,
+    Tempo=160,
+    Instrument=172,
+    Cue=186,
+    Naturale=192,
+    AttackTime=194,
+    Sustain=196,
+    AttackTime2=198,
+    PitchShift=216,
+    Dynamic=224,
+    Balance=232
+} MusicInstruction;
+
+typedef struct SoundFontHeader SoundFontHeader, *PSoundFontHeader;
+
+typedef struct sf_wave_settings sf_wave_settings, *Psf_wave_settings;
+
+struct sf_wave_settings {
+    int Wavefont_ptr;
+    ushort ADPCM_Repeat_addr;
+    undefined field2_0x6;
+    undefined field3_0x7;
+    byte Attack_Shiftstep; // Created by retype action
+    byte Decay_Shift; // Created by retype action
+    byte Sustain_Flags; // Created by retype action
+    byte Release_Flags; // Created by retype action
+    byte Sustain_Level;
+    byte Attack_Mode;
+    byte Sustain_Mode; // Created by retype action
+    byte Release_Mode; // Created by retype action
+};
+
+struct SoundFontHeader {
+    char FileDesignation[5];
+    undefined field1_0x5;
+    undefined field2_0x6;
+    undefined field3_0x7;
+    uint wholeFileSize;
+    undefined field5_0xc;
+    undefined field6_0xd;
+    undefined field7_0xe;
+    undefined field8_0xf;
+    uint waveFontStart;
+    uint waveFontSize;
+    uint field11_0x18;
+    undefined field12_0x1c;
+    undefined field13_0x1d;
+    undefined field14_0x1e;
+    undefined field15_0x1f;
+    short soundfont_ID;
+    undefined field17_0x22;
+    undefined field18_0x23;
+    undefined field19_0x24;
+    undefined field20_0x25;
+    undefined field21_0x26;
+    undefined field22_0x27;
+    int ADPCM_offset; // Created by retype action
+    struct SoundFontHeader * next_soundfont; // Created by retype action
+    struct sf_wave_settings waveFontArray[176];
+};
+
+struct MusicChannelSecondary {
+    enum mus_voiceChannelFunc channelFunc;
+    enum SUZUKInoteflags4 instrumentflags;
+    undefined field2_0x4;
+    undefined field3_0x5;
+    short field4_0x6;
+    undefined field5_0x8;
+    undefined field6_0x9;
+    undefined field7_0xa;
+    undefined field8_0xb;
+    undefined field9_0xc;
+    undefined field10_0xd;
+    undefined field11_0xe;
+    undefined field12_0xf;
+    undefined field13_0x10;
+    undefined field14_0x11;
+    undefined field15_0x12;
+    undefined field16_0x13;
+    enum MusicInstruction * MUS_Instr;
+    byte * SMD_instr_start;
+    undefined field19_0x1c;
+    undefined field20_0x1d;
+    undefined field21_0x1e;
+    undefined field22_0x1f;
+    undefined field23_0x20;
+    undefined field24_0x21;
+    undefined field25_0x22;
+    undefined field26_0x23;
+    short loops;
+    undefined field28_0x26;
+    byte field29_0x27;
+    byte instrument; // Created by retype action
+    byte voice_ID;
+    short releaseflags_small;
+    struct SoundFontHeader * Waveset_addr;
+    struct MusicChannelInner channel_notedata;
+};
+
+struct MusicChannelIntermediary {
+    enum SUZUKIintermediary_flags intermediaryflags;
+    struct MusicChannelSecondary channelSecondary; // Created by retype action
+};
+
+struct MusicChannelData {
+    enum SUZUKIchannel_flags channelflags;
+    struct MusicChannelIntermediary channel_inter;
+};
+
+typedef enum Status1 {
+    empty=0,
+    Performing=1,
+    Defending=2,
+    Jump=4,
+    Charging=8,
+    Undead=16,
+    Dead=32,
+    Crystal=64,
+    NONE=128
+} Status1;
+
+typedef struct SMDDataAll SMDDataAll, *PSMDDataAll;
+
+typedef struct SMDHeaderData SMDHeaderData, *PSMDHeaderData;
+
+struct SMDHeaderData {
+    uchar smds[4];
+    undefined field1_0x4;
+    undefined field2_0x5;
+    undefined field3_0x6;
+    undefined field4_0x7;
+    uint filesize;
+    undefined field6_0xc;
+    undefined field7_0xd;
+    undefined field8_0xe;
+    undefined field9_0xf;
+    undefined field10_0x10;
+    undefined field11_0x11;
+    byte NumChannelDedicate;
+    undefined field13_0x13;
+    byte NumChannels; // Created by retype action
+    undefined field15_0x15;
+    undefined field16_0x16;
+    undefined field17_0x17;
+    undefined field18_0x18;
+    undefined field19_0x19;
+    char reverbMode_small; // Created by retype action
+    byte volumeDepth_small; // Created by retype action
+    byte reverbDelay_small; // Created by retype action
+    byte reverbFeedback_small;
+    short filename_ptr;
+    short data_ptr;
+    short channel_ptr;
+    uchar filename;
+    undefined field28_0x25;
+    undefined field29_0x26;
+    undefined field30_0x27;
+    undefined field31_0x28;
+    undefined field32_0x29;
+    undefined field33_0x2a;
+    undefined field34_0x2b;
+    undefined field35_0x2c;
+    undefined field36_0x2d;
+    undefined field37_0x2e;
+    undefined field38_0x2f;
+    undefined field39_0x30;
+    undefined field40_0x31;
+    undefined field41_0x32;
+    undefined field42_0x33;
+    undefined field43_0x34;
+    undefined field44_0x35;
+    undefined field45_0x36;
+    undefined field46_0x37;
+    undefined field47_0x38;
+    undefined field48_0x39;
+    undefined field49_0x3a;
+    undefined field50_0x3b;
+    undefined field51_0x3c;
+    undefined field52_0x3d;
+    undefined field53_0x3e;
+    undefined field54_0x3f;
+    undefined field55_0x40;
+    undefined field56_0x41;
+    undefined field57_0x42;
+    undefined field58_0x43;
+    uint ReverbMode; // Created by retype action
+    short volumeDepth; // Created by retype action
+    undefined field61_0x4a;
+    undefined field62_0x4b;
+    long reverbDelay; // Created by retype action
+    long reverbFeedback; // Created by retype action
+    undefined field65_0x54;
+    undefined field66_0x55;
+    undefined field67_0x56;
+    undefined field68_0x57;
+    undefined4 OwnedChannels;
+    undefined field70_0x5c;
+    undefined field71_0x5d;
+    undefined field72_0x5e;
+    undefined field73_0x5f;
+    uint ModifiedChannels;
+    undefined field75_0x64;
+    undefined field76_0x65;
+    undefined field77_0x66;
+    undefined field78_0x67;
+    uint LFOVoiceBits;
+    uint NoiseVoiceBits;
+    uint ReverbVoiceBits;
+    undefined field82_0x74;
+    undefined field83_0x75;
+    undefined field84_0x76;
+    undefined field85_0x77;
+    undefined field86_0x78;
+    undefined field87_0x79;
+    undefined field88_0x7a;
+    undefined field89_0x7b;
+    undefined field90_0x7c;
+    undefined field91_0x7d;
+    undefined field92_0x7e;
+    undefined field93_0x7f;
+    undefined field94_0x80;
+    undefined field95_0x81;
+    undefined field96_0x82;
+    undefined field97_0x83;
+    undefined field98_0x84;
+    undefined field99_0x85;
+    undefined field100_0x86;
+    undefined field101_0x87;
+    undefined field102_0x88;
+    undefined field103_0x89;
+    undefined field104_0x8a;
+    undefined field105_0x8b;
+    undefined field106_0x8c;
+    undefined field107_0x8d;
+    undefined field108_0x8e;
+    undefined field109_0x8f;
+    undefined field110_0x90;
+    undefined field111_0x91;
+    undefined field112_0x92;
+    undefined field113_0x93;
+    int field114_0x94;
+    int field115_0x98;
+    short field116_0x9c;
+    short field117_0x9e;
+    undefined field118_0xa0;
+    undefined field119_0xa1;
+    undefined field120_0xa2;
+    undefined field121_0xa3;
+    undefined field122_0xa4;
+    undefined field123_0xa5;
+    undefined field124_0xa6;
+    undefined field125_0xa7;
+    undefined field126_0xa8;
+    undefined field127_0xa9;
+    undefined field128_0xaa;
+    undefined field129_0xab;
+    undefined field130_0xac;
+    undefined field131_0xad;
+    undefined field132_0xae;
+    undefined field133_0xaf;
+    undefined field134_0xb0;
+    undefined field135_0xb1;
+    undefined field136_0xb2;
+    undefined field137_0xb3;
+    undefined field138_0xb4;
+    undefined field139_0xb5;
+    undefined field140_0xb6;
+    undefined field141_0xb7;
+};
+
+struct SMDDataAll {
+    struct SMDHeaderData HeaderData;
+    struct MusicChannelData ChannelData[8];
+    undefined field2_0xbb8;
+    undefined field3_0xbb9;
+    undefined field4_0xbba;
+    undefined field5_0xbbb;
+    undefined field6_0xbbc;
+    undefined field7_0xbbd;
+    undefined field8_0xbbe;
+    undefined field9_0xbbf;
+    undefined field10_0xbc0;
+    undefined field11_0xbc1;
+    undefined field12_0xbc2;
+    undefined field13_0xbc3;
+    undefined field14_0xbc4;
+    undefined field15_0xbc5;
+    undefined field16_0xbc6;
+    undefined field17_0xbc7;
+};
+
+typedef struct InflictStatuses InflictStatuses, *PInflictStatuses;
+
+typedef struct StatusList StatusList, *PStatusList;
+
+struct StatusList {
+    enum Status1 Status1;
+    enum Status2 Status2;
+    enum Status3 Status3;
+    enum Status4 Status4;
+    enum Status5 Status5;
+};
+
+struct InflictStatuses {
+    bool Cancel:1;
+    bool InflictSeperate:1;
+    bool InflictRandom:1;
+    bool InflictAll:1;
+    struct StatusList field4_0x1;
+};
+
+typedef struct MusicDataHeader MusicDataHeader, *PMusicDataHeader;
+
+typedef struct MusDataAll MusDataAll, *PMusDataAll;
+
+typedef enum mus_10 {
+    actionflag1=1,
+    end_on_endbar=2,
+    recalculate_reverb=256,
+    actionflag2000=8192,
+    music_playing=32768
+} mus_10;
+
+struct MusicDataHeader {
+    struct MusDataAll * PrevPlayedMus;
+    struct MusDataAll * NextMus;
+    struct SMDDataAll * TransferAddr;
+    int DedicatedSpace;
+    enum mus_10 10_cmdfield;
+    undefined field5_0x12;
+    undefined field6_0x13;
+    byte NumChannelDedicate; // Created by retype action
+    byte field8_0x15;
+    byte NumChannels;
+    undefined field10_0x17;
+    short Soundfont_ID;
+    undefined field12_0x1a;
+    undefined field13_0x1b;
+    undefined field14_0x1c;
+    undefined field15_0x1d;
+    ushort noise_clock;
+    uint field17_0x20;
+    uint field18_0x24;
+    uint field19_0x28;
+    undefined field20_0x2c;
+    undefined field21_0x2d;
+    undefined field22_0x2e;
+    undefined field23_0x2f;
+    short field24_0x30;
+    short CurMeasure;
+    short CurBeat;
+    short framesUntil_nextBeat;
+    short timeSignature_top;
+    short framesPer_Beat;
+    short timeSignature_bottom;
+    short timeSigTop;
+    undefined field32_0x40;
+    undefined field33_0x41;
+    undefined field34_0x42;
+    undefined field35_0x43;
+    uint ReverbMode; // Created by retype action
+    short volumeDepth; // Created by retype action
+    undefined field38_0x4a;
+    undefined field39_0x4b;
+    long reverbDelay; // Created by retype action
+    long reverbFeedback; // Created by retype action
+    undefined field42_0x54;
+    undefined field43_0x55;
+    undefined field44_0x56;
+    undefined field45_0x57;
+    undefined4 OwnedChannels;
+    undefined field47_0x5c;
+    undefined field48_0x5d;
+    undefined field49_0x5e;
+    undefined field50_0x5f;
+    uint ModifiedChannels;
+    uint field52_0x64;
+    uint LFOVoiceBits;
+    uint NoiseVoiceBits;
+    uint ReverbVoiceBits;
+    uint field56_0x74;
+    uint modified_tempo;
+    uint raw_tempo;
+    uint field59_0x80;
+    short field60_0x84;
+    undefined field61_0x86;
+    undefined field62_0x87;
+    uint tempo_scalar;
+    undefined field64_0x8c;
+    undefined field65_0x8d;
+    undefined field66_0x8e;
+    undefined field67_0x8f;
+    short field68_0x90;
+    undefined field69_0x92;
+    undefined field70_0x93;
+    struct SuzukiVolStorageStruct volset1;
+    undefined field72_0x9e;
+    undefined field73_0x9f;
+    struct SuzukiVolStorageStruct volset2;
+    undefined field75_0xaa;
+    undefined field76_0xab;
+    struct SuzukiVolStorageStruct volset3;
+    undefined field78_0xb6;
+    undefined field79_0xb7;
+};
+
+struct MusDataAll {
+    struct MusicDataHeader HeaderData;
+    struct MusicChannelData ChannelData[8];
+    undefined field2_0xbb8;
+    undefined field3_0xbb9;
+    undefined field4_0xbba;
+    undefined field5_0xbbb;
+    undefined field6_0xbbc;
+    undefined field7_0xbbd;
+    undefined field8_0xbbe;
+    undefined field9_0xbbf;
+    undefined field10_0xbc0;
+    undefined field11_0xbc1;
+    undefined field12_0xbc2;
+    undefined field13_0xbc3;
+    undefined field14_0xbc4;
+    undefined field15_0xbc5;
+    undefined field16_0xbc6;
+    undefined field17_0xbc7;
+};
+
+typedef enum ItemID {
+    None=0,
+    Knife=1,
+    MythrilKnife=2,
+    BlindKnife=3,
+    MageKnife=4,
+    PlatKnife=5,
+    GaucheKnife=6,
+    OrichKnife=7,
+    AssassinKnife=8,
+    AirKnife=9,
+    ZorlinKnife=10,
+    HiddenNinjato=11,
+    Ninjato=12,
+    ShortNinjato=13,
+    EdgeNinjato=14,
+    SpellNinjato=15,
+    SasukeNinjato=16,
+    IgaNinjato=17,
+    KogaNinjato=18,
+    BroadSword=19,
+    LongSword=20,
+    IronSword=21,
+    MythrilSword=22,
+    BloodSword=23,
+    CoralSword=24,
+    AncientSword=25,
+    SleepSword=26,
+    PlatSword=27,
+    DiamondSword=28,
+    IceSword=29,
+    RuneSword=30,
+    NagrarokSword=31,
+    MateriaSword=32,
+    DefendKnSword=33,
+    QueenKnSword=34,
+    ExcKnSword=35,
+    RagnarokKnSword=36,
+    ChaosKnSword=37,
+    AsuraKatana=38,
+    KoutetsuKatana=39,
+    BizenKatana=40,
+    MurasameKatana=41,
+    HeavenKatana=42,
+    KiyomoriKatana=43,
+    MuramasaKatana=44,
+    KikuiKatana=45,
+    MasamuneKatana=46,
+    ChiriKatana=47,
+    BattleAxe=48,
+    GiantAxe=49,
+    SlashAxe=50,
+    Rod=51,
+    ThunderRod=52,
+    FlameRod=53,
+    IceRod=54,
+    PoisonRod=55,
+    WizardRod=56,
+    DragonRod=57,
+    FaithRod=58,
+    OakStaff=59,
+    WhiteStaff=60,
+    HealStaff=61,
+    RainbowStaff=62,
+    WizardStaff=63,
+    GoldStaff=64,
+    ZeusStaff=65,
+    SageStaff=66,
+    Flail=67,
+    FlameFlail=68,
+    MSFlail=69,
+    ScorpionFlail=70,
+    RomandaGun=71,
+    MythrilGun=72,
+    StoneGun=73,
+    BlazeGun=74,
+    GlacierGun=75,
+    BlastGun=76,
+    BowgunXBow=77,
+    KnightXBow=78,
+    XBow=79,
+    PoisonXBow=80,
+    HuntingXBow=81,
+    GastrifitisXBow=82,
+    LongBow=83,
+    SilverBow=84,
+    IceBow=85,
+    LightningBow=86,
+    WindBow=87,
+    MythrilBow=88,
+    UltimaBow=89,
+    YoichiBow=90,
+    PerseusBow=91,
+    LamiaHarp=92,
+    BloodyHarp=93,
+    FairyHarp=94,
+    BattleDict=95,
+    MonsterDict=96,
+    PapyrusDict=97,
+    MadlemDict=98,
+    JavelinPolearm=99,
+    SpearPolearm=100,
+    MythrilPolearm=101,
+    PartisanPolearm=102,
+    ObeliskPolearm=103,
+    HolyPolearm=104,
+    WhiskerPolearm=105,
+    JavelinPolearm2=106,
+    CypressPole=107,
+    BambooPole=108,
+    MuskPole=109,
+    IronPole=110,
+    GokuuPole=111,
+    IvoryPole=112,
+    OctagonPole=113,
+    WhiskerPole=114,
+    CBag=115,
+    FSBag=116,
+    PBag=117,
+    HBag=118,
+    PersiaCloth=119,
+    CashmereCloth=120,
+    RyozanCloth=121,
+    Shuriken=122,
+    MagicShuriken=123,
+    YagyuShuriken=124,
+    FireBall=125,
+    WaterBall=126,
+    LightningBall=127,
+    EscutchShield=128,
+    BucklerShield=129,
+    BronzeShield=130,
+    RoundShield=131,
+    MythrilShield=132,
+    GoldShield=133,
+    IceShield=134,
+    FlameShield=135,
+    AegisShield=136,
+    DiamondShield=137,
+    PlatShield=138,
+    CrystalShield=139,
+    GenjiShield=140,
+    KaiserShield=141,
+    VeniceShield=142,
+    EscutchShield2=143,
+    LeatherHelm=144,
+    BronzeHelm=145,
+    IronHelm=146,
+    BarbutaHelm=147,
+    MythrilHelm=148,
+    GoldHelm=149,
+    CrossHelm=150,
+    DiamondHelm=151,
+    PlatHelm=152,
+    CircletHelm=153,
+    CrystalHelm=154,
+    GenjiHelm=155,
+    GrandHelm=156,
+    LeatherHat=157,
+    FeatherHat=158,
+    RedHat=159,
+    HeadgearHat=160,
+    TriangleHat=161,
+    BeretHat=162,
+    HeadbandHat=163,
+    MiterHat=164,
+    Blackhat=165,
+    HairpinHat=166,
+    FlashHat=167,
+    ThiefHat=168,
+    CachushaAdrn=169,
+    BaretteAdrn=170,
+    RibbonAdrn=171,
+    LeatherArmor=172,
+    LinenArmor=173,
+    BronzeArmor=174,
+    ChainArmor=175,
+    MythrilArmor=176,
+    PlateArmor=177,
+    GoldArmor=178,
+    DiamondArmor=179,
+    PlatArmor=180,
+    CarabiniArmor=181,
+    CrystalArmor=182,
+    GenjiArmor=183,
+    ReflectArmor=184,
+    MaxArmor=185,
+    Clothes=186,
+    LeatherClothes=187,
+    LeatherClothes2=188,
+    ChainClothes=189,
+    MythrilClothes=190,
+    AdamClothes=191,
+    WizardClothes=192,
+    BrigClothes=193,
+    JudoClothes=194,
+    PowerClothes=195,
+    EarthClothes=196,
+    SecretClothes=197,
+    BlackClothes=198,
+    RubberClothes=199,
+    LinenRobe=200,
+    SilkRobe=201,
+    WizardRobe=202,
+    ChamRobe=203,
+    WhiteRobe=204,
+    BlackRobe=205,
+    LightRobe=206,
+    LordRobe=207,
+    BattleShoe=208,
+    SpikeShoe=209,
+    GermShoe=210,
+    RubberShoe=211,
+    FeatherShoe=212,
+    SprintShoe=213,
+    RedShoe=214,
+    PowerGauntlet=215,
+    GenjiGauntlet=216,
+    MagicGauntlet=217,
+    BraceGauntlet=218,
+    ReflectRing=219,
+    DefenseRing=220,
+    MagicRing=221,
+    CursedRing=222,
+    AngelRing=223,
+    DiamondArmlet=224,
+    JadeArmlet=225,
+    108Armlet=226,
+    NKaiArmlet=227,
+    DefenseArmlet=228,
+    SmallMantle=229,
+    LeatherMantle=230,
+    WizardMantle=231,
+    ElfMantle=232,
+    DraculaMantle=233,
+    FeatherMantle=234,
+    VanishMantle=235,
+    Chantage=236,
+    Cherche=237,
+    Setiemson=238,
+    SaltyRage=239,
+    Potion=240,
+    HiPotion=241,
+    XPotion=242,
+    Ether=243,
+    HiEther=244,
+    Elixir=245,
+    Antidote=246,
+    EyeDrop=247,
+    EchoGrass=248,
+    MaidenKiss=249,
+    Soft=250,
+    HolyWater=251,
+    Remedy=252,
+    PhoenixDown=253,
+    RND_ENTD=254,
+    NONE_ENTD=255
+} ItemID;
+
+typedef struct AccessorySecondary AccessorySecondary, *PAccessorySecondary;
+
+struct AccessorySecondary {
+    byte PhysicalEvade;
+    byte MagicalEvade;
+};
+
+typedef enum Eq1 {
+    Rod=1,
+    Axe=2,
+    Katana=4,
+    Knight_Sword=8,
+    Sword=16,
+    Ninja_Blade=32,
+    Knife=64,
+    NONE=128
+} Eq1;
+
+typedef enum Eq3 {
+    Armor=1,
+    Hair_Adornment=2,
+    Hat=4,
+    Helmet=8,
+    Shield=16,
+    Cloth=32,
+    Bag=64,
+    Pole=128
+} Eq3;
+
+typedef enum Eq2 {
+    Polearm=1,
+    Book=2,
+    Instrument=4,
+    Bow=8,
+    Crossbow=16,
+    Gun=32,
+    Flail=64,
+    Staff=128
+} Eq2;
+
+typedef enum SUZUKIInstr { // Bit encoded currently executing instruction halfword
+    Off=0,
+    SysCounterInitialised=1,
+    SPUTransfering=16,
+    SPUWriting=32,
+    SPUReading=64,
+    Sound_Stereo=256,
+    Wide=512,
+    Sound_Wide=768,
+    Unused=1024,
+    Sound_Unused=1280,
+    WideOrUnused=1536,
+    Sound_Type=1792,
+    MusicPlayable=4096,
+    Lock_Volume=8192,
+    SPUMallocInitialised=32768
+} SUZUKIInstr;
+
+typedef enum Eq4 {
+    Perfume=1,
+    Cloak=2,
+    Armlet=4,
+    Ring=8,
+    Armguard=16,
+    Shoes=32,
+    Robe=64,
+    Clothing=128
+} Eq4;
+
+typedef enum status_legal {
+    is_dead=0,
+    team_loss_enemy=1,
+    team_loss_ally=2,
+    freeze_ct=3,
+    can_act=4,
+    immortal_immune=5,
+    formation_immune=6,
+    0x7=7,
+    0x8=8,
+    no_mount=9,
+    0x9=10
+} status_legal;
+
+typedef struct Skillset Skillset, *PSkillset;
+
 typedef enum AbilityID {
     None=0,
     Cure=1,
@@ -1474,52 +2752,749 @@ typedef enum AbilityID {
     FallDamage=512
 } AbilityID;
 
+struct Skillset {
+    short ActionFlags;
+    byte RSMFlags;
+    enum AbilityID Ability0:8;
+    enum AbilityID Ability1:8;
+    enum AbilityID Ability2:8;
+    enum AbilityID Ability3:8;
+    enum AbilityID Ability4:8;
+    enum AbilityID Ability5:8;
+    enum AbilityID Ability6:8;
+    enum AbilityID Ability7:8;
+    enum AbilityID Ability8:8;
+    enum AbilityID Ability9:8;
+    enum AbilityID AbilityA:8;
+    enum AbilityID AbilityB:8;
+    enum AbilityID AbilityC:8;
+    enum AbilityID AbilityD:8;
+    enum AbilityID AbilityE:8;
+    enum AbilityID AbilityF:8;
+    enum AbilityID RSM0:8;
+    enum AbilityID RSM1:8;
+    enum AbilityID RSM2:8;
+    enum AbilityID RSM3:8;
+    enum AbilityID RSM4:8;
+    enum AbilityID RSM5:8;
+};
+
+typedef struct PartyUnit PartyUnit, *PPartyUnit;
+
+typedef enum JobID {
+    None=0,
+    SquireR1=1,
+    SquireR2=2,
+    SquireR3=3,
+    SquireD=4,
+    HolyKnightD=5,
+    ArcKnightD=6,
+    SquireA=7,
+    ArcKnight=8,
+    LuneKnightD=9,
+    DukeL=10,
+    DukeG=11,
+    Princess=12,
+    HolySwordsman=13,
+    HighPriest=14,
+    Dragoner=15,
+    HolyPriest=16,
+    DarkKnightE=17,
+    HellKnightD=18,
+    Bishop=19,
+    ClericB=20,
+    Astrologist=21,
+    EngineerMJ=22,
+    DarkKnightG=23,
+    Cardinal=24,
+    HeavenKnightG=25,
+    HellKnightEJ=26,
+    ArcKnightE=27,
+    DelitasSis=28,
+    ArcDuke=29,
+    HolyKnightAJ=30,
+    TempleKnight=31,
+    WhiteKnight1=32,
+    ArcWitch=33,
+    EngineerMG=34,
+    BiCount=35,
+    DivineKnightV=36,
+    DivineKnightR=37,
+    KnightBlade=38,
+    Sorceror=39,
+    WhiteKnight2=40,
+    HeavenKnightJ=41,
+    DivineKnightMJ=42,
+    EngineerB=43,
+    ClericD=44,
+    AssassinC=45,
+    AssassinL=46,
+    DivineKnightME=47,
+    ClericE=48,
+    PhonySaint=49,
+    Soldier=50,
+    ArcKnightZ=51,
+    HolyKnightAG=52,
+    ChemistF1=53,
+    PriestF1=54,
+    WizardM1=55,
+    OracleM1=56,
+    SquireM1=57,
+    AssassinCU=58,
+    AssassinLU=59,
+    Warlock=60,
+    KnightMZ=61,
+    AngelofDeath=62,
+    ArcherMZ=63,
+    Regulator=64,
+    HolyAngel=65,
+    WizardMZ=66,
+    ImpureKing=67,
+    TimeMageFZ=68,
+    GhostofFury=69,
+    OracleMZ=70,
+    SummonerMZ=71,
+    HolyDragon=72,
+    ArchAngel=73,
+    Squire=74,
+    Chemist=75,
+    Knight=76,
+    Archer=77,
+    Monk=78,
+    Priest=79,
+    Wizard=80,
+    TimeMage=81,
+    Summoner=82,
+    Thief=83,
+    Mediator=84,
+    Oracle=85,
+    Geomancer=86,
+    Lancer=87,
+    Samurai=88,
+    Ninja=89,
+    Calculator=90,
+    Bard=91,
+    Dancer=92,
+    Mime=93,
+    Chocobo=94,
+    BlackChocobo=95,
+    RedChocobo=96,
+    Goblin=97,
+    BlackGoblin=98,
+    Gobbledeguck=99,
+    Bomb=100,
+    Grenade=101,
+    Explosive=102,
+    RedPanther=103,
+    Cuar=104,
+    Vampire=105,
+    PiscoDemon=106,
+    Squidlarken=107,
+    Mindflare=108,
+    Skeleton=109,
+    BoneSnatch=110,
+    LivingBone=111,
+    Ghoul=112,
+    Gust=113,
+    Revnant=114,
+    Flotiball=115,
+    Ahriman=116,
+    Plague=117,
+    Juravis=118,
+    SteelHawk=119,
+    Cocatoris=120,
+    Uribo=121,
+    Porky=122,
+    Wildbow=123,
+    Woodman=124,
+    Trent=125,
+    Taiju=126,
+    BullDemon=127,
+    Minitaurus=128,
+    Sacred=129,
+    Morbol=130,
+    Ochu=131,
+    GreatMorbol=132,
+    Behemoth=133,
+    KingBehemoth=134,
+    DarkBehemoth=135,
+    Dragon=136,
+    BlueDragon=137,
+    RedDragon=138,
+    Hyudra=139,
+    Hydra=140,
+    Tiamat=141,
+    8e=142,
+    8f=143,
+    Byblos=144,
+    SteelGiant=145,
+    92=146,
+    93=147,
+    94=148,
+    95=149,
+    Apanda=150,
+    Serpentarius=151,
+    HolyDragon2=152,
+    ArchaicDemon=153,
+    UltimaDemon=154,
+    Crystal=155,
+    Chicken=156,
+    Frog=157,
+    Treasure=158
+} JobID;
+
+typedef enum SkillsetID {
+    NONE=0,
+    Attack=1,
+    Defend=2,
+    EqChng=3,
+    DEPRECATED=4,
+    BasicSkill=5,
+    Item=6,
+    BattleSkill=7,
+    Charge=8,
+    PunchArt=9,
+    WhiteMagic=10,
+    BlackMagic=11,
+    TimeMagic=12,
+    SummonMagic=13,
+    Steal=14,
+    TalkSkill=15,
+    YinYangMagic=16,
+    Geomancy=17,
+    Jump=18,
+    DrawOut=19,
+    Throw=20,
+    Math=21,
+    Sing=22,
+    Dance=23,
+    Mimic=24,
+    GutsR1=25,
+    GutsR2=26,
+    GutsR4=27,
+    GutsD=28,
+    HolySword1=29,
+    MightySword=30,
+    BasicSkillA=31,
+    DarkSword1=32,
+    HolySword2=33,
+    HolySword3=34,
+    Magic=35,
+    HolyMagic1=36,
+    Snipe1=37,
+    Snipe2=38,
+    DarkSword2=39,
+    HolySword4=40,
+    Limit=41,
+    WhiteAid=42,
+    Dragoner=43,
+    Bracelet=44,
+    Truth1=45,
+    Untruth1=46,
+    StarryHeaven=47,
+    HolySword5=48,
+    HolyMagic2=49,
+    Truth2=50,
+    BattleSkill2=51,
+    Jump2=52,
+    PunchSkill2=53,
+    UseHandC=54,
+    UseHandL=55,
+    Throw2=56,
+    Throw3=57,
+    HolySword6=58,
+    SwordSpirit1=59,
+    MightySword2=60,
+    AllMagic1=61,
+    SwordSpirit2=62,
+    BloodSuck=63,
+    MightySword3=64,
+    AllMagic2=65,
+    MightySword4=66,
+    MightySword5=67,
+    Snipe3=68,
+    MagicSword1=69,
+    SwordSkill1=70,
+    AllMagic3=71,
+    AllMagic4=72,
+    Phantom=73,
+    AllSwordskill=74,
+    DestroySword=75,
+    HolyMagic3=76,
+    4d=77,
+    4e=78,
+    4f=79,
+    50=80,
+    51=81,
+    52=82,
+    53=83,
+    54=84,
+    55=85,
+    56=86,
+    57=87,
+    58=88,
+    59=89,
+    5a=90,
+    5b=91,
+    5c=92,
+    5d=93,
+    5e=94,
+    5f=95,
+    60=96,
+    61=97,
+    62=98,
+    63=99,
+    64=100,
+    65=101,
+    66=102,
+    Fear1=103,
+    WarlockSummon=104,
+    nice=105,
+    6a=106,
+    Fear2=107,
+    JaMagic=108,
+    6d=109,
+    6e=110,
+    Fear3=111,
+    DimensionMagic=112,
+    71=113,
+    72=114,
+    Fear4=115,
+    Impure=116,
+    75=117,
+    76=118,
+    Fear5=119,
+    AllMagic5=120,
+    79=121,
+    7a=122,
+    UltimaMagic=123,
+    Chaos=124,
+    CompletMagic=125,
+    Saturation=126,
+    7f=127,
+    80=128,
+    81=129,
+    82=130,
+    83=131,
+    84=132,
+    85=133,
+    86=134,
+    87=135,
+    88=136,
+    89=137,
+    8a=138,
+    8b=139,
+    8c=140,
+    8d=141,
+    8e=142,
+    8f=143,
+    90=144,
+    91=145,
+    92=146,
+    93=147,
+    94=148,
+    95=149,
+    96=150,
+    97=151,
+    98=152,
+    99=153,
+    9a=154,
+    SwordSkill2=155,
+    Charge2=156,
+    BlackMagic2=157,
+    TimeMagic2=158,
+    YinYangMagic2=159,
+    SummonMagic2=160,
+    Item2=161,
+    WhiteMagic2=162,
+    BlackMagic3=163,
+    YinYangMagic3=164,
+    a5=165,
+    a6=166,
+    BloodSuckAllowed=167,
+    FrogAllowed=168,
+    BerserkAllowed=169,
+    Byblos=170,
+    Work=171,
+    Bio=172,
+    DarkCloud=173,
+    DarkMagic=174,
+    NightMagic=175,
+    Choco0=176,
+    Choco1=177,
+    Choco2=178,
+    Gob0=179,
+    Gob1=180,
+    Gob2=181,
+    Bomb0=182,
+    Bomb1=183,
+    Bomb2=184,
+    Pnthr0=185,
+    Pnthr1=186,
+    Pnthr2=187,
+    Pisc0=188,
+    Pisc1=189,
+    Pisc2=190,
+    Skel0=191,
+    Skel1=192,
+    Skel2=193,
+    Ghost0=194,
+    Ghost1=195,
+    Ghost2=196,
+    Eye0=197,
+    Eye1=198,
+    Eye2=199,
+    Bird0=200,
+    Bird1=201,
+    Bird2=202,
+    Pig0=203,
+    Pig1=204,
+    Pig2=205,
+    Tree0=206,
+    Tree1=207,
+    Tree2=208,
+    Bull0=209,
+    Bull1=210,
+    Bull2=211,
+    Morb0=212,
+    Morb1=213,
+    Morb2=214,
+    Bhmth0=215,
+    Bhmth1=216,
+    Bhmth2=217,
+    Drg0=218,
+    Drg1=219,
+    Drg2=220,
+    Hydr0=221,
+    Hydr1=222,
+    Hydr2=223
+} SkillsetID;
+
+struct PartyUnit {
+    byte SpriteSet;
+    byte PartyID;
+    enum JobID JobID;
+    byte Palette;
+    int SaveFormation:1;
+    int BossStats:1;
+    int LoadFormation:1;
+    int JoinAfterEvent:1;
+    int Monster:1;
+    int Female:1;
+    int Male:1;
+    int Birthday:9;
+    int ZodiacSign:4;
+    enum SkillsetID SecondarySkillset;
+    enum AbilityID Reaction;
+    enum AbilityID Support;
+    enum AbilityID Movement;
+    enum ItemID Head;
+    enum ItemID Body;
+    enum ItemID Accessory;
+    enum ItemID RHWeapon;
+    enum ItemID RHShield;
+    enum ItemID LHWeapon;
+    enum ItemID LHShield;
+    byte Experience;
+    byte Level;
+    byte Brave;
+    byte Faith;
+    int RawHP:24;
+    int RawMP:24;
+    int RawSP:24;
+    int RawPA:24;
+    int RawMA:24;
+    int UnlockedJobs:24;
+    short BaseAction;
+    byte BaseRSM;
+    short ChemistAction;
+    byte ChemistRSM;
+    short KnightAction;
+    byte KnightRSM;
+    short ArcherAction;
+    byte ArcherRSM;
+    short MonkAction;
+    byte MonkRSM;
+    short PriestAction;
+    byte PriestRSM;
+    short WizardAction;
+    byte WizardRSM;
+    short TimeMageAction;
+    byte TimeMageRSM;
+    short SummonerAction;
+    byte SummonerRSM;
+    short ThiefAction;
+    byte ThiefRSM;
+    short MediatorAction;
+    byte MediatorRSM;
+    short OracleAction;
+    byte OracleRSM;
+    short GeomancerAction;
+    byte GeomancerRSM;
+    short LancerAction;
+    byte LancerRSM;
+    short SamuraiAction;
+    byte SamuraiRSM;
+    short NinjaAction;
+    byte NinjaRSM;
+    short CalculatorAction;
+    byte CalculatorRSM;
+    short BardAction;
+    byte BardRSM;
+    short DancerAction;
+    byte DancerRSM;
+    int ChemistLevel:4;
+    int SquireLevel:4;
+    int ArcherLevel:4;
+    int KnightLevel:4;
+    int PriestLevel:4;
+    int MonkLevel:4;
+    int TimeMageLevel:4;
+    int WizardLevel:4;
+    int ThiefLevel:4;
+    int SummonerLevel:4;
+    int OracleLevel:4;
+    int MediatorLevel:4;
+    int LancerLevel:4;
+    int GeomancerLevel:4;
+    int NinjaLevel:4;
+    int SamuraiLevel:4;
+    int BardLevel:4;
+    int CalculatorLevel:4;
+    int MimeLevel:4;
+    int DancerLevel:4;
+    short JobJP[20];
+    short JobTotalJP[20];
+    char UnitName[16];
+    short UnitNameID;
+    byte Proposition;
+    undefined field97_0xd1;
+    byte EggStage;
+    undefined field99_0xd3;
+    undefined field100_0xd4;
+    undefined field101_0xd5;
+    undefined field102_0xd6;
+    undefined field103_0xd7;
+    undefined field104_0xd8;
+    undefined field105_0xd9;
+    undefined field106_0xda;
+    undefined field107_0xdb;
+    undefined field108_0xdc;
+    undefined field109_0xdd;
+    undefined field110_0xde;
+    undefined field111_0xdf;
+    undefined field112_0xe0;
+    undefined field113_0xe1;
+    undefined field114_0xe2;
+    undefined field115_0xe3;
+    undefined field116_0xe4;
+    undefined field117_0xe5;
+    undefined field118_0xe6;
+    undefined field119_0xe7;
+    undefined field120_0xe8;
+    undefined field121_0xe9;
+    undefined field122_0xea;
+    undefined field123_0xeb;
+    undefined field124_0xec;
+    undefined field125_0xed;
+    undefined field126_0xee;
+    undefined field127_0xef;
+    undefined field128_0xf0;
+    undefined field129_0xf1;
+    undefined field130_0xf2;
+    undefined field131_0xf3;
+    undefined field132_0xf4;
+    undefined field133_0xf5;
+    undefined field134_0xf6;
+    undefined field135_0xf7;
+    undefined field136_0xf8;
+    undefined field137_0xf9;
+    undefined field138_0xfa;
+    undefined field139_0xfb;
+    undefined field140_0xfc;
+    undefined field141_0xfd;
+    undefined field142_0xfe;
+    undefined field143_0xff;
+};
+
+typedef struct ArmorSecondary ArmorSecondary, *PArmorSecondary;
+
+struct ArmorSecondary {
+    byte HP;
+    byte MP;
+};
+
+typedef struct SecondaryAbilityItem SecondaryAbilityItem, *PSecondaryAbilityItem;
+
+struct SecondaryAbilityItem {
+    byte UsedItemID;
+};
+
+typedef struct JobData JobData, *PJobData;
+
+struct JobData {
+    enum SkillsetID Skillset;
+    enum AbilityID InnateAbility1;
+    enum AbilityID InnateAbility2;
+    enum AbilityID InnateAbility3;
+    enum AbilityID InnateAbility4;
+    int Rod:1;
+    int Axe:1;
+    int Katana:1;
+    int KnightSword:1;
+    int Sword:1;
+    int NinjaBlade:1;
+    int Knife:1;
+    int Unarmed:1;
+    int Polearm:1;
+    int Book:1;
+    int Instrument:1;
+    int Bow:1;
+    int Crossbow:1;
+    int Gun:1;
+    int Flail:1;
+    int Staff:1;
+    int Armor:1;
+    int HairAdrn:1;
+    int Hat:1;
+    int Helmet:1;
+    int Shield:1;
+    int Cloth:1;
+    int Bag:1;
+    int Pole:1;
+    int Perfume:1;
+    int Cloak:1;
+    int Armlet:1;
+    int Ring:1;
+    int Armguard:1;
+    int Shoes:1;
+    int Robe:1;
+    int Clothing:1;
+    byte HPGrowth;
+    byte HPMult;
+    byte MPGrowth;
+    byte MPMult;
+    byte SpeedGrowth;
+    byte SpeedMult;
+    byte PAGrowth;
+    byte PAMult;
+    byte MAGrowth;
+    byte MAMult;
+    byte Move;
+    byte Jump;
+    byte CEV;
+    struct StatusList AlwaysStatus;
+    struct StatusList ImmuneStatus;
+    struct StatusList StartStatus;
+    byte AbsorbElem;
+    byte NullElem;
+    byte HalfElem;
+    byte DoubleElem;
+    byte MonPortrait;
+    byte MonPal;
+    byte MonGraphic;
+};
+
+typedef struct SecondaryAbilityData SecondaryAbilityData, *PSecondaryAbilityData;
+
+struct SecondaryAbilityData {
+    byte Range;
+    byte AOE;
+    byte Vert;
+    int NoTargetSelf:1;
+    int AutoTarget:1;
+    int WeaponStrike:1;
+    int VertTolerance:1;
+    int VertFixed:1;
+    int WeaponRange:1;
+    int OnlyEnemyTilesDEPRECATED:1;
+    int OnlyAllyTilesDEPRECATED:1;
+    int NoHitSelf:1;
+    int 3Dir:1;
+    int Linear:1;
+    int RandomFire:1;
+    int NoTarFollow:1;
+    int TopDownTarget:1;
+    int NoAllyHit:1;
+    int NoEnemyHit:1;
+    int AnimateMiss:1;
+    int Quote:1;
+    int PersevereCast:1;
+    int HitGolem:1;
+    int NoMimic:1;
+    int Silenceable:1;
+    int MathSkill:1;
+    int Reflectable:1;
+    int NoTargetting:1;
+    int Evadeable:1;
+    int ReqMatBlade:1;
+    int ReqSword:1;
+    int BladeGrasp:1;
+    int Direct:1;
+    int CounterMagic:1;
+    int CounterFlood:1;
+    byte Element;
+    enum FormulaID Formula;
+    byte X;
+    byte Y;
+    byte InflictStatus;
+    byte CT;
+    byte MPCost;
+};
+
+typedef struct SecondaryAbilityRSM SecondaryAbilityRSM, *PSecondaryAbilityRSM;
+
+struct SecondaryAbilityRSM {
+    byte ID;
+};
+
+typedef struct SecondaryAbilityCharge SecondaryAbilityCharge, *PSecondaryAbilityCharge;
+
+struct SecondaryAbilityCharge {
+    byte CT;
+    byte Power;
+};
+
+typedef struct SecondaryAbilityMath SecondaryAbilityMath, *PSecondaryAbilityMath;
+
+struct SecondaryAbilityMath {
+    int Mult:4;
+    int Stat:4;
+};
+
+typedef struct ItemAttributes ItemAttributes, *PItemAttributes;
+
+struct ItemAttributes {
+    byte PA;
+    byte MA;
+    byte Speed;
+    byte Move;
+    byte Jump;
+    struct StatusList AlwaysStatuses;
+    struct StatusList ImmuneStatuses;
+    struct StatusList StartStatuses;
+    byte AbsorbElem;
+    byte NullElem;
+    byte HalfElem;
+    byte DoubleElem;
+    byte BoostElem;
+};
+
+typedef struct MonSkillset MonSkillset, *PMonSkillset;
+
+struct MonSkillset {
+    byte ActionFlags;
+    enum AbilityID Ability0:8;
+    enum AbilityID Ability1:8;
+    enum AbilityID Ability2:8;
+    enum AbilityID AbilityMS:8;
+};
+
 typedef enum chooseVoice {
-    CalcLFOVoices1=1,
-    CalcLFOVoices2=2,
+    CalcLFOVoices=1,
+    CalcNoiseVoices=2,
     CalcReverbVoices=4
 } chooseVoice;
-
-typedef struct PrimaryAbilityData PrimaryAbilityData, *PPrimaryAbilityData;
-
-struct PrimaryAbilityData {
-    short JP cost;
-    byte Chance to Learn;
-    int AbilityType:4;
-    int LearnOnHit:1;
-    int DisplayName:1;
-    int LearnWithJP:1;
-    int AITargetAllies:1;
-    int AITargetEnemies:1;
-    int AIUnequips:1;
-    int AIAltersStats:1;
-    int AIAddStatus:1;
-    int AICancelStatus:1;
-    int AIMP:1;
-    int AIHP:1;
-    int AISilencable:1;
-    int AIEvadeable:1;
-    int AIFaith:1;
-    int AIRandomHits:1;
-    int AIHasChargeTime:1;
-    int AIUndeadReverse:1;
-    int AIReflectable:1;
-    int AITargetMap:1;
-    int AIPhysical:1;
-    int AIMagic:1;
-    int AI3DirRange:1;
-    int AI3DirMelee:1;
-    int AINonPierce:1;
-    int AILinear:1;
-    int AIObstacle:1;
-    int AIArc:1;
-    int EvadeMotion:1;
-    int WeaponRange:1;
-    int AIRequiresMS:1; // not sure if this really does affect monster skill usage in any way
-    int AIOnlyEnemies:1;
-    int AIOnlyAllies:1;
-    int AIUsable:1;
-};
 
 typedef enum EventVar {
     Temp0=0,
@@ -2314,633 +4289,7 @@ typedef enum EventVar {
     New_Name_(255)=1279
 } EventVar;
 
-typedef struct PrimaryItemData PrimaryItemData, *PPrimaryItemData;
-
-struct PrimaryItemData {
-    byte Palette;
-    byte SpriteID;
-    byte ReqLevel;
-    int NA:1;
-    int Rare:1;
-    int NA:1;
-    int Accessory:1;
-    int Armor:1;
-    int Headgear:1;
-    int Shield:1;
-    int Weapon:1;
-    byte SecondID;
-    byte ItemType;
-    undefined field13_0x6;
-    byte ItemAttr;
-    short Price;
-    byte ShopAvailability;
-    undefined field17_0xb;
-};
-
-typedef struct MusicChannelData MusicChannelData, *PMusicChannelData;
-
-typedef enum mus_voiceChannelFunc {
-    CalcLFOVoices1=4,
-    CalcLFOVoices2=16,
-    CalcReverbVoices=64
-} mus_voiceChannelFunc;
-
-typedef struct MusDataAll MusDataAll, *PMusDataAll;
-
-typedef struct MusicDataHeader MusicDataHeader, *PMusicDataHeader;
-
-struct MusicDataHeader {
-    undefined2 field0_0x0;
-    undefined2 field1_0x2;
-    struct MusDataAll * field2_0x4;
-    struct MusDataAll * NextMusDat;
-    int DedicatedSpace;
-    struct MusDataAll * field5_0x10;
-    undefined field6_0x14;
-    undefined field7_0x15;
-    uint NumChannels;
-    undefined field9_0x1a;
-    undefined field10_0x1b;
-    undefined field11_0x1c;
-    undefined field12_0x1d;
-    undefined field13_0x1e;
-    undefined field14_0x1f;
-    undefined field15_0x20;
-    undefined field16_0x21;
-    undefined field17_0x22;
-    undefined field18_0x23;
-    undefined field19_0x24;
-    undefined field20_0x25;
-    undefined field21_0x26;
-    undefined field22_0x27;
-    undefined field23_0x28;
-    undefined field24_0x29;
-    undefined field25_0x2a;
-    undefined field26_0x2b;
-    undefined field27_0x2c;
-    undefined field28_0x2d;
-    undefined field29_0x2e;
-    undefined field30_0x2f;
-    undefined field31_0x30;
-    undefined field32_0x31;
-    undefined field33_0x32;
-    undefined field34_0x33;
-    undefined field35_0x34;
-    undefined field36_0x35;
-    undefined field37_0x36;
-    undefined field38_0x37;
-    undefined field39_0x38;
-    undefined field40_0x39;
-    undefined field41_0x3a;
-    undefined field42_0x3b;
-    undefined field43_0x3c;
-    undefined field44_0x3d;
-    undefined field45_0x3e;
-    undefined field46_0x3f;
-    undefined field47_0x40;
-    undefined field48_0x41;
-    undefined field49_0x42;
-    undefined field50_0x43;
-    uint ReverbMode; // Created by retype action
-    short volumeDepth; // Created by retype action
-    undefined field53_0x4a;
-    undefined field54_0x4b;
-    long reverbDelay; // Created by retype action
-    long reverbFeedback; // Created by retype action
-    undefined field57_0x54;
-    undefined field58_0x55;
-    undefined field59_0x56;
-    undefined field60_0x57;
-    undefined4 OwnedChannels;
-    undefined field62_0x5c;
-    undefined field63_0x5d;
-    undefined field64_0x5e;
-    undefined field65_0x5f;
-    uint ModifiedChannels;
-    undefined field67_0x64;
-    undefined field68_0x65;
-    undefined field69_0x66;
-    undefined field70_0x67;
-    uint LFOVoiceBits;
-    uint NoiseVoiceBits;
-    uint ReverbVoiceBits;
-    undefined field74_0x74;
-    undefined field75_0x75;
-    undefined field76_0x76;
-    undefined field77_0x77;
-    undefined field78_0x78;
-    undefined field79_0x79;
-    undefined field80_0x7a;
-    undefined field81_0x7b;
-    undefined field82_0x7c;
-    undefined field83_0x7d;
-    undefined field84_0x7e;
-    undefined field85_0x7f;
-    undefined field86_0x80;
-    undefined field87_0x81;
-    undefined field88_0x82;
-    undefined field89_0x83;
-    undefined field90_0x84;
-    undefined field91_0x85;
-    undefined field92_0x86;
-    undefined field93_0x87;
-    undefined field94_0x88;
-    undefined field95_0x89;
-    undefined field96_0x8a;
-    undefined field97_0x8b;
-    undefined field98_0x8c;
-    undefined field99_0x8d;
-    undefined field100_0x8e;
-    undefined field101_0x8f;
-    undefined field102_0x90;
-    undefined field103_0x91;
-    undefined field104_0x92;
-    undefined field105_0x93;
-    int field106_0x94;
-    int field107_0x98;
-    short field108_0x9c;
-    short field109_0x9e;
-    undefined field110_0xa0;
-    undefined field111_0xa1;
-    undefined field112_0xa2;
-    undefined field113_0xa3;
-    undefined field114_0xa4;
-    undefined field115_0xa5;
-    undefined field116_0xa6;
-    undefined field117_0xa7;
-    undefined field118_0xa8;
-    undefined field119_0xa9;
-    undefined field120_0xaa;
-    undefined field121_0xab;
-    undefined field122_0xac;
-    undefined field123_0xad;
-    undefined field124_0xae;
-    undefined field125_0xaf;
-    undefined field126_0xb0;
-    undefined field127_0xb1;
-    undefined field128_0xb2;
-    undefined field129_0xb3;
-    undefined field130_0xb4;
-    undefined field131_0xb5;
-    undefined field132_0xb6;
-    undefined field133_0xb7;
-};
-
-struct MusicChannelData {
-    ushort hasSound;
-    ushort field1_0x2;
-    enum mus_voiceChannelFunc channelFunc; // Created by retype action
-    undefined field3_0x6;
-    undefined field4_0x7;
-    struct MusDataAll * field5_0x8;
-    undefined field6_0xc;
-    undefined field7_0xd;
-    undefined field8_0xe;
-    undefined field9_0xf;
-    undefined field10_0x10;
-    undefined field11_0x11;
-    undefined field12_0x12;
-    undefined field13_0x13;
-    undefined field14_0x14;
-    undefined field15_0x15;
-    undefined field16_0x16;
-    undefined field17_0x17;
-    undefined field18_0x18;
-    undefined field19_0x19;
-    undefined field20_0x1a;
-    undefined field21_0x1b;
-    undefined field22_0x1c;
-    undefined field23_0x1d;
-    undefined field24_0x1e;
-    undefined field25_0x1f;
-    undefined field26_0x20;
-    undefined field27_0x21;
-    undefined field28_0x22;
-    undefined field29_0x23;
-    undefined field30_0x24;
-    undefined field31_0x25;
-    undefined field32_0x26;
-    undefined field33_0x27;
-    undefined field34_0x28;
-    undefined field35_0x29;
-    undefined field36_0x2a;
-    undefined field37_0x2b;
-    undefined field38_0x2c;
-    undefined field39_0x2d;
-    undefined field40_0x2e;
-    undefined field41_0x2f;
-    undefined field42_0x30;
-    undefined field43_0x31;
-    undefined field44_0x32;
-    undefined field45_0x33;
-    uint hasChannel;
-    undefined field47_0x38;
-    undefined field48_0x39;
-    undefined field49_0x3a;
-    undefined field50_0x3b;
-    undefined field51_0x3c;
-    undefined field52_0x3d;
-    undefined field53_0x3e;
-    undefined field54_0x3f;
-    undefined field55_0x40;
-    undefined field56_0x41;
-    undefined field57_0x42;
-    undefined field58_0x43;
-    undefined field59_0x44;
-    undefined field60_0x45;
-    undefined field61_0x46;
-    undefined field62_0x47;
-    undefined field63_0x48;
-    undefined field64_0x49;
-    undefined field65_0x4a;
-    undefined field66_0x4b;
-    undefined field67_0x4c;
-    undefined field68_0x4d;
-    undefined field69_0x4e;
-    undefined field70_0x4f;
-    undefined field71_0x50;
-    undefined field72_0x51;
-    undefined field73_0x52;
-    undefined field74_0x53;
-    undefined field75_0x54;
-    undefined field76_0x55;
-    undefined field77_0x56;
-    undefined field78_0x57;
-    undefined field79_0x58;
-    undefined field80_0x59;
-    undefined field81_0x5a;
-    undefined field82_0x5b;
-    undefined field83_0x5c;
-    undefined field84_0x5d;
-    undefined field85_0x5e;
-    undefined field86_0x5f;
-    undefined field87_0x60;
-    undefined field88_0x61;
-    undefined field89_0x62;
-    undefined field90_0x63;
-    undefined field91_0x64;
-    undefined field92_0x65;
-    undefined field93_0x66;
-    undefined field94_0x67;
-    undefined field95_0x68;
-    undefined field96_0x69;
-    undefined field97_0x6a;
-    undefined field98_0x6b;
-    undefined field99_0x6c;
-    undefined field100_0x6d;
-    undefined field101_0x6e;
-    undefined field102_0x6f;
-    undefined field103_0x70;
-    undefined field104_0x71;
-    undefined field105_0x72;
-    undefined field106_0x73;
-    undefined field107_0x74;
-    undefined field108_0x75;
-    undefined field109_0x76;
-    undefined field110_0x77;
-    undefined field111_0x78;
-    undefined field112_0x79;
-    undefined field113_0x7a;
-    undefined field114_0x7b;
-    undefined field115_0x7c;
-    undefined field116_0x7d;
-    undefined field117_0x7e;
-    undefined field118_0x7f;
-    undefined field119_0x80;
-    undefined field120_0x81;
-    undefined field121_0x82;
-    undefined field122_0x83;
-    undefined field123_0x84;
-    undefined field124_0x85;
-    undefined field125_0x86;
-    undefined field126_0x87;
-    undefined field127_0x88;
-    undefined field128_0x89;
-    undefined field129_0x8a;
-    undefined field130_0x8b;
-    undefined field131_0x8c;
-    undefined field132_0x8d;
-    undefined field133_0x8e;
-    undefined field134_0x8f;
-    undefined field135_0x90;
-    undefined field136_0x91;
-    undefined field137_0x92;
-    undefined field138_0x93;
-    undefined field139_0x94;
-    undefined field140_0x95;
-    undefined field141_0x96;
-    undefined field142_0x97;
-    undefined field143_0x98;
-    undefined field144_0x99;
-    undefined field145_0x9a;
-    undefined field146_0x9b;
-    undefined field147_0x9c;
-    undefined field148_0x9d;
-    undefined field149_0x9e;
-    undefined field150_0x9f;
-    undefined field151_0xa0;
-    undefined field152_0xa1;
-    undefined field153_0xa2;
-    undefined field154_0xa3;
-    undefined field155_0xa4;
-    undefined field156_0xa5;
-    undefined field157_0xa6;
-    undefined field158_0xa7;
-    undefined field159_0xa8;
-    undefined field160_0xa9;
-    undefined field161_0xaa;
-    undefined field162_0xab;
-    undefined field163_0xac;
-    undefined field164_0xad;
-    undefined field165_0xae;
-    undefined field166_0xaf;
-    undefined field167_0xb0;
-    undefined field168_0xb1;
-    undefined field169_0xb2;
-    undefined field170_0xb3;
-    undefined field171_0xb4;
-    undefined field172_0xb5;
-    undefined field173_0xb6;
-    undefined field174_0xb7;
-    undefined field175_0xb8;
-    undefined field176_0xb9;
-    undefined field177_0xba;
-    undefined field178_0xbb;
-    undefined field179_0xbc;
-    undefined field180_0xbd;
-    undefined field181_0xbe;
-    undefined field182_0xbf;
-    undefined field183_0xc0;
-    undefined field184_0xc1;
-    undefined field185_0xc2;
-    undefined field186_0xc3;
-    undefined field187_0xc4;
-    undefined field188_0xc5;
-    undefined field189_0xc6;
-    undefined field190_0xc7;
-    undefined field191_0xc8;
-    undefined field192_0xc9;
-    undefined field193_0xca;
-    undefined field194_0xcb;
-    undefined field195_0xcc;
-    undefined field196_0xcd;
-    undefined field197_0xce;
-    undefined field198_0xcf;
-    undefined field199_0xd0;
-    undefined field200_0xd1;
-    undefined field201_0xd2;
-    undefined field202_0xd3;
-    undefined field203_0xd4;
-    undefined field204_0xd5;
-    undefined field205_0xd6;
-    undefined field206_0xd7;
-    undefined field207_0xd8;
-    undefined field208_0xd9;
-    undefined field209_0xda;
-    undefined field210_0xdb;
-    undefined field211_0xdc;
-    undefined field212_0xdd;
-    undefined field213_0xde;
-    undefined field214_0xdf;
-    undefined field215_0xe0;
-    undefined field216_0xe1;
-    undefined field217_0xe2;
-    undefined field218_0xe3;
-    undefined field219_0xe4;
-    undefined field220_0xe5;
-    undefined field221_0xe6;
-    undefined field222_0xe7;
-    undefined field223_0xe8;
-    undefined field224_0xe9;
-    undefined field225_0xea;
-    undefined field226_0xeb;
-    undefined field227_0xec;
-    undefined field228_0xed;
-    undefined field229_0xee;
-    undefined field230_0xef;
-    undefined field231_0xf0;
-    undefined field232_0xf1;
-    undefined field233_0xf2;
-    undefined field234_0xf3;
-    undefined field235_0xf4;
-    undefined field236_0xf5;
-    undefined field237_0xf6;
-    undefined field238_0xf7;
-    undefined field239_0xf8;
-    undefined field240_0xf9;
-    undefined field241_0xfa;
-    undefined field242_0xfb;
-    undefined field243_0xfc;
-    undefined field244_0xfd;
-    undefined field245_0xfe;
-    undefined field246_0xff;
-    undefined field247_0x100;
-    undefined field248_0x101;
-    undefined field249_0x102;
-    undefined field250_0x103;
-    undefined field251_0x104;
-    undefined field252_0x105;
-    undefined field253_0x106;
-    undefined field254_0x107;
-    undefined field255_0x108;
-    undefined field256_0x109;
-    undefined field257_0x10a;
-    undefined field258_0x10b;
-    undefined field259_0x10c;
-    undefined field260_0x10d;
-    undefined field261_0x10e;
-    undefined field262_0x10f;
-    undefined field263_0x110;
-    undefined field264_0x111;
-    undefined field265_0x112;
-    undefined field266_0x113;
-    undefined field267_0x114;
-    undefined field268_0x115;
-    undefined field269_0x116;
-    undefined field270_0x117;
-    undefined field271_0x118;
-    undefined field272_0x119;
-    undefined field273_0x11a;
-    undefined field274_0x11b;
-    undefined field275_0x11c;
-    undefined field276_0x11d;
-    undefined field277_0x11e;
-    undefined field278_0x11f;
-    undefined field279_0x120;
-    undefined field280_0x121;
-    undefined field281_0x122;
-    undefined field282_0x123;
-    undefined field283_0x124;
-    undefined field284_0x125;
-    undefined field285_0x126;
-    undefined field286_0x127;
-    undefined field287_0x128;
-    undefined field288_0x129;
-    undefined field289_0x12a;
-    undefined field290_0x12b;
-    undefined field291_0x12c;
-    undefined field292_0x12d;
-    undefined field293_0x12e;
-    undefined field294_0x12f;
-    undefined field295_0x130;
-    undefined field296_0x131;
-    undefined field297_0x132;
-    undefined field298_0x133;
-    undefined field299_0x134;
-    undefined field300_0x135;
-    undefined field301_0x136;
-    undefined field302_0x137;
-    undefined field303_0x138;
-    undefined field304_0x139;
-    undefined field305_0x13a;
-    undefined field306_0x13b;
-    undefined field307_0x13c;
-    undefined field308_0x13d;
-    undefined field309_0x13e;
-    undefined field310_0x13f;
-    undefined field311_0x140;
-    undefined field312_0x141;
-    undefined field313_0x142;
-    undefined field314_0x143;
-    undefined field315_0x144;
-    undefined field316_0x145;
-    undefined field317_0x146;
-    undefined field318_0x147;
-    undefined field319_0x148;
-    undefined field320_0x149;
-    undefined field321_0x14a;
-    undefined field322_0x14b;
-    undefined field323_0x14c;
-    undefined field324_0x14d;
-    undefined field325_0x14e;
-    undefined field326_0x14f;
-    undefined field327_0x150;
-    undefined field328_0x151;
-    undefined field329_0x152;
-    undefined field330_0x153;
-    undefined field331_0x154;
-    undefined field332_0x155;
-    undefined field333_0x156;
-    undefined field334_0x157;
-    undefined field335_0x158;
-    undefined field336_0x159;
-    undefined field337_0x15a;
-    undefined field338_0x15b;
-    undefined field339_0x15c;
-    undefined field340_0x15d;
-    undefined field341_0x15e;
-    undefined field342_0x15f;
-};
-
-struct MusDataAll {
-    struct MusicDataHeader HeaderData;
-    struct MusicChannelData ChannelData[8];
-};
-
 typedef struct ItemSecondary ItemSecondary, *PItemSecondary;
-
-typedef enum FormulaID {
-    Weapon=1,
-    SpellWeapon=2,
-    GunWeapon=3,
-    MagicGun=4,
-    Weapon2=5,
-    AbsorbWeapon=6,
-    HealWeapon=7,
-    DamageSpell=8,
-    DemiSpell=9,
-    AilmentSpell=10,
-    BoonSpell=11,
-    HealSpell=12,
-    RaiseSpell=13,
-    DeathSpell=14,
-    MPAbsorbSpell=15,
-    AbsorbSpell=16,
-    11=17,
-    Quick=18,
-    13=19,
-    Golem=20,
-    Return2=21,
-    Mute=22,
-    Gravi2=23,
-    18=24,
-    19=25,
-    ZalbagRuin=26,
-    ZalbagMPRuin=27,
-    Song=28,
-    Dance=29,
-    Truth=30,
-    Untruth=31,
-    DmgKatana=32,
-    DmgMPKatana=33,
-    BoonKatana=34,
-    HealKatana=35,
-    Geomancy=36,
-    EquipBreak=37,
-    EquipSteal=38,
-    GilSteal=39,
-    EXPSteal=40,
-    HeartSteal=41,
-    TalkSkill=42,
-    StatBreak=43,
-    MPBreak=44,
-    HolySword=45,
-    MightySword=46,
-    DarkSword=47,
-    NightSword=48,
-    Barehand=49,
-    BarehandRND=50,
-    Stigma=51,
-    Chakra=52,
-    Revive=53,
-    PlusPA=54,
-    KnockbackRND=55,
-    InflictStatus=56,
-    PlusSP=57,
-    PlusBrave=58,
-    Scream=59,
-    Wish=60,
-    MonStatus=61,
-    GraviUnused=62,
-    AimLimb=63,
-    SealEvil=64,
-    GalaxyStop=65,
-    Work=66,
-    RevengeDMG=67,
-    Difference=68,
-    Climhazzard=69,
-    46=70,
-    BloodSuck=71,
-    ItemHeal=72,
-    ItemMPHeal=73,
-    Elixir=74,
-    PhoenixDown=75,
-    MonHeal=76,
-    MonAbsorb=77,
-    Bracelet=78,
-    GoblinPunch=79,
-    MonPhysSpell=80,
-    MonEsuna=81,
-    SelfDestruct=82,
-    Hurricane=83,
-    MagicSpirit=84,
-    Beaking=85,
-    Circle=86,
-    PleaseEat=87,
-    Moldball=88,
-    LevelBlast=89,
-    DragonTame=90,
-    DragonCare=91,
-    DragonPowerUP=92,
-    DragonLevelUP=93,
-    HydraBracelet=94,
-    Nanoflare=95,
-    HydraStatusUnused=96,
-    Foxbird=97,
-    FrightLook=98,
-    Throw=99,
-    Jump=100
-} FormulaID;
 
 struct ItemSecondary {
     enum FormulaID Formula;
@@ -2948,68 +4297,17 @@ struct ItemSecondary {
     byte InflictStatusID;
 };
 
-typedef unsigned short    wchar16;
-typedef struct SoundFontHeader SoundFontHeader, *PSoundFontHeader;
-
-struct SoundFontHeader {
-    char FileDesignation[5];
-    undefined field1_0x5;
-    undefined field2_0x6;
-    undefined field3_0x7;
-    uint wholeFileSize;
-    undefined field5_0xc;
-    undefined field6_0xd;
-    undefined field7_0xe;
-    undefined field8_0xf;
-    uint waveFontStart;
-    uint waveFontSize;
-    uint field11_0x18;
-    undefined field12_0x1c;
-    undefined field13_0x1d;
-    undefined field14_0x1e;
-    undefined field15_0x1f;
-    undefined field16_0x20;
-    undefined field17_0x21;
-    undefined field18_0x22;
-    undefined field19_0x23;
-    undefined field20_0x24;
-    undefined field21_0x25;
-    undefined field22_0x26;
-    undefined field23_0x27;
-    undefined field24_0x28;
-    undefined field25_0x29;
-    undefined field26_0x2a;
-    undefined field27_0x2b;
-    undefined field28_0x2c;
-    undefined field29_0x2d;
-    undefined field30_0x2e;
-    undefined field31_0x2f;
-    uint waveFontArray[700];
-};
-
-typedef enum Status2 {
-    empty=0,
-    Treasure=1,
-    Cursed=2,
-    Blood_Suck=4,
-    Silence=8,
-    Confusion=16,
-    Darkness=32,
-    Invite=64,
-    Petrify=128
-} Status2;
-
-typedef enum Status3 {
-    empty=0,
-    Critical=1,
-    Frog=2,
-    Chicken=4,
-    Berserk=8,
-    Transparent=16,
-    Reraise=32,
-    Float=64,
-    Oil=128
-} Status3;
+typedef enum SUZUKInoteflags12 {
+    action4=4,
+    hold_note=256,
+    rest_note=1024,
+    action800=2048,
+    change_instrument=32768,
+    rest_note_2=131072,
+    note_active=8388608,
+    volume_change=16777216,
+    actionflag200_2=33554432
+} SUZUKInoteflags12;
 
 typedef struct WeaponSecondary WeaponSecondary, *PWeaponSecondary;
 
@@ -3038,82 +4336,11 @@ struct WeaponSecondary {
     byte SecondaryEffect;
 };
 
-typedef struct StatusList StatusList, *PStatusList;
-
-typedef enum Status1 {
-    empty=0,
-    Performing=1,
-    Defending=2,
-    Jump=4,
-    Charging=8,
-    Undead=16,
-    Dead=32,
-    Crystal=64,
-    NONE=128
-} Status1;
-
-typedef enum Status4 {
-    empty=0,
-    Wall=1,
-    Stop=2,
-    Slow=4,
-    Haste=8,
-    Shell=16,
-    Protect=32,
-    Regen=64,
-    Poison=128
-} Status4;
-
-typedef enum Status5 {
-    empty=0,
-    Death_Sentence=1,
-    Reflect=2,
-    Dont_Act=4,
-    Dont_Move=8,
-    Sleep=16,
-    Charm=32,
-    Innocent=64,
-    Faith=128
-} Status5;
-
-struct StatusList {
-    enum Status1 Status1;
-    enum Status2 Status2;
-    enum Status3 Status3;
-    enum Status4 Status4;
-    enum Status5 Status5;
-};
-
-typedef struct SuzukiVolStorageStruct SuzukiVolStorageStruct, *PSuzukiVolStorageStruct;
-
-typedef struct SuzukiVolStore SuzukiVolStore, *PSuzukiVolStore;
-
-struct SuzukiVolStore {
-    short field0_0x0;
-    short Volume;
-};
-
-struct SuzukiVolStorageStruct {
-    struct SuzukiVolStore hasVolume;
-    undefined4 ChangeInVolume;
-    short ChangeVol;
-};
-
 typedef struct SecondaryAbilityJump SecondaryAbilityJump, *PSecondaryAbilityJump;
 
 struct SecondaryAbilityJump {
     byte Range;
     byte Vert;
-};
-
-typedef struct InflictStatuses InflictStatuses, *PInflictStatuses;
-
-struct InflictStatuses {
-    bool Cancel:1;
-    bool InflictSeperate:1;
-    bool InflictRandom:1;
-    bool InflictAll:1;
-    struct StatusList field4_0x1;
 };
 
 typedef struct 16Palette 16Palette, *P16Palette;
@@ -3137,885 +4364,6 @@ struct 16Palette {
     short argbF;
 };
 
-typedef struct SecondaryAbilityData SecondaryAbilityData, *PSecondaryAbilityData;
-
-struct SecondaryAbilityData {
-    byte Range;
-    byte AOE;
-    byte Vert;
-    int NoTargetSelf:1;
-    int AutoTarget:1;
-    int WeaponStrike:1;
-    int VertTolerance:1;
-    int VertFixed:1;
-    int WeaponRange:1;
-    int OnlyEnemyTilesDEPRECATED:1;
-    int OnlyAllyTilesDEPRECATED:1;
-    int NoHitSelf:1;
-    int 3Dir:1;
-    int Linear:1;
-    int RandomFire:1;
-    int NoTarFollow:1;
-    int TopDownTarget:1;
-    int NoAllyHit:1;
-    int NoEnemyHit:1;
-    int AnimateMiss:1;
-    int Quote:1;
-    int PersevereCast:1;
-    int HitGolem:1;
-    int NoMimic:1;
-    int Silenceable:1;
-    int MathSkill:1;
-    int Reflectable:1;
-    int NoTargetting:1;
-    int Evadeable:1;
-    int ReqMatBlade:1;
-    int ReqSword:1;
-    int BladeGrasp:1;
-    int Direct:1;
-    int CounterMagic:1;
-    int CounterFlood:1;
-    byte Element;
-    enum FormulaID Formula;
-    byte X;
-    byte Y;
-    byte InflictStatus;
-    byte CT;
-    byte MPCost;
-};
-
-typedef enum ItemID {
-    None=0,
-    Knife=1,
-    MythrilKnife=2,
-    BlindKnife=3,
-    MageKnife=4,
-    PlatKnife=5,
-    GaucheKnife=6,
-    OrichKnife=7,
-    AssassinKnife=8,
-    AirKnife=9,
-    ZorlinKnife=10,
-    HiddenNinjato=11,
-    Ninjato=12,
-    ShortNinjato=13,
-    EdgeNinjato=14,
-    SpellNinjato=15,
-    SasukeNinjato=16,
-    IgaNinjato=17,
-    KogaNinjato=18,
-    BroadSword=19,
-    LongSword=20,
-    IronSword=21,
-    MythrilSword=22,
-    BloodSword=23,
-    CoralSword=24,
-    AncientSword=25,
-    SleepSword=26,
-    PlatSword=27,
-    DiamondSword=28,
-    IceSword=29,
-    RuneSword=30,
-    NagrarokSword=31,
-    MateriaSword=32,
-    DefendKnSword=33,
-    QueenKnSword=34,
-    ExcKnSword=35,
-    RagnarokKnSword=36,
-    ChaosKnSword=37,
-    AsuraKatana=38,
-    KoutetsuKatana=39,
-    BizenKatana=40,
-    MurasameKatana=41,
-    HeavenKatana=42,
-    KiyomoriKatana=43,
-    MuramasaKatana=44,
-    KikuiKatana=45,
-    MasamuneKatana=46,
-    ChiriKatana=47,
-    BattleAxe=48,
-    GiantAxe=49,
-    SlashAxe=50,
-    Rod=51,
-    ThunderRod=52,
-    FlameRod=53,
-    IceRod=54,
-    PoisonRod=55,
-    WizardRod=56,
-    DragonRod=57,
-    FaithRod=58,
-    OakStaff=59,
-    WhiteStaff=60,
-    HealStaff=61,
-    RainbowStaff=62,
-    WizardStaff=63,
-    GoldStaff=64,
-    ZeusStaff=65,
-    SageStaff=66,
-    Flail=67,
-    FlameFlail=68,
-    MSFlail=69,
-    ScorpionFlail=70,
-    RomandaGun=71,
-    MythrilGun=72,
-    StoneGun=73,
-    BlazeGun=74,
-    GlacierGun=75,
-    BlastGun=76,
-    BowgunXBow=77,
-    KnightXBow=78,
-    XBow=79,
-    PoisonXBow=80,
-    HuntingXBow=81,
-    GastrifitisXBow=82,
-    LongBow=83,
-    SilverBow=84,
-    IceBow=85,
-    LightningBow=86,
-    WindBow=87,
-    MythrilBow=88,
-    UltimaBow=89,
-    YoichiBow=90,
-    PerseusBow=91,
-    LamiaHarp=92,
-    BloodyHarp=93,
-    FairyHarp=94,
-    BattleDict=95,
-    MonsterDict=96,
-    PapyrusDict=97,
-    MadlemDict=98,
-    JavelinPolearm=99,
-    SpearPolearm=100,
-    MythrilPolearm=101,
-    PartisanPolearm=102,
-    ObeliskPolearm=103,
-    HolyPolearm=104,
-    WhiskerPolearm=105,
-    JavelinPolearm2=106,
-    CypressPole=107,
-    BambooPole=108,
-    MuskPole=109,
-    IronPole=110,
-    GokuuPole=111,
-    IvoryPole=112,
-    OctagonPole=113,
-    WhiskerPole=114,
-    CBag=115,
-    FSBag=116,
-    PBag=117,
-    HBag=118,
-    PersiaCloth=119,
-    CashmereCloth=120,
-    RyozanCloth=121,
-    Shuriken=122,
-    MagicShuriken=123,
-    YagyuShuriken=124,
-    FireBall=125,
-    WaterBall=126,
-    LightningBall=127,
-    EscutchShield=128,
-    BucklerShield=129,
-    BronzeShield=130,
-    RoundShield=131,
-    MythrilShield=132,
-    GoldShield=133,
-    IceShield=134,
-    FlameShield=135,
-    AegisShield=136,
-    DiamondShield=137,
-    PlatShield=138,
-    CrystalShield=139,
-    GenjiShield=140,
-    KaiserShield=141,
-    VeniceShield=142,
-    EscutchShield2=143,
-    LeatherHelm=144,
-    BronzeHelm=145,
-    IronHelm=146,
-    BarbutaHelm=147,
-    MythrilHelm=148,
-    GoldHelm=149,
-    CrossHelm=150,
-    DiamondHelm=151,
-    PlatHelm=152,
-    CircletHelm=153,
-    CrystalHelm=154,
-    GenjiHelm=155,
-    GrandHelm=156,
-    LeatherHat=157,
-    FeatherHat=158,
-    RedHat=159,
-    HeadgearHat=160,
-    TriangleHat=161,
-    BeretHat=162,
-    HeadbandHat=163,
-    MiterHat=164,
-    Blackhat=165,
-    HairpinHat=166,
-    FlashHat=167,
-    ThiefHat=168,
-    CachushaAdrn=169,
-    BaretteAdrn=170,
-    RibbonAdrn=171,
-    LeatherArmor=172,
-    LinenArmor=173,
-    BronzeArmor=174,
-    ChainArmor=175,
-    MythrilArmor=176,
-    PlateArmor=177,
-    GoldArmor=178,
-    DiamondArmor=179,
-    PlatArmor=180,
-    CarabiniArmor=181,
-    CrystalArmor=182,
-    GenjiArmor=183,
-    ReflectArmor=184,
-    MaxArmor=185,
-    Clothes=186,
-    LeatherClothes=187,
-    LeatherClothes2=188,
-    ChainClothes=189,
-    MythrilClothes=190,
-    AdamClothes=191,
-    WizardClothes=192,
-    BrigClothes=193,
-    JudoClothes=194,
-    PowerClothes=195,
-    EarthClothes=196,
-    SecretClothes=197,
-    BlackClothes=198,
-    RubberClothes=199,
-    LinenRobe=200,
-    SilkRobe=201,
-    WizardRobe=202,
-    ChamRobe=203,
-    WhiteRobe=204,
-    BlackRobe=205,
-    LightRobe=206,
-    LordRobe=207,
-    BattleShoe=208,
-    SpikeShoe=209,
-    GermShoe=210,
-    RubberShoe=211,
-    FeatherShoe=212,
-    SprintShoe=213,
-    RedShoe=214,
-    PowerGauntlet=215,
-    GenjiGauntlet=216,
-    MagicGauntlet=217,
-    BraceGauntlet=218,
-    ReflectRing=219,
-    DefenseRing=220,
-    MagicRing=221,
-    CursedRing=222,
-    AngelRing=223,
-    DiamondArmlet=224,
-    JadeArmlet=225,
-    108Armlet=226,
-    NKaiArmlet=227,
-    DefenseArmlet=228,
-    SmallMantle=229,
-    LeatherMantle=230,
-    WizardMantle=231,
-    ElfMantle=232,
-    DraculaMantle=233,
-    FeatherMantle=234,
-    VanishMantle=235,
-    Chantage=236,
-    Cherche=237,
-    Setiemson=238,
-    SaltyRage=239,
-    Potion=240,
-    HiPotion=241,
-    XPotion=242,
-    Ether=243,
-    HiEther=244,
-    Elixir=245,
-    Antidote=246,
-    EyeDrop=247,
-    EchoGrass=248,
-    MaidenKiss=249,
-    Soft=250,
-    HolyWater=251,
-    Remedy=252,
-    PhoenixDown=253,
-    RND_ENTD=254,
-    NONE_ENTD=255
-} ItemID;
-
-typedef enum MusicInstruction {
-    PlayNote=127,
-    Instruction=128,
-    Rest=128,
-    Fermata=129,
-    EndBar=144,
-    Loop=145,
-    Octave=148,
-    RaiseOctave=149,
-    LowerOctave=150,
-    TimeSignature=151,
-    Repeat=152,
-    Coda=153,
-    ToCoda=154,
-    Tempo=160,
-    Instrument=172,
-    Cue=186,
-    Naturale=192,
-    AttackTime=194,
-    Sustain=196,
-    AttackTime2=198,
-    PitchShift=216,
-    Dynamic=224,
-    Balance=232
-} MusicInstruction;
-
-typedef enum SkillsetID {
-    NONE=0,
-    Attack=1,
-    Defend=2,
-    EqChng=3,
-    DEPRECATED=4,
-    BasicSkill=5,
-    Item=6,
-    BattleSkill=7,
-    Charge=8,
-    PunchArt=9,
-    WhiteMagic=10,
-    BlackMagic=11,
-    TimeMagic=12,
-    SummonMagic=13,
-    Steal=14,
-    TalkSkill=15,
-    YinYangMagic=16,
-    Geomancy=17,
-    Jump=18,
-    DrawOut=19,
-    Throw=20,
-    Math=21,
-    Sing=22,
-    Dance=23,
-    Mimic=24,
-    GutsR1=25,
-    GutsR2=26,
-    GutsR4=27,
-    GutsD=28,
-    HolySword1=29,
-    MightySword=30,
-    BasicSkillA=31,
-    DarkSword1=32,
-    HolySword2=33,
-    HolySword3=34,
-    Magic=35,
-    HolyMagic1=36,
-    Snipe1=37,
-    Snipe2=38,
-    DarkSword2=39,
-    HolySword4=40,
-    Limit=41,
-    WhiteAid=42,
-    Dragoner=43,
-    Bracelet=44,
-    Truth1=45,
-    Untruth1=46,
-    StarryHeaven=47,
-    HolySword5=48,
-    HolyMagic2=49,
-    Truth2=50,
-    BattleSkill2=51,
-    Jump2=52,
-    PunchSkill2=53,
-    UseHandC=54,
-    UseHandL=55,
-    Throw2=56,
-    Throw3=57,
-    HolySword6=58,
-    SwordSpirit1=59,
-    MightySword2=60,
-    AllMagic1=61,
-    SwordSpirit2=62,
-    BloodSuck=63,
-    MightySword3=64,
-    AllMagic2=65,
-    MightySword4=66,
-    MightySword5=67,
-    Snipe3=68,
-    MagicSword1=69,
-    SwordSkill1=70,
-    AllMagic3=71,
-    AllMagic4=72,
-    Phantom=73,
-    AllSwordskill=74,
-    DestroySword=75,
-    HolyMagic3=76,
-    4d=77,
-    4e=78,
-    4f=79,
-    50=80,
-    51=81,
-    52=82,
-    53=83,
-    54=84,
-    55=85,
-    56=86,
-    57=87,
-    58=88,
-    59=89,
-    5a=90,
-    5b=91,
-    5c=92,
-    5d=93,
-    5e=94,
-    5f=95,
-    60=96,
-    61=97,
-    62=98,
-    63=99,
-    64=100,
-    65=101,
-    66=102,
-    Fear1=103,
-    WarlockSummon=104,
-    nice=105,
-    6a=106,
-    Fear2=107,
-    JaMagic=108,
-    6d=109,
-    6e=110,
-    Fear3=111,
-    DimensionMagic=112,
-    71=113,
-    72=114,
-    Fear4=115,
-    Impure=116,
-    75=117,
-    76=118,
-    Fear5=119,
-    AllMagic5=120,
-    79=121,
-    7a=122,
-    UltimaMagic=123,
-    Chaos=124,
-    CompletMagic=125,
-    Saturation=126,
-    7f=127,
-    80=128,
-    81=129,
-    82=130,
-    83=131,
-    84=132,
-    85=133,
-    86=134,
-    87=135,
-    88=136,
-    89=137,
-    8a=138,
-    8b=139,
-    8c=140,
-    8d=141,
-    8e=142,
-    8f=143,
-    90=144,
-    91=145,
-    92=146,
-    93=147,
-    94=148,
-    95=149,
-    96=150,
-    97=151,
-    98=152,
-    99=153,
-    9a=154,
-    SwordSkill2=155,
-    Charge2=156,
-    BlackMagic2=157,
-    TimeMagic2=158,
-    YinYangMagic2=159,
-    SummonMagic2=160,
-    Item2=161,
-    WhiteMagic2=162,
-    BlackMagic3=163,
-    YinYangMagic3=164,
-    a5=165,
-    a6=166,
-    BloodSuckAllowed=167,
-    FrogAllowed=168,
-    BerserkAllowed=169,
-    Byblos=170,
-    Work=171,
-    Bio=172,
-    DarkCloud=173,
-    DarkMagic=174,
-    NightMagic=175,
-    Choco0=176,
-    Choco1=177,
-    Choco2=178,
-    Gob0=179,
-    Gob1=180,
-    Gob2=181,
-    Bomb0=182,
-    Bomb1=183,
-    Bomb2=184,
-    Pnthr0=185,
-    Pnthr1=186,
-    Pnthr2=187,
-    Pisc0=188,
-    Pisc1=189,
-    Pisc2=190,
-    Skel0=191,
-    Skel1=192,
-    Skel2=193,
-    Ghost0=194,
-    Ghost1=195,
-    Ghost2=196,
-    Eye0=197,
-    Eye1=198,
-    Eye2=199,
-    Bird0=200,
-    Bird1=201,
-    Bird2=202,
-    Pig0=203,
-    Pig1=204,
-    Pig2=205,
-    Tree0=206,
-    Tree1=207,
-    Tree2=208,
-    Bull0=209,
-    Bull1=210,
-    Bull2=211,
-    Morb0=212,
-    Morb1=213,
-    Morb2=214,
-    Bhmth0=215,
-    Bhmth1=216,
-    Bhmth2=217,
-    Drg0=218,
-    Drg1=219,
-    Drg2=220,
-    Hydr0=221,
-    Hydr1=222,
-    Hydr2=223
-} SkillsetID;
-
-typedef struct AccessorySecondary AccessorySecondary, *PAccessorySecondary;
-
-struct AccessorySecondary {
-    byte PhysicalEvade;
-    byte MagicalEvade;
-};
-
-typedef enum Eq1 {
-    Rod=1,
-    Axe=2,
-    Katana=4,
-    Knight_Sword=8,
-    Sword=16,
-    Ninja_Blade=32,
-    Knife=64,
-    NONE=128
-} Eq1;
-
-typedef enum Eq3 {
-    Armor=1,
-    Hair_Adornment=2,
-    Hat=4,
-    Helmet=8,
-    Shield=16,
-    Cloth=32,
-    Bag=64,
-    Pole=128
-} Eq3;
-
-typedef enum Eq2 {
-    Polearm=1,
-    Book=2,
-    Instrument=4,
-    Bow=8,
-    Crossbow=16,
-    Gun=32,
-    Flail=64,
-    Staff=128
-} Eq2;
-
-typedef enum SUZUKIInstr { // Bit encoded currently executing instruction halfword
-    Off=0,
-    SysCounterInitialised=1,
-    SPUTransfering=16,
-    SPUWriting=32,
-    SPUReading=64,
-    Sound_Stereo=256,
-    Wide=512,
-    Sound_Wide=768,
-    Unused=1024,
-    Sound_Unused=1280,
-    WideOrUnused=1536,
-    Sound_Type=1792,
-    MusicPlayable=4096,
-    Lock_Volume=8192,
-    SPUMallocInitialised=32768
-} SUZUKIInstr;
-
-typedef enum Eq4 {
-    Perfume=1,
-    Cloak=2,
-    Armlet=4,
-    Ring=8,
-    Armguard=16,
-    Shoes=32,
-    Robe=64,
-    Clothing=128
-} Eq4;
-
-typedef struct MonSkillset MonSkillset, *PMonSkillset;
-
-struct MonSkillset {
-    byte ActionFlags;
-    enum AbilityID Ability0:8;
-    enum AbilityID Ability1:8;
-    enum AbilityID Ability2:8;
-    enum AbilityID AbilityMS:8;
-};
-
-typedef enum status_legal {
-    is_dead=0,
-    team_loss_enemy=1,
-    team_loss_ally=2,
-    freeze_ct=3,
-    can_act=4,
-    immortal_immune=5,
-    formation_immune=6,
-    0x7=7,
-    0x8=8,
-    no_mount=9,
-    0x9=10
-} status_legal;
-
-typedef enum JobID {
-    None=0,
-    SquireR1=1,
-    SquireR2=2,
-    SquireR3=3,
-    SquireD=4,
-    HolyKnightD=5,
-    ArcKnightD=6,
-    SquireA=7,
-    ArcKnight=8,
-    LuneKnightD=9,
-    DukeL=10,
-    DukeG=11,
-    Princess=12,
-    HolySwordsman=13,
-    HighPriest=14,
-    Dragoner=15,
-    HolyPriest=16,
-    DarkKnightE=17,
-    HellKnightD=18,
-    Bishop=19,
-    ClericB=20,
-    Astrologist=21,
-    EngineerMJ=22,
-    DarkKnightG=23,
-    Cardinal=24,
-    HeavenKnightG=25,
-    HellKnightEJ=26,
-    ArcKnightE=27,
-    DelitasSis=28,
-    ArcDuke=29,
-    HolyKnightAJ=30,
-    TempleKnight=31,
-    WhiteKnight1=32,
-    ArcWitch=33,
-    EngineerMG=34,
-    BiCount=35,
-    DivineKnightV=36,
-    DivineKnightR=37,
-    KnightBlade=38,
-    Sorceror=39,
-    WhiteKnight2=40,
-    HeavenKnightJ=41,
-    DivineKnightMJ=42,
-    EngineerB=43,
-    ClericD=44,
-    AssassinC=45,
-    AssassinL=46,
-    DivineKnightME=47,
-    ClericE=48,
-    PhonySaint=49,
-    Soldier=50,
-    ArcKnightZ=51,
-    HolyKnightAG=52,
-    ChemistF1=53,
-    PriestF1=54,
-    WizardM1=55,
-    OracleM1=56,
-    SquireM1=57,
-    AssassinCU=58,
-    AssassinLU=59,
-    Warlock=60,
-    KnightMZ=61,
-    AngelofDeath=62,
-    ArcherMZ=63,
-    Regulator=64,
-    HolyAngel=65,
-    WizardMZ=66,
-    ImpureKing=67,
-    TimeMageFZ=68,
-    GhostofFury=69,
-    OracleMZ=70,
-    SummonerMZ=71,
-    HolyDragon=72,
-    ArchAngel=73,
-    Squire=74,
-    Chemist=75,
-    Knight=76,
-    Archer=77,
-    Monk=78,
-    Priest=79,
-    Wizard=80,
-    TimeMage=81,
-    Summoner=82,
-    Thief=83,
-    Mediator=84,
-    Oracle=85,
-    Geomancer=86,
-    Lancer=87,
-    Samurai=88,
-    Ninja=89,
-    Calculator=90,
-    Bard=91,
-    Dancer=92,
-    Mime=93,
-    Chocobo=94,
-    BlackChocobo=95,
-    RedChocobo=96,
-    Goblin=97,
-    BlackGoblin=98,
-    Gobbledeguck=99,
-    Bomb=100,
-    Grenade=101,
-    Explosive=102,
-    RedPanther=103,
-    Cuar=104,
-    Vampire=105,
-    PiscoDemon=106,
-    Squidlarken=107,
-    Mindflare=108,
-    Skeleton=109,
-    BoneSnatch=110,
-    LivingBone=111,
-    Ghoul=112,
-    Gust=113,
-    Revnant=114,
-    Flotiball=115,
-    Ahriman=116,
-    Plague=117,
-    Juravis=118,
-    SteelHawk=119,
-    Cocatoris=120,
-    Uribo=121,
-    Porky=122,
-    Wildbow=123,
-    Woodman=124,
-    Trent=125,
-    Taiju=126,
-    BullDemon=127,
-    Minitaurus=128,
-    Sacred=129,
-    Morbol=130,
-    Ochu=131,
-    GreatMorbol=132,
-    Behemoth=133,
-    KingBehemoth=134,
-    DarkBehemoth=135,
-    Dragon=136,
-    BlueDragon=137,
-    RedDragon=138,
-    Hyudra=139,
-    Hydra=140,
-    Tiamat=141,
-    8e=142,
-    8f=143,
-    Byblos=144,
-    SteelGiant=145,
-    92=146,
-    93=147,
-    94=148,
-    95=149,
-    Apanda=150,
-    Serpentarius=151,
-    HolyDragon2=152,
-    ArchaicDemon=153,
-    UltimaDemon=154,
-    Crystal=155,
-    Chicken=156,
-    Frog=157,
-    Treasure=158
-} JobID;
-
-typedef struct JobData JobData, *PJobData;
-
-struct JobData {
-    enum SkillsetID Skillset;
-    enum AbilityID InnateAbility1;
-    enum AbilityID InnateAbility2;
-    enum AbilityID InnateAbility3;
-    enum AbilityID InnateAbility4;
-    int Rod:1;
-    int Axe:1;
-    int Katana:1;
-    int KnightSword:1;
-    int Sword:1;
-    int NinjaBlade:1;
-    int Knife:1;
-    int Unarmed:1;
-    int Polearm:1;
-    int Book:1;
-    int Instrument:1;
-    int Bow:1;
-    int Crossbow:1;
-    int Gun:1;
-    int Flail:1;
-    int Staff:1;
-    int Armor:1;
-    int HairAdrn:1;
-    int Hat:1;
-    int Helmet:1;
-    int Shield:1;
-    int Cloth:1;
-    int Bag:1;
-    int Pole:1;
-    int Perfume:1;
-    int Cloak:1;
-    int Armlet:1;
-    int Ring:1;
-    int Armguard:1;
-    int Shoes:1;
-    int Robe:1;
-    int Clothing:1;
-    byte HPGrowth;
-    byte HPMult;
-    byte MPGrowth;
-    byte MPMult;
-    byte SpeedGrowth;
-    byte SpeedMult;
-    byte PAGrowth;
-    byte PAMult;
-    byte MAGrowth;
-    byte MAMult;
-    byte Move;
-    byte Jump;
-    byte CEV;
-    struct StatusList AlwaysStatus;
-    struct StatusList ImmuneStatus;
-    struct StatusList StartStatus;
-    byte AbsorbElem;
-    byte NullElem;
-    byte HalfElem;
-    byte DoubleElem;
-    byte MonPortrait;
-    byte MonPal;
-    byte MonGraphic;
-};
-
 typedef struct ShieldSecondary ShieldSecondary, *PShieldSecondary;
 
 struct ShieldSecondary {
@@ -4023,208 +4371,10 @@ struct ShieldSecondary {
     byte MagicalEvade;
 };
 
-typedef struct Skillset Skillset, *PSkillset;
-
-struct Skillset {
-    short ActionFlags;
-    byte RSMFlags;
-    enum AbilityID Ability0:8;
-    enum AbilityID Ability1:8;
-    enum AbilityID Ability2:8;
-    enum AbilityID Ability3:8;
-    enum AbilityID Ability4:8;
-    enum AbilityID Ability5:8;
-    enum AbilityID Ability6:8;
-    enum AbilityID Ability7:8;
-    enum AbilityID Ability8:8;
-    enum AbilityID Ability9:8;
-    enum AbilityID AbilityA:8;
-    enum AbilityID AbilityB:8;
-    enum AbilityID AbilityC:8;
-    enum AbilityID AbilityD:8;
-    enum AbilityID AbilityE:8;
-    enum AbilityID AbilityF:8;
-    enum AbilityID RSM0:8;
-    enum AbilityID RSM1:8;
-    enum AbilityID RSM2:8;
-    enum AbilityID RSM3:8;
-    enum AbilityID RSM4:8;
-    enum AbilityID RSM5:8;
-};
-
-typedef struct PartyUnit PartyUnit, *PPartyUnit;
-
-struct PartyUnit {
-    byte SpriteSet;
-    byte PartyID;
-    enum JobID JobID;
-    byte Palette;
-    int SaveFormation:1;
-    int BossStats:1;
-    int LoadFormation:1;
-    int JoinAfterEvent:1;
-    int Monster:1;
-    int Female:1;
-    int Male:1;
-    int Birthday:9;
-    int ZodiacSign:4;
-    enum SkillsetID SecondarySkillset;
-    enum AbilityID Reaction;
-    enum AbilityID Support;
-    enum AbilityID Movement;
-    enum ItemID Head;
-    enum ItemID Body;
-    enum ItemID Accessory;
-    enum ItemID RHWeapon;
-    enum ItemID RHShield;
-    enum ItemID LHWeapon;
-    enum ItemID LHShield;
-    byte Experience;
-    byte Level;
-    byte Brave;
-    byte Faith;
-    int RawHP:24;
-    int RawMP:24;
-    int RawSP:24;
-    int RawPA:24;
-    int RawMA:24;
-    int UnlockedJobs:24;
-    short BaseAction;
-    byte BaseRSM;
-    short ChemistAction;
-    byte ChemistRSM;
-    short KnightAction;
-    byte KnightRSM;
-    short ArcherAction;
-    byte ArcherRSM;
-    short MonkAction;
-    byte MonkRSM;
-    short PriestAction;
-    byte PriestRSM;
-    short WizardAction;
-    byte WizardRSM;
-    short TimeMageAction;
-    byte TimeMageRSM;
-    short SummonerAction;
-    byte SummonerRSM;
-    short ThiefAction;
-    byte ThiefRSM;
-    short MediatorAction;
-    byte MediatorRSM;
-    short OracleAction;
-    byte OracleRSM;
-    short GeomancerAction;
-    byte GeomancerRSM;
-    short LancerAction;
-    byte LancerRSM;
-    short SamuraiAction;
-    byte SamuraiRSM;
-    short NinjaAction;
-    byte NinjaRSM;
-    short CalculatorAction;
-    byte CalculatorRSM;
-    short BardAction;
-    byte BardRSM;
-    short DancerAction;
-    byte DancerRSM;
-    int ChemistLevel:4;
-    int SquireLevel:4;
-    int ArcherLevel:4;
-    int KnightLevel:4;
-    int PriestLevel:4;
-    int MonkLevel:4;
-    int TimeMageLevel:4;
-    int WizardLevel:4;
-    int ThiefLevel:4;
-    int SummonerLevel:4;
-    int OracleLevel:4;
-    int MediatorLevel:4;
-    int LancerLevel:4;
-    int GeomancerLevel:4;
-    int NinjaLevel:4;
-    int SamuraiLevel:4;
-    int BardLevel:4;
-    int CalculatorLevel:4;
-    int MimeLevel:4;
-    int DancerLevel:4;
-    short JobJP[20];
-    short JobTotalJP[20];
-    char UnitName[16];
-    short UnitNameID;
-    byte Proposition;
-    undefined field97_0xd1;
-    byte EggStage;
-    undefined field99_0xd3;
-    undefined field100_0xd4;
-    undefined field101_0xd5;
-    undefined field102_0xd6;
-    undefined field103_0xd7;
-    undefined field104_0xd8;
-    undefined field105_0xd9;
-    undefined field106_0xda;
-    undefined field107_0xdb;
-    undefined field108_0xdc;
-    undefined field109_0xdd;
-    undefined field110_0xde;
-    undefined field111_0xdf;
-    undefined field112_0xe0;
-    undefined field113_0xe1;
-    undefined field114_0xe2;
-    undefined field115_0xe3;
-    undefined field116_0xe4;
-    undefined field117_0xe5;
-    undefined field118_0xe6;
-    undefined field119_0xe7;
-    undefined field120_0xe8;
-    undefined field121_0xe9;
-    undefined field122_0xea;
-    undefined field123_0xeb;
-    undefined field124_0xec;
-    undefined field125_0xed;
-    undefined field126_0xee;
-    undefined field127_0xef;
-    undefined field128_0xf0;
-    undefined field129_0xf1;
-    undefined field130_0xf2;
-    undefined field131_0xf3;
-    undefined field132_0xf4;
-    undefined field133_0xf5;
-    undefined field134_0xf6;
-    undefined field135_0xf7;
-    undefined field136_0xf8;
-    undefined field137_0xf9;
-    undefined field138_0xfa;
-    undefined field139_0xfb;
-    undefined field140_0xfc;
-    undefined field141_0xfd;
-    undefined field142_0xfe;
-    undefined field143_0xff;
-};
-
 typedef struct AbilityIDByte AbilityIDByte, *PAbilityIDByte;
 
 struct AbilityIDByte {
     enum AbilityID AbilityID:8;
-};
-
-typedef struct ArmorSecondary ArmorSecondary, *PArmorSecondary;
-
-struct ArmorSecondary {
-    byte HP;
-    byte MP;
-};
-
-typedef struct SecondaryAbilityItem SecondaryAbilityItem, *PSecondaryAbilityItem;
-
-struct SecondaryAbilityItem {
-    byte UsedItemID;
-};
-
-typedef struct SecondaryAbilityCharge SecondaryAbilityCharge, *PSecondaryAbilityCharge;
-
-struct SecondaryAbilityCharge {
-    byte CT;
-    byte Power;
 };
 
 typedef enum SpritesheetID {
@@ -4418,41 +4568,10 @@ struct fileOpenDesc { // custom FFT file header used to load most files
     u_long addr;
 };
 
-typedef struct SecondaryAbilityRSM SecondaryAbilityRSM, *PSecondaryAbilityRSM;
-
-struct SecondaryAbilityRSM {
-    byte ID;
-};
-
-typedef struct SecondaryAbilityMath SecondaryAbilityMath, *PSecondaryAbilityMath;
-
-struct SecondaryAbilityMath {
-    int Mult:4;
-    int Stat:4;
-};
-
 typedef enum bbool {
     false=0,
     true=1
 } bbool;
-
-typedef struct ItemAttributes ItemAttributes, *PItemAttributes;
-
-struct ItemAttributes {
-    byte PA;
-    byte MA;
-    byte Speed;
-    byte Move;
-    byte Jump;
-    struct StatusList AlwaysStatuses;
-    struct StatusList ImmuneStatuses;
-    struct StatusList StartStatuses;
-    byte AbsorbElem;
-    byte NullElem;
-    byte HalfElem;
-    byte DoubleElem;
-    byte BoostElem;
-};
 
 
 // WARNING! conflicting data type names: /TYPES.H/u_long - /types.h/u_long
@@ -6960,7 +7079,7 @@ void Put_Stack_Pointer(undefined4 param_1)
 void CallInitialiseGameState(void)
 
 {
-  Initialise_GameState();
+  GameLoop();
   return;
 }
 
@@ -7158,34 +7277,34 @@ void Draw_NowLoading(void)
 
 
 
-MusicDataHeader * FUN_800120f4(undefined *SMDPtr)
+MusDataAll * PutPlayMUS(SMDDataAll *SMDPtr)
 
 {
   MusDataAll *MusicData;
   
-  MusicData = FindSpaceForSMDMUS((uint)(byte)SMDPtr[0x14] * 0x160 + 0xb8);
-  (MusicData->HeaderData).NextMusDat = (MusDataAll *)SMDPtr;
-  FUN_800136c0(&MusicData->HeaderData);
-  FUN_800138ac(&MusicData->HeaderData);
+  MusicData = FindSpaceForSMDMUS((uint)(SMDPtr->HeaderData).NumChannels * 0x160 + 0xb8);
+  (MusicData->HeaderData).TransferAddr = SMDPtr;
+  TransferMusicData(&MusicData->HeaderData);
+  FUN_800138ac(MusicData);
   *(undefined4 *)&(MusicData->HeaderData).field_0x5c = 0;
-  FUN_80014024(&MusicData->HeaderData);
-  return &MusicData->HeaderData;
+  PlayMus(MusicData);
+  return MusicData;
 }
 
 
 
-void FUN_8001216c(MusicDataHeader *param_1)
+void Unload_MUS(MusDataAll *MusData)
 
 {
-  int iVar1;
+  int _t;
   
-  if (((int)*(short *)&param_1->field5_0x10 & 0x8000U) != 0) {
-    FUN_80012338((int)param_1);
+  if (((int)(short)(MusData->HeaderData)._0_cmdfield & 0x8000U) != 0) {
+    Deallocate_Mus_Channels(MusData);
   }
-  iVar1 = FUN_80014078(param_1);
-  if (iVar1 == 0) {
-    FUN_80013f74((int)param_1);
-    FUN_80014358((int)param_1);
+  _t = Remove_Mus_From_Queue(MusData);
+  if (_t == 0) {
+    Remove_Mus_From_Queue_Forward(&MusData->HeaderData);
+    Deallocate_Mus_RAM((uint *)MusData);
   }
   return;
 }
@@ -7208,22 +7327,23 @@ void SUZUKI_NOOP_2(void)
 
 
 
-void FUN_800121dc(MusicDataHeader *MusData,short param_2,short param_3)
+void FUN_800121dc(MusDataAll *MusData,short shift_time,short change_vol)
 
 {
   ulong spuInterruptTemp;
   
   spuInterruptTemp = rootCounter2Event;
-  if (MusData != (MusicDataHeader *)0x0) {
-    *(ushort *)&MusData->field5_0x10 = *(ushort *)&MusData->field5_0x10 & 0x7fff;
+  if (MusData != (MusDataAll *)0x0) {
+    (MusData->HeaderData)._0_cmdfield = (MusData->HeaderData)._0_cmdfield & ~music_playing;
     DisableEvent(spuInterruptTemp);
-    FUN_800136c0(MusData);
+    TransferMusicData(&MusData->HeaderData);
     FUN_800138ac(MusData);
-    MusData->field106_0x94 = 0;
-    FUN_80012f08((MusDataAll *)MusData,(int)param_2,param_3);
-    FUN_800170d8((MusDataAll *)MusData,0x7000);
+    (MusData->HeaderData).volset1.hasVolume.field0_0x0 = 0;
+    (MusData->HeaderData).volset1.hasVolume.Volume = 0;
+    Calc_Mus_VolChange(MusData,(int)shift_time,change_vol);
+    ForceChannelFunc(MusData,0x7000);
     spuInterruptTemp = rootCounter2Event;
-    *(ushort *)&MusData->field5_0x10 = *(ushort *)&MusData->field5_0x10 | 0x8000;
+    (MusData->HeaderData)._0_cmdfield = (MusData->HeaderData)._0_cmdfield | music_playing;
     EnableEvent(spuInterruptTemp);
   }
   return;
@@ -7231,15 +7351,15 @@ void FUN_800121dc(MusicDataHeader *MusData,short param_2,short param_3)
 
 
 
-void FUN_80012338(int param_1)
+void Deallocate_Mus_Channels(MusDataAll *musData)
 
 {
-  uint uVar1;
+  uint _channelFlags;
   
-  if (param_1 != 0) {
-    *(ushort *)(param_1 + 0x10) = *(ushort *)(param_1 + 0x10) & 0x7fff;
-    uVar1 = FUN_800135fc(param_1);
-    DAT_80032a08 = uVar1 | DAT_80032a08;
+  if (musData != (MusDataAll *)0x0) {
+    (musData->HeaderData)._0_cmdfield = (musData->HeaderData)._0_cmdfield & ~music_playing;
+    _channelFlags = getActiveChannels(musData);
+    inactiveChannels = _channelFlags | inactiveChannels;
   }
   return;
 }
@@ -7291,7 +7411,7 @@ void PlaySound_FromMUS(MusDataAll *MusData)
   uint uVar1;
   
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
-    uVar1 = FUN_80012d40(MusData,2);
+    uVar1 = FUN_80012d40((uint)MusData,2);
     always2 = 2;
     Play_Sound_Worker((int)(short)((ushort)uVar1 | 0x2000),(uint)MusData,0x6000,0x4000);
   }
@@ -7312,15 +7432,15 @@ void Play_Sound3(uint sfx_ID,ushort param_2)
 
 
 
-void PlaySound_FromMus2(MusDataAll *MusData,int param_2,int param_3)
+void PlaySound_FromMus2(uint sfx_id,int param_2,int param_3)
 
 {
   uint uVar1;
   
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
-    uVar1 = FUN_80012d40(MusData,2);
+    uVar1 = FUN_80012d40(sfx_id,2);
     always2 = 2;
-    Play_Sound_Worker((int)(short)((ushort)uVar1 | 0x2000),(uint)MusData,
+    Play_Sound_Worker((int)(short)((ushort)uVar1 | 0x2000),sfx_id,
                       (short)((uint)(param_2 << 0x18) >> 0x10),
                       (short)((uint)(param_3 << 0x18) >> 0x10));
   }
@@ -7374,6 +7494,7 @@ void Play4_Sound(uint sfx_1,uint sfx_2,uint sfx_3,uint sfx_4)
 void PauseActiveMUS(void)
 
 {
+  uint uVar1;
   MusicChannelData *ChannelData;
   int numChannels;
   uint acc_OwnedChannels;
@@ -7386,9 +7507,10 @@ void PauseActiveMUS(void)
   ChannelData = FirstMUS->ChannelData;
   do {
     numChannels = numChannels + -1;
-    if ((ChannelData->hasSound & 1) != 0) {
-      ChannelData->hasSound = 0;
-      acc_OwnedChannels = acc_OwnedChannels | ChannelData->hasChannel;
+    if ((ChannelData->channelflags & 1) != 0) {
+      uVar1 = (ChannelData->channel_inter).channelSecondary.channel_notedata.using_channels;
+      ChannelData->channelflags = 0;
+      acc_OwnedChannels = acc_OwnedChannels | uVar1;
     }
     ChannelData = ChannelData + 1;
   } while (numChannels != 0);
@@ -7411,6 +7533,7 @@ void Pause_SpecificMUS(int param_1)
 
 {
   short sVar1;
+  int param1;
   MusicChannelData *ChannelData;
   int numChannels;
   
@@ -7419,9 +7542,10 @@ void Pause_SpecificMUS(int param_1)
   ChannelData = FirstMUS->ChannelData;
   do {
     numChannels = numChannels + -1;
-    if (((ChannelData->hasSound & 1) != 0) && ((int)ChannelData->field5_0x8 >> 0x10 == (int)sVar1))
-    {
-      AccumulateChannelsToPause(&ChannelData->field5_0x8->HeaderData);
+    if (((ChannelData->channelflags & 1) != 0) &&
+       (param1 = *(int *)&(ChannelData->channel_inter).channelSecondary.field_0x4,
+       param1 >> 0x10 == (int)sVar1)) {
+      AccumulateChannelsToPause(param1);
     }
     ChannelData = ChannelData + 1;
   } while (numChannels != 0);
@@ -7430,16 +7554,16 @@ void Pause_SpecificMUS(int param_1)
 
 
 
-void AccumulateChannelsToPause(MusicDataHeader *MusData)
+void AccumulateChannelsToPause(int param1)
 
 {
-  uint uVar1;
-  uint *puVar2;
+  uint _channelbits;
   uint OwnedChannels;
   uint neededChannels;
   MusicChannelData *ChannelData;
   int NumChannels;
   uint mask;
+  MusicChannelInner *_channel_data;
   MusDataAll *MusicData;
   
   MusicData = FirstMUS;
@@ -7448,18 +7572,18 @@ void AccumulateChannelsToPause(MusicDataHeader *MusData)
   OwnedChannels = 0;
   NumChannels = 8;
   ChannelData = FirstMUS->ChannelData;
-  puVar2 = &FirstMUS->ChannelData[0].hasChannel;
+  _channel_data = &FirstMUS->ChannelData[0].channel_inter.channelSecondary.channel_notedata;
   do {
     NumChannels = NumChannels + -1;
-    if (((ChannelData->hasSound & 1) != 0) && ((MusDataAll *)puVar2[-0xb] == (MusDataAll *)MusData))
-    {
-      uVar1 = *puVar2;
+    if (((ChannelData->channelflags & 1) != 0) && (*(int *)&_channel_data[-1].field_0x100 == param1)
+       ) {
+      _channelbits = _channel_data->using_channels;
       OwnedChannels = OwnedChannels | mask;
-      ChannelData->hasSound = 0;
-      neededChannels = neededChannels | uVar1;
+      ChannelData->channelflags = 0;
+      neededChannels = neededChannels | _channelbits;
     }
     mask = mask << 1;
-    puVar2 = puVar2 + 0x58;
+    _channel_data = (MusicChannelInner *)&_channel_data[1].sustain_flags;
     ChannelData = ChannelData + 1;
   } while (NumChannels != 0);
   if (OwnedChannels != 0) {
@@ -7474,28 +7598,30 @@ void Pause_SpecificChannel(uint channel)
 
 {
   MusDataAll *MusData;
+  uint uVar1;
   MusicChannelData *_channel;
   uint OwnedChannels;
   uint neededChannels;
-  int iVar1;
+  int iVar2;
   uint channel_flag;
   
   MusData = FirstMUS;
   channel_flag = 1 << (channel & 0x1f);
   neededChannels = 0;
   OwnedChannels = 0;
-  iVar1 = 2;
+  iVar2 = 2;
   _channel = FirstMUS->ChannelData + channel;
   do {
-    iVar1 = iVar1 + -1;
-    if ((_channel->hasSound & 1) != 0) {
+    iVar2 = iVar2 + -1;
+    if ((_channel->channelflags & 1) != 0) {
+      uVar1 = (_channel->channel_inter).channelSecondary.channel_notedata.using_channels;
       OwnedChannels = OwnedChannels | channel_flag;
-      _channel->hasSound = 0;
-      neededChannels = neededChannels | _channel->hasChannel;
+      _channel->channelflags = 0;
+      neededChannels = neededChannels | uVar1;
     }
     channel_flag = channel_flag << 1;
     _channel = _channel + 1;
-  } while (iVar1 != 0);
+  } while (iVar2 != 0);
   if (OwnedChannels != 0) {
     PauseNeededChannels(MusData,OwnedChannels,neededChannels);
   }
@@ -7529,16 +7655,17 @@ void PauseNeededChannels(MusDataAll *MusData,uint OwnedChannels,uint neededChann
 void FUN_80012b6c(MusDataAll *MusData,uint param_2)
 
 {
-  uint uVar1;
-  ushort *puVar2;
-  uint *puVar3;
+  MusicChannelData *pMVar1;
+  uint uVar2;
+  MusicChannelIntermediary *pMVar3;
+  MusicChannelInner *pMVar4;
   uint OwnedChannels;
   MusicChannelData *channelData;
   uint neededChannels;
   int numChannels;
   uint mask;
   MusDataAll *firstMus;
-  ushort *hasSound;
+  SUZUKIchannel_flags *hasSound;
   
   firstMus = FirstMUS;
   numChannels = 8;
@@ -7548,17 +7675,19 @@ void FUN_80012b6c(MusDataAll *MusData,uint param_2)
     neededChannels = 0;
     OwnedChannels = 0;
     numChannels = 8;
-    puVar3 = &FirstMUS->ChannelData[0].hasChannel;
+    pMVar1 = FirstMUS->ChannelData;
     do {
+      pMVar4 = &(pMVar1->channel_inter).channelSecondary.channel_notedata;
       numChannels = numChannels + -1;
-      if (((channelData->hasSound & 1) != 0) && ((MusDataAll *)puVar3[-0xb] == MusData)) {
-        uVar1 = *puVar3;
+      if (((channelData->channelflags & 1) != 0) &&
+         (*(MusDataAll **)((int)(pMVar4 + -1) + 0x100) == MusData)) {
+        uVar2 = pMVar4->using_channels;
         OwnedChannels = OwnedChannels | mask;
-        channelData->hasSound = 0;
-        neededChannels = neededChannels | uVar1;
+        channelData->channelflags = 0;
+        neededChannels = neededChannels | uVar2;
       }
       mask = mask << 1;
-      puVar3 = puVar3 + 0x58;
+      pMVar1 = (MusicChannelData *)(pMVar4 + 1);
       channelData = channelData + 1;
     } while (numChannels != 0);
     if (OwnedChannels != 0) {
@@ -7566,16 +7695,18 @@ void FUN_80012b6c(MusDataAll *MusData,uint param_2)
     }
   }
   else {
-    puVar2 = &FirstMUS->ChannelData[0].field1_0x2;
+    pMVar1 = FirstMUS->ChannelData;
     do {
-      hasSound = &channelData->hasSound;
+      pMVar3 = &pMVar1->channel_inter;
+      hasSound = &channelData->channelflags;
       channelData = channelData + 1;
-      if (((*hasSound & 1) != 0) && (*(MusDataAll **)(puVar2 + 3) == MusData)) {
-        puVar2[0x49] = (short)(param_2 << 8);
-        *puVar2 = 0x100;
+      if (((*hasSound & 1) != 0) &&
+         (*(MusDataAll **)&(pMVar3->channelSecondary).field_0x4 == MusData)) {
+        (pMVar3->channelSecondary).channel_notedata.field56_0x60 = (short)(param_2 << 8);
+        pMVar3->intermediaryflags = volume_change;
       }
       numChannels = numChannels + -1;
-      puVar2 = puVar2 + 0xb0;
+      pMVar1 = (MusicChannelData *)(pMVar3 + 1);
     } while (numChannels != 0);
   }
   return;
@@ -7586,23 +7717,26 @@ void FUN_80012b6c(MusDataAll *MusData,uint param_2)
 void FUN_80012c58(MusDataAll *musData,int param_2)
 
 {
-  ushort *puVar1;
-  ushort *puVar2;
+  MusicChannelData *pMVar1;
+  SUZUKIchannel_flags *pSVar2;
+  MusicChannelIntermediary *pMVar3;
   MusicChannelData *_channelData;
   int numChannels;
   
   numChannels = 8;
   _channelData = FirstMUS->ChannelData;
-  puVar2 = &FirstMUS->ChannelData[0].field1_0x2;
+  pMVar1 = FirstMUS->ChannelData;
   do {
-    puVar1 = &_channelData->hasSound;
+    pMVar3 = &pMVar1->channel_inter;
+    pSVar2 = &_channelData->channelflags;
     _channelData = _channelData + 1;
-    if (((*puVar1 & 1) != 0) && (*(MusDataAll **)(puVar2 + 3) == musData)) {
-      puVar2[0x48] = (short)(param_2 << 8);
-      *puVar2 = 0x100;
+    if (((*pSVar2 & 1) != 0) && (*(MusDataAll **)&(pMVar3->channelSecondary).field_0x4 == musData))
+    {
+      (pMVar3->channelSecondary).channel_notedata.Vol_Bal = (short)(param_2 << 8);
+      pMVar3->intermediaryflags = volume_change;
     }
     numChannels = numChannels + -1;
-    puVar2 = puVar2 + 0xb0;
+    pMVar1 = (MusicChannelData *)(pMVar3 + 1);
   } while (numChannels != 0);
   return;
 }
@@ -7616,7 +7750,7 @@ uint get_MUS_channels(MusDataAll *musData)
   uint mask;
   int numChannels;
   uint acc_Channels;
-  ushort *hasSound;
+  SUZUKIchannel_flags *hasSound;
   
   numChannels = 8;
   mask = 1;
@@ -7624,7 +7758,7 @@ uint get_MUS_channels(MusDataAll *musData)
   acc_Channels = 0;
   if (musData == (MusDataAll *)0xffffffff) {
     do {
-      hasSound = &firstChannel->hasSound;
+      hasSound = &firstChannel->channelflags;
       firstChannel = firstChannel + 1;
       if ((*hasSound & 1) != 0) {
         acc_Channels = acc_Channels | mask;
@@ -7636,7 +7770,8 @@ uint get_MUS_channels(MusDataAll *musData)
   else {
     do {
       numChannels = numChannels + -1;
-      if (((firstChannel->hasSound & 1) != 0) && (firstChannel->field5_0x8 == musData)) {
+      if (((firstChannel->channelflags & 1) != 0) &&
+         (*(MusDataAll **)&(firstChannel->channel_inter).channelSecondary.field_0x4 == musData)) {
         acc_Channels = acc_Channels | mask;
       }
       firstChannel = firstChannel + 1;
@@ -7648,55 +7783,60 @@ uint get_MUS_channels(MusDataAll *musData)
 
 
 
-uint FUN_80012d40(MusDataAll *MusData,uint numChannels)
+// WARNING: Type propagation algorithm not settling
+
+uint FUN_80012d40(uint MusData,uint numChannels)
 
 {
+  MusicChannelData *pMVar1;
   uint isChannel;
-  uint *hasChannel;
+  MusicChannelInner *pMVar2;
   MusicChannelData *ChannelData;
   int channel;
   uint i;
   int NumChannels;
-  uint uVar1;
-  uint uVar2;
+  uint uVar3;
+  uint uVar4;
   uint allChannelsMask;
   uint in_t5;
-  uint uVar3;
+  uint uVar5;
   
   acc_activeChannels = 0;
   acc_inactiveChannels = 0;
   i = 1;
   NumChannels = 8;
   ChannelData = FirstMUS->ChannelData;
-  hasChannel = &FirstMUS->ChannelData[0].hasChannel;
+  pMVar1 = FirstMUS->ChannelData;
   do {
+    pMVar2 = &(pMVar1->channel_inter).channelSecondary.channel_notedata;
     NumChannels = NumChannels + -1;
-    if (((ChannelData->hasSound & 1) != 0) && ((MusDataAll *)hasChannel[-0xb] == MusData)) {
-      isChannel = *hasChannel;
+    if (((ChannelData->channelflags & 1) != 0) && (*(uint *)((int)(pMVar2 + -1) + 0x100) == MusData)
+       ) {
+      isChannel = pMVar2->using_channels;
       acc_inactiveChannels = acc_inactiveChannels | i;
-      ChannelData->hasSound = 0;
+      ChannelData->channelflags = 0;
       acc_activeChannels = acc_activeChannels | isChannel;
     }
     i = i << 1;
-    hasChannel = hasChannel + 0x58;
+    pMVar1 = (MusicChannelData *)(pMVar2 + 1);
     ChannelData = ChannelData + 1;
   } while (NumChannels != 0);
   i = 6 - numChannels;
   allChannelsMask = 0xffffffff >> (0x20 - numChannels & 0x1f);
   isChannel = allChannelsMask << (i & 0x1f);
   channel = (int)FirstMUS + i * 0x160 + 0xb8;
-  uVar1 = 0xffffffff;
+  uVar3 = 0xffffffff;
   while( true ) {
     if ((~acc_inactiveChannels & (FirstMUS->HeaderData).OwnedChannels & isChannel) == 0) {
       return i;
     }
     isChannel = isChannel >> (numChannels & 0x1f);
-    uVar2 = uVar1;
-    uVar3 = in_t5;
-    if ((uVar1 <= *(uint *)(channel + 0x10)) ||
-       (uVar2 = *(uint *)(channel + 0x10), uVar3 = i, *(byte *)(channel + 0xd) < 0x21)) {
-      uVar1 = uVar2;
-      in_t5 = uVar3;
+    uVar4 = uVar3;
+    uVar5 = in_t5;
+    if ((uVar3 <= *(uint *)(channel + 0x10)) ||
+       (uVar4 = *(uint *)(channel + 0x10), uVar5 = i, *(byte *)(channel + 0xd) < 0x21)) {
+      uVar3 = uVar4;
+      in_t5 = uVar5;
     }
     if (isChannel < allChannelsMask) break;
     channel = channel + numChannels * -0x160;
@@ -7707,43 +7847,44 @@ uint FUN_80012d40(MusDataAll *MusData,uint numChannels)
 
 
 
-ushort FUN_80012e7c(int param_1)
+ushort get_musicPlaying(MusDataAll *param_1)
 
 {
-  return *(ushort *)(param_1 + 0x10) >> 0xf;
+  return (param_1->HeaderData)._0_cmdfield >> 0xf;
 }
 
 
 
-void FUN_80012f08(MusDataAll *MusData,uint param_2,short param_3)
+void Calc_Mus_VolChange(MusDataAll *MusData,uint shiftTime,short changeVol)
 
 {
-  int iVar1;
+  int _changeInVolume;
   ulong gpuInterruptedEvent;
   
-  (MusData->HeaderData).field109_0x9e = (short)(param_2 << 8);
-  if (param_3 == 0) {
-    (MusData->HeaderData).field106_0x94 = param_2 << 0x18;
-    (MusData->HeaderData).field108_0x9c = 0;
-    FUN_80017098(0x100,MusData);
+  *(short *)&(MusData->HeaderData).field_0x9e = (short)(shiftTime << 8);
+  if (changeVol == 0) {
+    (MusData->HeaderData).volset1.hasVolume = (SuzukiVolStore)(shiftTime << 0x18);
+    (MusData->HeaderData).volset1.ChangeVol = 0;
+    Set_noteflags2_allChannels(volume_change,MusData);
   }
   else {
-    iVar1 = param_2 * 0x10000 - ((MusData->HeaderData).field106_0x94 >> 8);
-    if (iVar1 == 0) {
+    _changeInVolume = shiftTime * 0x10000 - ((int)(MusData->HeaderData).volset1.hasVolume >> 8);
+    if (_changeInVolume == 0) {
       return;
     }
-    (MusData->HeaderData).field108_0x9c = param_3;
-    (MusData->HeaderData).field107_0x98 = iVar1 / (int)param_3 << 8;
+    (MusData->HeaderData).volset1.ChangeVol = changeVol;
+    (MusData->HeaderData).volset1.ChangeInVolume = _changeInVolume / (int)changeVol << 8;
   }
-  if (((*(ushort *)&(MusData->HeaderData).field5_0x10 & 0x100) != 0) && ((param_2 & 0xffff) != 0)) {
+  if ((((MusData->HeaderData)._0_cmdfield & recalculate_reverb) != 0) && ((shiftTime & 0xffff) != 0)
+     ) {
     DisableEvent(rootCounter2Event);
     SetReverbParam((MusData->HeaderData).ReverbMode,(MusData->HeaderData).volumeDepth,
                    (MusData->HeaderData).reverbDelay,(MusData->HeaderData).reverbFeedback);
-    FUN_800170d8(MusData,0x71ff);
-    FUN_80013544((int)MusData);
+    ForceChannelFunc(MusData,0x71ff);
+    FUN_80013544(MusData);
     gpuInterruptedEvent = rootCounter2Event;
-    *(ushort *)&(MusData->HeaderData).field5_0x10 =
-         *(ushort *)&(MusData->HeaderData).field5_0x10 & 0xfeff | 0x8000;
+    (MusData->HeaderData)._0_cmdfield =
+         (MusData->HeaderData)._0_cmdfield & ~recalculate_reverb | music_playing;
     EnableEvent(gpuInterruptedEvent);
   }
   return;
@@ -7759,15 +7900,15 @@ void FUN_80013480(undefined4 *param_1)
   
   if ((param_1[1] != 0) && ((*(ushort *)(param_1 + 4) & 0x10) != 0)) {
     DisableEvent(rootCounter2Event);
-    uVar1 = FUN_800135fc((int)param_1);
+    uVar1 = getActiveChannels((MusDataAll *)param_1);
     uVar2 = param_1[9];
-    DAT_80032a08 = uVar1 | DAT_80032a08;
+    inactiveChannels = uVar1 | inactiveChannels;
     FUN_80013fc0(param_1,(undefined4 *)param_1[1]);
     param_1[0xb] = uVar2;
-    FUN_800170d8((MusDataAll *)param_1,0x71ff);
+    ForceChannelFunc((MusDataAll *)param_1,0x71ff);
     param_1[0x19] = 0;
     param_1[0x18] = 0;
-    FUN_80013544((int)param_1);
+    FUN_80013544((MusDataAll *)param_1);
     EnableEvent(rootCounter2Event);
   }
   return;
@@ -7775,50 +7916,57 @@ void FUN_80013480(undefined4 *param_1)
 
 
 
-uint FUN_80013544(int param_1)
+uint FUN_80013544(MusDataAll *param_1)
 
 {
-  ushort *puVar1;
-  uint *puVar2;
-  uint uVar3;
-  uint uVar4;
+  MusicChannelData *pMVar1;
+  uint uVar2;
+  MusicChannelIntermediary *pMVar3;
+  MusicChannelData *_channelData;
+  uint _numChannels;
+  uint _z;
   
-  uVar3 = (uint)*(byte *)(param_1 + 0x16);
-  puVar2 = (uint *)(param_1 + 0xb8);
-  uVar4 = 0;
-  puVar1 = (ushort *)(param_1 + 0xba);
+  _numChannels = (uint)(param_1->HeaderData).NumChannels;
+  _channelData = param_1->ChannelData;
+  _z = 0;
+  pMVar1 = param_1->ChannelData;
   do {
-    uVar3 = uVar3 - 1;
-    if (((*puVar2 & 0x101) == 0x101) && ((*(ushort *)puVar2 & 0x30) == 0)) {
-      uVar4 = uVar4 | *(uint *)(puVar1 + 0x19);
-      *puVar1 = *puVar1 | 1;
+    pMVar3 = &pMVar1->channel_inter;
+    uVar2._0_2_ = _channelData->channelflags;
+    uVar2._2_2_ = (_channelData->channel_inter).intermediaryflags;
+    _numChannels = _numChannels - 1;
+    if (((uVar2 & 0x101) == 0x101) && ((_channelData->channelflags & 0x30) == 0)) {
+      _z = _z | (pMVar3->channelSecondary).channel_notedata.using_channels;
+      pMVar3->intermediaryflags = pMVar3->intermediaryflags | 1;
     }
-    puVar1 = puVar1 + 0xb0;
-    puVar2 = puVar2 + 0x58;
-  } while (uVar3 != 0);
-  return uVar4;
+    pMVar1 = (MusicChannelData *)(pMVar3 + 1);
+    _channelData = _channelData + 1;
+  } while (_numChannels != 0);
+  return _z;
 }
 
 
 
-uint FUN_800135fc(int param_1)
+uint getActiveChannels(MusDataAll *musData)
 
 {
-  uint uVar1;
-  short *psVar2;
-  uint uVar3;
+  uint _numChannels;
+  MusicChannelData *_channelPtr;
+  uint _channelFlags;
   
-  uVar1 = (uint)*(byte *)(param_1 + 0x16);
-  psVar2 = (short *)(param_1 + 0xb8);
-  uVar3 = 0;
+  _numChannels = (uint)(musData->HeaderData).NumChannels;
+  _channelPtr = musData->ChannelData;
+  _channelFlags = 0;
   do {
-    uVar1 = uVar1 - 1;
-    if (*psVar2 != 0) {
-      uVar3 = uVar3 | *(uint *)(psVar2 + 0x1a);
+    _numChannels = _numChannels - 1;
+    if (_channelPtr->channelflags != 0) {
+      _channelFlags =
+           _channelFlags |
+           (_channelPtr->channel_inter).channelSecondary.channel_notedata.using_channels;
     }
-    psVar2 = psVar2 + 0xb0;
-  } while (uVar1 != 0);
-  return uVar3;
+    _channelPtr = _channelPtr + 1;
+  } while (_numChannels != 0);
+  return _channelFlags;
 }
 
 
@@ -7826,62 +7974,61 @@ uint FUN_800135fc(int param_1)
 MusicDataHeader * FUN_8001363c(void)
 
 {
+  MusicChannelData *pMVar1;
   MusDataAll *MusicData;
-  uint *puVar1;
-  uint uVar2;
-  char cVar3;
-  int iVar4;
-  MusicChannelData *pMVar5;
+  MusicChannelInner *pMVar2;
+  uint uVar3;
+  char cVar4;
+  int iVar5;
+  MusicChannelData *pMVar6;
   
   MusicData = FindSpaceForSMDMUS(3000);
   FUN_80013788((int)MusicData);
-  pMVar5 = MusicData->ChannelData;
-  uVar2 = 0x10;
-  iVar4 = 8;
-  cVar3 = '\0';
-  puVar1 = &MusicData->ChannelData[0].hasChannel;
+  pMVar6 = MusicData->ChannelData;
+  uVar3 = 0x10;
+  iVar5 = 8;
+  cVar4 = '\0';
+  pMVar1 = MusicData->ChannelData;
   do {
-    pMVar5->hasSound = 0;
-    *(char *)(puVar1 + -10) = cVar3;
-    cVar3 = cVar3 + '\x01';
-    *(char *)((int)puVar1 + -7) = (char)uVar2;
-    *puVar1 = 1 << (uVar2 & 0x1f);
-    puVar1 = puVar1 + 0x58;
-    pMVar5 = pMVar5 + 1;
-    iVar4 = iVar4 + -1;
-    uVar2 = uVar2 + 1;
-  } while (iVar4 != 0);
-  FUN_80014024(&MusicData->HeaderData);
+    pMVar2 = &(pMVar1->channel_inter).channelSecondary.channel_notedata;
+    pMVar6->channelflags = 0;
+    *(char *)((int)(pMVar2 + -1) + 0x104) = cVar4;
+    cVar4 = cVar4 + '\x01';
+    *(char *)((int)(pMVar2 + -1) + 0x125) = (char)uVar3;
+    pMVar2->using_channels = 1 << (uVar3 & 0x1f);
+    pMVar1 = (MusicChannelData *)(pMVar2 + 1);
+    pMVar6 = pMVar6 + 1;
+    iVar5 = iVar5 + -1;
+    uVar3 = uVar3 + 1;
+  } while (iVar5 != 0);
+  PlayMus(MusicData);
   return &MusicData->HeaderData;
 }
 
 
 
-void FUN_800136c0(MusicDataHeader *MusicData)
+void TransferMusicData(MusicDataHeader *MusicData)
 
 {
-  MusDataAll *NextMusicData;
+  SMDDataAll *trnsfrData;
   uint feedback;
   
-  NextMusicData = MusicData->NextMusDat;
-  *(ushort *)&MusicData->field5_0x10 = *(ushort *)&MusicData->field5_0x10 | 1;
-  *(undefined2 *)((int)&MusicData->field5_0x10 + 2) =
-       *(undefined2 *)&(NextMusicData->HeaderData).field5_0x10;
-  MusicData->field_0x14 = *(undefined *)((int)&(NextMusicData->HeaderData).field5_0x10 + 2);
-  MusicData->field_0x15 = *(undefined *)((int)&(NextMusicData->HeaderData).field5_0x10 + 3);
-  *(undefined *)&MusicData->NumChannels = (NextMusicData->HeaderData).field_0x14;
-  *(undefined *)((int)&MusicData->NumChannels + 1) = (NextMusicData->HeaderData).field_0x15;
-  *(undefined2 *)((int)&MusicData->NumChannels + 2) =
-       *(undefined2 *)&(NextMusicData->HeaderData).NumChannels;
-  *(undefined2 *)&MusicData->field_0x1a =
-       *(undefined2 *)((int)&(NextMusicData->HeaderData).NumChannels + 2);
-  MusicData->ReverbMode = (int)(char)(NextMusicData->HeaderData).field_0x1a;
-  MusicData->volumeDepth = (ushort)(byte)(NextMusicData->HeaderData).field_0x1b << 8;
-  MusicData->reverbDelay = (uint)(byte)(NextMusicData->HeaderData).field_0x1c;
-  feedback = (uint)(byte)(NextMusicData->HeaderData).field_0x1d;
+  trnsfrData = MusicData->TransferAddr;
+  MusicData->_0_cmdfield = MusicData->_0_cmdfield | actionflag1;
+  *(undefined2 *)&MusicData->field_0x12 = *(undefined2 *)&(trnsfrData->HeaderData).field_0x10;
+  MusicData->NumChannelDedicate = (trnsfrData->HeaderData).NumChannelDedicate;
+  MusicData->field8_0x15 = (trnsfrData->HeaderData).field_0x13;
+  MusicData->NumChannels = (trnsfrData->HeaderData).NumChannels;
+  MusicData->field_0x17 = (trnsfrData->HeaderData).field_0x15;
+  MusicData->Soundfont_ID = *(short *)&(trnsfrData->HeaderData).field_0x16;
+  *(undefined2 *)&MusicData->field_0x1a = *(undefined2 *)&(trnsfrData->HeaderData).field_0x18;
+  MusicData->ReverbMode = (int)(trnsfrData->HeaderData).reverbMode_small;
+  MusicData->volumeDepth = (ushort)(trnsfrData->HeaderData).volumeDepth_small << 8;
+  MusicData->reverbDelay = (uint)(trnsfrData->HeaderData).reverbDelay_small;
+  feedback = (uint)(trnsfrData->HeaderData).reverbFeedback_small;
   MusicData->reverbFeedback = feedback;
   SetReverbParam(MusicData->ReverbMode,MusicData->volumeDepth,MusicData->reverbDelay,feedback);
-  FUN_800137d8((int)MusicData);
+  InitialiseMusHeader(MusicData);
   return;
 }
 
@@ -7898,329 +8045,342 @@ void FUN_80013788(int param_1)
   *(undefined *)(param_1 + 0x17) = 0;
   *(undefined2 *)(param_1 + 0x18) = 0;
   *(undefined2 *)(param_1 + 0x1a) = 0x7f;
-  FUN_800137d8(param_1);
+  InitialiseMusHeader((MusicDataHeader *)param_1);
   return;
 }
 
 
 
-void FUN_800137d8(int param_1)
+void InitialiseMusHeader(MusicDataHeader *MusData)
 
 {
-  FUN_80013f74(param_1);
-  *(undefined *)(param_1 + 0x1c) = 0;
-  *(undefined *)(param_1 + 0x1d) = 0;
-  *(undefined2 *)(param_1 + 0x30) = 0;
-  *(undefined2 *)(param_1 + 0x32) = 1;
-  *(undefined2 *)(param_1 + 0x34) = 0;
-  *(undefined2 *)(param_1 + 0x36) = 1;
-  *(undefined4 *)(param_1 + 0x28) = 0;
-  *(undefined4 *)(param_1 + 0x24) = 0;
-  *(undefined4 *)(param_1 + 0x20) = 0;
-  *(undefined4 *)(param_1 + 0x58) = 0;
-  *(undefined4 *)(param_1 + 0x60) = 0;
-  *(undefined4 *)(param_1 + 100) = 0;
-  *(undefined4 *)(param_1 + 0x68) = 0;
-  *(undefined4 *)(param_1 + 0x6c) = 0;
-  *(undefined4 *)(param_1 + 0x70) = 0;
-  *(undefined4 *)(param_1 + 0xa0) = 0;
-  *(undefined4 *)(param_1 + 0xac) = 0;
-  *(undefined2 *)(param_1 + 0x90) = 0;
-  *(undefined2 *)(param_1 + 0x9c) = 0;
-  *(undefined2 *)(param_1 + 0xa8) = 0;
-  *(undefined2 *)(param_1 + 0xb4) = 0;
-  *(undefined4 *)(param_1 + 0x80) = 0;
-  *(undefined2 *)(param_1 + 0x84) = 0;
-  *(undefined2 *)(param_1 + 0x38) = 4;
-  *(undefined2 *)(param_1 + 0x3c) = 4;
-  *(undefined2 *)(param_1 + 0x3e) = 4;
-  *(undefined4 *)(param_1 + 0x88) = 0x1000000;
-  *(undefined4 *)(param_1 + 0x94) = 0x7f000000;
-  *(undefined4 *)(param_1 + 0x7c) = 0x660000;
-  *(undefined4 *)(param_1 + 0x78) = 0x6600;
-  *(undefined4 *)(param_1 + 0x74) = 0x10000;
-  *(short *)(param_1 + 0x3a) = (short)(0x30 / *(byte *)(param_1 + 0x15));
+  byte bVar1;
+  
+  Remove_Mus_From_Queue_Forward(MusData);
+  bVar1 = MusData->field8_0x15;
+  MusData->field_0x1c = 0;
+  MusData->field_0x1d = 0;
+  MusData->field24_0x30 = 0;
+  MusData->CurMeasure = 1;
+  MusData->CurBeat = 0;
+  MusData->framesUntil_nextBeat = 1;
+  MusData->field19_0x28 = 0;
+  MusData->field18_0x24 = 0;
+  MusData->field17_0x20 = 0;
+  MusData->OwnedChannels = 0;
+  MusData->ModifiedChannels = 0;
+  MusData->field52_0x64 = 0;
+  MusData->LFOVoiceBits = 0;
+  MusData->NoiseVoiceBits = 0;
+  MusData->ReverbVoiceBits = 0;
+  (MusData->volset2).hasVolume.field0_0x0 = 0;
+  (MusData->volset2).hasVolume.Volume = 0;
+  (MusData->volset3).hasVolume.field0_0x0 = 0;
+  (MusData->volset3).hasVolume.Volume = 0;
+  MusData->field68_0x90 = 0;
+  (MusData->volset1).ChangeVol = 0;
+  (MusData->volset2).ChangeVol = 0;
+  (MusData->volset3).ChangeVol = 0;
+  MusData->field59_0x80 = 0;
+  MusData->field60_0x84 = 0;
+  MusData->timeSignature_top = 4;
+  MusData->timeSignature_bottom = 4;
+  MusData->timeSigTop = 4;
+  MusData->tempo_scalar = 0x1000000;
+  (MusData->volset1).hasVolume.field0_0x0 = 0;
+  (MusData->volset1).hasVolume.Volume = 0x7f00;
+  MusData->raw_tempo = 0x660000;
+  MusData->modified_tempo = 0x6600;
+  MusData->field56_0x74 = 0x10000;
+  MusData->framesPer_Beat = (short)(0x30 / bVar1);
   return;
 }
 
 
 
-void FUN_800138ac(MusicDataHeader *MusicData)
+void FUN_800138ac(MusDataAll *MusicData)
 
 {
   ushort uVar1;
-  undefined2 uVar2;
+  SUZUKIchannel_flags SVar2;
   uint *puVar3;
-  int iVar4;
-  MusDataAll *pMVar5;
-  uint uVar6;
-  int *piVar7;
-  MusicDataHeader *pMVar8;
-  int iVar9;
-  uint uVar10;
-  ushort *puVar11;
-  uint uVar12;
-  uint uVar13;
-  char cVar14;
+  SoundFontHeader *pSVar4;
+  int iVar5;
+  SMDDataAll *transferAddr;
+  uint _z;
+  SoundFontHeader **ppSVar6;
+  MusicChannelData *channelData;
+  SoundFontHeader *_waveset_addr;
+  uint _t;
+  short *_channel_ptr;
+  uint i;
+  uint numChannels;
+  char t;
   
-  uVar13 = (uint)*(byte *)&MusicData->NumChannels;
-  pMVar8 = MusicData + 1;
-  if (uVar13 == 0) {
+  numChannels = (uint)(MusicData->HeaderData).NumChannels;
+  channelData = MusicData->ChannelData;
+  if (numChannels == 0) {
     return;
   }
-  cVar14 = -1;
-  uVar10 = 0xffffffff;
-  uVar6 = 0;
-  uVar12 = 1;
-  pMVar5 = MusicData->NextMusDat;
-  puVar11 = (ushort *)&(pMVar5->HeaderData).field_0x22;
-  if (DAT_80032a44 != 0) {
-    iVar9 = DAT_80032a44;
+  t = -1;
+  _t = 0xffffffff;
+  _z = 0;
+  i = 1;
+  transferAddr = (MusicData->HeaderData).TransferAddr;
+  _channel_ptr = &(transferAddr->HeaderData).channel_ptr;
+  if (WAVESET_addr != (SoundFontHeader *)0x0) {
+    _waveset_addr = WAVESET_addr;
     do {
-      if ((uint)*(ushort *)(iVar9 + 0x20) == (int)*(short *)((int)&MusicData->NumChannels + 2))
+      if ((uint)(ushort)_waveset_addr->soundfont_ID == (int)(MusicData->HeaderData).Soundfont_ID)
       break;
-      iVar9 = *(int *)(iVar9 + 0x2c);
-    } while (iVar9 != 0);
-    piVar7 = (int *)&MusicData[1].field_0x30;
-    if (iVar9 != 0) goto LAB_8001394c;
+      _waveset_addr = _waveset_addr->next_soundfont;
+    } while (_waveset_addr != (SoundFontHeader *)0x0);
+    ppSVar6 = &MusicData->ChannelData[0].channel_inter.channelSecondary.Waveset_addr;
+    if (_waveset_addr != (SoundFontHeader *)0x0) goto LAB_8001394c;
   }
-  piVar7 = (int *)&MusicData[1].field_0x30;
-  iVar9 = DAT_80032a44;
+  ppSVar6 = &MusicData->ChannelData[0].channel_inter.channelSecondary.Waveset_addr;
+  _waveset_addr = WAVESET_addr;
 LAB_8001394c:
   do {
-    if (*puVar11 == 0) {
-      pMVar8->field0_0x0 = 0;
+    if (*_channel_ptr == 0) {
+      channelData->channelflags = 0;
     }
     else {
-      uVar6 = uVar6 | uVar12;
-      if ((uVar12 & *(uint *)&MusicData->field_0x5c) == 0) {
-        uVar2 = 0x401;
+      _z = _z | i;
+      if ((i & *(uint *)&(MusicData->HeaderData).field_0x5c) == 0) {
+        SVar2 = 0x401;
       }
       else {
-        uVar2 = 0x421;
+        SVar2 = 0x421;
       }
-      pMVar8->field0_0x0 = uVar2;
-      if ((*(ushort *)&MusicData->field5_0x10 & 0x2000) != 0) {
-        pMVar8->field0_0x0 = pMVar8->field0_0x0 | 4;
+      channelData->channelflags = SVar2;
+      if (((MusicData->HeaderData)._0_cmdfield & actionflag2000) != 0) {
+        channelData->channelflags = channelData->channelflags | action4;
       }
-      *(undefined2 *)((int)piVar7 + -0x2e) = 0x300;
-      *(undefined2 *)((int)piVar7 + -0x2a) = 0;
-      uVar1 = *(ushort *)&(pMVar5->HeaderData).field5_0x10;
-      *(undefined *)((int)piVar7 + -0x23) = 0x10;
-      *(char *)(piVar7 + -9) = cVar14;
-      piVar7[-10] = (int)(uint)uVar1;
-      uVar1 = *puVar11;
-      *(undefined2 *)((int)piVar7 + 0x4e) = 0x3c;
-      *(undefined2 *)((int)piVar7 + 0x4a) = 0xf;
-      *(undefined2 *)(piVar7 + 0x1f) = 0xffff;
-      *(undefined2 *)(piVar7 + 0x19) = 0x6000;
-      piVar7[0x1a] = 0x7f000000;
-      *(undefined2 *)((int)piVar7 + 0x62) = 0x4000;
-      *(char *)((int)piVar7 + -3) = (char)uVar10;
-      piVar7[-5] = 0;
-      piVar7[-3] = 0;
-      *(undefined2 *)(piVar7 + -2) = 0;
-      *(undefined *)((int)piVar7 + -6) = 0;
-      *(undefined2 *)(piVar7 + 0x11) = 0;
-      *(undefined *)((int)piVar7 + 0x46) = 0;
-      *(undefined2 *)((int)piVar7 + 0x56) = 0;
-      *(undefined *)(piVar7 + 0x13) = 0;
-      *(undefined2 *)(piVar7 + 0x18) = 0;
-      *(undefined2 *)(piVar7 + 0x16) = 0;
-      *(undefined2 *)((int)piVar7 + 0x5a) = 0;
-      *(undefined2 *)(piVar7 + 0x17) = 0;
-      *(undefined2 *)(piVar7 + 4) = 0;
-      *(undefined2 *)((int)piVar7 + 0x12) = 0;
-      iVar4 = (int)&(pMVar5->HeaderData).field0_0x0 + (uint)uVar1;
-      piVar7[-7] = iVar4;
-      piVar7[-6] = iVar4;
-      if ((uVar10 & 0xff) < 0x19) {
-        piVar7[1] = 1 << (uVar10 & 0x1f);
-        piVar7[2] = 0xff9f;
+      *(undefined2 *)((int)ppSVar6 + -0x2e) = 0x300;
+      *(SUZUKInoteflags4 *)((int)ppSVar6 + -0x2a) = 0;
+      uVar1 = *(ushort *)&(transferAddr->HeaderData).field_0x10;
+      *(undefined *)((int)ppSVar6 + -0x23) = 0x10;
+      *(char *)(ppSVar6 + -9) = t;
+      ppSVar6[-10] = (SoundFontHeader *)(uint)uVar1;
+      uVar1 = *_channel_ptr;
+      *(short *)((int)ppSVar6 + 0x4e) = 0x3c;
+      *(short *)((int)ppSVar6 + 0x4a) = 0xf;
+      *(short *)(ppSVar6 + 0x1f) = -1;
+      *(short *)(ppSVar6 + 0x19) = 0x6000;
+      ppSVar6[0x1a] = (SoundFontHeader *)0x7f000000;
+      *(short *)((int)ppSVar6 + 0x62) = 0x4000;
+      *(byte *)((int)ppSVar6 + -3) = (byte)_t;
+      ppSVar6[-5] = (SoundFontHeader *)0x0;
+      ppSVar6[-3] = (SoundFontHeader *)0x0;
+      *(short *)(ppSVar6 + -2) = 0;
+      *(undefined *)((int)ppSVar6 + -6) = 0;
+      *(short *)(ppSVar6 + 0x11) = 0;
+      *(undefined *)((int)ppSVar6 + 0x46) = 0;
+      *(undefined2 *)((int)ppSVar6 + 0x56) = 0;
+      *(undefined *)(ppSVar6 + 0x13) = 0;
+      *(short *)(ppSVar6 + 0x18) = 0;
+      *(undefined2 *)(ppSVar6 + 0x16) = 0;
+      *(undefined2 *)((int)ppSVar6 + 0x5a) = 0;
+      *(undefined2 *)(ppSVar6 + 0x17) = 0;
+      *(short *)(ppSVar6 + 4) = 0;
+      *(short *)((int)ppSVar6 + 0x12) = 0;
+      pSVar4 = (SoundFontHeader *)((transferAddr->HeaderData).smds + uVar1);
+      ppSVar6[-7] = pSVar4;
+      ppSVar6[-6] = pSVar4;
+      if ((_t & 0xff) < 0x19) {
+        ((MusicChannelInner *)(ppSVar6 + 1))->using_channels = (uint)(1 << (_t & 0x1f));
+        ppSVar6[2] = (SoundFontHeader *)0xff9f;
       }
       else {
-        piVar7[1] = 0;
-        piVar7[2] = 0;
+        ((MusicChannelInner *)(ppSVar6 + 1))->using_channels = 0;
+        ppSVar6[2] = (SoundFontHeader *)0x0;
       }
-      iVar4 = 3;
-      puVar3 = &pMVar8->ModifiedChannels;
+      iVar5 = 3;
+      puVar3 = &(channelData->channel_inter).channelSecondary.channel_notedata.release_mode;
       do {
         *(undefined2 *)((int)puVar3 + 0xfe) = 0;
-        iVar4 = iVar4 + -1;
+        iVar5 = iVar5 + -1;
         puVar3 = puVar3 + -8;
-      } while (-1 < iVar4);
-      *piVar7 = iVar9;
-      if (iVar9 != 0) {
-        Set_Instrument(0,(ushort *)pMVar8);
+      } while (-1 < iVar5);
+      *ppSVar6 = _waveset_addr;
+      if (_waveset_addr != (SoundFontHeader *)0x0) {
+        Set_Instrument(0,channelData);
       }
     }
-    puVar11 = puVar11 + 1;
-    uVar10 = uVar10 + 1;
-    uVar12 = uVar12 << 1;
-    piVar7 = piVar7 + 0x58;
-    pMVar8 = (MusicDataHeader *)&pMVar8[1].field_0xa8;
-    cVar14 = cVar14 + '\x01';
-    if (0x18 < (int)uVar10) {
-      uVar10 = 0;
+    _channel_ptr = _channel_ptr + 1;
+    _t = _t + 1;
+    i = i << 1;
+    ppSVar6 = ppSVar6 + 0x58;
+    channelData = channelData + 1;
+    t = t + '\x01';
+    if (0x18 < (int)_t) {
+      _t = 0;
     }
-    uVar13 = uVar13 - 1;
-  } while (uVar13 != 0);
-  MusicData->OwnedChannels = uVar6;
+    numChannels = numChannels - 1;
+  } while (numChannels != 0);
+  (MusicData->HeaderData).OwnedChannels = _z;
   return;
 }
 
 
 
-void Play_Sound_Worker(uint param_1,uint sfx_ID,short param_3,undefined2 param_4)
+void Play_Sound_Worker(uint param_1,uint sfx_ID,short param_3,short param_4)
 
 {
   ushort uVar1;
-  undefined4 uVar2;
-  mus_voiceChannelFunc *pmVar3;
-  uint uVar4;
-  undefined *puVar5;
+  MusicChannelData *pMVar2;
+  undefined4 uVar3;
+  MusicChannelSecondary *pMVar4;
+  uint uVar5;
+  uint *_release_mode;
   int iVar6;
-  uint *puVar7;
+  MusicChannelInner *pMVar7;
   MusicChannelData *ChannelData;
+  MusicChannelData *_channeldata;
   int iVar8;
+  uint _channels;
+  SoundFontHeader *_waveset_addr;
   int iVar9;
-  int iVar10;
-  ushort *puVar11;
+  ushort *puVar10;
+  uint uVar11;
   uint uVar12;
-  uint uVar13;
-  uint uVar14;
-  undefined2 local_50;
+  short local_50;
   uint local_40;
   MusDataAll *MusData;
+  mus_10 _cmdfield;
+  SUZUKIchannel_flags *_hassound_ptr;
   
   MusData = FirstMUS;
   local_40 = 0;
-  uVar12 = 0;
+  _channels = 0;
   uVar1 = *(ushort *)(DAT_80032a00 + 10);
-  iVar10 = DAT_80032a00;
+  iVar9 = DAT_80032a00;
   while ((uint)uVar1 != (int)sfx_ID >> 0x10) {
-    iVar10 = *(int *)(iVar10 + 0x10);
-    if (iVar10 == 0) {
+    iVar9 = *(int *)(iVar9 + 0x10);
+    if (iVar9 == 0) {
       return;
     }
-    uVar1 = *(ushort *)(iVar10 + 10);
+    uVar1 = *(ushort *)(iVar9 + 10);
   }
-  iVar9 = DAT_80032a44;
-  if (DAT_80032a44 != 0) {
+  _waveset_addr = WAVESET_addr;
+  if (WAVESET_addr != (SoundFontHeader *)0x0) {
     do {
-      if ((uint)*(ushort *)(iVar9 + 0x20) ==
-          (int)*(short *)((int)&(FirstMUS->HeaderData).NumChannels + 2)) break;
-      iVar9 = *(int *)(iVar9 + 0x2c);
-    } while (iVar9 != 0);
-    if (iVar9 == 0) {
-      iVar9 = DAT_80032a44;
+      if ((uint)(ushort)_waveset_addr->soundfont_ID == (int)(FirstMUS->HeaderData).Soundfont_ID)
+      break;
+      _waveset_addr = _waveset_addr->next_soundfont;
+    } while (_waveset_addr != (SoundFontHeader *)0x0);
+    if (_waveset_addr == (SoundFontHeader *)0x0) {
+      _waveset_addr = WAVESET_addr;
     }
   }
-  uVar14 = (int)param_3 *
-           (uint)*(byte *)(iVar10 + (uint)*(ushort *)(iVar10 + 0xc) + (sfx_ID & 0xffff));
-  local_50 = (undefined2)(uVar14 >> 7);
-  if ((uVar14 >> 0x16 & 1) != 0) {
+  uVar12 = (int)param_3 *
+           (uint)*(byte *)(iVar9 + (uint)*(ushort *)(iVar9 + 0xc) + (sfx_ID & 0xffff));
+  local_50 = (short)(uVar12 >> 7);
+  if ((uVar12 >> 0x16 & 1) != 0) {
     local_50 = 0x7fff;
   }
-  puVar11 = (ushort *)(iVar10 + (sfx_ID & 0xffff) * 4 + 0x14);
-  uVar13 = 1 << (param_1 & 0x1f);
+  puVar10 = (ushort *)(iVar9 + (sfx_ID & 0xffff) * 4 + 0x14);
+  uVar11 = 1 << (param_1 & 0x1f);
   ChannelData = FirstMUS->ChannelData + (param_1 & 0xff);
   iVar8 = (int)always2;
-  puVar7 = &ChannelData->hasChannel;
+  pMVar7 = &(ChannelData->channel_inter).channelSecondary.channel_notedata;
   DisableEvent(rootCounter2Event);
-  uVar14 = 0;
+  uVar12 = 0;
   do {
-    uVar2 = DAT_80032a2c;
-    puVar7[-0xb] = sfx_ID;
-    puVar7[-9] = uVar2;
-    *(char *)((int)puVar7 + -0x27) = (char)(param_1 >> 8);
+    uVar3 = DAT_80032a2c;
+    *(uint *)((int)(pMVar7 + -1) + 0x100) = sfx_ID;
+    *(undefined4 *)((int)(pMVar7 + -1) + 0x108) = uVar3;
+    *(char *)((int)(pMVar7 + -1) + 0x105) = (char)(param_1 >> 8);
     iVar6 = 3;
-    if (*puVar11 == 0) {
-      if ((ChannelData->hasSound & 1) != 0) {
-        uVar12 = uVar12 | *puVar7;
+    if (*puVar10 == 0) {
+      if ((ChannelData->channelflags & 1) != 0) {
+        _channels = _channels | pMVar7->using_channels;
       }
-      ChannelData->hasSound = 0;
+      ChannelData->channelflags = 0;
     }
     else {
-      local_40 = local_40 | uVar13;
-      uVar4 = *puVar7;
-      puVar5 = &ChannelData->field_0x60;
-      ChannelData->hasSound = 0x409;
-      *(ushort *)((int)puVar7 + -0x32) = 0x100;
-      *(undefined2 *)((int)puVar7 + -0x2e) = 0;
-      uVar1 = *puVar11;
-      *(undefined2 *)((int)puVar7 + 0x4a) = 0x3c;
-      *(undefined2 *)((int)puVar7 + 0x46) = 0xf;
-      puVar7[-6] = 0;
-      puVar7[-4] = 0;
-      *(undefined2 *)(puVar7 + -3) = 0;
-      *(undefined *)((int)puVar7 + -10) = 0;
-      *(undefined2 *)(puVar7 + 0x10) = 0;
-      *(undefined *)((int)puVar7 + 0x42) = 0;
-      *(undefined2 *)((int)puVar7 + 0x52) = 0;
-      *(undefined *)(puVar7 + 0x12) = 0;
-      *(undefined2 *)(puVar7 + 0x1e) = 0xffff;
-      puVar7[0x19] = 0x7f000000;
-      uVar14 = uVar14 | uVar4;
-      *(undefined2 *)(puVar7 + 0x18) = local_50;
-      *(undefined2 *)(puVar7 + 0x17) = 0;
-      *(undefined2 *)(puVar7 + 0x15) = 0;
-      *(undefined2 *)((int)puVar7 + 0x56) = 0;
-      *(undefined2 *)(puVar7 + 0x16) = 0;
-      *(undefined2 *)(puVar7 + 3) = 0;
-      *(undefined2 *)((int)puVar7 + 0xe) = 0;
-      puVar7[-8] = iVar10 + (uint)uVar1;
-      puVar7[-7] = iVar10 + (uint)uVar1;
-      *(undefined2 *)((int)puVar7 + 0x5e) = param_4;
+      local_40 = local_40 | uVar11;
+      uVar5 = pMVar7->using_channels;
+      _release_mode = &(ChannelData->channel_inter).channelSecondary.channel_notedata.release_mode;
+      ChannelData->channelflags = 0x409;
+      *(undefined2 *)((int)(pMVar7 + -1) + 0xfa) = 0x100;
+      *(undefined2 *)((int)(pMVar7 + -1) + 0xfe) = 0;
+      uVar1 = *puVar10;
+      pMVar7->octave = 0x3c;
+      pMVar7->field38_0x46 = 0xf;
+      *(undefined4 *)((int)(pMVar7 + -1) + 0x114) = 0;
+      *(undefined4 *)((int)(pMVar7 + -1) + 0x11c) = 0;
+      *(undefined2 *)((int)(pMVar7 + -1) + 0x120) = 0;
+      *(undefined *)((int)(pMVar7 + -1) + 0x122) = 0;
+      pMVar7->fermata_notelength = 0;
+      pMVar7->field_0x42 = 0;
+      *(undefined2 *)&pMVar7->field_0x52 = 0;
+      pMVar7->field_0x48 = 0;
+      pMVar7->repeat_count = -1;
+      pMVar7->vol_left = 0;
+      pMVar7->vol_right = 0x7f00;
+      uVar12 = uVar12 | uVar5;
+      pMVar7->field56_0x60 = local_50;
+      pMVar7->field54_0x5c = 0;
+      *(undefined2 *)&pMVar7->field_0x54 = 0;
+      *(undefined2 *)&pMVar7->field_0x56 = 0;
+      *(undefined2 *)&pMVar7->field53_0x58 = 0;
+      pMVar7->left_sweep_type = 0;
+      pMVar7->right_sweep_type = 0;
+      *(uint *)((int)(pMVar7 + -1) + 0x10c) = iVar9 + (uint)uVar1;
+      *(uint *)((int)(pMVar7 + -1) + 0x110) = iVar9 + (uint)uVar1;
+      pMVar7->Vol_Bal = param_4;
       do {
-        *(undefined2 *)(puVar5 + 0xfe) = 0;
+        *(undefined2 *)((int)_release_mode + 0xfe) = 0;
         iVar6 = iVar6 + -1;
-        puVar5 = puVar5 + -0x20;
+        _release_mode = _release_mode + -8;
       } while (-1 < iVar6);
-      puVar7[-1] = iVar9;
-      if (iVar9 != 0) {
-        Set_Instrument((int)DAT_80032a1c,&ChannelData->hasSound);
+      *(SoundFontHeader **)((int)(pMVar7 + -1) + 0x128) = _waveset_addr;
+      if (_waveset_addr != (SoundFontHeader *)0x0) {
+        Set_Instrument((int)base_instrument,ChannelData);
       }
     }
-    puVar11 = puVar11 + 1;
-    uVar13 = uVar13 << 1;
-    puVar7 = puVar7 + 0x58;
+    puVar10 = puVar10 + 1;
+    uVar11 = uVar11 << 1;
+    pMVar7 = (MusicChannelInner *)((int)(pMVar7 + 1) + 0x34);
     iVar8 = iVar8 + -1;
     ChannelData = ChannelData + 1;
   } while (iVar8 != 0);
-  uVar12 = uVar12 | uVar14 | acc_activeChannels;
-  uVar13 = ~uVar12;
+  _channels = _channels | uVar12 | acc_activeChannels;
+  uVar11 = ~_channels;
   (MusData->HeaderData).OwnedChannels =
        local_40 | ~acc_inactiveChannels & (MusData->HeaderData).OwnedChannels;
-  *(uint *)&(MusData->HeaderData).field_0x64 = uVar13 & *(uint *)&(MusData->HeaderData).field_0x64;
-  (MusData->HeaderData).ModifiedChannels = uVar13 & (MusData->HeaderData).ModifiedChannels;
-  PausedMusicChannels = uVar12 | PausedMusicChannels;
-  PitchLFO_onlyInclude = uVar14 | uVar13 & PitchLFO_onlyInclude;
-  (MusData->HeaderData).LFOVoiceBits = uVar13 & (MusData->HeaderData).LFOVoiceBits;
-  (MusData->HeaderData).NoiseVoiceBits = uVar13 & (MusData->HeaderData).NoiseVoiceBits;
+  (MusData->HeaderData).field52_0x64 = uVar11 & (MusData->HeaderData).field52_0x64;
+  (MusData->HeaderData).ModifiedChannels = uVar11 & (MusData->HeaderData).ModifiedChannels;
+  PausedMusicChannels = _channels | PausedMusicChannels;
+  PitchLFO_onlyInclude = uVar12 | uVar11 & PitchLFO_onlyInclude;
+  (MusData->HeaderData).LFOVoiceBits = uVar11 & (MusData->HeaderData).LFOVoiceBits;
+  (MusData->HeaderData).NoiseVoiceBits = uVar11 & (MusData->HeaderData).NoiseVoiceBits;
   acc_inactiveChannels = 0;
   acc_activeChannels = 0;
-  (MusData->HeaderData).ReverbVoiceBits = uVar13 & (MusData->HeaderData).ReverbVoiceBits;
-  ChooseVoice = ChooseVoice | (CalcLFOVoices1|CalcLFOVoices2|CalcReverbVoices);
-  *(ushort *)&(MusData->HeaderData).field5_0x10 =
-       *(ushort *)&(MusData->HeaderData).field5_0x10 | 0x8000;
-  MusData = LastOpenedMus;
-  if (uVar14 != 0) {
-    for (; MusData != (MusDataAll *)0x0; MusData = *(MusDataAll **)&MusData->HeaderData) {
-      uVar1 = *(ushort *)&(MusData->HeaderData).field5_0x10;
-      if (((uVar1 & 1) != 0) && ((int)((uint)uVar1 << 0x10) < 0)) {
-        ChannelData = MusData->ChannelData;
-        uVar12 = (uint)*(byte *)&(MusData->HeaderData).NumChannels;
-        pmVar3 = &MusData->ChannelData[0].channelFunc;
+  (MusData->HeaderData).ReverbVoiceBits = uVar11 & (MusData->HeaderData).ReverbVoiceBits;
+  ChooseVoice = ChooseVoice | (CalcLFOVoices|CalcNoiseVoices|CalcReverbVoices);
+  (MusData->HeaderData)._0_cmdfield = (MusData->HeaderData)._0_cmdfield | music_playing;
+  MusData = CurrentlyPlayingMus;
+  if (uVar12 != 0) {
+    for (; MusData != (MusDataAll *)0x0; MusData = (MusData->HeaderData).PrevPlayedMus) {
+      _cmdfield = (MusData->HeaderData)._0_cmdfield;
+      if (((_cmdfield & actionflag1) != 0) && ((int)((uint)_cmdfield << 0x10) < 0)) {
+        _channeldata = MusData->ChannelData;
+        _channels = (uint)(MusData->HeaderData).NumChannels;
+        pMVar2 = MusData->ChannelData;
         do {
-          puVar11 = &ChannelData->hasSound;
-          ChannelData = ChannelData + 1;
-          if (((*puVar11 & 1) != 0) && ((uVar14 & *(uint *)(pmVar3 + 0x18)) != 0)) {
-            *pmVar3 = *pmVar3 | 0x71ff;
+          pMVar4 = &(pMVar2->channel_inter).channelSecondary;
+          _hassound_ptr = &_channeldata->channelflags;
+          _channeldata = _channeldata + 1;
+          if (((*_hassound_ptr & 1) != 0) &&
+             ((uVar12 & (pMVar4->channel_notedata).using_channels) != 0)) {
+            pMVar4->channelFunc = pMVar4->channelFunc | 0x71ff;
           }
-          uVar12 = uVar12 - 1;
-          pmVar3 = pmVar3 + 0xb0;
-        } while (uVar12 != 0);
+          _channels = _channels - 1;
+          pMVar2 = (MusicChannelData *)(pMVar4 + 1);
+        } while (_channels != 0);
       }
     }
   }
@@ -8230,20 +8390,20 @@ void Play_Sound_Worker(uint param_1,uint sfx_ID,short param_3,undefined2 param_4
 
 
 
-void FUN_80013f74(int param_1)
+void Remove_Mus_From_Queue_Forward(MusicDataHeader *musData)
 
 {
-  int iVar1;
-  int iVar2;
+  MusDataAll *_nextMus;
+  MusDataAll *_nextnext_mus;
   
-  iVar1 = *(int *)(param_1 + 4);
-  if (iVar1 != 0) {
-    *(undefined4 *)(param_1 + 4) = 0;
+  _nextMus = musData->NextMus;
+  if (_nextMus != (MusDataAll *)0x0) {
+    musData->NextMus = (MusDataAll *)0x0;
     do {
-      iVar2 = *(int *)(iVar1 + 4);
-      FUN_80014358(iVar1);
-      iVar1 = iVar2;
-    } while (iVar2 != 0);
+      _nextnext_mus = (_nextMus->HeaderData).NextMus;
+      Deallocate_Mus_RAM((uint *)_nextMus);
+      _nextMus = _nextnext_mus;
+    } while (_nextnext_mus != (MusDataAll *)0x0);
   }
   return;
 }
@@ -8266,7 +8426,7 @@ void FUN_80013fc0(undefined4 *param_1,undefined4 *param_2)
 
 
 
-void FUN_80014024(MusicDataHeader *MusicData)
+void PlayMus(MusDataAll *MusicData)
 
 {
   MusDataAll *Mus;
@@ -8274,53 +8434,51 @@ void FUN_80014024(MusicDataHeader *MusicData)
   
   DisableEvent(rootCounter2Event);
   gpuInterruptedEvent = rootCounter2Event;
-  Mus = (MusDataAll *)MusicData;
-  *(MusDataAll **)MusicData = LastOpenedMus;
-  LastOpenedMus = Mus;
+  Mus = MusicData;
+  (MusicData->HeaderData).PrevPlayedMus = CurrentlyPlayingMus;
+  CurrentlyPlayingMus = Mus;
   EnableEvent(gpuInterruptedEvent);
   return;
 }
 
 
 
-undefined4 FUN_80014078(MusicDataHeader *param_1)
+int Remove_Mus_From_Queue(MusDataAll *MusData)
 
 {
-  undefined2 uVar1;
-  MusDataAll *pMVar2;
-  MusDataAll *pMVar3;
-  uint uVar4;
-  MusDataAll *pMVar5;
+  MusDataAll *_mus;
+  MusDataAll *_curMus;
+  uint _activeChannels;
+  MusDataAll *_lastMus;
+  mus_10 _cmdfield;
   
-  pMVar3 = LastOpenedMus;
-  pMVar5 = (MusDataAll *)0x0;
-  if (LastOpenedMus != (MusDataAll *)0x0) {
+  _curMus = CurrentlyPlayingMus;
+  _lastMus = (MusDataAll *)0x0;
+  if (CurrentlyPlayingMus != (MusDataAll *)0x0) {
     do {
-      pMVar2 = pMVar3;
-      pMVar3 = pMVar2;
-      if (pMVar2 == (MusDataAll *)param_1) break;
-      pMVar3 = *(MusDataAll **)&pMVar2->HeaderData;
-      pMVar5 = pMVar2;
-    } while (pMVar3 != (MusDataAll *)0x0);
-    if (pMVar3 != (MusDataAll *)0x0) {
-      if ((((int)(short)*(ushort *)&param_1->field5_0x10 & 0x8000U) != 0) &&
-         (param_1 != (MusicDataHeader *)0x0)) {
-        *(ushort *)&param_1->field5_0x10 = *(ushort *)&param_1->field5_0x10 & 0x7fff;
-        uVar4 = FUN_800135fc((int)param_1);
-        DAT_80032a08 = uVar4 | DAT_80032a08;
+      _mus = _curMus;
+      _curMus = _mus;
+      if (_mus == MusData) break;
+      _curMus = (_mus->HeaderData).PrevPlayedMus;
+      _lastMus = _mus;
+    } while (_curMus != (MusDataAll *)0x0);
+    if (_curMus != (MusDataAll *)0x0) {
+      _cmdfield = (MusData->HeaderData)._0_cmdfield;
+      if ((((int)(short)_cmdfield & 0x8000U) != 0) && (MusData != (MusDataAll *)0x0)) {
+        (MusData->HeaderData)._0_cmdfield = _cmdfield & ~music_playing;
+        _activeChannels = getActiveChannels(MusData);
+        inactiveChannels = _activeChannels | inactiveChannels;
       }
-      if (pMVar5 == (MusDataAll *)0x0) {
-        LastOpenedMus = *(MusDataAll **)param_1;
+      if (_lastMus == (MusDataAll *)0x0) {
+        CurrentlyPlayingMus = (MusData->HeaderData).PrevPlayedMus;
       }
       else {
-        uVar1 = param_1->field1_0x2;
-        (pMVar5->HeaderData).field0_0x0 = param_1->field0_0x0;
-        (pMVar5->HeaderData).field1_0x2 = uVar1;
+        (_lastMus->HeaderData).PrevPlayedMus = (MusData->HeaderData).PrevPlayedMus;
       }
       return 0;
     }
   }
-  return 0xffffffff;
+  return -1;
 }
 
 
@@ -8329,13 +8487,13 @@ void SetGlobalMusicVariables(MusicDataHeader *GlobalMusicData,uint MaxMusicDataS
 
 {
   MaxMusDataSize = MaxMusicDataSize & 0xfffffff0;
-  MaxEndMusDataArray = (int)&GlobalMusicData->field0_0x0 + MaxMusDataSize;
-  GlobalMusicData->field0_0x0 = 0x8000;
+  MaxEndMusDataArray = (int)&GlobalMusicData->PrevPlayedMus + MaxMusDataSize;
+  *(undefined2 *)&GlobalMusicData->PrevPlayedMus = 0x8000;
   GlobalMusData2 = GlobalMusicData;
-  GlobalMusData = GlobalMusicData;
-  GlobalMusicData->field1_0x2 = 0;
-  GlobalMusicData->field2_0x4 = (MusDataAll *)0x0;
-  GlobalMusicData->NextMusDat = (MusDataAll *)&GlobalMusicData->field5_0x10;
+  GlobalMusData = (MusDataAll *)GlobalMusicData;
+  *(undefined2 *)((int)&GlobalMusicData->PrevPlayedMus + 2) = 0;
+  GlobalMusicData->NextMus = (MusDataAll *)0x0;
+  GlobalMusicData->TransferAddr = (SMDDataAll *)&GlobalMusicData->_0_cmdfield;
   GlobalMusicData->DedicatedSpace = 0;
   return;
 }
@@ -8350,60 +8508,92 @@ MusDataAll * FindSpaceForSMDMUS(uint SMDSize)
   int MusDataCurSize;
   uint MusDataSizeCheck;
   uint SMDSizeRounded;
-  MusicDataHeader *HeaderData;
+  MusDataAll *HeaderData;
   
   SMDSizeRounded = (SMDSize + 0xf & 0xfffffff0) + 0x10;
-  MusDataCurSize = GlobalMusData->DedicatedSpace;
+  MusDataCurSize = (GlobalMusData->HeaderData).DedicatedSpace;
   HeaderData = GlobalMusData;
   while (MusDataCurSize != 0) {
-    MusDataSizeCheck = HeaderData->DedicatedSpace;
-    if (SMDSizeRounded <= MusDataSizeCheck - (int)HeaderData->NextMusDat) goto SpaceFound;
-    HeaderData = (MusicDataHeader *)MusDataSizeCheck;
+    MusDataSizeCheck = (HeaderData->HeaderData).DedicatedSpace;
+    if (SMDSizeRounded <= MusDataSizeCheck - (int)(HeaderData->HeaderData).TransferAddr)
+    goto SpaceFound;
+    HeaderData = (MusDataAll *)MusDataSizeCheck;
     MusDataCurSize = *(int *)(MusDataSizeCheck + 0xc);
   }
-  if ((uint)(MaxEndMusDataArray - (int)HeaderData->NextMusDat) < SMDSizeRounded) {
+  if ((uint)(MaxEndMusDataArray - (int)(HeaderData->HeaderData).TransferAddr) < SMDSizeRounded) {
     MusData = (MusDataAll *)0x0;
   }
   else {
 SpaceFound:
     CurMusDataSize =
-         (uint)((int)&(HeaderData->NextMusDat->HeaderData).DedicatedSpace + 3) & 0xfffffff0;
+         (uint)&(((HeaderData->HeaderData).TransferAddr)->HeaderData).field_0xf & 0xfffffff0;
     MusData = (MusDataAll *)(CurMusDataSize + 0x10);
-    *(uint *)(CurMusDataSize + 8) = (int)&(MusData->HeaderData).field0_0x0 + SMDSize;
+    *(uint *)(CurMusDataSize + 8) = (int)&(MusData->HeaderData).PrevPlayedMus + SMDSize;
     *(undefined4 *)(CurMusDataSize + 0xc) = 0;
     *(undefined4 *)(CurMusDataSize + 4) = 0;
     *(undefined2 *)CurMusDataSize = 2;
     *(undefined2 *)(CurMusDataSize + 2) = 0;
-    *(int *)(CurMusDataSize + 0xc) = HeaderData->DedicatedSpace;
-    HeaderData->DedicatedSpace = CurMusDataSize;
-    FUN_800144d0(MusData,SMDSize);
+    *(int *)(CurMusDataSize + 0xc) = (HeaderData->HeaderData).DedicatedSpace;
+    (HeaderData->HeaderData).DedicatedSpace = CurMusDataSize;
+    FUN_800144d0((SMDDataAll *)MusData,SMDSize);
   }
   return MusData;
 }
 
 
 
-void FUN_80014358(int param_1)
+void Deallocate_Mus_RAM(uint *musData)
 
 {
-  MusicDataHeader *pMVar1;
-  MusicDataHeader *MusData;
+  uint *_finalAddr;
+  MusDataAll *_transferAddr;
   
-  pMVar1 = (MusicDataHeader *)0x0;
-  MusData = GlobalMusData;
-  if (GlobalMusData != (MusicDataHeader *)(param_1 + -0x10)) {
+  _finalAddr = musData + -4;
+  _transferAddr = (MusDataAll *)0x0;
+  _transferAddr = GlobalMusData;
+  if (GlobalMusData != (MusDataAll *)_finalAddr) {
     do {
-      pMVar1 = MusData;
-      MusData = (MusicDataHeader *)pMVar1->DedicatedSpace;
-    } while ((MusicDataHeader *)pMVar1->DedicatedSpace != (MusicDataHeader *)(param_1 + -0x10));
+      _transferAddr = _transferAddr;
+      _transferAddr = (MusDataAll *)(_transferAddr->HeaderData).DedicatedSpace;
+    } while (_transferAddr != (MusDataAll *)_finalAddr);
   }
-  if (pMVar1 == (MusicDataHeader *)0x0) {
-    GlobalMusData = (MusicDataHeader *)GlobalMusData->DedicatedSpace;
+  if (_transferAddr == (MusDataAll *)0x0) {
+    GlobalMusData = (MusDataAll *)(GlobalMusData->HeaderData).DedicatedSpace;
   }
   else {
-    pMVar1->DedicatedSpace = *(int *)(param_1 + -4);
+    (_transferAddr->HeaderData).DedicatedSpace = musData[-1];
   }
   return;
+}
+
+
+
+uint FUN_800143ac(void)
+
+{
+  MusDataAll *pMVar1;
+  int iVar2;
+  uint uVar3;
+  MusDataAll *pMVar4;
+  uint uVar5;
+  
+  uVar5 = 0;
+  iVar2 = (GlobalMusData->HeaderData).DedicatedSpace;
+  pMVar1 = GlobalMusData;
+  while (iVar2 != 0) {
+    pMVar4 = (MusDataAll *)(pMVar1->HeaderData).DedicatedSpace;
+    uVar3 = (int)pMVar4 - (int)(pMVar1->HeaderData).TransferAddr & 0xfffffff0;
+    if ((int)uVar5 < (int)uVar3) {
+      uVar5 = uVar3;
+    }
+    pMVar1 = pMVar4;
+    iVar2 = (pMVar4->HeaderData).DedicatedSpace;
+  }
+  uVar3 = MaxEndMusDataArray - (int)(pMVar1->HeaderData).TransferAddr & 0xfffffff0;
+  if ((int)uVar5 < (int)uVar3) {
+    uVar5 = uVar3;
+  }
+  return uVar5;
 }
 
 
@@ -8458,35 +8648,33 @@ void FUN_8001442c(undefined4 *param_1,undefined4 *param_2,uint param_3)
 
 
 
-void FUN_800144d0(MusDataAll *MusPtr,uint SMDSize)
+void FUN_800144d0(SMDDataAll *SMDPtr,uint SMDSize)
 
 {
   int SizeMult10;
-  uint uVar1;
-  MusDataAll **ppMVar2;
+  uint _i;
+  uint *_clearaddr;
   
   SizeMult10 = (int)SMDSize >> 4;
   if (SizeMult10 != 0) {
-    ppMVar2 = &(MusPtr->HeaderData).field2_0x4;
+    _clearaddr = (uint *)&(SMDPtr->HeaderData).field_0x4;
     do {
-      ppMVar2[2] = (MusDataAll *)0x0;
-      ppMVar2[1] = (MusDataAll *)0x0;
-      *ppMVar2 = (MusDataAll *)0x0;
-      ppMVar2 = ppMVar2 + 4;
-      (MusPtr->HeaderData).field0_0x0 = 0;
-      (MusPtr->HeaderData).field1_0x2 = 0;
+      _clearaddr[2] = 0;
+      _clearaddr[1] = 0;
+      *_clearaddr = 0;
+      _clearaddr = _clearaddr + 4;
+      *(undefined4 *)(SMDPtr->HeaderData).smds = 0;
       SizeMult10 = SizeMult10 + -1;
-      MusPtr = (MusDataAll *)&(MusPtr->HeaderData).field5_0x10;
+      SMDPtr = (SMDDataAll *)&(SMDPtr->HeaderData).field_0x10;
     } while (SizeMult10 != 0);
   }
-  for (uVar1 = (int)SMDSize >> 2 & 3; uVar1 != 0; uVar1 = uVar1 - 1) {
-    (MusPtr->HeaderData).field0_0x0 = 0;
-    (MusPtr->HeaderData).field1_0x2 = 0;
-    MusPtr = (MusDataAll *)&(MusPtr->HeaderData).field2_0x4;
+  for (_i = (int)SMDSize >> 2 & 3; _i != 0; _i = _i - 1) {
+    *(undefined4 *)(SMDPtr->HeaderData).smds = 0;
+    SMDPtr = (SMDDataAll *)&(SMDPtr->HeaderData).field_0x4;
   }
-  for (uVar1 = SMDSize & 3; uVar1 != 0; uVar1 = uVar1 - 1) {
-    *(undefined *)&(MusPtr->HeaderData).field0_0x0 = 0;
-    MusPtr = (MusDataAll *)((int)&(MusPtr->HeaderData).field0_0x0 + 1);
+  for (_i = SMDSize & 3; _i != 0; _i = _i - 1) {
+    (SMDPtr->HeaderData).smds[0] = '\0';
+    SMDPtr = (SMDDataAll *)((SMDPtr->HeaderData).smds + 1);
   }
   return;
 }
@@ -8530,85 +8718,98 @@ undefined4 Call_SpuFree(uint param_1)
 void Calc_Mus_VoiceCh_Settings(void)
 
 {
-  ushort uVar1;
-  uint uVar2;
-  mus_voiceChannelFunc *_channelFunc_ptr;
+  uint _voice;
+  MusicChannelSecondary *_channelSecondary;
   mus_voiceChannelFunc _channelFunc;
   MusDataAll *MusToPush;
   MusicChannelData *_channelData;
   uint ChannelCounter;
-  uint local_38;
+  uint _inactive_channels;
+  MusicChannelData *_channeladdr;
+  mus_10 _cmdfield;
   
-  MusToPush = LastOpenedMus;
-  if (LastOpenedMus != (MusDataAll *)0x0) {
+  MusToPush = CurrentlyPlayingMus;
+  if (CurrentlyPlayingMus != (MusDataAll *)0x0) {
     do {
-      uVar1 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
-      uVar2 = (uint)(short)uVar1;
-      if (((uVar2 & 0xc000) != 0) && ((uVar2 & 0x20) == 0)) {
-        *(ushort *)&(MusToPush->HeaderData).field5_0x10 = uVar1 & 0xbfff;
-        ChannelCounter = (uint)*(byte *)&(MusToPush->HeaderData).NumChannels;
+      _cmdfield = (MusToPush->HeaderData)._0_cmdfield;
+      _voice = (uint)(short)_cmdfield;
+      if (((_voice & 0xc000) != 0) && ((_voice & 0x20) == 0)) {
+        (MusToPush->HeaderData)._0_cmdfield = _cmdfield & 0xbfff;
+        ChannelCounter = (uint)(MusToPush->HeaderData).NumChannels;
         _channelData = MusToPush->ChannelData;
-        if ((uVar2 & 2) == 0) {
-          local_38 = ~(PitchLFO_onlyInclude | PausedMusicChannels);
+        if ((_voice & 2) == 0) {
+          _inactive_channels = ~(PitchLFO_onlyInclude | PausedMusicChannels);
         }
         else {
-          local_38 = 0xffffffff;
+          _inactive_channels = 0xffffffff;
         }
-        _channelFunc_ptr = &MusToPush->ChannelData[0].channelFunc;
+        _channeladdr = MusToPush->ChannelData;
         do {
-          if (((_channelData->hasSound & 1) != 0) &&
-             ((local_38 & *(uint *)(_channelFunc_ptr + 0x18)) != 0)) {
-            _channelFunc = *_channelFunc_ptr;
+          _channelSecondary = &(_channeladdr->channel_inter).channelSecondary;
+          if (((_channelData->channelflags & 1) != 0) &&
+             ((_inactive_channels & (_channelSecondary->channel_notedata).using_channels) != 0)) {
+            _channelFunc = _channelSecondary->channelFunc;
             if (_channelFunc != 0) {
-              uVar2 = (uint)*(byte *)((int)_channelFunc_ptr + 0x29);
-              if ((_channelFunc & 2) != 0) {
-                _channelFunc = _channelFunc & 0xfffe;
-                FUN_8001b4b0(uVar2,_channelFunc_ptr[0x1c],_channelFunc_ptr[0x1d],
-                             (int)(short)_channelFunc_ptr[0x1e],_channelFunc_ptr[0x1f]);
+              _voice = (uint)_channelSecondary->voice_ID;
+              if ((_channelFunc & Set_Sweep_VolMode) != 0) {
+                _channelFunc = _channelFunc & ~Adjust_Voice_Vol_Both;
+                Set_Sweep_VolMode(_voice,(_channelSecondary->channel_notedata).left_volume_setting,
+                                  (_channelSecondary->channel_notedata).right_volume_setting,
+                                  (_channelSecondary->channel_notedata).left_sweep_type,
+                                  (_channelSecondary->channel_notedata).right_sweep_type);
               }
-              if ((_channelFunc & 1) != 0) {
-                FUN_8001b428(uVar2,_channelFunc_ptr[0x1c],_channelFunc_ptr[0x1d]);
+              if ((_channelFunc & Adjust_Voice_Vol_Both) != 0) {
+                Adjust_Voice_Vol_Both
+                          (_voice,(_channelSecondary->channel_notedata).left_volume_setting,
+                           (_channelSecondary->channel_notedata).right_volume_setting);
               }
-              if ((_channelFunc & CalcLFOVoices1) != 0) {
-                FUN_8001b628(uVar2,_channelFunc_ptr[0x22]);
+              if ((_channelFunc & CalcLFOVoices) != 0) {
+                Set_ADPCM_SampleRate(_voice,(_channelSecondary->channel_notedata).ADPCM_samplerate);
               }
-              if ((_channelFunc & 8) != 0) {
-                FUN_8001b6a4(uVar2,*(uint *)(_channelFunc_ptr + 0x26));
-                FUN_8001b720(uVar2,*(uint *)(_channelFunc_ptr + 0x28));
+              if ((_channelFunc & Set_ADPCM_Addrs) != 0) {
+                Set_ADPCM_StartAddr(_voice,(_channelSecondary->channel_notedata).ADPCM_Start_addr);
+                Set_ADPCM_RepeatAddr(_voice,(_channelSecondary->channel_notedata).ADPCM_Repeat_addr)
+                ;
               }
-              if ((_channelFunc & CalcLFOVoices2) != 0) {
-                FUN_8001b938(uVar2,(uint)_channelFunc_ptr[0x30],*(int *)(_channelFunc_ptr + 0x2a));
+              if ((_channelFunc & CalcNoiseVoices) != 0) {
+                Adjust_Voice_Attack_ShiftStep
+                          (_voice,(uint)(_channelSecondary->channel_notedata).attack_shiftstep,
+                           (_channelSecondary->channel_notedata).attack_mode);
               }
-              if ((_channelFunc & 0x20) != 0) {
-                FUN_8001b79c(uVar2,(uint)_channelFunc_ptr[0x31]);
+              if ((_channelFunc & Adjust_Voice_Decay_Shift) != 0) {
+                Adjust_Voice_Decay_Shift(_voice,(_channelSecondary->channel_notedata).decay_shift);
               }
               if ((_channelFunc & CalcReverbVoices) != 0) {
-                FUN_8001b9d4(uVar2,(uint)_channelFunc_ptr[0x32],*(int *)(_channelFunc_ptr + 0x2c));
+                Adjust_Voice_Sustain
+                          (_voice,(uint)(ushort)(_channelSecondary->channel_notedata).sustain_flags,
+                           (_channelSecondary->channel_notedata).sustain_mode);
               }
-              if ((_channelFunc & 0x80) != 0) {
-                FUN_8001bab8(uVar2,_channelFunc_ptr[0x33],*(int *)(_channelFunc_ptr + 0x2e));
+              if ((_channelFunc & Adjust_Release) != 0) {
+                Adjust_Voice_Release
+                          (_voice,(_channelSecondary->channel_notedata).release_flags,
+                           (_channelSecondary->channel_notedata).release_mode);
               }
-              if ((_channelFunc & 0x100) != 0) {
-                FUN_8001b8b0(uVar2,_channelFunc_ptr[0x34]);
+              if ((_channelFunc & Adjust_Sustain_Level) != 0) {
+                Adjust_Voice_Sustain_Level(_voice,(_channelSecondary->channel_notedata).sus_lvl);
               }
-              if ((_channelFunc & CalcLFOVoices1) != 0) {
-                ChooseVoice = ChooseVoice | CalcLFOVoices1;
+              if ((_channelFunc & CalcLFOVoices) != 0) {
+                ChooseVoice = ChooseVoice | CalcLFOVoices;
               }
-              if ((_channelFunc & CalcLFOVoices2) != 0) {
-                ChooseVoice = ChooseVoice | CalcLFOVoices2;
+              if ((_channelFunc & CalcNoiseVoices) != 0) {
+                ChooseVoice = ChooseVoice | CalcNoiseVoices;
               }
               if ((_channelFunc & CalcReverbVoices) != 0) {
                 ChooseVoice = ChooseVoice | CalcReverbVoices;
               }
-              *_channelFunc_ptr = 0;
+              _channelSecondary->channelFunc = 0;
             }
           }
-          _channelFunc_ptr = _channelFunc_ptr + 0xb0;
+          _channeladdr = (MusicChannelData *)(_channelSecondary + 1);
           ChannelCounter = ChannelCounter - 1;
           _channelData = _channelData + 1;
         } while (ChannelCounter != 0);
       }
-      MusToPush = *(MusDataAll **)&MusToPush->HeaderData;
+      MusToPush = (MusToPush->HeaderData).PrevPlayedMus;
     } while (MusToPush != (MusDataAll *)0x0);
   }
   return;
@@ -8619,7 +8820,7 @@ void Calc_Mus_VoiceCh_Settings(void)
 void FUN_80014818(void)
 
 {
-  ushort uVar1;
+  mus_10 mVar1;
   uint uVar2;
   uint uVar3;
   MusDataAll *pMVar4;
@@ -8627,12 +8828,12 @@ void FUN_80014818(void)
   
   VoicestoRelease = 0;
   uVar2 = PitchLFO_onlyInclude | PausedMusicChannels;
-  pMVar4 = LastOpenedMus;
-  if (LastOpenedMus != (MusDataAll *)0x0) {
+  pMVar4 = CurrentlyPlayingMus;
+  if (CurrentlyPlayingMus != (MusDataAll *)0x0) {
     do {
-      uVar1 = *(ushort *)&(pMVar4->HeaderData).field5_0x10;
-      if ((short)uVar1 < 0) {
-        if ((uVar1 & 2) == 0) {
+      mVar1 = (pMVar4->HeaderData)._0_cmdfield;
+      if ((short)mVar1 < 0) {
+        if ((mVar1 & end_on_endbar) == 0) {
           uVar3 = ~uVar2 & (pMVar4->HeaderData).ModifiedChannels;
         }
         else {
@@ -8641,7 +8842,7 @@ void FUN_80014818(void)
         VoicestoRelease = VoicestoRelease | uVar3;
         (pMVar4->HeaderData).ModifiedChannels = 0;
       }
-      pMVar4 = *(MusDataAll **)&pMVar4->HeaderData;
+      pMVar4 = (pMVar4->HeaderData).PrevPlayedMus;
     } while (pMVar4 != (MusDataAll *)0x0);
   }
   if (VoicestoRelease != 0) {
@@ -8655,45 +8856,45 @@ void FUN_80014818(void)
 void FUN_800148b4(void)
 
 {
-  ushort uVar1;
+  mus_10 mVar1;
   uint uVar2;
   MusDataAll *pMVar3;
   uint uVar4;
-  uint uVar5;
+  uint Voice;
   uint VoicestoRelease;
   
   uVar4 = ~(PitchLFO_onlyInclude | PausedMusicChannels);
-  VoicestoRelease = uVar4 & DAT_80032a08 | PausedMusicChannels;
-  pMVar3 = LastOpenedMus;
-  if (LastOpenedMus != (MusDataAll *)0x0) {
+  VoicestoRelease = uVar4 & inactiveChannels | PausedMusicChannels;
+  pMVar3 = CurrentlyPlayingMus;
+  if (CurrentlyPlayingMus != (MusDataAll *)0x0) {
     do {
-      uVar1 = *(ushort *)&(pMVar3->HeaderData).field5_0x10;
-      if ((short)uVar1 < 0) {
-        if ((uVar1 & 2) == 0) {
-          uVar2 = uVar4 & *(uint *)&(pMVar3->HeaderData).field_0x64;
+      mVar1 = (pMVar3->HeaderData)._0_cmdfield;
+      if ((short)mVar1 < 0) {
+        if ((mVar1 & end_on_endbar) == 0) {
+          uVar2 = uVar4 & (pMVar3->HeaderData).field52_0x64;
         }
         else {
-          uVar2 = *(uint *)&(pMVar3->HeaderData).field_0x64;
+          uVar2 = (pMVar3->HeaderData).field52_0x64;
         }
         VoicestoRelease = VoicestoRelease | uVar2;
-        *(undefined4 *)&(pMVar3->HeaderData).field_0x64 = 0;
+        (pMVar3->HeaderData).field52_0x64 = 0;
       }
-      pMVar3 = *(MusDataAll **)&pMVar3->HeaderData;
+      pMVar3 = (pMVar3->HeaderData).PrevPlayedMus;
     } while (pMVar3 != (MusDataAll *)0x0);
   }
-  uVar4 = uVar4 & DAT_80032a08 | PausedMusicChannels;
+  uVar4 = uVar4 & inactiveChannels | PausedMusicChannels;
   if (uVar4 != 0) {
-    uVar5 = 0x17;
+    Voice = 0x17;
     uVar2 = 0x800000;
     do {
       if ((uVar4 & uVar2) != 0) {
-        FUN_8001bab8(uVar5,6,3);
+        Adjust_Voice_Release(Voice,6,3);
       }
-      uVar5 = uVar5 - 1;
-      uVar2 = 1 << (uVar5 & 0x1f);
-    } while (-1 < (int)uVar5);
+      Voice = Voice - 1;
+      uVar2 = 1 << (Voice & 0x1f);
+    } while (-1 < (int)Voice);
     PausedMusicChannels = 0;
-    DAT_80032a08 = 0;
+    inactiveChannels = 0;
   }
   if (VoicestoRelease != 0) {
     SetVoicestoRelease(0,VoicestoRelease);
@@ -8707,53 +8908,55 @@ undefined4 RootCount2Func(void)
 
 {
   byte bVar1;
-  short sVar2;
-  ushort uVar3;
-  uint uVar4;
-  uint uVar5;
-  int iVar6;
-  uint uVar7;
-  uint uVar8;
-  MusicChannelData *pMVar9;
+  mus_10 mVar2;
+  short _frames_until_beat;
+  ushort _next_beat;
+  uint _all_inactivechannel;
+  uint uVar3;
+  int iVar4;
+  SuzukiVolStore SVar5;
+  uint uVar6;
+  uint Voice;
+  MusicChannelData *_channelData;
   MusDataAll *MusToPush;
   chooseVoice _chooseVoice;
   
   Calc_Mus_VoiceCh_Settings();
   _chooseVoice = ChooseVoice;
-  if ((ChooseVoice & CalcLFOVoices1) != 0) {
+  if ((ChooseVoice & CalcLFOVoices) != 0) {
     Calc_Mus_PitchLFO_Voices();
   }
-  if ((_chooseVoice & CalcLFOVoices2) != 0) {
+  if ((_chooseVoice & CalcNoiseVoices) != 0) {
     Calc_Mus_PitchLFO_Voices2();
   }
   if ((_chooseVoice & CalcReverbVoices) != 0) {
     Calc_Mus_Reverb_Voices();
   }
-  uVar7 = 0;
+  uVar6 = 0;
   ChooseVoice = 0;
-  uVar4 = PitchLFO_onlyInclude | PausedMusicChannels;
-  for (MusToPush = LastOpenedMus; MusToPush != (MusDataAll *)0x0;
-      MusToPush = *(MusDataAll **)&MusToPush->HeaderData) {
-    uVar3 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
-    if ((short)uVar3 < 0) {
-      if ((uVar3 & 2) == 0) {
-        uVar5 = ~uVar4 & (MusToPush->HeaderData).ModifiedChannels;
+  _all_inactivechannel = PitchLFO_onlyInclude | PausedMusicChannels;
+  for (MusToPush = CurrentlyPlayingMus; MusToPush != (MusDataAll *)0x0;
+      MusToPush = (MusToPush->HeaderData).PrevPlayedMus) {
+    mVar2 = (MusToPush->HeaderData)._0_cmdfield;
+    if ((short)mVar2 < 0) {
+      if ((mVar2 & end_on_endbar) == 0) {
+        uVar3 = ~_all_inactivechannel & (MusToPush->HeaderData).ModifiedChannels;
       }
       else {
-        uVar5 = (MusToPush->HeaderData).ModifiedChannels;
+        uVar3 = (MusToPush->HeaderData).ModifiedChannels;
       }
-      uVar7 = uVar7 | uVar5;
+      uVar6 = uVar6 | uVar3;
       (MusToPush->HeaderData).ModifiedChannels = 0;
     }
   }
-  if (uVar7 != 0) {
-    SetVoicestoRelease(1,uVar7);
+  if (uVar6 != 0) {
+    SetVoicestoRelease(1,uVar6);
   }
-  iVar6 = DAT_80032a2c + 1;
-  uVar7 = DAT_80032a2c & 1;
-  DAT_80032a2c = iVar6;
-  MusToPush = LastOpenedMus;
-  if (uVar7 != 0) {
+  iVar4 = DAT_80032a2c + 1;
+  uVar6 = DAT_80032a2c & 1;
+  DAT_80032a2c = iVar4;
+  MusToPush = CurrentlyPlayingMus;
+  if (uVar6 != 0) {
     if (MasterVolStorage.ChangeVol != 0) {
       FUN_80014f18(&MasterVolStorage);
       SuzukiMvol = MasterVolStorage.hasVolume.Volume;
@@ -8766,125 +8969,119 @@ undefined4 RootCount2Func(void)
       SetVolBalance(CDVolStorage.hasVolume.Volume,&SuzukiSpuAttr.cd.volume,0);
       SuzukiSpuAttr.mask = SuzukiSpuAttr.mask | 0xc0;
     }
-    MusToPush = LastOpenedMus;
+    MusToPush = CurrentlyPlayingMus;
     if (SuzukiSpuAttr.mask != 0) {
       SpuSetCommonAttr(&SuzukiSpuAttr);
       SuzukiSpuAttr.mask = 0;
-      MusToPush = LastOpenedMus;
+      MusToPush = CurrentlyPlayingMus;
     }
   }
   do {
     if (MusToPush == (MusDataAll *)0x0) {
-      uVar4 = ~(PitchLFO_onlyInclude | PausedMusicChannels);
-      uVar7 = uVar4 & DAT_80032a08 | PausedMusicChannels;
-      for (MusToPush = LastOpenedMus; MusToPush != (MusDataAll *)0x0;
-          MusToPush = *(MusDataAll **)&MusToPush->HeaderData) {
-        uVar3 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
-        if ((short)uVar3 < 0) {
-          if ((uVar3 & 2) == 0) {
-            uVar5 = uVar4 & *(uint *)&(MusToPush->HeaderData).field_0x64;
+      _all_inactivechannel = ~(PitchLFO_onlyInclude | PausedMusicChannels);
+      uVar6 = _all_inactivechannel & inactiveChannels | PausedMusicChannels;
+      for (MusToPush = CurrentlyPlayingMus; MusToPush != (MusDataAll *)0x0;
+          MusToPush = (MusToPush->HeaderData).PrevPlayedMus) {
+        mVar2 = (MusToPush->HeaderData)._0_cmdfield;
+        if ((short)mVar2 < 0) {
+          if ((mVar2 & end_on_endbar) == 0) {
+            uVar3 = _all_inactivechannel & (MusToPush->HeaderData).field52_0x64;
           }
           else {
-            uVar5 = *(uint *)&(MusToPush->HeaderData).field_0x64;
+            uVar3 = (MusToPush->HeaderData).field52_0x64;
           }
-          uVar7 = uVar7 | uVar5;
-          *(undefined4 *)&(MusToPush->HeaderData).field_0x64 = 0;
+          uVar6 = uVar6 | uVar3;
+          (MusToPush->HeaderData).field52_0x64 = 0;
         }
       }
-      uVar4 = uVar4 & DAT_80032a08 | PausedMusicChannels;
-      if (uVar4 != 0) {
-        uVar8 = 0x17;
-        uVar5 = 0x800000;
+      _all_inactivechannel = _all_inactivechannel & inactiveChannels | PausedMusicChannels;
+      if (_all_inactivechannel != 0) {
+        Voice = 0x17;
+        uVar3 = 0x800000;
         do {
-          if ((uVar4 & uVar5) != 0) {
-            FUN_8001bab8(uVar8,6,3);
+          if ((_all_inactivechannel & uVar3) != 0) {
+            Adjust_Voice_Release(Voice,6,3);
           }
-          uVar8 = uVar8 - 1;
-          uVar5 = 1 << (uVar8 & 0x1f);
-        } while (-1 < (int)uVar8);
+          Voice = Voice - 1;
+          uVar3 = 1 << (Voice & 0x1f);
+        } while (-1 < (int)Voice);
         PausedMusicChannels = 0;
-        DAT_80032a08 = 0;
+        inactiveChannels = 0;
       }
-      if (uVar7 != 0) {
-        SetVoicestoRelease(0,uVar7);
+      if (uVar6 != 0) {
+        SetVoicestoRelease(0,uVar6);
       }
       return 0;
     }
-    if (*(short *)&(MusToPush->HeaderData).field5_0x10 < 0) {
-      uVar7 = *(uint *)&(MusToPush->HeaderData).field_0x2c;
-      if ((uVar7 != 0) && (uVar7 <= *(uint *)&(MusToPush->HeaderData).field_0x24)) {
+    if ((short)(MusToPush->HeaderData)._0_cmdfield < 0) {
+      uVar6 = *(uint *)&(MusToPush->HeaderData).field_0x2c;
+      if ((uVar6 != 0) && (uVar6 <= (MusToPush->HeaderData).field18_0x24)) {
         FUN_80013480((undefined4 *)MusToPush);
       }
-      if (*(short *)&(MusToPush->HeaderData).field_0x90 != 0) {
-        FUN_80014f18((SuzukiVolStorageStruct *)&(MusToPush->HeaderData).field_0x88);
-        *(int *)&(MusToPush->HeaderData).field_0x78 =
-             (int)*(short *)&(MusToPush->HeaderData).field_0x7e *
-             (int)*(short *)&(MusToPush->HeaderData).field_0x8a;
+      if ((MusToPush->HeaderData).field68_0x90 != 0) {
+        FUN_80014f18((SuzukiVolStorageStruct *)&(MusToPush->HeaderData).tempo_scalar);
+        (MusToPush->HeaderData).modified_tempo =
+             (int)*(short *)((int)&(MusToPush->HeaderData).raw_tempo + 2) *
+             (int)*(short *)((int)&(MusToPush->HeaderData).tempo_scalar + 2);
       }
-      if ((MusToPush->HeaderData).field108_0x9c != 0) {
-        FUN_80014f18((SuzukiVolStorageStruct *)&(MusToPush->HeaderData).field106_0x94);
-        FUN_80017098(0x100,MusToPush);
+      if ((MusToPush->HeaderData).volset1.ChangeVol != 0) {
+        FUN_80014f18(&(MusToPush->HeaderData).volset1);
+        Set_noteflags2_allChannels(volume_change,MusToPush);
       }
-      if (*(short *)&(MusToPush->HeaderData).field_0xa8 != 0) {
-        FUN_80014f18((SuzukiVolStorageStruct *)&(MusToPush->HeaderData).field_0xa0);
-        FUN_80017098(0x200,MusToPush);
+      if ((MusToPush->HeaderData).volset2.ChangeVol != 0) {
+        FUN_80014f18(&(MusToPush->HeaderData).volset2);
+        Set_noteflags2_allChannels(playing_note,MusToPush);
       }
-      if (*(short *)&(MusToPush->HeaderData).field_0xb4 != 0) {
-        FUN_80014f18((SuzukiVolStorageStruct *)&(MusToPush->HeaderData).field_0xac);
-        FUN_80017098(0x100,MusToPush);
+      if ((MusToPush->HeaderData).volset3.ChangeVol != 0) {
+        FUN_80014f18(&(MusToPush->HeaderData).volset3);
+        Set_noteflags2_allChannels(volume_change,MusToPush);
       }
-      *(int *)&(MusToPush->HeaderData).field_0x20 = *(int *)&(MusToPush->HeaderData).field_0x20 + 1;
-      *(int *)&(MusToPush->HeaderData).field_0x28 =
-           (int)*(short *)&(MusToPush->HeaderData).field_0x8a +
-           *(int *)&(MusToPush->HeaderData).field_0x28;
-      iVar6 = *(int *)&(MusToPush->HeaderData).field_0x74 -
-              *(int *)&(MusToPush->HeaderData).field_0x78;
-      *(int *)&(MusToPush->HeaderData).field_0x74 = iVar6;
-      if (iVar6 < 0) {
-        pMVar9 = MusToPush->ChannelData;
+      _frames_until_beat = *(short *)((int)&(MusToPush->HeaderData).tempo_scalar + 2);
+      (MusToPush->HeaderData).field17_0x20 = (MusToPush->HeaderData).field17_0x20 + 1;
+      (MusToPush->HeaderData).field19_0x28 =
+           (int)_frames_until_beat + (MusToPush->HeaderData).field19_0x28;
+      uVar6 = (MusToPush->HeaderData).field56_0x74 - (MusToPush->HeaderData).modified_tempo;
+      (MusToPush->HeaderData).field56_0x74 = uVar6;
+      if ((int)uVar6 < 0) {
+        _channelData = MusToPush->ChannelData;
         do {
-          sVar2 = *(short *)&(MusToPush->HeaderData).field_0x36 + -1;
-          *(short *)&(MusToPush->HeaderData).field_0x36 = sVar2;
-          *(int *)&(MusToPush->HeaderData).field_0x74 =
-               *(int *)&(MusToPush->HeaderData).field_0x74 + 0x10000;
-          if (sVar2 == 0) {
-            *(undefined2 *)&(MusToPush->HeaderData).field_0x36 =
-                 *(undefined2 *)&(MusToPush->HeaderData).field_0x3a;
-            uVar3 = *(short *)&(MusToPush->HeaderData).field_0x34 + 1;
-            *(ushort *)&(MusToPush->HeaderData).field_0x34 = uVar3;
-            if (*(ushort *)&(MusToPush->HeaderData).field_0x38 < uVar3) {
-              *(undefined2 *)&(MusToPush->HeaderData).field_0x34 = 1;
-              *(short *)&(MusToPush->HeaderData).field_0x32 =
-                   *(short *)&(MusToPush->HeaderData).field_0x32 + 1;
+          _frames_until_beat = (MusToPush->HeaderData).framesUntil_nextBeat + -1;
+          (MusToPush->HeaderData).framesUntil_nextBeat = _frames_until_beat;
+          (MusToPush->HeaderData).field56_0x74 = (MusToPush->HeaderData).field56_0x74 + 0x10000;
+          if (_frames_until_beat == 0) {
+            (MusToPush->HeaderData).framesUntil_nextBeat = (MusToPush->HeaderData).framesPer_Beat;
+            _next_beat = (MusToPush->HeaderData).CurBeat + 1;
+            (MusToPush->HeaderData).CurBeat = _next_beat;
+            if ((ushort)(MusToPush->HeaderData).timeSignature_top < _next_beat) {
+              (MusToPush->HeaderData).CurBeat = 1;
+              (MusToPush->HeaderData).CurMeasure = (MusToPush->HeaderData).CurMeasure + 1;
             }
           }
-          bVar1 = *(byte *)&(MusToPush->HeaderData).NumChannels;
+          bVar1 = (MusToPush->HeaderData).NumChannels;
           if (bVar1 != 0) {
-            FUN_80015138((int)MusToPush,&pMVar9->hasSound,(ushort)bVar1);
-            FUN_80015324(&MusToPush->HeaderData,&pMVar9->hasSound,(ushort)bVar1);
-            FUN_8001749c(MusToPush,(short *)pMVar9,(ushort)bVar1);
-            FUN_80017118((int)MusToPush,&pMVar9->hasSound,(ushort)bVar1);
+            FUN_80015138((int)MusToPush,&_channelData->channelflags,(ushort)bVar1);
+            Read_SMD_Instructions(MusToPush,_channelData,(ushort)bVar1);
+            FUN_8001749c(MusToPush,(short *)_channelData,(ushort)bVar1);
+            FUN_80017118((int)MusToPush,&_channelData->channelflags,(ushort)bVar1);
           }
           if ((MusToPush->HeaderData).OwnedChannels == 0) {
-            *(ushort *)&(MusToPush->HeaderData).field5_0x10 =
-                 *(ushort *)&(MusToPush->HeaderData).field5_0x10 & 0x7fff;
+            (MusToPush->HeaderData)._0_cmdfield =
+                 (MusToPush->HeaderData)._0_cmdfield & ~music_playing;
             break;
           }
-          *(int *)&(MusToPush->HeaderData).field_0x24 =
-               *(int *)&(MusToPush->HeaderData).field_0x24 + 1;
-          if ((MusToPush->HeaderData).field106_0x94 == 0) {
-            FUN_80012338((int)MusToPush);
-            *(ushort *)&(MusToPush->HeaderData).field5_0x10 =
-                 *(ushort *)&(MusToPush->HeaderData).field5_0x10 | 0x4100;
+          SVar5 = (MusToPush->HeaderData).volset1.hasVolume;
+          (MusToPush->HeaderData).field18_0x24 = (MusToPush->HeaderData).field18_0x24 + 1;
+          if (SVar5 == (SuzukiVolStore)0x0) {
+            Deallocate_Mus_Channels(MusToPush);
+            (MusToPush->HeaderData)._0_cmdfield = (MusToPush->HeaderData)._0_cmdfield | 0x4100;
           }
-          if (*(short *)&(MusToPush->HeaderData).field_0x32 ==
-              *(short *)&(MusToPush->HeaderData).field_0x54) {
-            FUN_80012338((int)MusToPush);
+          if ((MusToPush->HeaderData).CurMeasure == *(short *)&(MusToPush->HeaderData).field_0x54) {
+            Deallocate_Mus_Channels(MusToPush);
           }
-        } while (*(int *)&(MusToPush->HeaderData).field_0x74 < 0);
+        } while ((int)(MusToPush->HeaderData).field56_0x74 < 0);
       }
     }
-    MusToPush = *(MusDataAll **)&MusToPush->HeaderData;
+    MusToPush = (MusToPush->HeaderData).PrevPlayedMus;
   } while( true );
 }
 
@@ -8913,19 +9110,19 @@ void FUN_80014f18(SuzukiVolStorageStruct *SuzukiMVol)
 void Calc_Mus_PitchLFO_Voices(void)
 
 {
-  ushort uVar1;
+  mus_10 mVar1;
   MusDataAll *MusToPush;
   uint VoiceBits_SubjectRemoval;
   uint VoiceBits;
   
   VoiceBits = 0;
   VoiceBits_SubjectRemoval = 0;
-  MusToPush = LastOpenedMus;
-  if (LastOpenedMus != (MusDataAll *)0x0) {
+  MusToPush = CurrentlyPlayingMus;
+  if (CurrentlyPlayingMus != (MusDataAll *)0x0) {
     do {
-      uVar1 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
-      if ((short)uVar1 < 0) {
-        if ((uVar1 & 1) == 0) {
+      mVar1 = (MusToPush->HeaderData)._0_cmdfield;
+      if ((short)mVar1 < 0) {
+        if ((mVar1 & actionflag1) == 0) {
           VoiceBits = VoiceBits | (MusToPush->HeaderData).LFOVoiceBits;
         }
         else {
@@ -8933,7 +9130,7 @@ void Calc_Mus_PitchLFO_Voices(void)
           ;
         }
       }
-      MusToPush = *(MusDataAll **)&MusToPush->HeaderData;
+      MusToPush = (MusToPush->HeaderData).PrevPlayedMus;
     } while (MusToPush != (MusDataAll *)0x0);
   }
   VoiceBits = VoiceBits_SubjectRemoval & ~PitchLFO_onlyInclude | VoiceBits;
@@ -8951,19 +9148,19 @@ void Calc_Mus_PitchLFO_Voices(void)
 void Calc_Mus_PitchLFO_Voices2(void)
 
 {
-  ushort uVar1;
+  mus_10 mVar1;
   MusDataAll *MusToPush;
   uint VoiceBits;
   uint VoiceBits_SubjectRemoval;
   
   VoiceBits = 0;
   VoiceBits_SubjectRemoval = 0;
-  MusToPush = LastOpenedMus;
-  if (LastOpenedMus != (MusDataAll *)0x0) {
+  MusToPush = CurrentlyPlayingMus;
+  if (CurrentlyPlayingMus != (MusDataAll *)0x0) {
     do {
-      uVar1 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
-      if ((short)uVar1 < 0) {
-        if ((uVar1 & 1) == 0) {
+      mVar1 = (MusToPush->HeaderData)._0_cmdfield;
+      if ((short)mVar1 < 0) {
+        if ((mVar1 & actionflag1) == 0) {
           VoiceBits = VoiceBits | (MusToPush->HeaderData).NoiseVoiceBits;
         }
         else {
@@ -8971,7 +9168,7 @@ void Calc_Mus_PitchLFO_Voices2(void)
                VoiceBits_SubjectRemoval | (MusToPush->HeaderData).NoiseVoiceBits;
         }
       }
-      MusToPush = *(MusDataAll **)&MusToPush->HeaderData;
+      MusToPush = (MusToPush->HeaderData).PrevPlayedMus;
     } while (MusToPush != (MusDataAll *)0x0);
   }
   VoiceBits = VoiceBits_SubjectRemoval & ~PitchLFO_onlyInclude | VoiceBits;
@@ -8985,19 +9182,19 @@ void Calc_Mus_PitchLFO_Voices2(void)
 void Calc_Mus_Reverb_Voices(void)
 
 {
-  ushort uVar1;
+  mus_10 mVar1;
   MusDataAll *MusToPush;
   uint VoiceBits;
   uint VoiceBits_SubjectRemoval;
   
   VoiceBits = 0;
   VoiceBits_SubjectRemoval = 0;
-  MusToPush = LastOpenedMus;
-  if (LastOpenedMus != (MusDataAll *)0x0) {
+  MusToPush = CurrentlyPlayingMus;
+  if (CurrentlyPlayingMus != (MusDataAll *)0x0) {
     do {
-      uVar1 = *(ushort *)&(MusToPush->HeaderData).field5_0x10;
-      if ((short)uVar1 < 0) {
-        if ((uVar1 & 1) == 0) {
+      mVar1 = (MusToPush->HeaderData)._0_cmdfield;
+      if ((short)mVar1 < 0) {
+        if ((mVar1 & actionflag1) == 0) {
           VoiceBits = VoiceBits | (MusToPush->HeaderData).ReverbVoiceBits;
         }
         else {
@@ -9005,7 +9202,7 @@ void Calc_Mus_Reverb_Voices(void)
                VoiceBits_SubjectRemoval | (MusToPush->HeaderData).ReverbVoiceBits;
         }
       }
-      MusToPush = *(MusDataAll **)&MusToPush->HeaderData;
+      MusToPush = (MusToPush->HeaderData).PrevPlayedMus;
     } while (MusToPush != (MusDataAll *)0x0);
   }
   VoiceBits = VoiceBits_SubjectRemoval & ~PitchLFO_onlyInclude | VoiceBits;
@@ -9099,183 +9296,228 @@ void FUN_80015138(int param_1,ushort *param_2,short param_3)
 
 
 
-void FUN_80015324(MusicDataHeader *Mus,ushort *param_2,short param_3)
+// WARNING: Type propagation algorithm not settling
+
+void Read_SMD_Instructions(MusDataAll *Mus,MusicChannelData *channel_notedata,short param_3)
 
 {
-  MusicInstruction MVar1;
-  char cVar2;
-  bool bVar3;
-  ushort uVar4;
+  char cVar1;
+  bool bVar2;
+  ushort uVar3;
+  byte overall_pitch;
+  short sVar4;
   int iVar5;
-  ushort uVar6;
-  ushort *puVar7;
+  short sVar6;
+  MusicChannelRepeat *pMVar7;
   int iVar8;
   uint uVar9;
+  ushort *puVar10;
   MusicInstruction *MusInstrList;
-  MusicInstruction *pMVar10;
-  ushort *puVar11;
-  uint uVar12;
+  MusicInstruction *temp_MusInstrList;
+  MusicChannelIntermediary *_intermediary_data;
+  uint uVar11;
   MusicInstruction Instruction;
+  SUZUKIchannel_flags _noteflags1;
+  MusicInstruction _pitch_duration;
+  SUZUKIintermediary_flags _t;
   
-  uVar12 = 1;
-  puVar11 = param_2 + 1;
+  uVar11 = 1;
+  _intermediary_data = &channel_notedata->channel_inter;
   do {
-    if ((*param_2 != 0) && (bVar3 = false, puVar11[0x39] == 0)) {
-      uVar4 = *param_2;
-      MusInstrList = *(MusicInstruction **)(puVar11 + 0xb);
-      *param_2 = uVar4 & 0xf8ff;
+    if ((channel_notedata->channelflags != 0) &&
+       (bVar2 = false,
+       (_intermediary_data->channelSecondary).channel_notedata.fermata_notelength == 0)) {
+      _noteflags1 = channel_notedata->channelflags;
+      MusInstrList = (_intermediary_data->channelSecondary).MUS_Instr;
+      channel_notedata->channelflags = _noteflags1 & ~(hold_note|action200|rest_note);
       do {
         Instruction = *MusInstrList;
         if (Instruction < 0x80) {
-          if ((*param_2 & 8) == 0) {
-            puVar11[0x49] = (ushort)Instruction << 8;
+          if ((channel_notedata->channelflags & 8) == 0) {
+            (_intermediary_data->channelSecondary).channel_notedata.field56_0x60 =
+                 (ushort)Instruction << 8;
           }
-          *puVar11 = *puVar11 | 0x100;
-          MVar1 = MusInstrList[1];
-          cVar2 = (&DAT_80028e70)[MVar1];
-          pMVar10 = MusInstrList + 2;
-          *(char *)((int)puVar11 + 0x7b) = *(char *)(puVar11 + 0x3e) + cVar2;
-          if ((&DAT_80028d8c)[MVar1] == 0) {
-            MVar1 = *pMVar10;
-            pMVar10 = MusInstrList + 3;
-            puVar11[0x39] = (ushort)MVar1;
+          _intermediary_data->intermediaryflags =
+               _intermediary_data->intermediaryflags | volume_change;
+          _pitch_duration = MusInstrList[1];
+          temp_MusInstrList = MusInstrList + 2;
+          overall_pitch =
+               *(char *)&(_intermediary_data->channelSecondary).channel_notedata.octave +
+               note_pitch_table[_pitch_duration];
+          (_intermediary_data->channelSecondary).channel_notedata.current_notepitch = overall_pitch;
+          if (note_length_table[_pitch_duration] == 0) {
+            _pitch_duration = *temp_MusInstrList;
+            temp_MusInstrList = MusInstrList + 3;
+            (_intermediary_data->channelSecondary).channel_notedata.fermata_notelength =
+                 (ushort)_pitch_duration;
           }
           else {
-            puVar11[0x39] = (ushort)(byte)(&DAT_80028d8c)[MVar1];
+            (_intermediary_data->channelSecondary).channel_notedata.fermata_notelength =
+                 (ushort)(byte)note_length_table[_pitch_duration];
           }
-          puVar11[1] = puVar11[1] | 0x80;
-          puVar11[0x34] = puVar11[0x16];
-          *(uint *)(puVar11 + 0x3f) =
-               ((uint)(byte)(*(char *)(puVar11 + 0x3e) + cVar2) * 0x100 + (int)(short)puVar11[0x42]
-               + (int)(short)puVar11[0x41]) * 0x10000;
-          *puVar11 = *puVar11 | 0x200;
-          *param_2 = *param_2 | 0x180;
-          if ((uVar4 & 0x400) != 0) {
-            bVar3 = true;
-            *puVar11 = *puVar11 | 1;
+          sVar4 = (_intermediary_data->channelSecondary).channel_notedata.field46_0x50;
+          (_intermediary_data->channelSecondary).channelFunc =
+               (_intermediary_data->channelSecondary).channelFunc | Adjust_Release;
+          (_intermediary_data->channelSecondary).channel_notedata.release_flags =
+               (_intermediary_data->channelSecondary).releaseflags_small;
+          _t = _intermediary_data->intermediaryflags;
+          *(uint *)&(_intermediary_data->channelSecondary).channel_notedata.scaled_pitch =
+               ((uint)overall_pitch * 0x100 +
+                (int)*(short *)&(_intermediary_data->channelSecondary).channel_notedata.field_0x52 +
+               (int)sVar4) * 0x10000;
+          _intermediary_data->intermediaryflags = _t | playing_note;
+          channel_notedata->channelflags = channel_notedata->channelflags | (note_active|hold_note);
+          if ((_noteflags1 & rest_note) != 0) {
+            bVar2 = true;
+            _intermediary_data->intermediaryflags = _intermediary_data->intermediaryflags | 1;
           }
-          if ((*param_2 & 0x8000) != 0) {
-            *param_2 = *param_2 & 0x7fff;
-            *puVar11 = *puVar11 | 0x300;
-            puVar11[1] = puVar11[1] | 0x1ff;
+          if ((channel_notedata->channelflags & change_instrument) != 0) {
+            channel_notedata->channelflags = channel_notedata->channelflags & ~change_instrument;
+            _intermediary_data->intermediaryflags =
+                 _intermediary_data->intermediaryflags | (volume_change|playing_note);
+            (_intermediary_data->channelSecondary).channelFunc =
+                 (_intermediary_data->channelSecondary).channelFunc |
+                 (Adjust_Voice_Vol_Both|Set_Sweep_VolMode|CalcLFOVoices|Set_ADPCM_Addrs|
+                  CalcNoiseVoices|Adjust_Voice_Decay_Shift|CalcReverbVoices|Adjust_Release|
+                 Adjust_Sustain_Level);
           }
         }
         else {
-          pMVar10 = (MusicInstruction *)
-                    (*(code *)MusicCodePointers[Instruction - 0x80 & 0xffff])
-                              (MusInstrList + 1,Mus,param_2);
-          if (*param_2 == 0) {
-            Mus->OwnedChannels = ~uVar12 & Mus->OwnedChannels;
+          temp_MusInstrList =
+               (MusicInstruction *)
+               (*(code *)MusicCodePointers[Instruction - 0x80 & 0xffff])
+                         (MusInstrList + 1,Mus,channel_notedata);
+          if (channel_notedata->channelflags == 0) {
+            (Mus->HeaderData).OwnedChannels = ~uVar11 & (Mus->HeaderData).OwnedChannels;
             break;
           }
         }
-        MusInstrList = pMVar10;
-      } while ((*param_2 & 0x500) == 0);
-      *(MusicInstruction **)(puVar11 + 0xb) = pMVar10;
-      if ((*param_2 & 0x800) != 0) {
-        *param_2 = *param_2 | 0x200;
+        MusInstrList = temp_MusInstrList;
+      } while ((channel_notedata->channelflags & (hold_note|rest_note)) == 0);
+      (_intermediary_data->channelSecondary).MUS_Instr = temp_MusInstrList;
+      if ((channel_notedata->channelflags & action800) != 0) {
+        channel_notedata->channelflags = channel_notedata->channelflags | action200;
       }
-      puVar7 = param_2 + (uint)puVar11[0x55] * 6 + 0x58;
-      MVar1 = *pMVar10;
-      while (uVar4 = (ushort)MVar1, 0x7f < uVar4) {
-        if (uVar4 != 0x90) {
-          if (uVar4 != 0x80) {
-            if (uVar4 == 0x81) {
-              *param_2 = *param_2 | 0x200;
+      pMVar7 = (channel_notedata->channel_inter).channelSecondary.channel_notedata.repeatData +
+               (ushort)(_intermediary_data->channelSecondary).channel_notedata.repeat_count;
+      _pitch_duration = *temp_MusInstrList;
+      while (uVar3 = (ushort)_pitch_duration, 0x7f < uVar3) {
+        if (uVar3 != 0x90) {
+          if (uVar3 != 0x80) {
+            if (uVar3 == 0x81) {
+              channel_notedata->channelflags = channel_notedata->channelflags | action200;
               break;
             }
-            if (1 < (ushort)(uVar4 - 0xb0)) {
-              if (uVar4 == 0x99) {
-                if (*(char *)puVar7 != '\0') {
-                  pMVar10 = *(MusicInstruction **)(puVar7 + 2);
+            if (1 < (ushort)(uVar3 - 0xb0)) {
+              if (uVar3 == 0x99) {
+                if (pMVar7->remaining_loopcount != 0) {
+                  temp_MusInstrList = pMVar7->loop_index;
                   goto LAB_80015618;
                 }
-                puVar7 = puVar7 + -6;
+                pMVar7 = pMVar7 + -1;
               }
-              if ((uVar4 == 0x9a) && (*(char *)puVar7 == '\0')) {
-                pMVar10 = *(MusicInstruction **)(puVar7 + 4);
-                puVar7 = puVar7 + -6;
+              if ((uVar3 == 0x9a) && (pMVar7->remaining_loopcount == 0)) {
+                temp_MusInstrList = pMVar7->coda_index;
+                pMVar7 = pMVar7 + -1;
               }
               else {
-                pMVar10 = pMVar10 + (byte)(&DAT_80028d0c)[(ushort)(uVar4 - 0x80)];
+                temp_MusInstrList =
+                     temp_MusInstrList + (byte)(&DAT_80028d0c)[(ushort)(uVar3 - 0x80)];
               }
               goto LAB_80015618;
             }
           }
-          *param_2 = *param_2 & 0xfdff;
+          channel_notedata->channelflags = channel_notedata->channelflags & ~action200;
           break;
         }
-        pMVar10 = *(MusicInstruction **)(puVar11 + 0xd);
-        if (pMVar10 == (MusicInstruction *)0x0) break;
+        temp_MusInstrList = (_intermediary_data->channelSecondary).SMD_instr_start;
+        if (temp_MusInstrList == (MusicInstruction *)0x0) break;
 LAB_80015618:
-        MVar1 = *pMVar10;
+        _pitch_duration = *temp_MusInstrList;
       }
-      if (uVar4 < 0x80) {
-        uVar4 = *param_2 | 0x1000;
+      if (uVar3 < 0x80) {
+        _noteflags1 = channel_notedata->channelflags | 0x1000;
       }
       else {
-        uVar4 = *param_2 & 0xefff;
+        _noteflags1 = channel_notedata->channelflags & 0xefff;
       }
-      *param_2 = uVar4;
-      iVar8 = (int)*(char *)(puVar11 + 0x3a) + (uint)puVar11[0x39];
+      channel_notedata->channelflags = _noteflags1;
+      cVar1 = (_intermediary_data->channelSecondary).channel_notedata.field_0x42;
+      iVar8 = (int)cVar1 +
+              (uint)(ushort)(_intermediary_data->channelSecondary).channel_notedata.
+                            fermata_notelength;
       if (iVar8 * 0x10000 < 1) {
-        iVar8 = (uint)puVar11[0x39] + iVar8;
-        *(char *)(puVar11 + 0x3a) = *(char *)(puVar11 + 0x3a) + *(char *)(puVar11 + 0x39);
+        iVar8 = (uint)(ushort)(_intermediary_data->channelSecondary).channel_notedata.
+                              fermata_notelength + iVar8;
+        (_intermediary_data->channelSecondary).channel_notedata.field_0x42 =
+             cVar1 + *(char *)&(_intermediary_data->channelSecondary).channel_notedata.
+                               fermata_notelength;
       }
-      uVar9 = (uint)puVar11[0x3c];
-      uVar4 = (ushort)iVar8;
+      uVar9 = (uint)(ushort)(_intermediary_data->channelSecondary).channel_notedata.field38_0x46;
+      sVar4 = (short)iVar8;
       if (uVar9 == 0xf) {
         uVar9 = iVar8 - 1;
 LAB_80015704:
-        uVar6 = (ushort)uVar9;
+        sVar6 = (short)uVar9;
         if ((uVar9 & 0xffff) == 0) {
-          uVar6 = 1;
+          sVar6 = 1;
         }
       }
       else {
-        uVar6 = uVar4;
+        sVar6 = sVar4;
         if (uVar9 != 0x10) {
-          uVar9 = (int)(short)uVar4 * uVar9 >> 4;
+          uVar9 = (int)sVar4 * uVar9 >> 4;
           goto LAB_80015704;
         }
       }
-      puVar11[0x3b] = uVar6;
-      puVar11[0x39] = uVar4;
-      if (bVar3) {
+      *(short *)&(_intermediary_data->channelSecondary).channel_notedata.field_0x44 = sVar6;
+      (_intermediary_data->channelSecondary).channel_notedata.fermata_notelength = sVar4;
+      if (bVar2) {
         iVar8 = 4;
-        if (((puVar11[2] & 4) != 0) &&
-           (iVar5 = ((uint)*(byte *)((int)puVar11 + 0x7b) - (uint)*(byte *)(puVar11 + 0x3d)) *
-                    0x1000000, iVar5 != 0)) {
-          puVar11[2] = puVar11[2] | 1;
-          puVar11[0x52] = puVar11[0x47];
-          *(uint *)(puVar11 + 0x3f) =
-               ((uint)*(byte *)(puVar11 + 0x3d) * 0x100 + (int)(short)puVar11[0x42] +
-               (int)(short)puVar11[0x41]) * 0x10000;
-          *(int *)(puVar11 + 0x4d) = iVar5 / (int)(uint)puVar11[0x47];
+        if ((((_intermediary_data->channelSecondary).instrumentflags & 4) != 0) &&
+           (iVar5 = ((uint)(byte)(_intermediary_data->channelSecondary).channel_notedata.
+                                 current_notepitch -
+                    (uint)(byte)(_intermediary_data->channelSecondary).channel_notedata.field_0x48)
+                    * 0x1000000, iVar5 != 0)) {
+          uVar3 = (_intermediary_data->channelSecondary).channel_notedata.field54_0x5c;
+          sVar4 = (_intermediary_data->channelSecondary).channel_notedata.field46_0x50;
+          sVar6 = (_intermediary_data->channelSecondary).channel_notedata.field54_0x5c;
+          (_intermediary_data->channelSecondary).instrumentflags =
+               (_intermediary_data->channelSecondary).instrumentflags | 1;
+          (_intermediary_data->channelSecondary).channel_notedata.note_length = sVar6;
+          *(uint *)&(_intermediary_data->channelSecondary).channel_notedata.scaled_pitch =
+               ((uint)(byte)(_intermediary_data->channelSecondary).channel_notedata.field_0x48 *
+                0x100 + (int)*(short *)&(_intermediary_data->channelSecondary).channel_notedata.
+                                        field_0x52 + (int)sVar4) * 0x10000;
+          *(int *)&(_intermediary_data->channelSecondary).channel_notedata.field_0x68 =
+               iVar5 / (int)(uint)uVar3;
         }
-        puVar7 = param_2 + 0x7f;
-        *(undefined *)(puVar11 + 0x3d) = *(undefined *)((int)puVar11 + 0x7b);
+        puVar10 = (ushort *)
+                  &(channel_notedata->channel_inter).channelSecondary.channel_notedata.field_0xca;
+        (_intermediary_data->channelSecondary).channel_notedata.field_0x48 =
+             (_intermediary_data->channelSecondary).channel_notedata.current_notepitch;
         do {
-          uVar4 = *puVar7;
-          if (((uVar4 & 1) != 0) && ((uVar4 & 2) != 0)) {
-            *(undefined4 *)(puVar7 + -0xd) = 0;
-            puVar7[-7] = 1;
-            puVar7[-5] = puVar7[-4];
-            puVar7[-3] = puVar7[-2];
-            if ((uVar4 & 3) != 0) {
-              *puVar11 = *puVar11 | 0x100;
+          uVar3 = *puVar10;
+          if (((uVar3 & 1) != 0) && ((uVar3 & 2) != 0)) {
+            *(undefined4 *)(puVar10 + -0xd) = 0;
+            puVar10[-7] = 1;
+            puVar10[-5] = puVar10[-4];
+            puVar10[-3] = puVar10[-2];
+            if ((uVar3 & 3) != 0) {
+              _intermediary_data->intermediaryflags =
+                   _intermediary_data->intermediaryflags | volume_change;
             }
-            *puVar7 = *puVar7 & 0xfff3;
+            *puVar10 = *puVar10 & 0xfff3;
           }
           iVar8 = iVar8 + -1;
-          puVar7 = puVar7 + 0x10;
+          puVar10 = puVar10 + 0x10;
         } while (iVar8 != 0);
       }
     }
-    puVar11 = puVar11 + 0xb0;
-    param_2 = param_2 + 0xb0;
+    _intermediary_data = (MusicChannelIntermediary *)&_intermediary_data[1].channelSecondary;
+    channel_notedata = channel_notedata + 1;
     param_3 = param_3 + -1;
-    uVar12 = uVar12 << 1;
+    uVar11 = uVar11 << 1;
     if (param_3 == 0) {
       return;
     }
@@ -9292,977 +9534,1120 @@ undefined4 SMD_NOOP(undefined4 param_1)
 
 
 
-byte * Rest(byte *param_1,undefined4 param_2,ushort *param_3)
+byte * Rest(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  param_3[0x3a] = (ushort)*param_1;
-  param_3[1] = param_3[1] | 2;
-  *param_3 = *param_3 | 0x400;
-  return param_1 + 1;
+  SUZUKIintermediary_flags _noteflags2;
+  
+  _noteflags2 = (channel_data->channel_inter).intermediaryflags;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.fermata_notelength =
+       (ushort)*instruction_list;
+  (channel_data->channel_inter).intermediaryflags = _noteflags2 | rest_note;
+  channel_data->channelflags = channel_data->channelflags | rest_note;
+  return instruction_list + 1;
 }
 
 
 
-byte * Fermata(byte *param_1,undefined4 param_2,ushort *param_3)
+byte * Fermata(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte _fermata_length;
+  
+  _fermata_length = *instruction_list;
+  channel_data->channelflags = channel_data->channelflags | hold_note;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.fermata_notelength =
+       (ushort)_fermata_length;
+  return instruction_list + 1;
+}
+
+
+
+byte * SMD_NOOP2(byte *instruction_list)
+
+{
+  return instruction_list;
+}
+
+
+
+byte * FUN_800158c0(byte *instruction_list,MusDataAll *musData,MusicChannelData *music_notedata)
 
 {
   byte bVar1;
   
-  bVar1 = *param_1;
-  *param_3 = *param_3 | 0x100;
-  param_3[0x3a] = (ushort)bVar1;
-  return param_1 + 1;
-}
-
-
-
-undefined4 SMD_NOOP2(undefined4 param_1)
-
-{
-  return param_1;
-}
-
-
-
-char * FUN_800158c0(char *param_1,int param_2,int param_3)
-
-{
-  if (*param_1 == *(char *)(param_2 + 0x1d)) {
-    *(char **)(param_3 + 0x1c) = param_1 + 1;
-    *(undefined *)(param_3 + 0x2b) = *(undefined *)(param_3 + 0x7e);
+  if (*instruction_list == (musData->HeaderData).field_0x1d) {
+    bVar1 = *(byte *)&(music_notedata->channel_inter).channelSecondary.channel_notedata.octave;
+    (music_notedata->channel_inter).channelSecondary.SMD_instr_start = instruction_list + 1;
+    (music_notedata->channel_inter).channelSecondary.field29_0x27 = bVar1;
   }
-  return param_1 + 1;
+  return instruction_list + 1;
 }
 
 
 
-int SMD_NOOP3(int param_1)
+byte * SMD_NOOP3(byte *instruction_list)
 
 {
-  return param_1 + 3;
+  return instruction_list + 3;
 }
 
 
 
-undefined4 SMD_NOOP4(undefined4 param_1)
+byte * SMD_NOOP4(byte *instruction_list)
 
 {
-  return param_1;
+  return instruction_list;
 }
 
 
 
-int Tacet(int param_1,int param_2,undefined2 *param_3)
+byte * EndBar(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte bVar1;
+  byte *_instrlist_return;
+  uint _newpause_channelbits;
+  
+  _instrlist_return = (channel_data->channel_inter).channelSecondary.SMD_instr_start;
+  if (_instrlist_return == (byte *)0x0) {
+    (channel_data->channel_inter).intermediaryflags =
+         (channel_data->channel_inter).intermediaryflags & 0xfffc;
+    if (((musData->HeaderData)._0_cmdfield & end_on_endbar) == 0) {
+      inactiveChannels =
+           inactiveChannels |
+           (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
+    }
+    else {
+      PausedMusicChannels =
+           PausedMusicChannels |
+           (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
+      _newpause_channelbits =
+           ~(channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
+      (musData->HeaderData).LFOVoiceBits =
+           _newpause_channelbits & (musData->HeaderData).LFOVoiceBits;
+      (musData->HeaderData).ReverbVoiceBits =
+           _newpause_channelbits & (musData->HeaderData).ReverbVoiceBits;
+      (musData->HeaderData).NoiseVoiceBits =
+           _newpause_channelbits & (musData->HeaderData).NoiseVoiceBits;
+      PitchLFO_onlyInclude = _newpause_channelbits & PitchLFO_onlyInclude;
+      (channel_data->channel_inter).channelSecondary.channelFunc =
+           (channel_data->channel_inter).channelSecondary.channelFunc |
+           (CalcLFOVoices|CalcNoiseVoices|CalcReverbVoices);
+    }
+    channel_data->channelflags = 0;
+    _instrlist_return = instruction_list + -1;
+  }
+  else {
+    bVar1 = (channel_data->channel_inter).channelSecondary.field29_0x27;
+    (channel_data->channel_inter).channelSecondary.loops =
+         (channel_data->channel_inter).channelSecondary.loops + 1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.octave = (ushort)bVar1;
+  }
+  return _instrlist_return;
+}
+
+
+
+byte * Loop(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte bVar1;
+  
+  bVar1 = *(byte *)&(channel_data->channel_inter).channelSecondary.channel_notedata.octave;
+  (channel_data->channel_inter).channelSecondary.SMD_instr_start = instruction_list;
+  (channel_data->channel_inter).channelSecondary.field29_0x27 = bVar1;
+  return instruction_list;
+}
+
+
+
+byte * Octave(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  (channel_data->channel_inter).channelSecondary.channel_notedata.octave =
+       (ushort)*instruction_list * 0xc;
+  return instruction_list + 1;
+}
+
+
+
+byte * Raise_Octave(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  (channel_data->channel_inter).channelSecondary.channel_notedata.octave =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.octave + 0xc;
+  return instruction_list;
+}
+
+
+
+byte * Lower_Octave(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  (channel_data->channel_inter).channelSecondary.channel_notedata.octave =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.octave + -0xc;
+  return instruction_list;
+}
+
+
+
+byte * Time_Signature(byte *instruction_list,MusDataAll *musData)
+
+{
+  byte time_sig_bottom;
+  byte time_sign_top;
+  
+  time_sig_bottom = instruction_list[1];
+  time_sign_top = *instruction_list;
+  (musData->HeaderData).framesPer_Beat =
+       (short)(0xc0 / ((uint)time_sig_bottom * (uint)(musData->HeaderData).field8_0x15));
+  (musData->HeaderData).timeSignature_bottom = (ushort)time_sig_bottom;
+  (musData->HeaderData).timeSignature_top = (ushort)time_sign_top;
+  (musData->HeaderData).timeSigTop = (ushort)time_sign_top;
+  (musData->HeaderData).framesUntil_nextBeat = (musData->HeaderData).framesPer_Beat;
+  return instruction_list + 2;
+}
+
+
+
+byte * FUN_80015a88(byte *instruction_list,MusDataAll *musData)
+
+{
+  (musData->HeaderData).field_0x1c = *instruction_list;
+  return instruction_list + 1;
+}
+
+
+
+byte * FUN_80015a9c(byte *instruction_list,MusDataAll *musData)
+
+{
+  (musData->HeaderData).field_0x1c = (musData->HeaderData).field_0x1c + *instruction_list;
+  return instruction_list + 1;
+}
+
+
+
+byte * Repeat(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_notedata)
+
+{
+  MusicChannelRepeat *_repeat_data;
+  
+  (channel_notedata->channel_inter).channelSecondary.channel_notedata.repeat_count =
+       (channel_notedata->channel_inter).channelSecondary.channel_notedata.repeat_count + 1;
+  _repeat_data = (channel_notedata->channel_inter).channelSecondary.channel_notedata.repeatData +
+                 (ushort)(channel_notedata->channel_inter).channelSecondary.channel_notedata.
+                         repeat_count;
+  _repeat_data->remaining_loopcount = *instruction_list - 1;
+  _repeat_data->loop_index = instruction_list + 1;
+  _repeat_data->octave =
+       *(byte *)&(channel_notedata->channel_inter).channelSecondary.channel_notedata.octave;
+  return instruction_list + 1;
+}
+
+
+
+// WARNING: Type propagation algorithm not settling
+
+byte * Coda(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte _last_repeat;
+  MusicChannelRepeat *_repeat_data;
+  
+  _repeat_data = (channel_data->channel_inter).channelSecondary.channel_notedata.repeatData +
+                 (ushort)(channel_data->channel_inter).channelSecondary.channel_notedata.
+                         repeat_count;
+  _last_repeat = _repeat_data->remaining_loopcount - 1;
+  _repeat_data->remaining_loopcount = _last_repeat;
+  if (_last_repeat == 0xff) {
+    (channel_data->channel_inter).channelSecondary.channel_notedata.repeat_count =
+         (channel_data->channel_inter).channelSecondary.channel_notedata.repeat_count + -1;
+  }
+  else {
+    _repeat_data->coda_index = instruction_list;
+    instruction_list = _repeat_data->loop_index;
+    _repeat_data->coda_octave =
+         *(byte *)&(channel_data->channel_inter).channelSecondary.channel_notedata.octave;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.octave =
+         (ushort)_repeat_data->octave;
+  }
+  return instruction_list;
+}
+
+
+
+// WARNING: Type propagation algorithm not settling
+
+byte * To_Coda(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  short sVar1;
+  MusicChannelRepeat *_coda;
+  
+  _coda = (channel_data->channel_inter).channelSecondary.channel_notedata.repeatData +
+          (ushort)(channel_data->channel_inter).channelSecondary.channel_notedata.repeat_count;
+  if (_coda->remaining_loopcount == 0) {
+    instruction_list = _coda->coda_index;
+    sVar1 = (channel_data->channel_inter).channelSecondary.channel_notedata.repeat_count;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.octave =
+         (ushort)_coda->coda_octave;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.repeat_count = sVar1 + -1;
+  }
+  return instruction_list;
+}
+
+
+
+byte * Sound_Effect(byte *instruction_list)
+
+{
+  PlaySound_FromMus2((uint)*(ushort *)instruction_list,(uint)instruction_list[2],0x40);
+  return instruction_list + 3;
+}
+
+
+
+byte * FUN_80015bfc(byte *instruction_list)
+
+{
+  AccumulateChannelsToPause((uint)*(ushort *)instruction_list);
+  return instruction_list + 2;
+}
+
+
+
+byte * FUN_80015c38(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_notedata)
 
 {
   int iVar1;
   uint uVar2;
   
-  iVar1 = *(int *)(param_3 + 0xe);
-  if (iVar1 == 0) {
-    param_3[1] = param_3[1] & 0xfffc;
-    if ((*(ushort *)(param_2 + 0x10) & 2) == 0) {
-      DAT_80032a08 = DAT_80032a08 | *(uint *)(param_3 + 0x1a);
-    }
-    else {
-      PausedMusicChannels = PausedMusicChannels | *(uint *)(param_3 + 0x1a);
-      uVar2 = ~*(uint *)(param_3 + 0x1a);
-      *(uint *)(param_2 + 0x68) = uVar2 & *(uint *)(param_2 + 0x68);
-      *(uint *)(param_2 + 0x70) = uVar2 & *(uint *)(param_2 + 0x70);
-      *(uint *)(param_2 + 0x6c) = uVar2 & *(uint *)(param_2 + 0x6c);
-      PitchLFO_onlyInclude = uVar2 & PitchLFO_onlyInclude;
-      param_3[2] = param_3[2] | 0x54;
-    }
-    *param_3 = 0;
-    iVar1 = param_1 + -1;
-  }
-  else {
-    param_3[0x14] = param_3[0x14] + 1;
-    param_3[0x3f] = (ushort)*(byte *)((int)param_3 + 0x2b);
-  }
-  return iVar1;
-}
-
-
-
-int Loop(undefined4 param_1,int param_2,undefined2 *param_3,int param_4)
-
-{
-  uint uVar1;
-  
-  param_3[1] = param_3[1] & 0xfffc;
-  if ((*(ushort *)(param_2 + 0x10) & 2) == 0) {
-    DAT_80032a08 = DAT_80032a08 | *(uint *)(param_3 + 0x1a);
-  }
-  else {
-    PausedMusicChannels = PausedMusicChannels | *(uint *)(param_3 + 0x1a);
-    uVar1 = ~*(uint *)(param_3 + 0x1a);
-    *(uint *)(param_2 + 0x68) = uVar1 & *(uint *)(param_2 + 0x68);
-    *(uint *)(param_2 + 0x70) = uVar1 & *(uint *)(param_2 + 0x70);
-    *(uint *)(param_2 + 0x6c) = uVar1 & *(uint *)(param_2 + 0x6c);
-    PitchLFO_onlyInclude = uVar1 & PitchLFO_onlyInclude;
-    param_3[2] = param_3[2] | 0x54;
-  }
-  *param_3 = 0;
-  return param_4 + -1;
-}
-
-
-
-void FUN_800159dc(undefined4 param_1,undefined4 param_2,int param_3)
-
-{
-  *(undefined4 *)(param_3 + 0x1c) = param_1;
-  *(undefined *)(param_3 + 0x2b) = *(undefined *)(param_3 + 0x7e);
-  return;
-}
-
-
-
-byte * Octave(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  *(ushort *)(param_3 + 0x7e) = (ushort)*param_1 * 0xc;
-  return param_1 + 1;
-}
-
-
-
-undefined4 Raise_Octave(undefined4 param_1,undefined4 param_2,int param_3)
-
-{
-  *(short *)(param_3 + 0x7e) = *(short *)(param_3 + 0x7e) + 0xc;
-  return param_1;
-}
-
-
-
-undefined4 Lower_Octave(undefined4 param_1,undefined4 param_2,int param_3)
-
-{
-  *(short *)(param_3 + 0x7e) = *(short *)(param_3 + 0x7e) + -0xc;
-  return param_1;
-}
-
-
-
-byte * Time_Signature(byte *param_1,int param_2)
-
-{
-  byte bVar1;
-  byte bVar2;
-  
-  bVar1 = param_1[1];
-  bVar2 = *param_1;
-  *(short *)(param_2 + 0x3a) = (short)(0xc0 / ((uint)bVar1 * (uint)*(byte *)(param_2 + 0x15)));
-  *(ushort *)(param_2 + 0x3c) = (ushort)bVar1;
-  *(ushort *)(param_2 + 0x38) = (ushort)bVar2;
-  *(ushort *)(param_2 + 0x3e) = (ushort)bVar2;
-  *(undefined2 *)(param_2 + 0x36) = *(undefined2 *)(param_2 + 0x3a);
-  return param_1 + 2;
-}
-
-
-
-undefined * FUN_80015a88(undefined *param_1,int param_2)
-
-{
-  *(undefined *)(param_2 + 0x1c) = *param_1;
-  return param_1 + 1;
-}
-
-
-
-char * FUN_80015a9c(char *param_1,int param_2)
-
-{
-  *(char *)(param_2 + 0x1c) = *(char *)(param_2 + 0x1c) + *param_1;
-  return param_1 + 1;
-}
-
-
-
-void Repeat(char *param_1,undefined4 param_2,int param_3)
-
-{
-  char *pcVar1;
-  
-  *(short *)(param_3 + 0xac) = *(short *)(param_3 + 0xac) + 1;
-  pcVar1 = (char *)(param_3 + (uint)*(ushort *)(param_3 + 0xac) * 0xc + 0xb0);
-  *pcVar1 = *param_1 + -1;
-  *(char **)(pcVar1 + 4) = param_1 + 1;
-  pcVar1[2] = *(char *)(param_3 + 0x7e);
-  return;
-}
-
-
-
-undefined4 Coda(undefined4 param_1,undefined4 param_2,int param_3)
-
-{
-  char cVar1;
-  char *pcVar2;
-  
-  pcVar2 = (char *)(param_3 + (uint)*(ushort *)(param_3 + 0xac) * 0xc + 0xb0);
-  cVar1 = *pcVar2;
-  *pcVar2 = cVar1 + -1;
-  if ((char)(cVar1 + -1) == -1) {
-    *(short *)(param_3 + 0xac) = *(short *)(param_3 + 0xac) + -1;
-  }
-  else {
-    *(undefined4 *)(pcVar2 + 8) = param_1;
-    param_1 = *(undefined4 *)(pcVar2 + 4);
-    pcVar2[3] = *(char *)(param_3 + 0x7e);
-    *(ushort *)(param_3 + 0x7e) = (ushort)(byte)pcVar2[2];
-  }
-  return param_1;
-}
-
-
-
-undefined4 To_Coda(undefined4 param_1,undefined4 param_2,int param_3)
-
-{
-  char *pcVar1;
-  
-  pcVar1 = (char *)(param_3 + (uint)*(ushort *)(param_3 + 0xac) * 0xc + 0xb0);
-  if (*pcVar1 == '\0') {
-    param_1 = *(undefined4 *)(pcVar1 + 8);
-    *(ushort *)(param_3 + 0x7e) = (ushort)(byte)pcVar1[3];
-    *(short *)(param_3 + 0xac) = *(short *)(param_3 + 0xac) + -1;
-  }
-  return param_1;
-}
-
-
-
-int FUN_80015bb8(ushort *param_1)
-
-{
-  PlaySound_FromMus2((MusDataAll *)(uint)*param_1,(uint)*(byte *)(param_1 + 1),0x40);
-  return (int)param_1 + 3;
-}
-
-
-
-ushort * FUN_80015bfc(ushort *param_1)
-
-{
-  AccumulateChannelsToPause((MusicDataHeader *)(uint)*param_1);
-  return param_1 + 1;
-}
-
-
-
-ushort * FUN_80015c38(ushort *param_1,undefined4 param_2,int param_3)
-
-{
-  int iVar1;
-  
+  uVar2 = (uint)(channel_notedata->channel_inter).channelSecondary.field4_0x6;
   iVar1 = DAT_80032a00;
-  if ((int)*(short *)(param_3 + 10) == 0) {
+  if (uVar2 == 0) {
 LAB_80015c84:
-    param_1 = (ushort *)
-              (iVar1 + (uint)*(ushort *)
-                              (((uint)*(byte *)(param_1 + 1) +
-                               ((int)((uint)*param_1 << 0x10) >> 0xf)) * 2 + iVar1 + 0x14) + 3);
+    instruction_list =
+         (byte *)(iVar1 + (uint)*(ushort *)
+                                 (((uint)instruction_list[2] +
+                                  ((int)((uint)*(ushort *)instruction_list << 0x10) >> 0xf)) * 2 +
+                                  iVar1 + 0x14) + 3);
   }
   else {
     do {
-      if ((uint)*(ushort *)(iVar1 + 10) == (int)*(short *)(param_3 + 10)) goto LAB_80015c84;
+      if (*(ushort *)(iVar1 + 10) == uVar2) goto LAB_80015c84;
       iVar1 = *(int *)(iVar1 + 0x10);
     } while (iVar1 != 0);
   }
-  return param_1;
+  return instruction_list;
 }
 
 
 
-byte * Tempo(byte *param_1,int param_2)
+byte * Tempo(byte *instruction_list,MusDataAll *musData)
+
+{
+  short sVar1;
+  byte tempo;
+  
+  tempo = *instruction_list;
+  sVar1 = *(short *)((int)&(musData->HeaderData).tempo_scalar + 2);
+  (musData->HeaderData).raw_tempo = (uint)tempo << 0x10;
+  (musData->HeaderData).modified_tempo = (uint)tempo * (int)sVar1;
+  return instruction_list + 1;
+}
+
+
+
+byte * Accelerando(byte *instruction_list,MusDataAll *musData)
+
+{
+  byte _tempo_change;
+  
+  _tempo_change = *instruction_list;
+  (musData->HeaderData).modified_tempo = 0;
+  (musData->HeaderData).raw_tempo = (char)_tempo_change * 0x10000 + (musData->HeaderData).raw_tempo;
+  return instruction_list + 1;
+}
+
+
+
+byte * FUN_80015d04(byte *param_1,MusDataAll *musData)
 
 {
   byte bVar1;
+  int _new_tempo;
+  byte _tempo_change;
   
+  _tempo_change = param_1[1];
   bVar1 = *param_1;
-  *(uint *)(param_2 + 0x7c) = (uint)bVar1 << 0x10;
-  *(uint *)(param_2 + 0x78) = (uint)bVar1 * (int)*(short *)(param_2 + 0x8a);
-  return param_1 + 1;
-}
-
-
-
-char * FUN_80015cd8(char *param_1,int param_2)
-
-{
-  char cVar1;
-  
-  cVar1 = *param_1;
-  *(undefined4 *)(param_2 + 0x78) = 0;
-  *(int *)(param_2 + 0x7c) = cVar1 * 0x10000 + *(int *)(param_2 + 0x7c);
-  return param_1 + 1;
-}
-
-
-
-byte * FUN_80015d04(byte *param_1,int param_2)
-
-{
-  byte bVar1;
-  byte bVar2;
-  int iVar3;
-  
-  bVar1 = param_1[1];
-  bVar2 = *param_1;
-  *(ushort *)(param_2 + 0x86) = (ushort)bVar1;
-  iVar3 = (uint)bVar1 * 0x10000 - *(int *)(param_2 + 0x7c);
-  if ((bVar2 != 0) && (iVar3 != 0)) {
-    *(ushort *)(param_2 + 0x84) = (ushort)bVar2;
-    *(int *)(param_2 + 0x80) = iVar3 / (int)(uint)bVar2;
+  *(ushort *)&(musData->HeaderData).field_0x86 = (ushort)_tempo_change;
+  _new_tempo = (uint)_tempo_change * 0x10000 - (musData->HeaderData).raw_tempo;
+  if ((bVar1 != 0) && (_new_tempo != 0)) {
+    (musData->HeaderData).field60_0x84 = (ushort)bVar1;
+    (musData->HeaderData).field59_0x80 = _new_tempo / (int)(uint)bVar1;
   }
   return param_1 + 2;
 }
 
 
 
-byte * FUN_80015d44(byte *param_1,MusicDataHeader *param_2)
+byte * FUN_80015d44(byte *instruction_list,MusDataAll *musData)
 
 {
-  param_2->field106_0x94 = (uint)*param_1 << 0x18;
-  FUN_80017098(0x100,(MusDataAll *)param_2);
-  return param_1 + 1;
+  (musData->HeaderData).volset1.hasVolume = (SuzukiVolStore)((uint)*instruction_list << 0x18);
+  Set_noteflags2_allChannels(volume_change,musData);
+  return instruction_list + 1;
 }
 
 
 
-byte * FUN_80015d84(byte *param_1,int param_2)
+byte * FUN_80015d84(byte *instruction_list,MusDataAll *musData)
 
 {
   byte bVar1;
-  byte bVar2;
-  int iVar3;
+  int iVar2;
+  byte _volume_change;
   
-  bVar1 = *param_1;
-  bVar2 = param_1[1];
-  iVar3 = (uint)bVar2 * 0x1000000 - *(int *)(param_2 + 0x94);
-  if ((bVar1 != 0) && (iVar3 != 0)) {
-    *(ushort *)(param_2 + 0x9c) = (ushort)bVar1 << 5;
-    *(ushort *)(param_2 + 0x9e) = (ushort)bVar2 << 8;
-    *(int *)(param_2 + 0x98) = iVar3 / (int)((uint)bVar1 << 5);
+  bVar1 = *instruction_list;
+  _volume_change = instruction_list[1];
+  iVar2 = (uint)_volume_change * 0x1000000 - (int)(musData->HeaderData).volset1.hasVolume;
+  if ((bVar1 != 0) && (iVar2 != 0)) {
+    (musData->HeaderData).volset1.ChangeVol = (ushort)bVar1 << 5;
+    *(ushort *)&(musData->HeaderData).field_0x9e = (ushort)_volume_change << 8;
+    (musData->HeaderData).volset1.ChangeInVolume = iVar2 / (int)((uint)bVar1 << 5);
   }
-  return param_1 + 2;
+  return instruction_list + 2;
 }
 
 
 
-byte * FUN_80015dd0(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_80015dd0(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_3 + 0x7a) = (ushort)*param_1;
-  return param_1 + 1;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field38_0x46 =
+       (ushort)*instruction_list;
+  return instruction_list + 1;
 }
 
 
 
-byte * FUN_80015de4(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_80015de4(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
+  mus_voiceChannelFunc mVar2;
   
-  bVar1 = *param_1;
-  *(byte *)(param_3 + 0x2d) = bVar1;
+  bVar1 = *instruction_list;
+  (channel_data->channel_inter).channelSecondary.voice_ID = bVar1;
   if (bVar1 < 0x19) {
-    *(int *)(param_3 + 0x34) = 1 << (*(byte *)(param_3 + 0x2d) & 0x1f);
-    *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x1ff;
+    mVar2 = (channel_data->channel_inter).channelSecondary.channelFunc;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels =
+         1 << ((channel_data->channel_inter).channelSecondary.voice_ID & 0x1f);
+    (channel_data->channel_inter).channelSecondary.channelFunc =
+         mVar2 | (Adjust_Voice_Vol_Both|Set_Sweep_VolMode|CalcLFOVoices|Set_ADPCM_Addrs|
+                  CalcNoiseVoices|Adjust_Voice_Decay_Shift|CalcReverbVoices|Adjust_Release|
+                 Adjust_Sustain_Level);
   }
   else {
-    *(undefined4 *)(param_3 + 0x34) = 0;
-    *(undefined2 *)(param_3 + 4) = 0;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels = 0;
+    (channel_data->channel_inter).channelSecondary.channelFunc = 0;
   }
-  return param_1 + 1;
+  return instruction_list + 1;
 }
 
 
 
-byte * Instrument(byte *param_1,undefined4 param_2,ushort *param_3)
+byte * Instrument(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  Set_Instrument((uint)*param_1,param_3);
-  return param_1 + 1;
+  Set_Instrument((uint)*instruction_list,channel_data);
+  return instruction_list + 1;
 }
 
 
 
-char * FUN_80015e68(char *param_1,undefined4 param_2,int param_3)
+byte * FUN_80015e68(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  if (*param_1 == '\0') {
-    *(undefined *)(param_3 + 0x76) = 0;
+  if (*instruction_list == 0) {
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0x42 = 0;
   }
   else {
-    *(char *)(param_3 + 0x76) = *param_1 + *(char *)(param_3 + 0x76);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0x42 =
+         *instruction_list +
+         (channel_data->channel_inter).channelSecondary.channel_notedata.field_0x42;
   }
-  return param_1 + 1;
+  return instruction_list + 1;
 }
 
 
 
-undefined4 SMD_NOOP5(undefined4 param_1)
+byte * SMD_NOOP5(byte *instruction_list)
 
 {
-  return param_1;
+  return instruction_list;
 }
 
 
 
-undefined4 SMD_NOOP6(undefined4 param_1)
+byte * SMD_NOOP6(byte *instruction_list)
 
 {
-  return param_1;
+  return instruction_list;
 }
 
 
 
-undefined4 FUN_80015ea8(undefined4 param_1,undefined4 param_2,ushort *param_3)
+byte * FUN_80015ea8(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *param_3 = *param_3 | 0x800;
-  return param_1;
+  channel_data->channelflags = channel_data->channelflags | action800;
+  return instruction_list;
 }
 
 
 
-undefined4 FUN_80015ec0(undefined4 param_1,undefined4 param_2,ushort *param_3)
+byte * FUN_80015ec0(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *param_3 = *param_3 & 0xf7ff;
-  return param_1;
+  channel_data->channelflags = channel_data->channelflags & ~action800;
+  return instruction_list;
 }
 
 
 
-undefined4 FUN_80015ed8(undefined4 param_1,int param_2,int param_3)
+byte * Enable_LFO(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  if ((*(byte *)(param_3 + 0x2d) & 1) != 0) {
-    *(uint *)(param_2 + 0x68) = *(uint *)(param_2 + 0x68) | *(uint *)(param_3 + 0x34);
-    *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 4;
+  if (((channel_data->channel_inter).channelSecondary.voice_ID & 1) != 0) {
+    (musData->HeaderData).LFOVoiceBits =
+         (musData->HeaderData).LFOVoiceBits |
+         (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
+    (channel_data->channel_inter).channelSecondary.channelFunc =
+         (channel_data->channel_inter).channelSecondary.channelFunc | CalcLFOVoices;
   }
-  return param_1;
+  return instruction_list;
 }
 
 
 
-undefined4 FUN_80015f18(undefined4 param_1,int param_2,int param_3)
+byte * Disable_LFO(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(uint *)(param_2 + 0x68) = ~*(uint *)(param_3 + 0x34) & *(uint *)(param_2 + 0x68);
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 4;
-  return param_1;
+  (musData->HeaderData).LFOVoiceBits =
+       ~(channel_data->channel_inter).channelSecondary.channel_notedata.using_channels &
+       (musData->HeaderData).LFOVoiceBits;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | CalcLFOVoices;
+  return instruction_list;
 }
 
 
 
-byte * FUN_80015f44(byte *param_1,int param_2,int param_3)
+byte * Enable_Noise(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_2 + 0x1e) = (ushort)*param_1;
-  SpuSetNoiseClock((uint)*(ushort *)(param_2 + 0x1e));
-  *(uint *)(param_2 + 0x6c) = *(uint *)(param_2 + 0x6c) | *(uint *)(param_3 + 0x34);
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
-  return param_1 + 1;
+  (musData->HeaderData).noise_clock = (ushort)*instruction_list;
+  SpuSetNoiseClock((uint)(musData->HeaderData).noise_clock);
+  (musData->HeaderData).NoiseVoiceBits =
+       (musData->HeaderData).NoiseVoiceBits |
+       (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+  return instruction_list + 1;
 }
 
 
 
-byte * FUN_80015fb4(byte *param_1,int param_2,int param_3)
+byte * Increase_Noise(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_notedata)
 
 {
-  *(ushort *)(param_2 + 0x1e) = (ushort)*param_1 + *(short *)(param_2 + 0x1e) & 0x3f;
-  SpuSetNoiseClock((uint)*(ushort *)(param_2 + 0x1e));
-  *(uint *)(param_2 + 0x6c) = *(uint *)(param_2 + 0x6c) | *(uint *)(param_3 + 0x34);
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
-  return param_1 + 1;
+  (musData->HeaderData).noise_clock =
+       (ushort)*instruction_list + (musData->HeaderData).noise_clock & 0x3f;
+  SpuSetNoiseClock((uint)(musData->HeaderData).noise_clock);
+  (musData->HeaderData).NoiseVoiceBits =
+       (musData->HeaderData).NoiseVoiceBits |
+       (channel_notedata->channel_inter).channelSecondary.channel_notedata.using_channels;
+  (channel_notedata->channel_inter).channelSecondary.channelFunc =
+       (channel_notedata->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+  return instruction_list + 1;
 }
 
 
 
-undefined4 FUN_80016034(undefined4 param_1,int param_2,int param_3)
+byte * Turn_On_Noise(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(uint *)(param_2 + 0x6c) = *(uint *)(param_2 + 0x6c) | *(uint *)(param_3 + 0x34);
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
-  return param_1;
+  (musData->HeaderData).NoiseVoiceBits =
+       (musData->HeaderData).NoiseVoiceBits |
+       (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+  return instruction_list;
 }
 
 
 
-undefined4 FUN_80016060(undefined4 param_1,int param_2,int param_3)
+byte * Disable_Noise(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(uint *)(param_2 + 0x6c) = ~*(uint *)(param_3 + 0x34) & *(uint *)(param_2 + 0x6c);
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
-  return param_1;
+  (musData->HeaderData).NoiseVoiceBits =
+       ~(channel_data->channel_inter).channelSecondary.channel_notedata.using_channels &
+       (musData->HeaderData).NoiseVoiceBits;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+  return instruction_list;
 }
 
 
 
-byte * FUN_8001608c(byte *param_1,int param_2)
+byte * Acoustics(byte *instruction_list,MusDataAll *musData)
+
+{
+  byte _reverb_delay;
+  byte _reverb_feedback;
+  byte _volume_depth;
+  
+  _volume_depth = *instruction_list;
+  (musData->HeaderData).volumeDepth = (ushort)_volume_depth << 8;
+  _reverb_delay = instruction_list[1];
+  (musData->HeaderData).reverbDelay = (int)(char)_reverb_delay;
+  _reverb_feedback = instruction_list[2];
+  (musData->HeaderData).reverbFeedback = (int)(char)_reverb_feedback;
+  SetReverbParam(10,(short)(((uint)_volume_depth << 0x18) >> 0x10),(int)(char)_reverb_delay,
+                 (int)(char)_reverb_feedback);
+  return instruction_list + 3;
+}
+
+
+
+byte * Enable_Reverb(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_Data)
+
+{
+  (musData->HeaderData).ReverbVoiceBits =
+       (musData->HeaderData).ReverbVoiceBits |
+       (channel_Data->channel_inter).channelSecondary.channel_notedata.using_channels;
+  (channel_Data->channel_inter).channelSecondary.channelFunc =
+       (channel_Data->channel_inter).channelSecondary.channelFunc | CalcReverbVoices;
+  return instruction_list;
+}
+
+
+
+byte * Disable_Reverb(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  (musData->HeaderData).ReverbVoiceBits =
+       ~(channel_data->channel_inter).channelSecondary.channel_notedata.using_channels &
+       (musData->HeaderData).ReverbVoiceBits;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | CalcReverbVoices;
+  return instruction_list;
+}
+
+
+
+byte * Naturale(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_notedata)
+
+{
+  Set_Instrument((uint)(channel_notedata->channel_inter).channelSecondary.instrument,
+                 channel_notedata);
+  return instruction_list;
+}
+
+
+
+byte * Envelope_Shape(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte bVar1;
+  
+  (channel_data->channel_inter).channelSecondary.channel_notedata.attack_mode =
+       (uint)*instruction_list;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.sustain_mode =
+       (uint)instruction_list[1];
+  bVar1 = instruction_list[2];
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc |
+       (CalcNoiseVoices|Adjust_Voice_Decay_Shift|CalcReverbVoices|Adjust_Release|
+       Adjust_Sustain_Level);
+  (channel_data->channel_inter).channelSecondary.channel_notedata.release_mode = (uint)bVar1;
+  return instruction_list + 3;
+}
+
+
+
+byte * Attack_Time(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte _attack_time;
+  
+  _attack_time = *instruction_list;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.attack_shiftstep =
+       (ushort)_attack_time;
+  return instruction_list + 1;
+}
+
+
+
+byte * Decay_Time(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte _decay_time;
+  
+  _decay_time = *instruction_list;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | Adjust_Voice_Decay_Shift;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.decay_shift = (ushort)_decay_time;
+  return instruction_list + 1;
+}
+
+
+
+byte * Sustain(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte _sustain;
+  
+  _sustain = *instruction_list;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | CalcReverbVoices;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.sustain_flags = (ushort)_sustain;
+  return instruction_list + 1;
+}
+
+
+
+byte * Release(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte _release;
+  
+  _release = *instruction_list;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | Adjust_Release;
+  (channel_data->channel_inter).channelSecondary.releaseflags_small = (ushort)_release;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.release_flags = (ushort)_release;
+  return instruction_list + 1;
+}
+
+
+
+byte * Sustain_Level(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte _sustain_level;
+  
+  _sustain_level = *instruction_list;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | Adjust_Sustain_Level;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.sus_lvl = (ushort)_sustain_level;
+  return instruction_list + 1;
+}
+
+
+
+byte * Envelope_Tail(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte _sustain_level;
+  
+  (channel_data->channel_inter).channelSecondary.channel_notedata.decay_shift =
+       (ushort)*instruction_list;
+  _sustain_level = instruction_list[1];
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc |
+       (Adjust_Voice_Decay_Shift|Adjust_Sustain_Level);
+  (channel_data->channel_inter).channelSecondary.channel_notedata.sus_lvl = (ushort)_sustain_level;
+  return instruction_list + 2;
+}
+
+
+
+byte * Attack_Mode(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte _attack_mode;
+  
+  _attack_mode = *instruction_list;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.attack_mode = (uint)_attack_mode;
+  return instruction_list + 1;
+}
+
+
+
+byte * Sustain_Mode(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte _sustain_mode;
+  
+  _sustain_mode = *instruction_list;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | CalcReverbVoices;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.sustain_mode = (uint)_sustain_mode
+  ;
+  return instruction_list + 1;
+}
+
+
+
+byte * Release_Mode(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  byte _release_mode;
+  
+  _release_mode = *instruction_list;
+  (channel_data->channel_inter).channelSecondary.channelFunc =
+       (channel_data->channel_inter).channelSecondary.channelFunc | Adjust_Release;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.release_mode = (uint)_release_mode
+  ;
+  return instruction_list + 1;
+}
+
+
+
+byte * FUN_800162b4(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  SUZUKIintermediary_flags SVar1;
+  
+  SVar1 = (channel_data->channel_inter).intermediaryflags;
+  *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 =
+       (short)((int)((uint)*instruction_list << 0x18) >> 0x13);
+  (channel_data->channel_inter).intermediaryflags = SVar1 | playing_note;
+  return instruction_list + 1;
+}
+
+
+
+byte * FUN_800162d8(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  SUZUKIintermediary_flags SVar1;
+  
+  SVar1 = (channel_data->channel_inter).intermediaryflags;
+  *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 =
+       *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 +
+       (short)((int)((uint)*instruction_list << 0x18) >> 0x13);
+  (channel_data->channel_inter).intermediaryflags = SVar1 | playing_note;
+  return instruction_list + 1;
+}
+
+
+
+byte * FUN_80016304(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  SUZUKIintermediary_flags SVar1;
+  
+  SVar1 = (channel_data->channel_inter).intermediaryflags;
+  *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 =
+       *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 +
+       (short)((int)((uint)*instruction_list << 0x18) >> 0x15);
+  (channel_data->channel_inter).intermediaryflags = SVar1 | playing_note;
+  return instruction_list + 1;
+}
+
+
+
+byte * FUN_80016330(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
   byte bVar2;
-  byte bVar3;
+  short sVar3;
   
-  bVar3 = *param_1;
-  *(ushort *)(param_2 + 0x48) = (ushort)bVar3 << 8;
-  bVar1 = param_1[1];
-  *(int *)(param_2 + 0x4c) = (int)(char)bVar1;
-  bVar2 = param_1[2];
-  *(int *)(param_2 + 0x50) = (int)(char)bVar2;
-  SetReverbParam(10,(short)(((uint)bVar3 << 0x18) >> 0x10),(int)(char)bVar1,(int)(char)bVar2);
-  return param_1 + 3;
+  bVar1 = *instruction_list;
+  bVar2 = instruction_list[1];
+  sVar3 = *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52;
+  (channel_data->channel_inter).intermediaryflags =
+       (channel_data->channel_inter).intermediaryflags | playing_note;
+  *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 =
+       sVar3 + (ushort)bVar2 + (short)(((uint)bVar1 << 0x18) >> 0x10);
+  return instruction_list + 2;
 }
 
 
 
-undefined4 Cue(undefined4 param_1,int param_2,int param_3)
-
-{
-  *(uint *)(param_2 + 0x70) = *(uint *)(param_2 + 0x70) | *(uint *)(param_3 + 0x34);
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x40;
-  return param_1;
-}
-
-
-
-undefined4 FUN_80016110(undefined4 param_1,int param_2,int param_3)
-
-{
-  *(uint *)(param_2 + 0x70) = ~*(uint *)(param_3 + 0x34) & *(uint *)(param_2 + 0x70);
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x40;
-  return param_1;
-}
-
-
-
-undefined4 Naturale(undefined4 param_1,undefined4 param_2,ushort *param_3)
-
-{
-  Set_Instrument((uint)*(byte *)(param_3 + 0x16),param_3);
-  return param_1;
-}
-
-
-
-byte * FUN_80016174(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_80016364(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
+  SUZUKInoteflags4 SVar2;
+  byte _note_length;
   
-  *(uint *)(param_3 + 0x58) = (uint)*param_1;
-  *(uint *)(param_3 + 0x5c) = (uint)param_1[1];
-  bVar1 = param_1[2];
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x1f0;
-  *(uint *)(param_3 + 0x60) = (uint)bVar1;
-  return param_1 + 3;
-}
-
-
-
-byte * Attack_Time(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  
-  bVar1 = *param_1;
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
-  *(ushort *)(param_3 + 100) = (ushort)bVar1;
-  return param_1 + 1;
-}
-
-
-
-byte * FUN_800161c4(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  
-  bVar1 = *param_1;
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x20;
-  *(ushort *)(param_3 + 0x66) = (ushort)bVar1;
-  return param_1 + 1;
-}
-
-
-
-byte * Sustain(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  
-  bVar1 = *param_1;
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x40;
-  *(ushort *)(param_3 + 0x68) = (ushort)bVar1;
-  return param_1 + 1;
-}
-
-
-
-byte * FUN_800161fc(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  
-  bVar1 = *param_1;
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x80;
-  *(ushort *)(param_3 + 0x2e) = (ushort)bVar1;
-  *(ushort *)(param_3 + 0x6a) = (ushort)bVar1;
-  return param_1 + 1;
-}
-
-
-
-byte * Sustain2(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  
-  bVar1 = *param_1;
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x100;
-  *(ushort *)(param_3 + 0x6c) = (ushort)bVar1;
-  return param_1 + 1;
-}
-
-
-
-byte * FUN_80016238(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  
-  *(ushort *)(param_3 + 0x66) = (ushort)*param_1;
-  bVar1 = param_1[1];
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x120;
-  *(ushort *)(param_3 + 0x6c) = (ushort)bVar1;
-  return param_1 + 2;
-}
-
-
-
-byte * FUN_80016260(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  
-  bVar1 = *param_1;
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x10;
-  *(uint *)(param_3 + 0x58) = (uint)bVar1;
-  return param_1 + 1;
-}
-
-
-
-byte * FUN_8001627c(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  
-  bVar1 = *param_1;
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x40;
-  *(uint *)(param_3 + 0x5c) = (uint)bVar1;
-  return param_1 + 1;
-}
-
-
-
-byte * FUN_80016298(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  
-  bVar1 = *param_1;
-  *(ushort *)(param_3 + 4) = *(ushort *)(param_3 + 4) | 0x80;
-  *(uint *)(param_3 + 0x60) = (uint)bVar1;
-  return param_1 + 1;
-}
-
-
-
-byte * FUN_800162b4(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  *(short *)(param_3 + 0x86) = (short)((int)((uint)*param_1 << 0x18) >> 0x13);
-  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x200;
-  return param_1 + 1;
-}
-
-
-
-byte * FUN_800162d8(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  *(short *)(param_3 + 0x86) =
-       *(short *)(param_3 + 0x86) + (short)((int)((uint)*param_1 << 0x18) >> 0x13);
-  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x200;
-  return param_1 + 1;
-}
-
-
-
-byte * FUN_80016304(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  *(short *)(param_3 + 0x86) =
-       *(short *)(param_3 + 0x86) + (short)((int)((uint)*param_1 << 0x18) >> 0x15);
-  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x200;
-  return param_1 + 1;
-}
-
-
-
-byte * FUN_80016330(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  byte bVar2;
-  
-  bVar1 = *param_1;
-  bVar2 = param_1[1];
-  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x200;
-  *(ushort *)(param_3 + 0x86) =
-       *(short *)(param_3 + 0x86) + (ushort)bVar2 + (short)(((uint)bVar1 << 0x18) >> 0x10);
-  return param_1 + 2;
-}
-
-
-
-byte * FUN_80016364(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  byte bVar2;
-  
-  bVar1 = param_1[1];
-  bVar2 = *param_1;
-  if ((bVar2 == 0) || ((int)(char)bVar1 << 0x18 == 0)) {
-    *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) & 0xfffe;
+  bVar1 = instruction_list[1];
+  _note_length = *instruction_list;
+  if ((_note_length == 0) || ((int)(char)bVar1 << 0x18 == 0)) {
+    (channel_data->channel_inter).channelSecondary.instrumentflags =
+         (channel_data->channel_inter).channelSecondary.instrumentflags & 0xfffe;
   }
   else {
-    *(ushort *)(param_3 + 0xa6) = (ushort)bVar2;
-    *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) | 1;
-    *(int *)(param_3 + 0x9c) = ((int)(char)bVar1 << 0x18) / (int)(uint)bVar2;
+    SVar2 = (channel_data->channel_inter).channelSecondary.instrumentflags;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.note_length =
+         (ushort)_note_length;
+    (channel_data->channel_inter).channelSecondary.instrumentflags = SVar2 | 1;
+    *(int *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x68 =
+         ((int)(char)bVar1 << 0x18) / (int)(uint)_note_length;
   }
-  return param_1 + 2;
+  return instruction_list + 2;
 }
 
 
 
-undefined4 FUN_800163bc(undefined4 param_1,undefined4 param_2,int param_3)
+byte * FUN_800163bc(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) ^ 2;
-  return param_1;
+  (channel_data->channel_inter).channelSecondary.instrumentflags =
+       (channel_data->channel_inter).channelSecondary.instrumentflags ^ 2;
+  return instruction_list;
 }
 
 
 
-undefined4 FUN_800163d4(undefined4 param_1,undefined4 param_2,int param_3)
+byte * FUN_800163d4(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) & 0xfffe;
-  return param_1;
+  (channel_data->channel_inter).channelSecondary.instrumentflags =
+       (channel_data->channel_inter).channelSecondary.instrumentflags & 0xfffe;
+  return instruction_list;
 }
 
 
 
-byte * FUN_800163ec(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_800163ec(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
-  ushort uVar2;
+  SUZUKInoteflags4 SVar2;
   
-  bVar1 = *param_1;
-  *(ushort *)(param_3 + 0x90) = (ushort)bVar1;
+  bVar1 = *instruction_list;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field54_0x5c = (ushort)bVar1;
   if (bVar1 == 0) {
-    uVar2 = *(ushort *)(param_3 + 6) & 0xfffb;
+    SVar2 = (channel_data->channel_inter).channelSecondary.instrumentflags & 0xfffb;
   }
   else {
-    uVar2 = *(ushort *)(param_3 + 6) | 4;
+    SVar2 = (channel_data->channel_inter).channelSecondary.instrumentflags | 4;
   }
-  *(ushort *)(param_3 + 6) = uVar2;
-  return param_1 + 1;
+  (channel_data->channel_inter).channelSecondary.instrumentflags = SVar2;
+  return instruction_list + 1;
 }
 
 
 
-byte * Pitch_Shift(byte *param_1,undefined4 param_2,int param_3)
+byte * Pitch_Shift(byte *instructionList,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  int _ps_intensity;
+  int _abs_ps_intensity;
+  byte _ps_speed;
+  
+  _ps_intensity = (int)(char)instructionList[1];
+  _ps_speed = *instructionList;
+  if ((_ps_intensity != 0) && (_ps_speed != 0)) {
+    _abs_ps_intensity = _ps_intensity;
+    if (_ps_intensity < 0) {
+      _abs_ps_intensity = -_ps_intensity;
+    }
+    _ps_intensity = FUN_80016bf8(_ps_intensity * _abs_ps_intensity * 0x4000,(ushort)_ps_speed,3);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.Pitchshift_Intensity =
+         _ps_intensity;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.Pitchshift_Speed =
+         (ushort)_ps_speed;
+    _ps_speed = instructionList[2];
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field118_0xc6 = 0x100;
+    *(code **)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xac =
+         FUN_80017744;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xc9 = 3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xc8 = 0;
+    *(undefined2 *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca = 3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.Pitchshift_Delay =
+         (ushort)_ps_speed;
+    FUN_80016dc0((int)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xac);
+  }
+  return instructionList + 3;
+}
+
+
+
+byte * FUN_800164d4(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
   int iVar2;
-  int iVar3;
+  int _ps_intensity;
+  undefined *puVar3;
+  uint _cmd;
+  byte _ps_speed;
   
-  iVar3 = (int)(char)param_1[1];
-  bVar1 = *param_1;
-  if ((iVar3 != 0) && (bVar1 != 0)) {
-    iVar2 = iVar3;
-    if (iVar3 < 0) {
-      iVar2 = -iVar3;
+  _ps_intensity = (int)(char)instruction_list[1];
+  bVar1 = instruction_list[2];
+  _ps_speed = *instruction_list;
+  if ((_ps_intensity != 0) && (_ps_speed != 0)) {
+    iVar2 = _ps_intensity;
+    if (_ps_intensity < 0) {
+      iVar2 = -_ps_intensity;
     }
-    iVar3 = FUN_80016bf8(iVar3 * iVar2 * 0x4000,(ushort)bVar1,3);
-    *(int *)(param_3 + 0xec) = iVar3;
-    *(ushort *)(param_3 + 0xf2) = (ushort)bVar1;
-    bVar1 = param_1[2];
-    *(undefined2 *)(param_3 + 0xfa) = 0x100;
-    *(code **)(param_3 + 0xe0) = FUN_80017744;
-    *(undefined *)(param_3 + 0xfd) = 3;
-    *(undefined *)(param_3 + 0xfc) = 0;
-    *(undefined2 *)(param_3 + 0xfe) = 3;
-    *(ushort *)(param_3 + 0xf6) = (ushort)bVar1;
-    FUN_80016dc0(param_3 + 0xe0);
+    _cmd = bVar1 & 0xf;
+    _ps_intensity = FUN_80016bf8(_ps_intensity * iVar2 * 0x4000,(ushort)_ps_speed,(short)_cmd);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.Pitchshift_Intensity =
+         _ps_intensity;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field118_0xc6 = 0x100;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.Pitchshift_Speed =
+         (ushort)_ps_speed;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.Pitchshift_Delay = 0;
+    puVar3 = (&PTR_FUN_80028f54)[_cmd];
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xc9 = (char)_cmd;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xc8 = 0;
+    *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca =
+         (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
+    *(undefined **)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xac =
+         puVar3;
+    FUN_80016dc0((int)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xac);
   }
-  return param_1 + 3;
+  return instruction_list + 3;
 }
 
 
 
-byte * FUN_800164d4(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_800165ac(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  byte bVar1;
-  byte bVar2;
-  int iVar3;
-  undefined *puVar4;
-  int iVar5;
-  uint uVar6;
-  
-  iVar5 = (int)(char)param_1[1];
-  bVar1 = param_1[2];
-  bVar2 = *param_1;
-  if ((iVar5 != 0) && (bVar2 != 0)) {
-    iVar3 = iVar5;
-    if (iVar5 < 0) {
-      iVar3 = -iVar5;
-    }
-    uVar6 = bVar1 & 0xf;
-    iVar5 = FUN_80016bf8(iVar5 * iVar3 * 0x4000,(ushort)bVar2,(short)uVar6);
-    *(int *)(param_3 + 0xec) = iVar5;
-    *(undefined2 *)(param_3 + 0xfa) = 0x100;
-    *(ushort *)(param_3 + 0xf2) = (ushort)bVar2;
-    *(undefined2 *)(param_3 + 0xf6) = 0;
-    puVar4 = (&PTR_FUN_80028f54)[uVar6];
-    *(char *)(param_3 + 0xfd) = (char)uVar6;
-    *(undefined *)(param_3 + 0xfc) = 0;
-    *(ushort *)(param_3 + 0xfe) = (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
-    *(undefined **)(param_3 + 0xe0) = puVar4;
-    FUN_80016dc0(param_3 + 0xe0);
-  }
-  return param_1 + 3;
-}
-
-
-
-byte * FUN_800165ac(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  undefined2 uVar1;
+  short sVar1;
   uint uVar2;
   
-  uVar2 = *param_1 + 1 & 0xff;
+  uVar2 = *instruction_list + 1 & 0xff;
   if (uVar2 != 0) {
-    uVar1 = (undefined2)(0x100 / uVar2);
-    *(undefined2 *)(param_3 + 0xfa) = uVar1;
-    *(undefined2 *)(param_3 + 0xf8) = uVar1;
+    sVar1 = (short)(0x100 / uVar2);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field118_0xc6 = sVar1;
+    *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xc4 = sVar1;
   }
-  return param_1 + 1;
+  return instruction_list + 1;
 }
 
 
 
-undefined4 FUN_800165e4(undefined4 param_1,undefined4 param_2,int param_3)
+byte * FUN_800165e4(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_3 + 0xfe) = *(ushort *)(param_3 + 0xfe) | 1;
-  return param_1;
+  *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca =
+       *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca | 1;
+  return instruction_list;
 }
 
 
 
-undefined4 FUN_800165fc(undefined4 param_1,undefined4 param_2,int param_3)
+byte * FUN_800165fc(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_3 + 0xfe) = *(ushort *)(param_3 + 0xfe) & 0xfffe;
-  return param_1;
+  *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca =
+       *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca &
+       0xfffe;
+  return instruction_list;
 }
 
 
 
-byte * Dynamic(byte *param_1,undefined4 param_2,int param_3)
+byte * Dynamic(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(uint *)(param_3 + 0x98) = (uint)*param_1 << 0x18;
-  *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) & 0xfff7;
-  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x100;
-  return param_1 + 1;
+  SUZUKIintermediary_flags SVar1;
+  SUZUKInoteflags4 _instrument_flags;
+  byte _volume;
+  
+  _volume = *instruction_list;
+  _instrument_flags = (channel_data->channel_inter).channelSecondary.instrumentflags;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.vol_left =
+       (short)((uint)_volume << 0x18);
+  (channel_data->channel_inter).channelSecondary.channel_notedata.vol_right =
+       (short)(((uint)_volume << 0x18) >> 0x10);
+  SVar1 = (channel_data->channel_inter).intermediaryflags;
+  (channel_data->channel_inter).channelSecondary.instrumentflags =
+       _instrument_flags & ~default_dynamic;
+  (channel_data->channel_inter).intermediaryflags = SVar1 | volume_change;
+  return instruction_list + 1;
 }
 
 
 
-char * FUN_80016640(char *param_1,undefined4 param_2,int param_3)
+byte * Crescendo(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_notedata)
 
 {
-  *(uint *)(param_3 + 0x98) = *param_1 * 0x1000000 + *(int *)(param_3 + 0x98) & 0x7fffffff;
-  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x100;
-  *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) & 0xfff7;
-  return param_1 + 1;
+  SUZUKInoteflags4 SVar1;
+  uint _vol_change;
+  
+  _vol_change = (char)*instruction_list * 0x1000000 +
+                *(int *)&(channel_notedata->channel_inter).channelSecondary.channel_notedata.
+                         vol_left & 0x7fffffff;
+  (channel_notedata->channel_inter).channelSecondary.channel_notedata.vol_left = (short)_vol_change;
+  (channel_notedata->channel_inter).channelSecondary.channel_notedata.vol_right =
+       (short)(_vol_change >> 0x10);
+  SVar1 = (channel_notedata->channel_inter).channelSecondary.instrumentflags;
+  (channel_notedata->channel_inter).intermediaryflags =
+       (channel_notedata->channel_inter).intermediaryflags | volume_change;
+  (channel_notedata->channel_inter).channelSecondary.instrumentflags = SVar1 & ~default_dynamic;
+  return instruction_list + 1;
 }
 
 
 
-byte * FUN_80016680(byte *param_1,undefined4 param_2,int param_3)
+byte * Fermata_Ramp(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  int _vol_change;
+  byte _fermata_length;
+  SUZUKInoteflags4 _instrument_flags;
+  
+  _fermata_length = *instruction_list;
+  _vol_change = (char)instruction_list[1] * 0x1000000 -
+                *(int *)&(channel_data->channel_inter).channelSecondary.channel_notedata.vol_left;
+  if ((_fermata_length != 0) && (_vol_change != 0)) {
+    _instrument_flags = (channel_data->channel_inter).channelSecondary.instrumentflags;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.note_fermata_length =
+         (ushort)_fermata_length;
+    (channel_data->channel_inter).channelSecondary.instrumentflags =
+         _instrument_flags | default_dynamic;
+    (channel_data->channel_inter).channelSecondary.channel_notedata._vol_delta =
+         _vol_change / (int)(uint)_fermata_length;
+  }
+  return instruction_list + 2;
+}
+
+
+
+byte * FUN_800166c8(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
   int iVar2;
   
-  bVar1 = *param_1;
-  iVar2 = (char)param_1[1] * 0x1000000 - *(int *)(param_3 + 0x98);
-  if ((bVar1 != 0) && (iVar2 != 0)) {
-    *(ushort *)(param_3 + 0xa8) = (ushort)bVar1;
-    *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) | 8;
-    *(int *)(param_3 + 0xa0) = iVar2 / (int)(uint)bVar1;
+  bVar1 = *instruction_list;
+  if (((char)instruction_list[1] != 0) && (bVar1 != 0)) {
+    iVar2 = FUN_80016bf8((char)instruction_list[1] * -0x1000000,(ushort)bVar1,2);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field135_0xd8 = iVar2;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field138_0xde = (ushort)bVar1;
+    bVar1 = instruction_list[2];
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field143_0xe6 = 0x100;
+    *(code **)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xcc =
+         FUN_800176e4;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xe9 = 2;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xe8 = 1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea = 3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field141_0xe2 = (ushort)bVar1;
+    FUN_80016dc0((int)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xcc);
   }
-  return param_1 + 2;
+  return instruction_list + 3;
 }
 
 
 
-byte * FUN_800166c8(byte *param_1,undefined4 param_2,int param_3)
-
-{
-  byte bVar1;
-  int iVar2;
-  
-  bVar1 = *param_1;
-  if (((char)param_1[1] != 0) && (bVar1 != 0)) {
-    iVar2 = FUN_80016bf8((char)param_1[1] * -0x1000000,(ushort)bVar1,2);
-    *(int *)(param_3 + 0x10c) = iVar2;
-    *(ushort *)(param_3 + 0x112) = (ushort)bVar1;
-    bVar1 = param_1[2];
-    *(undefined2 *)(param_3 + 0x11a) = 0x100;
-    *(code **)(param_3 + 0x100) = FUN_800176e4;
-    *(undefined *)(param_3 + 0x11d) = 2;
-    *(undefined *)(param_3 + 0x11c) = 1;
-    *(undefined2 *)(param_3 + 0x11e) = 3;
-    *(ushort *)(param_3 + 0x116) = (ushort)bVar1;
-    FUN_80016dc0(param_3 + 0x100);
-  }
-  return param_1 + 3;
-}
-
-
-
-byte * FUN_8001676c(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_8001676c(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
@@ -10271,144 +10656,166 @@ byte * FUN_8001676c(byte *param_1,undefined4 param_2,int param_3)
   undefined *puVar4;
   uint uVar5;
   
-  bVar1 = param_1[2];
-  bVar2 = *param_1;
-  if (((char)param_1[1] != 0) && (bVar2 != 0)) {
+  bVar1 = instruction_list[2];
+  bVar2 = *instruction_list;
+  if (((char)instruction_list[1] != 0) && (bVar2 != 0)) {
     uVar5 = bVar1 & 0xf;
-    iVar3 = FUN_80016bf8((char)param_1[1] * -0x1000000,(ushort)bVar2,(short)uVar5);
-    *(int *)(param_3 + 0x10c) = iVar3;
-    *(undefined2 *)(param_3 + 0x11a) = 0x100;
-    *(ushort *)(param_3 + 0x112) = (ushort)bVar2;
-    *(undefined2 *)(param_3 + 0x116) = 0;
+    iVar3 = FUN_80016bf8((char)instruction_list[1] * -0x1000000,(ushort)bVar2,(short)uVar5);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field135_0xd8 = iVar3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field143_0xe6 = 0x100;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field138_0xde = (ushort)bVar2;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field141_0xe2 = 0;
     puVar4 = (&PTR_FUN_80028f54)[uVar5];
-    *(char *)(param_3 + 0x11d) = (char)uVar5;
-    *(undefined *)(param_3 + 0x11c) = 1;
-    *(ushort *)(param_3 + 0x11e) = (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
-    *(undefined **)(param_3 + 0x100) = puVar4;
-    FUN_80016dc0(param_3 + 0x100);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xe9 = (char)uVar5;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xe8 = 1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea =
+         (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
+    *(undefined **)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xcc =
+         puVar4;
+    FUN_80016dc0((int)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xcc);
   }
-  return param_1 + 3;
+  return instruction_list + 3;
 }
 
 
 
-byte * FUN_80016834(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_80016834(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  undefined2 uVar1;
+  short sVar1;
   uint uVar2;
   
-  uVar2 = *param_1 + 1 & 0xff;
+  uVar2 = *instruction_list + 1 & 0xff;
   if (uVar2 != 0) {
-    uVar1 = (undefined2)(0x100 / uVar2);
-    *(undefined2 *)(param_3 + 0x11a) = uVar1;
-    *(undefined2 *)(param_3 + 0x118) = uVar1;
+    sVar1 = (short)(0x100 / uVar2);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field143_0xe6 = sVar1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field142_0xe4 = sVar1;
   }
-  return param_1 + 1;
+  return instruction_list + 1;
 }
 
 
 
-undefined4 FUN_8001686c(undefined4 param_1,undefined4 param_2,int param_3)
+byte * FUN_8001686c(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_3 + 0x11e) = *(ushort *)(param_3 + 0x11e) | 1;
-  return param_1;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea | 1;
+  return instruction_list;
 }
 
 
 
-undefined4 FUN_80016884(undefined4 param_1,undefined4 param_2,int param_3)
+byte * FUN_80016884(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_3 + 0x11e) = *(ushort *)(param_3 + 0x11e) & 0xfffe;
-  return param_1;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea & 0xfffe;
+  return instruction_list;
 }
 
 
 
-byte * Balance(byte *param_1,undefined4 param_2,int param_3)
+byte * Balance(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_3 + 0x92) = (ushort)*param_1 << 8;
-  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x100;
-  return param_1 + 1;
+  SUZUKIintermediary_flags _noteflags;
+  
+  _noteflags = (channel_data->channel_inter).intermediaryflags;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.Vol_Bal =
+       (ushort)*instruction_list << 8;
+  (channel_data->channel_inter).intermediaryflags = _noteflags | volume_change;
+  return instruction_list + 1;
 }
 
 
 
-byte * FUN_800168bc(byte *param_1,undefined4 param_2,int param_3)
+byte * Shift_Balance(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_3 + 0x92) =
-       *(short *)(param_3 + 0x92) + (short)(((uint)*param_1 << 0x18) >> 0x10) & 0x7fff;
-  *(ushort *)(param_3 + 2) = *(ushort *)(param_3 + 2) | 0x100;
-  return param_1 + 1;
+  SUZUKIintermediary_flags _noteflags;
+  
+  _noteflags = (channel_data->channel_inter).intermediaryflags;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.Vol_Bal =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.Vol_Bal +
+       (short)(((uint)*instruction_list << 0x18) >> 0x10) & 0x7fff;
+  (channel_data->channel_inter).intermediaryflags = _noteflags | volume_change;
+  return instruction_list + 1;
 }
 
 
 
-byte * FUN_800168ec(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_800168ec(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
   int iVar2;
+  SUZUKInoteflags4 _instrument_flags;
   
-  bVar1 = *param_1;
-  iVar2 = (int)(char)param_1[1] - ((int)((uint)*(ushort *)(param_3 + 0x92) << 0x10) >> 0x18);
+  bVar1 = *instruction_list;
+  iVar2 = (int)(char)instruction_list[1] -
+          ((int)((uint)(ushort)(channel_data->channel_inter).channelSecondary.channel_notedata.
+                               Vol_Bal << 0x10) >> 0x18);
   if ((bVar1 != 0) && (iVar2 != 0)) {
-    *(ushort *)(param_3 + 0xaa) = (ushort)bVar1;
-    *(ushort *)(param_3 + 6) = *(ushort *)(param_3 + 6) | 0x10;
-    *(short *)(param_3 + 0xa4) = (short)((iVar2 * 0x100) / (int)(uint)bVar1);
+    _instrument_flags = (channel_data->channel_inter).channelSecondary.instrumentflags;
+    *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x76 =
+         (ushort)bVar1;
+    (channel_data->channel_inter).channelSecondary.instrumentflags = _instrument_flags | 0x10;
+    *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x70 =
+         (short)((iVar2 * 0x100) / (int)(uint)bVar1);
   }
-  return param_1 + 2;
+  return instruction_list + 2;
 }
 
 
 
-byte * FUN_8001693c(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_8001693c(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  undefined2 uVar1;
+  short sVar1;
   uint uVar2;
   
-  uVar2 = *param_1 + 1 & 0xff;
+  uVar2 = *instruction_list + 1 & 0xff;
   if (uVar2 != 0) {
-    uVar1 = (undefined2)(0x100 / uVar2);
-    *(undefined2 *)(param_3 + 0x13a) = uVar1;
-    *(undefined2 *)(param_3 + 0x138) = uVar1;
+    sVar1 = (short)(0x100 / uVar2);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field163_0x106 = sVar1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field162_0x104 = sVar1;
   }
-  return param_1 + 1;
+  return instruction_list + 1;
 }
 
 
 
-byte * FUN_80016974(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_80016974(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
   int iVar2;
   
-  bVar1 = *param_1;
-  if (((char)param_1[1] != 0) && (bVar1 != 0)) {
-    iVar2 = FUN_80016bf8((int)(char)param_1[1] << 0x18,(ushort)bVar1,3);
-    *(int *)(param_3 + 300) = iVar2;
-    *(ushort *)(param_3 + 0x132) = (ushort)bVar1;
-    bVar1 = param_1[2];
-    *(undefined2 *)(param_3 + 0x13a) = 0x100;
-    *(code **)(param_3 + 0x120) = FUN_80017744;
-    *(undefined *)(param_3 + 0x13d) = 3;
-    *(undefined *)(param_3 + 0x13c) = 2;
-    *(undefined2 *)(param_3 + 0x13e) = 3;
-    *(ushort *)(param_3 + 0x136) = (ushort)bVar1;
-    FUN_80016dc0(param_3 + 0x120);
+  bVar1 = *instruction_list;
+  if (((char)instruction_list[1] != 0) && (bVar1 != 0)) {
+    iVar2 = FUN_80016bf8((int)(char)instruction_list[1] << 0x18,(ushort)bVar1,3);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field154_0xf8 = (short)iVar2;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field155_0xfa =
+         (short)((uint)iVar2 >> 0x10);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field158_0xfe = (ushort)bVar1;
+    bVar1 = instruction_list[2];
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field163_0x106 = 0x100;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.pitchshift_intensity =
+         (int)FUN_80017744;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0x109 = 3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0x108 = 2;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a = 3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field161_0x102 = (ushort)bVar1;
+    FUN_80016dc0((int)&(channel_data->channel_inter).channelSecondary.channel_notedata.
+                       pitchshift_intensity);
   }
-  return param_1 + 3;
+  return instruction_list + 3;
 }
 
 
 
-byte * FUN_80016a14(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_80016a14(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
@@ -10417,54 +10824,66 @@ byte * FUN_80016a14(byte *param_1,undefined4 param_2,int param_3)
   undefined *puVar4;
   uint uVar5;
   
-  bVar1 = param_1[2];
-  bVar2 = *param_1;
-  if (((char)param_1[1] != 0) && (bVar2 != 0)) {
+  bVar1 = instruction_list[2];
+  bVar2 = *instruction_list;
+  if (((char)instruction_list[1] != 0) && (bVar2 != 0)) {
     uVar5 = bVar1 & 0xf;
-    iVar3 = FUN_80016bf8((int)(char)param_1[1] << 0x18,(ushort)bVar2,(short)uVar5);
-    *(int *)(param_3 + 300) = iVar3;
-    *(undefined2 *)(param_3 + 0x13a) = 0x100;
-    *(ushort *)(param_3 + 0x132) = (ushort)bVar2;
-    *(undefined2 *)(param_3 + 0x136) = 0;
+    iVar3 = FUN_80016bf8((int)(char)instruction_list[1] << 0x18,(ushort)bVar2,(short)uVar5);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field154_0xf8 = (short)iVar3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field155_0xfa =
+         (short)((uint)iVar3 >> 0x10);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field163_0x106 = 0x100;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field158_0xfe = (ushort)bVar2;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field161_0x102 = 0;
     puVar4 = (&PTR_FUN_80028f54)[uVar5];
-    *(char *)(param_3 + 0x13d) = (char)uVar5;
-    *(undefined *)(param_3 + 0x13c) = 2;
-    *(ushort *)(param_3 + 0x13e) = (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
-    *(undefined **)(param_3 + 0x120) = puVar4;
-    FUN_80016dc0(param_3 + 0x120);
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0x109 = (char)uVar5;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field_0x108 = 2;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a =
+         (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.pitchshift_intensity =
+         (int)puVar4;
+    FUN_80016dc0((int)&(channel_data->channel_inter).channelSecondary.channel_notedata.
+                       pitchshift_intensity);
   }
-  return param_1 + 3;
+  return instruction_list + 3;
 }
 
 
 
-undefined4 FUN_80016ad8(undefined4 param_1,undefined4 param_2,int param_3)
+byte * FUN_80016ad8(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_3 + 0x13e) = *(ushort *)(param_3 + 0x13e) | 1;
-  return param_1;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a | 1;
+  return instruction_list;
 }
 
 
 
-undefined4 FUN_80016af0(undefined4 param_1,undefined4 param_2,int param_3)
+byte * FUN_80016af0(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)(param_3 + 0x13e) = *(ushort *)(param_3 + 0x13e) & 0xfffe;
-  return param_1;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a & 0xfffe;
+  return instruction_list;
 }
 
 
 
-byte * FUN_80016b08(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_80016b08(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
   undefined4 *puVar2;
   
-  *(ushort *)(param_3 + 0xae) = (ushort)*param_1;
-  bVar1 = param_1[1];
-  puVar2 = (undefined4 *)(param_3 + (uint)*(ushort *)(param_3 + 0xae) * 0x20 + 0xe0);
+  *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x7a =
+       (ushort)*instruction_list;
+  bVar1 = instruction_list[1];
+  puVar2 = (undefined4 *)
+           ((int)(channel_data->channel_inter).channelSecondary.channel_notedata.repeatData +
+           (uint)*(ushort *)
+                  &(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x7a * 0x20
+           + 0x30);
   *(byte *)((int)puVar2 + 0x1d) = bVar1 & 0xf;
   *puVar2 = (&PTR_FUN_80028f54)[*(byte *)((int)puVar2 + 0x1d)];
   if ((bVar1 & 0x10) == 0) {
@@ -10473,47 +10892,127 @@ byte * FUN_80016b08(byte *param_1,undefined4 param_2,int param_3)
   else {
     *(undefined2 *)((int)puVar2 + 0x1e) = 0;
   }
-  bVar1 = param_1[2];
+  bVar1 = instruction_list[2];
   *(undefined2 *)((int)puVar2 + 0x1a) = 0x100;
   *(undefined2 *)((int)puVar2 + 0x16) = 0;
   *(byte *)(puVar2 + 7) = bVar1;
-  return param_1 + 3;
+  return instruction_list + 3;
 }
 
 
 
-byte * FUN_80016b80(byte *param_1,undefined4 param_2,int param_3)
+byte * FUN_80016b80(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   byte bVar1;
   int iVar2;
   int iVar3;
   
-  bVar1 = *param_1;
-  iVar3 = param_3 + (uint)*(ushort *)(param_3 + 0xae) * 0x20 + 0xe0;
-  iVar2 = FUN_80016bf8((int)(char)param_1[1] << 0x18 | (uint)param_1[2] << 0x10,(ushort)bVar1,
-                       (ushort)*(byte *)(iVar3 + 0x1d));
-  *(int *)(iVar3 + 0xc) = iVar2;
-  *(ushort *)(iVar3 + 0x12) = (ushort)bVar1;
-  return param_1 + 3;
+  bVar1 = *instruction_list;
+  iVar2 = (uint)*(ushort *)
+                 &(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x7a * 0x20;
+  iVar3 = FUN_80016bf8((int)(char)instruction_list[1] << 0x18 | (uint)instruction_list[2] << 0x10,
+                       (ushort)bVar1,
+                       (ushort)*(byte *)((int)(channel_data->channel_inter).channelSecondary.
+                                              channel_notedata.repeatData + iVar2 + 0x4d));
+  *(int *)((int)(channel_data->channel_inter).channelSecondary.channel_notedata.repeatData +
+          iVar2 + 0x3c) = iVar3;
+  *(ushort *)
+   ((int)(channel_data->channel_inter).channelSecondary.channel_notedata.repeatData + iVar2 + 0x42)
+       = (ushort)bVar1;
+  return instruction_list + 3;
 }
 
 
 
-int FUN_80016bf8(int param_1,short param_2,short param_3)
+int FUN_80016bf8(int pitchshift_intensity,short pitchshift_speed,short i)
+
+{
+  int _ps_speed;
+  
+  if (((pitchshift_intensity != 0) && (_ps_speed = (int)pitchshift_speed, _ps_speed != 0)) &&
+     (1 < i)) {
+    if (i < 4) {
+      pitchshift_intensity = pitchshift_intensity / _ps_speed;
+    }
+    else if ((i == 4) && (_ps_speed != 1)) {
+      pitchshift_intensity = pitchshift_intensity / (_ps_speed + -1);
+    }
+  }
+  return pitchshift_intensity;
+}
+
+
+
+byte * FUN_80016c70(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  undefined2 uVar1;
+  int iVar2;
+  uint uVar3;
+  
+  iVar2 = (uint)*(ushort *)
+                 &(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x7a * 0x20;
+  uVar3 = instruction_list[1] + 1 & 0xff;
+  if (uVar3 != 0) {
+    *(ushort *)
+     ((int)(channel_data->channel_inter).channelSecondary.channel_notedata.repeatData + iVar2 + 0x46
+     ) = (ushort)*instruction_list;
+    uVar1 = (undefined2)(0x100 / uVar3);
+    *(undefined2 *)
+     ((int)(channel_data->channel_inter).channelSecondary.channel_notedata.repeatData + iVar2 + 0x4a
+     ) = uVar1;
+    *(undefined2 *)
+     ((int)(channel_data->channel_inter).channelSecondary.channel_notedata.repeatData + iVar2 + 0x48
+     ) = uVar1;
+  }
+  return instruction_list + 2;
+}
+
+
+
+byte * FUN_80016cb8(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  ushort uVar1;
+  ushort *puVar2;
+  uint uVar3;
+  int iVar4;
+  undefined *puVar5;
+  
+  puVar5 = &(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xac;
+  iVar4 = 4;
+  uVar3 = (uint)*instruction_list;
+  puVar2 = (ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca;
+  do {
+    if ((uVar3 & 1) == 0) {
+      uVar1 = *puVar2 & 0xfffe;
+    }
+    else {
+      FUN_80016dc0((int)puVar5);
+      uVar1 = *puVar2 | 1;
+    }
+    *puVar2 = uVar1;
+    uVar3 = uVar3 >> 1;
+    puVar2 = puVar2 + 0x10;
+    iVar4 = iVar4 + -1;
+    puVar5 = puVar5 + 0x20;
+  } while (iVar4 != 0);
+  return instruction_list + 1;
+}
+
+
+
+byte * FUN_80016d64(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
   int iVar1;
   
-  if (((param_1 != 0) && (iVar1 = (int)param_2, iVar1 != 0)) && (1 < param_3)) {
-    if (param_3 < 4) {
-      param_1 = param_1 / iVar1;
-    }
-    else if ((param_3 == 4) && (iVar1 != 1)) {
-      param_1 = param_1 / (iVar1 + -1);
-    }
-  }
-  return param_1;
+  iVar1 = (int)(channel_data->channel_inter).channelSecondary.channel_notedata.repeatData +
+          (uint)*instruction_list * 0x20 + 0x30;
+  FUN_80016dc0(iVar1);
+  *(ushort *)(iVar1 + 0x1e) = *(ushort *)(iVar1 + 0x1e) | 1;
+  return instruction_list + 1;
 }
 
 
@@ -10531,83 +11030,205 @@ void FUN_80016dc0(int param_1)
 
 
 
-void Set_Instrument(int param_1,ushort *param_2)
+byte * FUN_80016dec(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  byte bVar1;
-  int *piVar2;
+  *(ushort *)
+   ((int)(channel_data->channel_inter).channelSecondary.channel_notedata.repeatData +
+   (uint)*instruction_list * 0x20 + 0x4e) =
+       *(ushort *)
+        ((int)(channel_data->channel_inter).channelSecondary.channel_notedata.repeatData +
+        (uint)*instruction_list * 0x20 + 0x4e) & 0xfffe;
+  return instruction_list + 1;
+}
+
+
+
+byte * Scale_Tempo(byte *instruction_list,MusDataAll *MusData)
+
+{
+  uint _tempo_scalar;
+  short _raw_tempo;
   
-  *(char *)(param_2 + 0x16) = (char)param_1;
-  piVar2 = (int *)(*(int *)(param_2 + 0x18) + ((param_1 << 0x10) >> 0xc) + 0x30);
-  *(int *)(param_2 + 0x28) = *piVar2 + *(int *)(*(int *)(param_2 + 0x18) + 0x28);
-  *(uint *)(param_2 + 0x2a) = (uint)*(ushort *)(piVar2 + 1) + *piVar2;
-  *(uint *)(param_2 + 0x2c) = (uint)*(byte *)((int)piVar2 + 0xd);
-  *(uint *)(param_2 + 0x2e) = (uint)*(byte *)((int)piVar2 + 0xe);
-  *(uint *)(param_2 + 0x30) = (uint)*(byte *)((int)piVar2 + 0xf);
-  param_2[0x32] = (ushort)*(byte *)(piVar2 + 2);
-  param_2[0x33] = (ushort)*(byte *)((int)piVar2 + 9);
-  param_2[0x34] = (ushort)*(byte *)((int)piVar2 + 10);
-  bVar1 = *(byte *)((int)piVar2 + 0xb);
-  param_2[0x17] = (ushort)bVar1;
-  param_2[0x35] = (ushort)bVar1;
-  param_2[0x36] = (ushort)*(byte *)(piVar2 + 3);
-  param_2[0x42] = *(ushort *)((int)piVar2 + 6);
-  if ((*param_2 & 0xc) == 0) {
-    *param_2 = *param_2 | 0x8000;
+  _tempo_scalar = (uint)*instruction_list;
+  if (_tempo_scalar != 0) {
+    _raw_tempo = *(short *)((int)&(MusData->HeaderData).raw_tempo + 2);
+    (MusData->HeaderData).tempo_scalar = _tempo_scalar << 0x18;
+    (MusData->HeaderData).modified_tempo = (int)_raw_tempo * _tempo_scalar * 0x100;
+  }
+  return instruction_list + 1;
+}
+
+
+
+byte * SelectSoundFont(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  SoundFontHeader *_waveset_addr;
+  byte _soundfont_ID;
+  bool _ws_exists;
+  
+  _waveset_addr = WAVESET_addr;
+  _soundfont_ID = *instruction_list;
+  _ws_exists = WAVESET_addr != (SoundFontHeader *)0x0;
+  (musData->HeaderData).Soundfont_ID = (ushort)_soundfont_ID;
+  if (_ws_exists) {
+    do {
+      if (_waveset_addr->soundfont_ID == (ushort)_soundfont_ID) break;
+      _waveset_addr = _waveset_addr->next_soundfont;
+    } while (_waveset_addr != (SoundFontHeader *)0x0);
+    if (_waveset_addr != (SoundFontHeader *)0x0) goto code_r0x80016e98;
+  }
+  _waveset_addr = WAVESET_addr;
+code_r0x80016e98:
+  (channel_data->channel_inter).channelSecondary.Waveset_addr = _waveset_addr;
+  return instruction_list + 1;
+}
+
+
+
+byte * FUN_80016ea4(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
+
+{
+  uint _newpaused_channelbits;
+  undefined2 auStack_18 [2];
+  ushort local_14 [2];
+  
+  FUN_8001aef4((uint)(channel_data->channel_inter).channelSecondary.voice_ID,auStack_18,local_14);
+  if (local_14[0] == 0) {
+    (channel_data->channel_inter).intermediaryflags =
+         (channel_data->channel_inter).intermediaryflags & 0xfffc;
+    if (((musData->HeaderData)._0_cmdfield & end_on_endbar) == 0) {
+      inactiveChannels =
+           inactiveChannels |
+           (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
+    }
+    else {
+      PausedMusicChannels =
+           PausedMusicChannels |
+           (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
+      _newpaused_channelbits =
+           ~(channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
+      (musData->HeaderData).LFOVoiceBits =
+           _newpaused_channelbits & (musData->HeaderData).LFOVoiceBits;
+      (musData->HeaderData).ReverbVoiceBits =
+           _newpaused_channelbits & (musData->HeaderData).ReverbVoiceBits;
+      (musData->HeaderData).NoiseVoiceBits =
+           _newpaused_channelbits & (musData->HeaderData).NoiseVoiceBits;
+      PitchLFO_onlyInclude = _newpaused_channelbits & PitchLFO_onlyInclude;
+      (channel_data->channel_inter).channelSecondary.channelFunc =
+           (channel_data->channel_inter).channelSecondary.channelFunc |
+           (CalcLFOVoices|CalcNoiseVoices|CalcReverbVoices);
+    }
+    channel_data->channelflags = 0;
+    instruction_list = instruction_list + -1;
+  }
+  return instruction_list;
+}
+
+
+
+void Set_Instrument(int instrument,MusicChannelData *channel)
+
+{
+  SoundFontHeader *waveset_wd;
+  sf_wave_settings *_instrument_wave;
+  SUZUKIchannel_flags _noteflags;
+  byte release_flags;
+  
+  (channel->channel_inter).channelSecondary.instrument = (byte)instrument;
+  waveset_wd = (channel->channel_inter).channelSecondary.Waveset_addr;
+  _instrument_wave =
+       (sf_wave_settings *)
+       ((int)&waveset_wd->waveFontArray[0].Wavefont_ptr + ((instrument << 0x10) >> 0xc));
+  (channel->channel_inter).channelSecondary.channel_notedata.ADPCM_Start_addr =
+       _instrument_wave->Wavefont_ptr + waveset_wd->ADPCM_offset;
+  (channel->channel_inter).channelSecondary.channel_notedata.ADPCM_Repeat_addr =
+       (uint)_instrument_wave->ADPCM_Repeat_addr + _instrument_wave->Wavefont_ptr;
+  _noteflags = channel->channelflags;
+  (channel->channel_inter).channelSecondary.channel_notedata.attack_mode =
+       (uint)_instrument_wave->Attack_Mode;
+  (channel->channel_inter).channelSecondary.channel_notedata.sustain_mode =
+       (uint)_instrument_wave->Sustain_Mode;
+  (channel->channel_inter).channelSecondary.channel_notedata.release_mode =
+       (uint)_instrument_wave->Release_Mode;
+  (channel->channel_inter).channelSecondary.channel_notedata.attack_shiftstep =
+       (ushort)_instrument_wave->Attack_Shiftstep;
+  (channel->channel_inter).channelSecondary.channel_notedata.decay_shift =
+       (ushort)_instrument_wave->Decay_Shift;
+  (channel->channel_inter).channelSecondary.channel_notedata.sustain_flags =
+       (ushort)_instrument_wave->Sustain_Flags;
+  release_flags = _instrument_wave->Release_Flags;
+  (channel->channel_inter).channelSecondary.releaseflags_small = (ushort)release_flags;
+  (channel->channel_inter).channelSecondary.channel_notedata.release_flags = (ushort)release_flags;
+  (channel->channel_inter).channelSecondary.channel_notedata.sus_lvl =
+       (ushort)_instrument_wave->Sustain_Level;
+  (channel->channel_inter).channelSecondary.channel_notedata.field46_0x50 =
+       *(short *)&_instrument_wave->field_0x6;
+  if ((_noteflags & 0xc) == 0) {
+    channel->channelflags = _noteflags | change_instrument;
   }
   else {
-    param_2[1] = param_2[1] | 0x300;
-    param_2[2] = param_2[2] | 0x1ff;
+    (channel->channel_inter).intermediaryflags =
+         (channel->channel_inter).intermediaryflags | (volume_change|playing_note);
+    (channel->channel_inter).channelSecondary.channelFunc =
+         (channel->channel_inter).channelSecondary.channelFunc |
+         (Adjust_Voice_Vol_Both|Set_Sweep_VolMode|CalcLFOVoices|Set_ADPCM_Addrs|CalcNoiseVoices|
+          Adjust_Voice_Decay_Shift|CalcReverbVoices|Adjust_Release|Adjust_Sustain_Level);
   }
   return;
 }
 
 
 
-void FUN_80017098(ushort param_1,MusDataAll *MusData)
+void Set_noteflags2_allChannels(SUZUKIintermediary_flags noteflags,MusDataAll *MusData)
 
 {
-  ushort *puVar1;
+  MusicChannelData *pMVar1;
+  SUZUKIchannel_flags *pSVar2;
   uint numChannels;
-  ushort *puVar2;
+  MusicChannelIntermediary *pMVar3;
   MusicChannelData *ChannelData;
   
   ChannelData = MusData->ChannelData;
-  numChannels = (uint)*(byte *)&(MusData->HeaderData).NumChannels;
-  puVar2 = &MusData->ChannelData[0].field1_0x2;
+  numChannels = (uint)(MusData->HeaderData).NumChannels;
+  pMVar1 = MusData->ChannelData;
   do {
-    puVar1 = &ChannelData->hasSound;
+    pMVar3 = &pMVar1->channel_inter;
+    pSVar2 = &ChannelData->channelflags;
     ChannelData = ChannelData + 1;
-    if (*puVar1 != 0) {
-      *puVar2 = param_1 | *puVar2;
+    if (*pSVar2 != 0) {
+      pMVar3->intermediaryflags = noteflags | pMVar3->intermediaryflags;
     }
     numChannels = numChannels - 1;
-    puVar2 = puVar2 + 0xb0;
+    pMVar1 = (MusicChannelData *)(pMVar3 + 1);
   } while (numChannels != 0);
   return;
 }
 
 
 
-void FUN_800170d8(MusDataAll *MusData,mus_voiceChannelFunc param_2)
+void ForceChannelFunc(MusDataAll *MusData,mus_voiceChannelFunc channelFunc)
 
 {
-  ushort *puVar1;
   uint NumChannels;
-  mus_voiceChannelFunc *pmVar2;
+  MusicChannelSecondary *_channel_secondary;
   MusicChannelData *ChannelData;
+  MusicChannelData *_channel_data;
+  SUZUKIchannel_flags *_hasSound;
   
   ChannelData = MusData->ChannelData;
-  NumChannels = (uint)*(byte *)&(MusData->HeaderData).NumChannels;
-  pmVar2 = &MusData->ChannelData[0].channelFunc;
+  NumChannels = (uint)(MusData->HeaderData).NumChannels;
+  _channel_data = MusData->ChannelData;
   do {
-    puVar1 = &ChannelData->hasSound;
+    _channel_secondary = &(_channel_data->channel_inter).channelSecondary;
+    _hasSound = &ChannelData->channelflags;
     ChannelData = ChannelData + 1;
-    if (*puVar1 != 0) {
-      *pmVar2 = *pmVar2 | param_2;
+    if (*_hasSound != 0) {
+      _channel_secondary->channelFunc = _channel_secondary->channelFunc | channelFunc;
     }
     NumChannels = NumChannels - 1;
-    pmVar2 = pmVar2 + 0xb0;
+    _channel_data = (MusicChannelData *)(_channel_secondary + 1);
   } while (NumChannels != 0);
   return;
 }
@@ -10988,16 +11609,16 @@ void Suzuki_Initialisation_Func(ushort param_1)
     SetGlobalMusicVariables((MusicDataHeader *)&GlobalMusicDataUnmoved,0x8000);
     FUN_80014544();
     DAT_80032a18 = 0x12345678;
-    LastOpenedMus = (MusDataAll *)0x0;
+    CurrentlyPlayingMus = (MusDataAll *)0x0;
     FirstMUS = (MusDataAll *)0x0;
     DAT_80032a00 = 0;
-    DAT_80032a44 = 0;
+    WAVESET_addr = (SoundFontHeader *)0x0;
     PitchLFO_onlyInclude = 0;
     acc_inactiveChannels = 0;
     acc_activeChannels = 0;
-    DAT_80032a08 = 0;
+    inactiveChannels = 0;
     PausedMusicChannels = 0;
-    DAT_80032a1c = 0;
+    base_instrument = 0;
     DAT_80032a58 = 0;
     FirstMUS = (MusDataAll *)FUN_8001363c();
     SuzukiSpuAttr.mvolmode.left = 0;
@@ -11086,8 +11707,8 @@ undefined4 * Put_WAVESET_SPU(SoundFontHeader *SoundFontPtr)
   undefined4 *WaveFontPtr;
   MusDataAll *pMVar1;
   MusDataAll *pMVar2;
-  int iVar3;
-  MusDataAll **ppMVar4;
+  SoundFontHeader *_wavset_ptr;
+  SoundFontHeader **_waveset_ramaddr;
   
   WaveFontPtr = Call_SpuMalloc(SoundFontPtr->waveFontSize);
   SPU_DataTransferController
@@ -11095,15 +11716,15 @@ undefined4 * Put_WAVESET_SPU(SoundFontHeader *SoundFontPtr)
              SoundFontPtr->waveFontSize,0x11);
   pMVar1 = FindSpaceForSMDMUS(SoundFontPtr->waveFontStart);
   FUN_8001442c((undefined4 *)pMVar1,(undefined4 *)SoundFontPtr,SoundFontPtr->waveFontStart);
-  iVar3 = DAT_80032a44;
-  ppMVar4 = (MusDataAll **)&DAT_80032a44;
-  *(undefined4 **)&(pMVar1->HeaderData).field_0x28 = WaveFontPtr;
-  while (iVar3 != 0) {
-    pMVar2 = *ppMVar4;
-    ppMVar4 = (MusDataAll **)&(pMVar2->HeaderData).field_0x2c;
-    iVar3 = *(int *)&(pMVar2->HeaderData).field_0x2c;
+  _wavset_ptr = WAVESET_addr;
+  _waveset_ramaddr = &WAVESET_addr;
+  (pMVar1->HeaderData).field19_0x28 = (uint)WaveFontPtr;
+  while (_wavset_ptr != (SoundFontHeader *)0x0) {
+    pMVar2 = (MusDataAll *)*_waveset_ramaddr;
+    _waveset_ramaddr = (SoundFontHeader **)&(pMVar2->HeaderData).field_0x2c;
+    _wavset_ptr = *(SoundFontHeader **)&(pMVar2->HeaderData).field_0x2c;
   }
-  *ppMVar4 = pMVar1;
+  *_waveset_ramaddr = (SoundFontHeader *)pMVar1;
   *(undefined4 *)&(pMVar1->HeaderData).field_0x2c = 0;
   Wait_for_SPU_transfer(0x10);
   return (undefined4 *)pMVar1;
@@ -11190,9 +11811,9 @@ void InitSoundType(int soundType)
   Commit_VolChange();
   SpuSetReverbModeParam(&GlobalReverb);
   GlobalReverb.mask = 0;
-  for (MusToPush = LastOpenedMus; MusToPush != (MusDataAll *)0x0;
-      MusToPush = *(MusDataAll **)&MusToPush->HeaderData) {
-    FUN_80017098(0x100,MusToPush);
+  for (MusToPush = CurrentlyPlayingMus; MusToPush != (MusDataAll *)0x0;
+      MusToPush = (MusToPush->HeaderData).PrevPlayedMus) {
+    Set_noteflags2_allChannels(volume_change,MusToPush);
   }
   if ((SuzukiInstrHalf & Lock_Volume) != Off) {
     PutSoundType((int)Suzuki_CD_to_SPU_Volume);
@@ -11876,29 +12497,29 @@ void SetVoiceVolumeLeftRight(int voiceHalfID,uint voiceHalfSettings,int setVolum
 
 
 
-uint FUN_8001920c(int param_1,uint param_2)
+uint FUN_8001920c(int voice_mult8,uint settings)
 
 {
-  uint uVar1;
+  uint vol_left;
   
   if (DAT_8002ad68 != 0) {
     if (VolumeScaleFactor == 0) {
       trap(0x1c00);
     }
-    if (param_2 % VolumeScaleFactor != 0) {
-      param_2 = param_2 + VolumeScaleFactor & ~DAT_8002ad74;
+    if (settings % VolumeScaleFactor != 0) {
+      settings = settings + VolumeScaleFactor & ~DAT_8002ad74;
     }
   }
-  uVar1 = param_2 >> (VolumeExpFactor & 0x1f);
-  if (param_1 != -2) {
-    if (param_1 == -1) {
-      param_2 = uVar1 & 0xffff;
+  vol_left = settings >> (VolumeExpFactor & 0x1f);
+  if (voice_mult8 != -2) {
+    if (voice_mult8 == -1) {
+      settings = vol_left & 0xffff;
     }
     else {
-      *(short *)(SPUIOPortAddr + param_1 * 2) = (short)uVar1;
+      *(short *)(SPUIOPortAddr + voice_mult8 * 2) = (short)vol_left;
     }
   }
-  return param_2;
+  return settings;
 }
 
 
@@ -12542,23 +13163,23 @@ uint FUN_80019b80(int param_1,uint param_2,int param_3,int param_4)
 {
   ushort uVar1;
   ushort uVar2;
-  undefined *puVar3;
-  ushort *puVar4;
-  uint uVar5;
+  undefined *SPU_port;
+  ushort *puVar3;
+  uint uVar4;
   
-  puVar3 = SPUIOPortAddr;
+  SPU_port = SPUIOPortAddr;
   if ((DAT_8002ad3c & 1) != 0) {
-    puVar3 = &DAT_80036ef8;
+    SPU_port = &DAT_80036ef8;
   }
-  uVar5 = (uint)*(ushort *)(puVar3 + param_3 * 2) |
-          (*(ushort *)(puVar3 + param_4 * 2) & 0xff) << 0x10;
+  uVar4 = (uint)*(ushort *)(SPU_port + param_3 * 2) |
+          (*(ushort *)(SPU_port + param_4 * 2) & 0xff) << 0x10;
   uVar1 = (ushort)param_2;
   uVar2 = (ushort)(param_2 >> 0x10);
   if (param_1 == 0) {
     if ((DAT_8002ad3c & 1) == 0) {
-      puVar4 = (ushort *)(SPUIOPortAddr + param_4 * 2);
+      puVar3 = (ushort *)(SPUIOPortAddr + param_4 * 2);
       *(ushort *)(SPUIOPortAddr + param_3 * 2) = *(ushort *)(SPUIOPortAddr + param_3 * 2) & ~uVar1;
-      *puVar4 = *puVar4 & ~(uVar2 & 0xff);
+      *puVar3 = *puVar3 & ~(uVar2 & 0xff);
     }
     else {
       *(ushort *)(&DAT_80036ef8 + param_3 * 2) = *(ushort *)(&DAT_80036ef8 + param_3 * 2) & ~uVar1;
@@ -12566,13 +13187,13 @@ uint FUN_80019b80(int param_1,uint param_2,int param_3,int param_4)
            *(ushort *)(&DAT_80036ef8 + param_4 * 2) & ~(uVar2 & 0xff);
       DAT_8002a908 = 1 << (param_3 + -0xc6 >> 1 & 0x1fU) | DAT_8002a908;
     }
-    uVar5 = uVar5 & ~(param_2 & 0xffffff);
+    uVar4 = uVar4 & ~(param_2 & 0xffffff);
   }
   else if (param_1 == 1) {
     if ((DAT_8002ad3c & 1) == 0) {
-      puVar4 = (ushort *)(SPUIOPortAddr + param_4 * 2);
+      puVar3 = (ushort *)(SPUIOPortAddr + param_4 * 2);
       *(ushort *)(SPUIOPortAddr + param_3 * 2) = *(ushort *)(SPUIOPortAddr + param_3 * 2) | uVar1;
-      *puVar4 = *puVar4 | uVar2 & 0xff;
+      *puVar3 = *puVar3 | uVar2 & 0xff;
     }
     else {
       *(ushort *)(&DAT_80036ef8 + param_3 * 2) = *(ushort *)(&DAT_80036ef8 + param_3 * 2) | uVar1;
@@ -12580,9 +13201,9 @@ uint FUN_80019b80(int param_1,uint param_2,int param_3,int param_4)
            *(ushort *)(&DAT_80036ef8 + param_4 * 2) | uVar2 & 0xff;
       DAT_8002a908 = 1 << (param_3 + -0xc6 >> 1 & 0x1fU) | DAT_8002a908;
     }
-    uVar5 = uVar5 | param_2 & 0xffffff;
+    uVar4 = uVar4 | param_2 & 0xffffff;
   }
-  return uVar5;
+  return uVar4;
 }
 
 
@@ -13823,16 +14444,16 @@ void SetVoicestoRelease(int param_1,uint VoicestoRelease)
 
 
 
-void FUN_8001aef4(uint param_1,undefined2 *param_2,ushort *param_3)
+void FUN_8001aef4(uint voice,undefined2 *param_2,ushort *param_3)
 
 {
   ushort uVar1;
   int iVar2;
   
-  uVar1 = *(ushort *)(SPUIOPortAddr + (param_1 << 4 | 0xc));
+  uVar1 = *(ushort *)(SPUIOPortAddr + (voice << 4 | 0xc));
   *param_3 = uVar1;
   iVar2 = (uint)uVar1 << 0x10;
-  if ((1 << (param_1 & 0x1f) & DAT_8002a8dc) == 0) {
+  if ((1 << (voice & 0x1f) & DAT_8002a8dc) == 0) {
     if (iVar2 < 1) {
       *param_2 = 0;
     }
@@ -14098,131 +14719,133 @@ LAB_8001b23c:
 
 
 
-void FUN_8001b428(int param_1,ushort param_2,ushort param_3)
+void Adjust_Voice_Vol_Both(int voice,ushort voice_left,ushort voice_right)
 
 {
-  ushort *puVar1;
-  int local_8;
+  ushort *voice_vol_addr;
+  int _i;
   
-  puVar1 = (ushort *)(SPUIOPortAddr + param_1 * 0x10);
-  *puVar1 = param_2 & 0x7fff;
-  puVar1[1] = param_3 & 0x7fff;
-  for (local_8 = 0; local_8 < 2; local_8 = local_8 + 1) {
+  voice_vol_addr = (ushort *)(SPUIOPortAddr + voice * 0x10);
+  *voice_vol_addr = voice_left & 0x7fff;
+  voice_vol_addr[1] = voice_right & 0x7fff;
+  for (_i = 0; _i < 2; _i = _i + 1) {
   }
   return;
 }
 
 
 
-void FUN_8001b4b0(int param_1,ushort param_2,ushort param_3,int param_4,ushort param_5)
+void Set_Sweep_VolMode(int voice,ushort sweep_shiftstep_left,ushort sweep_shiftstep_right,
+                      ushort left_sweep_type,ushort right_sweep_type)
 
 {
-  ushort uVar1;
-  ushort uVar2;
-  int local_8;
+  ushort _sweep_mode_right;
+  ushort _sweep_mode_left;
+  int _i;
   
-  uVar2 = 0;
-  switch((param_4 + -1) * 0x10000 >> 0x10) {
+  _sweep_mode_left = 0;
+  switch((int)((left_sweep_type - 1) * 0x10000) >> 0x10) {
   case 0:
-    uVar2 = 0x8000;
+    _sweep_mode_left = 0x8000;
     break;
   case 1:
-    uVar2 = 0x9000;
+    _sweep_mode_left = 0x9000;
     break;
   case 2:
-    uVar2 = 0xa000;
+    _sweep_mode_left = 0xa000;
     break;
   case 3:
-    uVar2 = 0xb000;
+    _sweep_mode_left = 0xb000;
     break;
   case 4:
-    uVar2 = 0xc000;
+    _sweep_mode_left = 0xc000;
     break;
   case 5:
-    uVar2 = 0xd000;
+    _sweep_mode_left = 0xd000;
     break;
   case 6:
-    uVar2 = 0xe000;
+    _sweep_mode_left = 0xe000;
   }
-  uVar1 = 0;
-  *(ushort *)(SPUIOPortAddr + param_1 * 0x10) = param_2 & 0x7fff | uVar2;
-  switch((int)((param_5 - 1) * 0x10000) >> 0x10) {
+  _sweep_mode_right = 0;
+  *(ushort *)(SPUIOPortAddr + voice * 0x10) = sweep_shiftstep_left & 0x7fff | _sweep_mode_left;
+  switch((int)((right_sweep_type - 1) * 0x10000) >> 0x10) {
   case 0:
-    uVar1 = 0x8000;
+    _sweep_mode_right = 0x8000;
     break;
   case 1:
-    uVar1 = 0x9000;
+    _sweep_mode_right = 0x9000;
     break;
   case 2:
-    uVar1 = 0xa000;
+    _sweep_mode_right = 0xa000;
     break;
   case 3:
-    uVar1 = 0xb000;
+    _sweep_mode_right = 0xb000;
     break;
   case 4:
-    uVar1 = 0xc000;
+    _sweep_mode_right = 0xc000;
     break;
   case 5:
-    uVar1 = 0xd000;
+    _sweep_mode_right = 0xd000;
     break;
   case 6:
-    uVar1 = 0xe000;
+    _sweep_mode_right = 0xe000;
   }
-  *(ushort *)(SPUIOPortAddr + param_1 * 0x10 + 2) = param_3 & 0x7fff | uVar1;
-  for (local_8 = 0; local_8 < 2; local_8 = local_8 + 1) {
-  }
-  return;
-}
-
-
-
-void FUN_8001b628(int param_1,undefined2 param_2)
-
-{
-  int local_8;
-  
-  *(undefined2 *)(SPUIOPortAddr + param_1 * 0x10 + 4) = param_2;
-  for (local_8 = 0; local_8 < 2; local_8 = local_8 + 1) {
+  *(ushort *)(SPUIOPortAddr + voice * 0x10 + 2) = sweep_shiftstep_right & 0x7fff | _sweep_mode_right
+  ;
+  for (_i = 0; _i < 2; _i = _i + 1) {
   }
   return;
 }
 
 
 
-void FUN_8001b6a4(int param_1,uint param_2)
+void Set_ADPCM_SampleRate(int voice,short sample_rate)
 
 {
-  int local_10;
+  int _i;
   
-  FUN_8001920c(param_1 << 3 | 3,param_2);
-  for (local_10 = 0; local_10 < 2; local_10 = local_10 + 1) {
+  *(short *)(SPUIOPortAddr + voice * 0x10 + 4) = sample_rate;
+  for (_i = 0; _i < 2; _i = _i + 1) {
   }
   return;
 }
 
 
 
-void FUN_8001b720(int param_1,uint param_2)
+void Set_ADPCM_StartAddr(int voice,uint buf)
 
 {
-  int local_10;
+  int _i;
   
-  FUN_8001920c(param_1 << 3 | 7,param_2);
-  for (local_10 = 0; local_10 < 2; local_10 = local_10 + 1) {
+  FUN_8001920c(voice << 3 | 3,buf);
+  for (_i = 0; _i < 2; _i = _i + 1) {
   }
   return;
 }
 
 
 
-void FUN_8001b79c(int param_1,int param_2)
+void Set_ADPCM_RepeatAddr(int voice,uint buf)
 
 {
-  int local_8;
+  int _i;
   
-  *(ushort *)(SPUIOPortAddr + param_1 * 0x10 + 8) =
-       *(ushort *)(SPUIOPortAddr + param_1 * 0x10 + 8) & 0xff0f | (ushort)(param_2 << 4);
-  for (local_8 = 0; local_8 < 2; local_8 = local_8 + 1) {
+  FUN_8001920c(voice << 3 | 7,buf);
+  for (_i = 0; _i < 2; _i = _i + 1) {
+  }
+  return;
+}
+
+
+
+void Adjust_Voice_Decay_Shift(int voice,short decay_shift)
+
+{
+  int _i;
+  
+  *(ushort *)(SPUIOPortAddr + voice * 0x10 + 8) =
+       *(ushort *)(SPUIOPortAddr + voice * 0x10 + 8) & 0xff0f | decay_shift << 4;
+  for (_i = 0; _i < 2; _i = _i + 1) {
   }
   return;
 }
@@ -14232,86 +14855,87 @@ void FUN_8001b79c(int param_1,int param_2)
 void SetVoiceReleaseShift(int VoiceID,ushort param_2)
 
 {
-  int stackbuf;
+  int _i;
   
   *(ushort *)(SPUIOPortAddr + VoiceID * 0x10 + 10) =
        *(ushort *)(SPUIOPortAddr + VoiceID * 0x10 + 10) & 0xffc0 | param_2;
-  for (stackbuf = 0; stackbuf < 2; stackbuf = stackbuf + 1) {
+  for (_i = 0; _i < 2; _i = _i + 1) {
   }
   return;
 }
 
 
 
-void FUN_8001b8b0(int param_1,ushort param_2)
+void Adjust_Voice_Sustain_Level(int voice,ushort Sus_lvl)
 
 {
-  int local_8;
+  int i;
   
-  *(ushort *)(SPUIOPortAddr + param_1 * 0x10 + 8) =
-       *(ushort *)(SPUIOPortAddr + param_1 * 0x10 + 8) & 0xfff0 | param_2;
-  for (local_8 = 0; local_8 < 2; local_8 = local_8 + 1) {
+  *(ushort *)(SPUIOPortAddr + voice * 0x10 + 8) =
+       *(ushort *)(SPUIOPortAddr + voice * 0x10 + 8) & 0xfff0 | Sus_lvl;
+  for (i = 0; i < 2; i = i + 1) {
   }
   return;
 }
 
 
 
-void FUN_8001b938(int param_1,uint param_2,int param_3)
+void Adjust_Voice_Attack_ShiftStep(int voice,uint attack_shiftstep,int attack_mode)
 
 {
-  int local_8;
+  int _i;
   
-  *(ushort *)(SPUIOPortAddr + param_1 * 0x10 + 8) =
-       *(ushort *)(SPUIOPortAddr + param_1 * 0x10 + 8) & 0xff |
-       (ushort)((param_2 | (uint)(param_3 == 5) << 7) << 8);
-  for (local_8 = 0; local_8 < 2; local_8 = local_8 + 1) {
+  *(ushort *)(SPUIOPortAddr + voice * 0x10 + 8) =
+       *(ushort *)(SPUIOPortAddr + voice * 0x10 + 8) & 0xff |
+       (ushort)((attack_shiftstep | (uint)(attack_mode == 5) << 7) << 8);
+  for (_i = 0; _i < 2; _i = _i + 1) {
   }
   return;
 }
 
 
 
-void FUN_8001b9d4(int param_1,uint param_2,int param_3)
+void Adjust_Voice_Sustain(int voice,uint sustain,int sustain_mode)
 
 {
-  uint uVar1;
-  int local_8;
+  uint _sustain_mode;
+  int _i;
   
-  uVar1 = 0x100;
-  if (param_3 == 5) {
-    uVar1 = 0x200;
+  _sustain_mode = 0x100;
+  if (sustain_mode == 5) {
+    _sustain_mode = 0x200;
   }
-  else if (param_3 < 6) {
-    if (param_3 == 1) {
-      uVar1 = 0;
+  else if (sustain_mode < 6) {
+    if (sustain_mode == 1) {
+      _sustain_mode = 0;
     }
   }
-  else if (param_3 == 7) {
-    uVar1 = 0x300;
+  else if (sustain_mode == 7) {
+    _sustain_mode = 0x300;
   }
-  *(ushort *)(SPUIOPortAddr + param_1 * 0x10 + 10) =
-       *(ushort *)(SPUIOPortAddr + param_1 * 0x10 + 10) & 0x3f | (ushort)((param_2 | uVar1) << 6);
-  for (local_8 = 0; local_8 < 2; local_8 = local_8 + 1) {
+  *(ushort *)(SPUIOPortAddr + voice * 0x10 + 10) =
+       *(ushort *)(SPUIOPortAddr + voice * 0x10 + 10) & 0x3f |
+       (ushort)((sustain | _sustain_mode) << 6);
+  for (_i = 0; _i < 2; _i = _i + 1) {
   }
   return;
 }
 
 
 
-void FUN_8001bab8(int param_1,ushort param_2,int param_3)
+void Adjust_Voice_Release(int Voice,ushort rel_shft,int release_mode)
 
 {
-  ushort uVar1;
-  int local_8;
+  ushort _release_mode;
+  int _t;
   
-  uVar1 = 0;
-  if (param_3 != 3) {
-    uVar1 = (ushort)(param_3 == 7) << 5;
+  _release_mode = 0;
+  if (release_mode != 3) {
+    _release_mode = (ushort)(release_mode == 7) << 5;
   }
-  *(ushort *)(SPUIOPortAddr + param_1 * 0x10 + 10) =
-       *(ushort *)(SPUIOPortAddr + param_1 * 0x10 + 10) & 0xffc0 | param_2 | uVar1;
-  for (local_8 = 0; local_8 < 2; local_8 = local_8 + 1) {
+  *(ushort *)(SPUIOPortAddr + Voice * 0x10 + 10) =
+       *(ushort *)(SPUIOPortAddr + Voice * 0x10 + 10) & 0xffc0 | rel_shft | _release_mode;
+  for (_t = 0; _t < 2; _t = _t + 1) {
   }
   return;
 }
@@ -19569,7 +20193,7 @@ void C_004_OBJ_DC(undefined param_1,undefined param_2,undefined param_3,undefine
 void StSetStream(u_long mode,u_long start_frame,u_long end_frame,func1 *func1,func2 *func2)
 
 {
-  FUN_800212cc(1,start_frame,end_frame);
+  StSetMask(1,start_frame,end_frame);
   DAT_800408cc = 0;
   DAT_80037074 = func1;
   DAT_8003706c = mode & 1;
@@ -19651,7 +20275,7 @@ u_long StGetNext(u_long **addr,u_long **header)
   puVar2 = (u_long *)(DAT_800408c4 * 0x20 + DAT_800408dc);
   if (*(short *)puVar2 == 1) {
     DAT_800408c4 = 0;
-    if (DAT_800408d0 != 0) {
+    if (stream_end != 0) {
       *(short *)puVar2 = 0;
     }
     puVar2 = (u_long *)(DAT_800408c4 * 0x20 + DAT_800408dc);
@@ -19669,12 +20293,12 @@ u_long StGetNext(u_long **addr,u_long **header)
 
 // Possible C_010.OBJ/StSetMask
 
-void FUN_800212cc(undefined4 param_1,undefined4 param_2,undefined4 param_3)
+void StSetMask(u_long mask,u_long start,u_long end)
 
 {
-  DAT_800408d4 = param_1;
-  DAT_800370a8 = param_2;
-  DAT_800408d0 = param_3;
+  stream_mask = mask;
+  stream_start = start;
+  stream_end = end;
   return;
 }
 
@@ -19798,10 +20422,10 @@ void C_011_OBJ_270(undefined param_1,byte param_2,undefined param_3,undefined pa
   DAT_80032aa8[7] = param_11;
   *(undefined4 *)PTR_CDROM_DELAY_80031c48 = 0x20843;
   *(undefined4 *)PTR_COMMON_DELAY_80031c4c = 0x1325;
-  uVar1 = DAT_800370a8;
+  uVar1 = stream_start;
   puVar5 = DAT_80032aa8;
-  if ((DAT_800408d4 == 1) && (DAT_800370a8 != 0)) {
-    if (DAT_800370a8 != *(ushort *)(DAT_80032aa8 + 2)) {
+  if ((stream_mask == 1) && (stream_start != 0)) {
+    if (stream_start != *(ushort *)(DAT_80032aa8 + 2)) {
       *(short *)DAT_80032aa8 = 0;
       if (DAT_800408cc != 0) {
         DAT_800370b8 = DAT_800370b8 + 1;
@@ -19811,7 +20435,7 @@ void C_011_OBJ_270(undefined param_1,byte param_2,undefined param_3,undefined pa
       }
       return;
     }
-    DAT_800408d4 = 0;
+    stream_mask = 0;
   }
   uVar3 = SUB41(DAT_80032aa8,0);
   if ((*(short *)DAT_80032aa8 != 0x160) ||
@@ -19847,7 +20471,7 @@ void C_011_OBJ_270(undefined param_1,byte param_2,undefined param_3,undefined pa
   if (*(short *)(DAT_80032aa8 + 1) == 0) {
     DAT_8003701c = (uint)*(ushort *)(DAT_80032aa8 + 2);
     DAT_80037068 = 0;
-    if ((DAT_800408d0 != 0) && (DAT_800408d0 <= DAT_8003701c)) {
+    if ((stream_end != 0) && (stream_end <= DAT_8003701c)) {
       DAT_8003701c = 0;
       DAT_80037068 = 0;
       uVar1 = DAT_800408bc - DAT_800408c0;
@@ -19857,7 +20481,7 @@ void C_011_OBJ_270(undefined param_1,byte param_2,undefined param_3,undefined pa
       uVar3 = (undefined)iVar4;
       DAT_800408bc = DAT_800408c0;
       *(short *)DAT_80032aa8 = 0;
-      DAT_800408d4 = 1;
+      stream_mask = 1;
       if (DAT_80037078 != (code *)0x0) {
         (*DAT_80037078)();
       }
@@ -19870,9 +20494,9 @@ void C_011_OBJ_270(undefined param_1,byte param_2,undefined param_3,undefined pa
       return;
     }
     if ((DAT_80040918 - DAT_800408bc) - 1U < (uint)*(ushort *)((int)DAT_80032aa8 + 6)) {
-      if (DAT_800408d0 == 0) {
+      if (stream_end == 0) {
         *(short *)DAT_80032aa8 = 1;
-        DAT_800408d4 = 1;
+        stream_mask = 1;
         if (DAT_80037078 != (code *)0x0) {
           (*DAT_80037078)();
         }
@@ -32887,32 +33511,32 @@ void Get_BATTLE_BIN(void)
 
 
 
-void Initialise_GameState(void)
+void GameLoop(void)
 
 {
-  bool bVar1;
-  int iVar2;
+  int iVar1;
+  bool _stream_movie;
   
-  DAT_80045978 = 0;
+  Stream_openmovie = 0;
   do {
     StartingInventory();
-    bVar1 = DAT_80045978 == 5;
-    if (!bVar1) {
+    _stream_movie = Stream_openmovie == 5;
+    if (!_stream_movie) {
       FUN_80042690();
     }
-    iVar2 = Get_OPEN_CDROM_to_RAM((uint)bVar1);
-    if (iVar2 == 0) {
+    iVar1 = Get_OPEN_CDROM_to_RAM((uint)_stream_movie);
+    if (iVar1 == 0) {
       DAT_800473a0 = '\x01';
-      DAT_80045978 = 0;
+      Stream_openmovie = 0;
     }
     else {
       DAT_800473a0 = '\0';
     }
     do {
       if (DAT_800473a0 == '\0') {
-        DAT_80045978 = Open_WORLD_WLDCORE(1);
+        Stream_openmovie = Open_WORLD_WLDCORE(1);
       }
-      if (DAT_80045978 == 5) break;
+      if (Stream_openmovie == 5) break;
       Get_BATTLE_BIN();
       BATTLE_main();
       FUN_800440cc();
@@ -32924,7 +33548,7 @@ void Initialise_GameState(void)
     } while (DAT_800a778c != 3);
     if (DAT_800a778c == 3) {
       FUN_800440cc();
-      FUN_80043f00();
+      Unload_ScenarioSongs_and_SFX();
       FUN_BATTLE_BIN__8013b644(100,1);
       FUN_BATTLE_BIN__8013b644(0x27,0x12a);
       Get_OPEN_CDROM_to_RAM2();
@@ -32944,7 +33568,7 @@ void main(void)
   SetGameRunning();
   Initialise_Game_Environment();
   Put_Stack_Pointer(&GlobalStackPointer);
-  Initialise_GameState();
+  GameLoop();
   PadStop();
   StopCallback();
   return;
@@ -33806,7 +34430,7 @@ void FUN_80042690(void)
   
   if (DAT_8004d9b4 != 0) {
     FUN_80044670();
-    FUN_80043f00();
+    Unload_ScenarioSongs_and_SFX();
     DAT_800459c4 = 0;
     DAT_800459c0 = 0;
     DAT_800459bc = 0;
@@ -34411,50 +35035,50 @@ void FUN_800435bc(void)
 
 
 
-int FUN_800435c4(int SMDID,int param_2)
+int OpenAndPlayMusic(int SMDID,int Slot)
 
 {
-  u_long *SMDPtr;
-  MusicDataHeader *MusicData;
-  int iVar1;
+  SMDDataAll *SMDPtr;
+  MusDataAll *MusicData;
+  int _slot;
   
-  iVar1 = 0;
-  if ((u_long *)(&DAT_8004d98c)[param_2] == (u_long *)0x0) {
-    SMDPtr = Get_SMD(*(int *)(&SMDLBA + SMDID * 8),*(uint *)(&SMDFileSize + SMDID * 8));
-    (&DAT_8004d98c)[param_2] = SMDPtr;
-    MusicData = FUN_800120f4((undefined *)SMDPtr);
-    (&DAT_8004d970)[param_2] = MusicData;
-    iVar1 = param_2;
+  _slot = 0;
+  if (openedSMDs[Slot + 1] == (SMDDataAll *)0x0) {
+    SMDPtr = Get_SMD((int)SMD_LBA[SMDID * 2],(uint)SMD_LBA[SMDID * 2 + 1]);
+    openedSMDs[Slot + 1] = SMDPtr;
+    MusicData = PutPlayMUS(SMDPtr);
+    OpenedMUSs[Slot] = MusicData;
+    _slot = Slot;
   }
-  return iVar1;
+  return _slot;
 }
 
 
 
-int FUN_80043660(int SMDID)
+int OpenSMDIntoFreeSlot(int SMDID)
 
 {
-  u_long **ppuVar1;
-  u_long *SMDPtr;
-  MusicDataHeader *pMVar2;
-  int iVar3;
-  MusicDataHeader **ppMVar4;
+  SMDDataAll *_SMD;
+  MusDataAll *pMVar1;
+  SMDDataAll **ppSVar2;
+  int i;
+  MusDataAll **_Opened_MUSs;
   
-  iVar3 = 0;
-  ppuVar1 = (u_long **)&DAT_8004d990;
-  ppMVar4 = (MusicDataHeader **)&DAT_8004d974;
+  i = 0;
+  ppSVar2 = openedSMDs + 2;
+  _Opened_MUSs = OpenedMUSs;
   do {
-    if (*ppuVar1 == (u_long *)0x0) {
-      SMDPtr = Get_SMD(*(int *)(&SMDLBA + SMDID * 8),*(uint *)(&SMDFileSize + SMDID * 8));
-      *ppuVar1 = SMDPtr;
-      pMVar2 = FUN_800120f4((undefined *)SMDPtr);
-      *ppMVar4 = pMVar2;
-      return iVar3 + 1;
+    _Opened_MUSs = _Opened_MUSs + 1;
+    if (*ppSVar2 == (SMDDataAll *)0x0) {
+      _SMD = Get_SMD((int)SMD_LBA[SMDID * 2],(uint)SMD_LBA[SMDID * 2 + 1]);
+      *ppSVar2 = _SMD;
+      pMVar1 = PutPlayMUS(_SMD);
+      *_Opened_MUSs = pMVar1;
+      return i + 1;
     }
-    ppMVar4 = ppMVar4 + 1;
-    iVar3 = iVar3 + 1;
-    ppuVar1 = ppuVar1 + 1;
-  } while (iVar3 < 2);
+    i = i + 1;
+    ppSVar2 = ppSVar2 + 1;
+  } while (i < 2);
   return 0;
 }
 
@@ -34468,104 +35092,104 @@ undefined4 FUN_80043708(void)
 
 
 
-bool FUN_800439c0(int param_1)
+bool Unload_Scenario_MUS(int slot)
 
 {
-  int iVar1;
-  int *piVar2;
+  SMDDataAll *_musclear_check;
+  SMDDataAll **MusToClear;
   
-  piVar2 = &DAT_8004d98c + param_1;
-  iVar1 = *piVar2;
-  if (iVar1 != 0) {
-    FUN_8001216c((MusicDataHeader *)(&DAT_8004d970)[param_1]);
-    (&DAT_8004d970)[param_1] = (MusicDataHeader *)0x0;
-    SMD_Realloc_FFT(*piVar2);
-    *piVar2 = 0;
+  MusToClear = openedSMDs + slot + 1;
+  _musclear_check = *MusToClear;
+  if (_musclear_check != (SMDDataAll *)0x0) {
+    Unload_MUS(OpenedMUSs[slot]);
+    OpenedMUSs[slot] = (MusDataAll *)0x0;
+    SMD_Realloc_FFT((int)*MusToClear);
+    *MusToClear = (SMDDataAll *)0x0;
   }
-  return iVar1 != 0;
+  return _musclear_check != (SMDDataAll *)0x0;
 }
 
 
 
-bool FUN_80043a38(void)
+bool Set_No_Forced_MUS_Playing(void)
 
 {
-  bool bVar1;
+  bool MusBool;
   
-  bVar1 = PTR_8004d960 != (MusDataAll *)0x0;
-  if (bVar1) {
-    FUN_80012338((int)PTR_8004d960);
-    DAT_8004d95c = 0;
-    DAT_8004d964 = 0;
-    PTR_8004d960 = (MusDataAll *)0x0;
+  MusBool = forcePlayedMUS != (MusDataAll *)0x0;
+  if (MusBool) {
+    Deallocate_Mus_Channels(forcePlayedMUS);
+    currentMusSlot = 0;
+    forcePlayedSmd = (MusDataAll *)0x0;
+    forcePlayedMUS = (MusDataAll *)0x0;
   }
-  return bVar1;
+  return MusBool;
 }
 
 
 
-MusicDataHeader * FUN_80043a90(int param_1,undefined4 param_2,short param_3)
+MusDataAll * FUN_80043a90(int slot,undefined4 param_2,short param_3)
 
 {
-  MusDataAll *pMVar1;
+  MusDataAll *MusPtr;
   
-  FUN_80043a38();
-  if (param_1 == 0) {
-    pMVar1 = (MusDataAll *)0x0;
+  Set_No_Forced_MUS_Playing();
+  if (slot == 0) {
+    MusPtr = (MusDataAll *)0x0;
   }
   else {
-    pMVar1 = PTR_8004d960;
-    if ((&DAT_8004d98c)[param_1] != 0) {
-      DAT_8004d964 = (&DAT_8004d98c)[param_1];
-      PTR_8004d960 = (MusDataAll *)(&DAT_8004d970)[param_1];
-      DAT_8004d95c = param_1;
-      DAT_8004d968 = param_2;
-      FUN_800121dc((MusicDataHeader *)PTR_8004d960,(short)param_2,param_3);
-      pMVar1 = PTR_8004d960;
+    MusPtr = forcePlayedMUS;
+    if ((MusDataAll *)openedSMDs[slot + 1] != (MusDataAll *)0x0) {
+      forcePlayedSmd = (MusDataAll *)openedSMDs[slot + 1];
+      forcePlayedMUS = OpenedMUSs[slot];
+      currentMusSlot = slot;
+      target_shiftime = param_2;
+      FUN_800121dc(forcePlayedMUS,(short)param_2,param_3);
+      MusPtr = forcePlayedMUS;
     }
   }
-  return &pMVar1->HeaderData;
+  return MusPtr;
 }
 
 
 
-bool FUN_80043b54(short param_1,short param_2)
+bool change_volume_currentSong(short shiftTime,short volChange)
 
 {
   bool bVar1;
   
-  bVar1 = PTR_8004d960 != (MusDataAll *)0x0;
+  bVar1 = forcePlayedMUS != (MusDataAll *)0x0;
   if (bVar1) {
-    FUN_80012f08(PTR_8004d960,(int)param_1,param_2);
+    Calc_Mus_VolChange(forcePlayedMUS,(int)shiftTime,volChange);
   }
   return bVar1;
 }
 
 
 
-bool FUN_80043ba0(short param_1)
+bool volume_with_targetTime_currentSong(short volChange)
 
 {
   bool bVar1;
   
-  bVar1 = PTR_8004d960 != (MusDataAll *)0x0;
+  bVar1 = forcePlayedMUS != (MusDataAll *)0x0;
   if (bVar1) {
-    FUN_80012f08(PTR_8004d960,(int)(short)DAT_8004d968,param_1);
+    Calc_Mus_VolChange(forcePlayedMUS,(int)(short)target_shiftime,volChange);
   }
   return bVar1;
 }
 
 
 
-bool FUN_80043be8(undefined4 param_1,short param_2)
+bool set_TargetVol_currentSong(int target_shifttime,short changeVol)
 
 {
   bool bVar1;
   
-  bVar1 = PTR_8004d960 != (MusDataAll *)0x0;
+  bVar1 = forcePlayedMUS != (MusDataAll *)0x0;
   if (bVar1) {
-    DAT_8004d968 = param_1;
-    FUN_80012f08(PTR_8004d960,(int)(short)param_1,param_2);
+    target_shiftime = target_shifttime;
+    Calc_Mus_VolChange(forcePlayedMUS,(int)(short)target_shifttime,changeVol);
   }
   return bVar1;
 }
@@ -34575,24 +35199,24 @@ bool FUN_80043be8(undefined4 param_1,short param_2)
 undefined4 Play_GNRC_Tune(uint param_1)
 
 {
-  if ((param_1 != 0) && (PermanentSoundID == 0)) {
-    FUN_80043be8(0,0x78);
-    PermanentSoundID = param_1 | 0x80;
+  if ((param_1 != 0) && (TuneSoundID == 0)) {
+    set_TargetVol_currentSong(0,0x78);
+    TuneSoundID = param_1 | 0x80;
   }
   return 1;
 }
 
 
 
-undefined4 FUN_80043d80(short param_1)
+undefined4 Set_PlayTune_Volume(short changeVol)
 
 {
-  if (PermanentSoundID != 0) {
-    if ((PermanentSoundID & 0x80) == 0) {
-      FUN_80012f08(*(MusDataAll **)(&DAT_8004d978 + (PermanentSoundID & 0x3f) * 4),0,param_1);
+  if (TuneSoundID != 0) {
+    if ((TuneSoundID & 0x80) == 0) {
+      Calc_Mus_VolChange((&TuneSoundMUS_array)[TuneSoundID & 0x3f],0,changeVol);
     }
     else {
-      PermanentSoundID = 0;
+      TuneSoundID = 0;
     }
   }
   return 1;
@@ -34606,39 +35230,39 @@ bool FUN_80043de0(void)
   bool bVar1;
   ushort uVar2;
   undefined2 extraout_var;
-  MusicDataHeader *MusicData;
+  MusDataAll *MusicData;
   undefined2 extraout_var_00;
   uint soundID;
-  MusicDataHeader **ppMVar3;
+  MusDataAll **ppMVar3;
   
-  if ((PermanentSoundID & 0x80) == 0) {
-    if (PermanentSoundID == 0) {
+  if ((TuneSoundID & 0x80) == 0) {
+    if (TuneSoundID == 0) {
       bVar1 = false;
     }
     else {
-      ppMVar3 = (MusicDataHeader **)(&DAT_8004d978 + (PermanentSoundID & 0x3f) * 4);
-      uVar2 = FUN_80012e7c((int)*ppMVar3);
+      ppMVar3 = &TuneSoundMUS_array + (TuneSoundID & 0x3f);
+      uVar2 = get_musicPlaying(*ppMVar3);
       bVar1 = false;
       if (CONCAT22(extraout_var_00,uVar2) == 0) {
-        FUN_80012338((int)*ppMVar3);
-        if (*ppMVar3 != (MusicDataHeader *)0x0) {
-          FUN_8001216c(*ppMVar3);
+        Deallocate_Mus_Channels(*ppMVar3);
+        if (*ppMVar3 != (MusDataAll *)0x0) {
+          Unload_MUS(*ppMVar3);
         }
-        *ppMVar3 = (MusicDataHeader *)0x0;
-        PermanentSoundID = 0;
-        bVar1 = FUN_80043be8(0x7f,0x78);
+        *ppMVar3 = (MusDataAll *)0x0;
+        TuneSoundID = 0;
+        bVar1 = set_TargetVol_currentSong(0x7f,0x78);
       }
     }
   }
   else {
-    uVar2 = FUN_80012e7c((int)PTR_8004d960);
+    uVar2 = get_musicPlaying(forcePlayedMUS);
     bVar1 = false;
     if (CONCAT22(extraout_var,uVar2) == 0) {
-      soundID = PermanentSoundID & 0x3f;
-      PermanentSoundID = PermanentSoundID & 0x7f;
-      ppMVar3 = (MusicDataHeader **)(&DAT_8004d978 + soundID * 4);
-      if (*ppMVar3 == (MusicDataHeader *)0x0) {
-        MusicData = FUN_800120f4((undefined *)(&DAT_8004d994)[soundID]);
+      soundID = TuneSoundID & 0x3f;
+      TuneSoundID = TuneSoundID & 0x7f;
+      ppMVar3 = &TuneSoundMUS_array + soundID;
+      if (*ppMVar3 == (MusDataAll *)0x0) {
+        MusicData = PutPlayMUS(openedSMDs[soundID + 3]);
         *ppMVar3 = MusicData;
       }
       FUN_800121dc(*ppMVar3,0x7f,0);
@@ -34650,13 +35274,13 @@ bool FUN_80043de0(void)
 
 
 
-void FUN_80043f00(void)
+void Unload_ScenarioSongs_and_SFX(void)
 
 {
-  FUN_80043a38();
-  FUN_800439c0(1);
-  FUN_800439c0(2);
-  FUN_80043d80(0);
+  Set_No_Forced_MUS_Playing();
+  Unload_Scenario_MUS(1);
+  Unload_Scenario_MUS(2);
+  Set_PlayTune_Volume(0);
   return;
 }
 
@@ -34665,29 +35289,29 @@ void FUN_80043f00(void)
 void FUN_80043f50(void)
 
 {
-  int iVar1;
+  int slot;
   
-  iVar1 = DAT_8004d95c;
-  FUN_80043a38();
-  FUN_800439c0(iVar1);
+  slot = currentMusSlot;
+  Set_No_Forced_MUS_Playing();
+  Unload_Scenario_MUS(slot);
   return;
 }
 
 
 
-void FUN_80043f88(int param_1)
+void FUN_80043f88(int SMD_ID)
 
 {
-  int iVar1;
+  int _curMusSlot;
   
-  iVar1 = DAT_8004d95c;
-  if (DAT_8004d964 != 0) {
-    FUN_80043a38();
-    FUN_800439c0(iVar1);
+  _curMusSlot = currentMusSlot;
+  if (forcePlayedSmd != (MusDataAll *)0x0) {
+    Set_No_Forced_MUS_Playing();
+    Unload_Scenario_MUS(_curMusSlot);
   }
-  iVar1 = FUN_80043660(param_1);
-  if (iVar1 != 0) {
-    FUN_80043a90(iVar1,0x7f,0);
+  _curMusSlot = OpenSMDIntoFreeSlot(SMD_ID);
+  if (_curMusSlot != 0) {
+    FUN_80043a90(_curMusSlot,0x7f,0);
   }
   return;
 }
@@ -34772,7 +35396,7 @@ void FUN_800440f4(MusicDataHeader *param_1)
   if (param_1 == DAT_8004599c) {
     DAT_8004599c = (MusicDataHeader *)0x0;
   }
-  AccumulateChannelsToPause(param_1);
+  AccumulateChannelsToPause((int)param_1);
   return;
 }
 
@@ -34781,7 +35405,7 @@ void FUN_800440f4(MusicDataHeader *param_1)
 void FUN_80044128(void)
 
 {
-  if (DAT_8004599c != (MusicDataHeader *)0x0) {
+  if (DAT_8004599c != 0) {
     AccumulateChannelsToPause(DAT_8004599c);
   }
   return;
@@ -34793,9 +35417,9 @@ void Open_Permanent_SoundFiles(void)
 
 {
   SoundFontHeader *SoundFontPtr;
-  u_long *puVar1;
-  undefined4 *puVar2;
-  int iVar3;
+  u_long *temp_ptr;
+  SMDDataAll **ppSVar1;
+  int iVar2;
   
   Suzuki_Initialisation_Func(0);
   SMD_Free_FFT();
@@ -34803,36 +35427,36 @@ void Open_Permanent_SoundFiles(void)
   SoundFontPtr = (SoundFontHeader *)Get_File(0x14c0f,0x79000,(u_long *)PTR_FUN_80010000);
   Put_WAVESET_SPU(SoundFontPtr);
                     // Opens SYSTEM.SED
-  puVar1 = Get_File(0x14c0a,0x2800,(u_long *)&DAT_80047610);
-  FUN_80017e7c((int)puVar1);
+  temp_ptr = Get_File(0x14c0a,(uint)&DAT_00002800,(u_long *)&DAT_80047610);
+  FUN_80017e7c((int)temp_ptr);
                     // Opens ENV.SED
-  puVar1 = Get_File(85000,0x1000,(u_long *)&DAT_8004d9b8);
-  FUN_80017e7c((int)puVar1);
-  iVar3 = 6;
-  puVar2 = &DAT_8004d98c;
-  DAT_8004d964 = 0;
-  PermanentSoundID = 0;
-  DAT_8004d970 = 0;
+  temp_ptr = Get_File(85000,0x1000,(u_long *)&DAT_8004d9b8);
+  FUN_80017e7c((int)temp_ptr);
+  iVar2 = 6;
+  ppSVar1 = openedSMDs + 1;
+  forcePlayedSmd = (MusDataAll *)0x0;
+  TuneSoundID = 0;
+  OpenedMUSs[0] = (MusDataAll *)0x0;
   do {
-    *puVar2 = 0;
-    iVar3 = iVar3 + -1;
-    puVar2 = puVar2 + -1;
-  } while (-1 < iVar3);
+    *ppSVar1 = (SMDDataAll *)0x0;
+    iVar2 = iVar2 + -1;
+    ppSVar1 = ppSVar1 + -1;
+  } while (-1 < iVar2);
   DAT_8004599c = 0;
-  LevelUpSMD = Get_SMD(DAT_800471e8,DAT_800471ec);
-  TreasureDiscoverySMD = Get_SMD(DAT_800471f0,DAT_800471f4);
-  GeneralHappinessSMD = Get_SMD(DAT_800471f8,DAT_800471fc);
-  GeneralUnhappinessSMD = Get_SMD(DAT_80047200,DAT_80047204);
-  JobChangeSMD = Get_SMD(DAT_80047208,DAT_8004720c);
+  openedSMDs[4] = Get_SMD(DAT_800471e8,DAT_800471ec);
+  openedSMDs[5] = Get_SMD(DAT_800471f0,DAT_800471f4);
+  openedSMDs[6] = Get_SMD(DAT_800471f8,DAT_800471fc);
+  openedSMDs[7] = Get_SMD(DAT_80047200,DAT_80047204);
+  openedSMDs[8] = Get_SMD(DAT_80047208,DAT_8004720c);
   return;
 }
 
 
 
-undefined * SMD_Malloc_FFT(uint param_1)
+SMDDataAll * SMD_Malloc_FFT(uint param_1)
 
 {
-  undefined *puVar1;
+  SMDDataAll *pSVar1;
   uint in_v1;
   uint uVar2;
   uint uVar3;
@@ -34864,7 +35488,7 @@ undefined * SMD_Malloc_FFT(uint param_1)
     }
     uVar3 = uVar3 + 1;
   } while (uVar3 < 0x10);
-  puVar1 = (undefined *)0x0;
+  pSVar1 = (SMDDataAll *)0x0;
   if (uVar5 <= uVar4) {
 LAB_8004433c:
     uVar5 = 0;
@@ -34874,9 +35498,9 @@ LAB_8004433c:
         uVar5 = uVar5 + 1;
       } while (uVar5 < uVar4);
     }
-    puVar1 = &DAT_8004eb18 + in_v1 * 0x800;
+    pSVar1 = (SMDDataAll *)(&DAT_8004eb18 + in_v1 * 0x800);
   }
-  return puVar1;
+  return pSVar1;
 }
 
 
@@ -34892,7 +35516,7 @@ undefined4 SMD_Realloc_FFT(int param_1)
   uVar4 = param_1 + 0x7ffb14e8U >> 0xb;
   cVar1 = (&DAT_8004e5c0)[uVar4];
   uVar2 = 0;
-  if (uVar4 == 0 || cVar1 != *(char *)((int)&DAT_8004e5bc + uVar4 + 3)) {
+  if (uVar4 == 0 || cVar1 != *(char *)((int)&Cur_GsBuff + uVar4 + 3)) {
     pcVar3 = &DAT_8004e5c0 + uVar4;
     do {
       *pcVar3 = '\0';
@@ -35085,18 +35709,18 @@ int Check_File_Still_Loading(void)
 
 
 
-u_long * Get_SMD(int param_1,uint param_2)
+SMDDataAll * Get_SMD(int LBA,uint filesize)
 
 {
-  u_long *puVar1;
-  int iVar2;
+  SMDDataAll *addr;
+  int temp;
   
-  puVar1 = (u_long *)SMD_Malloc_FFT(param_2);
-  if (puVar1 == (u_long *)0x0) {
+  addr = SMD_Malloc_FFT(filesize);
+  if (addr == (SMDDataAll *)0x0) {
     ERROREXCEPTION_DEPRECATED();
   }
-  while (iVar2 = Calculate_File_Header_NNL(&MRTA_fileopenhdr,param_1,param_2 >> 0xb,puVar1),
-        iVar2 != 0) {
+  while (temp = Calculate_File_Header_NNL(&MRTA_fileopenhdr,LBA,filesize >> 0xb,(u_long *)addr),
+        temp != 0) {
     VSync(0);
     deprecated_000449ec();
     Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
@@ -35106,7 +35730,7 @@ u_long * Get_SMD(int param_1,uint param_2)
     deprecated_000449ec();
     Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
   }
-  return puVar1;
+  return addr;
 }
 
 
@@ -35745,11 +36369,11 @@ void Initialise_MEMCARD_events(void)
 
 
 
-void Get_OPEN_CDROM_to_RAM(int param_1)
+void Get_OPEN_CDROM_to_RAM(int stream_movie)
 
 {
   Get_DAT_BIN_as_File(86000,0x36800,(u_long *)PTR_FUN_80010000);
-  OPEN_Main(param_1);
+  OPEN_Main(stream_movie);
   return;
 }
 
@@ -44355,7 +44979,7 @@ int FUN_BATTLE_BIN__80070d18(void)
   undefined3 extraout_var;
   int iVar4;
   
-  if (DAT_80045978 == 4) {
+  if (Stream_openmovie == 4) {
     iVar4 = DAT_BATTLE_BIN__80093cac;
     if (DAT_BATTLE_BIN__80093cac == 0) {
       uVar2 = FUN_BATTLE_BIN__8007a774();
@@ -59850,7 +60474,7 @@ int FUN_BATTLE_BIN__8008ea6c(MusicDataHeader *param_1,int param_2,undefined4 *pa
     param_2 = param_2 + 1;
     break;
   case 0xb:
-    if (DAT_80045978 != 1) {
+    if (Stream_openmovie != 1) {
       param_1 = (MusicDataHeader *)0x1fe;
       iVar2 = GetScriptVariable(DebugBattleNext);
       if (iVar2 == 0) goto switchD_BATTLE_BIN__8008ea9c_caseD_9;
@@ -59897,7 +60521,7 @@ int FUN_BATTLE_BIN__8008ec70(MusicDataHeader *param_1,int param_2,undefined4 *pa
     FUN_BATTLE_BIN__8008e468();
     FUN_BATTLE_BIN__80093048();
     param_2 = param_2 + 1;
-    if (DAT_80045978 == 1) {
+    if (Stream_openmovie == 1) {
       FUN_BATTLE_BIN__8008e80c();
     }
     FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094b84,2,0,0);
@@ -59978,7 +60602,7 @@ int FUN_BATTLE_BIN__8008ec70(MusicDataHeader *param_1,int param_2,undefined4 *pa
     }
     break;
   case 0xb:
-    if (DAT_80045978 != 1) {
+    if (Stream_openmovie != 1) {
       param_1 = (MusicDataHeader *)0x1fe;
       iVar2 = GetScriptVariable(DebugBattleNext);
       if (iVar2 == 0) goto switchD_BATTLE_BIN__8008eca4_caseD_1;
@@ -69253,14 +69877,14 @@ void FUN_BATTLE_BIN__8013d230(void)
 void FUN_BATTLE_BIN__8013d278(int param_1,int param_2)
 
 {
-  FUN_80043f00();
+  Unload_ScenarioSongs_and_SFX();
   if (param_1 != 0) {
-    DAT_BATTLE_BIN__80173ca8 = FUN_800435c4;
+    DAT_BATTLE_BIN__80173ca8 = OpenAndPlayMusic;
     FUN_BATTLE_BIN__8014ceb4();
     FUN_BATTLE_BIN__8013d230();
   }
   if (param_2 != 0) {
-    DAT_BATTLE_BIN__80173ca8 = FUN_800435c4;
+    DAT_BATTLE_BIN__80173ca8 = OpenAndPlayMusic;
     FUN_BATTLE_BIN__8014ceb4();
     FUN_BATTLE_BIN__8013d230();
   }
@@ -71114,7 +71738,7 @@ LAB_BATTLE_BIN__80143644:
     Call_Play_Sound(DAT_BATTLE_BIN__80165fb4);
   }
   if (-1 < DAT_BATTLE_BIN__80165fc8) {
-    FUN_80043a38();
+    Set_No_Forced_MUS_Playing();
     DAT_BATTLE_BIN__80165fd8 = DAT_BATTLE_BIN__80165fd8 ^ 1;
     sVar1 = DAT_BATTLE_BIN__80165fd6;
     if (DAT_BATTLE_BIN__80165fd8 == 0) {
@@ -71126,16 +71750,17 @@ LAB_BATTLE_BIN__80143644:
     }
   }
   if (-1 < DAT_BATTLE_BIN__80165fca) {
-    FUN_80043a38();
-    FUN_800439c0((int)DAT_BATTLE_BIN__80165fca);
+    Set_No_Forced_MUS_Playing();
+    Unload_Scenario_MUS((int)DAT_BATTLE_BIN__80165fca);
   }
   if (DAT_BATTLE_BIN__80165fb8 != -1) {
     FUN_80043f50();
     FUN_80043f88((int)DAT_BATTLE_BIN__80165fb8);
   }
   if (DAT_BATTLE_BIN__80165fc0 != 0xffffffff) {
-    FUN_80043be8(DAT_BATTLE_BIN__80165fc0 & 0xffff,
-                 (ushort)(DAT_BATTLE_BIN__80165fc0 >> 0xe) & 0x3ffc);
+    set_TargetVol_currentSong
+              (DAT_BATTLE_BIN__80165fc0 & 0xffff,(ushort)(DAT_BATTLE_BIN__80165fc0 >> 0xe) & 0x3ffc)
+    ;
   }
   return;
 }
@@ -94591,7 +95216,7 @@ joined_r0x801a14c8:
     DAT_801c24c8 = 3;
     FUN_BATTLE_BIN__801a1198((int)DAT_801c24d0);
     if ((*DAT_BATTLE_BIN__801bacc8 & 0x10) != 0) {
-      FUN_80043b54(0x40,0xf0);
+      change_volume_currentSong(0x40,0xf0);
       param_1 = 1;
       bVar1 = DAT_801c24c8;
       goto code_r0x801a157c;
@@ -94819,7 +95444,7 @@ undefined4 FUN_BATTLE_BIN__801a18d8(void)
       return 1;
     }
     if ((*DAT_BATTLE_BIN__801bacc8 & 0x10) != 0) {
-      FUN_80043ba0(0x78);
+      volume_with_targetTime_currentSong(0x78);
     }
     if (DAT_BATTLE_BIN__801bbf74 != 0) {
       FUN_80017eb8(DAT_BATTLE_BIN__801bbf74);
@@ -97342,19 +97967,19 @@ undefined4 FUN_BATTLE_BIN__801b47e0(void)
 
 
 
-undefined4 OPEN_Main(int param_1)
+undefined4 OPEN_Main(int stream_movie)
 
 {
-  FUN_OPEN__80068684(param_1);
+  Init_SPU_GPU_StreamOpeningMovie(stream_movie);
   while ((DAT_OPEN__8008e53c & 1) != 0) {
     Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
     FUN_OPEN__80068b74();
     FUN_OPEN__80067484();
     FUN_OPEN__8006854c();
     FUN_OPEN__80069eb4();
-    FUN_OPEN__80068cd0(DAT_8004e5bc * 0x40 + -0x7ff79fe8,(uint **)&DAT_OPEN__80085f44,
+    FUN_OPEN__80068cd0((int)(&OPEN_OTAG + Cur_GsBuff * 0x40),(uint **)&DAT_OPEN__80085f44,
                        DAT_OPEN__80085fc4);
-    DrawOTag((u_long *)(DAT_8004e5bc * 0x40 + -0x7ff79fac));
+    DrawOTag((u_long *)(Cur_GsBuff * 0x40 + -0x7ff79fac));
     DrawSync(0);
     FUN_OPEN__80067d84();
     VSync(0);
@@ -97376,13 +98001,13 @@ void OPEN_EndCredits_Main(void)
     Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
     FUN_OPEN__80068b74();
     FUN_OPEN__80067484();
-    FUN_OPEN__8006e8b0(DAT_8004e5bc * 0x40 + -0x7ff79fe8,DAT_8004e5bc);
+    FUN_OPEN__8006e8b0((int)(&OPEN_OTAG + Cur_GsBuff * 0x40),Cur_GsBuff);
     FUN_OPEN__80069eb4();
     DrawSync(0);
     FUN_OPEN__80067d84();
     VSync(DAT_OPEN__8008fc14);
     FUN_OPEN__80067c1c();
-    DrawOTag((u_long *)((DAT_8004e5bc ^ 1) * 0x40 + -0x7ff79fac));
+    DrawOTag((u_long *)((Cur_GsBuff ^ 1) * 0x40 + -0x7ff79fac));
     deprecated_000449ec();
   }
   PostCredits_ReturnFRAME();
@@ -97411,13 +98036,13 @@ void StreamMovie(int param_1,undefined4 param_2,uint param_3,int param_4)
   DAT_OPEN__8008e544 = 0;
   DAT_OPEN__8008e534 = param_2;
   DAT_OPEN__8008fc08 = param_3;
-  FUN_OPEN__8006768c((undefined4 *)&DAT_OPEN__800852b0,0,8,0,0xf8);
+  FUN_OPEN__8006768c(runlevel_array,0,8,0,0xf8);
   while( true ) {
     FUN_OPEN__800676f8(param_1);
     do {
       soundType = CdRead2(0x1e0);
     } while (soundType == 0);
-    bVar1 = FUN_OPEN__8006792c((int)&DAT_OPEN__800852b0);
+    bVar1 = FUN_OPEN__8006792c((u_long *)runlevel_array);
     if (CONCAT31(extraout_var,bVar1) != 0) break;
     Reset_CD_Subsystems();
   }
@@ -97434,23 +98059,22 @@ void StreamMovie(int param_1,undefined4 param_2,uint param_3,int param_4)
 void FUN_OPEN__80067484(void)
 
 {
-  int iVar1;
-  CdlLOC aCStack_28 [2];
-  short local_20;
-  short asStack_1e [11];
+  u_long _firstframe_addr;
+  CdlLOC loc;
+  short free_sectors;
+  short over_sectors [11];
   
   if ((DAT_OPEN__8008e53c & 2) != 0) {
-    StRingStatus(&local_20,asStack_1e);
-    if (local_20 < 0x10) {
-      iVar1 = StGetBackloc(aCStack_28);
-      FUN_800212cc(1,iVar1,0xffffffff);
-      FUN_OPEN__80067bd0(&aCStack_28[0].minute);
+    StRingStatus(&free_sectors,over_sectors);
+    if (free_sectors < 0x10) {
+      _firstframe_addr = StGetBackloc(&loc);
+      StSetMask(1,_firstframe_addr,0xffffffff);
+      CD_Controls_Streaming(&loc.minute);
     }
-    DecDCTin(*(u_long **)(&DAT_OPEN__800852b0 + DAT_OPEN__800852b8 * 4),3);
-    DecDCTout(*(u_long **)(&DAT_OPEN__800852bc + DAT_OPEN__800852c4 * 4),
-              ((int)DAT_OPEN__800852e0 * (int)DAT_OPEN__800852e2) / 2);
-    FUN_OPEN__8006792c((int)&DAT_OPEN__800852b0);
-    FUN_OPEN__80067b38((int)&DAT_OPEN__800852b0);
+    DecDCTin(runlevel_array[runlevel_index],3);
+    DecDCTout(cell_array[cellarray_index],((int)DAT_OPEN__800852e0 * (int)DAT_OPEN__800852e2) / 2);
+    FUN_OPEN__8006792c((u_long *)runlevel_array);
+    FUN_OPEN__80067b38((int)runlevel_array);
     if (DAT_OPEN__8008e544 == 1) {
       FUN_OPEN__800675bc(1);
     }
@@ -97543,17 +98167,17 @@ void FUN_OPEN__800676f8(int param_1)
 
 
 
-bool FUN_OPEN__8006792c(int param_1)
+bool FUN_OPEN__8006792c(u_long *param_1)
 
 {
   u_long *bs;
-  uint uVar1;
+  u_long uVar1;
   
-  bs = (u_long *)FUN_OPEN__800679a0(param_1);
+  bs = FUN_OPEN__800679a0(param_1);
   if (bs != (u_long *)0x0) {
-    uVar1 = (uint)(*(int *)(param_1 + 8) == 0);
-    *(uint *)(param_1 + 8) = uVar1;
-    DecDCTvlc(bs,*(u_long **)(uVar1 * 4 + param_1));
+    uVar1 = param_1[2];
+    param_1[2] = (uint)(uVar1 == 0);
+    DecDCTvlc(bs,(u_long *)param_1[uVar1 == 0]);
     StFreeRing(bs);
   }
   return bs != (u_long *)0x0;
@@ -97561,7 +98185,7 @@ bool FUN_OPEN__8006792c(int param_1)
 
 
 
-undefined4 FUN_OPEN__800679a0(int param_1)
+u_long * FUN_OPEN__800679a0(u_long *param_1)
 
 {
   bool bVar1;
@@ -97597,18 +98221,18 @@ undefined4 FUN_OPEN__800679a0(int param_1)
       }
       uVar2 = (undefined2)DAT_OPEN__8008fc10;
       uVar4 = (undefined2)(DAT_OPEN__8008e538 * 3 - ((int)(DAT_OPEN__8008e538 * 3) >> 0x1f) >> 1);
-      *(undefined2 *)(param_1 + 0x24) = uVar4;
-      *(undefined2 *)(param_1 + 0x1c) = uVar4;
-      *(undefined2 *)(param_1 + 0x26) = uVar2;
-      *(undefined2 *)(param_1 + 0x1e) = uVar2;
-      *(undefined2 *)(param_1 + 0x32) = uVar2;
+      *(undefined2 *)(param_1 + 9) = uVar4;
+      *(undefined2 *)(param_1 + 7) = uVar4;
+      *(undefined2 *)((int)param_1 + 0x26) = uVar2;
+      *(undefined2 *)((int)param_1 + 0x1e) = uVar2;
+      *(undefined2 *)((int)param_1 + 0x32) = uVar2;
       return local_20;
     }
     VSync(0);
     bVar1 = iVar5 != 0x80;
     iVar5 = iVar5 + 1;
   } while (bVar1);
-  return 0;
+  return (u_long *)0x0;
 }
 
 
@@ -97640,17 +98264,17 @@ void FUN_OPEN__80067b38(int param_1)
 
 
 
-void FUN_OPEN__80067bd0(undefined *param_1)
+void CD_Controls_Streaming(u_char *cdlloc)
 
 {
-  int iVar1;
+  int _i;
   
   do {
     do {
-      iVar1 = CdControl('\x02',param_1,(u_char *)0x0);
-    } while (iVar1 == 0);
-    iVar1 = CdRead2(0x1a0);
-  } while (iVar1 == 0);
+      _i = CdControl('\x02',cdlloc,(u_char *)0x0);
+    } while (_i == 0);
+    _i = CdRead2(0x1a0);
+  } while (_i == 0);
   return;
 }
 
@@ -97662,9 +98286,9 @@ void FUN_OPEN__80067c1c(void)
   RECT local_18;
   RECT local_10;
   
-  DAT_8004e5bc = DAT_8004e5bc ^ 1;
-  PutDrawEnv((DRAWENV *)((int)&OPENDRAWENV1 + DAT_8004e5bc * 0x70));
-  PutDispEnv((DISPENV *)((int)&OPENDISPENV1 + DAT_8004e5bc * 0x70));
+  Cur_GsBuff = Cur_GsBuff ^ 1;
+  PutDrawEnv((DRAWENV *)((int)&OPENDRAWENV1 + Cur_GsBuff * 0x70));
+  PutDispEnv((DISPENV *)((int)&OPENDISPENV1 + Cur_GsBuff * 0x70));
   if ((DAT_OPEN__8008e53c & 2) == 0) {
     local_18.h = 0xf0;
     local_18.x = 0;
@@ -97674,7 +98298,7 @@ void FUN_OPEN__80067c1c(void)
     else {
       local_18.w = 0x140;
     }
-    if ((DAT_8004e5bc & 1) == 0) {
+    if ((Cur_GsBuff & 1) == 0) {
       local_18.y = 0;
     }
     else {
@@ -97752,11 +98376,11 @@ void FUN_OPEN__80067e90(undefined4 param_1)
 // WARNING: Removing unreachable block (ram,0x80067f18)
 // WARNING: Removing unreachable block (ram,0x80067fe0)
 
-void FUN_OPEN__80067eb8(int param_1)
+void FUN_OPEN__80067eb8(int OtagList_end)
 
 {
   u_short uVar1;
-  int iVar2;
+  int _cur_buff;
   
   if ((DAT_OPEN__80085cac & 1) != 0) {
     if (DAT_OPEN__80085cb4 == 0) {
@@ -97791,20 +98415,20 @@ void FUN_OPEN__80067eb8(int param_1)
     }
   }
   if ((DAT_OPEN__80085cac & 4) != 0) {
-    SetTile((TILE *)(DAT_8004e5bc * 0x10 + -0x7ff7a334));
-    SetSemiTrans((void *)(DAT_8004e5bc * 0x10 + -0x7ff7a334),1);
+    SetTile(OPEN_TILES + Cur_GsBuff);
+    SetSemiTrans(OPEN_TILES + Cur_GsBuff,1);
     uVar1 = GetTPage(0,DAT_OPEN__80085cbc,0x100,0);
-    SetDrawMode((DR_MODE *)(DAT_8004e5bc * 0xc + -0x7ff7a314),1,0,(uint)uVar1,(RECT *)0x0);
-    iVar2 = DAT_8004e5bc * 0x10;
-    *(undefined2 *)(&DAT_OPEN__80085cd4 + iVar2) = DAT_OPEN__80085cc4;
-    *(undefined2 *)(&DAT_OPEN__80085cd6 + iVar2) = DAT_OPEN__80085cc6;
-    *(undefined2 *)(&DAT_OPEN__80085cd8 + iVar2) = DAT_OPEN__80085cc8;
-    *(undefined2 *)(&DAT_OPEN__80085cda + iVar2) = DAT_OPEN__80085cca;
-    (&DAT_OPEN__80085cd0)[iVar2] = (char)DAT_OPEN__80085cb8;
-    (&DAT_OPEN__80085cd1)[DAT_8004e5bc * 0x10] = (char)DAT_OPEN__80085cb8;
-    (&DAT_OPEN__80085cd2)[DAT_8004e5bc * 0x10] = (char)DAT_OPEN__80085cb8;
-    AddPrim((void *)(param_1 + DAT_OPEN__80085cc0 * 4),(void *)(DAT_8004e5bc * 0x10 + -0x7ff7a334));
-    AddPrim((void *)(param_1 + DAT_OPEN__80085cc0 * 4),(void *)(DAT_8004e5bc * 0xc + -0x7ff7a314));
+    SetDrawMode(OPEN_DRAWMODES + Cur_GsBuff,1,0,(uint)uVar1,(RECT *)0x0);
+    _cur_buff = Cur_GsBuff;
+    OPEN_TILES[Cur_GsBuff].x0 = DAT_OPEN__80085cc4;
+    OPEN_TILES[_cur_buff].y0 = DAT_OPEN__80085cc6;
+    OPEN_TILES[_cur_buff].w = DAT_OPEN__80085cc8;
+    OPEN_TILES[_cur_buff].h = DAT_OPEN__80085cca;
+    OPEN_TILES[_cur_buff].r0 = (u_char)DAT_OPEN__80085cb8;
+    OPEN_TILES[Cur_GsBuff].g0 = (u_char)DAT_OPEN__80085cb8;
+    OPEN_TILES[Cur_GsBuff].b0 = (u_char)DAT_OPEN__80085cb8;
+    AddPrim((void *)(OtagList_end + end_prim * 4),OPEN_TILES + Cur_GsBuff);
+    AddPrim((void *)(OtagList_end + end_prim * 4),OPEN_DRAWMODES + Cur_GsBuff);
   }
   return;
 }
@@ -97829,11 +98453,11 @@ void FUN_OPEN__8006854c(void)
 
 {
   if ((DAT_OPEN__8008e53c & 0x400) != 0) {
-    DAT_8004e5bc = DAT_8004e5bc ^ 1;
+    Cur_GsBuff = Cur_GsBuff ^ 1;
     FUN_WORLD__80107e00(~DAT_OPEN__8008e430);
-    FUN_WORLD__80107e10((DAT_8004e5bc ^ 1) * 0x40 + DAT_OPEN__800855ec * 4 + -0x7ff79fe8,
+    FUN_WORLD__80107e10(&OPEN_OTAG + (Cur_GsBuff ^ 1) * 0x40 + DAT_OPEN__800855ec * 4,
                         DAT_OPEN__800851bc);
-    DAT_8004e5bc = DAT_8004e5bc ^ 1;
+    Cur_GsBuff = Cur_GsBuff ^ 1;
   }
   return;
 }
@@ -97858,10 +98482,10 @@ void FUN_OPEN__80068638(int param_1,short param_2)
 
 
 
-void FUN_OPEN__80068684(int param_1)
+void Init_SPU_GPU_StreamOpeningMovie(int param_1)
 
 {
-  FUN_80043f00();
+  Unload_ScenarioSongs_and_SFX();
   FUN_OPEN__80068aec();
   OPEN_OpenMainMenuGraphics_To_FrameBuffer();
   Initialise_SetScreen(1);
@@ -97878,7 +98502,7 @@ void FUN_OPEN__800686dc(void)
 {
   RECT local_10;
   
-  FUN_80043f00();
+  Unload_ScenarioSongs_and_SFX();
   FUN_OPEN__80068aec();
   local_10.x = 0x3c0;
   local_10.y = 0x100;
@@ -97975,8 +98599,8 @@ void Initialise_SetScreen(int param_1)
     ClearImage(&local_18,'\0','\0','\0');
     DrawSync(0);
     if (param_1 != 0) {
-      PutDrawEnv((DRAWENV *)((int)&OPENDRAWENV1 + DAT_8004e5bc * 0x70));
-      PutDispEnv((DISPENV *)((int)&OPENDISPENV1 + DAT_8004e5bc * 0x70));
+      PutDrawEnv((DRAWENV *)((int)&OPENDRAWENV1 + Cur_GsBuff * 0x70));
+      PutDispEnv((DISPENV *)((int)&OPENDISPENV1 + Cur_GsBuff * 0x70));
       PutScreentoGTE(0,0);
     }
   }
@@ -97993,7 +98617,7 @@ void FUN_OPEN__80068aec(void)
   DAT_OPEN__80085ca8 = 0xffffffff;
   DAT_OPEN__800852a4 = &DAT_80140000;
   DAT_OPEN__80085cbc = 2;
-  DAT_OPEN__80085cc0 = 2;
+  end_prim = 2;
   DAT_OPEN__800852ac = 0;
   DAT_OPEN__800855a4 = 0;
   DAT_OPEN__800851bc = 0;
@@ -98009,8 +98633,8 @@ void FUN_OPEN__80068aec(void)
 void FUN_OPEN__80068b74(void)
 
 {
-  FUN_OPEN__80068c90();
-  FUN_OPEN__80067eb8(DAT_8004e5bc * 0x40 + -0x7ff79fe8);
+  OPEN_ClearOTagR();
+  FUN_OPEN__80067eb8((int)(&OPEN_OTAG + Cur_GsBuff * 0x40));
   return;
 }
 
@@ -98026,7 +98650,7 @@ void FUN_OPEN__80068bb0(void)
   iVar3 = 0;
   puVar1 = &DAT_OPEN__80085d24;
   iVar2 = 0;
-  DAT_OPEN__8008fc00 = 0;
+  OTag_tobeCleared = 0;
   DAT_OPEN__800852a8 = 0;
   DAT_OPEN__800852a0 = 0;
   DAT_OPEN__80085fc4 = 0;
@@ -98058,11 +98682,11 @@ void FUN_OPEN__80068bb0(void)
 
 
 
-void FUN_OPEN__80068c90(void)
+void OPEN_ClearOTagR(void)
 
 {
-  ClearOTagR((u_long *)(DAT_8004e5bc * 0x40 + -0x7ff79fe8),0x10);
-  DAT_OPEN__8008fc00 = 0;
+  ClearOTagR((u_long *)(&OPEN_OTAG + Cur_GsBuff * 0x40),0x10);
+  OTag_tobeCleared = 0;
   return;
 }
 
@@ -98134,33 +98758,33 @@ void FUN_OPEN__80068d80(int param_1,int param_2)
   iVar12 = *piVar5;
   if (0 < iVar12) {
     do {
-      if (0x1f < DAT_OPEN__8008fc00) {
+      if (0x1f < OTag_tobeCleared) {
         return;
       }
-      (&DAT_OPEN__8008fc7c)[DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20] =
+      (&DAT_OPEN__8008fc7c)[Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20] =
            *(undefined *)(param_1 + 0x20);
-      (&DAT_OPEN__8008fc7d)[DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20] =
+      (&DAT_OPEN__8008fc7d)[Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20] =
            *(undefined *)(param_1 + 0x21);
-      (&DAT_OPEN__8008fc7e)[DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20] =
+      (&DAT_OPEN__8008fc7e)[Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20] =
            *(undefined *)(param_1 + 0x22);
-      SetSprt((SPRT *)(DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20 + -0x7ff70388));
+      SetSprt((SPRT *)(Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20 + -0x7ff70388));
       uVar11 = (iVar12 - iVar3) * 2 | 1;
       uVar7 = piVar5[uVar11];
       uVar2 = GetTPage(uVar7 >> 0x1a & 1,uVar7 >> 0x1c & 3,uVar10 & 0xffff,uVar10 >> 0x10);
-      SetDrawMode((DR_MODE *)(DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20 + -0x7ff70394),1,0,
+      SetDrawMode((DR_MODE *)(Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20 + -0x7ff70394),1,0,
                   (uint)uVar2,(RECT *)0x0);
-      SetSemiTrans((void *)(DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20 + -0x7ff70388),
+      SetSemiTrans((void *)(Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20 + -0x7ff70388),
                    (uint)((piVar5[uVar11] & 0x40000000U) != 0));
       puVar9 = (uint *)(piVar5 + uVar11);
-      iVar6 = DAT_OPEN__8008fc00 * 0x20 + DAT_8004e5bc * 0x400;
+      iVar6 = OTag_tobeCleared * 0x20 + Cur_GsBuff * 0x400;
       *(ushort *)(&DAT_OPEN__8008fc80 + iVar6) =
            (short)*(undefined4 *)(param_1 + 0x18) + (ushort)*(byte *)puVar9 + -0x80;
       *(ushort *)(&DAT_OPEN__8008fc82 + iVar6) =
            (short)*(undefined4 *)(param_1 + 0x1c) + (ushort)*(byte *)((int)puVar9 + 1) + -0x80;
       (&DAT_OPEN__8008fc84)[iVar6] = *(byte *)((int)puVar9 + 7);
-      (&DAT_OPEN__8008fc85)[DAT_OPEN__8008fc00 * 0x20 + DAT_8004e5bc * 0x400] =
+      (&DAT_OPEN__8008fc85)[OTag_tobeCleared * 0x20 + Cur_GsBuff * 0x400] =
            *(byte *)((int)puVar9 + 6);
-      iVar6 = DAT_OPEN__8008fc00 * 0x20 + DAT_8004e5bc * 0x400;
+      iVar6 = OTag_tobeCleared * 0x20 + Cur_GsBuff * 0x400;
       *(ushort *)(&DAT_OPEN__8008fc88 + iVar6) = (ushort)*(byte *)((int)puVar9 + 5);
       *(ushort *)(&DAT_OPEN__8008fc8a + iVar6) = (ushort)*(byte *)(puVar9 + 1);
       if ((*(int *)(param_1 + 0x14) == 0) || ((*puVar9 & 0x8000000) != 0)) {
@@ -98170,14 +98794,14 @@ void FUN_OPEN__80068d80(int param_1,int param_2)
         uVar7 = (*(int *)(param_1 + 0x14) + -1) * 0x10;
       }
       uVar2 = GetClut((uVar4 & 0xffff) + uVar7,uVar4 >> 0x10);
-      iVar6 = DAT_OPEN__8008fc00 * 0x20;
-      iVar8 = DAT_8004e5bc * 0x400;
+      iVar6 = OTag_tobeCleared * 0x20;
+      iVar8 = Cur_GsBuff * 0x400;
       *(u_short *)(&DAT_OPEN__8008fc86 + iVar6 + iVar8) = uVar2;
       AddPrim((void *)(param_2 + *(int *)(param_1 + 8) * 4),(void *)(iVar8 + iVar6 + -0x7ff70388));
       AddPrim((void *)(param_2 + *(int *)(param_1 + 8) * 4),
-              (void *)(DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20 + -0x7ff70394));
+              (void *)(Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20 + -0x7ff70394));
       iVar3 = iVar3 + 1;
-      DAT_OPEN__8008fc00 = DAT_OPEN__8008fc00 + 1;
+      OTag_tobeCleared = OTag_tobeCleared + 1;
     } while (iVar3 < iVar12);
   }
   return;
@@ -98197,8 +98821,8 @@ void FUN_OPEN__8006920c(uint *param_1,int param_2)
   undefined2 local_2c;
   undefined2 local_2a;
   
-  if (DAT_OPEN__8008fc00 < 0x20) {
-    SetSprt((SPRT *)(DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20 + -0x7ff70388));
+  if (OTag_tobeCleared < 0x20) {
+    SetSprt((SPRT *)(Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20 + -0x7ff70388));
     if (param_1[6] == 0) {
       local_38 = param_1[9];
       local_34 = param_1[10];
@@ -98208,38 +98832,38 @@ void FUN_OPEN__8006920c(uint *param_1,int param_2)
       local_34 = param_1[10];
     }
     uVar1 = GetClut(local_38,local_34);
-    iVar2 = DAT_OPEN__8008fc00 * 0x20 + DAT_8004e5bc * 0x400;
+    iVar2 = OTag_tobeCleared * 0x20 + Cur_GsBuff * 0x400;
     *(u_short *)(&DAT_OPEN__8008fc86 + iVar2) = uVar1;
     (&DAT_OPEN__8008fc7c)[iVar2] = *(undefined *)(param_1 + 0xd);
-    (&DAT_OPEN__8008fc7d)[DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20] =
+    (&DAT_OPEN__8008fc7d)[Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20] =
          *(undefined *)((int)param_1 + 0x35);
-    (&DAT_OPEN__8008fc7e)[DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20] =
+    (&DAT_OPEN__8008fc7e)[Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20] =
          *(undefined *)((int)param_1 + 0x36);
     uVar1 = GetTPage((uint)((*param_1 & 4) != 0),(*param_1 & 0xc0) >> 6,param_1[1],param_1[2]);
-    SetDrawMode((DR_MODE *)(DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20 + -0x7ff70394),1,0,
+    SetDrawMode((DR_MODE *)(Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20 + -0x7ff70394),1,0,
                 (uint)uVar1,(RECT *)0x0);
-    SetSemiTrans((void *)(DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20 + -0x7ff70388),
+    SetSemiTrans((void *)(Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20 + -0x7ff70388),
                  (uint)((*param_1 & 0x20) != 0));
     if ((*param_1 & 0x100) == 0) {
-      iVar2 = DAT_OPEN__8008fc00 * 0x20 + DAT_8004e5bc * 0x400;
+      iVar2 = OTag_tobeCleared * 0x20 + Cur_GsBuff * 0x400;
       *(short *)(&DAT_OPEN__8008fc80 + iVar2) = (short)param_1[7];
       *(short *)(&DAT_OPEN__8008fc82 + iVar2) = (short)param_1[8];
       (&DAT_OPEN__8008fc84)[iVar2] = (char)*(undefined2 *)(param_1 + 0xb);
-      (&DAT_OPEN__8008fc85)[DAT_OPEN__8008fc00 * 0x20 + DAT_8004e5bc * 0x400] =
+      (&DAT_OPEN__8008fc85)[OTag_tobeCleared * 0x20 + Cur_GsBuff * 0x400] =
            (char)*(undefined2 *)((int)param_1 + 0x2e);
-      iVar2 = DAT_OPEN__8008fc00 * 0x20 + DAT_8004e5bc * 0x400;
+      iVar2 = OTag_tobeCleared * 0x20 + Cur_GsBuff * 0x400;
       *(undefined2 *)(&DAT_OPEN__8008fc88 + iVar2) = *(undefined2 *)(param_1 + 0xc);
       *(undefined2 *)(&DAT_OPEN__8008fc8a + iVar2) = *(undefined2 *)((int)param_1 + 0x32);
     }
     else {
       FUN_OPEN__800698c0((int)param_1[5] / 2,(int)(param_1 + 0xb),&local_30);
-      iVar2 = DAT_OPEN__8008fc00 * 0x20 + DAT_8004e5bc * 0x400;
+      iVar2 = OTag_tobeCleared * 0x20 + Cur_GsBuff * 0x400;
       *(short *)(&DAT_OPEN__8008fc80 + iVar2) = local_30 + (short)param_1[7];
       *(short *)(&DAT_OPEN__8008fc82 + iVar2) = local_2e + (short)param_1[8];
       (&DAT_OPEN__8008fc84)[iVar2] = *(char *)(param_1 + 0xb) + (char)local_30;
-      (&DAT_OPEN__8008fc85)[DAT_OPEN__8008fc00 * 0x20 + DAT_8004e5bc * 0x400] =
+      (&DAT_OPEN__8008fc85)[OTag_tobeCleared * 0x20 + Cur_GsBuff * 0x400] =
            *(char *)((int)param_1 + 0x2e) + (char)local_2e;
-      iVar2 = DAT_OPEN__8008fc00 * 0x20 + DAT_8004e5bc * 0x400;
+      iVar2 = OTag_tobeCleared * 0x20 + Cur_GsBuff * 0x400;
       *(undefined2 *)(&DAT_OPEN__8008fc88 + iVar2) = local_2c;
       *(undefined2 *)(&DAT_OPEN__8008fc8a + iVar2) = local_2a;
       if ((int)param_1[5] / 2 < 4) {
@@ -98251,10 +98875,10 @@ void FUN_OPEN__8006920c(uint *param_1,int param_2)
       }
     }
     AddPrim((void *)(param_2 + param_1[3] * 4),
-            (void *)(DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20 + -0x7ff70388));
+            (void *)(Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20 + -0x7ff70388));
     AddPrim((void *)(param_2 + param_1[3] * 4),
-            (void *)(DAT_8004e5bc * 0x400 + DAT_OPEN__8008fc00 * 0x20 + -0x7ff70394));
-    DAT_OPEN__8008fc00 = DAT_OPEN__8008fc00 + 1;
+            (void *)(Cur_GsBuff * 0x400 + OTag_tobeCleared * 0x20 + -0x7ff70394));
+    OTag_tobeCleared = OTag_tobeCleared + 1;
   }
   return;
 }
@@ -98472,7 +99096,7 @@ void Stream_OpeningMovie(int param_1)
 {
   DAT_OPEN__8008fc04 = 0;
   if (param_1 == 0) {
-    DAT_8004e5bc = 0;
+    Cur_GsBuff = 0;
     Stream_FFTST_STR(0x153d6,0x278a,0x3df,0x2de);
   }
   else {
@@ -98525,7 +99149,7 @@ void FUN_OPEN__8006a174(undefined4 param_1)
   local_38[0].x = 0;
   local_38[0].y = 0;
   local_38[0].h = 0xf0;
-  if (DAT_8004e5bc != 0) {
+  if (Cur_GsBuff != 0) {
     local_38[0].y = 0xf0;
   }
   iVar5 = 0;
@@ -99224,9 +99848,9 @@ void FUN_OPEN__8006f5d4(void)
     }
   }
   uVar1 = (undefined)DAT_OPEN__8008fbd4;
-  (&DAT_OPEN__80085fcc)[DAT_8004e5bc * 0x28] = uVar1;
-  (&DAT_OPEN__80085fcd)[DAT_8004e5bc * 0x28] = uVar1;
-  (&DAT_OPEN__80085fce)[DAT_8004e5bc * 0x28] = uVar1;
+  (&DAT_OPEN__80085fcc)[Cur_GsBuff * 0x28] = uVar1;
+  (&DAT_OPEN__80085fcd)[Cur_GsBuff * 0x28] = uVar1;
+  (&DAT_OPEN__80085fce)[Cur_GsBuff * 0x28] = uVar1;
   return;
 }
 
@@ -99271,7 +99895,7 @@ void Stream_EndGameMovie(void)
 
 {
   DAT_OPEN__8008fc04 = 0;
-  DAT_8004e5bc = 0;
+  Cur_GsBuff = 0;
   Stream_FFTEND_STR(0x21908,0x3858,0x571);
   return;
 }
@@ -99414,7 +100038,7 @@ void FUN_OPEN__8006fd64(int param_1)
 void FUN_OPEN__8006fd9c(int param_1)
 
 {
-  DAT_OPEN__80085cc0 = 2;
+  end_prim = 2;
   FUN_OPEN__80067e68((int)*(short *)(param_1 + 2));
   DAT_OPEN__8008e574 = DAT_OPEN__8008e574 + 4;
   return;
@@ -99425,7 +100049,7 @@ void FUN_OPEN__8006fd9c(int param_1)
 void FUN_OPEN__8006fde0(int param_1)
 
 {
-  DAT_OPEN__80085cc0 = 2;
+  end_prim = 2;
   FUN_OPEN__80067e90((int)*(short *)(param_1 + 2));
   DAT_OPEN__8008e574 = DAT_OPEN__8008e574 + 4;
   return;
@@ -100509,8 +101133,8 @@ undefined WLDCORE_Entrypoint(void)
     while ((DAT_8004d950 & 1) != 0) {
       Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
       FUN_WLDCORE__80090e20();
-      DAT_8004e5bc = GsGetActiveBuff();
-      FUN_WORLD__800e1a88(DAT_8004e5bc * 0xe000 + -0x7ff60ce4);
+      Cur_GsBuff = GsGetActiveBuff();
+      FUN_WORLD__800e1a88(Cur_GsBuff * 0xe000 + -0x7ff60ce4);
       FUN_WLDCORE__800694a8();
       FUN_WLDCORE__8008cf14();
       FUN_WLDCORE__8006c3dc();
@@ -100556,35 +101180,35 @@ void FUN_WLDCORE__800674e0(void)
   DrawSync(0);
   VSync(0);
   FUN_WORLD__800e1710();
-  DAT_8004e5bc = GsGetActiveBuff();
-  FUN_WORLD__800e1a88(DAT_8004e5bc * 0xe000 + -0x7ff60ce4);
-  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__80080758((int)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
+  Cur_GsBuff = GsGetActiveBuff();
+  FUN_WORLD__800e1a88(Cur_GsBuff * 0xe000 + -0x7ff60ce4);
+  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
+  FUN_WLDCORE__80080758((int)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
   FUN_WLDCORE__80092b04(&DAT_1f8003fc);
-  FUN_WLDCORE__8006a9d8((int)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__8008d51c((int)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
+  FUN_WLDCORE__8006a9d8((int)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
+  FUN_WLDCORE__8008d51c((int)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
   FUN_WLDCORE__8008cdf0();
   FUN_WLDCORE__8006ae20
-            ((int)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5),(uint **)&DAT_WLDCORE__8009f1a0,
+            ((int)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5),(uint **)&DAT_WLDCORE__8009f1a0,
              DAT_WLDCORE__8009f1e8);
   FUN_WLDCORE__80092b1c();
-  FUN_WORLD__800e13e8(0,0,0,(int)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
-  GsDrawOt((GsOT *)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
+  FUN_WORLD__800e13e8(0,0,0,(int)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
+  GsDrawOt((GsOT *)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
   DrawSync(0);
-  FUN_WLDCORE__80068d74(DAT_8004e5bc,&RStack_10.x);
+  FUN_WLDCORE__80068d74(Cur_GsBuff,&RStack_10.x);
   StoreImage(&RStack_10,DAT_WLDCORE__800c72f4);
   DrawSync(0);
   DAT_WLDCORE__800bb500 = 0xffffffff;
-  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   FUN_WLDCORE__8008f434();
-  FUN_WLDCORE__8006c248((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__8006b78c((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__8006bf9c((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__8006c108((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  FUN_WLDCORE__8006c248((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
+  FUN_WLDCORE__8006b78c((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
+  FUN_WLDCORE__8006bf9c((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
+  FUN_WLDCORE__8006c108((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   FUN_WLDCORE__8006ae20
-            ((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5),(uint **)&DAT_WLDCORE__8009ef80,
+            ((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5),(uint **)&DAT_WLDCORE__8009ef80,
              DAT_WLDCORE__8009f198);
-  GsDrawOt((GsOT *)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  GsDrawOt((GsOT *)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   DrawSync(0);
   return;
 }
@@ -100594,39 +101218,39 @@ void FUN_WLDCORE__800674e0(void)
 void FUN_WLDCORE__800677a4(void)
 
 {
-  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
-  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__80080758((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
+  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
+  FUN_WLDCORE__80080758((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   FUN_WLDCORE__80092b04(&DAT_1f8003fc);
   FUN_WLDCORE__8006a888();
-  FUN_WLDCORE__8006a9d8((int)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
+  FUN_WLDCORE__8006a9d8((int)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
   FUN_WLDCORE__80092b1c();
   FUN_WLDCORE__8008e540();
   FUN_WLDCORE__80092b04(&DAT_1f8003fc);
-  FUN_WLDCORE__8008d51c((int)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__8008dbfc((int)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
+  FUN_WLDCORE__8008d51c((int)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
+  FUN_WLDCORE__8008dbfc((int)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
   FUN_WLDCORE__8008cdf0();
   FUN_WLDCORE__8008f434();
   FUN_WLDCORE__80092b1c();
-  FUN_WLDCORE__8006c248((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  FUN_WLDCORE__8006c248((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   FUN_WLDCORE__80092b04(&DAT_1f8003fc);
-  FUN_WLDCORE__8006b78c((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__8006bf9c((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__8006c108((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  FUN_WLDCORE__8006b78c((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
+  FUN_WLDCORE__8006bf9c((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
+  FUN_WLDCORE__8006c108((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   FUN_WLDCORE__8006ae20
-            ((int)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5),(uint **)&DAT_WLDCORE__8009f1a0,
+            ((int)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5),(uint **)&DAT_WLDCORE__8009f1a0,
              DAT_WLDCORE__8009f1e8);
   FUN_WLDCORE__8006ae20
-            ((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5),(uint **)&DAT_WLDCORE__8009ef80,
+            ((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5),(uint **)&DAT_WLDCORE__8009ef80,
              DAT_WLDCORE__8009f198);
   FUN_WLDCORE__80092b1c();
   DrawSync(0);
   FUN_WLDCORE__80068da4();
   VSync(0);
   FUN_WORLD__800e1710();
-  FUN_WORLD__800e13e8(0,0,0,(int)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
-  GsDrawOt((GsOT *)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
-  GsDrawOt((GsOT *)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  FUN_WORLD__800e13e8(0,0,0,(int)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
+  GsDrawOt((GsOT *)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
+  GsDrawOt((GsOT *)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   DAT_8004d950 = DAT_8004d950 & 0xfffffffd;
   return;
 }
@@ -100638,16 +101262,16 @@ void FUN_WLDCORE__80067a78(void)
 {
   RECT RStack_10;
   
-  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   DrawSync(0);
-  FUN_WLDCORE__80080758((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__8006c248((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  FUN_WLDCORE__80080758((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
+  FUN_WLDCORE__8006c248((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   FUN_WLDCORE__80092b04(&DAT_1f8003fc);
-  FUN_WLDCORE__8006b78c((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__8006bf9c((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
-  FUN_WLDCORE__8006c108((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  FUN_WLDCORE__8006b78c((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
+  FUN_WLDCORE__8006bf9c((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
+  FUN_WLDCORE__8006c108((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   FUN_WLDCORE__8006ae20
-            ((int)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5),(uint **)&DAT_WLDCORE__8009ef80,
+            ((int)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5),(uint **)&DAT_WLDCORE__8009ef80,
              DAT_WLDCORE__8009f198);
   FUN_WLDCORE__80069810();
   FUN_WLDCORE__80092b1c();
@@ -100656,10 +101280,10 @@ void FUN_WLDCORE__80067a78(void)
   VSync(0);
   FUN_WORLD__800e1710();
   if ((DAT_8004d950 & 0x200) == 0) {
-    FUN_WLDCORE__80068d74((uint)(DAT_8004e5bc == 0),&RStack_10.x);
+    FUN_WLDCORE__80068d74((uint)(Cur_GsBuff == 0),&RStack_10.x);
     LoadImage(&RStack_10,DAT_WLDCORE__800c72f4);
   }
-  GsDrawOt((GsOT *)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  GsDrawOt((GsOT *)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   return;
 }
 
@@ -100770,7 +101394,7 @@ void FUN_WLDCORE__80067e38(void)
   DAT_WLDCORE__8009f19d = 0x80;
   DAT_WLDCORE__8009f19e = 0x80;
   DAT_WLDCORE__8009f1e4 = 0;
-  DAT_8004e5bc = 0;
+  Cur_GsBuff = 0;
   DAT_WLDCORE__800d3c8c = 0;
   DAT_WLDCORE__8009f248 = 0;
   DAT_WLDCORE__800d456c = 0;
@@ -100813,7 +101437,7 @@ void FUN_WLDCORE__80067e38(void)
   DAT_WLDCORE__8009eef4 = 0x80;
   DAT_WLDCORE__800d0bb4 = 0;
   if ((DAT_8004d950 & 0x200000) == 0) {
-    FUN_80043f00();
+    Unload_ScenarioSongs_and_SFX();
   }
   DAT_WLDCORE__800d4640 = 0x7f;
   DAT_WLDCORE__8009f2b0 = 0x30;
@@ -100922,7 +101546,7 @@ void FUN_WLDCORE__800682a0(void)
   SetDispMask(0);
   FUN_WLDCORE__800911cc();
   if ((DAT_8004d950 & 0x200000) == 0) {
-    FUN_80043f00();
+    Unload_ScenarioSongs_and_SFX();
   }
   FUN_WORLD__800ef25c(0x33,DAT_WLDCORE__800bbc6c);
   return;
@@ -100936,13 +101560,13 @@ void FUN_WLDCORE__80068308(void)
   SetDispMask(0);
   DAT_WLDCORE__8009f258 = FUN_WLDCORE__80068a68(DAT_WLDCORE__8009f254);
   FUN_WLDCORE__800686c8();
-  DAT_8004e5bc = GsGetActiveBuff();
-  FUN_WORLD__800e1a88(DAT_8004e5bc * 0xe000 + -0x7ff60ce4);
+  Cur_GsBuff = GsGetActiveBuff();
+  FUN_WORLD__800e1a88(Cur_GsBuff * 0xe000 + -0x7ff60ce4);
   FUN_WLDCORE__800674e0();
   VSync(0);
   ResetGraph(1);
-  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb3c4 + DAT_8004e5bc * 5));
-  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5));
+  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb3c4 + Cur_GsBuff * 5));
+  GsClearOt(0,0,(GsOT *)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5));
   FUN_WLDCORE__8006a018(0);
   FUN_WORLD__800e1710();
   SetDispMask(0);
@@ -101521,7 +102145,7 @@ void FUN_WLDCORE__80069810(void)
     if (((*puVar1 & 9) != 0) &&
        ((((&DAT_WLDCORE__800d0adc)[iVar2] != '\0' || ((&DAT_WLDCORE__800d0add)[iVar2] != '\0')) ||
         ((&DAT_WLDCORE__800d0ade)[iVar2] != '\0')))) {
-      GsSortBoxFill(bp,(GsOT *)(&DAT_WLDCORE__800bb364 + DAT_8004e5bc * 5),*(ushort *)puVar3);
+      GsSortBoxFill(bp,(GsOT *)(&DAT_WLDCORE__800bb364 + Cur_GsBuff * 5),*(ushort *)puVar3);
     }
     puVar3 = puVar3 + 1;
     bp = bp + 1;
@@ -102784,7 +103408,7 @@ void FUN_WLDCORE__8006c248(int param_1)
       DAT_801cd814 = *(int *)(param_1 + 4) + DAT_WLDCORE__800bb3ec * 4;
       FUN_WORLD__800e28ac();
       FUN_WORLD__801128e0(*(int *)(param_1 + 4) + DAT_WLDCORE__800bb3ec * 4 + 8,
-                          DAT_WLDCORE__8009f2e8,(short)DAT_8004e5bc * 0xf0);
+                          DAT_WLDCORE__8009f2e8,(short)Cur_GsBuff * 0xf0);
       if (DAT_80153298 != 0xffffffff) {
         FUN_WLDCORE__80090d30(DAT_80153298);
       }
@@ -105248,7 +105872,7 @@ void FUN_WLDCORE__80090e20(void)
   undefined4 *puVar5;
   undefined4 *puVar6;
   undefined4 *puVar7;
-  uint uVar8;
+  uint slot;
   uint SMDID;
   
 LAB_WLDCORE__80090e34:
@@ -105282,40 +105906,40 @@ LAB_WLDCORE__80090e34:
       goto LAB_WLDCORE__80090e34;
     case 1:
       if (MRTA_fileopenhdr.busy == 0) {
-        uVar8 = (int)(DAT_WLDCORE__800d4628 & 0xf00) >> 8;
-        uVar2 = (&DAT_WLDCORE__800d4630)[uVar8];
+        slot = (int)(DAT_WLDCORE__800d4628 & 0xf00) >> 8;
+        uVar2 = (&DAT_WLDCORE__800d4630)[slot];
         SMDID = DAT_WLDCORE__800d4628 & 0xff;
         if (uVar2 == SMDID) {
           DAT_WLDCORE__800d4624 = 0;
-          DAT_WLDCORE__800d463c = uVar8;
-          FUN_80043a90(uVar8,0,0);
+          DAT_WLDCORE__800d463c = slot;
+          FUN_80043a90(slot,0,0);
         }
         else {
           if (uVar2 != 0) {
-            FUN_800439c0(uVar8);
+            Unload_Scenario_MUS(slot);
           }
-          iVar3 = FUN_800435c4(SMDID,uVar8);
+          iVar3 = OpenAndPlayMusic(SMDID,slot);
           if (iVar3 == 0) {
             DAT_WLDCORE__800d4624 = 0;
           }
           else {
             DAT_WLDCORE__800d4624 = 0x10;
-            DAT_WLDCORE__800d463c = uVar8;
-            (&DAT_WLDCORE__800d4630)[uVar8] = SMDID;
+            DAT_WLDCORE__800d463c = slot;
+            (&DAT_WLDCORE__800d4630)[slot] = SMDID;
           }
         }
       }
       return;
     case 2:
       if ((DAT_WLDCORE__800d4630 & 1) != 0) {
-        FUN_80043be8(0,(short)(DAT_WLDCORE__800d4628 << 2));
+        set_TargetVol_currentSong(0,(short)(DAT_WLDCORE__800d4628 << 2));
         DAT_WLDCORE__800d4624 = 0x11;
         return;
       }
       break;
     case 3:
       FUN_80043a90(DAT_WLDCORE__800d463c,0,0);
-      FUN_80043be8(DAT_WLDCORE__800d4640,(short)(DAT_WLDCORE__800d4628 << 2));
+      set_TargetVol_currentSong(DAT_WLDCORE__800d4640,(short)(DAT_WLDCORE__800d4628 << 2));
       DAT_WLDCORE__800d4624 = 0x12;
       return;
     case 4:
@@ -105323,7 +105947,7 @@ LAB_WLDCORE__80090e34:
       if (DAT_WLDCORE__800d4628 == 0) {
         uVar2 = DAT_WLDCORE__800d463c;
       }
-      FUN_800439c0(uVar2);
+      Unload_Scenario_MUS(uVar2);
       if (uVar2 == DAT_WLDCORE__800d463c) {
         DAT_WLDCORE__800d4630 = DAT_WLDCORE__800d4630 & 0xfffffffe;
       }
@@ -105340,7 +105964,7 @@ LAB_WLDCORE__80090e34:
         return;
       }
       DAT_WLDCORE__800d4630 = DAT_WLDCORE__800d4630 & 0xfffffffe;
-      FUN_80043a38();
+      Set_No_Forced_MUS_Playing();
       break;
     case 0x12:
       goto switchD_WLDCORE__80090e60_caseD_12;
@@ -108325,7 +108949,7 @@ void FUN_WORLD__80106660(void)
   uint uVar1;
   int iVar2;
   
-  FUN_80043f00();
+  Unload_ScenarioSongs_and_SFX();
   ClearImage((RECT *)&DAT_WORLD__80189eac,'\0','\0','\0');
   DrawSync(0);
   VSync(0);
@@ -109544,7 +110168,7 @@ void FUN_WORLD__80113748(uint param_1)
   uVar11 = -(uint)((int)param_1 < 0xb) & param_1;
   FUN_WORLD__8012d964(uVar11,puVar5,uVar6,uVar8);
   if (uVar11 == 0) {
-    iVar2 = FUN_80043660(0x1f);
+    iVar2 = OpenSMDIntoFreeSlot(0x1f);
     DAT_WORLD__801cd548 = (char)iVar2;
     do {
       iVar2 = FUN_80043708();
@@ -109652,7 +110276,7 @@ void FUN_WORLD__80113748(uint param_1)
     FUN_WORLD__801128e0(*DAT_WORLD__801cd528,0,0);
   } while (bVar1);
   if (uVar11 == 0) {
-    FUN_800439c0((int)DAT_WORLD__801cd548);
+    Unload_Scenario_MUS((int)DAT_WORLD__801cd548);
   }
   FUN_WORLD__801212b8();
   FUN_WORLD__801158c4();
@@ -115282,7 +115906,7 @@ undefined FUN_WORLD__8012f0f8(undefined2 param_1)
   FUN_WORLD__8012d7b4(3);
   DAT_WORLD__801cc800 = 0;
   DAT_WORLD__801cc814 = param_1;
-  iVar2 = FUN_80043660(0x29);
+  iVar2 = OpenSMDIntoFreeSlot(0x29);
   do {
     iVar3 = FUN_80043708();
   } while (iVar3 != 0);
@@ -115328,7 +115952,7 @@ undefined FUN_WORLD__8012f0f8(undefined2 param_1)
       FUN_WORLD__8012fb40((int)DAT_WORLD__801cc81c);
     }
     else if (DAT_WORLD__801cc800 == 9) {
-      FUN_80043be8(0,0xf0);
+      set_TargetVol_currentSong(0,0xf0);
       do {
         iVar3 = FUN_WORLD__80132a98();
       } while (iVar3 == -1);
@@ -115353,7 +115977,7 @@ undefined FUN_WORLD__8012f0f8(undefined2 param_1)
   ParseThreadParamWORLD(2,0,0xffffffff,0);
   FUN_WORLD__8013090c();
   FUN_WORLD__801325d4();
-  FUN_800439c0((int)(short)iVar2);
+  Unload_Scenario_MUS((int)(short)iVar2);
   FUN_WORLD__80106998();
   FUN_WORLD__80108920();
   return DAT_WORLD__801cc808;
@@ -117437,14 +118061,14 @@ void FUN_ATTACK__801c33c4(void)
 void FUN_ATTACK__801c340c(int param_1,int param_2)
 
 {
-  FUN_80043f00();
+  Unload_ScenarioSongs_and_SFX();
   if (param_1 != 0) {
-    DAT_80173ca8 = FUN_800435c4;
+    DAT_80173ca8 = OpenAndPlayMusic;
     FUN_BATTLE_BIN__8014ceb4();
     FUN_ATTACK__801c33c4();
   }
   if (param_2 != 0) {
-    DAT_80173ca8 = FUN_800435c4;
+    DAT_80173ca8 = OpenAndPlayMusic;
     FUN_BATTLE_BIN__8014ceb4();
     FUN_ATTACK__801c33c4();
   }
@@ -117478,9 +118102,9 @@ LAB_ATTACK__801c3bf4:
       uVar1 = DAT_80165fd4;
     }
     if ((uVar1 != DAT_801660a4) && (uVar1 != DAT_801660a6)) goto LAB_ATTACK__801c3bf4;
-    DAT_80173ca8 = FUN_800439c0;
+    DAT_80173ca8 = Unload_Scenario_MUS;
     FUN_BATTLE_BIN__8014ceb4();
-    DAT_80173ca8 = FUN_800435c4;
+    DAT_80173ca8 = OpenAndPlayMusic;
     FUN_BATTLE_BIN__8014ceb4();
     FUN_ATTACK__801c33c4();
   }

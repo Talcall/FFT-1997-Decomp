@@ -1053,165 +1053,163 @@ struct MusicChannelInner {
     undefined field37_0x45;
     short field38_0x46;
     undefined field39_0x48;
-    undefined1 current_notepitch; // Created by retype action
+    byte current_notepitch; // Created by retype action
     short octave;
-    undefined1 scaled_pitch; // Created by retype action
+    byte scaled_pitch; // Created by retype action
     undefined field43_0x4d;
     undefined field44_0x4e;
     undefined field45_0x4f;
     short field46_0x50;
-    undefined field47_0x52;
-    undefined field48_0x53;
-    undefined field49_0x54;
-    undefined field50_0x55;
-    undefined field51_0x56;
-    undefined field52_0x57;
-    uint field53_0x58;
-    short field54_0x5c;
+    short field47_0x52;
+    short field48_0x54;
+    short field49_0x56;
+    short field50_0x58;
+    undefined field51_0x5a;
+    undefined field52_0x5b;
+    short field53_0x5c;
     short Vol_Bal; // Created by retype action
-    short field56_0x60;
-    undefined field57_0x62;
-    undefined field58_0x63;
+    short field55_0x60;
+    undefined field56_0x62;
+    undefined field57_0x63;
     short vol_left;
     short vol_right;
-    undefined field61_0x68;
-    undefined field62_0x69;
-    undefined field63_0x6a;
-    undefined field64_0x6b;
+    undefined field60_0x68;
+    undefined field61_0x69;
+    undefined field62_0x6a;
+    undefined field63_0x6b;
     int _vol_delta;
-    undefined field66_0x70;
-    undefined field67_0x71;
+    undefined field65_0x70;
+    undefined field66_0x71;
     short note_length;
     short note_fermata_length;
-    undefined field70_0x76;
-    undefined field71_0x77;
+    undefined field69_0x76;
+    undefined field70_0x77;
     short repeat_count; // Created by retype action
-    undefined field73_0x7a;
+    undefined field72_0x7a;
     byte note_pitch;
     struct MusicChannelRepeat repeatData[2];
-    undefined field76_0x94;
-    undefined field77_0x95;
-    undefined field78_0x96;
-    undefined field79_0x97;
+    undefined field75_0x94;
+    undefined field76_0x95;
+    undefined field77_0x96;
+    undefined field78_0x97;
     uint dynamic;
-    undefined field81_0x9c;
-    undefined field82_0x9d;
-    undefined field83_0x9e;
-    undefined field84_0x9f;
-    undefined field85_0xa0;
-    undefined field86_0xa1;
-    undefined field87_0xa2;
-    undefined field88_0xa3;
-    undefined field89_0xa4;
-    undefined field90_0xa5;
-    undefined field91_0xa6;
-    undefined field92_0xa7;
-    undefined field93_0xa8;
-    undefined field94_0xa9;
-    undefined field95_0xaa;
-    undefined field96_0xab;
-    undefined field97_0xac;
-    undefined field98_0xad;
-    undefined field99_0xae;
-    undefined field100_0xaf;
-    undefined field101_0xb0;
-    undefined field102_0xb1;
-    undefined field103_0xb2;
-    undefined field104_0xb3;
-    undefined field105_0xb4;
-    undefined field106_0xb5;
-    undefined field107_0xb6;
-    undefined field108_0xb7;
+    undefined field80_0x9c;
+    undefined field81_0x9d;
+    undefined field82_0x9e;
+    undefined field83_0x9f;
+    undefined field84_0xa0;
+    undefined field85_0xa1;
+    undefined field86_0xa2;
+    undefined field87_0xa3;
+    undefined field88_0xa4;
+    undefined field89_0xa5;
+    undefined field90_0xa6;
+    undefined field91_0xa7;
+    undefined field92_0xa8;
+    undefined field93_0xa9;
+    undefined field94_0xaa;
+    undefined field95_0xab;
+    undefined field96_0xac;
+    undefined field97_0xad;
+    undefined field98_0xae;
+    undefined field99_0xaf;
+    undefined field100_0xb0;
+    undefined field101_0xb1;
+    undefined field102_0xb2;
+    undefined field103_0xb3;
+    undefined field104_0xb4;
+    undefined field105_0xb5;
+    undefined field106_0xb6;
+    undefined field107_0xb7;
     int Pitchshift_Intensity; // Created by retype action
-    undefined field110_0xbc;
-    undefined field111_0xbd;
+    undefined field109_0xbc;
+    undefined field110_0xbd;
     short Pitchshift_Speed; // Created by retype action
-    undefined field113_0xc0;
-    undefined field114_0xc1;
+    undefined field112_0xc0;
+    undefined field113_0xc1;
     short Pitchshift_Delay; // Created by retype action
-    undefined field116_0xc4;
-    undefined field117_0xc5;
-    short field118_0xc6;
-    undefined field119_0xc8;
-    undefined field120_0xc9;
-    undefined field121_0xca;
-    undefined field122_0xcb;
-    undefined field123_0xcc;
-    undefined field124_0xcd;
-    undefined field125_0xce;
-    undefined field126_0xcf;
-    undefined field127_0xd0;
-    undefined field128_0xd1;
-    undefined field129_0xd2;
-    undefined field130_0xd3;
-    undefined field131_0xd4;
-    undefined field132_0xd5;
-    undefined field133_0xd6;
-    undefined field134_0xd7;
-    int field135_0xd8;
-    undefined field136_0xdc;
-    undefined field137_0xdd;
-    short field138_0xde;
-    undefined field139_0xe0;
-    undefined field140_0xe1;
-    short field141_0xe2;
-    short field142_0xe4;
-    short field143_0xe6;
-    undefined field144_0xe8;
-    undefined field145_0xe9;
-    short field146_0xea;
+    undefined field115_0xc4;
+    undefined field116_0xc5;
+    short field117_0xc6;
+    undefined field118_0xc8;
+    undefined field119_0xc9;
+    short field120_0xca;
+    undefined field121_0xcc;
+    undefined field122_0xcd;
+    undefined field123_0xce;
+    undefined field124_0xcf;
+    undefined field125_0xd0;
+    undefined field126_0xd1;
+    undefined field127_0xd2;
+    undefined field128_0xd3;
+    undefined field129_0xd4;
+    undefined field130_0xd5;
+    undefined field131_0xd6;
+    undefined field132_0xd7;
+    int field133_0xd8;
+    undefined field134_0xdc;
+    undefined field135_0xdd;
+    short field136_0xde;
+    undefined field137_0xe0;
+    undefined field138_0xe1;
+    short field139_0xe2;
+    short field140_0xe4;
+    short field141_0xe6;
+    undefined field142_0xe8;
+    undefined field143_0xe9;
+    short field144_0xea;
     int pitchshift_intensity; // Created by retype action
-    undefined field148_0xf0;
-    undefined field149_0xf1;
+    undefined field146_0xf0;
+    undefined field147_0xf1;
     short pitchshift_speed; // Created by retype action
-    undefined field151_0xf4;
-    undefined field152_0xf5;
+    undefined field149_0xf4;
+    undefined field150_0xf5;
     short pitchshift_delay;
-    short field154_0xf8;
-    short field155_0xfa;
-    undefined field156_0xfc;
-    undefined field157_0xfd;
-    short field158_0xfe;
-    undefined field159_0x100;
-    undefined field160_0x101;
-    short field161_0x102;
-    short field162_0x104;
-    short field163_0x106;
-    undefined field164_0x108;
-    undefined field165_0x109;
-    short field166_0x10a;
-    undefined field167_0x10c;
-    undefined field168_0x10d;
-    undefined field169_0x10e;
-    undefined field170_0x10f;
-    undefined field171_0x110;
-    undefined field172_0x111;
-    undefined field173_0x112;
-    undefined field174_0x113;
-    undefined field175_0x114;
-    undefined field176_0x115;
-    undefined field177_0x116;
-    undefined field178_0x117;
-    undefined field179_0x118;
-    undefined field180_0x119;
-    undefined field181_0x11a;
-    undefined field182_0x11b;
-    undefined field183_0x11c;
-    undefined field184_0x11d;
-    undefined field185_0x11e;
-    undefined field186_0x11f;
-    undefined field187_0x120;
-    undefined field188_0x121;
-    undefined field189_0x122;
-    undefined field190_0x123;
-    undefined field191_0x124;
-    undefined field192_0x125;
-    undefined field193_0x126;
-    undefined field194_0x127;
-    undefined field195_0x128;
-    undefined field196_0x129;
-    undefined field197_0x12a;
-    undefined field198_0x12b;
+    short field152_0xf8;
+    short field153_0xfa;
+    undefined field154_0xfc;
+    undefined field155_0xfd;
+    short field156_0xfe;
+    undefined field157_0x100;
+    undefined field158_0x101;
+    short field159_0x102;
+    short field160_0x104;
+    short field161_0x106;
+    undefined field162_0x108;
+    undefined field163_0x109;
+    short field164_0x10a;
+    undefined field165_0x10c;
+    undefined field166_0x10d;
+    undefined field167_0x10e;
+    undefined field168_0x10f;
+    undefined field169_0x110;
+    undefined field170_0x111;
+    undefined field171_0x112;
+    undefined field172_0x113;
+    undefined field173_0x114;
+    undefined field174_0x115;
+    undefined field175_0x116;
+    undefined field176_0x117;
+    undefined field177_0x118;
+    undefined field178_0x119;
+    undefined field179_0x11a;
+    undefined field180_0x11b;
+    undefined field181_0x11c;
+    undefined field182_0x11d;
+    undefined field183_0x11e;
+    undefined field184_0x11f;
+    undefined field185_0x120;
+    undefined field186_0x121;
+    undefined field187_0x122;
+    undefined field188_0x123;
+    undefined field189_0x124;
+    undefined field190_0x125;
+    undefined field191_0x126;
+    undefined field192_0x127;
+    undefined field193_0x128;
+    undefined field194_0x129;
+    undefined field195_0x12a;
+    undefined field196_0x12b;
 };
 
 typedef struct PrimaryItemData PrimaryItemData, *PPrimaryItemData;
@@ -1239,7 +1237,9 @@ struct PrimaryItemData {
 
 typedef unsigned short    wchar16;
 typedef enum SUZUKIchannel_flags {
+    action1=1,
     action4=4,
+    sfx=8,
     note_active=128,
     hold_note=256,
     action200=512,
@@ -1449,7 +1449,11 @@ typedef enum mus_voiceChannelFunc {
     Adjust_Voice_Decay_Shift=32,
     CalcReverbVoices=64,
     Adjust_Release=128,
-    Adjust_Sustain_Level=256
+    Adjust_Sustain_Level=256,
+    action200=512,
+    action400=1024,
+    action800=2048,
+    All=32767
 } mus_voiceChannelFunc;
 
 typedef enum MusicInstruction {
@@ -1592,25 +1596,19 @@ typedef struct SMDHeaderData SMDHeaderData, *PSMDHeaderData;
 
 struct SMDHeaderData {
     uchar smds[4];
-    undefined field1_0x4;
-    undefined field2_0x5;
-    undefined field3_0x6;
-    undefined field4_0x7;
+    uint clearhere;
     uint filesize;
-    undefined field6_0xc;
-    undefined field7_0xd;
-    undefined field8_0xe;
-    undefined field9_0xf;
-    undefined field10_0x10;
-    undefined field11_0x11;
-    byte NumChannelDedicate;
-    undefined field13_0x13;
+    undefined field3_0xc;
+    undefined field4_0xd;
+    undefined field5_0xe;
+    undefined field6_0xf;
+    short field7_0x10;
+    undefined field8_0x12;
+    undefined1 length_192; // Created by retype action
     byte NumChannels; // Created by retype action
-    undefined field15_0x15;
-    undefined field16_0x16;
-    undefined field17_0x17;
-    undefined field18_0x18;
-    undefined field19_0x19;
+    undefined field11_0x15;
+    short field12_0x16;
+    short field13_0x18;
     char reverbMode_small; // Created by retype action
     byte volumeDepth_small; // Created by retype action
     byte reverbDelay_small; // Created by retype action
@@ -1618,142 +1616,175 @@ struct SMDHeaderData {
     short filename_ptr;
     short data_ptr;
     short channel_ptr;
-    uchar filename;
-    undefined field28_0x25;
-    undefined field29_0x26;
-    undefined field30_0x27;
-    undefined field31_0x28;
-    undefined field32_0x29;
-    undefined field33_0x2a;
-    undefined field34_0x2b;
-    undefined field35_0x2c;
-    undefined field36_0x2d;
-    undefined field37_0x2e;
-    undefined field38_0x2f;
-    undefined field39_0x30;
-    undefined field40_0x31;
-    undefined field41_0x32;
-    undefined field42_0x33;
-    undefined field43_0x34;
-    undefined field44_0x35;
-    undefined field45_0x36;
-    undefined field46_0x37;
-    undefined field47_0x38;
-    undefined field48_0x39;
-    undefined field49_0x3a;
-    undefined field50_0x3b;
-    undefined field51_0x3c;
-    undefined field52_0x3d;
-    undefined field53_0x3e;
-    undefined field54_0x3f;
-    undefined field55_0x40;
-    undefined field56_0x41;
-    undefined field57_0x42;
-    undefined field58_0x43;
-    uint ReverbMode; // Created by retype action
-    short volumeDepth; // Created by retype action
-    undefined field61_0x4a;
-    undefined field62_0x4b;
-    long reverbDelay; // Created by retype action
-    long reverbFeedback; // Created by retype action
-    undefined field65_0x54;
-    undefined field66_0x55;
-    undefined field67_0x56;
-    undefined field68_0x57;
-    undefined4 OwnedChannels;
-    undefined field70_0x5c;
-    undefined field71_0x5d;
-    undefined field72_0x5e;
-    undefined field73_0x5f;
-    uint ModifiedChannels;
-    undefined field75_0x64;
-    undefined field76_0x65;
-    undefined field77_0x66;
-    undefined field78_0x67;
-    uint LFOVoiceBits;
-    uint NoiseVoiceBits;
-    uint ReverbVoiceBits;
-    undefined field82_0x74;
-    undefined field83_0x75;
-    undefined field84_0x76;
-    undefined field85_0x77;
-    undefined field86_0x78;
-    undefined field87_0x79;
-    undefined field88_0x7a;
-    undefined field89_0x7b;
-    undefined field90_0x7c;
-    undefined field91_0x7d;
-    undefined field92_0x7e;
-    undefined field93_0x7f;
-    undefined field94_0x80;
-    undefined field95_0x81;
-    undefined field96_0x82;
-    undefined field97_0x83;
-    undefined field98_0x84;
-    undefined field99_0x85;
-    undefined field100_0x86;
-    undefined field101_0x87;
-    undefined field102_0x88;
-    undefined field103_0x89;
-    undefined field104_0x8a;
-    undefined field105_0x8b;
-    undefined field106_0x8c;
-    undefined field107_0x8d;
-    undefined field108_0x8e;
-    undefined field109_0x8f;
-    undefined field110_0x90;
-    undefined field111_0x91;
-    undefined field112_0x92;
-    undefined field113_0x93;
-    int field114_0x94;
-    int field115_0x98;
-    short field116_0x9c;
-    short field117_0x9e;
-    undefined field118_0xa0;
-    undefined field119_0xa1;
-    undefined field120_0xa2;
-    undefined field121_0xa3;
-    undefined field122_0xa4;
-    undefined field123_0xa5;
-    undefined field124_0xa6;
-    undefined field125_0xa7;
-    undefined field126_0xa8;
-    undefined field127_0xa9;
-    undefined field128_0xaa;
-    undefined field129_0xab;
-    undefined field130_0xac;
-    undefined field131_0xad;
-    undefined field132_0xae;
-    undefined field133_0xaf;
-    undefined field134_0xb0;
-    undefined field135_0xb1;
-    undefined field136_0xb2;
-    undefined field137_0xb3;
-    undefined field138_0xb4;
-    undefined field139_0xb5;
-    undefined field140_0xb6;
-    undefined field141_0xb7;
 };
 
 struct SMDDataAll {
     struct SMDHeaderData HeaderData;
+    undefined field1_0x24;
+    undefined field2_0x25;
+    undefined field3_0x26;
+    undefined field4_0x27;
+    undefined field5_0x28;
+    undefined field6_0x29;
+    undefined field7_0x2a;
+    undefined field8_0x2b;
+    undefined field9_0x2c;
+    undefined field10_0x2d;
+    undefined field11_0x2e;
+    undefined field12_0x2f;
+    undefined field13_0x30;
+    undefined field14_0x31;
+    undefined field15_0x32;
+    undefined field16_0x33;
+    undefined field17_0x34;
+    undefined field18_0x35;
+    undefined field19_0x36;
+    undefined field20_0x37;
+    undefined field21_0x38;
+    undefined field22_0x39;
+    undefined field23_0x3a;
+    undefined field24_0x3b;
+    undefined field25_0x3c;
+    undefined field26_0x3d;
+    undefined field27_0x3e;
+    undefined field28_0x3f;
+    undefined field29_0x40;
+    undefined field30_0x41;
+    undefined field31_0x42;
+    undefined field32_0x43;
+    undefined field33_0x44;
+    undefined field34_0x45;
+    undefined field35_0x46;
+    undefined field36_0x47;
+    undefined field37_0x48;
+    undefined field38_0x49;
+    undefined field39_0x4a;
+    undefined field40_0x4b;
+    undefined field41_0x4c;
+    undefined field42_0x4d;
+    undefined field43_0x4e;
+    undefined field44_0x4f;
+    undefined field45_0x50;
+    undefined field46_0x51;
+    undefined field47_0x52;
+    undefined field48_0x53;
+    undefined field49_0x54;
+    undefined field50_0x55;
+    undefined field51_0x56;
+    undefined field52_0x57;
+    undefined field53_0x58;
+    undefined field54_0x59;
+    undefined field55_0x5a;
+    undefined field56_0x5b;
+    undefined field57_0x5c;
+    undefined field58_0x5d;
+    undefined field59_0x5e;
+    undefined field60_0x5f;
+    undefined field61_0x60;
+    undefined field62_0x61;
+    undefined field63_0x62;
+    undefined field64_0x63;
+    undefined field65_0x64;
+    undefined field66_0x65;
+    undefined field67_0x66;
+    undefined field68_0x67;
+    undefined field69_0x68;
+    undefined field70_0x69;
+    undefined field71_0x6a;
+    undefined field72_0x6b;
+    undefined field73_0x6c;
+    undefined field74_0x6d;
+    undefined field75_0x6e;
+    undefined field76_0x6f;
+    undefined field77_0x70;
+    undefined field78_0x71;
+    undefined field79_0x72;
+    undefined field80_0x73;
+    undefined field81_0x74;
+    undefined field82_0x75;
+    undefined field83_0x76;
+    undefined field84_0x77;
+    undefined field85_0x78;
+    undefined field86_0x79;
+    undefined field87_0x7a;
+    undefined field88_0x7b;
+    undefined field89_0x7c;
+    undefined field90_0x7d;
+    undefined field91_0x7e;
+    undefined field92_0x7f;
+    undefined field93_0x80;
+    undefined field94_0x81;
+    undefined field95_0x82;
+    undefined field96_0x83;
+    undefined field97_0x84;
+    undefined field98_0x85;
+    undefined field99_0x86;
+    undefined field100_0x87;
+    undefined field101_0x88;
+    undefined field102_0x89;
+    undefined field103_0x8a;
+    undefined field104_0x8b;
+    undefined field105_0x8c;
+    undefined field106_0x8d;
+    undefined field107_0x8e;
+    undefined field108_0x8f;
+    undefined field109_0x90;
+    undefined field110_0x91;
+    undefined field111_0x92;
+    undefined field112_0x93;
+    undefined field113_0x94;
+    undefined field114_0x95;
+    undefined field115_0x96;
+    undefined field116_0x97;
+    undefined field117_0x98;
+    undefined field118_0x99;
+    undefined field119_0x9a;
+    undefined field120_0x9b;
+    undefined field121_0x9c;
+    undefined field122_0x9d;
+    undefined field123_0x9e;
+    undefined field124_0x9f;
+    undefined field125_0xa0;
+    undefined field126_0xa1;
+    undefined field127_0xa2;
+    undefined field128_0xa3;
+    undefined field129_0xa4;
+    undefined field130_0xa5;
+    undefined field131_0xa6;
+    undefined field132_0xa7;
+    undefined field133_0xa8;
+    undefined field134_0xa9;
+    undefined field135_0xaa;
+    undefined field136_0xab;
+    undefined field137_0xac;
+    undefined field138_0xad;
+    undefined field139_0xae;
+    undefined field140_0xaf;
+    undefined field141_0xb0;
+    undefined field142_0xb1;
+    undefined field143_0xb2;
+    undefined field144_0xb3;
+    undefined field145_0xb4;
+    undefined field146_0xb5;
+    undefined field147_0xb6;
+    undefined field148_0xb7;
     struct MusicChannelData ChannelData[8];
-    undefined field2_0xbb8;
-    undefined field3_0xbb9;
-    undefined field4_0xbba;
-    undefined field5_0xbbb;
-    undefined field6_0xbbc;
-    undefined field7_0xbbd;
-    undefined field8_0xbbe;
-    undefined field9_0xbbf;
-    undefined field10_0xbc0;
-    undefined field11_0xbc1;
-    undefined field12_0xbc2;
-    undefined field13_0xbc3;
-    undefined field14_0xbc4;
-    undefined field15_0xbc5;
-    undefined field16_0xbc6;
-    undefined field17_0xbc7;
+    undefined field150_0xbb8;
+    undefined field151_0xbb9;
+    undefined field152_0xbba;
+    undefined field153_0xbbb;
+    undefined field154_0xbbc;
+    undefined field155_0xbbd;
+    undefined field156_0xbbe;
+    undefined field157_0xbbf;
+    undefined field158_0xbc0;
+    undefined field159_0xbc1;
+    undefined field160_0xbc2;
+    undefined field161_0xbc3;
+    undefined field162_0xbc4;
+    undefined field163_0xbc5;
+    undefined field164_0xbc6;
+    undefined field165_0xbc7;
 };
 
 typedef struct InflictStatuses InflictStatuses, *PInflictStatuses;
@@ -1794,65 +1825,65 @@ struct MusicDataHeader {
     struct SMDDataAll * TransferAddr;
     int DedicatedSpace;
     enum mus_10 10_cmdfield;
-    undefined field5_0x12;
-    undefined field6_0x13;
+    short field5_0x12;
     byte NumChannelDedicate; // Created by retype action
-    byte field8_0x15;
+    byte length_192;
     byte NumChannels;
-    undefined field10_0x17;
+    undefined field9_0x17;
     short Soundfont_ID;
-    undefined field12_0x1a;
-    undefined field13_0x1b;
-    undefined field14_0x1c;
-    undefined field15_0x1d;
+    short field11_0x1a;
+    undefined field12_0x1c;
+    undefined field13_0x1d;
     ushort noise_clock;
-    uint field17_0x20;
-    uint field18_0x24;
-    uint field19_0x28;
-    undefined field20_0x2c;
-    undefined field21_0x2d;
-    undefined field22_0x2e;
-    undefined field23_0x2f;
-    short field24_0x30;
+    uint field15_0x20;
+    uint field16_0x24;
+    uint field17_0x28;
+    undefined field18_0x2c;
+    undefined field19_0x2d;
+    undefined field20_0x2e;
+    undefined field21_0x2f;
+    short field22_0x30;
     short CurMeasure;
     short CurBeat;
-    short framesUntil_nextBeat;
+    short 192s_Until_nextBeat;
     short timeSignature_top;
-    short framesPer_Beat;
+    short 192s_Per_Beat;
     short timeSignature_bottom;
     short timeSigTop;
-    undefined field32_0x40;
-    undefined field33_0x41;
-    undefined field34_0x42;
-    undefined field35_0x43;
+    undefined field30_0x40;
+    undefined field31_0x41;
+    undefined field32_0x42;
+    undefined field33_0x43;
     uint ReverbMode; // Created by retype action
     short volumeDepth; // Created by retype action
-    undefined field38_0x4a;
-    undefined field39_0x4b;
+    undefined field36_0x4a;
+    undefined field37_0x4b;
     long reverbDelay; // Created by retype action
     long reverbFeedback; // Created by retype action
-    undefined field42_0x54;
-    undefined field43_0x55;
-    undefined field44_0x56;
-    undefined field45_0x57;
+    undefined field40_0x54;
+    undefined field41_0x55;
+    undefined field42_0x56;
+    undefined field43_0x57;
     undefined4 OwnedChannels;
-    undefined field47_0x5c;
-    undefined field48_0x5d;
-    undefined field49_0x5e;
-    undefined field50_0x5f;
+    undefined field45_0x5c;
+    undefined field46_0x5d;
+    undefined field47_0x5e;
+    undefined field48_0x5f;
     uint ModifiedChannels;
-    uint field52_0x64;
+    uint field50_0x64;
     uint LFOVoiceBits;
     uint NoiseVoiceBits;
     uint ReverbVoiceBits;
-    uint field56_0x74;
+    uint microtimer;
     uint modified_tempo;
-    uint raw_tempo;
-    uint field59_0x80;
-    short field60_0x84;
-    undefined field61_0x86;
-    undefined field62_0x87;
-    uint tempo_scalar;
+    short field56_0x7c;
+    short raw_tempo;
+    uint field58_0x80;
+    short field59_0x84;
+    undefined field60_0x86;
+    undefined field61_0x87;
+    short field62_0x88;
+    short tempo_scalar;
     undefined field64_0x8c;
     undefined field65_0x8d;
     undefined field66_0x8e;
@@ -3330,6 +3361,13 @@ struct SecondaryAbilityItem {
     byte UsedItemID;
 };
 
+typedef struct Fileaddress Fileaddress, *PFileaddress;
+
+struct Fileaddress {
+    int LBA;
+    int Filesize;
+};
+
 typedef struct JobData JobData, *PJobData;
 
 struct JobData {
@@ -4298,15 +4336,18 @@ struct ItemSecondary {
 };
 
 typedef enum SUZUKInoteflags12 {
+    action1=1,
     action4=4,
+    New_Name=128,
     hold_note=256,
+    action200=512,
     rest_note=1024,
     action800=2048,
     change_instrument=32768,
     rest_note_2=131072,
-    note_active=8388608,
+    action80=8388608,
     volume_change=16777216,
-    actionflag200_2=33554432
+    playing_note=33554432
 } SUZUKInoteflags12;
 
 typedef struct WeaponSecondary WeaponSecondary, *PWeaponSecondary;
@@ -5820,13 +5861,212 @@ struct BattleUnitData {
     struct CurActionUnitData CurActionUnitData;
 };
 
-typedef enum ENTD_team {
-    player_control=8,
-    random_present=64,
-    always_present=128
-} ENTD_team;
+typedef struct vfx_col_all vfx_col_all, *Pvfx_col_all;
 
-typedef struct CurrentMapTileData CurrentMapTileData, *PCurrentMapTileData;
+struct vfx_col_all {
+    undefined field0_0x0;
+    undefined field1_0x1;
+    undefined field2_0x2;
+    undefined field3_0x3;
+    undefined field4_0x4;
+    undefined field5_0x5;
+    undefined field6_0x6;
+    undefined field7_0x7;
+    undefined field8_0x8;
+    undefined field9_0x9;
+    undefined field10_0xa;
+    undefined field11_0xb;
+    undefined field12_0xc;
+    undefined field13_0xd;
+    undefined field14_0xe;
+    undefined field15_0xf;
+    undefined field16_0x10;
+    undefined field17_0x11;
+    undefined field18_0x12;
+    undefined field19_0x13;
+    undefined field20_0x14;
+    undefined field21_0x15;
+    undefined field22_0x16;
+    undefined field23_0x17;
+    undefined field24_0x18;
+    undefined field25_0x19;
+    undefined field26_0x1a;
+    undefined field27_0x1b;
+    undefined field28_0x1c;
+    undefined field29_0x1d;
+    undefined field30_0x1e;
+    undefined field31_0x1f;
+    undefined field32_0x20;
+    undefined field33_0x21;
+    undefined field34_0x22;
+    undefined field35_0x23;
+    undefined field36_0x24;
+    undefined field37_0x25;
+    undefined field38_0x26;
+    undefined field39_0x27;
+    undefined field40_0x28;
+    undefined field41_0x29;
+    undefined field42_0x2a;
+    undefined field43_0x2b;
+    undefined field44_0x2c;
+    undefined field45_0x2d;
+    undefined field46_0x2e;
+    undefined field47_0x2f;
+    undefined field48_0x30;
+    undefined field49_0x31;
+    undefined field50_0x32;
+    undefined field51_0x33;
+    undefined field52_0x34;
+    undefined field53_0x35;
+    undefined field54_0x36;
+    undefined field55_0x37;
+    undefined field56_0x38;
+    undefined field57_0x39;
+    undefined field58_0x3a;
+    undefined field59_0x3b;
+    undefined field60_0x3c;
+    undefined field61_0x3d;
+    undefined field62_0x3e;
+    undefined field63_0x3f;
+    undefined field64_0x40;
+    undefined field65_0x41;
+    undefined field66_0x42;
+    undefined field67_0x43;
+    undefined field68_0x44;
+    undefined field69_0x45;
+    undefined field70_0x46;
+    undefined field71_0x47;
+    undefined field72_0x48;
+    undefined field73_0x49;
+    undefined field74_0x4a;
+    undefined field75_0x4b;
+    undefined field76_0x4c;
+    undefined field77_0x4d;
+    undefined field78_0x4e;
+    undefined field79_0x4f;
+    undefined field80_0x50;
+    undefined field81_0x51;
+    undefined field82_0x52;
+    undefined field83_0x53;
+    undefined field84_0x54;
+    undefined field85_0x55;
+    undefined field86_0x56;
+    undefined field87_0x57;
+    undefined field88_0x58;
+    undefined field89_0x59;
+    undefined field90_0x5a;
+    undefined field91_0x5b;
+    undefined field92_0x5c;
+    undefined field93_0x5d;
+    undefined field94_0x5e;
+    undefined field95_0x5f;
+    undefined field96_0x60;
+    undefined field97_0x61;
+    undefined field98_0x62;
+    undefined field99_0x63;
+    undefined field100_0x64;
+    undefined field101_0x65;
+    undefined field102_0x66;
+    undefined field103_0x67;
+    undefined field104_0x68;
+    undefined field105_0x69;
+    undefined field106_0x6a;
+    undefined field107_0x6b;
+    undefined field108_0x6c;
+    undefined field109_0x6d;
+    undefined field110_0x6e;
+    undefined field111_0x6f;
+    undefined field112_0x70;
+    undefined field113_0x71;
+    undefined field114_0x72;
+    undefined field115_0x73;
+    undefined field116_0x74;
+    undefined field117_0x75;
+    undefined field118_0x76;
+    undefined field119_0x77;
+    undefined field120_0x78;
+    undefined field121_0x79;
+    undefined field122_0x7a;
+    undefined field123_0x7b;
+    undefined field124_0x7c;
+    undefined field125_0x7d;
+    undefined field126_0x7e;
+    undefined field127_0x7f;
+    undefined field128_0x80;
+    undefined field129_0x81;
+    undefined field130_0x82;
+    undefined field131_0x83;
+    undefined field132_0x84;
+    undefined field133_0x85;
+    undefined field134_0x86;
+    undefined field135_0x87;
+    undefined field136_0x88;
+    undefined field137_0x89;
+    undefined field138_0x8a;
+    undefined field139_0x8b;
+    undefined field140_0x8c;
+    undefined field141_0x8d;
+    undefined field142_0x8e;
+    undefined field143_0x8f;
+    undefined field144_0x90;
+    undefined field145_0x91;
+    undefined field146_0x92;
+    undefined field147_0x93;
+    undefined field148_0x94;
+    undefined field149_0x95;
+    undefined field150_0x96;
+    undefined field151_0x97;
+    undefined field152_0x98;
+    undefined field153_0x99;
+    undefined field154_0x9a;
+    undefined field155_0x9b;
+    undefined field156_0x9c;
+    undefined field157_0x9d;
+    undefined field158_0x9e;
+    undefined field159_0x9f;
+    undefined field160_0xa0;
+    undefined field161_0xa1;
+    undefined field162_0xa2;
+    undefined field163_0xa3;
+    undefined field164_0xa4;
+    undefined field165_0xa5;
+    undefined field166_0xa6;
+    undefined field167_0xa7;
+    undefined field168_0xa8;
+    undefined field169_0xa9;
+    undefined field170_0xaa;
+    undefined field171_0xab;
+    undefined field172_0xac;
+    undefined field173_0xad;
+    undefined field174_0xae;
+    undefined field175_0xaf;
+    undefined field176_0xb0;
+    undefined field177_0xb1;
+    undefined field178_0xb2;
+    undefined field179_0xb3;
+    undefined field180_0xb4;
+    undefined field181_0xb5;
+    undefined field182_0xb6;
+    undefined field183_0xb7;
+    undefined field184_0xb8;
+    undefined field185_0xb9;
+    undefined field186_0xba;
+    undefined field187_0xbb;
+    undefined field188_0xbc;
+    undefined field189_0xbd;
+    undefined field190_0xbe;
+    undefined field191_0xbf;
+    undefined field192_0xc0;
+    undefined field193_0xc1;
+    undefined field194_0xc2;
+    undefined field195_0xc3;
+    undefined field196_0xc4;
+    undefined field197_0xc5;
+    undefined field198_0xc6;
+    undefined field199_0xc7;
+};
+
+typedef struct map_tile_data map_tile_data, *Pmap_tile_data;
 
 typedef enum TileType {
     NaturalSurface=0,
@@ -5878,6 +6118,3591 @@ typedef enum TileType {
     Coffin=46,
     CrossSection=63
 } TileType;
+
+struct map_tile_data {
+    enum TileType TileType;
+    undefined field1_0x1;
+    byte height_whole;
+    byte height_small;
+    byte slope_height;
+    byte tile_overlay;
+    byte tile_interaction;
+    undefined field7_0x7;
+};
+
+typedef struct vfx_hdr vfx_hdr, *Pvfx_hdr;
+
+typedef struct vfx_timers_hdr vfx_timers_hdr, *Pvfx_timers_hdr;
+
+typedef struct vfx_timers vfx_timers, *Pvfx_timers;
+
+typedef struct vfx_SMD_hdr vfx_SMD_hdr, *Pvfx_SMD_hdr;
+
+typedef enum vfx_type {
+    action8=8
+} vfx_type;
+
+typedef struct vfx_init_timers vfx_init_timers, *Pvfx_init_timers;
+
+typedef struct vfx_emitter_timers vfx_emitter_timers, *Pvfx_emitter_timers;
+
+typedef struct vfx_sound_timers vfx_sound_timers, *Pvfx_sound_timers;
+
+typedef struct vfx_col_foreground vfx_col_foreground, *Pvfx_col_foreground;
+
+typedef struct vfx_col_background vfx_col_background, *Pvfx_col_background;
+
+typedef struct vfx_cam_ctrl vfx_cam_ctrl, *Pvfx_cam_ctrl;
+
+typedef struct vfx_sfx_timers vfx_sfx_timers, *Pvfx_sfx_timers;
+
+struct vfx_sfx_timers {
+    undefined field0_0x0;
+    undefined field1_0x1;
+    undefined field2_0x2;
+    undefined field3_0x3;
+    undefined field4_0x4;
+    undefined field5_0x5;
+    undefined field6_0x6;
+    undefined field7_0x7;
+    undefined field8_0x8;
+    undefined field9_0x9;
+    undefined field10_0xa;
+    undefined field11_0xb;
+    undefined field12_0xc;
+    undefined field13_0xd;
+    undefined field14_0xe;
+    undefined field15_0xf;
+    undefined field16_0x10;
+    undefined field17_0x11;
+    undefined field18_0x12;
+    undefined field19_0x13;
+    undefined field20_0x14;
+    undefined field21_0x15;
+    undefined field22_0x16;
+    undefined field23_0x17;
+    undefined field24_0x18;
+    undefined field25_0x19;
+    undefined field26_0x1a;
+    undefined field27_0x1b;
+    undefined field28_0x1c;
+    undefined field29_0x1d;
+};
+
+struct vfx_col_background {
+    undefined field0_0x0;
+    undefined field1_0x1;
+    undefined field2_0x2;
+    undefined field3_0x3;
+    undefined field4_0x4;
+    undefined field5_0x5;
+    undefined field6_0x6;
+    undefined field7_0x7;
+    undefined field8_0x8;
+    undefined field9_0x9;
+    undefined field10_0xa;
+    undefined field11_0xb;
+    undefined field12_0xc;
+    undefined field13_0xd;
+    undefined field14_0xe;
+    undefined field15_0xf;
+    undefined field16_0x10;
+    undefined field17_0x11;
+    undefined field18_0x12;
+    undefined field19_0x13;
+    undefined field20_0x14;
+    undefined field21_0x15;
+    undefined field22_0x16;
+    undefined field23_0x17;
+    undefined field24_0x18;
+    undefined field25_0x19;
+    undefined field26_0x1a;
+    undefined field27_0x1b;
+    undefined field28_0x1c;
+    undefined field29_0x1d;
+    undefined field30_0x1e;
+    undefined field31_0x1f;
+    undefined field32_0x20;
+    undefined field33_0x21;
+    undefined field34_0x22;
+    undefined field35_0x23;
+    undefined field36_0x24;
+    undefined field37_0x25;
+    undefined field38_0x26;
+    undefined field39_0x27;
+    undefined field40_0x28;
+    undefined field41_0x29;
+    undefined field42_0x2a;
+    undefined field43_0x2b;
+    undefined field44_0x2c;
+    undefined field45_0x2d;
+    undefined field46_0x2e;
+    undefined field47_0x2f;
+    undefined field48_0x30;
+    undefined field49_0x31;
+    undefined field50_0x32;
+    undefined field51_0x33;
+    undefined field52_0x34;
+    undefined field53_0x35;
+    undefined field54_0x36;
+    undefined field55_0x37;
+    undefined field56_0x38;
+    undefined field57_0x39;
+    undefined field58_0x3a;
+    undefined field59_0x3b;
+    undefined field60_0x3c;
+    undefined field61_0x3d;
+    undefined field62_0x3e;
+    undefined field63_0x3f;
+    undefined field64_0x40;
+    undefined field65_0x41;
+    undefined field66_0x42;
+    undefined field67_0x43;
+    undefined field68_0x44;
+    undefined field69_0x45;
+    undefined field70_0x46;
+    undefined field71_0x47;
+    undefined field72_0x48;
+    undefined field73_0x49;
+    undefined field74_0x4a;
+    undefined field75_0x4b;
+    undefined field76_0x4c;
+    undefined field77_0x4d;
+    undefined field78_0x4e;
+    undefined field79_0x4f;
+    undefined field80_0x50;
+    undefined field81_0x51;
+    undefined field82_0x52;
+    undefined field83_0x53;
+    undefined field84_0x54;
+    undefined field85_0x55;
+    undefined field86_0x56;
+    undefined field87_0x57;
+    undefined field88_0x58;
+    undefined field89_0x59;
+    undefined field90_0x5a;
+    undefined field91_0x5b;
+    undefined field92_0x5c;
+    undefined field93_0x5d;
+    undefined field94_0x5e;
+    undefined field95_0x5f;
+    undefined field96_0x60;
+    undefined field97_0x61;
+    undefined field98_0x62;
+    undefined field99_0x63;
+    undefined field100_0x64;
+    undefined field101_0x65;
+    undefined field102_0x66;
+    undefined field103_0x67;
+    undefined field104_0x68;
+    undefined field105_0x69;
+    undefined field106_0x6a;
+    undefined field107_0x6b;
+    undefined field108_0x6c;
+    undefined field109_0x6d;
+    undefined field110_0x6e;
+    undefined field111_0x6f;
+    undefined field112_0x70;
+    undefined field113_0x71;
+    undefined field114_0x72;
+    undefined field115_0x73;
+    undefined field116_0x74;
+    undefined field117_0x75;
+    undefined field118_0x76;
+    undefined field119_0x77;
+    undefined field120_0x78;
+    undefined field121_0x79;
+    undefined field122_0x7a;
+    undefined field123_0x7b;
+    undefined field124_0x7c;
+    undefined field125_0x7d;
+    undefined field126_0x7e;
+    undefined field127_0x7f;
+    undefined field128_0x80;
+    undefined field129_0x81;
+    undefined field130_0x82;
+    undefined field131_0x83;
+    undefined field132_0x84;
+    undefined field133_0x85;
+    undefined field134_0x86;
+    undefined field135_0x87;
+    undefined field136_0x88;
+    undefined field137_0x89;
+    undefined field138_0x8a;
+    undefined field139_0x8b;
+    undefined field140_0x8c;
+    undefined field141_0x8d;
+    undefined field142_0x8e;
+    undefined field143_0x8f;
+    undefined field144_0x90;
+    undefined field145_0x91;
+    undefined field146_0x92;
+    undefined field147_0x93;
+    undefined field148_0x94;
+    undefined field149_0x95;
+    undefined field150_0x96;
+    undefined field151_0x97;
+    undefined field152_0x98;
+    undefined field153_0x99;
+    undefined field154_0x9a;
+    undefined field155_0x9b;
+    undefined field156_0x9c;
+    undefined field157_0x9d;
+    undefined field158_0x9e;
+    undefined field159_0x9f;
+    undefined field160_0xa0;
+    undefined field161_0xa1;
+    undefined field162_0xa2;
+    undefined field163_0xa3;
+    undefined field164_0xa4;
+    undefined field165_0xa5;
+    undefined field166_0xa6;
+    undefined field167_0xa7;
+    undefined field168_0xa8;
+    undefined field169_0xa9;
+    undefined field170_0xaa;
+    undefined field171_0xab;
+    undefined field172_0xac;
+    undefined field173_0xad;
+    undefined field174_0xae;
+    undefined field175_0xaf;
+    undefined field176_0xb0;
+    undefined field177_0xb1;
+    undefined field178_0xb2;
+    undefined field179_0xb3;
+    undefined field180_0xb4;
+    undefined field181_0xb5;
+    undefined field182_0xb6;
+    undefined field183_0xb7;
+    undefined field184_0xb8;
+    undefined field185_0xb9;
+    undefined field186_0xba;
+    undefined field187_0xbb;
+    undefined field188_0xbc;
+    undefined field189_0xbd;
+    undefined field190_0xbe;
+    undefined field191_0xbf;
+    undefined field192_0xc0;
+    undefined field193_0xc1;
+    undefined field194_0xc2;
+    undefined field195_0xc3;
+    undefined field196_0xc4;
+    undefined field197_0xc5;
+    undefined field198_0xc6;
+    undefined field199_0xc7;
+    undefined field200_0xc8;
+    undefined field201_0xc9;
+    undefined field202_0xca;
+    undefined field203_0xcb;
+    undefined field204_0xcc;
+    undefined field205_0xcd;
+    undefined field206_0xce;
+    undefined field207_0xcf;
+    undefined field208_0xd0;
+    undefined field209_0xd1;
+    undefined field210_0xd2;
+    undefined field211_0xd3;
+    undefined field212_0xd4;
+    undefined field213_0xd5;
+    undefined field214_0xd6;
+    undefined field215_0xd7;
+    undefined field216_0xd8;
+    undefined field217_0xd9;
+    undefined field218_0xda;
+    undefined field219_0xdb;
+    undefined field220_0xdc;
+    undefined field221_0xdd;
+    undefined field222_0xde;
+    undefined field223_0xdf;
+    undefined field224_0xe0;
+    undefined field225_0xe1;
+    undefined field226_0xe2;
+    undefined field227_0xe3;
+    undefined field228_0xe4;
+    undefined field229_0xe5;
+    undefined field230_0xe6;
+    undefined field231_0xe7;
+    undefined field232_0xe8;
+    undefined field233_0xe9;
+    undefined field234_0xea;
+    undefined field235_0xeb;
+    undefined field236_0xec;
+    undefined field237_0xed;
+    undefined field238_0xee;
+    undefined field239_0xef;
+    undefined field240_0xf0;
+    undefined field241_0xf1;
+    undefined field242_0xf2;
+    undefined field243_0xf3;
+    undefined field244_0xf4;
+    undefined field245_0xf5;
+    undefined field246_0xf6;
+    undefined field247_0xf7;
+    undefined field248_0xf8;
+    undefined field249_0xf9;
+    undefined field250_0xfa;
+    undefined field251_0xfb;
+    undefined field252_0xfc;
+    undefined field253_0xfd;
+    undefined field254_0xfe;
+    undefined field255_0xff;
+    undefined field256_0x100;
+    undefined field257_0x101;
+    undefined field258_0x102;
+    undefined field259_0x103;
+    undefined field260_0x104;
+    undefined field261_0x105;
+    undefined field262_0x106;
+    undefined field263_0x107;
+    undefined field264_0x108;
+    undefined field265_0x109;
+    undefined field266_0x10a;
+    undefined field267_0x10b;
+    undefined field268_0x10c;
+    undefined field269_0x10d;
+    undefined field270_0x10e;
+    undefined field271_0x10f;
+    undefined field272_0x110;
+    undefined field273_0x111;
+    undefined field274_0x112;
+    undefined field275_0x113;
+    undefined field276_0x114;
+    undefined field277_0x115;
+    undefined field278_0x116;
+    undefined field279_0x117;
+    undefined field280_0x118;
+    undefined field281_0x119;
+    undefined field282_0x11a;
+    undefined field283_0x11b;
+    undefined field284_0x11c;
+    undefined field285_0x11d;
+    undefined field286_0x11e;
+    undefined field287_0x11f;
+    undefined field288_0x120;
+    undefined field289_0x121;
+    undefined field290_0x122;
+    undefined field291_0x123;
+    undefined field292_0x124;
+    undefined field293_0x125;
+    undefined field294_0x126;
+    undefined field295_0x127;
+    undefined field296_0x128;
+    undefined field297_0x129;
+    undefined field298_0x12a;
+    undefined field299_0x12b;
+    undefined field300_0x12c;
+    undefined field301_0x12d;
+    undefined field302_0x12e;
+    undefined field303_0x12f;
+};
+
+struct vfx_sound_timers {
+    undefined field0_0x0;
+    undefined field1_0x1;
+    undefined field2_0x2;
+    undefined field3_0x3;
+    undefined field4_0x4;
+    undefined field5_0x5;
+    undefined field6_0x6;
+    undefined field7_0x7;
+    undefined field8_0x8;
+    undefined field9_0x9;
+    undefined field10_0xa;
+    undefined field11_0xb;
+    undefined field12_0xc;
+    undefined field13_0xd;
+    undefined field14_0xe;
+    undefined field15_0xf;
+    undefined field16_0x10;
+    undefined field17_0x11;
+    undefined field18_0x12;
+    undefined field19_0x13;
+    undefined field20_0x14;
+    undefined field21_0x15;
+    undefined field22_0x16;
+    undefined field23_0x17;
+    undefined field24_0x18;
+    undefined field25_0x19;
+    undefined field26_0x1a;
+    undefined field27_0x1b;
+    undefined field28_0x1c;
+    undefined field29_0x1d;
+    undefined field30_0x1e;
+    undefined field31_0x1f;
+    undefined field32_0x20;
+    undefined field33_0x21;
+    undefined field34_0x22;
+    undefined field35_0x23;
+    undefined field36_0x24;
+    undefined field37_0x25;
+    undefined field38_0x26;
+    undefined field39_0x27;
+    undefined field40_0x28;
+    undefined field41_0x29;
+    undefined field42_0x2a;
+    undefined field43_0x2b;
+    undefined field44_0x2c;
+    undefined field45_0x2d;
+    undefined field46_0x2e;
+    undefined field47_0x2f;
+    undefined field48_0x30;
+    undefined field49_0x31;
+    undefined field50_0x32;
+    undefined field51_0x33;
+};
+
+struct vfx_timers_hdr {
+    enum vfx_type vfx_type;
+    int field1_0x4;
+    int field2_0x8;
+    int _200;
+    int _300;
+    int _400;
+};
+
+struct vfx_hdr {
+    pointer vfx_start_data;
+    pointer vfx_SEQ;
+    pointer vfx_Script;
+    pointer vfx_emitter_control;
+    pointer vfx_coordinates;
+    pointer field5_0x14;
+    struct vfx_timers_hdr * vfx_timers_hdr;
+    struct vfx_timers * vfx_timers;
+    struct vfx_SMD_hdr * vfx_SMD;
+    pointer vfx_TIM;
+};
+
+struct vfx_SMD_hdr {
+    char feds[4];
+    int smd_size;
+    short num_channels;
+    short field3_0xa;
+    undefined field4_0xc;
+    undefined field5_0xd;
+    undefined field6_0xe;
+    undefined field7_0xf;
+    struct vfx_SMD_hdr * prev_vfx_SMD;
+    undefined field9_0x14;
+    undefined field10_0x15;
+    undefined field11_0x16;
+    undefined field12_0x17;
+};
+
+struct vfx_cam_ctrl {
+    byte field0_0x0[32];
+    undefined field1_0x20;
+    undefined field2_0x21;
+    undefined field3_0x22;
+    undefined field4_0x23;
+    undefined field5_0x24;
+    undefined field6_0x25;
+    short vertical_tilt;
+    undefined field8_0x28;
+    undefined field9_0x29;
+    short cam_tilt_left;
+    undefined field11_0x2c;
+    undefined field12_0x2d;
+    undefined field13_0x2e;
+    undefined field14_0x2f;
+    undefined field15_0x30;
+    undefined field16_0x31;
+    undefined field17_0x32;
+    undefined field18_0x33;
+    undefined field19_0x34;
+    undefined field20_0x35;
+    undefined field21_0x36;
+    undefined field22_0x37;
+    undefined field23_0x38;
+    undefined field24_0x39;
+    undefined field25_0x3a;
+    undefined field26_0x3b;
+    undefined field27_0x3c;
+    undefined field28_0x3d;
+    undefined field29_0x3e;
+    undefined field30_0x3f;
+    undefined field31_0x40;
+    undefined field32_0x41;
+    undefined field33_0x42;
+    undefined field34_0x43;
+    undefined field35_0x44;
+    undefined field36_0x45;
+    undefined field37_0x46;
+    undefined field38_0x47;
+    int vert_map_rot;
+    int horz_map_rot;
+    undefined field41_0x50;
+    undefined field42_0x51;
+    undefined field43_0x52;
+    undefined field44_0x53;
+    undefined field45_0x54;
+    undefined field46_0x55;
+    undefined field47_0x56;
+    undefined field48_0x57;
+    undefined field49_0x58;
+    undefined field50_0x59;
+    undefined field51_0x5a;
+    undefined field52_0x5b;
+    undefined field53_0x5c;
+    undefined field54_0x5d;
+    undefined field55_0x5e;
+    undefined field56_0x5f;
+    undefined field57_0x60;
+    undefined field58_0x61;
+    undefined field59_0x62;
+    undefined field60_0x63;
+    undefined field61_0x64;
+    undefined field62_0x65;
+    undefined field63_0x66;
+    undefined field64_0x67;
+    undefined field65_0x68;
+    undefined field66_0x69;
+    undefined field67_0x6a;
+    undefined field68_0x6b;
+    undefined field69_0x6c;
+    undefined field70_0x6d;
+    undefined field71_0x6e;
+    undefined field72_0x6f;
+    undefined field73_0x70;
+    undefined field74_0x71;
+    undefined field75_0x72;
+    undefined field76_0x73;
+    undefined field77_0x74;
+    undefined field78_0x75;
+    undefined field79_0x76;
+    undefined field80_0x77;
+    undefined field81_0x78;
+    undefined field82_0x79;
+    undefined field83_0x7a;
+    undefined field84_0x7b;
+    undefined field85_0x7c;
+    undefined field86_0x7d;
+    undefined field87_0x7e;
+    undefined field88_0x7f;
+    undefined field89_0x80;
+    undefined field90_0x81;
+    undefined field91_0x82;
+    undefined field92_0x83;
+    undefined field93_0x84;
+    undefined field94_0x85;
+    undefined field95_0x86;
+    undefined field96_0x87;
+    undefined field97_0x88;
+    undefined field98_0x89;
+    undefined field99_0x8a;
+    undefined field100_0x8b;
+    undefined field101_0x8c;
+    undefined field102_0x8d;
+    undefined field103_0x8e;
+    undefined field104_0x8f;
+    undefined field105_0x90;
+    undefined field106_0x91;
+    undefined field107_0x92;
+    undefined field108_0x93;
+    undefined field109_0x94;
+    undefined field110_0x95;
+    undefined field111_0x96;
+    undefined field112_0x97;
+    undefined field113_0x98;
+    undefined field114_0x99;
+    undefined field115_0x9a;
+    undefined field116_0x9b;
+    undefined field117_0x9c;
+    undefined field118_0x9d;
+    undefined field119_0x9e;
+    undefined field120_0x9f;
+    undefined field121_0xa0;
+    undefined field122_0xa1;
+    undefined field123_0xa2;
+    undefined field124_0xa3;
+    undefined field125_0xa4;
+    undefined field126_0xa5;
+    undefined field127_0xa6;
+    undefined field128_0xa7;
+    undefined field129_0xa8;
+    undefined field130_0xa9;
+    undefined field131_0xaa;
+    undefined field132_0xab;
+    undefined field133_0xac;
+    undefined field134_0xad;
+    undefined field135_0xae;
+    undefined field136_0xaf;
+    undefined field137_0xb0;
+    undefined field138_0xb1;
+    undefined field139_0xb2;
+    undefined field140_0xb3;
+    undefined field141_0xb4;
+    undefined field142_0xb5;
+    undefined field143_0xb6;
+    undefined field144_0xb7;
+    undefined field145_0xb8;
+    undefined field146_0xb9;
+    undefined field147_0xba;
+    undefined field148_0xbb;
+    undefined field149_0xbc;
+    undefined field150_0xbd;
+    undefined field151_0xbe;
+    undefined field152_0xbf;
+    undefined field153_0xc0;
+    undefined field154_0xc1;
+    undefined field155_0xc2;
+    undefined field156_0xc3;
+    undefined field157_0xc4;
+    undefined field158_0xc5;
+    undefined field159_0xc6;
+    undefined field160_0xc7;
+    undefined field161_0xc8;
+    undefined field162_0xc9;
+    undefined field163_0xca;
+    undefined field164_0xcb;
+    undefined field165_0xcc;
+    undefined field166_0xcd;
+    undefined field167_0xce;
+    undefined field168_0xcf;
+    undefined field169_0xd0;
+    undefined field170_0xd1;
+    undefined field171_0xd2;
+    undefined field172_0xd3;
+    undefined field173_0xd4;
+    undefined field174_0xd5;
+    undefined field175_0xd6;
+    undefined field176_0xd7;
+    undefined field177_0xd8;
+    undefined field178_0xd9;
+    undefined field179_0xda;
+    undefined field180_0xdb;
+    undefined field181_0xdc;
+    undefined field182_0xdd;
+    undefined field183_0xde;
+    undefined field184_0xdf;
+    undefined field185_0xe0;
+    undefined field186_0xe1;
+    undefined field187_0xe2;
+    undefined field188_0xe3;
+    undefined field189_0xe4;
+    undefined field190_0xe5;
+    undefined field191_0xe6;
+    undefined field192_0xe7;
+    undefined field193_0xe8;
+    undefined field194_0xe9;
+    undefined field195_0xea;
+    undefined field196_0xeb;
+    undefined field197_0xec;
+    undefined field198_0xed;
+    undefined field199_0xee;
+    undefined field200_0xef;
+    undefined field201_0xf0;
+    undefined field202_0xf1;
+    undefined field203_0xf2;
+    undefined field204_0xf3;
+    undefined field205_0xf4;
+    undefined field206_0xf5;
+    undefined field207_0xf6;
+    undefined field208_0xf7;
+    undefined field209_0xf8;
+    undefined field210_0xf9;
+    undefined field211_0xfa;
+    undefined field212_0xfb;
+    undefined field213_0xfc;
+    undefined field214_0xfd;
+    undefined field215_0xfe;
+    undefined field216_0xff;
+    undefined field217_0x100;
+    undefined field218_0x101;
+    undefined field219_0x102;
+    undefined field220_0x103;
+    undefined field221_0x104;
+    undefined field222_0x105;
+    undefined field223_0x106;
+    undefined field224_0x107;
+    undefined field225_0x108;
+    undefined field226_0x109;
+    undefined field227_0x10a;
+    undefined field228_0x10b;
+    undefined field229_0x10c;
+    undefined field230_0x10d;
+    undefined field231_0x10e;
+    undefined field232_0x10f;
+    undefined field233_0x110;
+    undefined field234_0x111;
+    undefined field235_0x112;
+    undefined field236_0x113;
+    undefined field237_0x114;
+    undefined field238_0x115;
+    undefined field239_0x116;
+    undefined field240_0x117;
+    undefined field241_0x118;
+    undefined field242_0x119;
+    undefined field243_0x11a;
+    undefined field244_0x11b;
+    undefined field245_0x11c;
+    undefined field246_0x11d;
+    undefined field247_0x11e;
+    undefined field248_0x11f;
+    undefined field249_0x120;
+    undefined field250_0x121;
+    undefined field251_0x122;
+    undefined field252_0x123;
+    undefined field253_0x124;
+    undefined field254_0x125;
+    undefined field255_0x126;
+    undefined field256_0x127;
+    undefined field257_0x128;
+    undefined field258_0x129;
+    undefined field259_0x12a;
+    undefined field260_0x12b;
+    undefined field261_0x12c;
+    undefined field262_0x12d;
+    undefined field263_0x12e;
+    undefined field264_0x12f;
+    undefined field265_0x130;
+    undefined field266_0x131;
+    undefined field267_0x132;
+    undefined field268_0x133;
+    undefined field269_0x134;
+    undefined field270_0x135;
+    undefined field271_0x136;
+    undefined field272_0x137;
+    undefined field273_0x138;
+    undefined field274_0x139;
+    undefined field275_0x13a;
+    undefined field276_0x13b;
+    undefined field277_0x13c;
+    undefined field278_0x13d;
+    undefined field279_0x13e;
+    undefined field280_0x13f;
+    undefined field281_0x140;
+    undefined field282_0x141;
+    undefined field283_0x142;
+    undefined field284_0x143;
+    undefined field285_0x144;
+    undefined field286_0x145;
+    undefined field287_0x146;
+    undefined field288_0x147;
+    undefined field289_0x148;
+    undefined field290_0x149;
+    undefined field291_0x14a;
+    undefined field292_0x14b;
+    undefined field293_0x14c;
+    undefined field294_0x14d;
+    undefined field295_0x14e;
+    undefined field296_0x14f;
+    short cam_ctrl_script[20];
+};
+
+struct vfx_col_foreground {
+    undefined field0_0x0;
+    undefined field1_0x1;
+    undefined field2_0x2;
+    undefined field3_0x3;
+    undefined field4_0x4;
+    undefined field5_0x5;
+    undefined field6_0x6;
+    undefined field7_0x7;
+    undefined field8_0x8;
+    undefined field9_0x9;
+    undefined field10_0xa;
+    undefined field11_0xb;
+    undefined field12_0xc;
+    undefined field13_0xd;
+    undefined field14_0xe;
+    undefined field15_0xf;
+    undefined field16_0x10;
+    undefined field17_0x11;
+    undefined field18_0x12;
+    undefined field19_0x13;
+    undefined field20_0x14;
+    undefined field21_0x15;
+    undefined field22_0x16;
+    undefined field23_0x17;
+    undefined field24_0x18;
+    undefined field25_0x19;
+    undefined field26_0x1a;
+    undefined field27_0x1b;
+    undefined field28_0x1c;
+    undefined field29_0x1d;
+    undefined field30_0x1e;
+    undefined field31_0x1f;
+    undefined field32_0x20;
+    undefined field33_0x21;
+    undefined field34_0x22;
+    undefined field35_0x23;
+    undefined field36_0x24;
+    undefined field37_0x25;
+    undefined field38_0x26;
+    undefined field39_0x27;
+    undefined field40_0x28;
+    undefined field41_0x29;
+    undefined field42_0x2a;
+    undefined field43_0x2b;
+    undefined field44_0x2c;
+    undefined field45_0x2d;
+    undefined field46_0x2e;
+    undefined field47_0x2f;
+    undefined field48_0x30;
+    undefined field49_0x31;
+    undefined field50_0x32;
+    undefined field51_0x33;
+    undefined field52_0x34;
+    undefined field53_0x35;
+    undefined field54_0x36;
+    undefined field55_0x37;
+    undefined field56_0x38;
+    undefined field57_0x39;
+    undefined field58_0x3a;
+    undefined field59_0x3b;
+    undefined field60_0x3c;
+    undefined field61_0x3d;
+    undefined field62_0x3e;
+    undefined field63_0x3f;
+    undefined field64_0x40;
+    undefined field65_0x41;
+    undefined field66_0x42;
+    undefined field67_0x43;
+    undefined field68_0x44;
+    undefined field69_0x45;
+    undefined field70_0x46;
+    undefined field71_0x47;
+    undefined field72_0x48;
+    undefined field73_0x49;
+    undefined field74_0x4a;
+    undefined field75_0x4b;
+    undefined field76_0x4c;
+    undefined field77_0x4d;
+    undefined field78_0x4e;
+    undefined field79_0x4f;
+    undefined field80_0x50;
+    undefined field81_0x51;
+    undefined field82_0x52;
+    undefined field83_0x53;
+    undefined field84_0x54;
+    undefined field85_0x55;
+    undefined field86_0x56;
+    undefined field87_0x57;
+    undefined field88_0x58;
+    undefined field89_0x59;
+    undefined field90_0x5a;
+    undefined field91_0x5b;
+    undefined field92_0x5c;
+    undefined field93_0x5d;
+    undefined field94_0x5e;
+    undefined field95_0x5f;
+    undefined field96_0x60;
+    undefined field97_0x61;
+    undefined field98_0x62;
+    undefined field99_0x63;
+    undefined field100_0x64;
+    undefined field101_0x65;
+    undefined field102_0x66;
+    undefined field103_0x67;
+    undefined field104_0x68;
+    undefined field105_0x69;
+    undefined field106_0x6a;
+    undefined field107_0x6b;
+    undefined field108_0x6c;
+    undefined field109_0x6d;
+    undefined field110_0x6e;
+    undefined field111_0x6f;
+    undefined field112_0x70;
+    undefined field113_0x71;
+    undefined field114_0x72;
+    undefined field115_0x73;
+    undefined field116_0x74;
+    undefined field117_0x75;
+    undefined field118_0x76;
+    undefined field119_0x77;
+    undefined field120_0x78;
+    undefined field121_0x79;
+    undefined field122_0x7a;
+    undefined field123_0x7b;
+    undefined field124_0x7c;
+    undefined field125_0x7d;
+    undefined field126_0x7e;
+    undefined field127_0x7f;
+    undefined field128_0x80;
+    undefined field129_0x81;
+    undefined field130_0x82;
+    undefined field131_0x83;
+    undefined field132_0x84;
+    undefined field133_0x85;
+    undefined field134_0x86;
+    undefined field135_0x87;
+    undefined field136_0x88;
+    undefined field137_0x89;
+    undefined field138_0x8a;
+    undefined field139_0x8b;
+    undefined field140_0x8c;
+    undefined field141_0x8d;
+    undefined field142_0x8e;
+    undefined field143_0x8f;
+    undefined field144_0x90;
+    undefined field145_0x91;
+    undefined field146_0x92;
+    undefined field147_0x93;
+    undefined field148_0x94;
+    undefined field149_0x95;
+    undefined field150_0x96;
+    undefined field151_0x97;
+    undefined field152_0x98;
+    undefined field153_0x99;
+    undefined field154_0x9a;
+    undefined field155_0x9b;
+    undefined field156_0x9c;
+    undefined field157_0x9d;
+    undefined field158_0x9e;
+    undefined field159_0x9f;
+    undefined field160_0xa0;
+    undefined field161_0xa1;
+    undefined field162_0xa2;
+    undefined field163_0xa3;
+    undefined field164_0xa4;
+    undefined field165_0xa5;
+    undefined field166_0xa6;
+    undefined field167_0xa7;
+    undefined field168_0xa8;
+    undefined field169_0xa9;
+    undefined field170_0xaa;
+    undefined field171_0xab;
+    undefined field172_0xac;
+    undefined field173_0xad;
+    undefined field174_0xae;
+    undefined field175_0xaf;
+    undefined field176_0xb0;
+    undefined field177_0xb1;
+    undefined field178_0xb2;
+    undefined field179_0xb3;
+    undefined field180_0xb4;
+    undefined field181_0xb5;
+    undefined field182_0xb6;
+    undefined field183_0xb7;
+    undefined field184_0xb8;
+    undefined field185_0xb9;
+    undefined field186_0xba;
+    undefined field187_0xbb;
+    undefined field188_0xbc;
+    undefined field189_0xbd;
+    undefined field190_0xbe;
+    undefined field191_0xbf;
+    undefined field192_0xc0;
+    undefined field193_0xc1;
+    undefined field194_0xc2;
+    undefined field195_0xc3;
+    undefined field196_0xc4;
+    undefined field197_0xc5;
+    undefined field198_0xc6;
+    undefined field199_0xc7;
+};
+
+struct vfx_init_timers {
+    short field0_0x0;
+    short field1_0x2;
+    short start_offset;
+    short targetswap_offset;
+    short field4_0x8;
+    short duration;
+};
+
+struct vfx_emitter_timers {
+    short field0_0x0[16];
+    byte field1_0x20[16];
+    undefined field2_0x30;
+    undefined field3_0x31;
+    byte field4_0x32[16];
+    undefined field5_0x42;
+    undefined field6_0x43;
+    undefined field7_0x44;
+    undefined field8_0x45;
+    undefined field9_0x46;
+    undefined field10_0x47;
+    undefined field11_0x48;
+    undefined field12_0x49;
+    undefined field13_0x4a;
+    undefined field14_0x4b;
+    int tar_anim_offset;
+    undefined field16_0x50;
+    undefined field17_0x51;
+    undefined field18_0x52;
+    undefined field19_0x53;
+    undefined field20_0x54;
+    undefined field21_0x55;
+    undefined field22_0x56;
+    undefined field23_0x57;
+    undefined field24_0x58;
+    undefined field25_0x59;
+    undefined field26_0x5a;
+    undefined field27_0x5b;
+    undefined field28_0x5c;
+    undefined field29_0x5d;
+    undefined field30_0x5e;
+    undefined field31_0x5f;
+    undefined field32_0x60;
+    undefined field33_0x61;
+    undefined field34_0x62;
+    undefined field35_0x63;
+    undefined field36_0x64;
+    undefined field37_0x65;
+    undefined field38_0x66;
+    undefined field39_0x67;
+    undefined field40_0x68;
+    undefined field41_0x69;
+    undefined field42_0x6a;
+    undefined field43_0x6b;
+    undefined field44_0x6c;
+    undefined field45_0x6d;
+    undefined field46_0x6e;
+    undefined field47_0x6f;
+    undefined field48_0x70;
+    undefined field49_0x71;
+    undefined field50_0x72;
+    undefined field51_0x73;
+    undefined field52_0x74;
+    undefined field53_0x75;
+    undefined field54_0x76;
+    undefined field55_0x77;
+    undefined field56_0x78;
+    undefined field57_0x79;
+    undefined field58_0x7a;
+    undefined field59_0x7b;
+    undefined field60_0x7c;
+    undefined field61_0x7d;
+    short field62_0x7e;
+};
+
+struct vfx_timers {
+    struct vfx_init_timers init_timers;
+    struct vfx_emitter_timers emit_timers[5];
+    struct vfx_sound_timers sound_timers;
+    undefined field3_0x2c0;
+    undefined field4_0x2c1;
+    undefined field5_0x2c2;
+    undefined field6_0x2c3;
+    undefined field7_0x2c4;
+    undefined field8_0x2c5;
+    undefined field9_0x2c6;
+    undefined field10_0x2c7;
+    undefined field11_0x2c8;
+    undefined field12_0x2c9;
+    undefined field13_0x2ca;
+    undefined field14_0x2cb;
+    undefined field15_0x2cc;
+    undefined field16_0x2cd;
+    undefined field17_0x2ce;
+    undefined field18_0x2cf;
+    undefined field19_0x2d0;
+    undefined field20_0x2d1;
+    undefined field21_0x2d2;
+    undefined field22_0x2d3;
+    undefined field23_0x2d4;
+    undefined field24_0x2d5;
+    undefined field25_0x2d6;
+    undefined field26_0x2d7;
+    undefined field27_0x2d8;
+    undefined field28_0x2d9;
+    undefined field29_0x2da;
+    undefined field30_0x2db;
+    undefined field31_0x2dc;
+    undefined field32_0x2dd;
+    undefined field33_0x2de;
+    undefined field34_0x2df;
+    undefined field35_0x2e0;
+    undefined field36_0x2e1;
+    undefined field37_0x2e2;
+    undefined field38_0x2e3;
+    undefined field39_0x2e4;
+    undefined field40_0x2e5;
+    undefined field41_0x2e6;
+    undefined field42_0x2e7;
+    undefined field43_0x2e8;
+    undefined field44_0x2e9;
+    undefined field45_0x2ea;
+    undefined field46_0x2eb;
+    undefined field47_0x2ec;
+    undefined field48_0x2ed;
+    undefined field49_0x2ee;
+    undefined field50_0x2ef;
+    undefined field51_0x2f0;
+    undefined field52_0x2f1;
+    undefined field53_0x2f2;
+    undefined field54_0x2f3;
+    undefined field55_0x2f4;
+    undefined field56_0x2f5;
+    undefined field57_0x2f6;
+    undefined field58_0x2f7;
+    undefined field59_0x2f8;
+    undefined field60_0x2f9;
+    undefined field61_0x2fa;
+    undefined field62_0x2fb;
+    undefined field63_0x2fc;
+    undefined field64_0x2fd;
+    undefined field65_0x2fe;
+    undefined field66_0x2ff;
+    undefined field67_0x300;
+    undefined field68_0x301;
+    undefined field69_0x302;
+    undefined field70_0x303;
+    undefined field71_0x304;
+    undefined field72_0x305;
+    undefined field73_0x306;
+    undefined field74_0x307;
+    undefined field75_0x308;
+    undefined field76_0x309;
+    undefined field77_0x30a;
+    undefined field78_0x30b;
+    undefined field79_0x30c;
+    undefined field80_0x30d;
+    undefined field81_0x30e;
+    undefined field82_0x30f;
+    undefined field83_0x310;
+    undefined field84_0x311;
+    undefined field85_0x312;
+    undefined field86_0x313;
+    undefined field87_0x314;
+    undefined field88_0x315;
+    undefined field89_0x316;
+    undefined field90_0x317;
+    undefined field91_0x318;
+    undefined field92_0x319;
+    undefined field93_0x31a;
+    undefined field94_0x31b;
+    undefined field95_0x31c;
+    undefined field96_0x31d;
+    undefined field97_0x31e;
+    undefined field98_0x31f;
+    undefined field99_0x320;
+    undefined field100_0x321;
+    undefined field101_0x322;
+    undefined field102_0x323;
+    undefined field103_0x324;
+    undefined field104_0x325;
+    undefined field105_0x326;
+    undefined field106_0x327;
+    undefined field107_0x328;
+    undefined field108_0x329;
+    undefined field109_0x32a;
+    undefined field110_0x32b;
+    struct vfx_col_foreground col_fg[3];
+    struct vfx_col_background cl_bg;
+    struct vfx_cam_ctrl cam_ctrl;
+    undefined field114_0x82c;
+    undefined field115_0x82d;
+    undefined field116_0x82e;
+    undefined field117_0x82f;
+    undefined field118_0x830;
+    undefined field119_0x831;
+    undefined field120_0x832;
+    undefined field121_0x833;
+    undefined field122_0x834;
+    undefined field123_0x835;
+    undefined field124_0x836;
+    undefined field125_0x837;
+    undefined field126_0x838;
+    undefined field127_0x839;
+    undefined field128_0x83a;
+    undefined field129_0x83b;
+    undefined field130_0x83c;
+    undefined field131_0x83d;
+    undefined field132_0x83e;
+    undefined field133_0x83f;
+    undefined field134_0x840;
+    undefined field135_0x841;
+    undefined field136_0x842;
+    undefined field137_0x843;
+    undefined field138_0x844;
+    undefined field139_0x845;
+    undefined field140_0x846;
+    undefined field141_0x847;
+    undefined field142_0x848;
+    undefined field143_0x849;
+    undefined field144_0x84a;
+    undefined field145_0x84b;
+    undefined field146_0x84c;
+    undefined field147_0x84d;
+    undefined field148_0x84e;
+    undefined field149_0x84f;
+    undefined field150_0x850;
+    undefined field151_0x851;
+    undefined field152_0x852;
+    undefined field153_0x853;
+    undefined field154_0x854;
+    undefined field155_0x855;
+    undefined field156_0x856;
+    undefined field157_0x857;
+    undefined field158_0x858;
+    undefined field159_0x859;
+    undefined field160_0x85a;
+    undefined field161_0x85b;
+    undefined field162_0x85c;
+    undefined field163_0x85d;
+    undefined field164_0x85e;
+    undefined field165_0x85f;
+    undefined field166_0x860;
+    undefined field167_0x861;
+    undefined field168_0x862;
+    undefined field169_0x863;
+    undefined field170_0x864;
+    undefined field171_0x865;
+    undefined field172_0x866;
+    undefined field173_0x867;
+    undefined field174_0x868;
+    undefined field175_0x869;
+    undefined field176_0x86a;
+    undefined field177_0x86b;
+    undefined field178_0x86c;
+    undefined field179_0x86d;
+    undefined field180_0x86e;
+    undefined field181_0x86f;
+    undefined field182_0x870;
+    undefined field183_0x871;
+    undefined field184_0x872;
+    undefined field185_0x873;
+    undefined field186_0x874;
+    undefined field187_0x875;
+    undefined field188_0x876;
+    undefined field189_0x877;
+    undefined field190_0x878;
+    undefined field191_0x879;
+    undefined field192_0x87a;
+    undefined field193_0x87b;
+    undefined field194_0x87c;
+    undefined field195_0x87d;
+    undefined field196_0x87e;
+    undefined field197_0x87f;
+    undefined field198_0x880;
+    undefined field199_0x881;
+    undefined field200_0x882;
+    undefined field201_0x883;
+    undefined field202_0x884;
+    undefined field203_0x885;
+    undefined field204_0x886;
+    undefined field205_0x887;
+    undefined field206_0x888;
+    undefined field207_0x889;
+    undefined field208_0x88a;
+    undefined field209_0x88b;
+    undefined field210_0x88c;
+    undefined field211_0x88d;
+    undefined field212_0x88e;
+    undefined field213_0x88f;
+    undefined field214_0x890;
+    undefined field215_0x891;
+    undefined field216_0x892;
+    undefined field217_0x893;
+    undefined field218_0x894;
+    undefined field219_0x895;
+    undefined field220_0x896;
+    undefined field221_0x897;
+    undefined field222_0x898;
+    undefined field223_0x899;
+    undefined field224_0x89a;
+    undefined field225_0x89b;
+    undefined field226_0x89c;
+    undefined field227_0x89d;
+    undefined field228_0x89e;
+    undefined field229_0x89f;
+    undefined field230_0x8a0;
+    undefined field231_0x8a1;
+    undefined field232_0x8a2;
+    undefined field233_0x8a3;
+    undefined field234_0x8a4;
+    undefined field235_0x8a5;
+    undefined field236_0x8a6;
+    undefined field237_0x8a7;
+    undefined field238_0x8a8;
+    undefined field239_0x8a9;
+    undefined field240_0x8aa;
+    undefined field241_0x8ab;
+    undefined field242_0x8ac;
+    undefined field243_0x8ad;
+    undefined field244_0x8ae;
+    undefined field245_0x8af;
+    undefined field246_0x8b0;
+    undefined field247_0x8b1;
+    undefined field248_0x8b2;
+    undefined field249_0x8b3;
+    undefined field250_0x8b4;
+    undefined field251_0x8b5;
+    undefined field252_0x8b6;
+    undefined field253_0x8b7;
+    undefined field254_0x8b8;
+    undefined field255_0x8b9;
+    undefined field256_0x8ba;
+    undefined field257_0x8bb;
+    undefined field258_0x8bc;
+    undefined field259_0x8bd;
+    undefined field260_0x8be;
+    undefined field261_0x8bf;
+    undefined field262_0x8c0;
+    undefined field263_0x8c1;
+    undefined field264_0x8c2;
+    undefined field265_0x8c3;
+    undefined field266_0x8c4;
+    undefined field267_0x8c5;
+    undefined field268_0x8c6;
+    undefined field269_0x8c7;
+    undefined field270_0x8c8;
+    undefined field271_0x8c9;
+    undefined field272_0x8ca;
+    undefined field273_0x8cb;
+    undefined field274_0x8cc;
+    undefined field275_0x8cd;
+    undefined field276_0x8ce;
+    undefined field277_0x8cf;
+    undefined field278_0x8d0;
+    undefined field279_0x8d1;
+    undefined field280_0x8d2;
+    undefined field281_0x8d3;
+    undefined field282_0x8d4;
+    undefined field283_0x8d5;
+    undefined field284_0x8d6;
+    undefined field285_0x8d7;
+    undefined field286_0x8d8;
+    undefined field287_0x8d9;
+    undefined field288_0x8da;
+    undefined field289_0x8db;
+    undefined field290_0x8dc;
+    undefined field291_0x8dd;
+    undefined field292_0x8de;
+    undefined field293_0x8df;
+    undefined field294_0x8e0;
+    undefined field295_0x8e1;
+    undefined field296_0x8e2;
+    undefined field297_0x8e3;
+    undefined field298_0x8e4;
+    undefined field299_0x8e5;
+    undefined field300_0x8e6;
+    undefined field301_0x8e7;
+    undefined field302_0x8e8;
+    undefined field303_0x8e9;
+    undefined field304_0x8ea;
+    undefined field305_0x8eb;
+    undefined field306_0x8ec;
+    undefined field307_0x8ed;
+    undefined field308_0x8ee;
+    undefined field309_0x8ef;
+    undefined field310_0x8f0;
+    undefined field311_0x8f1;
+    undefined field312_0x8f2;
+    undefined field313_0x8f3;
+    undefined field314_0x8f4;
+    undefined field315_0x8f5;
+    undefined field316_0x8f6;
+    undefined field317_0x8f7;
+    undefined field318_0x8f8;
+    undefined field319_0x8f9;
+    undefined field320_0x8fa;
+    undefined field321_0x8fb;
+    undefined field322_0x8fc;
+    undefined field323_0x8fd;
+    undefined field324_0x8fe;
+    undefined field325_0x8ff;
+    undefined field326_0x900;
+    undefined field327_0x901;
+    undefined field328_0x902;
+    undefined field329_0x903;
+    undefined field330_0x904;
+    undefined field331_0x905;
+    undefined field332_0x906;
+    undefined field333_0x907;
+    undefined field334_0x908;
+    undefined field335_0x909;
+    undefined field336_0x90a;
+    undefined field337_0x90b;
+    undefined field338_0x90c;
+    undefined field339_0x90d;
+    undefined field340_0x90e;
+    undefined field341_0x90f;
+    undefined field342_0x910;
+    undefined field343_0x911;
+    undefined field344_0x912;
+    undefined field345_0x913;
+    undefined field346_0x914;
+    undefined field347_0x915;
+    undefined field348_0x916;
+    undefined field349_0x917;
+    undefined field350_0x918;
+    undefined field351_0x919;
+    undefined field352_0x91a;
+    undefined field353_0x91b;
+    undefined field354_0x91c;
+    undefined field355_0x91d;
+    undefined field356_0x91e;
+    undefined field357_0x91f;
+    undefined field358_0x920;
+    undefined field359_0x921;
+    undefined field360_0x922;
+    undefined field361_0x923;
+    undefined field362_0x924;
+    undefined field363_0x925;
+    undefined field364_0x926;
+    undefined field365_0x927;
+    undefined field366_0x928;
+    undefined field367_0x929;
+    undefined field368_0x92a;
+    undefined field369_0x92b;
+    undefined field370_0x92c;
+    undefined field371_0x92d;
+    undefined field372_0x92e;
+    undefined field373_0x92f;
+    undefined field374_0x930;
+    undefined field375_0x931;
+    undefined field376_0x932;
+    undefined field377_0x933;
+    undefined field378_0x934;
+    undefined field379_0x935;
+    undefined field380_0x936;
+    undefined field381_0x937;
+    undefined field382_0x938;
+    undefined field383_0x939;
+    undefined field384_0x93a;
+    undefined field385_0x93b;
+    undefined field386_0x93c;
+    undefined field387_0x93d;
+    undefined field388_0x93e;
+    undefined field389_0x93f;
+    undefined field390_0x940;
+    undefined field391_0x941;
+    undefined field392_0x942;
+    undefined field393_0x943;
+    undefined field394_0x944;
+    undefined field395_0x945;
+    undefined field396_0x946;
+    undefined field397_0x947;
+    undefined field398_0x948;
+    undefined field399_0x949;
+    undefined field400_0x94a;
+    undefined field401_0x94b;
+    undefined field402_0x94c;
+    undefined field403_0x94d;
+    undefined field404_0x94e;
+    undefined field405_0x94f;
+    undefined field406_0x950;
+    undefined field407_0x951;
+    undefined field408_0x952;
+    undefined field409_0x953;
+    undefined field410_0x954;
+    undefined field411_0x955;
+    undefined field412_0x956;
+    undefined field413_0x957;
+    undefined field414_0x958;
+    undefined field415_0x959;
+    undefined field416_0x95a;
+    undefined field417_0x95b;
+    undefined field418_0x95c;
+    undefined field419_0x95d;
+    undefined field420_0x95e;
+    undefined field421_0x95f;
+    undefined field422_0x960;
+    undefined field423_0x961;
+    undefined field424_0x962;
+    undefined field425_0x963;
+    undefined field426_0x964;
+    undefined field427_0x965;
+    undefined field428_0x966;
+    undefined field429_0x967;
+    undefined field430_0x968;
+    undefined field431_0x969;
+    undefined field432_0x96a;
+    undefined field433_0x96b;
+    undefined field434_0x96c;
+    undefined field435_0x96d;
+    undefined field436_0x96e;
+    undefined field437_0x96f;
+    undefined field438_0x970;
+    undefined field439_0x971;
+    undefined field440_0x972;
+    undefined field441_0x973;
+    undefined field442_0x974;
+    undefined field443_0x975;
+    undefined field444_0x976;
+    undefined field445_0x977;
+    undefined field446_0x978;
+    undefined field447_0x979;
+    undefined field448_0x97a;
+    undefined field449_0x97b;
+    undefined field450_0x97c;
+    undefined field451_0x97d;
+    undefined field452_0x97e;
+    undefined field453_0x97f;
+    undefined field454_0x980;
+    undefined field455_0x981;
+    undefined field456_0x982;
+    undefined field457_0x983;
+    undefined field458_0x984;
+    undefined field459_0x985;
+    undefined field460_0x986;
+    undefined field461_0x987;
+    undefined field462_0x988;
+    undefined field463_0x989;
+    undefined field464_0x98a;
+    undefined field465_0x98b;
+    undefined field466_0x98c;
+    undefined field467_0x98d;
+    undefined field468_0x98e;
+    undefined field469_0x98f;
+    undefined field470_0x990;
+    undefined field471_0x991;
+    undefined field472_0x992;
+    undefined field473_0x993;
+    undefined field474_0x994;
+    undefined field475_0x995;
+    undefined field476_0x996;
+    undefined field477_0x997;
+    undefined field478_0x998;
+    undefined field479_0x999;
+    undefined field480_0x99a;
+    undefined field481_0x99b;
+    undefined field482_0x99c;
+    undefined field483_0x99d;
+    undefined field484_0x99e;
+    undefined field485_0x99f;
+    undefined field486_0x9a0;
+    undefined field487_0x9a1;
+    undefined field488_0x9a2;
+    undefined field489_0x9a3;
+    undefined field490_0x9a4;
+    undefined field491_0x9a5;
+    undefined field492_0x9a6;
+    undefined field493_0x9a7;
+    undefined field494_0x9a8;
+    undefined field495_0x9a9;
+    undefined field496_0x9aa;
+    undefined field497_0x9ab;
+    undefined field498_0x9ac;
+    undefined field499_0x9ad;
+    undefined field500_0x9ae;
+    undefined field501_0x9af;
+    undefined field502_0x9b0;
+    undefined field503_0x9b1;
+    undefined field504_0x9b2;
+    undefined field505_0x9b3;
+    undefined field506_0x9b4;
+    undefined field507_0x9b5;
+    undefined field508_0x9b6;
+    undefined field509_0x9b7;
+    undefined field510_0x9b8;
+    undefined field511_0x9b9;
+    undefined field512_0x9ba;
+    undefined field513_0x9bb;
+    undefined field514_0x9bc;
+    undefined field515_0x9bd;
+    undefined field516_0x9be;
+    undefined field517_0x9bf;
+    undefined field518_0x9c0;
+    undefined field519_0x9c1;
+    undefined field520_0x9c2;
+    undefined field521_0x9c3;
+    undefined field522_0x9c4;
+    undefined field523_0x9c5;
+    undefined field524_0x9c6;
+    undefined field525_0x9c7;
+    undefined field526_0x9c8;
+    undefined field527_0x9c9;
+    undefined field528_0x9ca;
+    undefined field529_0x9cb;
+    undefined field530_0x9cc;
+    undefined field531_0x9cd;
+    undefined field532_0x9ce;
+    undefined field533_0x9cf;
+    undefined field534_0x9d0;
+    undefined field535_0x9d1;
+    undefined field536_0x9d2;
+    undefined field537_0x9d3;
+    undefined field538_0x9d4;
+    undefined field539_0x9d5;
+    undefined field540_0x9d6;
+    undefined field541_0x9d7;
+    undefined field542_0x9d8;
+    undefined field543_0x9d9;
+    undefined field544_0x9da;
+    undefined field545_0x9db;
+    undefined field546_0x9dc;
+    undefined field547_0x9dd;
+    undefined field548_0x9de;
+    undefined field549_0x9df;
+    undefined field550_0x9e0;
+    undefined field551_0x9e1;
+    undefined field552_0x9e2;
+    undefined field553_0x9e3;
+    undefined field554_0x9e4;
+    undefined field555_0x9e5;
+    undefined field556_0x9e6;
+    undefined field557_0x9e7;
+    undefined field558_0x9e8;
+    undefined field559_0x9e9;
+    undefined field560_0x9ea;
+    undefined field561_0x9eb;
+    undefined field562_0x9ec;
+    undefined field563_0x9ed;
+    undefined field564_0x9ee;
+    undefined field565_0x9ef;
+    undefined field566_0x9f0;
+    undefined field567_0x9f1;
+    undefined field568_0x9f2;
+    undefined field569_0x9f3;
+    undefined field570_0x9f4;
+    undefined field571_0x9f5;
+    undefined field572_0x9f6;
+    undefined field573_0x9f7;
+    undefined field574_0x9f8;
+    undefined field575_0x9f9;
+    undefined field576_0x9fa;
+    undefined field577_0x9fb;
+    undefined field578_0x9fc;
+    undefined field579_0x9fd;
+    undefined field580_0x9fe;
+    undefined field581_0x9ff;
+    undefined field582_0xa00;
+    undefined field583_0xa01;
+    undefined field584_0xa02;
+    undefined field585_0xa03;
+    undefined field586_0xa04;
+    undefined field587_0xa05;
+    undefined field588_0xa06;
+    undefined field589_0xa07;
+    undefined field590_0xa08;
+    undefined field591_0xa09;
+    undefined field592_0xa0a;
+    undefined field593_0xa0b;
+    undefined field594_0xa0c;
+    undefined field595_0xa0d;
+    undefined field596_0xa0e;
+    undefined field597_0xa0f;
+    undefined field598_0xa10;
+    undefined field599_0xa11;
+    undefined field600_0xa12;
+    undefined field601_0xa13;
+    undefined field602_0xa14;
+    undefined field603_0xa15;
+    undefined field604_0xa16;
+    undefined field605_0xa17;
+    undefined field606_0xa18;
+    undefined field607_0xa19;
+    undefined field608_0xa1a;
+    undefined field609_0xa1b;
+    undefined field610_0xa1c;
+    undefined field611_0xa1d;
+    undefined field612_0xa1e;
+    undefined field613_0xa1f;
+    undefined field614_0xa20;
+    undefined field615_0xa21;
+    undefined field616_0xa22;
+    undefined field617_0xa23;
+    undefined field618_0xa24;
+    undefined field619_0xa25;
+    undefined field620_0xa26;
+    undefined field621_0xa27;
+    undefined field622_0xa28;
+    undefined field623_0xa29;
+    undefined field624_0xa2a;
+    undefined field625_0xa2b;
+    undefined field626_0xa2c;
+    undefined field627_0xa2d;
+    undefined field628_0xa2e;
+    undefined field629_0xa2f;
+    undefined field630_0xa30;
+    undefined field631_0xa31;
+    undefined field632_0xa32;
+    undefined field633_0xa33;
+    undefined field634_0xa34;
+    undefined field635_0xa35;
+    undefined field636_0xa36;
+    undefined field637_0xa37;
+    undefined field638_0xa38;
+    undefined field639_0xa39;
+    undefined field640_0xa3a;
+    undefined field641_0xa3b;
+    undefined field642_0xa3c;
+    undefined field643_0xa3d;
+    undefined field644_0xa3e;
+    undefined field645_0xa3f;
+    undefined field646_0xa40;
+    undefined field647_0xa41;
+    undefined field648_0xa42;
+    undefined field649_0xa43;
+    undefined field650_0xa44;
+    undefined field651_0xa45;
+    undefined field652_0xa46;
+    undefined field653_0xa47;
+    undefined field654_0xa48;
+    undefined field655_0xa49;
+    undefined field656_0xa4a;
+    undefined field657_0xa4b;
+    undefined field658_0xa4c;
+    undefined field659_0xa4d;
+    undefined field660_0xa4e;
+    undefined field661_0xa4f;
+    undefined field662_0xa50;
+    undefined field663_0xa51;
+    undefined field664_0xa52;
+    undefined field665_0xa53;
+    undefined field666_0xa54;
+    undefined field667_0xa55;
+    undefined field668_0xa56;
+    undefined field669_0xa57;
+    undefined field670_0xa58;
+    undefined field671_0xa59;
+    undefined field672_0xa5a;
+    undefined field673_0xa5b;
+    undefined field674_0xa5c;
+    undefined field675_0xa5d;
+    undefined field676_0xa5e;
+    undefined field677_0xa5f;
+    undefined field678_0xa60;
+    undefined field679_0xa61;
+    undefined field680_0xa62;
+    undefined field681_0xa63;
+    undefined field682_0xa64;
+    undefined field683_0xa65;
+    undefined field684_0xa66;
+    undefined field685_0xa67;
+    undefined field686_0xa68;
+    undefined field687_0xa69;
+    undefined field688_0xa6a;
+    undefined field689_0xa6b;
+    undefined field690_0xa6c;
+    undefined field691_0xa6d;
+    undefined field692_0xa6e;
+    undefined field693_0xa6f;
+    undefined field694_0xa70;
+    undefined field695_0xa71;
+    undefined field696_0xa72;
+    undefined field697_0xa73;
+    undefined field698_0xa74;
+    undefined field699_0xa75;
+    undefined field700_0xa76;
+    undefined field701_0xa77;
+    undefined field702_0xa78;
+    undefined field703_0xa79;
+    undefined field704_0xa7a;
+    undefined field705_0xa7b;
+    undefined field706_0xa7c;
+    undefined field707_0xa7d;
+    undefined field708_0xa7e;
+    undefined field709_0xa7f;
+    undefined field710_0xa80;
+    undefined field711_0xa81;
+    undefined field712_0xa82;
+    undefined field713_0xa83;
+    undefined field714_0xa84;
+    undefined field715_0xa85;
+    undefined field716_0xa86;
+    undefined field717_0xa87;
+    undefined field718_0xa88;
+    undefined field719_0xa89;
+    undefined field720_0xa8a;
+    undefined field721_0xa8b;
+    undefined field722_0xa8c;
+    undefined field723_0xa8d;
+    undefined field724_0xa8e;
+    undefined field725_0xa8f;
+    undefined field726_0xa90;
+    undefined field727_0xa91;
+    undefined field728_0xa92;
+    undefined field729_0xa93;
+    undefined field730_0xa94;
+    undefined field731_0xa95;
+    undefined field732_0xa96;
+    undefined field733_0xa97;
+    undefined field734_0xa98;
+    undefined field735_0xa99;
+    undefined field736_0xa9a;
+    undefined field737_0xa9b;
+    undefined field738_0xa9c;
+    undefined field739_0xa9d;
+    undefined field740_0xa9e;
+    undefined field741_0xa9f;
+    undefined field742_0xaa0;
+    undefined field743_0xaa1;
+    undefined field744_0xaa2;
+    undefined field745_0xaa3;
+    undefined field746_0xaa4;
+    undefined field747_0xaa5;
+    undefined field748_0xaa6;
+    undefined field749_0xaa7;
+    undefined field750_0xaa8;
+    undefined field751_0xaa9;
+    undefined field752_0xaaa;
+    undefined field753_0xaab;
+    undefined field754_0xaac;
+    undefined field755_0xaad;
+    undefined field756_0xaae;
+    undefined field757_0xaaf;
+    undefined field758_0xab0;
+    undefined field759_0xab1;
+    undefined field760_0xab2;
+    undefined field761_0xab3;
+    undefined field762_0xab4;
+    undefined field763_0xab5;
+    undefined field764_0xab6;
+    undefined field765_0xab7;
+    undefined field766_0xab8;
+    undefined field767_0xab9;
+    undefined field768_0xaba;
+    undefined field769_0xabb;
+    undefined field770_0xabc;
+    undefined field771_0xabd;
+    undefined field772_0xabe;
+    undefined field773_0xabf;
+    undefined field774_0xac0;
+    undefined field775_0xac1;
+    undefined field776_0xac2;
+    undefined field777_0xac3;
+    undefined field778_0xac4;
+    undefined field779_0xac5;
+    undefined field780_0xac6;
+    undefined field781_0xac7;
+    undefined field782_0xac8;
+    undefined field783_0xac9;
+    undefined field784_0xaca;
+    undefined field785_0xacb;
+    undefined field786_0xacc;
+    undefined field787_0xacd;
+    undefined field788_0xace;
+    undefined field789_0xacf;
+    undefined field790_0xad0;
+    undefined field791_0xad1;
+    undefined field792_0xad2;
+    undefined field793_0xad3;
+    undefined field794_0xad4;
+    undefined field795_0xad5;
+    undefined field796_0xad6;
+    undefined field797_0xad7;
+    undefined field798_0xad8;
+    undefined field799_0xad9;
+    undefined field800_0xada;
+    undefined field801_0xadb;
+    undefined field802_0xadc;
+    undefined field803_0xadd;
+    undefined field804_0xade;
+    undefined field805_0xadf;
+    undefined field806_0xae0;
+    undefined field807_0xae1;
+    undefined field808_0xae2;
+    undefined field809_0xae3;
+    undefined field810_0xae4;
+    undefined field811_0xae5;
+    undefined field812_0xae6;
+    undefined field813_0xae7;
+    undefined field814_0xae8;
+    undefined field815_0xae9;
+    undefined field816_0xaea;
+    undefined field817_0xaeb;
+    undefined field818_0xaec;
+    undefined field819_0xaed;
+    undefined field820_0xaee;
+    undefined field821_0xaef;
+    undefined field822_0xaf0;
+    undefined field823_0xaf1;
+    undefined field824_0xaf2;
+    undefined field825_0xaf3;
+    undefined field826_0xaf4;
+    undefined field827_0xaf5;
+    undefined field828_0xaf6;
+    undefined field829_0xaf7;
+    undefined field830_0xaf8;
+    undefined field831_0xaf9;
+    undefined field832_0xafa;
+    undefined field833_0xafb;
+    undefined field834_0xafc;
+    undefined field835_0xafd;
+    undefined field836_0xafe;
+    undefined field837_0xaff;
+    undefined field838_0xb00;
+    undefined field839_0xb01;
+    undefined field840_0xb02;
+    undefined field841_0xb03;
+    undefined field842_0xb04;
+    undefined field843_0xb05;
+    undefined field844_0xb06;
+    undefined field845_0xb07;
+    undefined field846_0xb08;
+    undefined field847_0xb09;
+    undefined field848_0xb0a;
+    undefined field849_0xb0b;
+    undefined field850_0xb0c;
+    undefined field851_0xb0d;
+    undefined field852_0xb0e;
+    undefined field853_0xb0f;
+    undefined field854_0xb10;
+    undefined field855_0xb11;
+    undefined field856_0xb12;
+    undefined field857_0xb13;
+    undefined field858_0xb14;
+    undefined field859_0xb15;
+    undefined field860_0xb16;
+    undefined field861_0xb17;
+    undefined field862_0xb18;
+    undefined field863_0xb19;
+    undefined field864_0xb1a;
+    undefined field865_0xb1b;
+    undefined field866_0xb1c;
+    undefined field867_0xb1d;
+    undefined field868_0xb1e;
+    undefined field869_0xb1f;
+    undefined field870_0xb20;
+    undefined field871_0xb21;
+    undefined field872_0xb22;
+    undefined field873_0xb23;
+    undefined field874_0xb24;
+    undefined field875_0xb25;
+    undefined field876_0xb26;
+    undefined field877_0xb27;
+    undefined field878_0xb28;
+    undefined field879_0xb29;
+    undefined field880_0xb2a;
+    undefined field881_0xb2b;
+    undefined field882_0xb2c;
+    undefined field883_0xb2d;
+    undefined field884_0xb2e;
+    undefined field885_0xb2f;
+    undefined field886_0xb30;
+    undefined field887_0xb31;
+    undefined field888_0xb32;
+    undefined field889_0xb33;
+    undefined field890_0xb34;
+    undefined field891_0xb35;
+    undefined field892_0xb36;
+    undefined field893_0xb37;
+    undefined field894_0xb38;
+    undefined field895_0xb39;
+    undefined field896_0xb3a;
+    undefined field897_0xb3b;
+    undefined field898_0xb3c;
+    undefined field899_0xb3d;
+    undefined field900_0xb3e;
+    undefined field901_0xb3f;
+    undefined field902_0xb40;
+    undefined field903_0xb41;
+    undefined field904_0xb42;
+    undefined field905_0xb43;
+    undefined field906_0xb44;
+    undefined field907_0xb45;
+    undefined field908_0xb46;
+    undefined field909_0xb47;
+    undefined field910_0xb48;
+    undefined field911_0xb49;
+    undefined field912_0xb4a;
+    undefined field913_0xb4b;
+    undefined field914_0xb4c;
+    undefined field915_0xb4d;
+    undefined field916_0xb4e;
+    undefined field917_0xb4f;
+    undefined field918_0xb50;
+    undefined field919_0xb51;
+    undefined field920_0xb52;
+    undefined field921_0xb53;
+    undefined field922_0xb54;
+    undefined field923_0xb55;
+    undefined field924_0xb56;
+    undefined field925_0xb57;
+    undefined field926_0xb58;
+    undefined field927_0xb59;
+    undefined field928_0xb5a;
+    undefined field929_0xb5b;
+    undefined field930_0xb5c;
+    undefined field931_0xb5d;
+    undefined field932_0xb5e;
+    undefined field933_0xb5f;
+    undefined field934_0xb60;
+    undefined field935_0xb61;
+    undefined field936_0xb62;
+    undefined field937_0xb63;
+    undefined field938_0xb64;
+    undefined field939_0xb65;
+    undefined field940_0xb66;
+    undefined field941_0xb67;
+    undefined field942_0xb68;
+    undefined field943_0xb69;
+    undefined field944_0xb6a;
+    undefined field945_0xb6b;
+    undefined field946_0xb6c;
+    undefined field947_0xb6d;
+    undefined field948_0xb6e;
+    undefined field949_0xb6f;
+    undefined field950_0xb70;
+    undefined field951_0xb71;
+    undefined field952_0xb72;
+    undefined field953_0xb73;
+    undefined field954_0xb74;
+    undefined field955_0xb75;
+    undefined field956_0xb76;
+    undefined field957_0xb77;
+    undefined field958_0xb78;
+    undefined field959_0xb79;
+    undefined field960_0xb7a;
+    undefined field961_0xb7b;
+    undefined field962_0xb7c;
+    undefined field963_0xb7d;
+    undefined field964_0xb7e;
+    undefined field965_0xb7f;
+    undefined field966_0xb80;
+    undefined field967_0xb81;
+    undefined field968_0xb82;
+    undefined field969_0xb83;
+    undefined field970_0xb84;
+    undefined field971_0xb85;
+    undefined field972_0xb86;
+    undefined field973_0xb87;
+    undefined field974_0xb88;
+    undefined field975_0xb89;
+    undefined field976_0xb8a;
+    undefined field977_0xb8b;
+    undefined field978_0xb8c;
+    undefined field979_0xb8d;
+    undefined field980_0xb8e;
+    undefined field981_0xb8f;
+    undefined field982_0xb90;
+    undefined field983_0xb91;
+    undefined field984_0xb92;
+    undefined field985_0xb93;
+    undefined field986_0xb94;
+    undefined field987_0xb95;
+    undefined field988_0xb96;
+    undefined field989_0xb97;
+    undefined field990_0xb98;
+    undefined field991_0xb99;
+    undefined field992_0xb9a;
+    undefined field993_0xb9b;
+    undefined field994_0xb9c;
+    undefined field995_0xb9d;
+    undefined field996_0xb9e;
+    undefined field997_0xb9f;
+    undefined field998_0xba0;
+    undefined field999_0xba1;
+    undefined field1000_0xba2;
+    undefined field1001_0xba3;
+    undefined field1002_0xba4;
+    undefined field1003_0xba5;
+    undefined field1004_0xba6;
+    undefined field1005_0xba7;
+    undefined field1006_0xba8;
+    undefined field1007_0xba9;
+    undefined field1008_0xbaa;
+    undefined field1009_0xbab;
+    undefined field1010_0xbac;
+    undefined field1011_0xbad;
+    undefined field1012_0xbae;
+    undefined field1013_0xbaf;
+    undefined field1014_0xbb0;
+    undefined field1015_0xbb1;
+    undefined field1016_0xbb2;
+    undefined field1017_0xbb3;
+    undefined field1018_0xbb4;
+    undefined field1019_0xbb5;
+    undefined field1020_0xbb6;
+    undefined field1021_0xbb7;
+    undefined field1022_0xbb8;
+    undefined field1023_0xbb9;
+    undefined field1024_0xbba;
+    undefined field1025_0xbbb;
+    undefined field1026_0xbbc;
+    undefined field1027_0xbbd;
+    undefined field1028_0xbbe;
+    undefined field1029_0xbbf;
+    undefined field1030_0xbc0;
+    undefined field1031_0xbc1;
+    undefined field1032_0xbc2;
+    undefined field1033_0xbc3;
+    undefined field1034_0xbc4;
+    undefined field1035_0xbc5;
+    undefined field1036_0xbc6;
+    undefined field1037_0xbc7;
+    undefined field1038_0xbc8;
+    undefined field1039_0xbc9;
+    undefined field1040_0xbca;
+    undefined field1041_0xbcb;
+    undefined field1042_0xbcc;
+    undefined field1043_0xbcd;
+    undefined field1044_0xbce;
+    undefined field1045_0xbcf;
+    undefined field1046_0xbd0;
+    undefined field1047_0xbd1;
+    undefined field1048_0xbd2;
+    undefined field1049_0xbd3;
+    undefined field1050_0xbd4;
+    undefined field1051_0xbd5;
+    undefined field1052_0xbd6;
+    undefined field1053_0xbd7;
+    undefined field1054_0xbd8;
+    undefined field1055_0xbd9;
+    undefined field1056_0xbda;
+    undefined field1057_0xbdb;
+    undefined field1058_0xbdc;
+    undefined field1059_0xbdd;
+    undefined field1060_0xbde;
+    undefined field1061_0xbdf;
+    undefined field1062_0xbe0;
+    undefined field1063_0xbe1;
+    undefined field1064_0xbe2;
+    undefined field1065_0xbe3;
+    undefined field1066_0xbe4;
+    undefined field1067_0xbe5;
+    undefined field1068_0xbe6;
+    undefined field1069_0xbe7;
+    undefined field1070_0xbe8;
+    undefined field1071_0xbe9;
+    undefined field1072_0xbea;
+    undefined field1073_0xbeb;
+    undefined field1074_0xbec;
+    undefined field1075_0xbed;
+    undefined field1076_0xbee;
+    undefined field1077_0xbef;
+    undefined field1078_0xbf0;
+    undefined field1079_0xbf1;
+    undefined field1080_0xbf2;
+    undefined field1081_0xbf3;
+    undefined field1082_0xbf4;
+    undefined field1083_0xbf5;
+    undefined field1084_0xbf6;
+    undefined field1085_0xbf7;
+    undefined field1086_0xbf8;
+    undefined field1087_0xbf9;
+    undefined field1088_0xbfa;
+    undefined field1089_0xbfb;
+    undefined field1090_0xbfc;
+    undefined field1091_0xbfd;
+    undefined field1092_0xbfe;
+    undefined field1093_0xbff;
+    undefined field1094_0xc00;
+    undefined field1095_0xc01;
+    undefined field1096_0xc02;
+    undefined field1097_0xc03;
+    undefined field1098_0xc04;
+    undefined field1099_0xc05;
+    undefined field1100_0xc06;
+    undefined field1101_0xc07;
+    undefined field1102_0xc08;
+    undefined field1103_0xc09;
+    undefined field1104_0xc0a;
+    undefined field1105_0xc0b;
+    undefined field1106_0xc0c;
+    undefined field1107_0xc0d;
+    undefined field1108_0xc0e;
+    undefined field1109_0xc0f;
+    undefined field1110_0xc10;
+    undefined field1111_0xc11;
+    undefined field1112_0xc12;
+    undefined field1113_0xc13;
+    undefined field1114_0xc14;
+    undefined field1115_0xc15;
+    undefined field1116_0xc16;
+    undefined field1117_0xc17;
+    undefined field1118_0xc18;
+    undefined field1119_0xc19;
+    undefined field1120_0xc1a;
+    undefined field1121_0xc1b;
+    undefined field1122_0xc1c;
+    undefined field1123_0xc1d;
+    undefined field1124_0xc1e;
+    undefined field1125_0xc1f;
+    undefined field1126_0xc20;
+    undefined field1127_0xc21;
+    undefined field1128_0xc22;
+    undefined field1129_0xc23;
+    undefined field1130_0xc24;
+    undefined field1131_0xc25;
+    undefined field1132_0xc26;
+    undefined field1133_0xc27;
+    undefined field1134_0xc28;
+    undefined field1135_0xc29;
+    undefined field1136_0xc2a;
+    undefined field1137_0xc2b;
+    undefined field1138_0xc2c;
+    undefined field1139_0xc2d;
+    undefined field1140_0xc2e;
+    undefined field1141_0xc2f;
+    undefined field1142_0xc30;
+    undefined field1143_0xc31;
+    undefined field1144_0xc32;
+    undefined field1145_0xc33;
+    undefined field1146_0xc34;
+    undefined field1147_0xc35;
+    undefined field1148_0xc36;
+    undefined field1149_0xc37;
+    undefined field1150_0xc38;
+    undefined field1151_0xc39;
+    undefined field1152_0xc3a;
+    undefined field1153_0xc3b;
+    undefined field1154_0xc3c;
+    undefined field1155_0xc3d;
+    undefined field1156_0xc3e;
+    undefined field1157_0xc3f;
+    undefined field1158_0xc40;
+    undefined field1159_0xc41;
+    undefined field1160_0xc42;
+    undefined field1161_0xc43;
+    undefined field1162_0xc44;
+    undefined field1163_0xc45;
+    undefined field1164_0xc46;
+    undefined field1165_0xc47;
+    undefined field1166_0xc48;
+    undefined field1167_0xc49;
+    undefined field1168_0xc4a;
+    undefined field1169_0xc4b;
+    undefined field1170_0xc4c;
+    undefined field1171_0xc4d;
+    undefined field1172_0xc4e;
+    undefined field1173_0xc4f;
+    undefined field1174_0xc50;
+    undefined field1175_0xc51;
+    undefined field1176_0xc52;
+    undefined field1177_0xc53;
+    undefined field1178_0xc54;
+    undefined field1179_0xc55;
+    undefined field1180_0xc56;
+    undefined field1181_0xc57;
+    undefined field1182_0xc58;
+    undefined field1183_0xc59;
+    undefined field1184_0xc5a;
+    undefined field1185_0xc5b;
+    undefined field1186_0xc5c;
+    undefined field1187_0xc5d;
+    undefined field1188_0xc5e;
+    undefined field1189_0xc5f;
+    undefined field1190_0xc60;
+    undefined field1191_0xc61;
+    undefined field1192_0xc62;
+    undefined field1193_0xc63;
+    undefined field1194_0xc64;
+    undefined field1195_0xc65;
+    undefined field1196_0xc66;
+    undefined field1197_0xc67;
+    undefined field1198_0xc68;
+    undefined field1199_0xc69;
+    undefined field1200_0xc6a;
+    undefined field1201_0xc6b;
+    undefined field1202_0xc6c;
+    undefined field1203_0xc6d;
+    undefined field1204_0xc6e;
+    undefined field1205_0xc6f;
+    undefined field1206_0xc70;
+    undefined field1207_0xc71;
+    undefined field1208_0xc72;
+    undefined field1209_0xc73;
+    undefined field1210_0xc74;
+    undefined field1211_0xc75;
+    undefined field1212_0xc76;
+    undefined field1213_0xc77;
+    undefined field1214_0xc78;
+    undefined field1215_0xc79;
+    undefined field1216_0xc7a;
+    undefined field1217_0xc7b;
+    undefined field1218_0xc7c;
+    undefined field1219_0xc7d;
+    undefined field1220_0xc7e;
+    undefined field1221_0xc7f;
+    undefined field1222_0xc80;
+    undefined field1223_0xc81;
+    undefined field1224_0xc82;
+    undefined field1225_0xc83;
+    undefined field1226_0xc84;
+    undefined field1227_0xc85;
+    undefined field1228_0xc86;
+    undefined field1229_0xc87;
+    undefined field1230_0xc88;
+    undefined field1231_0xc89;
+    undefined field1232_0xc8a;
+    undefined field1233_0xc8b;
+    undefined field1234_0xc8c;
+    undefined field1235_0xc8d;
+    undefined field1236_0xc8e;
+    undefined field1237_0xc8f;
+    undefined field1238_0xc90;
+    undefined field1239_0xc91;
+    undefined field1240_0xc92;
+    undefined field1241_0xc93;
+    undefined field1242_0xc94;
+    undefined field1243_0xc95;
+    undefined field1244_0xc96;
+    undefined field1245_0xc97;
+    undefined field1246_0xc98;
+    undefined field1247_0xc99;
+    undefined field1248_0xc9a;
+    undefined field1249_0xc9b;
+    undefined field1250_0xc9c;
+    undefined field1251_0xc9d;
+    undefined field1252_0xc9e;
+    undefined field1253_0xc9f;
+    undefined field1254_0xca0;
+    undefined field1255_0xca1;
+    undefined field1256_0xca2;
+    undefined field1257_0xca3;
+    undefined field1258_0xca4;
+    undefined field1259_0xca5;
+    undefined field1260_0xca6;
+    undefined field1261_0xca7;
+    undefined field1262_0xca8;
+    undefined field1263_0xca9;
+    undefined field1264_0xcaa;
+    undefined field1265_0xcab;
+    undefined field1266_0xcac;
+    undefined field1267_0xcad;
+    undefined field1268_0xcae;
+    undefined field1269_0xcaf;
+    undefined field1270_0xcb0;
+    undefined field1271_0xcb1;
+    undefined field1272_0xcb2;
+    undefined field1273_0xcb3;
+    undefined field1274_0xcb4;
+    undefined field1275_0xcb5;
+    undefined field1276_0xcb6;
+    undefined field1277_0xcb7;
+    undefined field1278_0xcb8;
+    undefined field1279_0xcb9;
+    undefined field1280_0xcba;
+    undefined field1281_0xcbb;
+    undefined field1282_0xcbc;
+    undefined field1283_0xcbd;
+    undefined field1284_0xcbe;
+    undefined field1285_0xcbf;
+    undefined field1286_0xcc0;
+    undefined field1287_0xcc1;
+    undefined field1288_0xcc2;
+    undefined field1289_0xcc3;
+    undefined field1290_0xcc4;
+    undefined field1291_0xcc5;
+    undefined field1292_0xcc6;
+    undefined field1293_0xcc7;
+    undefined field1294_0xcc8;
+    undefined field1295_0xcc9;
+    undefined field1296_0xcca;
+    undefined field1297_0xccb;
+    undefined field1298_0xccc;
+    undefined field1299_0xccd;
+    undefined field1300_0xcce;
+    undefined field1301_0xccf;
+    undefined field1302_0xcd0;
+    undefined field1303_0xcd1;
+    undefined field1304_0xcd2;
+    undefined field1305_0xcd3;
+    undefined field1306_0xcd4;
+    undefined field1307_0xcd5;
+    undefined field1308_0xcd6;
+    undefined field1309_0xcd7;
+    undefined field1310_0xcd8;
+    undefined field1311_0xcd9;
+    undefined field1312_0xcda;
+    undefined field1313_0xcdb;
+    undefined field1314_0xcdc;
+    undefined field1315_0xcdd;
+    undefined field1316_0xcde;
+    undefined field1317_0xcdf;
+    undefined field1318_0xce0;
+    undefined field1319_0xce1;
+    undefined field1320_0xce2;
+    undefined field1321_0xce3;
+    undefined field1322_0xce4;
+    undefined field1323_0xce5;
+    undefined field1324_0xce6;
+    undefined field1325_0xce7;
+    undefined field1326_0xce8;
+    undefined field1327_0xce9;
+    undefined field1328_0xcea;
+    undefined field1329_0xceb;
+    undefined field1330_0xcec;
+    undefined field1331_0xced;
+    undefined field1332_0xcee;
+    undefined field1333_0xcef;
+    undefined field1334_0xcf0;
+    undefined field1335_0xcf1;
+    undefined field1336_0xcf2;
+    undefined field1337_0xcf3;
+    undefined field1338_0xcf4;
+    undefined field1339_0xcf5;
+    undefined field1340_0xcf6;
+    undefined field1341_0xcf7;
+    undefined field1342_0xcf8;
+    undefined field1343_0xcf9;
+    undefined field1344_0xcfa;
+    undefined field1345_0xcfb;
+    undefined field1346_0xcfc;
+    undefined field1347_0xcfd;
+    undefined field1348_0xcfe;
+    undefined field1349_0xcff;
+    undefined field1350_0xd00;
+    undefined field1351_0xd01;
+    undefined field1352_0xd02;
+    undefined field1353_0xd03;
+    undefined field1354_0xd04;
+    undefined field1355_0xd05;
+    undefined field1356_0xd06;
+    undefined field1357_0xd07;
+    undefined field1358_0xd08;
+    undefined field1359_0xd09;
+    undefined field1360_0xd0a;
+    undefined field1361_0xd0b;
+    undefined field1362_0xd0c;
+    undefined field1363_0xd0d;
+    undefined field1364_0xd0e;
+    undefined field1365_0xd0f;
+    undefined field1366_0xd10;
+    undefined field1367_0xd11;
+    undefined field1368_0xd12;
+    undefined field1369_0xd13;
+    undefined field1370_0xd14;
+    undefined field1371_0xd15;
+    undefined field1372_0xd16;
+    undefined field1373_0xd17;
+    undefined field1374_0xd18;
+    undefined field1375_0xd19;
+    undefined field1376_0xd1a;
+    undefined field1377_0xd1b;
+    undefined field1378_0xd1c;
+    undefined field1379_0xd1d;
+    undefined field1380_0xd1e;
+    undefined field1381_0xd1f;
+    undefined field1382_0xd20;
+    undefined field1383_0xd21;
+    undefined field1384_0xd22;
+    undefined field1385_0xd23;
+    undefined field1386_0xd24;
+    undefined field1387_0xd25;
+    undefined field1388_0xd26;
+    undefined field1389_0xd27;
+    struct vfx_sfx_timers field1390_0xd28[6];
+    struct vfx_col_all field1391_0xddc[4];
+    undefined field1392_0x10fc;
+    undefined field1393_0x10fd;
+    undefined field1394_0x10fe;
+    undefined field1395_0x10ff;
+    undefined field1396_0x1100;
+    undefined field1397_0x1101;
+    undefined field1398_0x1102;
+    undefined field1399_0x1103;
+    undefined field1400_0x1104;
+    undefined field1401_0x1105;
+    undefined field1402_0x1106;
+    undefined field1403_0x1107;
+    undefined field1404_0x1108;
+    undefined field1405_0x1109;
+    undefined field1406_0x110a;
+    undefined field1407_0x110b;
+    undefined field1408_0x110c;
+    undefined field1409_0x110d;
+    undefined field1410_0x110e;
+    undefined field1411_0x110f;
+    undefined field1412_0x1110;
+    undefined field1413_0x1111;
+    undefined field1414_0x1112;
+    undefined field1415_0x1113;
+    undefined field1416_0x1114;
+    undefined field1417_0x1115;
+    undefined field1418_0x1116;
+    undefined field1419_0x1117;
+    undefined field1420_0x1118;
+    undefined field1421_0x1119;
+    undefined field1422_0x111a;
+    undefined field1423_0x111b;
+    undefined field1424_0x111c;
+    undefined field1425_0x111d;
+    undefined field1426_0x111e;
+    undefined field1427_0x111f;
+    undefined field1428_0x1120;
+    undefined field1429_0x1121;
+    undefined field1430_0x1122;
+    undefined field1431_0x1123;
+    undefined field1432_0x1124;
+    undefined field1433_0x1125;
+    undefined field1434_0x1126;
+    undefined field1435_0x1127;
+    undefined field1436_0x1128;
+    undefined field1437_0x1129;
+    undefined field1438_0x112a;
+    undefined field1439_0x112b;
+    undefined field1440_0x112c;
+    undefined field1441_0x112d;
+    undefined field1442_0x112e;
+    undefined field1443_0x112f;
+    undefined field1444_0x1130;
+    undefined field1445_0x1131;
+    undefined field1446_0x1132;
+    undefined field1447_0x1133;
+    undefined field1448_0x1134;
+    undefined field1449_0x1135;
+    undefined field1450_0x1136;
+    undefined field1451_0x1137;
+    undefined field1452_0x1138;
+    undefined field1453_0x1139;
+    undefined field1454_0x113a;
+    undefined field1455_0x113b;
+    undefined field1456_0x113c;
+    undefined field1457_0x113d;
+    undefined field1458_0x113e;
+    undefined field1459_0x113f;
+    undefined field1460_0x1140;
+    undefined field1461_0x1141;
+    undefined field1462_0x1142;
+    undefined field1463_0x1143;
+    undefined field1464_0x1144;
+    undefined field1465_0x1145;
+    undefined field1466_0x1146;
+    undefined field1467_0x1147;
+    undefined field1468_0x1148;
+    undefined field1469_0x1149;
+    undefined field1470_0x114a;
+    undefined field1471_0x114b;
+    undefined field1472_0x114c;
+    undefined field1473_0x114d;
+    undefined field1474_0x114e;
+    undefined field1475_0x114f;
+    undefined field1476_0x1150;
+    undefined field1477_0x1151;
+    undefined field1478_0x1152;
+    undefined field1479_0x1153;
+    undefined field1480_0x1154;
+    undefined field1481_0x1155;
+    undefined field1482_0x1156;
+    undefined field1483_0x1157;
+    undefined field1484_0x1158;
+    undefined field1485_0x1159;
+    undefined field1486_0x115a;
+    undefined field1487_0x115b;
+    undefined field1488_0x115c;
+    undefined field1489_0x115d;
+    undefined field1490_0x115e;
+    undefined field1491_0x115f;
+    undefined field1492_0x1160;
+    undefined field1493_0x1161;
+    struct vfx_col_all field1494_0x1162[4];
+    undefined field1495_0x1482;
+    undefined field1496_0x1483;
+    undefined field1497_0x1484;
+    undefined field1498_0x1485;
+    undefined field1499_0x1486;
+    undefined field1500_0x1487;
+    undefined field1501_0x1488;
+    undefined field1502_0x1489;
+    undefined field1503_0x148a;
+    undefined field1504_0x148b;
+    undefined field1505_0x148c;
+    undefined field1506_0x148d;
+    undefined field1507_0x148e;
+    undefined field1508_0x148f;
+    undefined field1509_0x1490;
+    undefined field1510_0x1491;
+    undefined field1511_0x1492;
+    undefined field1512_0x1493;
+    undefined field1513_0x1494;
+    undefined field1514_0x1495;
+    undefined field1515_0x1496;
+    undefined field1516_0x1497;
+    undefined field1517_0x1498;
+    undefined field1518_0x1499;
+    undefined field1519_0x149a;
+    undefined field1520_0x149b;
+    undefined field1521_0x149c;
+    undefined field1522_0x149d;
+    undefined field1523_0x149e;
+    undefined field1524_0x149f;
+    undefined field1525_0x14a0;
+    undefined field1526_0x14a1;
+    undefined field1527_0x14a2;
+    undefined field1528_0x14a3;
+    undefined field1529_0x14a4;
+    undefined field1530_0x14a5;
+    undefined field1531_0x14a6;
+    undefined field1532_0x14a7;
+    undefined field1533_0x14a8;
+    undefined field1534_0x14a9;
+    undefined field1535_0x14aa;
+    undefined field1536_0x14ab;
+    undefined field1537_0x14ac;
+    undefined field1538_0x14ad;
+    undefined field1539_0x14ae;
+    undefined field1540_0x14af;
+    undefined field1541_0x14b0;
+    undefined field1542_0x14b1;
+    undefined field1543_0x14b2;
+    undefined field1544_0x14b3;
+    undefined field1545_0x14b4;
+    undefined field1546_0x14b5;
+    undefined field1547_0x14b6;
+    undefined field1548_0x14b7;
+    undefined field1549_0x14b8;
+    undefined field1550_0x14b9;
+    undefined field1551_0x14ba;
+    undefined field1552_0x14bb;
+    undefined field1553_0x14bc;
+    undefined field1554_0x14bd;
+    undefined field1555_0x14be;
+    undefined field1556_0x14bf;
+    undefined field1557_0x14c0;
+    undefined field1558_0x14c1;
+    undefined field1559_0x14c2;
+    undefined field1560_0x14c3;
+    undefined field1561_0x14c4;
+    undefined field1562_0x14c5;
+    undefined field1563_0x14c6;
+    undefined field1564_0x14c7;
+    undefined field1565_0x14c8;
+    undefined field1566_0x14c9;
+    undefined field1567_0x14ca;
+    undefined field1568_0x14cb;
+    undefined field1569_0x14cc;
+    undefined field1570_0x14cd;
+    undefined field1571_0x14ce;
+    undefined field1572_0x14cf;
+    undefined field1573_0x14d0;
+    undefined field1574_0x14d1;
+    undefined field1575_0x14d2;
+    undefined field1576_0x14d3;
+    undefined field1577_0x14d4;
+    undefined field1578_0x14d5;
+    undefined field1579_0x14d6;
+    undefined field1580_0x14d7;
+    undefined field1581_0x14d8;
+    undefined field1582_0x14d9;
+    undefined field1583_0x14da;
+    undefined field1584_0x14db;
+    undefined field1585_0x14dc;
+    undefined field1586_0x14dd;
+    undefined field1587_0x14de;
+    undefined field1588_0x14df;
+    undefined field1589_0x14e0;
+    undefined field1590_0x14e1;
+    undefined field1591_0x14e2;
+    undefined field1592_0x14e3;
+    undefined field1593_0x14e4;
+    undefined field1594_0x14e5;
+    undefined field1595_0x14e6;
+    undefined field1596_0x14e7;
+    undefined field1597_0x14e8;
+    undefined field1598_0x14e9;
+    undefined field1599_0x14ea;
+    undefined field1600_0x14eb;
+    undefined field1601_0x14ec;
+    undefined field1602_0x14ed;
+    undefined field1603_0x14ee;
+    undefined field1604_0x14ef;
+    undefined field1605_0x14f0;
+    undefined field1606_0x14f1;
+    undefined field1607_0x14f2;
+    undefined field1608_0x14f3;
+    undefined field1609_0x14f4;
+    undefined field1610_0x14f5;
+    undefined field1611_0x14f6;
+    undefined field1612_0x14f7;
+    undefined field1613_0x14f8;
+    undefined field1614_0x14f9;
+    undefined field1615_0x14fa;
+    undefined field1616_0x14fb;
+    undefined field1617_0x14fc;
+    undefined field1618_0x14fd;
+    undefined field1619_0x14fe;
+    undefined field1620_0x14ff;
+    undefined field1621_0x1500;
+    undefined field1622_0x1501;
+    undefined field1623_0x1502;
+    undefined field1624_0x1503;
+    undefined field1625_0x1504;
+    undefined field1626_0x1505;
+    undefined field1627_0x1506;
+    undefined field1628_0x1507;
+    undefined field1629_0x1508;
+    undefined field1630_0x1509;
+    undefined field1631_0x150a;
+    undefined field1632_0x150b;
+    undefined field1633_0x150c;
+    undefined field1634_0x150d;
+    undefined field1635_0x150e;
+    undefined field1636_0x150f;
+    undefined field1637_0x1510;
+    undefined field1638_0x1511;
+    undefined field1639_0x1512;
+    undefined field1640_0x1513;
+    undefined field1641_0x1514;
+    undefined field1642_0x1515;
+    undefined field1643_0x1516;
+    undefined field1644_0x1517;
+    undefined field1645_0x1518;
+    undefined field1646_0x1519;
+    undefined field1647_0x151a;
+    undefined field1648_0x151b;
+    undefined field1649_0x151c;
+    undefined field1650_0x151d;
+    undefined field1651_0x151e;
+    undefined field1652_0x151f;
+    undefined field1653_0x1520;
+    undefined field1654_0x1521;
+    undefined field1655_0x1522;
+    undefined field1656_0x1523;
+    undefined field1657_0x1524;
+    undefined field1658_0x1525;
+    undefined field1659_0x1526;
+    undefined field1660_0x1527;
+    undefined field1661_0x1528;
+    undefined field1662_0x1529;
+    undefined field1663_0x152a;
+    undefined field1664_0x152b;
+    undefined field1665_0x152c;
+    undefined field1666_0x152d;
+    undefined field1667_0x152e;
+    undefined field1668_0x152f;
+    undefined field1669_0x1530;
+    undefined field1670_0x1531;
+    undefined field1671_0x1532;
+    undefined field1672_0x1533;
+    undefined field1673_0x1534;
+    undefined field1674_0x1535;
+    undefined field1675_0x1536;
+    undefined field1676_0x1537;
+    undefined field1677_0x1538;
+    undefined field1678_0x1539;
+    undefined field1679_0x153a;
+    undefined field1680_0x153b;
+    undefined field1681_0x153c;
+    undefined field1682_0x153d;
+    undefined field1683_0x153e;
+    undefined field1684_0x153f;
+    undefined field1685_0x1540;
+    undefined field1686_0x1541;
+    undefined field1687_0x1542;
+    undefined field1688_0x1543;
+    undefined field1689_0x1544;
+    undefined field1690_0x1545;
+    undefined field1691_0x1546;
+    undefined field1692_0x1547;
+    undefined field1693_0x1548;
+    undefined field1694_0x1549;
+    undefined field1695_0x154a;
+    undefined field1696_0x154b;
+    undefined field1697_0x154c;
+    undefined field1698_0x154d;
+    undefined field1699_0x154e;
+    undefined field1700_0x154f;
+    undefined field1701_0x1550;
+    undefined field1702_0x1551;
+    undefined field1703_0x1552;
+    undefined field1704_0x1553;
+    undefined field1705_0x1554;
+    undefined field1706_0x1555;
+    undefined field1707_0x1556;
+    undefined field1708_0x1557;
+    undefined field1709_0x1558;
+    undefined field1710_0x1559;
+    undefined field1711_0x155a;
+    undefined field1712_0x155b;
+    undefined field1713_0x155c;
+    undefined field1714_0x155d;
+    undefined field1715_0x155e;
+    undefined field1716_0x155f;
+    undefined field1717_0x1560;
+    undefined field1718_0x1561;
+    undefined field1719_0x1562;
+    undefined field1720_0x1563;
+    undefined field1721_0x1564;
+    undefined field1722_0x1565;
+    undefined field1723_0x1566;
+    undefined field1724_0x1567;
+    undefined field1725_0x1568;
+    undefined field1726_0x1569;
+    undefined field1727_0x156a;
+    undefined field1728_0x156b;
+    undefined field1729_0x156c;
+    undefined field1730_0x156d;
+    undefined field1731_0x156e;
+    undefined field1732_0x156f;
+    undefined field1733_0x1570;
+    undefined field1734_0x1571;
+    undefined field1735_0x1572;
+    undefined field1736_0x1573;
+    undefined field1737_0x1574;
+    undefined field1738_0x1575;
+    undefined field1739_0x1576;
+    undefined field1740_0x1577;
+    undefined field1741_0x1578;
+    undefined field1742_0x1579;
+    undefined field1743_0x157a;
+    undefined field1744_0x157b;
+    undefined field1745_0x157c;
+    undefined field1746_0x157d;
+    undefined field1747_0x157e;
+    undefined field1748_0x157f;
+    undefined field1749_0x1580;
+    undefined field1750_0x1581;
+    undefined field1751_0x1582;
+    undefined field1752_0x1583;
+    undefined field1753_0x1584;
+    undefined field1754_0x1585;
+    undefined field1755_0x1586;
+    undefined field1756_0x1587;
+    undefined field1757_0x1588;
+    undefined field1758_0x1589;
+    undefined field1759_0x158a;
+    undefined field1760_0x158b;
+    undefined field1761_0x158c;
+    undefined field1762_0x158d;
+    undefined field1763_0x158e;
+    undefined field1764_0x158f;
+    undefined field1765_0x1590;
+    undefined field1766_0x1591;
+    undefined field1767_0x1592;
+    undefined field1768_0x1593;
+    undefined field1769_0x1594;
+    undefined field1770_0x1595;
+    undefined field1771_0x1596;
+    undefined field1772_0x1597;
+    undefined field1773_0x1598;
+    undefined field1774_0x1599;
+    undefined field1775_0x159a;
+    undefined field1776_0x159b;
+    undefined field1777_0x159c;
+    undefined field1778_0x159d;
+    undefined field1779_0x159e;
+    undefined field1780_0x159f;
+    undefined field1781_0x15a0;
+    undefined field1782_0x15a1;
+    undefined field1783_0x15a2;
+    undefined field1784_0x15a3;
+    undefined field1785_0x15a4;
+    undefined field1786_0x15a5;
+    undefined field1787_0x15a6;
+    undefined field1788_0x15a7;
+    undefined field1789_0x15a8;
+    undefined field1790_0x15a9;
+    undefined field1791_0x15aa;
+    undefined field1792_0x15ab;
+    undefined field1793_0x15ac;
+    undefined field1794_0x15ad;
+    undefined field1795_0x15ae;
+    undefined field1796_0x15af;
+    undefined field1797_0x15b0;
+    undefined field1798_0x15b1;
+    undefined field1799_0x15b2;
+    undefined field1800_0x15b3;
+    undefined field1801_0x15b4;
+    undefined field1802_0x15b5;
+    undefined field1803_0x15b6;
+    undefined field1804_0x15b7;
+    undefined field1805_0x15b8;
+    undefined field1806_0x15b9;
+    undefined field1807_0x15ba;
+    undefined field1808_0x15bb;
+    undefined field1809_0x15bc;
+    undefined field1810_0x15bd;
+    undefined field1811_0x15be;
+    undefined field1812_0x15bf;
+    undefined field1813_0x15c0;
+    undefined field1814_0x15c1;
+    undefined field1815_0x15c2;
+    undefined field1816_0x15c3;
+    undefined field1817_0x15c4;
+    undefined field1818_0x15c5;
+    undefined field1819_0x15c6;
+    undefined field1820_0x15c7;
+    undefined field1821_0x15c8;
+    undefined field1822_0x15c9;
+    undefined field1823_0x15ca;
+    undefined field1824_0x15cb;
+    undefined field1825_0x15cc;
+    undefined field1826_0x15cd;
+    undefined field1827_0x15ce;
+    undefined field1828_0x15cf;
+    undefined field1829_0x15d0;
+    undefined field1830_0x15d1;
+    undefined field1831_0x15d2;
+    undefined field1832_0x15d3;
+    undefined field1833_0x15d4;
+    undefined field1834_0x15d5;
+    undefined field1835_0x15d6;
+    undefined field1836_0x15d7;
+    undefined field1837_0x15d8;
+    undefined field1838_0x15d9;
+    undefined field1839_0x15da;
+    undefined field1840_0x15db;
+    undefined field1841_0x15dc;
+    undefined field1842_0x15dd;
+    undefined field1843_0x15de;
+    undefined field1844_0x15df;
+    undefined field1845_0x15e0;
+    undefined field1846_0x15e1;
+    undefined field1847_0x15e2;
+    undefined field1848_0x15e3;
+    undefined field1849_0x15e4;
+    undefined field1850_0x15e5;
+    undefined field1851_0x15e6;
+    undefined field1852_0x15e7;
+    undefined field1853_0x15e8;
+    undefined field1854_0x15e9;
+    undefined field1855_0x15ea;
+    undefined field1856_0x15eb;
+    undefined field1857_0x15ec;
+    undefined field1858_0x15ed;
+    undefined field1859_0x15ee;
+    undefined field1860_0x15ef;
+    undefined field1861_0x15f0;
+    undefined field1862_0x15f1;
+    undefined field1863_0x15f2;
+    undefined field1864_0x15f3;
+    undefined field1865_0x15f4;
+    undefined field1866_0x15f5;
+    undefined field1867_0x15f6;
+    undefined field1868_0x15f7;
+    undefined field1869_0x15f8;
+    undefined field1870_0x15f9;
+    undefined field1871_0x15fa;
+    undefined field1872_0x15fb;
+    undefined field1873_0x15fc;
+    undefined field1874_0x15fd;
+    undefined field1875_0x15fe;
+    undefined field1876_0x15ff;
+    undefined field1877_0x1600;
+    undefined field1878_0x1601;
+    undefined field1879_0x1602;
+    undefined field1880_0x1603;
+    undefined field1881_0x1604;
+    undefined field1882_0x1605;
+    undefined field1883_0x1606;
+    undefined field1884_0x1607;
+    undefined field1885_0x1608;
+    undefined field1886_0x1609;
+    undefined field1887_0x160a;
+    undefined field1888_0x160b;
+    undefined field1889_0x160c;
+    undefined field1890_0x160d;
+    undefined field1891_0x160e;
+    undefined field1892_0x160f;
+    undefined field1893_0x1610;
+    undefined field1894_0x1611;
+    undefined field1895_0x1612;
+    undefined field1896_0x1613;
+    undefined field1897_0x1614;
+    undefined field1898_0x1615;
+    undefined field1899_0x1616;
+    undefined field1900_0x1617;
+    undefined field1901_0x1618;
+    undefined field1902_0x1619;
+    undefined field1903_0x161a;
+    undefined field1904_0x161b;
+    undefined field1905_0x161c;
+    undefined field1906_0x161d;
+    undefined field1907_0x161e;
+    undefined field1908_0x161f;
+    undefined field1909_0x1620;
+    undefined field1910_0x1621;
+    undefined field1911_0x1622;
+    undefined field1912_0x1623;
+    undefined field1913_0x1624;
+    undefined field1914_0x1625;
+    undefined field1915_0x1626;
+    undefined field1916_0x1627;
+    undefined field1917_0x1628;
+    undefined field1918_0x1629;
+    undefined field1919_0x162a;
+    undefined field1920_0x162b;
+    undefined field1921_0x162c;
+    undefined field1922_0x162d;
+    undefined field1923_0x162e;
+    undefined field1924_0x162f;
+    undefined field1925_0x1630;
+    undefined field1926_0x1631;
+    undefined field1927_0x1632;
+    undefined field1928_0x1633;
+    undefined field1929_0x1634;
+    undefined field1930_0x1635;
+    undefined field1931_0x1636;
+    undefined field1932_0x1637;
+    undefined field1933_0x1638;
+    undefined field1934_0x1639;
+    undefined field1935_0x163a;
+    undefined field1936_0x163b;
+    undefined field1937_0x163c;
+    undefined field1938_0x163d;
+    undefined field1939_0x163e;
+    undefined field1940_0x163f;
+    undefined field1941_0x1640;
+    undefined field1942_0x1641;
+    undefined field1943_0x1642;
+    undefined field1944_0x1643;
+    undefined field1945_0x1644;
+    undefined field1946_0x1645;
+    undefined field1947_0x1646;
+    undefined field1948_0x1647;
+    undefined field1949_0x1648;
+    undefined field1950_0x1649;
+    undefined field1951_0x164a;
+    undefined field1952_0x164b;
+    undefined field1953_0x164c;
+    undefined field1954_0x164d;
+    undefined field1955_0x164e;
+    undefined field1956_0x164f;
+    undefined field1957_0x1650;
+    undefined field1958_0x1651;
+    undefined field1959_0x1652;
+    undefined field1960_0x1653;
+    undefined field1961_0x1654;
+    undefined field1962_0x1655;
+    undefined field1963_0x1656;
+    undefined field1964_0x1657;
+    undefined field1965_0x1658;
+    undefined field1966_0x1659;
+    undefined field1967_0x165a;
+    undefined field1968_0x165b;
+    undefined field1969_0x165c;
+    undefined field1970_0x165d;
+    undefined field1971_0x165e;
+    undefined field1972_0x165f;
+    undefined field1973_0x1660;
+    undefined field1974_0x1661;
+    undefined field1975_0x1662;
+    undefined field1976_0x1663;
+    undefined field1977_0x1664;
+    undefined field1978_0x1665;
+    undefined field1979_0x1666;
+    undefined field1980_0x1667;
+    undefined field1981_0x1668;
+    undefined field1982_0x1669;
+    undefined field1983_0x166a;
+    undefined field1984_0x166b;
+    undefined field1985_0x166c;
+    undefined field1986_0x166d;
+    undefined field1987_0x166e;
+    undefined field1988_0x166f;
+    undefined field1989_0x1670;
+    undefined field1990_0x1671;
+    undefined field1991_0x1672;
+    undefined field1992_0x1673;
+    undefined field1993_0x1674;
+    undefined field1994_0x1675;
+    undefined field1995_0x1676;
+    undefined field1996_0x1677;
+    undefined field1997_0x1678;
+    undefined field1998_0x1679;
+    undefined field1999_0x167a;
+    undefined field2000_0x167b;
+    undefined field2001_0x167c;
+    undefined field2002_0x167d;
+    undefined field2003_0x167e;
+    undefined field2004_0x167f;
+    undefined field2005_0x1680;
+    undefined field2006_0x1681;
+    undefined field2007_0x1682;
+    undefined field2008_0x1683;
+    undefined field2009_0x1684;
+    undefined field2010_0x1685;
+    undefined field2011_0x1686;
+    undefined field2012_0x1687;
+    undefined field2013_0x1688;
+    undefined field2014_0x1689;
+    undefined field2015_0x168a;
+    undefined field2016_0x168b;
+    undefined field2017_0x168c;
+    undefined field2018_0x168d;
+    undefined field2019_0x168e;
+    undefined field2020_0x168f;
+    undefined field2021_0x1690;
+    undefined field2022_0x1691;
+    undefined field2023_0x1692;
+    undefined field2024_0x1693;
+    undefined field2025_0x1694;
+    undefined field2026_0x1695;
+    undefined field2027_0x1696;
+    undefined field2028_0x1697;
+    undefined field2029_0x1698;
+    undefined field2030_0x1699;
+    undefined field2031_0x169a;
+    undefined field2032_0x169b;
+    undefined field2033_0x169c;
+    undefined field2034_0x169d;
+    undefined field2035_0x169e;
+    undefined field2036_0x169f;
+    undefined field2037_0x16a0;
+    undefined field2038_0x16a1;
+    undefined field2039_0x16a2;
+    undefined field2040_0x16a3;
+    undefined field2041_0x16a4;
+    undefined field2042_0x16a5;
+    undefined field2043_0x16a6;
+    undefined field2044_0x16a7;
+    undefined field2045_0x16a8;
+    undefined field2046_0x16a9;
+    undefined field2047_0x16aa;
+    undefined field2048_0x16ab;
+    undefined field2049_0x16ac;
+    undefined field2050_0x16ad;
+    undefined field2051_0x16ae;
+    undefined field2052_0x16af;
+    undefined field2053_0x16b0;
+    undefined field2054_0x16b1;
+    undefined field2055_0x16b2;
+    undefined field2056_0x16b3;
+    undefined field2057_0x16b4;
+    undefined field2058_0x16b5;
+    undefined field2059_0x16b6;
+    undefined field2060_0x16b7;
+    undefined field2061_0x16b8;
+    undefined field2062_0x16b9;
+    undefined field2063_0x16ba;
+    undefined field2064_0x16bb;
+    undefined field2065_0x16bc;
+    undefined field2066_0x16bd;
+    undefined field2067_0x16be;
+    undefined field2068_0x16bf;
+    undefined field2069_0x16c0;
+    undefined field2070_0x16c1;
+    undefined field2071_0x16c2;
+    undefined field2072_0x16c3;
+    undefined field2073_0x16c4;
+    undefined field2074_0x16c5;
+    undefined field2075_0x16c6;
+    undefined field2076_0x16c7;
+    undefined field2077_0x16c8;
+    undefined field2078_0x16c9;
+    undefined field2079_0x16ca;
+    undefined field2080_0x16cb;
+    undefined field2081_0x16cc;
+    undefined field2082_0x16cd;
+    undefined field2083_0x16ce;
+    undefined field2084_0x16cf;
+    undefined field2085_0x16d0;
+    undefined field2086_0x16d1;
+    undefined field2087_0x16d2;
+    undefined field2088_0x16d3;
+    undefined field2089_0x16d4;
+    undefined field2090_0x16d5;
+    undefined field2091_0x16d6;
+    undefined field2092_0x16d7;
+    undefined field2093_0x16d8;
+    undefined field2094_0x16d9;
+    undefined field2095_0x16da;
+    undefined field2096_0x16db;
+    undefined field2097_0x16dc;
+    undefined field2098_0x16dd;
+    undefined field2099_0x16de;
+    undefined field2100_0x16df;
+    undefined field2101_0x16e0;
+    undefined field2102_0x16e1;
+    undefined field2103_0x16e2;
+    undefined field2104_0x16e3;
+    undefined field2105_0x16e4;
+    undefined field2106_0x16e5;
+    undefined field2107_0x16e6;
+    undefined field2108_0x16e7;
+    undefined field2109_0x16e8;
+    undefined field2110_0x16e9;
+    undefined field2111_0x16ea;
+    undefined field2112_0x16eb;
+    undefined field2113_0x16ec;
+    undefined field2114_0x16ed;
+    undefined field2115_0x16ee;
+    undefined field2116_0x16ef;
+    undefined field2117_0x16f0;
+    undefined field2118_0x16f1;
+    undefined field2119_0x16f2;
+    undefined field2120_0x16f3;
+    undefined field2121_0x16f4;
+    undefined field2122_0x16f5;
+    undefined field2123_0x16f6;
+    undefined field2124_0x16f7;
+    undefined field2125_0x16f8;
+    undefined field2126_0x16f9;
+    undefined field2127_0x16fa;
+    undefined field2128_0x16fb;
+    undefined field2129_0x16fc;
+    undefined field2130_0x16fd;
+    undefined field2131_0x16fe;
+    undefined field2132_0x16ff;
+    undefined field2133_0x1700;
+    undefined field2134_0x1701;
+    undefined field2135_0x1702;
+    undefined field2136_0x1703;
+    undefined field2137_0x1704;
+    undefined field2138_0x1705;
+    undefined field2139_0x1706;
+    undefined field2140_0x1707;
+    undefined field2141_0x1708;
+    undefined field2142_0x1709;
+    undefined field2143_0x170a;
+    undefined field2144_0x170b;
+    undefined field2145_0x170c;
+    undefined field2146_0x170d;
+    undefined field2147_0x170e;
+    undefined field2148_0x170f;
+    undefined field2149_0x1710;
+    undefined field2150_0x1711;
+    undefined field2151_0x1712;
+    undefined field2152_0x1713;
+    undefined field2153_0x1714;
+    undefined field2154_0x1715;
+    undefined field2155_0x1716;
+    undefined field2156_0x1717;
+    undefined field2157_0x1718;
+    undefined field2158_0x1719;
+    undefined field2159_0x171a;
+    undefined field2160_0x171b;
+    undefined field2161_0x171c;
+    undefined field2162_0x171d;
+    undefined field2163_0x171e;
+    undefined field2164_0x171f;
+    undefined field2165_0x1720;
+    undefined field2166_0x1721;
+    undefined field2167_0x1722;
+    undefined field2168_0x1723;
+    undefined field2169_0x1724;
+    undefined field2170_0x1725;
+    undefined field2171_0x1726;
+    undefined field2172_0x1727;
+    undefined field2173_0x1728;
+    undefined field2174_0x1729;
+    undefined field2175_0x172a;
+    undefined field2176_0x172b;
+    undefined field2177_0x172c;
+    undefined field2178_0x172d;
+    undefined field2179_0x172e;
+    undefined field2180_0x172f;
+    undefined field2181_0x1730;
+    undefined field2182_0x1731;
+    undefined field2183_0x1732;
+    undefined field2184_0x1733;
+    undefined field2185_0x1734;
+    undefined field2186_0x1735;
+    undefined field2187_0x1736;
+    undefined field2188_0x1737;
+    undefined field2189_0x1738;
+    undefined field2190_0x1739;
+    undefined field2191_0x173a;
+    undefined field2192_0x173b;
+    undefined field2193_0x173c;
+    undefined field2194_0x173d;
+    undefined field2195_0x173e;
+    undefined field2196_0x173f;
+    undefined field2197_0x1740;
+    undefined field2198_0x1741;
+    undefined field2199_0x1742;
+    undefined field2200_0x1743;
+    undefined field2201_0x1744;
+    undefined field2202_0x1745;
+    undefined field2203_0x1746;
+    undefined field2204_0x1747;
+    undefined field2205_0x1748;
+    undefined field2206_0x1749;
+    undefined field2207_0x174a;
+    undefined field2208_0x174b;
+    undefined field2209_0x174c;
+    undefined field2210_0x174d;
+    undefined field2211_0x174e;
+    undefined field2212_0x174f;
+    undefined field2213_0x1750;
+    undefined field2214_0x1751;
+    undefined field2215_0x1752;
+    undefined field2216_0x1753;
+    undefined field2217_0x1754;
+    undefined field2218_0x1755;
+    undefined field2219_0x1756;
+    undefined field2220_0x1757;
+    undefined field2221_0x1758;
+    undefined field2222_0x1759;
+    undefined field2223_0x175a;
+    undefined field2224_0x175b;
+    undefined field2225_0x175c;
+    undefined field2226_0x175d;
+    undefined field2227_0x175e;
+    undefined field2228_0x175f;
+    undefined field2229_0x1760;
+    undefined field2230_0x1761;
+    undefined field2231_0x1762;
+    undefined field2232_0x1763;
+    undefined field2233_0x1764;
+    undefined field2234_0x1765;
+    undefined field2235_0x1766;
+    undefined field2236_0x1767;
+    undefined field2237_0x1768;
+    undefined field2238_0x1769;
+    undefined field2239_0x176a;
+    undefined field2240_0x176b;
+    undefined field2241_0x176c;
+    undefined field2242_0x176d;
+    undefined field2243_0x176e;
+    undefined field2244_0x176f;
+    undefined field2245_0x1770;
+    undefined field2246_0x1771;
+    undefined field2247_0x1772;
+    undefined field2248_0x1773;
+    undefined field2249_0x1774;
+    undefined field2250_0x1775;
+    undefined field2251_0x1776;
+    undefined field2252_0x1777;
+    undefined field2253_0x1778;
+    undefined field2254_0x1779;
+    undefined field2255_0x177a;
+    undefined field2256_0x177b;
+    undefined field2257_0x177c;
+    undefined field2258_0x177d;
+    undefined field2259_0x177e;
+    undefined field2260_0x177f;
+    undefined field2261_0x1780;
+    undefined field2262_0x1781;
+    undefined field2263_0x1782;
+    undefined field2264_0x1783;
+    undefined field2265_0x1784;
+    undefined field2266_0x1785;
+    undefined field2267_0x1786;
+    undefined field2268_0x1787;
+    undefined field2269_0x1788;
+    undefined field2270_0x1789;
+    undefined field2271_0x178a;
+    undefined field2272_0x178b;
+    undefined field2273_0x178c;
+    undefined field2274_0x178d;
+    undefined field2275_0x178e;
+    undefined field2276_0x178f;
+    undefined field2277_0x1790;
+    undefined field2278_0x1791;
+    undefined field2279_0x1792;
+    undefined field2280_0x1793;
+    undefined field2281_0x1794;
+    undefined field2282_0x1795;
+    undefined field2283_0x1796;
+    undefined field2284_0x1797;
+    undefined field2285_0x1798;
+    undefined field2286_0x1799;
+    undefined field2287_0x179a;
+    undefined field2288_0x179b;
+    undefined field2289_0x179c;
+    undefined field2290_0x179d;
+    undefined field2291_0x179e;
+    undefined field2292_0x179f;
+    undefined field2293_0x17a0;
+    undefined field2294_0x17a1;
+    undefined field2295_0x17a2;
+    undefined field2296_0x17a3;
+    undefined field2297_0x17a4;
+    undefined field2298_0x17a5;
+    undefined field2299_0x17a6;
+    undefined field2300_0x17a7;
+    undefined field2301_0x17a8;
+    undefined field2302_0x17a9;
+    undefined field2303_0x17aa;
+    undefined field2304_0x17ab;
+    undefined field2305_0x17ac;
+    undefined field2306_0x17ad;
+    undefined field2307_0x17ae;
+    undefined field2308_0x17af;
+    undefined field2309_0x17b0;
+    undefined field2310_0x17b1;
+    undefined field2311_0x17b2;
+    undefined field2312_0x17b3;
+    undefined field2313_0x17b4;
+    undefined field2314_0x17b5;
+    undefined field2315_0x17b6;
+    undefined field2316_0x17b7;
+    undefined field2317_0x17b8;
+    undefined field2318_0x17b9;
+    undefined field2319_0x17ba;
+    undefined field2320_0x17bb;
+    undefined field2321_0x17bc;
+    undefined field2322_0x17bd;
+    undefined field2323_0x17be;
+    undefined field2324_0x17bf;
+    undefined field2325_0x17c0;
+    undefined field2326_0x17c1;
+    undefined field2327_0x17c2;
+    undefined field2328_0x17c3;
+    undefined field2329_0x17c4;
+    undefined field2330_0x17c5;
+    undefined field2331_0x17c6;
+    undefined field2332_0x17c7;
+    undefined field2333_0x17c8;
+    undefined field2334_0x17c9;
+    undefined field2335_0x17ca;
+    undefined field2336_0x17cb;
+    undefined field2337_0x17cc;
+    undefined field2338_0x17cd;
+    undefined field2339_0x17ce;
+    undefined field2340_0x17cf;
+    undefined field2341_0x17d0;
+    undefined field2342_0x17d1;
+    undefined field2343_0x17d2;
+    undefined field2344_0x17d3;
+    undefined field2345_0x17d4;
+    undefined field2346_0x17d5;
+    undefined field2347_0x17d6;
+    undefined field2348_0x17d7;
+    undefined field2349_0x17d8;
+    undefined field2350_0x17d9;
+    undefined field2351_0x17da;
+    undefined field2352_0x17db;
+    undefined field2353_0x17dc;
+    undefined field2354_0x17dd;
+    undefined field2355_0x17de;
+    undefined field2356_0x17df;
+    undefined field2357_0x17e0;
+    undefined field2358_0x17e1;
+    undefined field2359_0x17e2;
+    undefined field2360_0x17e3;
+    undefined field2361_0x17e4;
+    undefined field2362_0x17e5;
+    undefined field2363_0x17e6;
+    undefined field2364_0x17e7;
+    undefined field2365_0x17e8;
+    undefined field2366_0x17e9;
+    undefined field2367_0x17ea;
+    undefined field2368_0x17eb;
+    undefined field2369_0x17ec;
+    undefined field2370_0x17ed;
+    undefined field2371_0x17ee;
+    undefined field2372_0x17ef;
+    undefined field2373_0x17f0;
+    undefined field2374_0x17f1;
+    undefined field2375_0x17f2;
+    undefined field2376_0x17f3;
+    undefined field2377_0x17f4;
+    undefined field2378_0x17f5;
+    undefined field2379_0x17f6;
+    undefined field2380_0x17f7;
+    undefined field2381_0x17f8;
+    undefined field2382_0x17f9;
+    undefined field2383_0x17fa;
+    undefined field2384_0x17fb;
+    undefined field2385_0x17fc;
+    undefined field2386_0x17fd;
+    undefined field2387_0x17fe;
+    undefined field2388_0x17ff;
+    undefined field2389_0x1800;
+    undefined field2390_0x1801;
+    undefined field2391_0x1802;
+    undefined field2392_0x1803;
+    undefined field2393_0x1804;
+    undefined field2394_0x1805;
+    undefined field2395_0x1806;
+    undefined field2396_0x1807;
+    undefined field2397_0x1808;
+    undefined field2398_0x1809;
+    undefined field2399_0x180a;
+    undefined field2400_0x180b;
+    undefined field2401_0x180c;
+    undefined field2402_0x180d;
+    undefined field2403_0x180e;
+    undefined field2404_0x180f;
+    undefined field2405_0x1810;
+    undefined field2406_0x1811;
+    undefined field2407_0x1812;
+    undefined field2408_0x1813;
+    undefined field2409_0x1814;
+    undefined field2410_0x1815;
+    undefined field2411_0x1816;
+    undefined field2412_0x1817;
+    undefined field2413_0x1818;
+    undefined field2414_0x1819;
+    undefined field2415_0x181a;
+    undefined field2416_0x181b;
+    undefined field2417_0x181c;
+    undefined field2418_0x181d;
+    undefined field2419_0x181e;
+    undefined field2420_0x181f;
+    undefined field2421_0x1820;
+    undefined field2422_0x1821;
+    undefined field2423_0x1822;
+    undefined field2424_0x1823;
+    undefined field2425_0x1824;
+    undefined field2426_0x1825;
+    undefined field2427_0x1826;
+    undefined field2428_0x1827;
+    undefined field2429_0x1828;
+    undefined field2430_0x1829;
+    undefined field2431_0x182a;
+    undefined field2432_0x182b;
+    undefined field2433_0x182c;
+    undefined field2434_0x182d;
+    undefined field2435_0x182e;
+    undefined field2436_0x182f;
+    undefined field2437_0x1830;
+    undefined field2438_0x1831;
+    undefined field2439_0x1832;
+    undefined field2440_0x1833;
+    undefined field2441_0x1834;
+    undefined field2442_0x1835;
+    undefined field2443_0x1836;
+    undefined field2444_0x1837;
+    undefined field2445_0x1838;
+    undefined field2446_0x1839;
+    undefined field2447_0x183a;
+    undefined field2448_0x183b;
+    undefined field2449_0x183c;
+    undefined field2450_0x183d;
+    undefined field2451_0x183e;
+    undefined field2452_0x183f;
+    undefined field2453_0x1840;
+    undefined field2454_0x1841;
+    undefined field2455_0x1842;
+    undefined field2456_0x1843;
+    undefined field2457_0x1844;
+    undefined field2458_0x1845;
+    undefined field2459_0x1846;
+    undefined field2460_0x1847;
+    undefined field2461_0x1848;
+    undefined field2462_0x1849;
+    undefined field2463_0x184a;
+    undefined field2464_0x184b;
+    undefined field2465_0x184c;
+    undefined field2466_0x184d;
+    undefined field2467_0x184e;
+    undefined field2468_0x184f;
+    undefined field2469_0x1850;
+    undefined field2470_0x1851;
+    undefined field2471_0x1852;
+    undefined field2472_0x1853;
+    undefined field2473_0x1854;
+    undefined field2474_0x1855;
+    undefined field2475_0x1856;
+    undefined field2476_0x1857;
+    undefined field2477_0x1858;
+    undefined field2478_0x1859;
+    undefined field2479_0x185a;
+    undefined field2480_0x185b;
+    undefined field2481_0x185c;
+    undefined field2482_0x185d;
+    undefined field2483_0x185e;
+    undefined field2484_0x185f;
+    undefined field2485_0x1860;
+    undefined field2486_0x1861;
+    undefined field2487_0x1862;
+    undefined field2488_0x1863;
+    undefined field2489_0x1864;
+    undefined field2490_0x1865;
+    undefined field2491_0x1866;
+    undefined field2492_0x1867;
+    undefined field2493_0x1868;
+    undefined field2494_0x1869;
+    undefined field2495_0x186a;
+    undefined field2496_0x186b;
+    undefined field2497_0x186c;
+    undefined field2498_0x186d;
+    undefined field2499_0x186e;
+    undefined field2500_0x186f;
+    undefined field2501_0x1870;
+    undefined field2502_0x1871;
+    undefined field2503_0x1872;
+    undefined field2504_0x1873;
+    undefined field2505_0x1874;
+    undefined field2506_0x1875;
+    undefined field2507_0x1876;
+    undefined field2508_0x1877;
+    undefined field2509_0x1878;
+    undefined field2510_0x1879;
+    undefined field2511_0x187a;
+    undefined field2512_0x187b;
+    undefined field2513_0x187c;
+    undefined field2514_0x187d;
+    undefined field2515_0x187e;
+    undefined field2516_0x187f;
+    undefined field2517_0x1880;
+    undefined field2518_0x1881;
+    undefined field2519_0x1882;
+    undefined field2520_0x1883;
+    undefined field2521_0x1884;
+    undefined field2522_0x1885;
+    undefined field2523_0x1886;
+    undefined field2524_0x1887;
+};
+
+typedef enum ENTD_team {
+    player_control=8,
+    random_present=64,
+    always_present=128
+} ENTD_team;
+
+typedef struct CurrentMapTileData CurrentMapTileData, *PCurrentMapTileData;
 
 struct CurrentMapTileData {
     enum TileType TypeType;
@@ -6730,6 +10555,12 @@ struct ENTDDisplayUnitData {
     dword InitializationByte;
 };
 
+typedef enum motion_flags_4 {
+    action2=33554432,
+    Float=536870912,
+    Drg_Jump=2147483648
+} motion_flags_4;
+
 typedef struct MapCoordinateStats MapCoordinateStats, *PMapCoordinateStats;
 
 struct MapCoordinateStats {
@@ -6739,6 +10570,19 @@ struct MapCoordinateStats {
     int MaxX;
     int MaxY;
     int ModifiedPalettes;
+};
+
+typedef enum motion_flags {
+    action2=2,
+    Float=32,
+    Drg_Jump=128
+} motion_flags;
+
+typedef struct vfx_timers_all vfx_timers_all, *Pvfx_timers_all;
+
+struct vfx_timers_all {
+    struct vfx_timers_hdr timers_hdr;
+    struct vfx_timers timers;
 };
 
 typedef enum GameStateVar {
@@ -7085,11 +10929,13 @@ void CallInitialiseGameState(void)
 
 
 
-void Calculate_File_Header_NNL(fileOpenDesc *param_1,int param_2,int param_3,u_long *param_4)
+int Calculate_File_Header_NNL(fileOpenDesc *param_1,int param_2,int param_3,u_long *param_4)
 
 {
-  _Calculate_File_Header(param_1,param_2,param_3,param_4,-1);
-  return;
+  int _i;
+  
+  _i = _Calculate_File_Header(param_1,param_2,param_3,param_4,-1);
+  return _i;
 }
 
 
@@ -7327,7 +11173,7 @@ void SUZUKI_NOOP_2(void)
 
 
 
-void FUN_800121dc(MusDataAll *MusData,short shift_time,short change_vol)
+void Reset_Mus(MusDataAll *MusData,short shift_time,short change_vol)
 
 {
   ulong spuInterruptTemp;
@@ -7351,6 +11197,30 @@ void FUN_800121dc(MusDataAll *MusData,short shift_time,short change_vol)
 
 
 
+void force_recalculateReverb(MusDataAll *musData,short shiftTime,short changeVol)
+
+{
+  ulong Event;
+  
+  if (musData != (MusDataAll *)0x0) {
+    DisableEvent(rootCounter2Event);
+    (musData->HeaderData).volset1.hasVolume.field0_0x0 = 0;
+    (musData->HeaderData).volset1.hasVolume.Volume = 0;
+    Calc_Mus_VolChange(musData,(int)shiftTime,changeVol);
+    SetReverbParam((musData->HeaderData).ReverbMode,(musData->HeaderData).volumeDepth,
+                   (musData->HeaderData).reverbDelay,(musData->HeaderData).reverbFeedback);
+    ForceChannelFunc(musData,0x71ff);
+    get_activeChannels(musData);
+    Event = rootCounter2Event;
+    (musData->HeaderData)._0_cmdfield =
+         (musData->HeaderData)._0_cmdfield & ~recalculate_reverb | music_playing;
+    EnableEvent(Event);
+  }
+  return;
+}
+
+
+
 void Deallocate_Mus_Channels(MusDataAll *musData)
 
 {
@@ -7361,6 +11231,116 @@ void Deallocate_Mus_Channels(MusDataAll *musData)
     _channelFlags = getActiveChannels(musData);
     inactiveChannels = _channelFlags | inactiveChannels;
   }
+  return;
+}
+
+
+
+void FUN_80012380(MusDataAll *param_1)
+
+{
+  uint uVar1;
+  
+  if (param_1 != (MusDataAll *)0x0) {
+    (param_1->HeaderData)._0_cmdfield =
+         (param_1->HeaderData)._0_cmdfield & ~music_playing | recalculate_reverb;
+    uVar1 = getActiveChannels(param_1);
+    inactiveChannels = uVar1 | inactiveChannels;
+  }
+  return;
+}
+
+
+
+void FUN_800123cc(void)
+
+{
+  mus_10 mVar1;
+  uint uVar2;
+  MusDataAll *musData;
+  
+  musData = CurrentlyPlayingMus;
+  if (CurrentlyPlayingMus != (MusDataAll *)0x0) {
+    do {
+      mVar1 = (musData->HeaderData)._0_cmdfield;
+      if ((mVar1 & actionflag1) != 0) {
+        (musData->HeaderData)._0_cmdfield = mVar1 & ~music_playing;
+        uVar2 = getActiveChannels(musData);
+        inactiveChannels = uVar2 | inactiveChannels;
+      }
+      musData = (musData->HeaderData).PrevPlayedMus;
+    } while (musData != (MusDataAll *)0x0);
+  }
+  return;
+}
+
+
+
+void FUN_80012444(int param_1,int param_2)
+
+{
+  int iVar1;
+  uint uVar2;
+  int *piVar3;
+  ushort *puVar4;
+  uint uVar5;
+  ushort *puVar6;
+  
+  puVar4 = (ushort *)(param_1 + 0xb8);
+  puVar6 = (ushort *)(param_2 + 0x22);
+  piVar3 = (int *)(param_1 + 0xd8);
+  uVar5 = (uint)*(byte *)(param_1 + 0x16);
+  uVar2 = (uint)*(byte *)(param_2 + 0x14);
+  do {
+    *puVar4 = *puVar4 | 0x4000;
+    if (uVar2 == 0) {
+      *piVar3 = 0;
+    }
+    else {
+      iVar1 = 0;
+      if (*puVar6 != 0) {
+        iVar1 = param_2 + (uint)*puVar6;
+      }
+      *piVar3 = iVar1;
+      uVar2 = uVar2 - 1;
+      puVar6 = puVar6 + 1;
+    }
+    piVar3 = piVar3 + 0x58;
+    uVar5 = uVar5 - 1;
+    puVar4 = puVar4 + 0xb0;
+  } while (uVar5 != 0);
+  return;
+}
+
+
+
+void FUN_800124ac(void)
+
+{
+  return;
+}
+
+
+
+void FUN_800124b4(void)
+
+{
+  return;
+}
+
+
+
+void FUN_800124bc(void)
+
+{
+  return;
+}
+
+
+
+void FUN_800124c4(void)
+
+{
   return;
 }
 
@@ -7405,58 +11385,57 @@ void Play_Sound2(uint sfx_ID)
 
 
 
-void PlaySound_FromMUS(MusDataAll *MusData)
+void PlaySound_findChannel(uint sfx_ID)
 
 {
-  uint uVar1;
+  uint channel_ID;
   
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
-    uVar1 = FUN_80012d40((uint)MusData,2);
+    channel_ID = get_channel_for_sfx(sfx_ID,2);
     always2 = 2;
-    Play_Sound_Worker((int)(short)((ushort)uVar1 | 0x2000),(uint)MusData,0x6000,0x4000);
+    Play_Sound_Worker((int)(short)((ushort)channel_ID | 0x2000),sfx_ID,0x6000,0x4000);
   }
   return;
 }
 
 
 
-void Play_Sound3(uint sfx_ID,ushort param_2)
+void PlaySound_inChannel(uint sfx_ID,ushort channel_ID)
 
 {
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
     always2 = 2;
-    Play_Sound_Worker((int)(short)(param_2 & 0xfffe | 0x2000),sfx_ID,0x6000,0x4000);
+    Play_Sound_Worker((int)(short)(channel_ID & 0xfffe | 0x2000),sfx_ID,0x6000,0x4000);
   }
   return;
 }
 
 
 
-void PlaySound_FromMus2(uint sfx_id,int param_2,int param_3)
+void PlaySound_findChannel_withSettings(uint sfx_id,uint param_2,uint volume_balance)
 
 {
-  uint uVar1;
+  uint channel_ID;
   
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
-    uVar1 = FUN_80012d40(sfx_id,2);
+    channel_ID = get_channel_for_sfx(sfx_id,2);
     always2 = 2;
-    Play_Sound_Worker((int)(short)((ushort)uVar1 | 0x2000),sfx_id,
-                      (short)((uint)(param_2 << 0x18) >> 0x10),
-                      (short)((uint)(param_3 << 0x18) >> 0x10));
+    Play_Sound_Worker((int)(short)((ushort)channel_ID | 0x2000),sfx_id,
+                      (short)((param_2 << 0x18) >> 0x10),(short)((volume_balance << 0x18) >> 0x10));
   }
   return;
 }
 
 
 
-void Play_Sound4(uint sfx_ID,ushort param_2,int param_3,int param_4)
+void PlaySound_inChannel_withSettings
+               (uint sfx_ID,ushort channel_id,uint param_3,uint volume_balance)
 
 {
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
     always2 = 2;
-    Play_Sound_Worker((int)(short)(param_2 & 0xfffe | 0x2000),sfx_ID,
-                      (short)((uint)(param_3 << 0x18) >> 0x10),
-                      (short)((uint)(param_4 << 0x18) >> 0x10));
+    Play_Sound_Worker((int)(short)(channel_id & 0xfffe | 0x2000),sfx_ID,
+                      (short)((param_3 << 0x18) >> 0x10),(short)((volume_balance << 0x18) >> 0x10));
   }
   return;
 }
@@ -7507,7 +11486,7 @@ void PauseActiveMUS(void)
   ChannelData = FirstMUS->ChannelData;
   do {
     numChannels = numChannels + -1;
-    if ((ChannelData->channelflags & 1) != 0) {
+    if ((ChannelData->channelflags & action1) != 0) {
       uVar1 = (ChannelData->channel_inter).channelSecondary.channel_notedata.using_channels;
       ChannelData->channelflags = 0;
       acc_OwnedChannels = acc_OwnedChannels | uVar1;
@@ -7542,7 +11521,7 @@ void Pause_SpecificMUS(int param_1)
   ChannelData = FirstMUS->ChannelData;
   do {
     numChannels = numChannels + -1;
-    if (((ChannelData->channelflags & 1) != 0) &&
+    if (((ChannelData->channelflags & action1) != 0) &&
        (param1 = *(int *)&(ChannelData->channel_inter).channelSecondary.field_0x4,
        param1 >> 0x10 == (int)sVar1)) {
       AccumulateChannelsToPause(param1);
@@ -7575,8 +11554,8 @@ void AccumulateChannelsToPause(int param1)
   _channel_data = &FirstMUS->ChannelData[0].channel_inter.channelSecondary.channel_notedata;
   do {
     NumChannels = NumChannels + -1;
-    if (((ChannelData->channelflags & 1) != 0) && (*(int *)&_channel_data[-1].field_0x100 == param1)
-       ) {
+    if (((ChannelData->channelflags & action1) != 0) &&
+       (*(int *)&_channel_data[-1].field_0x100 == param1)) {
       _channelbits = _channel_data->using_channels;
       OwnedChannels = OwnedChannels | mask;
       ChannelData->channelflags = 0;
@@ -7613,7 +11592,7 @@ void Pause_SpecificChannel(uint channel)
   _channel = FirstMUS->ChannelData + channel;
   do {
     iVar2 = iVar2 + -1;
-    if ((_channel->channelflags & 1) != 0) {
+    if ((_channel->channelflags & action1) != 0) {
       uVar1 = (_channel->channel_inter).channelSecondary.channel_notedata.using_channels;
       OwnedChannels = OwnedChannels | channel_flag;
       _channel->channelflags = 0;
@@ -7679,7 +11658,7 @@ void FUN_80012b6c(MusDataAll *MusData,uint param_2)
     do {
       pMVar4 = &(pMVar1->channel_inter).channelSecondary.channel_notedata;
       numChannels = numChannels + -1;
-      if (((channelData->channelflags & 1) != 0) &&
+      if (((channelData->channelflags & action1) != 0) &&
          (*(MusDataAll **)((int)(pMVar4 + -1) + 0x100) == MusData)) {
         uVar2 = pMVar4->using_channels;
         OwnedChannels = OwnedChannels | mask;
@@ -7700,9 +11679,9 @@ void FUN_80012b6c(MusDataAll *MusData,uint param_2)
       pMVar3 = &pMVar1->channel_inter;
       hasSound = &channelData->channelflags;
       channelData = channelData + 1;
-      if (((*hasSound & 1) != 0) &&
+      if (((*hasSound & action1) != 0) &&
          (*(MusDataAll **)&(pMVar3->channelSecondary).field_0x4 == MusData)) {
-        (pMVar3->channelSecondary).channel_notedata.field56_0x60 = (short)(param_2 << 8);
+        (pMVar3->channelSecondary).channel_notedata.field55_0x60 = (short)(param_2 << 8);
         pMVar3->intermediaryflags = volume_change;
       }
       numChannels = numChannels + -1;
@@ -7730,8 +11709,8 @@ void FUN_80012c58(MusDataAll *musData,int param_2)
     pMVar3 = &pMVar1->channel_inter;
     pSVar2 = &_channelData->channelflags;
     _channelData = _channelData + 1;
-    if (((*pSVar2 & 1) != 0) && (*(MusDataAll **)&(pMVar3->channelSecondary).field_0x4 == musData))
-    {
+    if (((*pSVar2 & action1) != 0) &&
+       (*(MusDataAll **)&(pMVar3->channelSecondary).field_0x4 == musData)) {
       (pMVar3->channelSecondary).channel_notedata.Vol_Bal = (short)(param_2 << 8);
       pMVar3->intermediaryflags = volume_change;
     }
@@ -7760,7 +11739,7 @@ uint get_MUS_channels(MusDataAll *musData)
     do {
       hasSound = &firstChannel->channelflags;
       firstChannel = firstChannel + 1;
-      if ((*hasSound & 1) != 0) {
+      if ((*hasSound & action1) != 0) {
         acc_Channels = acc_Channels | mask;
       }
       numChannels = numChannels + -1;
@@ -7770,7 +11749,7 @@ uint get_MUS_channels(MusDataAll *musData)
   else {
     do {
       numChannels = numChannels + -1;
-      if (((firstChannel->channelflags & 1) != 0) &&
+      if (((firstChannel->channelflags & action1) != 0) &&
          (*(MusDataAll **)&(firstChannel->channel_inter).channelSecondary.field_0x4 == musData)) {
         acc_Channels = acc_Channels | mask;
       }
@@ -7785,64 +11764,67 @@ uint get_MUS_channels(MusDataAll *musData)
 
 // WARNING: Type propagation algorithm not settling
 
-uint FUN_80012d40(uint MusData,uint numChannels)
+uint get_channel_for_sfx(uint sfx_ID,uint numChannels)
 
 {
-  MusicChannelData *pMVar1;
   uint isChannel;
-  MusicChannelInner *pMVar2;
+  MusicChannelInner *_channel_notedata;
+  uint uVar1;
   MusicChannelData *ChannelData;
-  int channel;
-  uint i;
+  MusicChannelData *channel;
+  uint _channel_Flag;
   int NumChannels;
+  uint uVar2;
   uint uVar3;
-  uint uVar4;
   uint allChannelsMask;
-  uint in_t5;
-  uint uVar5;
+  uint _i;
+  uint _i_temp;
+  MusicChannelData *_chnl_data;
   
   acc_activeChannels = 0;
   acc_inactiveChannels = 0;
-  i = 1;
+  _channel_Flag = 1;
   NumChannels = 8;
   ChannelData = FirstMUS->ChannelData;
-  pMVar1 = FirstMUS->ChannelData;
+  _chnl_data = FirstMUS->ChannelData;
   do {
-    pMVar2 = &(pMVar1->channel_inter).channelSecondary.channel_notedata;
+    _channel_notedata = &(_chnl_data->channel_inter).channelSecondary.channel_notedata;
     NumChannels = NumChannels + -1;
-    if (((ChannelData->channelflags & 1) != 0) && (*(uint *)((int)(pMVar2 + -1) + 0x100) == MusData)
-       ) {
-      isChannel = pMVar2->using_channels;
-      acc_inactiveChannels = acc_inactiveChannels | i;
+    if (((ChannelData->channelflags & action1) != 0) &&
+       (*(uint *)((int)(_channel_notedata + -1) + 0x100) == sfx_ID)) {
+      isChannel = _channel_notedata->using_channels;
+      acc_inactiveChannels = acc_inactiveChannels | _channel_Flag;
       ChannelData->channelflags = 0;
       acc_activeChannels = acc_activeChannels | isChannel;
     }
-    i = i << 1;
-    pMVar1 = (MusicChannelData *)(pMVar2 + 1);
+    _channel_Flag = _channel_Flag << 1;
+    _chnl_data = (MusicChannelData *)(_channel_notedata + 1);
     ChannelData = ChannelData + 1;
   } while (NumChannels != 0);
-  i = 6 - numChannels;
+  _channel_Flag = 6 - numChannels;
   allChannelsMask = 0xffffffff >> (0x20 - numChannels & 0x1f);
-  isChannel = allChannelsMask << (i & 0x1f);
-  channel = (int)FirstMUS + i * 0x160 + 0xb8;
-  uVar3 = 0xffffffff;
+  isChannel = allChannelsMask << (_channel_Flag & 0x1f);
+  channel = (MusicChannelData *)((int)FirstMUS + _channel_Flag * 0x160 + 0xb8);
+  uVar2 = 0xffffffff;
   while( true ) {
     if ((~acc_inactiveChannels & (FirstMUS->HeaderData).OwnedChannels & isChannel) == 0) {
-      return i;
+      return _channel_Flag;
     }
+    uVar1 = *(uint *)&(channel->channel_inter).channelSecondary.field_0xc;
     isChannel = isChannel >> (numChannels & 0x1f);
-    uVar4 = uVar3;
-    uVar5 = in_t5;
-    if ((uVar3 <= *(uint *)(channel + 0x10)) ||
-       (uVar4 = *(uint *)(channel + 0x10), uVar5 = i, *(byte *)(channel + 0xd) < 0x21)) {
-      uVar3 = uVar4;
-      in_t5 = uVar5;
+    uVar3 = uVar2;
+    _i_temp = _i;
+    if ((uVar2 <= uVar1) ||
+       (uVar3 = uVar1, _i_temp = _channel_Flag,
+       (byte)(channel->channel_inter).channelSecondary.field_0x9 < 0x21)) {
+      uVar2 = uVar3;
+      _i = _i_temp;
     }
     if (isChannel < allChannelsMask) break;
-    channel = channel + numChannels * -0x160;
-    i = i - numChannels;
+    channel = channel + -numChannels;
+    _channel_Flag = _channel_Flag - numChannels;
   }
-  return in_t5;
+  return _i;
 }
 
 
@@ -7881,7 +11863,7 @@ void Calc_Mus_VolChange(MusDataAll *MusData,uint shiftTime,short changeVol)
     SetReverbParam((MusData->HeaderData).ReverbMode,(MusData->HeaderData).volumeDepth,
                    (MusData->HeaderData).reverbDelay,(MusData->HeaderData).reverbFeedback);
     ForceChannelFunc(MusData,0x71ff);
-    FUN_80013544(MusData);
+    get_activeChannels(MusData);
     gpuInterruptedEvent = rootCounter2Event;
     (MusData->HeaderData)._0_cmdfield =
          (MusData->HeaderData)._0_cmdfield & ~recalculate_reverb | music_playing;
@@ -7892,23 +11874,24 @@ void Calc_Mus_VolChange(MusDataAll *MusData,uint shiftTime,short changeVol)
 
 
 
-void FUN_80013480(undefined4 *param_1)
+void FUN_80013480(MusDataAll *param_1)
 
 {
   uint uVar1;
-  undefined4 uVar2;
+  uint uVar2;
   
-  if ((param_1[1] != 0) && ((*(ushort *)(param_1 + 4) & 0x10) != 0)) {
+  if (((param_1->HeaderData).NextMus != (MusDataAll *)0x0) &&
+     (((param_1->HeaderData)._0_cmdfield & 0x10) != 0)) {
     DisableEvent(rootCounter2Event);
-    uVar1 = getActiveChannels((MusDataAll *)param_1);
-    uVar2 = param_1[9];
+    uVar1 = getActiveChannels(param_1);
+    uVar2 = (param_1->HeaderData).field16_0x24;
     inactiveChannels = uVar1 | inactiveChannels;
-    FUN_80013fc0(param_1,(undefined4 *)param_1[1]);
-    param_1[0xb] = uVar2;
-    ForceChannelFunc((MusDataAll *)param_1,0x71ff);
-    param_1[0x19] = 0;
-    param_1[0x18] = 0;
-    FUN_80013544((MusDataAll *)param_1);
+    FUN_80013fc0(param_1,(param_1->HeaderData).NextMus);
+    *(uint *)&(param_1->HeaderData).field_0x2c = uVar2;
+    ForceChannelFunc(param_1,0x71ff);
+    (param_1->HeaderData).field50_0x64 = 0;
+    (param_1->HeaderData).ModifiedChannels = 0;
+    get_activeChannels(param_1);
     EnableEvent(rootCounter2Event);
   }
   return;
@@ -7916,12 +11899,12 @@ void FUN_80013480(undefined4 *param_1)
 
 
 
-uint FUN_80013544(MusDataAll *param_1)
+uint get_activeChannels(MusDataAll *param_1)
 
 {
   MusicChannelData *pMVar1;
-  uint uVar2;
-  MusicChannelIntermediary *pMVar3;
+  SUZUKInoteflags12 _allchannel_flags;
+  MusicChannelIntermediary *pMVar2;
   MusicChannelData *_channelData;
   uint _numChannels;
   uint _z;
@@ -7931,15 +11914,16 @@ uint FUN_80013544(MusDataAll *param_1)
   _z = 0;
   pMVar1 = param_1->ChannelData;
   do {
-    pMVar3 = &pMVar1->channel_inter;
-    uVar2._0_2_ = _channelData->channelflags;
-    uVar2._2_2_ = (_channelData->channel_inter).intermediaryflags;
+    pMVar2 = &pMVar1->channel_inter;
+    _allchannel_flags._0_2_ = _channelData->channelflags;
+    _allchannel_flags._2_2_ = (_channelData->channel_inter).intermediaryflags;
     _numChannels = _numChannels - 1;
-    if (((uVar2 & 0x101) == 0x101) && ((_channelData->channelflags & 0x30) == 0)) {
-      _z = _z | (pMVar3->channelSecondary).channel_notedata.using_channels;
-      pMVar3->intermediaryflags = pMVar3->intermediaryflags | 1;
+    if (((_allchannel_flags & (action1|hold_note)) == (action1|hold_note)) &&
+       ((_channelData->channelflags & 0x30) == 0)) {
+      _z = _z | (pMVar2->channelSecondary).channel_notedata.using_channels;
+      pMVar2->intermediaryflags = pMVar2->intermediaryflags | 1;
     }
-    pMVar1 = (MusicChannelData *)(pMVar3 + 1);
+    pMVar1 = (MusicChannelData *)(pMVar2 + 1);
     _channelData = _channelData + 1;
   } while (_numChannels != 0);
   return _z;
@@ -8015,13 +11999,13 @@ void TransferMusicData(MusicDataHeader *MusicData)
   
   trnsfrData = MusicData->TransferAddr;
   MusicData->_0_cmdfield = MusicData->_0_cmdfield | actionflag1;
-  *(undefined2 *)&MusicData->field_0x12 = *(undefined2 *)&(trnsfrData->HeaderData).field_0x10;
-  MusicData->NumChannelDedicate = (trnsfrData->HeaderData).NumChannelDedicate;
-  MusicData->field8_0x15 = (trnsfrData->HeaderData).field_0x13;
+  MusicData->field5_0x12 = (trnsfrData->HeaderData).field7_0x10;
+  MusicData->NumChannelDedicate = (trnsfrData->HeaderData).field_0x12;
+  MusicData->length_192 = (trnsfrData->HeaderData).length_192;
   MusicData->NumChannels = (trnsfrData->HeaderData).NumChannels;
   MusicData->field_0x17 = (trnsfrData->HeaderData).field_0x15;
-  MusicData->Soundfont_ID = *(short *)&(trnsfrData->HeaderData).field_0x16;
-  *(undefined2 *)&MusicData->field_0x1a = *(undefined2 *)&(trnsfrData->HeaderData).field_0x18;
+  MusicData->Soundfont_ID = (trnsfrData->HeaderData).field12_0x16;
+  MusicData->field11_0x1a = (trnsfrData->HeaderData).field13_0x18;
   MusicData->ReverbMode = (int)(trnsfrData->HeaderData).reverbMode_small;
   MusicData->volumeDepth = (ushort)(trnsfrData->HeaderData).volumeDepth_small << 8;
   MusicData->reverbDelay = (uint)(trnsfrData->HeaderData).reverbDelay_small;
@@ -8057,19 +12041,19 @@ void InitialiseMusHeader(MusicDataHeader *MusData)
   byte bVar1;
   
   Remove_Mus_From_Queue_Forward(MusData);
-  bVar1 = MusData->field8_0x15;
+  bVar1 = MusData->length_192;
   MusData->field_0x1c = 0;
   MusData->field_0x1d = 0;
-  MusData->field24_0x30 = 0;
+  MusData->field22_0x30 = 0;
   MusData->CurMeasure = 1;
   MusData->CurBeat = 0;
-  MusData->framesUntil_nextBeat = 1;
-  MusData->field19_0x28 = 0;
-  MusData->field18_0x24 = 0;
-  MusData->field17_0x20 = 0;
+  MusData->_92s_Until_nextBeat = 1;
+  MusData->field17_0x28 = 0;
+  MusData->field16_0x24 = 0;
+  MusData->field15_0x20 = 0;
   MusData->OwnedChannels = 0;
   MusData->ModifiedChannels = 0;
-  MusData->field52_0x64 = 0;
+  MusData->field50_0x64 = 0;
   MusData->LFOVoiceBits = 0;
   MusData->NoiseVoiceBits = 0;
   MusData->ReverbVoiceBits = 0;
@@ -8081,18 +12065,20 @@ void InitialiseMusHeader(MusicDataHeader *MusData)
   (MusData->volset1).ChangeVol = 0;
   (MusData->volset2).ChangeVol = 0;
   (MusData->volset3).ChangeVol = 0;
-  MusData->field59_0x80 = 0;
-  MusData->field60_0x84 = 0;
+  MusData->field58_0x80 = 0;
+  MusData->field59_0x84 = 0;
   MusData->timeSignature_top = 4;
   MusData->timeSignature_bottom = 4;
   MusData->timeSigTop = 4;
-  MusData->tempo_scalar = 0x1000000;
+  MusData->field62_0x88 = 0;
+  MusData->tempo_scalar = 0x100;
   (MusData->volset1).hasVolume.field0_0x0 = 0;
   (MusData->volset1).hasVolume.Volume = 0x7f00;
-  MusData->raw_tempo = 0x660000;
+  MusData->field56_0x7c = 0;
+  MusData->raw_tempo = 0x66;
   MusData->modified_tempo = 0x6600;
-  MusData->field56_0x74 = 0x10000;
-  MusData->framesPer_Beat = (short)(0x30 / bVar1);
+  MusData->microtimer = 0x10000;
+  MusData->_92s_Per_Beat = (short)(0x30 / bVar1);
   return;
 }
 
@@ -8148,7 +12134,7 @@ LAB_8001394c:
     else {
       _z = _z | i;
       if ((i & *(uint *)&(MusicData->HeaderData).field_0x5c) == 0) {
-        SVar2 = 0x401;
+        SVar2 = action1|rest_note;
       }
       else {
         SVar2 = 0x421;
@@ -8159,7 +12145,7 @@ LAB_8001394c:
       }
       *(undefined2 *)((int)ppSVar6 + -0x2e) = 0x300;
       *(SUZUKInoteflags4 *)((int)ppSVar6 + -0x2a) = 0;
-      uVar1 = *(ushort *)&(transferAddr->HeaderData).field_0x10;
+      uVar1 = (transferAddr->HeaderData).field7_0x10;
       *(undefined *)((int)ppSVar6 + -0x23) = 0x10;
       *(char *)(ppSVar6 + -9) = t;
       ppSVar6[-10] = (SoundFontHeader *)(uint)uVar1;
@@ -8177,12 +12163,12 @@ LAB_8001394c:
       *(undefined *)((int)ppSVar6 + -6) = 0;
       *(short *)(ppSVar6 + 0x11) = 0;
       *(undefined *)((int)ppSVar6 + 0x46) = 0;
-      *(undefined2 *)((int)ppSVar6 + 0x56) = 0;
+      *(short *)((int)ppSVar6 + 0x56) = 0;
       *(undefined *)(ppSVar6 + 0x13) = 0;
       *(short *)(ppSVar6 + 0x18) = 0;
-      *(undefined2 *)(ppSVar6 + 0x16) = 0;
-      *(undefined2 *)((int)ppSVar6 + 0x5a) = 0;
-      *(undefined2 *)(ppSVar6 + 0x17) = 0;
+      *(short *)(ppSVar6 + 0x16) = 0;
+      *(short *)((int)ppSVar6 + 0x5a) = 0;
+      *(short *)(ppSVar6 + 0x17) = 0;
       *(short *)(ppSVar6 + 4) = 0;
       *(short *)((int)ppSVar6 + 0x12) = 0;
       pSVar4 = (SoundFontHeader *)((transferAddr->HeaderData).smds + uVar1);
@@ -8225,7 +12211,7 @@ LAB_8001394c:
 
 
 
-void Play_Sound_Worker(uint param_1,uint sfx_ID,short param_3,short param_4)
+void Play_Sound_Worker(uint channel_ID,uint sfx_ID,short param_3,short volume_balance)
 
 {
   ushort uVar1;
@@ -8235,33 +12221,33 @@ void Play_Sound_Worker(uint param_1,uint sfx_ID,short param_3,short param_4)
   uint uVar5;
   uint *_release_mode;
   int iVar6;
-  MusicChannelInner *pMVar7;
+  MusicChannelInner *_noteData;
   MusicChannelData *ChannelData;
   MusicChannelData *_channeldata;
-  int iVar8;
+  int iVar7;
   uint _channels;
   SoundFontHeader *_waveset_addr;
-  int iVar9;
-  ushort *puVar10;
-  uint uVar11;
-  uint uVar12;
+  vfx_SMD_hdr *_cur_vfx_smd;
+  char *pcVar8;
+  uint _channel_flag;
+  uint uVar9;
   short local_50;
   uint local_40;
   MusDataAll *MusData;
+  SUZUKIchannel_flags *_channel_flags;
   mus_10 _cmdfield;
-  SUZUKIchannel_flags *_hassound_ptr;
   
   MusData = FirstMUS;
   local_40 = 0;
   _channels = 0;
-  uVar1 = *(ushort *)(DAT_80032a00 + 10);
-  iVar9 = DAT_80032a00;
+  uVar1 = current_vfx_SMD->field3_0xa;
+  _cur_vfx_smd = current_vfx_SMD;
   while ((uint)uVar1 != (int)sfx_ID >> 0x10) {
-    iVar9 = *(int *)(iVar9 + 0x10);
-    if (iVar9 == 0) {
+    _cur_vfx_smd = _cur_vfx_smd->prev_vfx_SMD;
+    if (_cur_vfx_smd == (vfx_SMD_hdr *)0x0) {
       return;
     }
-    uVar1 = *(ushort *)(iVar9 + 10);
+    uVar1 = _cur_vfx_smd->field3_0xa;
   }
   _waveset_addr = WAVESET_addr;
   if (WAVESET_addr != (SoundFontHeader *)0x0) {
@@ -8274,96 +12260,97 @@ void Play_Sound_Worker(uint param_1,uint sfx_ID,short param_3,short param_4)
       _waveset_addr = WAVESET_addr;
     }
   }
-  uVar12 = (int)param_3 *
-           (uint)*(byte *)(iVar9 + (uint)*(ushort *)(iVar9 + 0xc) + (sfx_ID & 0xffff));
-  local_50 = (short)(uVar12 >> 7);
-  if ((uVar12 >> 0x16 & 1) != 0) {
+  uVar9 = (int)param_3 *
+          (uint)(byte)_cur_vfx_smd->feds
+                      [(sfx_ID & 0xffff) + (uint)*(ushort *)&_cur_vfx_smd->field_0xc];
+  local_50 = (short)(uVar9 >> 7);
+  if ((uVar9 >> 0x16 & 1) != 0) {
     local_50 = 0x7fff;
   }
-  puVar10 = (ushort *)(iVar9 + (sfx_ID & 0xffff) * 4 + 0x14);
-  uVar11 = 1 << (param_1 & 0x1f);
-  ChannelData = FirstMUS->ChannelData + (param_1 & 0xff);
-  iVar8 = (int)always2;
-  pMVar7 = &(ChannelData->channel_inter).channelSecondary.channel_notedata;
+  pcVar8 = _cur_vfx_smd->feds + (sfx_ID & 0xffff) * 4 + 0x14;
+  _channel_flag = 1 << (channel_ID & 0x1f);
+  ChannelData = FirstMUS->ChannelData + (channel_ID & 0xff);
+  iVar7 = (int)always2;
+  _noteData = &(ChannelData->channel_inter).channelSecondary.channel_notedata;
   DisableEvent(rootCounter2Event);
-  uVar12 = 0;
+  uVar9 = 0;
   do {
     uVar3 = DAT_80032a2c;
-    *(uint *)((int)(pMVar7 + -1) + 0x100) = sfx_ID;
-    *(undefined4 *)((int)(pMVar7 + -1) + 0x108) = uVar3;
-    *(char *)((int)(pMVar7 + -1) + 0x105) = (char)(param_1 >> 8);
+    *(uint *)((int)(_noteData + -1) + 0x100) = sfx_ID;
+    *(undefined4 *)((int)(_noteData + -1) + 0x108) = uVar3;
+    *(char *)((int)(_noteData + -1) + 0x105) = (char)(channel_ID >> 8);
     iVar6 = 3;
-    if (*puVar10 == 0) {
-      if ((ChannelData->channelflags & 1) != 0) {
-        _channels = _channels | pMVar7->using_channels;
+    if (*(ushort *)pcVar8 == 0) {
+      if ((ChannelData->channelflags & action1) != 0) {
+        _channels = _channels | _noteData->using_channels;
       }
       ChannelData->channelflags = 0;
     }
     else {
-      local_40 = local_40 | uVar11;
-      uVar5 = pMVar7->using_channels;
+      local_40 = local_40 | _channel_flag;
+      uVar5 = _noteData->using_channels;
       _release_mode = &(ChannelData->channel_inter).channelSecondary.channel_notedata.release_mode;
-      ChannelData->channelflags = 0x409;
-      *(undefined2 *)((int)(pMVar7 + -1) + 0xfa) = 0x100;
-      *(undefined2 *)((int)(pMVar7 + -1) + 0xfe) = 0;
-      uVar1 = *puVar10;
-      pMVar7->octave = 0x3c;
-      pMVar7->field38_0x46 = 0xf;
-      *(undefined4 *)((int)(pMVar7 + -1) + 0x114) = 0;
-      *(undefined4 *)((int)(pMVar7 + -1) + 0x11c) = 0;
-      *(undefined2 *)((int)(pMVar7 + -1) + 0x120) = 0;
-      *(undefined *)((int)(pMVar7 + -1) + 0x122) = 0;
-      pMVar7->fermata_notelength = 0;
-      pMVar7->field_0x42 = 0;
-      *(undefined2 *)&pMVar7->field_0x52 = 0;
-      pMVar7->field_0x48 = 0;
-      pMVar7->repeat_count = -1;
-      pMVar7->vol_left = 0;
-      pMVar7->vol_right = 0x7f00;
-      uVar12 = uVar12 | uVar5;
-      pMVar7->field56_0x60 = local_50;
-      pMVar7->field54_0x5c = 0;
-      *(undefined2 *)&pMVar7->field_0x54 = 0;
-      *(undefined2 *)&pMVar7->field_0x56 = 0;
-      *(undefined2 *)&pMVar7->field53_0x58 = 0;
-      pMVar7->left_sweep_type = 0;
-      pMVar7->right_sweep_type = 0;
-      *(uint *)((int)(pMVar7 + -1) + 0x10c) = iVar9 + (uint)uVar1;
-      *(uint *)((int)(pMVar7 + -1) + 0x110) = iVar9 + (uint)uVar1;
-      pMVar7->Vol_Bal = param_4;
+      ChannelData->channelflags = action1|sfx|rest_note;
+      *(undefined2 *)((int)(_noteData + -1) + 0xfa) = 0x100;
+      *(undefined2 *)((int)(_noteData + -1) + 0xfe) = 0;
+      uVar1 = *(ushort *)pcVar8;
+      _noteData->octave = 0x3c;
+      _noteData->field38_0x46 = 0xf;
+      *(undefined4 *)((int)(_noteData + -1) + 0x114) = 0;
+      *(undefined4 *)((int)(_noteData + -1) + 0x11c) = 0;
+      *(undefined2 *)((int)(_noteData + -1) + 0x120) = 0;
+      *(undefined *)((int)(_noteData + -1) + 0x122) = 0;
+      _noteData->fermata_notelength = 0;
+      _noteData->field_0x42 = 0;
+      _noteData->field47_0x52 = 0;
+      _noteData->field_0x48 = 0;
+      _noteData->repeat_count = -1;
+      _noteData->vol_left = 0;
+      _noteData->vol_right = 0x7f00;
+      uVar9 = uVar9 | uVar5;
+      _noteData->field55_0x60 = local_50;
+      _noteData->field53_0x5c = 0;
+      _noteData->field48_0x54 = 0;
+      _noteData->field49_0x56 = 0;
+      _noteData->field50_0x58 = 0;
+      _noteData->left_sweep_type = 0;
+      _noteData->right_sweep_type = 0;
+      *(char **)((int)(_noteData + -1) + 0x10c) = _cur_vfx_smd->feds + uVar1;
+      *(char **)((int)(_noteData + -1) + 0x110) = _cur_vfx_smd->feds + uVar1;
+      _noteData->Vol_Bal = volume_balance;
       do {
         *(undefined2 *)((int)_release_mode + 0xfe) = 0;
         iVar6 = iVar6 + -1;
         _release_mode = _release_mode + -8;
       } while (-1 < iVar6);
-      *(SoundFontHeader **)((int)(pMVar7 + -1) + 0x128) = _waveset_addr;
+      *(SoundFontHeader **)((int)(_noteData + -1) + 0x128) = _waveset_addr;
       if (_waveset_addr != (SoundFontHeader *)0x0) {
         Set_Instrument((int)base_instrument,ChannelData);
       }
     }
-    puVar10 = puVar10 + 1;
-    uVar11 = uVar11 << 1;
-    pMVar7 = (MusicChannelInner *)((int)(pMVar7 + 1) + 0x34);
-    iVar8 = iVar8 + -1;
+    pcVar8 = pcVar8 + 2;
+    _channel_flag = _channel_flag << 1;
+    _noteData = (MusicChannelInner *)((int)(_noteData + 1) + 0x34);
+    iVar7 = iVar7 + -1;
     ChannelData = ChannelData + 1;
-  } while (iVar8 != 0);
-  _channels = _channels | uVar12 | acc_activeChannels;
-  uVar11 = ~_channels;
+  } while (iVar7 != 0);
+  _channels = _channels | uVar9 | acc_activeChannels;
+  _channel_flag = ~_channels;
   (MusData->HeaderData).OwnedChannels =
        local_40 | ~acc_inactiveChannels & (MusData->HeaderData).OwnedChannels;
-  (MusData->HeaderData).field52_0x64 = uVar11 & (MusData->HeaderData).field52_0x64;
-  (MusData->HeaderData).ModifiedChannels = uVar11 & (MusData->HeaderData).ModifiedChannels;
+  (MusData->HeaderData).field50_0x64 = _channel_flag & (MusData->HeaderData).field50_0x64;
+  (MusData->HeaderData).ModifiedChannels = _channel_flag & (MusData->HeaderData).ModifiedChannels;
   PausedMusicChannels = _channels | PausedMusicChannels;
-  PitchLFO_onlyInclude = uVar12 | uVar11 & PitchLFO_onlyInclude;
-  (MusData->HeaderData).LFOVoiceBits = uVar11 & (MusData->HeaderData).LFOVoiceBits;
-  (MusData->HeaderData).NoiseVoiceBits = uVar11 & (MusData->HeaderData).NoiseVoiceBits;
+  PitchLFO_onlyInclude = uVar9 | _channel_flag & PitchLFO_onlyInclude;
+  (MusData->HeaderData).LFOVoiceBits = _channel_flag & (MusData->HeaderData).LFOVoiceBits;
+  (MusData->HeaderData).NoiseVoiceBits = _channel_flag & (MusData->HeaderData).NoiseVoiceBits;
   acc_inactiveChannels = 0;
   acc_activeChannels = 0;
-  (MusData->HeaderData).ReverbVoiceBits = uVar11 & (MusData->HeaderData).ReverbVoiceBits;
+  (MusData->HeaderData).ReverbVoiceBits = _channel_flag & (MusData->HeaderData).ReverbVoiceBits;
   ChooseVoice = ChooseVoice | (CalcLFOVoices|CalcNoiseVoices|CalcReverbVoices);
   (MusData->HeaderData)._0_cmdfield = (MusData->HeaderData)._0_cmdfield | music_playing;
   MusData = CurrentlyPlayingMus;
-  if (uVar12 != 0) {
+  if (uVar9 != 0) {
     for (; MusData != (MusDataAll *)0x0; MusData = (MusData->HeaderData).PrevPlayedMus) {
       _cmdfield = (MusData->HeaderData)._0_cmdfield;
       if (((_cmdfield & actionflag1) != 0) && ((int)((uint)_cmdfield << 0x10) < 0)) {
@@ -8372,10 +12359,10 @@ void Play_Sound_Worker(uint param_1,uint sfx_ID,short param_3,short param_4)
         pMVar2 = MusData->ChannelData;
         do {
           pMVar4 = &(pMVar2->channel_inter).channelSecondary;
-          _hassound_ptr = &_channeldata->channelflags;
+          _channel_flags = &_channeldata->channelflags;
           _channeldata = _channeldata + 1;
-          if (((*_hassound_ptr & 1) != 0) &&
-             ((uVar12 & (pMVar4->channel_notedata).using_channels) != 0)) {
+          if (((*_channel_flags & action1) != 0) &&
+             ((uVar9 & (pMVar4->channel_notedata).using_channels) != 0)) {
             pMVar4->channelFunc = pMVar4->channelFunc | 0x71ff;
           }
           _channels = _channels - 1;
@@ -8410,17 +12397,18 @@ void Remove_Mus_From_Queue_Forward(MusicDataHeader *musData)
 
 
 
-void FUN_80013fc0(undefined4 *param_1,undefined4 *param_2)
+void FUN_80013fc0(MusDataAll *param_1,MusDataAll *param_2)
 
 {
-  undefined4 uVar1;
-  undefined4 uVar2;
+  MusDataAll *pMVar1;
+  MusDataAll *pMVar2;
   
-  uVar1 = *param_1;
-  uVar2 = param_1[1];
-  FUN_8001442c(param_1,param_2,(uint)*(byte *)((int)param_1 + 0x16) * 0x160 + 0xb8);
-  *param_1 = uVar1;
-  param_1[1] = uVar2;
+  pMVar1 = (param_1->HeaderData).PrevPlayedMus;
+  pMVar2 = (param_1->HeaderData).NextMus;
+  FUN_8001442c((undefined4 *)param_1,(undefined4 *)param_2,
+               (uint)(param_1->HeaderData).NumChannels * 0x160 + 0xb8);
+  (param_1->HeaderData).PrevPlayedMus = pMVar1;
+  (param_1->HeaderData).NextMus = pMVar2;
   return;
 }
 
@@ -8653,24 +12641,24 @@ void FUN_800144d0(SMDDataAll *SMDPtr,uint SMDSize)
 {
   int SizeMult10;
   uint _i;
-  uint *_clearaddr;
+  SMDDataAll *_clearaddr;
   
   SizeMult10 = (int)SMDSize >> 4;
   if (SizeMult10 != 0) {
-    _clearaddr = (uint *)&(SMDPtr->HeaderData).field_0x4;
+    _clearaddr = (SMDDataAll *)&(SMDPtr->HeaderData).clearhere;
     do {
-      _clearaddr[2] = 0;
-      _clearaddr[1] = 0;
-      *_clearaddr = 0;
-      _clearaddr = _clearaddr + 4;
+      (_clearaddr->HeaderData).filesize = 0;
+      (_clearaddr->HeaderData).clearhere = 0;
+      *(undefined4 *)(_clearaddr->HeaderData).smds = 0;
+      _clearaddr = (SMDDataAll *)&(_clearaddr->HeaderData).field7_0x10;
       *(undefined4 *)(SMDPtr->HeaderData).smds = 0;
       SizeMult10 = SizeMult10 + -1;
-      SMDPtr = (SMDDataAll *)&(SMDPtr->HeaderData).field_0x10;
+      SMDPtr = (SMDDataAll *)&(SMDPtr->HeaderData).field7_0x10;
     } while (SizeMult10 != 0);
   }
   for (_i = (int)SMDSize >> 2 & 3; _i != 0; _i = _i - 1) {
     *(undefined4 *)(SMDPtr->HeaderData).smds = 0;
-    SMDPtr = (SMDDataAll *)&(SMDPtr->HeaderData).field_0x4;
+    SMDPtr = (SMDDataAll *)&(SMDPtr->HeaderData).clearhere;
   }
   for (_i = SMDSize & 3; _i != 0; _i = _i - 1) {
     (SMDPtr->HeaderData).smds[0] = '\0';
@@ -8746,59 +12734,59 @@ void Calc_Mus_VoiceCh_Settings(void)
         _channeladdr = MusToPush->ChannelData;
         do {
           _channelSecondary = &(_channeladdr->channel_inter).channelSecondary;
-          if (((_channelData->channelflags & 1) != 0) &&
+          if (((_channelData->channelflags & action1) != 0) &&
              ((_inactive_channels & (_channelSecondary->channel_notedata).using_channels) != 0)) {
             _channelFunc = _channelSecondary->channelFunc;
             if (_channelFunc != 0) {
               _voice = (uint)_channelSecondary->voice_ID;
-              if ((_channelFunc & Set_Sweep_VolMode) != 0) {
-                _channelFunc = _channelFunc & ~Adjust_Voice_Vol_Both;
+              if ((_channelFunc & 2) != 0) {
+                _channelFunc = _channelFunc & 0xfffe;
                 Set_Sweep_VolMode(_voice,(_channelSecondary->channel_notedata).left_volume_setting,
                                   (_channelSecondary->channel_notedata).right_volume_setting,
                                   (_channelSecondary->channel_notedata).left_sweep_type,
                                   (_channelSecondary->channel_notedata).right_sweep_type);
               }
-              if ((_channelFunc & Adjust_Voice_Vol_Both) != 0) {
+              if ((_channelFunc & 1) != 0) {
                 Adjust_Voice_Vol_Both
                           (_voice,(_channelSecondary->channel_notedata).left_volume_setting,
                            (_channelSecondary->channel_notedata).right_volume_setting);
               }
-              if ((_channelFunc & CalcLFOVoices) != 0) {
+              if ((_channelFunc & 4) != 0) {
                 Set_ADPCM_SampleRate(_voice,(_channelSecondary->channel_notedata).ADPCM_samplerate);
               }
-              if ((_channelFunc & Set_ADPCM_Addrs) != 0) {
+              if ((_channelFunc & 8) != 0) {
                 Set_ADPCM_StartAddr(_voice,(_channelSecondary->channel_notedata).ADPCM_Start_addr);
                 Set_ADPCM_RepeatAddr(_voice,(_channelSecondary->channel_notedata).ADPCM_Repeat_addr)
                 ;
               }
-              if ((_channelFunc & CalcNoiseVoices) != 0) {
+              if ((_channelFunc & 0x10) != 0) {
                 Adjust_Voice_Attack_ShiftStep
                           (_voice,(uint)(_channelSecondary->channel_notedata).attack_shiftstep,
                            (_channelSecondary->channel_notedata).attack_mode);
               }
-              if ((_channelFunc & Adjust_Voice_Decay_Shift) != 0) {
+              if ((_channelFunc & 0x20) != 0) {
                 Adjust_Voice_Decay_Shift(_voice,(_channelSecondary->channel_notedata).decay_shift);
               }
-              if ((_channelFunc & CalcReverbVoices) != 0) {
+              if ((_channelFunc & 0x40) != 0) {
                 Adjust_Voice_Sustain
                           (_voice,(uint)(ushort)(_channelSecondary->channel_notedata).sustain_flags,
                            (_channelSecondary->channel_notedata).sustain_mode);
               }
-              if ((_channelFunc & Adjust_Release) != 0) {
+              if ((_channelFunc & 0x80) != 0) {
                 Adjust_Voice_Release
                           (_voice,(_channelSecondary->channel_notedata).release_flags,
                            (_channelSecondary->channel_notedata).release_mode);
               }
-              if ((_channelFunc & Adjust_Sustain_Level) != 0) {
+              if ((_channelFunc & 0x100) != 0) {
                 Adjust_Voice_Sustain_Level(_voice,(_channelSecondary->channel_notedata).sus_lvl);
               }
-              if ((_channelFunc & CalcLFOVoices) != 0) {
+              if ((_channelFunc & 4) != 0) {
                 ChooseVoice = ChooseVoice | CalcLFOVoices;
               }
-              if ((_channelFunc & CalcNoiseVoices) != 0) {
+              if ((_channelFunc & 0x10) != 0) {
                 ChooseVoice = ChooseVoice | CalcNoiseVoices;
               }
-              if ((_channelFunc & CalcReverbVoices) != 0) {
+              if ((_channelFunc & 0x40) != 0) {
                 ChooseVoice = ChooseVoice | CalcReverbVoices;
               }
               _channelSecondary->channelFunc = 0;
@@ -8871,13 +12859,13 @@ void FUN_800148b4(void)
       mVar1 = (pMVar3->HeaderData)._0_cmdfield;
       if ((short)mVar1 < 0) {
         if ((mVar1 & end_on_endbar) == 0) {
-          uVar2 = uVar4 & (pMVar3->HeaderData).field52_0x64;
+          uVar2 = uVar4 & (pMVar3->HeaderData).field50_0x64;
         }
         else {
-          uVar2 = (pMVar3->HeaderData).field52_0x64;
+          uVar2 = (pMVar3->HeaderData).field50_0x64;
         }
         VoicestoRelease = VoicestoRelease | uVar2;
-        (pMVar3->HeaderData).field52_0x64 = 0;
+        (pMVar3->HeaderData).field50_0x64 = 0;
       }
       pMVar3 = (pMVar3->HeaderData).PrevPlayedMus;
     } while (pMVar3 != (MusDataAll *)0x0);
@@ -8913,9 +12901,9 @@ undefined4 RootCount2Func(void)
   ushort _next_beat;
   uint _all_inactivechannel;
   uint uVar3;
+  uint _t;
   int iVar4;
   SuzukiVolStore SVar5;
-  uint uVar6;
   uint Voice;
   MusicChannelData *_channelData;
   MusDataAll *MusToPush;
@@ -8932,7 +12920,7 @@ undefined4 RootCount2Func(void)
   if ((_chooseVoice & CalcReverbVoices) != 0) {
     Calc_Mus_Reverb_Voices();
   }
-  uVar6 = 0;
+  _t = 0;
   ChooseVoice = 0;
   _all_inactivechannel = PitchLFO_onlyInclude | PausedMusicChannels;
   for (MusToPush = CurrentlyPlayingMus; MusToPush != (MusDataAll *)0x0;
@@ -8945,18 +12933,18 @@ undefined4 RootCount2Func(void)
       else {
         uVar3 = (MusToPush->HeaderData).ModifiedChannels;
       }
-      uVar6 = uVar6 | uVar3;
+      _t = _t | uVar3;
       (MusToPush->HeaderData).ModifiedChannels = 0;
     }
   }
-  if (uVar6 != 0) {
-    SetVoicestoRelease(1,uVar6);
+  if (_t != 0) {
+    SetVoicestoRelease(1,_t);
   }
   iVar4 = DAT_80032a2c + 1;
-  uVar6 = DAT_80032a2c & 1;
+  _t = DAT_80032a2c & 1;
   DAT_80032a2c = iVar4;
   MusToPush = CurrentlyPlayingMus;
-  if (uVar6 != 0) {
+  if (_t != 0) {
     if (MasterVolStorage.ChangeVol != 0) {
       FUN_80014f18(&MasterVolStorage);
       SuzukiMvol = MasterVolStorage.hasVolume.Volume;
@@ -8979,19 +12967,19 @@ undefined4 RootCount2Func(void)
   do {
     if (MusToPush == (MusDataAll *)0x0) {
       _all_inactivechannel = ~(PitchLFO_onlyInclude | PausedMusicChannels);
-      uVar6 = _all_inactivechannel & inactiveChannels | PausedMusicChannels;
+      _t = _all_inactivechannel & inactiveChannels | PausedMusicChannels;
       for (MusToPush = CurrentlyPlayingMus; MusToPush != (MusDataAll *)0x0;
           MusToPush = (MusToPush->HeaderData).PrevPlayedMus) {
         mVar2 = (MusToPush->HeaderData)._0_cmdfield;
         if ((short)mVar2 < 0) {
           if ((mVar2 & end_on_endbar) == 0) {
-            uVar3 = _all_inactivechannel & (MusToPush->HeaderData).field52_0x64;
+            uVar3 = _all_inactivechannel & (MusToPush->HeaderData).field50_0x64;
           }
           else {
-            uVar3 = (MusToPush->HeaderData).field52_0x64;
+            uVar3 = (MusToPush->HeaderData).field50_0x64;
           }
-          uVar6 = uVar6 | uVar3;
-          (MusToPush->HeaderData).field52_0x64 = 0;
+          _t = _t | uVar3;
+          (MusToPush->HeaderData).field50_0x64 = 0;
         }
       }
       _all_inactivechannel = _all_inactivechannel & inactiveChannels | PausedMusicChannels;
@@ -9008,21 +12996,20 @@ undefined4 RootCount2Func(void)
         PausedMusicChannels = 0;
         inactiveChannels = 0;
       }
-      if (uVar6 != 0) {
-        SetVoicestoRelease(0,uVar6);
+      if (_t != 0) {
+        SetVoicestoRelease(0,_t);
       }
       return 0;
     }
     if ((short)(MusToPush->HeaderData)._0_cmdfield < 0) {
-      uVar6 = *(uint *)&(MusToPush->HeaderData).field_0x2c;
-      if ((uVar6 != 0) && (uVar6 <= (MusToPush->HeaderData).field18_0x24)) {
-        FUN_80013480((undefined4 *)MusToPush);
+      _t = *(uint *)&(MusToPush->HeaderData).field_0x2c;
+      if ((_t != 0) && (_t <= (MusToPush->HeaderData).field16_0x24)) {
+        FUN_80013480(MusToPush);
       }
       if ((MusToPush->HeaderData).field68_0x90 != 0) {
-        FUN_80014f18((SuzukiVolStorageStruct *)&(MusToPush->HeaderData).tempo_scalar);
+        FUN_80014f18((SuzukiVolStorageStruct *)&(MusToPush->HeaderData).field62_0x88);
         (MusToPush->HeaderData).modified_tempo =
-             (int)*(short *)((int)&(MusToPush->HeaderData).raw_tempo + 2) *
-             (int)*(short *)((int)&(MusToPush->HeaderData).tempo_scalar + 2);
+             (int)(MusToPush->HeaderData).raw_tempo * (int)(MusToPush->HeaderData).tempo_scalar;
       }
       if ((MusToPush->HeaderData).volset1.ChangeVol != 0) {
         FUN_80014f18(&(MusToPush->HeaderData).volset1);
@@ -9036,20 +13023,19 @@ undefined4 RootCount2Func(void)
         FUN_80014f18(&(MusToPush->HeaderData).volset3);
         Set_noteflags2_allChannels(volume_change,MusToPush);
       }
-      _frames_until_beat = *(short *)((int)&(MusToPush->HeaderData).tempo_scalar + 2);
-      (MusToPush->HeaderData).field17_0x20 = (MusToPush->HeaderData).field17_0x20 + 1;
-      (MusToPush->HeaderData).field19_0x28 =
-           (int)_frames_until_beat + (MusToPush->HeaderData).field19_0x28;
-      uVar6 = (MusToPush->HeaderData).field56_0x74 - (MusToPush->HeaderData).modified_tempo;
-      (MusToPush->HeaderData).field56_0x74 = uVar6;
-      if ((int)uVar6 < 0) {
+      (MusToPush->HeaderData).field15_0x20 = (MusToPush->HeaderData).field15_0x20 + 1;
+      (MusToPush->HeaderData).field17_0x28 =
+           (int)(MusToPush->HeaderData).tempo_scalar + (MusToPush->HeaderData).field17_0x28;
+      _t = (MusToPush->HeaderData).microtimer - (MusToPush->HeaderData).modified_tempo;
+      (MusToPush->HeaderData).microtimer = _t;
+      if ((int)_t < 0) {
         _channelData = MusToPush->ChannelData;
         do {
-          _frames_until_beat = (MusToPush->HeaderData).framesUntil_nextBeat + -1;
-          (MusToPush->HeaderData).framesUntil_nextBeat = _frames_until_beat;
-          (MusToPush->HeaderData).field56_0x74 = (MusToPush->HeaderData).field56_0x74 + 0x10000;
+          _frames_until_beat = (MusToPush->HeaderData)._92s_Until_nextBeat + -1;
+          (MusToPush->HeaderData)._92s_Until_nextBeat = _frames_until_beat;
+          (MusToPush->HeaderData).microtimer = (MusToPush->HeaderData).microtimer + 0x10000;
           if (_frames_until_beat == 0) {
-            (MusToPush->HeaderData).framesUntil_nextBeat = (MusToPush->HeaderData).framesPer_Beat;
+            (MusToPush->HeaderData)._92s_Until_nextBeat = (MusToPush->HeaderData)._92s_Per_Beat;
             _next_beat = (MusToPush->HeaderData).CurBeat + 1;
             (MusToPush->HeaderData).CurBeat = _next_beat;
             if ((ushort)(MusToPush->HeaderData).timeSignature_top < _next_beat) {
@@ -9070,7 +13056,7 @@ undefined4 RootCount2Func(void)
             break;
           }
           SVar5 = (MusToPush->HeaderData).volset1.hasVolume;
-          (MusToPush->HeaderData).field18_0x24 = (MusToPush->HeaderData).field18_0x24 + 1;
+          (MusToPush->HeaderData).field16_0x24 = (MusToPush->HeaderData).field16_0x24 + 1;
           if (SVar5 == (SuzukiVolStore)0x0) {
             Deallocate_Mus_Channels(MusToPush);
             (MusToPush->HeaderData)._0_cmdfield = (MusToPush->HeaderData)._0_cmdfield | 0x4100;
@@ -9078,7 +13064,7 @@ undefined4 RootCount2Func(void)
           if ((MusToPush->HeaderData).CurMeasure == *(short *)&(MusToPush->HeaderData).field_0x54) {
             Deallocate_Mus_Channels(MusToPush);
           }
-        } while ((int)(MusToPush->HeaderData).field56_0x74 < 0);
+        } while ((int)(MusToPush->HeaderData).microtimer < 0);
       }
     }
     MusToPush = (MusToPush->HeaderData).PrevPlayedMus;
@@ -9311,7 +13297,7 @@ void Read_SMD_Instructions(MusDataAll *Mus,MusicChannelData *channel_notedata,sh
   MusicChannelRepeat *pMVar7;
   int iVar8;
   uint uVar9;
-  ushort *puVar10;
+  short *psVar10;
   MusicInstruction *MusInstrList;
   MusicInstruction *temp_MusInstrList;
   MusicChannelIntermediary *_intermediary_data;
@@ -9333,8 +13319,8 @@ void Read_SMD_Instructions(MusDataAll *Mus,MusicChannelData *channel_notedata,sh
       do {
         Instruction = *MusInstrList;
         if (Instruction < 0x80) {
-          if ((channel_notedata->channelflags & 8) == 0) {
-            (_intermediary_data->channelSecondary).channel_notedata.field56_0x60 =
+          if ((channel_notedata->channelflags & sfx) == 0) {
+            (_intermediary_data->channelSecondary).channel_notedata.field55_0x60 =
                  (ushort)Instruction << 8;
           }
           _intermediary_data->intermediaryflags =
@@ -9357,13 +13343,13 @@ void Read_SMD_Instructions(MusDataAll *Mus,MusicChannelData *channel_notedata,sh
           }
           sVar4 = (_intermediary_data->channelSecondary).channel_notedata.field46_0x50;
           (_intermediary_data->channelSecondary).channelFunc =
-               (_intermediary_data->channelSecondary).channelFunc | Adjust_Release;
+               (_intermediary_data->channelSecondary).channelFunc | 0x80;
           (_intermediary_data->channelSecondary).channel_notedata.release_flags =
                (_intermediary_data->channelSecondary).releaseflags_small;
           _t = _intermediary_data->intermediaryflags;
           *(uint *)&(_intermediary_data->channelSecondary).channel_notedata.scaled_pitch =
                ((uint)overall_pitch * 0x100 +
-                (int)*(short *)&(_intermediary_data->channelSecondary).channel_notedata.field_0x52 +
+                (int)(_intermediary_data->channelSecondary).channel_notedata.field47_0x52 +
                (int)sVar4) * 0x10000;
           _intermediary_data->intermediaryflags = _t | playing_note;
           channel_notedata->channelflags = channel_notedata->channelflags | (note_active|hold_note);
@@ -9376,10 +13362,7 @@ void Read_SMD_Instructions(MusDataAll *Mus,MusicChannelData *channel_notedata,sh
             _intermediary_data->intermediaryflags =
                  _intermediary_data->intermediaryflags | (volume_change|playing_note);
             (_intermediary_data->channelSecondary).channelFunc =
-                 (_intermediary_data->channelSecondary).channelFunc |
-                 (Adjust_Voice_Vol_Both|Set_Sweep_VolMode|CalcLFOVoices|Set_ADPCM_Addrs|
-                  CalcNoiseVoices|Adjust_Voice_Decay_Shift|CalcReverbVoices|Adjust_Release|
-                 Adjust_Sustain_Level);
+                 (_intermediary_data->channelSecondary).channelFunc | 0x1ff;
           }
         }
         else {
@@ -9475,42 +13458,41 @@ LAB_80015704:
       if (bVar2) {
         iVar8 = 4;
         if ((((_intermediary_data->channelSecondary).instrumentflags & 4) != 0) &&
-           (iVar5 = ((uint)(byte)(_intermediary_data->channelSecondary).channel_notedata.
-                                 current_notepitch -
-                    (uint)(byte)(_intermediary_data->channelSecondary).channel_notedata.field_0x48)
-                    * 0x1000000, iVar5 != 0)) {
-          uVar3 = (_intermediary_data->channelSecondary).channel_notedata.field54_0x5c;
+           (iVar5 = ((uint)(_intermediary_data->channelSecondary).channel_notedata.current_notepitch
+                    - (uint)(byte)(_intermediary_data->channelSecondary).channel_notedata.field_0x48
+                    ) * 0x1000000, iVar5 != 0)) {
+          uVar3 = (_intermediary_data->channelSecondary).channel_notedata.field53_0x5c;
           sVar4 = (_intermediary_data->channelSecondary).channel_notedata.field46_0x50;
-          sVar6 = (_intermediary_data->channelSecondary).channel_notedata.field54_0x5c;
+          sVar6 = (_intermediary_data->channelSecondary).channel_notedata.field53_0x5c;
           (_intermediary_data->channelSecondary).instrumentflags =
                (_intermediary_data->channelSecondary).instrumentflags | 1;
           (_intermediary_data->channelSecondary).channel_notedata.note_length = sVar6;
           *(uint *)&(_intermediary_data->channelSecondary).channel_notedata.scaled_pitch =
                ((uint)(byte)(_intermediary_data->channelSecondary).channel_notedata.field_0x48 *
-                0x100 + (int)*(short *)&(_intermediary_data->channelSecondary).channel_notedata.
-                                        field_0x52 + (int)sVar4) * 0x10000;
+                0x100 + (int)(_intermediary_data->channelSecondary).channel_notedata.field47_0x52 +
+               (int)sVar4) * 0x10000;
           *(int *)&(_intermediary_data->channelSecondary).channel_notedata.field_0x68 =
                iVar5 / (int)(uint)uVar3;
         }
-        puVar10 = (ushort *)
-                  &(channel_notedata->channel_inter).channelSecondary.channel_notedata.field_0xca;
+        psVar10 = &(channel_notedata->channel_inter).channelSecondary.channel_notedata.field120_0xca
+        ;
         (_intermediary_data->channelSecondary).channel_notedata.field_0x48 =
              (_intermediary_data->channelSecondary).channel_notedata.current_notepitch;
         do {
-          uVar3 = *puVar10;
+          uVar3 = *psVar10;
           if (((uVar3 & 1) != 0) && ((uVar3 & 2) != 0)) {
-            *(undefined4 *)(puVar10 + -0xd) = 0;
-            puVar10[-7] = 1;
-            puVar10[-5] = puVar10[-4];
-            puVar10[-3] = puVar10[-2];
+            *(undefined4 *)(psVar10 + -0xd) = 0;
+            psVar10[-7] = 1;
+            psVar10[-5] = psVar10[-4];
+            psVar10[-3] = psVar10[-2];
             if ((uVar3 & 3) != 0) {
               _intermediary_data->intermediaryflags =
                    _intermediary_data->intermediaryflags | volume_change;
             }
-            *puVar10 = *puVar10 & 0xfff3;
+            *psVar10 = *psVar10 & 0xfff3;
           }
           iVar8 = iVar8 + -1;
-          puVar10 = puVar10 + 0x10;
+          psVar10 = psVar10 + 0x10;
         } while (iVar8 != 0);
       }
     }
@@ -9632,8 +13614,7 @@ byte * EndBar(byte *instruction_list,MusDataAll *musData,MusicChannelData *chann
            _newpause_channelbits & (musData->HeaderData).NoiseVoiceBits;
       PitchLFO_onlyInclude = _newpause_channelbits & PitchLFO_onlyInclude;
       (channel_data->channel_inter).channelSecondary.channelFunc =
-           (channel_data->channel_inter).channelSecondary.channelFunc |
-           (CalcLFOVoices|CalcNoiseVoices|CalcReverbVoices);
+           (channel_data->channel_inter).channelSecondary.channelFunc | 0x54;
     }
     channel_data->channelflags = 0;
     _instrlist_return = instruction_list + -1;
@@ -9700,12 +13681,12 @@ byte * Time_Signature(byte *instruction_list,MusDataAll *musData)
   
   time_sig_bottom = instruction_list[1];
   time_sign_top = *instruction_list;
-  (musData->HeaderData).framesPer_Beat =
-       (short)(0xc0 / ((uint)time_sig_bottom * (uint)(musData->HeaderData).field8_0x15));
+  (musData->HeaderData)._92s_Per_Beat =
+       (short)(0xc0 / ((uint)time_sig_bottom * (uint)(musData->HeaderData).length_192));
   (musData->HeaderData).timeSignature_bottom = (ushort)time_sig_bottom;
   (musData->HeaderData).timeSignature_top = (ushort)time_sign_top;
   (musData->HeaderData).timeSigTop = (ushort)time_sign_top;
-  (musData->HeaderData).framesUntil_nextBeat = (musData->HeaderData).framesPer_Beat;
+  (musData->HeaderData)._92s_Until_nextBeat = (musData->HeaderData)._92s_Per_Beat;
   return instruction_list + 2;
 }
 
@@ -9803,7 +13784,8 @@ byte * To_Coda(byte *instruction_list,MusDataAll *musData,MusicChannelData *chan
 byte * Sound_Effect(byte *instruction_list)
 
 {
-  PlaySound_FromMus2((uint)*(ushort *)instruction_list,(uint)instruction_list[2],0x40);
+  PlaySound_findChannel_withSettings
+            ((uint)*(ushort *)instruction_list,(uint)instruction_list[2],0x40);
   return instruction_list + 3;
 }
 
@@ -9818,27 +13800,28 @@ byte * FUN_80015bfc(byte *instruction_list)
 
 
 
-byte * FUN_80015c38(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_notedata)
+byte * Play_VFX_SMD(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_notedata)
 
 {
-  int iVar1;
-  uint uVar2;
+  vfx_SMD_hdr *_cur_vfx_SMD;
+  uint uVar1;
   
-  uVar2 = (uint)(channel_notedata->channel_inter).channelSecondary.field4_0x6;
-  iVar1 = DAT_80032a00;
-  if (uVar2 == 0) {
+  uVar1 = (uint)(channel_notedata->channel_inter).channelSecondary.field4_0x6;
+  _cur_vfx_SMD = current_vfx_SMD;
+  if (uVar1 == 0) {
 LAB_80015c84:
     instruction_list =
-         (byte *)(iVar1 + (uint)*(ushort *)
-                                 (((uint)instruction_list[2] +
-                                  ((int)((uint)*(ushort *)instruction_list << 0x10) >> 0xf)) * 2 +
-                                  iVar1 + 0x14) + 3);
+         (byte *)(_cur_vfx_SMD->feds +
+                 *(ushort *)
+                  (_cur_vfx_SMD->feds +
+                  ((uint)instruction_list[2] +
+                  ((int)((uint)*(ushort *)instruction_list << 0x10) >> 0xf)) * 2 + 0x14) + 3);
   }
   else {
     do {
-      if (*(ushort *)(iVar1 + 10) == uVar2) goto LAB_80015c84;
-      iVar1 = *(int *)(iVar1 + 0x10);
-    } while (iVar1 != 0);
+      if ((ushort)_cur_vfx_SMD->field3_0xa == uVar1) goto LAB_80015c84;
+      _cur_vfx_SMD = _cur_vfx_SMD->prev_vfx_SMD;
+    } while (_cur_vfx_SMD != (vfx_SMD_hdr *)0x0);
   }
   return instruction_list;
 }
@@ -9848,13 +13831,14 @@ LAB_80015c84:
 byte * Tempo(byte *instruction_list,MusDataAll *musData)
 
 {
-  short sVar1;
+  int _tempo_as_int;
   byte tempo;
   
   tempo = *instruction_list;
-  sVar1 = *(short *)((int)&(musData->HeaderData).tempo_scalar + 2);
-  (musData->HeaderData).raw_tempo = (uint)tempo << 0x10;
-  (musData->HeaderData).modified_tempo = (uint)tempo * (int)sVar1;
+  _tempo_as_int = (uint)tempo << 0x10;
+  (musData->HeaderData).field56_0x7c = (short)_tempo_as_int;
+  (musData->HeaderData).raw_tempo = (short)((uint)_tempo_as_int >> 0x10);
+  (musData->HeaderData).modified_tempo = (uint)tempo * (int)(musData->HeaderData).tempo_scalar;
   return instruction_list + 1;
 }
 
@@ -9867,7 +13851,8 @@ byte * Accelerando(byte *instruction_list,MusDataAll *musData)
   
   _tempo_change = *instruction_list;
   (musData->HeaderData).modified_tempo = 0;
-  (musData->HeaderData).raw_tempo = (char)_tempo_change * 0x10000 + (musData->HeaderData).raw_tempo;
+  *(int *)&(musData->HeaderData).field56_0x7c =
+       (char)_tempo_change * 0x10000 + *(int *)&(musData->HeaderData).field56_0x7c;
   return instruction_list + 1;
 }
 
@@ -9883,10 +13868,10 @@ byte * FUN_80015d04(byte *param_1,MusDataAll *musData)
   _tempo_change = param_1[1];
   bVar1 = *param_1;
   *(ushort *)&(musData->HeaderData).field_0x86 = (ushort)_tempo_change;
-  _new_tempo = (uint)_tempo_change * 0x10000 - (musData->HeaderData).raw_tempo;
+  _new_tempo = (uint)_tempo_change * 0x10000 - *(int *)&(musData->HeaderData).field56_0x7c;
   if ((bVar1 != 0) && (_new_tempo != 0)) {
-    (musData->HeaderData).field60_0x84 = (ushort)bVar1;
-    (musData->HeaderData).field59_0x80 = _new_tempo / (int)(uint)bVar1;
+    (musData->HeaderData).field59_0x84 = (ushort)bVar1;
+    (musData->HeaderData).field58_0x80 = _new_tempo / (int)(uint)bVar1;
   }
   return param_1 + 2;
 }
@@ -9945,10 +13930,7 @@ byte * FUN_80015de4(byte *instruction_list,MusDataAll *musData,MusicChannelData 
     mVar2 = (channel_data->channel_inter).channelSecondary.channelFunc;
     (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels =
          1 << ((channel_data->channel_inter).channelSecondary.voice_ID & 0x1f);
-    (channel_data->channel_inter).channelSecondary.channelFunc =
-         mVar2 | (Adjust_Voice_Vol_Both|Set_Sweep_VolMode|CalcLFOVoices|Set_ADPCM_Addrs|
-                  CalcNoiseVoices|Adjust_Voice_Decay_Shift|CalcReverbVoices|Adjust_Release|
-                 Adjust_Sustain_Level);
+    (channel_data->channel_inter).channelSecondary.channelFunc = mVar2 | 0x1ff;
   }
   else {
     (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels = 0;
@@ -10026,7 +14008,7 @@ byte * Enable_LFO(byte *instruction_list,MusDataAll *musData,MusicChannelData *c
          (musData->HeaderData).LFOVoiceBits |
          (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
     (channel_data->channel_inter).channelSecondary.channelFunc =
-         (channel_data->channel_inter).channelSecondary.channelFunc | CalcLFOVoices;
+         (channel_data->channel_inter).channelSecondary.channelFunc | 4;
   }
   return instruction_list;
 }
@@ -10040,7 +14022,7 @@ byte * Disable_LFO(byte *instruction_list,MusDataAll *musData,MusicChannelData *
        ~(channel_data->channel_inter).channelSecondary.channel_notedata.using_channels &
        (musData->HeaderData).LFOVoiceBits;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | CalcLFOVoices;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 4;
   return instruction_list;
 }
 
@@ -10055,7 +14037,7 @@ byte * Enable_Noise(byte *instruction_list,MusDataAll *musData,MusicChannelData 
        (musData->HeaderData).NoiseVoiceBits |
        (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x10;
   return instruction_list + 1;
 }
 
@@ -10071,7 +14053,7 @@ byte * Increase_Noise(byte *instruction_list,MusDataAll *musData,MusicChannelDat
        (musData->HeaderData).NoiseVoiceBits |
        (channel_notedata->channel_inter).channelSecondary.channel_notedata.using_channels;
   (channel_notedata->channel_inter).channelSecondary.channelFunc =
-       (channel_notedata->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+       (channel_notedata->channel_inter).channelSecondary.channelFunc | 0x10;
   return instruction_list + 1;
 }
 
@@ -10084,7 +14066,7 @@ byte * Turn_On_Noise(byte *instruction_list,MusDataAll *musData,MusicChannelData
        (musData->HeaderData).NoiseVoiceBits |
        (channel_data->channel_inter).channelSecondary.channel_notedata.using_channels;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x10;
   return instruction_list;
 }
 
@@ -10097,7 +14079,7 @@ byte * Disable_Noise(byte *instruction_list,MusDataAll *musData,MusicChannelData
        ~(channel_data->channel_inter).channelSecondary.channel_notedata.using_channels &
        (musData->HeaderData).NoiseVoiceBits;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x10;
   return instruction_list;
 }
 
@@ -10130,7 +14112,7 @@ byte * Enable_Reverb(byte *instruction_list,MusDataAll *musData,MusicChannelData
        (musData->HeaderData).ReverbVoiceBits |
        (channel_Data->channel_inter).channelSecondary.channel_notedata.using_channels;
   (channel_Data->channel_inter).channelSecondary.channelFunc =
-       (channel_Data->channel_inter).channelSecondary.channelFunc | CalcReverbVoices;
+       (channel_Data->channel_inter).channelSecondary.channelFunc | 0x40;
   return instruction_list;
 }
 
@@ -10143,7 +14125,7 @@ byte * Disable_Reverb(byte *instruction_list,MusDataAll *musData,MusicChannelDat
        ~(channel_data->channel_inter).channelSecondary.channel_notedata.using_channels &
        (musData->HeaderData).ReverbVoiceBits;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | CalcReverbVoices;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x40;
   return instruction_list;
 }
 
@@ -10170,9 +14152,7 @@ byte * Envelope_Shape(byte *instruction_list,MusDataAll *musData,MusicChannelDat
        (uint)instruction_list[1];
   bVar1 = instruction_list[2];
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc |
-       (CalcNoiseVoices|Adjust_Voice_Decay_Shift|CalcReverbVoices|Adjust_Release|
-       Adjust_Sustain_Level);
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x1f0;
   (channel_data->channel_inter).channelSecondary.channel_notedata.release_mode = (uint)bVar1;
   return instruction_list + 3;
 }
@@ -10186,7 +14166,7 @@ byte * Attack_Time(byte *instruction_list,MusDataAll *musData,MusicChannelData *
   
   _attack_time = *instruction_list;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x10;
   (channel_data->channel_inter).channelSecondary.channel_notedata.attack_shiftstep =
        (ushort)_attack_time;
   return instruction_list + 1;
@@ -10201,7 +14181,7 @@ byte * Decay_Time(byte *instruction_list,MusDataAll *musData,MusicChannelData *c
   
   _decay_time = *instruction_list;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | Adjust_Voice_Decay_Shift;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x20;
   (channel_data->channel_inter).channelSecondary.channel_notedata.decay_shift = (ushort)_decay_time;
   return instruction_list + 1;
 }
@@ -10215,7 +14195,7 @@ byte * Sustain(byte *instruction_list,MusDataAll *musData,MusicChannelData *chan
   
   _sustain = *instruction_list;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | CalcReverbVoices;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x40;
   (channel_data->channel_inter).channelSecondary.channel_notedata.sustain_flags = (ushort)_sustain;
   return instruction_list + 1;
 }
@@ -10229,7 +14209,7 @@ byte * Release(byte *instruction_list,MusDataAll *musData,MusicChannelData *chan
   
   _release = *instruction_list;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | Adjust_Release;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x80;
   (channel_data->channel_inter).channelSecondary.releaseflags_small = (ushort)_release;
   (channel_data->channel_inter).channelSecondary.channel_notedata.release_flags = (ushort)_release;
   return instruction_list + 1;
@@ -10244,7 +14224,7 @@ byte * Sustain_Level(byte *instruction_list,MusDataAll *musData,MusicChannelData
   
   _sustain_level = *instruction_list;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | Adjust_Sustain_Level;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x100;
   (channel_data->channel_inter).channelSecondary.channel_notedata.sus_lvl = (ushort)_sustain_level;
   return instruction_list + 1;
 }
@@ -10260,8 +14240,7 @@ byte * Envelope_Tail(byte *instruction_list,MusDataAll *musData,MusicChannelData
        (ushort)*instruction_list;
   _sustain_level = instruction_list[1];
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc |
-       (Adjust_Voice_Decay_Shift|Adjust_Sustain_Level);
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x120;
   (channel_data->channel_inter).channelSecondary.channel_notedata.sus_lvl = (ushort)_sustain_level;
   return instruction_list + 2;
 }
@@ -10275,7 +14254,7 @@ byte * Attack_Mode(byte *instruction_list,MusDataAll *musData,MusicChannelData *
   
   _attack_mode = *instruction_list;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | CalcNoiseVoices;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x10;
   (channel_data->channel_inter).channelSecondary.channel_notedata.attack_mode = (uint)_attack_mode;
   return instruction_list + 1;
 }
@@ -10289,7 +14268,7 @@ byte * Sustain_Mode(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   
   _sustain_mode = *instruction_list;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | CalcReverbVoices;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x40;
   (channel_data->channel_inter).channelSecondary.channel_notedata.sustain_mode = (uint)_sustain_mode
   ;
   return instruction_list + 1;
@@ -10304,7 +14283,7 @@ byte * Release_Mode(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   
   _release_mode = *instruction_list;
   (channel_data->channel_inter).channelSecondary.channelFunc =
-       (channel_data->channel_inter).channelSecondary.channelFunc | Adjust_Release;
+       (channel_data->channel_inter).channelSecondary.channelFunc | 0x80;
   (channel_data->channel_inter).channelSecondary.channel_notedata.release_mode = (uint)_release_mode
   ;
   return instruction_list + 1;
@@ -10318,7 +14297,7 @@ byte * FUN_800162b4(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   SUZUKIintermediary_flags SVar1;
   
   SVar1 = (channel_data->channel_inter).intermediaryflags;
-  *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 =
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field47_0x52 =
        (short)((int)((uint)*instruction_list << 0x18) >> 0x13);
   (channel_data->channel_inter).intermediaryflags = SVar1 | playing_note;
   return instruction_list + 1;
@@ -10332,8 +14311,8 @@ byte * FUN_800162d8(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   SUZUKIintermediary_flags SVar1;
   
   SVar1 = (channel_data->channel_inter).intermediaryflags;
-  *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 =
-       *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 +
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field47_0x52 =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field47_0x52 +
        (short)((int)((uint)*instruction_list << 0x18) >> 0x13);
   (channel_data->channel_inter).intermediaryflags = SVar1 | playing_note;
   return instruction_list + 1;
@@ -10347,8 +14326,8 @@ byte * FUN_80016304(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   SUZUKIintermediary_flags SVar1;
   
   SVar1 = (channel_data->channel_inter).intermediaryflags;
-  *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 =
-       *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 +
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field47_0x52 =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field47_0x52 +
        (short)((int)((uint)*instruction_list << 0x18) >> 0x15);
   (channel_data->channel_inter).intermediaryflags = SVar1 | playing_note;
   return instruction_list + 1;
@@ -10365,10 +14344,10 @@ byte * FUN_80016330(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   
   bVar1 = *instruction_list;
   bVar2 = instruction_list[1];
-  sVar3 = *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52;
+  sVar3 = (channel_data->channel_inter).channelSecondary.channel_notedata.field47_0x52;
   (channel_data->channel_inter).intermediaryflags =
        (channel_data->channel_inter).intermediaryflags | playing_note;
-  *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0x52 =
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field47_0x52 =
        sVar3 + (ushort)bVar2 + (short)(((uint)bVar1 << 0x18) >> 0x10);
   return instruction_list + 2;
 }
@@ -10428,7 +14407,7 @@ byte * FUN_800163ec(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   SUZUKInoteflags4 SVar2;
   
   bVar1 = *instruction_list;
-  (channel_data->channel_inter).channelSecondary.channel_notedata.field54_0x5c = (ushort)bVar1;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field53_0x5c = (ushort)bVar1;
   if (bVar1 == 0) {
     SVar2 = (channel_data->channel_inter).channelSecondary.instrumentflags & 0xfffb;
   }
@@ -10461,12 +14440,12 @@ byte * Pitch_Shift(byte *instructionList,MusDataAll *musData,MusicChannelData *c
     (channel_data->channel_inter).channelSecondary.channel_notedata.Pitchshift_Speed =
          (ushort)_ps_speed;
     _ps_speed = instructionList[2];
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field118_0xc6 = 0x100;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field117_0xc6 = 0x100;
     *(code **)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xac =
          FUN_80017744;
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xc9 = 3;
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xc8 = 0;
-    *(undefined2 *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca = 3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field120_0xca = 3;
     (channel_data->channel_inter).channelSecondary.channel_notedata.Pitchshift_Delay =
          (ushort)_ps_speed;
     FUN_80016dc0((int)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xac);
@@ -10498,14 +14477,14 @@ byte * FUN_800164d4(byte *instruction_list,MusDataAll *musData,MusicChannelData 
     _ps_intensity = FUN_80016bf8(_ps_intensity * iVar2 * 0x4000,(ushort)_ps_speed,(short)_cmd);
     (channel_data->channel_inter).channelSecondary.channel_notedata.Pitchshift_Intensity =
          _ps_intensity;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field118_0xc6 = 0x100;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field117_0xc6 = 0x100;
     (channel_data->channel_inter).channelSecondary.channel_notedata.Pitchshift_Speed =
          (ushort)_ps_speed;
     (channel_data->channel_inter).channelSecondary.channel_notedata.Pitchshift_Delay = 0;
     puVar3 = (&PTR_FUN_80028f54)[_cmd];
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xc9 = (char)_cmd;
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xc8 = 0;
-    *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca =
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field120_0xca =
          (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
     *(undefined **)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xac =
          puVar3;
@@ -10525,7 +14504,7 @@ byte * FUN_800165ac(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   uVar2 = *instruction_list + 1 & 0xff;
   if (uVar2 != 0) {
     sVar1 = (short)(0x100 / uVar2);
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field118_0xc6 = sVar1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field117_0xc6 = sVar1;
     *(short *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xc4 = sVar1;
   }
   return instruction_list + 1;
@@ -10536,8 +14515,8 @@ byte * FUN_800165ac(byte *instruction_list,MusDataAll *musData,MusicChannelData 
 byte * FUN_800165e4(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca =
-       *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca | 1;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field120_0xca =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field120_0xca | 1;
   return instruction_list;
 }
 
@@ -10546,9 +14525,8 @@ byte * FUN_800165e4(byte *instruction_list,MusDataAll *musData,MusicChannelData 
 byte * FUN_800165fc(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca =
-       *(ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca &
-       0xfffe;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field120_0xca =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field120_0xca & 0xfffe;
   return instruction_list;
 }
 
@@ -10630,16 +14608,16 @@ byte * FUN_800166c8(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   bVar1 = *instruction_list;
   if (((char)instruction_list[1] != 0) && (bVar1 != 0)) {
     iVar2 = FUN_80016bf8((char)instruction_list[1] * -0x1000000,(ushort)bVar1,2);
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field135_0xd8 = iVar2;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field138_0xde = (ushort)bVar1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field133_0xd8 = iVar2;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field136_0xde = (ushort)bVar1;
     bVar1 = instruction_list[2];
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field143_0xe6 = 0x100;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field141_0xe6 = 0x100;
     *(code **)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xcc =
          FUN_800176e4;
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xe9 = 2;
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xe8 = 1;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea = 3;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field141_0xe2 = (ushort)bVar1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field144_0xea = 3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field139_0xe2 = (ushort)bVar1;
     FUN_80016dc0((int)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xcc);
   }
   return instruction_list + 3;
@@ -10661,14 +14639,14 @@ byte * FUN_8001676c(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   if (((char)instruction_list[1] != 0) && (bVar2 != 0)) {
     uVar5 = bVar1 & 0xf;
     iVar3 = FUN_80016bf8((char)instruction_list[1] * -0x1000000,(ushort)bVar2,(short)uVar5);
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field135_0xd8 = iVar3;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field143_0xe6 = 0x100;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field138_0xde = (ushort)bVar2;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field141_0xe2 = 0;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field133_0xd8 = iVar3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field141_0xe6 = 0x100;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field136_0xde = (ushort)bVar2;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field139_0xe2 = 0;
     puVar4 = (&PTR_FUN_80028f54)[uVar5];
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xe9 = (char)uVar5;
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0xe8 = 1;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea =
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field144_0xea =
          (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
     *(undefined **)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xcc =
          puVar4;
@@ -10688,8 +14666,8 @@ byte * FUN_80016834(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   uVar2 = *instruction_list + 1 & 0xff;
   if (uVar2 != 0) {
     sVar1 = (short)(0x100 / uVar2);
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field143_0xe6 = sVar1;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field142_0xe4 = sVar1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field141_0xe6 = sVar1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field140_0xe4 = sVar1;
   }
   return instruction_list + 1;
 }
@@ -10699,8 +14677,8 @@ byte * FUN_80016834(byte *instruction_list,MusDataAll *musData,MusicChannelData 
 byte * FUN_8001686c(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea =
-       (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea | 1;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field144_0xea =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field144_0xea | 1;
   return instruction_list;
 }
 
@@ -10709,8 +14687,8 @@ byte * FUN_8001686c(byte *instruction_list,MusDataAll *musData,MusicChannelData 
 byte * FUN_80016884(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea =
-       (channel_data->channel_inter).channelSecondary.channel_notedata.field146_0xea & 0xfffe;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field144_0xea =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field144_0xea & 0xfffe;
   return instruction_list;
 }
 
@@ -10778,8 +14756,8 @@ byte * FUN_8001693c(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   uVar2 = *instruction_list + 1 & 0xff;
   if (uVar2 != 0) {
     sVar1 = (short)(0x100 / uVar2);
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field163_0x106 = sVar1;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field162_0x104 = sVar1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field161_0x106 = sVar1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field160_0x104 = sVar1;
   }
   return instruction_list + 1;
 }
@@ -10795,18 +14773,18 @@ byte * FUN_80016974(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   bVar1 = *instruction_list;
   if (((char)instruction_list[1] != 0) && (bVar1 != 0)) {
     iVar2 = FUN_80016bf8((int)(char)instruction_list[1] << 0x18,(ushort)bVar1,3);
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field154_0xf8 = (short)iVar2;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field155_0xfa =
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field152_0xf8 = (short)iVar2;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field153_0xfa =
          (short)((uint)iVar2 >> 0x10);
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field158_0xfe = (ushort)bVar1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field156_0xfe = (ushort)bVar1;
     bVar1 = instruction_list[2];
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field163_0x106 = 0x100;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field161_0x106 = 0x100;
     (channel_data->channel_inter).channelSecondary.channel_notedata.pitchshift_intensity =
          (int)FUN_80017744;
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0x109 = 3;
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0x108 = 2;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a = 3;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field161_0x102 = (ushort)bVar1;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field164_0x10a = 3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field159_0x102 = (ushort)bVar1;
     FUN_80016dc0((int)&(channel_data->channel_inter).channelSecondary.channel_notedata.
                        pitchshift_intensity);
   }
@@ -10829,16 +14807,16 @@ byte * FUN_80016a14(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   if (((char)instruction_list[1] != 0) && (bVar2 != 0)) {
     uVar5 = bVar1 & 0xf;
     iVar3 = FUN_80016bf8((int)(char)instruction_list[1] << 0x18,(ushort)bVar2,(short)uVar5);
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field154_0xf8 = (short)iVar3;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field155_0xfa =
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field152_0xf8 = (short)iVar3;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field153_0xfa =
          (short)((uint)iVar3 >> 0x10);
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field163_0x106 = 0x100;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field158_0xfe = (ushort)bVar2;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field161_0x102 = 0;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field161_0x106 = 0x100;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field156_0xfe = (ushort)bVar2;
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field159_0x102 = 0;
     puVar4 = (&PTR_FUN_80028f54)[uVar5];
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0x109 = (char)uVar5;
     (channel_data->channel_inter).channelSecondary.channel_notedata.field_0x108 = 2;
-    (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a =
+    (channel_data->channel_inter).channelSecondary.channel_notedata.field164_0x10a =
          (ushort)((bVar1 & 0x10) == 0) * 2 + 1;
     (channel_data->channel_inter).channelSecondary.channel_notedata.pitchshift_intensity =
          (int)puVar4;
@@ -10853,8 +14831,8 @@ byte * FUN_80016a14(byte *instruction_list,MusDataAll *musData,MusicChannelData 
 byte * FUN_80016ad8(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a =
-       (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a | 1;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field164_0x10a =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field164_0x10a | 1;
   return instruction_list;
 }
 
@@ -10863,8 +14841,8 @@ byte * FUN_80016ad8(byte *instruction_list,MusDataAll *musData,MusicChannelData 
 byte * FUN_80016af0(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_data)
 
 {
-  (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a =
-       (channel_data->channel_inter).channelSecondary.channel_notedata.field166_0x10a & 0xfffe;
+  (channel_data->channel_inter).channelSecondary.channel_notedata.field164_0x10a =
+       (channel_data->channel_inter).channelSecondary.channel_notedata.field164_0x10a & 0xfffe;
   return instruction_list;
 }
 
@@ -10975,7 +14953,7 @@ byte * FUN_80016cb8(byte *instruction_list,MusDataAll *musData,MusicChannelData 
 
 {
   ushort uVar1;
-  ushort *puVar2;
+  short *psVar2;
   uint uVar3;
   int iVar4;
   undefined *puVar5;
@@ -10983,18 +14961,18 @@ byte * FUN_80016cb8(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   puVar5 = &(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xac;
   iVar4 = 4;
   uVar3 = (uint)*instruction_list;
-  puVar2 = (ushort *)&(channel_data->channel_inter).channelSecondary.channel_notedata.field_0xca;
+  psVar2 = &(channel_data->channel_inter).channelSecondary.channel_notedata.field120_0xca;
   do {
     if ((uVar3 & 1) == 0) {
-      uVar1 = *puVar2 & 0xfffe;
+      uVar1 = *psVar2 & 0xfffe;
     }
     else {
       FUN_80016dc0((int)puVar5);
-      uVar1 = *puVar2 | 1;
+      uVar1 = *psVar2 | 1;
     }
-    *puVar2 = uVar1;
+    *psVar2 = uVar1;
     uVar3 = uVar3 >> 1;
-    puVar2 = puVar2 + 0x10;
+    psVar2 = psVar2 + 0x10;
     iVar4 = iVar4 + -1;
     puVar5 = puVar5 + 0x20;
   } while (iVar4 != 0);
@@ -11048,13 +15026,13 @@ byte * Scale_Tempo(byte *instruction_list,MusDataAll *MusData)
 
 {
   uint _tempo_scalar;
-  short _raw_tempo;
   
   _tempo_scalar = (uint)*instruction_list;
   if (_tempo_scalar != 0) {
-    _raw_tempo = *(short *)((int)&(MusData->HeaderData).raw_tempo + 2);
-    (MusData->HeaderData).tempo_scalar = _tempo_scalar << 0x18;
-    (MusData->HeaderData).modified_tempo = (int)_raw_tempo * _tempo_scalar * 0x100;
+    (MusData->HeaderData).field62_0x88 = (short)(_tempo_scalar << 0x18);
+    (MusData->HeaderData).tempo_scalar = (short)((_tempo_scalar << 0x18) >> 0x10);
+    (MusData->HeaderData).modified_tempo =
+         (int)(MusData->HeaderData).raw_tempo * _tempo_scalar * 0x100;
   }
   return instruction_list + 1;
 }
@@ -11117,8 +15095,7 @@ byte * FUN_80016ea4(byte *instruction_list,MusDataAll *musData,MusicChannelData 
            _newpaused_channelbits & (musData->HeaderData).NoiseVoiceBits;
       PitchLFO_onlyInclude = _newpaused_channelbits & PitchLFO_onlyInclude;
       (channel_data->channel_inter).channelSecondary.channelFunc =
-           (channel_data->channel_inter).channelSecondary.channelFunc |
-           (CalcLFOVoices|CalcNoiseVoices|CalcReverbVoices);
+           (channel_data->channel_inter).channelSecondary.channelFunc | 0x54;
     }
     channel_data->channelflags = 0;
     instruction_list = instruction_list + -1;
@@ -11165,16 +15142,14 @@ void Set_Instrument(int instrument,MusicChannelData *channel)
        (ushort)_instrument_wave->Sustain_Level;
   (channel->channel_inter).channelSecondary.channel_notedata.field46_0x50 =
        *(short *)&_instrument_wave->field_0x6;
-  if ((_noteflags & 0xc) == 0) {
+  if ((_noteflags & (action4|sfx)) == 0) {
     channel->channelflags = _noteflags | change_instrument;
   }
   else {
     (channel->channel_inter).intermediaryflags =
          (channel->channel_inter).intermediaryflags | (volume_change|playing_note);
     (channel->channel_inter).channelSecondary.channelFunc =
-         (channel->channel_inter).channelSecondary.channelFunc |
-         (Adjust_Voice_Vol_Both|Set_Sweep_VolMode|CalcLFOVoices|Set_ADPCM_Addrs|CalcNoiseVoices|
-          Adjust_Voice_Decay_Shift|CalcReverbVoices|Adjust_Release|Adjust_Sustain_Level);
+         (channel->channel_inter).channelSecondary.channelFunc | 0x1ff;
   }
   return;
 }
@@ -11208,7 +15183,7 @@ void Set_noteflags2_allChannels(SUZUKIintermediary_flags noteflags,MusDataAll *M
 
 
 
-void ForceChannelFunc(MusDataAll *MusData,mus_voiceChannelFunc channelFunc)
+void ForceChannelFunc(MusDataAll *MusData,ushort channelFunc)
 
 {
   uint NumChannels;
@@ -11611,7 +15586,7 @@ void Suzuki_Initialisation_Func(ushort param_1)
     DAT_80032a18 = 0x12345678;
     CurrentlyPlayingMus = (MusDataAll *)0x0;
     FirstMUS = (MusDataAll *)0x0;
-    DAT_80032a00 = 0;
+    current_vfx_SMD = (vfx_SMD_hdr *)0x0;
     WAVESET_addr = (SoundFontHeader *)0x0;
     PitchLFO_onlyInclude = 0;
     acc_inactiveChannels = 0;
@@ -11718,7 +15693,7 @@ undefined4 * Put_WAVESET_SPU(SoundFontHeader *SoundFontPtr)
   FUN_8001442c((undefined4 *)pMVar1,(undefined4 *)SoundFontPtr,SoundFontPtr->waveFontStart);
   _wavset_ptr = WAVESET_addr;
   _waveset_ramaddr = &WAVESET_addr;
-  (pMVar1->HeaderData).field19_0x28 = (uint)WaveFontPtr;
+  (pMVar1->HeaderData).field17_0x28 = (uint)WaveFontPtr;
   while (_wavset_ptr != (SoundFontHeader *)0x0) {
     pMVar2 = (MusDataAll *)*_waveset_ramaddr;
     _waveset_ramaddr = (SoundFontHeader **)&(pMVar2->HeaderData).field_0x2c;
@@ -11732,50 +15707,50 @@ undefined4 * Put_WAVESET_SPU(SoundFontHeader *SoundFontPtr)
 
 
 
-void FUN_80017e7c(int param_1)
+void append_vfx_SMD(vfx_SMD_hdr *vfx_SMD)
 
 {
-  int iVar1;
-  int *piVar2;
+  vfx_SMD_hdr *_cur_vfx_SMD;
+  vfx_SMD_hdr **_prev_vfx_SMD;
   
-  piVar2 = &DAT_80032a00;
-  if (DAT_80032a00 != 0) {
+  _prev_vfx_SMD = &current_vfx_SMD;
+  if (current_vfx_SMD != (vfx_SMD_hdr *)0x0) {
     do {
-      iVar1 = *piVar2;
-      piVar2 = (int *)(iVar1 + 0x10);
-    } while (*(int *)(iVar1 + 0x10) != 0);
+      _cur_vfx_SMD = *_prev_vfx_SMD;
+      _prev_vfx_SMD = &_cur_vfx_SMD->prev_vfx_SMD;
+    } while (_cur_vfx_SMD->prev_vfx_SMD != (vfx_SMD_hdr *)0x0);
   }
-  *piVar2 = param_1;
-  *(undefined4 *)(param_1 + 0x10) = 0;
+  *_prev_vfx_SMD = vfx_SMD;
+  vfx_SMD->prev_vfx_SMD = (vfx_SMD_hdr *)0x0;
   return;
 }
 
 
 
-void FUN_80017eb8(int param_1)
+void vfx_SMD_pop(vfx_SMD_hdr *param_1)
 
 {
-  int iVar1;
-  int iVar2;
-  int iVar3;
+  vfx_SMD_hdr *_vfx_SMD_check;
+  vfx_SMD_hdr *_cur_vfx_SMD;
+  vfx_SMD_hdr *_next_vfx_SMD;
   
-  iVar2 = DAT_80032a00;
-  iVar3 = 0;
-  if (DAT_80032a00 != 0) {
+  _cur_vfx_SMD = current_vfx_SMD;
+  _next_vfx_SMD = (vfx_SMD_hdr *)0x0;
+  if (current_vfx_SMD != (vfx_SMD_hdr *)0x0) {
     do {
-      iVar1 = iVar2;
-      iVar2 = iVar1;
-      if (iVar1 == param_1) break;
-      iVar2 = *(int *)(iVar1 + 0x10);
-      iVar3 = iVar1;
-    } while (iVar2 != 0);
-    if (iVar2 != 0) {
-      Pause_SpecificMUS(param_1);
-      if (iVar3 == 0) {
-        DAT_80032a00 = *(int *)(param_1 + 0x10);
+      _vfx_SMD_check = _cur_vfx_SMD;
+      _cur_vfx_SMD = _vfx_SMD_check;
+      if (_vfx_SMD_check == param_1) break;
+      _cur_vfx_SMD = _vfx_SMD_check->prev_vfx_SMD;
+      _next_vfx_SMD = _vfx_SMD_check;
+    } while (_cur_vfx_SMD != (vfx_SMD_hdr *)0x0);
+    if (_cur_vfx_SMD != (vfx_SMD_hdr *)0x0) {
+      Pause_SpecificMUS((int)param_1);
+      if (_next_vfx_SMD == (vfx_SMD_hdr *)0x0) {
+        current_vfx_SMD = param_1->prev_vfx_SMD;
       }
       else {
-        *(undefined4 *)(iVar3 + 0x10) = *(undefined4 *)(param_1 + 0x10);
+        _next_vfx_SMD->prev_vfx_SMD = param_1->prev_vfx_SMD;
       }
     }
   }
@@ -21190,7 +25165,7 @@ void ChangeClearRCnt(void)
 
 
 
-undefined4 SetRCnt(uint param_1,undefined2 param_2,uint param_3)
+undefined4 SetRCnt(uint class,undefined2 param_2,uint mode)
 
 {
   undefined *puVar1;
@@ -21199,7 +25174,7 @@ undefined4 SetRCnt(uint param_1,undefined2 param_2,uint param_3)
   uint uVar4;
   
   puVar1 = PTR_TMR_DOTCLOCK_VAL_80031c9c;
-  uVar4 = param_1 & 0xffff;
+  uVar4 = class & 0xffff;
   uVar3 = 0x48;
   if (2 < uVar4) {
     uVar2 = COUNTER_OBJ_98();
@@ -21208,18 +25183,18 @@ undefined4 SetRCnt(uint param_1,undefined2 param_2,uint param_3)
   *(undefined2 *)(PTR_TMR_DOTCLOCK_VAL_80031c9c + uVar4 * 0x10 + 4) = 0;
   *(undefined2 *)(puVar1 + uVar4 * 0x10 + 8) = param_2;
   if (uVar4 < 2) {
-    if ((param_3 & 0x10) != 0) {
+    if ((mode & 0x10) != 0) {
       uVar3 = 0x49;
     }
-    if ((param_3 & 1) == 0) {
+    if ((mode & 1) == 0) {
       uVar2 = COUNTER_OBJ_74();
       return uVar2;
     }
   }
-  else if ((uVar4 == 2) && ((param_3 & 1) == 0)) {
+  else if ((uVar4 == 2) && ((mode & 1) == 0)) {
     uVar3 = 0x248;
   }
-  if ((param_3 & 0x1000) != 0) {
+  if ((mode & 0x1000) != 0) {
     uVar3 = uVar3 | 0x10;
   }
   *(ushort *)(PTR_TMR_DOTCLOCK_VAL_80031c9c + uVar4 * 0x10 + 4) = uVar3;
@@ -33503,8 +37478,8 @@ void Call_BATTLE_Entrypoint(void)
 void Get_BATTLE_BIN(void)
 
 {
-  Get_DAT_BIN_as_File(1000,(int)PTR_DAT_80010010 - (int)PTR_FUN_80010000,(u_long *)PTR_FUN_80010000)
-  ;
+  Get_DAT_BIN_as_File(1000,(int)exe_dest_ptr_arr[4] - (int)exe_dest_ptr_arr[0],
+                      (u_long *)exe_dest_ptr_arr[0]);
   Call_BATTLE_Entrypoint();
   return;
 }
@@ -34234,7 +38209,7 @@ void BuildDrawSCEAPDAT(void)
   local_20._4_4_ = DAT_80040928;
   InitialiseDrawDispEnv(0x140,0xf0,0x200,'\0','\0','\0');
   iVar3 = 0;
-  Get_DAT_BIN_as_File(0xc6,0x5000,(u_long *)PTR_DAT_80010010);
+  Get_DAT_BIN_as_File(0xc6,0x5000,(u_long *)exe_dest_ptr_arr[4]);
   SetPolyF4(&local_78);
   local_78._4_4_ = local_78._4_4_ & 0xff000000;
   local_78.x0 = 0;
@@ -34281,7 +38256,7 @@ void BuildDrawSCEAPDAT(void)
     (&local_78)[ScreenPolarity].b0 = uVar1;
     AddPrim(Otag,&local_78 + ScreenPolarity);
     AddPrim(Otag,&local_48 + ScreenPolarity);
-    Draw_SCEAP(Otag,(u_long *)PTR_DAT_80010010);
+    Draw_SCEAP(Otag,(u_long *)exe_dest_ptr_arr[4]);
     iVar2 = iVar2 + -8;
   } while (-1 < iVar2 * 0x10000);
   iVar3 = 0;
@@ -34303,7 +38278,7 @@ void BuildDrawSCEAPDAT(void)
     (&local_78)[ScreenPolarity].b0 = uVar1;
     AddPrim(Otag,&local_78 + ScreenPolarity);
     AddPrim(Otag,&local_48 + ScreenPolarity);
-    Draw_SCEAP(Otag,(u_long *)PTR_DAT_80010010);
+    Draw_SCEAP(Otag,(u_long *)exe_dest_ptr_arr[4]);
     iVar2 = iVar2 + 8;
     iVar3 = iVar2 * 0x10000;
   } while (iVar2 * 0x10000 >> 0x10 < 0x100);
@@ -35044,7 +39019,7 @@ int OpenAndPlayMusic(int SMDID,int Slot)
   
   _slot = 0;
   if (openedSMDs[Slot + 1] == (SMDDataAll *)0x0) {
-    SMDPtr = Get_SMD((int)SMD_LBA[SMDID * 2],(uint)SMD_LBA[SMDID * 2 + 1]);
+    SMDPtr = Get_SMD(SMD_LBA[SMDID].LBA,SMD_LBA[SMDID].Filesize);
     openedSMDs[Slot + 1] = SMDPtr;
     MusicData = PutPlayMUS(SMDPtr);
     OpenedMUSs[Slot] = MusicData;
@@ -35070,7 +39045,7 @@ int OpenSMDIntoFreeSlot(int SMDID)
   do {
     _Opened_MUSs = _Opened_MUSs + 1;
     if (*ppSVar2 == (SMDDataAll *)0x0) {
-      _SMD = Get_SMD((int)SMD_LBA[SMDID * 2],(uint)SMD_LBA[SMDID * 2 + 1]);
+      _SMD = Get_SMD(SMD_LBA[SMDID].LBA,SMD_LBA[SMDID].Filesize);
       *ppSVar2 = _SMD;
       pMVar1 = PutPlayMUS(_SMD);
       *_Opened_MUSs = pMVar1;
@@ -35144,7 +39119,7 @@ MusDataAll * FUN_80043a90(int slot,undefined4 param_2,short param_3)
       forcePlayedMUS = OpenedMUSs[slot];
       currentMusSlot = slot;
       target_shiftime = param_2;
-      FUN_800121dc(forcePlayedMUS,(short)param_2,param_3);
+      Reset_Mus(forcePlayedMUS,(short)param_2,param_3);
       MusPtr = forcePlayedMUS;
     }
   }
@@ -35196,12 +39171,12 @@ bool set_TargetVol_currentSong(int target_shifttime,short changeVol)
 
 
 
-undefined4 Play_GNRC_Tune(uint param_1)
+undefined4 Play_GNRC_Tune(uint Tune_ID)
 
 {
-  if ((param_1 != 0) && (TuneSoundID == 0)) {
+  if ((Tune_ID != 0) && (TuneSoundID == 0)) {
     set_TargetVol_currentSong(0,0x78);
-    TuneSoundID = param_1 | 0x80;
+    TuneSoundID = Tune_ID | 0x80;
   }
   return 1;
 }
@@ -35265,7 +39240,7 @@ bool FUN_80043de0(void)
         MusicData = PutPlayMUS(openedSMDs[soundID + 3]);
         *ppMVar3 = MusicData;
       }
-      FUN_800121dc(*ppMVar3,0x7f,0);
+      Reset_Mus(*ppMVar3,0x7f,0);
       bVar1 = true;
     }
   }
@@ -35339,16 +39314,16 @@ void Call_Play_Sound(uint param_1)
 // Possible SCNOFF.OBJ/SsSetNoiseOff
 // Possible SSQUIT.OBJ/SsQuit
 
-void Call_Play_SoundEffect(MusicDataHeader *param_1)
+void Call_PlaySound_findChannel(uint sfx_ID)
 
 {
-  PlaySound_FromMUS((MusDataAll *)param_1);
+  PlaySound_findChannel(sfx_ID);
   return;
 }
 
 
 
-void FUN_80044038(uint param_1)
+void Call_Play_Sound2(uint param_1)
 
 {
   DAT_8004599c = param_1;
@@ -35390,13 +39365,13 @@ void FUN_800440cc(void)
 
 
 
-void FUN_800440f4(MusicDataHeader *param_1)
+void Stop_Playing_SFX(int sfx_ID)
 
 {
-  if (param_1 == DAT_8004599c) {
-    DAT_8004599c = (MusicDataHeader *)0x0;
+  if (sfx_ID == DAT_8004599c) {
+    DAT_8004599c = 0;
   }
-  AccumulateChannelsToPause((int)param_1);
+  AccumulateChannelsToPause(sfx_ID);
   return;
 }
 
@@ -35417,21 +39392,21 @@ void Open_Permanent_SoundFiles(void)
 
 {
   SoundFontHeader *SoundFontPtr;
-  u_long *temp_ptr;
+  vfx_SMD_hdr *temp_ptr;
   SMDDataAll **ppSVar1;
   int iVar2;
   
   Suzuki_Initialisation_Func(0);
   SMD_Free_FFT();
                     // opens WAVESET.WD
-  SoundFontPtr = (SoundFontHeader *)Get_File(0x14c0f,0x79000,(u_long *)PTR_FUN_80010000);
+  SoundFontPtr = (SoundFontHeader *)Get_File(0x14c0f,0x79000,(u_long *)exe_dest_ptr_arr[0]);
   Put_WAVESET_SPU(SoundFontPtr);
                     // Opens SYSTEM.SED
-  temp_ptr = Get_File(0x14c0a,(uint)&DAT_00002800,(u_long *)&DAT_80047610);
-  FUN_80017e7c((int)temp_ptr);
+  temp_ptr = (vfx_SMD_hdr *)Get_File(0x14c0a,0x2800,(u_long *)&DAT_80047610);
+  append_vfx_SMD(temp_ptr);
                     // Opens ENV.SED
-  temp_ptr = Get_File(85000,0x1000,(u_long *)&DAT_8004d9b8);
-  FUN_80017e7c((int)temp_ptr);
+  temp_ptr = (vfx_SMD_hdr *)Get_File(85000,0x1000,(u_long *)&DAT_8004d9b8);
+  append_vfx_SMD(temp_ptr);
   iVar2 = 6;
   ppSVar1 = openedSMDs + 1;
   forcePlayedSmd = (MusDataAll *)0x0;
@@ -35443,11 +39418,11 @@ void Open_Permanent_SoundFiles(void)
     ppSVar1 = ppSVar1 + -1;
   } while (-1 < iVar2);
   DAT_8004599c = 0;
-  openedSMDs[4] = Get_SMD(DAT_800471e8,DAT_800471ec);
-  openedSMDs[5] = Get_SMD(DAT_800471f0,DAT_800471f4);
-  openedSMDs[6] = Get_SMD(DAT_800471f8,DAT_800471fc);
-  openedSMDs[7] = Get_SMD(DAT_80047200,DAT_80047204);
-  openedSMDs[8] = Get_SMD(DAT_80047208,DAT_8004720c);
+  openedSMDs[4] = Get_SMD(SMD_LBA[45].LBA,SMD_LBA[45].Filesize);
+  openedSMDs[5] = Get_SMD(SMD_LBA[46].LBA,SMD_LBA[46].Filesize);
+  openedSMDs[6] = Get_SMD(SMD_LBA[47].LBA,SMD_LBA[47].Filesize);
+  openedSMDs[7] = Get_SMD(SMD_LBA[48].LBA,SMD_LBA[48].Filesize);
+  openedSMDs[8] = Get_SMD(SMD_LBA[49].LBA,SMD_LBA[49].Filesize);
   return;
 }
 
@@ -35592,7 +39567,7 @@ LAB_80044494:
         uVar5 = uVar5 + 1;
       } while (uVar5 < uVar4);
     }
-    puVar1 = PTR_DAT_80010010 + in_t0 * 0x800;
+    puVar1 = exe_dest_ptr_arr[4] + in_t0 * 0x800;
   }
   return puVar1;
 }
@@ -35608,7 +39583,7 @@ undefined * BIN_Realloc_FFT(undefined *param_1,uint param_2)
   uint uVar4;
   uint uVar5;
   
-  iVar1 = (int)param_1 - (int)PTR_DAT_80010010;
+  iVar1 = (int)param_1 - (int)exe_dest_ptr_arr[4];
   uVar3 = 1;
   if (iVar1 < 0) {
     iVar1 = iVar1 + 0x7ff;
@@ -35618,7 +39593,7 @@ undefined * BIN_Realloc_FFT(undefined *param_1,uint param_2)
   if ((param_2 & 0x7ff) != 0) {
     uVar4 = uVar4 + 1;
   }
-  if ((PTR_DAT_80010010 <= param_1) && (param_1 < PTR_DAT_80010010 + 0x20000)) {
+  if ((exe_dest_ptr_arr[4] <= param_1) && (param_1 < exe_dest_ptr_arr[4] + 0x20000)) {
     do {
       uVar2 = 0;
       do {
@@ -35640,7 +39615,7 @@ undefined * BIN_Realloc_FFT(undefined *param_1,uint param_2)
           uVar2 = uVar2 + 1;
         } while (uVar2 < uVar4);
       }
-      return PTR_DAT_80010010 + uVar5 * 0x800;
+      return exe_dest_ptr_arr[4] + uVar5 * 0x800;
     }
   }
   return (undefined *)0x0;
@@ -35656,7 +39631,7 @@ undefined4 BIN_Free_FFT(int param_1)
   char *pcVar3;
   uint uVar4;
   
-  uVar4 = (uint)(param_1 - (int)PTR_DAT_80010010) >> 0xb;
+  uVar4 = (uint)(param_1 - (int)exe_dest_ptr_arr[4]) >> 0xb;
   cVar1 = (&DAT_8004e9d4)[uVar4];
   uVar2 = 0;
   if (uVar4 == 0 || cVar1 != (&DAT_8004e9d3)[uVar4]) {
@@ -35690,11 +39665,13 @@ void FUN_80044670(void)
 
 
 
-void Call_CalcFileHead_NNL(int param_1,uint param_2,u_long *param_3)
+int Call_CalcFileHead_NNL(int param_1,uint param_2,u_long *param_3)
 
 {
-  Calculate_File_Header_NNL(&MRTA_fileopenhdr,param_1,param_2 >> 0xb,param_3);
-  return;
+  int _i;
+  
+  _i = Calculate_File_Header_NNL(&MRTA_fileopenhdr,param_1,param_2 >> 0xb,param_3);
+  return _i;
 }
 
 
@@ -36135,10 +40112,9 @@ void Get_FRAME_CDROM_to_FrameBuffer(void)
 void Open_WORLD_WLDCORE(int param_1)
 
 {
-  Open_WORLD_File(0x14849,0xdc,(u_long *)PTR_FUN_80010000,0);
+  Open_WORLD_File(0x14849,0xdc,(u_long *)exe_dest_ptr_arr[0],0);
   if (param_1 != 0) {
-    Open_WORLD_File(0x14925,0x1e0,
-                    (u_long *)PTR_s_ps_sort_sprite_bg__z_resolution_o_WORLD__800e0000_80010004,1);
+    Open_WORLD_File(0x14925,0x1e0,(u_long *)exe_dest_ptr_arr[1],1);
   }
   WLDCORE_Entrypoint();
   return;
@@ -36149,9 +40125,7 @@ void Open_WORLD_WLDCORE(int param_1)
 void OPEN_WORLD(int param_1)
 
 {
-  Open_WORLD_File(0x14925,0x1e0,
-                  (u_long *)PTR_s_ps_sort_sprite_bg__z_resolution_o_WORLD__800e0000_80010004,
-                  param_1 + -1);
+  Open_WORLD_File(0x14925,0x1e0,(u_long *)exe_dest_ptr_arr[1],param_1 + -1);
   return;
 }
 
@@ -36372,7 +40346,7 @@ void Initialise_MEMCARD_events(void)
 void Get_OPEN_CDROM_to_RAM(int stream_movie)
 
 {
-  Get_DAT_BIN_as_File(86000,0x36800,(u_long *)PTR_FUN_80010000);
+  Get_DAT_BIN_as_File(86000,0x36800,(u_long *)exe_dest_ptr_arr[0]);
   OPEN_Main(stream_movie);
   return;
 }
@@ -36382,7 +40356,7 @@ void Get_OPEN_CDROM_to_RAM(int stream_movie)
 void Get_OPEN_CDROM_to_RAM2(void)
 
 {
-  Get_DAT_BIN_as_File(86000,0x36800,(u_long *)PTR_FUN_80010000);
+  Get_DAT_BIN_as_File(86000,0x36800,(u_long *)exe_dest_ptr_arr[0]);
   OPEN_EndCredits_Main();
   return;
 }
@@ -38307,7 +42281,7 @@ void Generate_Unit_Name(int param_1)
   int iVar10;
   code *pcVar11;
   
-  pcVar11 = (code *)0x80132824;
+  pcVar11 = FUN_80132824;
   if (InitializeBattle != 0) {
     pcVar11 = FUN_800e6edc;
   }
@@ -40220,12 +44194,11 @@ void FUN_BATTLE_BIN__80068d08(int *param_1)
 
 {
   byte bVar1;
-  undefined1 *puVar2;
+  map_tile_data *pmVar2;
   
   if (param_1 != (int *)0x0) {
-    puVar2 = FUN_BATTLE_BIN__80183fb4
-                       ((uint)*(byte *)(param_1 + 0x1f),(uint)*(byte *)((int)param_1 + 0x7d),
-                        (uint)*(byte *)((int)param_1 + 0x7e));
+    pmVar2 = get_tile_data_ptr((uint)*(byte *)(param_1 + 0x1f),(uint)*(byte *)((int)param_1 + 0x7d),
+                               (uint)*(byte *)((int)param_1 + 0x7e));
     param_1[0x50] = ~param_1[0x54] & param_1[0x50];
     param_1[0x51] = ~param_1[0x55] & param_1[0x51];
     param_1[0x50] = param_1[0x50] | param_1[0x52];
@@ -40233,17 +44206,17 @@ void FUN_BATTLE_BIN__80068d08(int *param_1)
     FUN_BATTLE_BIN__80081b88(param_1);
     FUN_BATTLE_BIN__80082550((int)param_1);
     FUN_BATTLE_BIN__80082508((int)param_1);
-    if (DAT_BATTLE_BIN__8009612c == 0) {
-      bVar1 = puVar2[6];
+    if (VFX_canOpen == 0) {
+      bVar1 = pmVar2->tile_interaction;
     }
     else {
-      bVar1 = puVar2[6];
+      bVar1 = pmVar2->tile_interaction;
     }
-    FUN_BATTLE_BIN__80082468(param_1,bVar1 >> 2 & 3,(uint)(DAT_BATTLE_BIN__8009612c == 0));
+    FUN_BATTLE_BIN__80082468(param_1,bVar1 >> 2 & 3,(uint)(VFX_canOpen == 0));
     FUN_BATTLE_BIN__8008346c(param_1);
     FUN_BATTLE_BIN__80082eec((int)param_1);
     FUN_BATTLE_BIN__800831b8((int)param_1);
-    FUN_BATTLE_BIN__80083570(param_1,(byte)puVar2[6] >> 2 & 3);
+    FUN_BATTLE_BIN__80083570(param_1,pmVar2->tile_interaction >> 2 & 3);
     FUN_BATTLE_BIN__8008258c(param_1);
     param_1[0x55] = 0;
     param_1[0x54] = 0;
@@ -40451,18 +44424,18 @@ void FUN_BATTLE_BIN__800692bc(int param_1)
 int FUN_BATTLE_BIN__8006933c(int param_1,int param_2,uint param_3)
 
 {
-  undefined1 *puVar1;
-  undefined1 *puVar2;
+  map_tile_data *pmVar1;
+  map_tile_data *pmVar2;
   int iVar3;
   uint uVar4;
   
-  puVar1 = FUN_BATTLE_BIN__80183fb4(param_1,param_2,param_3);
-  puVar2 = FUN_BATTLE_BIN__80183fb4(param_1,param_2,param_3 ^ 1);
+  pmVar1 = get_tile_data_ptr(param_1,param_2,param_3);
+  pmVar2 = get_tile_data_ptr(param_1,param_2,param_3 ^ 1);
   iVar3 = 0x40;
-  if ((puVar2[6] & 1) == 0) {
-    uVar4 = (uint)(byte)puVar1[2] + (uint)((byte)puVar1[3] >> 5);
-    if (uVar4 < (uint)(byte)puVar2[2] + (uint)((byte)puVar2[3] >> 5)) {
-      iVar3 = (((uint)(byte)puVar2[2] - ((byte)puVar2[5] & 0x1f)) - (uVar4 + 3)) * 2;
+  if ((pmVar2->tile_interaction & 1) == 0) {
+    uVar4 = (uint)pmVar1->height_whole + (uint)(pmVar1->height_small >> 5);
+    if (uVar4 < (uint)pmVar2->height_whole + (uint)(pmVar2->height_small >> 5)) {
+      iVar3 = (((uint)pmVar2->height_whole - (pmVar2->tile_overlay & 0x1f)) - (uVar4 + 3)) * 2;
     }
     else {
       iVar3 = 0x40;
@@ -40476,14 +44449,15 @@ int FUN_BATTLE_BIN__8006933c(int param_1,int param_2,uint param_3)
 int FUN_BATTLE_BIN__800693f4(int param_1,int param_2,int param_3,uint param_4)
 
 {
-  undefined1 *puVar1;
+  map_tile_data *pmVar1;
   int iVar2;
   int iVar3;
   int iVar4;
   
-  puVar1 = FUN_BATTLE_BIN__80183fb4(param_2,param_3,param_4);
+  pmVar1 = get_tile_data_ptr(param_2,param_3,param_4);
   iVar2 = FUN_BATTLE_BIN__8006933c(param_2,param_3,param_4);
-  iVar4 = ((uint)(byte)puVar1[2] + (uint)((byte)puVar1[3] >> 5)) * 2 + ((byte)puVar1[3] & 0x1f);
+  iVar4 = ((uint)pmVar1->height_whole + (uint)(pmVar1->height_small >> 5)) * 2 +
+          (pmVar1->height_small & 0x1f);
   iVar3 = (iVar4 + iVar2) * -6;
   iVar2 = iVar3;
   if (((iVar3 <= param_1) && (iVar4 = iVar4 * -6 + -0x30, iVar2 = param_1, iVar4 <= param_1)) &&
@@ -40515,9 +44489,8 @@ void FUN_BATTLE_BIN__800694d8(int param_1,byte *param_2,byte *param_3)
   int local_30;
   
   local_40 = param_3;
-  FUN_BATTLE_BIN__80183fb4
-            ((uint)*(byte *)(param_1 + 0x7c),(uint)*(byte *)(param_1 + 0x7d),
-             (uint)*(byte *)(param_1 + 0x7e));
+  get_tile_data_ptr((uint)*(byte *)(param_1 + 0x7c),(uint)*(byte *)(param_1 + 0x7d),
+                    (uint)*(byte *)(param_1 + 0x7e));
   uVar6 = (uint)*(byte *)(param_1 + 0x7c);
   uVar5 = (uint)*(byte *)(param_1 + 0x7d);
   iVar2 = *(int *)(param_1 + 0x98);
@@ -40579,7 +44552,7 @@ void FUN_BATTLE_BIN__80069744(int param_1,byte *param_2,byte *param_3)
 
 {
   byte bVar1;
-  undefined1 *puVar2;
+  map_tile_data *pmVar2;
   int iVar3;
   uint uVar4;
   byte *pbVar5;
@@ -40596,9 +44569,8 @@ void FUN_BATTLE_BIN__80069744(int param_1,byte *param_2,byte *param_3)
   int local_30;
   
   local_40 = param_3;
-  FUN_BATTLE_BIN__80183fb4
-            ((uint)*(byte *)(param_1 + 0x7c),(uint)*(byte *)(param_1 + 0x7d),
-             (uint)*(byte *)(param_1 + 0x7e));
+  get_tile_data_ptr((uint)*(byte *)(param_1 + 0x7c),(uint)*(byte *)(param_1 + 0x7d),
+                    (uint)*(byte *)(param_1 + 0x7e));
   uVar7 = (uint)*(byte *)(param_1 + 0x7c);
   uVar6 = (uint)*(byte *)(param_1 + 0x7d);
   iVar3 = *(int *)(param_1 + 0x98);
@@ -40637,9 +44609,9 @@ LAB_BATTLE_BIN__80069860:
       }
       uVar4 = *pbVar5 >> 5 & 1;
       if (*(uint *)(param_1 + 0x98) == (uint)*param_2) {
-        puVar2 = FUN_BATTLE_BIN__80183fb4(uVar7,uVar6,uVar4);
-        unaff_s3 = (((uint)(byte)puVar2[2] + (uint)((byte)puVar2[3] >> 5)) * 2 +
-                   ((byte)puVar2[3] & 0x1f)) * -6;
+        pmVar2 = get_tile_data_ptr(uVar7,uVar6,uVar4);
+        unaff_s3 = (((uint)pmVar2->height_whole + (uint)(pmVar2->height_small >> 5)) * 2 +
+                   (pmVar2->height_small & 0x1f)) * -6;
       }
       else {
         unaff_s3 = FUN_BATTLE_BIN__800693f4(local_50.vy,uVar7,uVar6,uVar4);
@@ -41406,7 +45378,7 @@ void FUN_BATTLE_BIN__8006af7c(int *param_1)
 
 {
   short sVar1;
-  undefined1 *puVar2;
+  map_tile_data *pmVar2;
   int *piVar3;
   ushort uVar4;
   int iVar5;
@@ -41436,9 +45408,9 @@ void FUN_BATTLE_BIN__8006af7c(int *param_1)
        (*(char *)((int)param_1 + 0x7e) != *(char *)((int)param_1 + 0x82))) {
       uVar9 = (uint)*(byte *)((int)param_1 + 0x82);
       *(byte *)((int)param_1 + 0x7e) = *(byte *)((int)param_1 + 0x82);
-      puVar2 = FUN_BATTLE_BIN__80183fb4((int)(short)uVar6,(int)(short)uVar4,uVar9);
+      pmVar2 = get_tile_data_ptr((int)(short)uVar6,(int)(short)uVar4,uVar9);
       FUN_BATTLE_BIN__80069af8
-                ((int)param_1,(byte *)(param_1 + 0x47),(int)puVar2,
+                ((int)param_1,(byte *)(param_1 + 0x47),(int)pmVar2,
                  (uint)*(byte *)((int)param_1 + 0x96));
       iVar7 = param_1[0xe];
 LAB_BATTLE_BIN__8006b160:
@@ -41453,9 +45425,9 @@ LAB_BATTLE_BIN__8006b160:
        (*(char *)((int)param_1 + 0x7e) != *(char *)((int)param_1 + 0x82))) {
       uVar9 = (uint)*(byte *)((int)param_1 + 0x82);
       *(byte *)((int)param_1 + 0x7e) = *(byte *)((int)param_1 + 0x82);
-      puVar2 = FUN_BATTLE_BIN__80183fb4((int)(short)uVar6,(int)(short)uVar4,uVar9);
+      pmVar2 = get_tile_data_ptr((int)(short)uVar6,(int)(short)uVar4,uVar9);
       FUN_BATTLE_BIN__80069af8
-                ((int)param_1,(byte *)(param_1 + 0x47),(int)puVar2,
+                ((int)param_1,(byte *)(param_1 + 0x47),(int)pmVar2,
                  (uint)*(byte *)((int)param_1 + 0x96));
       iVar7 = param_1[0xf];
       goto LAB_BATTLE_BIN__8006b160;
@@ -41482,7 +45454,7 @@ LAB_BATTLE_BIN__8006b160:
   case 5:
   case 7:
     param_1[7] = param_1[7] + param_1[0xb];
-    puVar2 = FUN_BATTLE_BIN__80183fb4((int)(short)uVar6,(int)(short)uVar4,uVar9);
+    pmVar2 = get_tile_data_ptr((int)(short)uVar6,(int)(short)uVar4,uVar9);
     iVar7 = -param_1[7];
     if (0 < param_1[7]) {
       iVar7 = iVar7 + 0xfff;
@@ -41491,7 +45463,7 @@ LAB_BATTLE_BIN__8006b160:
     if (iVar7 >> 0xc <= -iVar5) {
       param_1[7] = iVar5 << 0xc;
       FUN_BATTLE_BIN__800699f4
-                ((int)param_1,(byte *)(param_1 + 0x47),(int)puVar2,
+                ((int)param_1,(byte *)(param_1 + 0x47),(int)pmVar2,
                  (uint)*(byte *)((int)param_1 + 0x97));
       goto LAB_BATTLE_BIN__8006b894;
     }
@@ -41517,7 +45489,7 @@ LAB_BATTLE_BIN__8006b608:
   case 6:
   case 8:
     param_1[7] = param_1[7] + param_1[0xb];
-    puVar2 = FUN_BATTLE_BIN__80183fb4((int)(short)uVar6,(int)(short)uVar4,uVar9);
+    pmVar2 = get_tile_data_ptr((int)(short)uVar6,(int)(short)uVar4,uVar9);
     iVar7 = -param_1[7];
     if (0 < param_1[7]) {
       iVar7 = iVar7 + 0xfff;
@@ -41527,7 +45499,7 @@ LAB_BATTLE_BIN__8006b608:
     if (iVar7 >> 0xc <= iVar8) {
       param_1[7] = iVar10 << 0xc;
       FUN_BATTLE_BIN__80069af8
-                ((int)param_1,(byte *)(param_1 + 0x47),(int)puVar2,
+                ((int)param_1,(byte *)(param_1 + 0x47),(int)pmVar2,
                  (uint)*(byte *)((int)param_1 + 0x96));
       FUN_BATTLE_BIN__80069dfc((int)param_1,param_1[0xe]);
     }
@@ -41561,7 +45533,7 @@ LAB_BATTLE_BIN__8006b5cc:
   case 0xd:
   case 0xf:
     param_1[7] = param_1[7] + param_1[0xb];
-    puVar2 = FUN_BATTLE_BIN__80183fb4((int)(short)uVar6,(int)(short)uVar4,uVar9);
+    pmVar2 = get_tile_data_ptr((int)(short)uVar6,(int)(short)uVar4,uVar9);
     iVar7 = -param_1[7];
     if (0 < param_1[7]) {
       iVar7 = iVar7 + 0xfff;
@@ -41573,7 +45545,7 @@ LAB_BATTLE_BIN__8006b5cc:
         param_1[0xf] = param_1[0xf] + DAT_BATTLE_BIN__80096128;
       }
       FUN_BATTLE_BIN__800699f4
-                ((int)param_1,(byte *)(param_1 + 0x47),(int)puVar2,
+                ((int)param_1,(byte *)(param_1 + 0x47),(int)pmVar2,
                  (uint)*(byte *)((int)param_1 + 0x97));
       iVar7 = param_1[0xf];
       goto LAB_BATTLE_BIN__8006b898;
@@ -41598,7 +45570,7 @@ LAB_BATTLE_BIN__8006b5cc:
   case 0xe:
   case 0x10:
     param_1[7] = param_1[7] + param_1[0xb];
-    puVar2 = FUN_BATTLE_BIN__80183fb4((int)(short)uVar6,(int)(short)uVar4,uVar9);
+    pmVar2 = get_tile_data_ptr((int)(short)uVar6,(int)(short)uVar4,uVar9);
     iVar7 = -param_1[7];
     if (0 < param_1[7]) {
       iVar7 = iVar7 + 0xfff;
@@ -41609,7 +45581,7 @@ LAB_BATTLE_BIN__8006b5cc:
         param_1[0xf] = param_1[0xf] + DAT_BATTLE_BIN__80096128;
       }
       FUN_BATTLE_BIN__80069af8
-                ((int)param_1,(byte *)(param_1 + 0x47),(int)puVar2,
+                ((int)param_1,(byte *)(param_1 + 0x47),(int)pmVar2,
                  (uint)*(byte *)((int)param_1 + 0x96));
       FUN_BATTLE_BIN__80069dfc((int)param_1,param_1[0xf]);
     }
@@ -41658,7 +45630,7 @@ LAB_BATTLE_BIN__8006b5cc:
   case 0x26:
   case 0x28:
     param_1[7] = param_1[7] + param_1[0xb];
-    FUN_BATTLE_BIN__80183fb4((int)(short)uVar6,(int)(short)uVar4,uVar9);
+    get_tile_data_ptr((int)(short)uVar6,(int)(short)uVar4,uVar9);
     iVar7 = -param_1[7];
     if (0 < param_1[7]) {
       iVar7 = iVar7 + 0xfff;
@@ -41674,7 +45646,7 @@ LAB_BATTLE_BIN__8006b5cc:
   case 0x27:
   case 0x29:
     param_1[7] = param_1[7] + param_1[0xb];
-    FUN_BATTLE_BIN__80183fb4((int)(short)uVar6,(int)(short)uVar4,uVar9);
+    get_tile_data_ptr((int)(short)uVar6,(int)(short)uVar4,uVar9);
     iVar7 = -param_1[7];
     if (0 < param_1[7]) {
       iVar7 = iVar7 + 0xfff;
@@ -41690,7 +45662,7 @@ LAB_BATTLE_BIN__8006b5cc:
   case 0x33:
   case 0x37:
     param_1[7] = param_1[7] + param_1[0xb];
-    puVar2 = FUN_BATTLE_BIN__80183fb4((int)(short)uVar6,(int)(short)uVar4,uVar9);
+    pmVar2 = get_tile_data_ptr((int)(short)uVar6,(int)(short)uVar4,uVar9);
     iVar7 = -param_1[7];
     if (0 < param_1[7]) {
       iVar7 = iVar7 + 0xfff;
@@ -41698,7 +45670,7 @@ LAB_BATTLE_BIN__8006b5cc:
     if (iVar7 >> 0xc <= -(int)sVar1) {
       param_1[7] = (int)sVar1 << 0xc;
       FUN_BATTLE_BIN__80069bf8
-                ((int)param_1,(byte *)(param_1 + 0x47),(int)puVar2,
+                ((int)param_1,(byte *)(param_1 + 0x47),(int)pmVar2,
                  (uint)*(byte *)((int)param_1 + 0x96));
       goto LAB_BATTLE_BIN__8006b894;
     }
@@ -41712,7 +45684,7 @@ LAB_BATTLE_BIN__8006b788:
   case 0x34:
   case 0x38:
     param_1[7] = param_1[7] + param_1[0xb];
-    puVar2 = FUN_BATTLE_BIN__80183fb4((int)(short)uVar6,(int)(short)uVar4,uVar9);
+    pmVar2 = get_tile_data_ptr((int)(short)uVar6,(int)(short)uVar4,uVar9);
     iVar7 = -param_1[7];
     if (0 < param_1[7]) {
       iVar7 = iVar7 + 0xfff;
@@ -41720,7 +45692,7 @@ LAB_BATTLE_BIN__8006b788:
     if (-(int)sVar1 < iVar7 >> 0xc) goto LAB_BATTLE_BIN__8006b788;
     param_1[7] = (int)sVar1 << 0xc;
     FUN_BATTLE_BIN__80069cfc
-              ((int)param_1,(byte *)(param_1 + 0x47),(int)puVar2,
+              ((int)param_1,(byte *)(param_1 + 0x47),(int)pmVar2,
                (uint)*(byte *)((int)param_1 + 0x96));
 LAB_BATTLE_BIN__8006b894:
     iVar7 = param_1[0xe];
@@ -41755,48 +45727,52 @@ void FUN_BATTLE_BIN__8006b960(int param_1,MusicDataHeader *param_2)
 
 {
   if ((*(uint *)(param_1 + 0x80) & 0x2000000) == 0) {
-    Call_Play_SoundEffect(param_2);
+    Call_PlaySound_findChannel((uint)param_2);
   }
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__8006b994(int param_1)
+void Play_Land_SFX_per_Tile(ENTDDisplayUnitData *Tile_Coords)
 
 {
-  byte *pbVar1;
-  MusicDataHeader *pMVar2;
+  motion_flags_4 _moveflags;
+  map_tile_data *tile_ptr;
+  uint sfx_ID;
   
-  if (((*(uint *)(param_1 + 0x80) & 0x2000000) == 0) &&
-     (pbVar1 = FUN_BATTLE_BIN__80183fb4
-                         ((uint)*(byte *)(param_1 + 0x80),(uint)*(byte *)(param_1 + 0x81),
-                          (uint)*(byte *)(param_1 + 0x82)), pbVar1 != (byte *)0x0)) {
-    switch(*pbVar1 & 0x3f) {
-    case 3:
-    case 4:
-    case 0x1d:
-      pMVar2 = (MusicDataHeader *)0x28;
+  _moveflags._0_1_ = Tile_Coords->MoveX;
+  _moveflags._1_1_ = Tile_Coords->MoveY;
+  _moveflags._2_1_ = Tile_Coords->MoveZ;
+  _moveflags._3_1_ = Tile_Coords->MoveMovementFlags;
+  if (((_moveflags & action2) == 0) &&
+     (tile_ptr = get_tile_data_ptr((uint)Tile_Coords->MoveX,(uint)Tile_Coords->MoveY,
+                                   (uint)Tile_Coords->MoveZ), tile_ptr != (map_tile_data *)0x0)) {
+    switch(tile_ptr->TileType & 0x3f) {
+    case Grassland:
+    case Thicket:
+    case Rug:
+      sfx_ID = 0x28;
       break;
     default:
-      pMVar2 = (MusicDataHeader *)0x29;
+      sfx_ID = 0x29;
       break;
-    case 9:
-    case 10:
-    case 0xb:
-    case 0xe:
-    case 0xf:
-    case 0x10:
-    case 0x11:
-    case 0x2d:
-      pMVar2 = (MusicDataHeader *)0x23;
+    case Swamp:
+    case Marsh:
+    case PoisonMarsh:
+    case Waterway:
+    case River:
+    case Lake:
+    case Sea:
+    case Waterfall:
+      sfx_ID = 0x23;
       break;
-    case 0x14:
-    case 0x1e:
-    case 0x1f:
-      pMVar2 = (MusicDataHeader *)0x3a;
+    case WoodenFloor:
+    case Tree:
+    case Box:
+      sfx_ID = 0x3a;
     }
-    Call_Play_SoundEffect(pMVar2);
+    Call_PlaySound_findChannel(sfx_ID);
   }
   return;
 }
@@ -41806,49 +45782,49 @@ void FUN_BATTLE_BIN__8006b994(int param_1)
 void FUN_BATTLE_BIN__8006ba38(int param_1)
 
 {
-  byte *pbVar1;
+  map_tile_data *pmVar1;
   
   if (((*(uint *)(param_1 + 0x80) & 0x2000000) == 0) &&
-     (pbVar1 = FUN_BATTLE_BIN__80183fb4
-                         ((uint)*(byte *)(param_1 + 0x80),(uint)*(byte *)(param_1 + 0x81),
-                          (uint)*(byte *)(param_1 + 0x82)), pbVar1 != (byte *)0x0)) {
-    switch(*pbVar1 & 0x3f) {
-    case 1:
-    case 2:
-    case 6:
-    case 7:
-    case 8:
-    case 0xc:
-    case 0xd:
-    case 0x13:
-    case 0x14:
-    case 0x15:
-    case 0x16:
-    case 0x17:
-    case 0x1a:
-    case 0x1b:
-    case 0x1e:
-    case 0x1f:
-    case 0x20:
-    case 0x21:
-    case 0x22:
-    case 0x23:
-    case 0x25:
-    case 0x28:
-    case 0x29:
-    case 0x2a:
-    case 0x2c:
-    case 0x2e:
+     (pmVar1 = get_tile_data_ptr((uint)*(byte *)(param_1 + 0x80),(uint)*(byte *)(param_1 + 0x81),
+                                 (uint)*(byte *)(param_1 + 0x82)), pmVar1 != (map_tile_data *)0x0))
+  {
+    switch(pmVar1->TileType & 0x3f) {
+    case SandArea:
+    case Stalactite:
+    case RockyCliff:
+    case Gravel:
+    case Wasteland:
+    case LavaRocks:
+    case Ice:
+    case Road:
+    case WoodenFloor:
+    case StoneFloor:
+    case Roof:
+    case StoneWall:
+    case Salt:
+    case Book:
+    case Tree:
+    case Box:
+    case Brick:
+    case Chimney:
+    case MudWall:
+    case Bridge:
+    case Stairs:
+    case Deck:
+    case Machine:
+    case IronPlate:
+    case Tombstone:
+    case Coffin:
       FUN_BATTLE_BIN__80068b14(param_1);
       break;
-    case 9:
-    case 10:
-    case 0xb:
-    case 0xe:
-    case 0xf:
-    case 0x10:
-    case 0x11:
-    case 0x2d:
+    case Swamp:
+    case Marsh:
+    case PoisonMarsh:
+    case Waterway:
+    case River:
+    case Lake:
+    case Sea:
+    case Waterfall:
       FUN_BATTLE_BIN__80068af4(param_1);
     }
   }
@@ -41862,7 +45838,7 @@ void FUN_BATTLE_BIN__8006bad8(int param_1,undefined4 *param_2,undefined4 *param_
 {
   byte bVar1;
   byte bVar2;
-  undefined1 *puVar3;
+  map_tile_data *pmVar3;
   uint uVar4;
   uint uVar5;
   uint uVar6;
@@ -41870,11 +45846,10 @@ void FUN_BATTLE_BIN__8006bad8(int param_1,undefined4 *param_2,undefined4 *param_
   
   bVar1 = *(byte *)(param_1 + 0x11c);
   uVar7 = (uint)bVar1;
-  puVar3 = FUN_BATTLE_BIN__80183fb4
-                     ((uint)*(byte *)(param_1 + 0x7c),(uint)*(byte *)(param_1 + 0x7d),
-                      (uint)*(byte *)(param_1 + 0x7e));
+  pmVar3 = get_tile_data_ptr((uint)*(byte *)(param_1 + 0x7c),(uint)*(byte *)(param_1 + 0x7d),
+                             (uint)*(byte *)(param_1 + 0x7e));
   bVar2 = bVar1 >> 6;
-  *param_2 = puVar3;
+  *param_2 = pmVar3;
   if (bVar2 == 1) {
     uVar6 = bVar1 >> 5 & 1;
     uVar5 = (uint)*(byte *)(param_1 + 0x7d);
@@ -41901,8 +45876,8 @@ void FUN_BATTLE_BIN__8006bad8(int param_1,undefined4 *param_2,undefined4 *param_
     uVar4 = (uint)*(byte *)(param_1 + 0x7c);
     uVar5 = *(byte *)(param_1 + 0x7d) + 1 + (uVar7 & 3);
   }
-  puVar3 = FUN_BATTLE_BIN__80183fb4(uVar4,uVar5,uVar6);
-  *param_3 = puVar3;
+  pmVar3 = get_tile_data_ptr(uVar4,uVar5,uVar6);
+  *param_3 = pmVar3;
   return;
 }
 
@@ -42282,7 +46257,7 @@ void FUN_BATTLE_BIN__8006c4f8(int *param_1)
   uint uVar2;
   undefined3 extraout_var;
   int iVar3;
-  undefined1 *puVar4;
+  map_tile_data *pmVar4;
   
   FUN_BATTLE_BIN__80084214
             ((int)param_1,(int)(param_1 + 0x76),(uint)*(ushort *)(param_1 + 0x78),
@@ -42315,13 +46290,13 @@ void FUN_BATTLE_BIN__8006c4f8(int *param_1)
         FUN_BATTLE_BIN__8006a380((int)param_1,DAT_BATTLE_BIN__80096220);
         *(undefined *)((int)param_1 + 0x7f) = (&DAT_BATTLE_BIN__80093ca0)[uVar2];
       }
-      puVar4 = FUN_BATTLE_BIN__80183fb4
-                         ((uint)*(byte *)(param_1 + 0x20),(uint)*(byte *)((int)param_1 + 0x81),
-                          (uint)*(byte *)((int)param_1 + 0x82));
-      if ((puVar4[3] & 0xe0) == 0) {
+      pmVar4 = get_tile_data_ptr((uint)*(byte *)(param_1 + 0x20),
+                                 (uint)*(byte *)((int)param_1 + 0x81),
+                                 (uint)*(byte *)((int)param_1 + 0x82));
+      if ((pmVar4->height_small & 0xe0) == 0) {
         return;
       }
-      if ((int)(((uint)(byte)puVar4[2] + (uint)((byte)puVar4[3] >> 5)) * 0xc) <=
+      if ((int)(((uint)pmVar4->height_whole + (uint)(pmVar4->height_small >> 5)) * 0xc) <=
           -(int)*(short *)((int)param_1 + 0x42)) {
         return;
       }
@@ -42347,7 +46322,7 @@ void FUN_BATTLE_BIN__8006c4f8(int *param_1)
     return;
   }
 LAB_BATTLE_BIN__8006c768:
-  FUN_BATTLE_BIN__8006b994((int)param_1);
+  Play_Land_SFX_per_Tile((ENTDDisplayUnitData *)param_1);
   FUN_BATTLE_BIN__8006ba38((int)param_1);
   return;
 }
@@ -43672,10 +47647,10 @@ undefined4 FUN_BATTLE_BIN__8006e7c8(void)
 
 {
   bool bVar1;
-  undefined1 *puVar2;
-  undefined1 *puVar3;
+  map_tile_data *pmVar2;
+  map_tile_data *pmVar3;
   int iVar4;
-  undefined1 *puVar5;
+  map_tile_data *pmVar5;
   uint uVar6;
   char cVar7;
   char cVar8;
@@ -43693,15 +47668,14 @@ undefined4 FUN_BATTLE_BIN__8006e7c8(void)
     }
   }
   bVar1 = false;
-  puVar2 = FUN_BATTLE_BIN__80183fb4
-                     (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
+  pmVar2 = get_tile_data_ptr(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
+                             DAT_BATTLE_BIN__800961b8);
   if ((DAT_800473ac & 0x1c0) == 0xc0) {
     if ((DAT_8004594c & 0x800) != 0) {
 LAB_BATTLE_BIN__8006e8c0:
-      puVar3 = FUN_BATTLE_BIN__80183fb4
-                         (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
-                          DAT_BATTLE_BIN__800961b8 ^ 1);
-      if ((puVar3[6] & 1) == 0) {
+      pmVar3 = get_tile_data_ptr(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
+                                 DAT_BATTLE_BIN__800961b8 ^ 1);
+      if ((pmVar3->tile_interaction & 1) == 0) {
         bVar1 = true;
         DAT_BATTLE_BIN__800961b8 = DAT_BATTLE_BIN__800961b8 ^ 1;
       }
@@ -43765,16 +47739,15 @@ LAB_BATTLE_BIN__8006ead0:
   if (uVar6 < DAT_BATTLE_BIN__800961bc) {
     DAT_BATTLE_BIN__800961bc = 0;
   }
-  puVar3 = FUN_BATTLE_BIN__80183fb4
-                     (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
-  puVar5 = FUN_BATTLE_BIN__80183fb4
-                     (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8 ^ 1
-                     );
-  if ((puVar3[6] & 1) == 0) {
-    if ((puVar5[6] & 1) != 0) goto LAB_BATTLE_BIN__8006edfc;
-    iVar4 = (uint)(byte)puVar3[2] - (uint)(byte)puVar2[2];
+  pmVar3 = get_tile_data_ptr(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
+                             DAT_BATTLE_BIN__800961b8);
+  pmVar5 = get_tile_data_ptr(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
+                             DAT_BATTLE_BIN__800961b8 ^ 1);
+  if ((pmVar3->tile_interaction & 1) == 0) {
+    if ((pmVar5->tile_interaction & 1) != 0) goto LAB_BATTLE_BIN__8006edfc;
+    iVar4 = (uint)pmVar3->height_whole - (uint)pmVar2->height_whole;
     cVar7 = (char)iVar4;
-    iVar9 = (uint)(byte)puVar5[2] - (uint)(byte)puVar2[2];
+    iVar9 = (uint)pmVar5->height_whole - (uint)pmVar2->height_whole;
     cVar8 = (char)iVar9;
     if (iVar4 * 0x1000000 < 0) {
       cVar7 = -cVar7;
@@ -43784,7 +47757,7 @@ LAB_BATTLE_BIN__8006ead0:
     }
     if (cVar7 <= cVar8) goto LAB_BATTLE_BIN__8006edfc;
   }
-  else if ((puVar5[6] & 1) != 0) {
+  else if ((pmVar5->tile_interaction & 1) != 0) {
     if (iVar4 == 0x600) {
       DAT_BATTLE_BIN__800961bc = DAT_BATTLE_BIN__800961bc - 1;
     }
@@ -43961,7 +47934,7 @@ void FUN_BATTLE_BIN__8006f13c(uint param_1)
 
 
 
-void FUN_BATTLE_BIN__8006f174(uint param_1)
+void Clockwise_Map_Rot(uint param_1)
 
 {
   DAT_BATTLE_BIN__800960c8 = 1;
@@ -43985,7 +47958,7 @@ void FUN_BATTLE_BIN__8006f1a8(uint param_1)
 
 
 
-void FUN_BATTLE_BIN__8006f1e0(uint param_1)
+void CountClock_Map_Rot(uint param_1)
 
 {
   DAT_BATTLE_BIN__800960c8 = 2;
@@ -43996,38 +47969,38 @@ void FUN_BATTLE_BIN__8006f1e0(uint param_1)
 
 
 
-void FUN_BATTLE_BIN__8006f218(int param_1)
+void Map_Rotation(int map_rot_speed)
 
 {
-  MusicDataHeader *pMVar1;
+  uint sfx_ID;
   
   if (DAT_BATTLE_BIN__800960c8 == 0) {
-    if (param_1 < 0) {
-      FUN_BATTLE_BIN__8006f174(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) + param_1);
-      pMVar1 = (MusicDataHeader *)0xb;
+    if (map_rot_speed < 0) {
+      Clockwise_Map_Rot(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) + map_rot_speed);
+      sfx_ID = 0xb;
     }
     else {
-      FUN_BATTLE_BIN__8006f1e0(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) + param_1);
-      pMVar1 = (MusicDataHeader *)0xc;
+      CountClock_Map_Rot(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) + map_rot_speed);
+      sfx_ID = 0xc;
     }
-    Call_Play_SoundEffect(pMVar1);
+    Call_PlaySound_findChannel(sfx_ID);
   }
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__8006f28c(void)
+void ButtonInput_Map_Rotation(void)
 
 {
   if (DAT_BATTLE_BIN__800960c8 == 0) {
     if ((DAT_8004594c & 4) != 0) {
-      FUN_BATTLE_BIN__8006f174(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) - 0x400);
-      Call_Play_SoundEffect((MusicDataHeader *)0xb);
+      Clockwise_Map_Rot(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) - 0x400);
+      Call_PlaySound_findChannel(0xb);
     }
     if ((DAT_8004594c & 8) != 0) {
-      FUN_BATTLE_BIN__8006f1e0(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) + 0x400);
-      Call_Play_SoundEffect((MusicDataHeader *)0xc);
+      CountClock_Map_Rot(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) + 0x400);
+      Call_PlaySound_findChannel(0xc);
     }
   }
   return;
@@ -44035,7 +48008,7 @@ void FUN_BATTLE_BIN__8006f28c(void)
 
 
 
-void FUN_BATTLE_BIN__8006f320(void)
+void Stop_Map_Rot(void)
 
 {
   int iVar1;
@@ -44069,9 +48042,9 @@ void FUN_BATTLE_BIN__8006f320(void)
   }
   DAT_BATTLE_BIN__800a7786 = (ushort)DAT_BATTLE_BIN__800c7c60 & 0xfff;
   DAT_BATTLE_BIN__800960c8 = 0;
-  FUN_800440f4((MusicDataHeader *)0xc);
-  FUN_800440f4((MusicDataHeader *)0xb);
-  Call_Play_SoundEffect((MusicDataHeader *)0xd);
+  Stop_Playing_SFX(0xc);
+  Stop_Playing_SFX(0xb);
+  Call_PlaySound_findChannel(0xd);
 LAB_BATTLE_BIN__8006f46c:
   if ((int)DAT_BATTLE_BIN__800e4e88 < 0x30) {
     DAT_BATTLE_BIN__800e4e88 = DAT_80045980 * 2 + DAT_BATTLE_BIN__800e4e88;
@@ -44084,15 +48057,15 @@ LAB_BATTLE_BIN__8006f46c:
 void FUN_BATTLE_BIN__8006f5bc(void)
 
 {
-  uint uVar1;
+  uint sfx_id;
   
   if (DAT_BATTLE_BIN__800960d0 == 1) {
     DAT_BATTLE_BIN__800960cc = 4;
     DAT_BATTLE_BIN__800960d0 = 4;
-    uVar1 = 0x11;
+    sfx_id = 0x11;
   }
   else {
-    uVar1 = 0xe;
+    sfx_id = 0xe;
     if (DAT_BATTLE_BIN__800960d0 != 4) {
       DAT_BATTLE_BIN__800c7c64 = 4;
       return;
@@ -44100,7 +48073,7 @@ void FUN_BATTLE_BIN__8006f5bc(void)
     DAT_BATTLE_BIN__800960d0 = 1;
     DAT_BATTLE_BIN__800960cc = 2;
   }
-  Call_Play_Sound(uVar1);
+  Call_Play_Sound(sfx_id);
   DAT_BATTLE_BIN__800c7c64 = 4;
   return;
 }
@@ -44301,18 +48274,17 @@ int FUN_BATTLE_BIN__8006fc68(void)
 
 {
   int iVar1;
-  undefined1 *puVar2;
+  map_tile_data *pmVar2;
   int iVar3;
   short local_28 [2];
   short local_24;
   VECTOR local_20;
   
-  puVar2 = FUN_BATTLE_BIN__80183fb4
-                     (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
-  FUN_BATTLE_BIN__80183fb4
-            (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8 ^ 1);
-  iVar1 = -(((uint)(byte)puVar2[2] + (uint)((byte)puVar2[3] >> 5)) * 0xc +
-           ((byte)puVar2[3] & 0x1f) * 6);
+  pmVar2 = get_tile_data_ptr(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
+                             DAT_BATTLE_BIN__800961b8);
+  get_tile_data_ptr(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8 ^ 1);
+  iVar1 = -(((uint)pmVar2->height_whole + (uint)(pmVar2->height_small >> 5)) * 0xc +
+           (pmVar2->height_small & 0x1f) * 6);
   Store_3_Halfwords(local_28,(short)DAT_BATTLE_BIN__800961b4 * 0x1c + 0xe,(short)iVar1,
                     (short)DAT_BATTLE_BIN__800961bc * 0x1c + 0xe);
   iVar3 = DAT_BATTLE_BIN__800e4e74;
@@ -44737,32 +48709,31 @@ void FUN_BATTLE_BIN__80070820(int param_1)
 
 {
   byte bVar1;
-  undefined1 *puVar2;
+  map_tile_data *pmVar2;
   uint uVar3;
   byte bVar4;
-  int iVar5;
+  int map_rot_speed;
   
-  puVar2 = FUN_BATTLE_BIN__80183fb4
-                     ((uint)*(byte *)(param_1 + 0x7c),(uint)*(byte *)(param_1 + 0x7d),
-                      (uint)*(byte *)(param_1 + 0x7e));
+  pmVar2 = get_tile_data_ptr((uint)*(byte *)(param_1 + 0x7c),(uint)*(byte *)(param_1 + 0x7d),
+                             (uint)*(byte *)(param_1 + 0x7e));
   uVar3 = (int)(-(int)DAT_BATTLE_BIN__800a7786 & 0xfffU) >> 10;
   if (DAT_BATTLE_BIN__800a7784 < 0x178) {
-    bVar4 = puVar2[7] & 0xf;
+    bVar4 = pmVar2->field_0x7 & 0xf;
   }
   else {
-    bVar4 = (byte)puVar2[7] >> 4;
+    bVar4 = (byte)pmVar2->field_0x7 >> 4;
   }
   if (uVar3 == 1) {
     if ((bVar4 & 2) == 0) {
       return;
     }
     if ((bVar4 & 1) == 0) {
-      iVar5 = 0x400;
+      map_rot_speed = 0x400;
       goto LAB_BATTLE_BIN__80070980;
     }
     bVar1 = bVar4 & 8;
     if ((bVar4 & 4) == 0) {
-      iVar5 = -0x400;
+      map_rot_speed = -0x400;
       goto LAB_BATTLE_BIN__80070980;
     }
   }
@@ -44774,12 +48745,12 @@ void FUN_BATTLE_BIN__80070820(int param_1)
       return;
     }
     if ((bVar4 & 8) == 0) {
-      iVar5 = 0x400;
+      map_rot_speed = 0x400;
       goto LAB_BATTLE_BIN__80070980;
     }
     bVar1 = bVar4 & 4;
     if ((bVar4 & 2) == 0) {
-      iVar5 = -0x400;
+      map_rot_speed = -0x400;
       goto LAB_BATTLE_BIN__80070980;
     }
   }
@@ -44788,12 +48759,12 @@ void FUN_BATTLE_BIN__80070820(int param_1)
       return;
     }
     if ((bVar4 & 2) == 0) {
-      iVar5 = 0x400;
+      map_rot_speed = 0x400;
       goto LAB_BATTLE_BIN__80070980;
     }
     bVar1 = bVar4 & 1;
     if ((bVar4 & 8) == 0) {
-      iVar5 = -0x400;
+      map_rot_speed = -0x400;
       goto LAB_BATTLE_BIN__80070980;
     }
   }
@@ -44805,21 +48776,21 @@ void FUN_BATTLE_BIN__80070820(int param_1)
       return;
     }
     if ((bVar4 & 4) == 0) {
-      iVar5 = 0x400;
+      map_rot_speed = 0x400;
       goto LAB_BATTLE_BIN__80070980;
     }
     bVar1 = bVar4 & 2;
     if ((bVar4 & 1) == 0) {
-      iVar5 = -0x400;
+      map_rot_speed = -0x400;
       goto LAB_BATTLE_BIN__80070980;
     }
   }
-  iVar5 = 0x800;
+  map_rot_speed = 0x800;
   if (bVar1 != 0) {
     return;
   }
 LAB_BATTLE_BIN__80070980:
-  FUN_BATTLE_BIN__8006f218(iVar5);
+  Map_Rotation(map_rot_speed);
   return;
 }
 
@@ -45569,7 +49540,7 @@ void FUN_BATTLE_BIN__80071ab8(void)
   }
   piVar1[0xf] = 0x2000;
   piVar1[0x26] = 0;
-  DAT_BATTLE_BIN__8009612c = 0;
+  VFX_canOpen = 0;
   FUN_BATTLE_BIN__800683d4();
   return;
 }
@@ -45919,7 +49890,7 @@ undefined4 MainPostMovement(void)
     FUN_BATTLE_BIN__80089528((uint)*(byte *)(piVar4 + 1));
     iVar11 = FUN_BATTLE_BIN__8007d3f4(piVar3);
     *(short *)(piVar4 + 0x1d) = 0x24 - ((short)iVar11 - *(short *)((int)piVar4 + 0x42));
-    Call_Play_SoundEffect((MusicDataHeader *)0x85);
+    Call_PlaySound_findChannel(0x85);
   }
   return 1;
 }
@@ -45944,7 +49915,7 @@ void FUN_BATTLE_BIN__800723d4(void)
   if (DAT_BATTLE_BIN__80096208 != 0) {
     FUN_BATTLE_BIN__800683d4();
   }
-  DAT_BATTLE_BIN__8009612c = 0;
+  VFX_canOpen = 0;
   return;
 }
 
@@ -46642,7 +50613,7 @@ void FUN_BATTLE_BIN__80073638(void)
   FUN_BATTLE_BIN__800683e4((int)piVar1);
   FUN_BATTLE_BIN__800734cc();
   DAT_BATTLE_BIN__80098db8 = 0;
-  DAT_BATTLE_BIN__8009612c = 0;
+  VFX_canOpen = 0;
   return;
 }
 
@@ -47463,7 +51434,7 @@ void FUN_BATTLE_BIN__80074bf8(undefined4 param_1,undefined4 param_2,undefined4 p
   uint *puVar1;
   int *piVar2;
   
-  FUN_BATTLE_BIN__8006f28c();
+  ButtonInput_Map_Rotation();
   FUN_BATTLE_BIN__8006f634();
   FUN_BATTLE_BIN__8006f968();
   FUN_BATTLE_BIN__8006e7c8();
@@ -47557,7 +51528,7 @@ void FUN_BATTLE_BIN__80074e2c(undefined4 param_1,undefined4 param_2,undefined4 p
     FreeCursorSelect();
     FUN_BATTLE_BIN__80068494();
   }
-  FUN_BATTLE_BIN__8006f28c();
+  ButtonInput_Map_Rotation();
   FUN_BATTLE_BIN__8006f634();
   FUN_BATTLE_BIN__8006f968();
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
@@ -47892,7 +51863,7 @@ void FUN_BATTLE_BIN__80075690(undefined4 param_1,undefined4 param_2,undefined4 p
     Call_Play_Sound(2);
     FreeCursorSelect();
   }
-  FUN_BATTLE_BIN__8006f28c();
+  ButtonInput_Map_Rotation();
   FUN_BATTLE_BIN__8006f634();
   FUN_BATTLE_BIN__8006f968();
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
@@ -48066,7 +52037,7 @@ void FUN_BATTLE_BIN__80075910(undefined4 param_1,undefined4 param_2,undefined4 p
   }
   else {
     FUN_BATTLE_BIN__8006e7c8();
-    FUN_BATTLE_BIN__8006f28c();
+    ButtonInput_Map_Rotation();
     FUN_BATTLE_BIN__8006f634();
     FUN_BATTLE_BIN__8006f968();
     if ((DAT_8004594c & 0x20) == 0) {
@@ -48213,14 +52184,14 @@ void FUN_BATTLE_BIN__80075db0(undefined4 param_1,undefined4 param_2,undefined4 p
   uint *puVar2;
   int *piVar3;
   
-  FUN_BATTLE_BIN__8006f28c();
+  ButtonInput_Map_Rotation();
   FUN_BATTLE_BIN__8006f634();
   FUN_BATTLE_BIN__8006f968();
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
   piVar3 = piVar1;
   FUN_BATTLE_BIN__8006d818(piVar1);
   if (((*(char *)((int)piVar1 + 0x7f) == '\0') &&
-      ((uint)*(byte *)(piVar1 + 0x27) <= (uint)piVar1[0x26])) && (DAT_BATTLE_BIN__8009612c == 0)) {
+      ((uint)*(byte *)(piVar1 + 0x27) <= (uint)piVar1[0x26])) && (VFX_canOpen == 0)) {
     piVar3 = (int *)(uint)*(byte *)(piVar1 + 1);
     FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar1 + 1));
     CheckUnitMoving();
@@ -48519,7 +52490,7 @@ void FUN_BATTLE_BIN__80076430(undefined4 param_1,undefined4 param_2,undefined4 p
     }
   }
   else {
-    FUN_BATTLE_BIN__8006f28c();
+    ButtonInput_Map_Rotation();
     FUN_BATTLE_BIN__8006f634();
     FUN_BATTLE_BIN__8006f968();
     if ((DAT_8004594c & 0x20) == 0) {
@@ -48594,7 +52565,7 @@ LAB_BATTLE_BIN__80076748:
   }
   DAT_BATTLE_BIN__80098db8 = 1;
 LAB_BATTLE_BIN__80076764:
-  if ((((DAT_BATTLE_BIN__80098db8 != 0) && (DAT_BATTLE_BIN__8009612c == 0)) &&
+  if ((((DAT_BATTLE_BIN__80098db8 != 0) && (VFX_canOpen == 0)) &&
       (uVar1 = *(ushort *)(piVar4 + 2), *(ushort *)(piVar4 + 2) = uVar1 + 1, 0x1e < uVar1)) &&
      ((*(char *)(piVar3 + 0xaf) == '\0' && (*(char *)(piVar4 + 0xaf) == '\0')))) {
     if ((DAT_BATTLE_BIN__80096208 & 1) == 0) {
@@ -48683,7 +52654,7 @@ void FUN_BATTLE_BIN__800769b0(undefined4 param_1,undefined4 param_2,undefined4 p
   ushort uVar1;
   int *piVar2;
   uint *puVar3;
-  undefined1 *puVar4;
+  map_tile_data *pmVar4;
   int *piVar5;
   uint uVar6;
   uint uVar7;
@@ -48695,7 +52666,7 @@ void FUN_BATTLE_BIN__800769b0(undefined4 param_1,undefined4 param_2,undefined4 p
   FUN_BATTLE_BIN__8013f520(puVar3,DAT_80045944);
   if ((*(byte *)((int)piVar2 + 0x13d) & 8) != 0) {
     FUN_BATTLE_BIN__8006e7c8();
-    FUN_BATTLE_BIN__8006f28c();
+    ButtonInput_Map_Rotation();
     FUN_BATTLE_BIN__8006f634();
     FUN_BATTLE_BIN__8006f968();
     if ((DAT_8004594c & 0x40) != 0) {
@@ -48706,9 +52677,9 @@ void FUN_BATTLE_BIN__800769b0(undefined4 param_1,undefined4 param_2,undefined4 p
     if ((DAT_8004594c & 0x20) == 0) {
       return;
     }
-    puVar4 = FUN_BATTLE_BIN__80183fb4
-                       (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
-    if ((puVar4[5] & 0x40) != 0) {
+    pmVar4 = get_tile_data_ptr(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
+                               DAT_BATTLE_BIN__800961b8);
+    if ((pmVar4->tile_overlay & 0x40) != 0) {
       SelectTargetTile();
       return;
     }
@@ -48745,7 +52716,7 @@ void FUN_BATTLE_BIN__800769b0(undefined4 param_1,undefined4 param_2,undefined4 p
     uVar7 = (uint)*(byte *)((int)piVar5 + 0x7d);
     uVar8 = (uint)*(byte *)((int)piVar5 + 0x7e);
   }
-  FUN_BATTLE_BIN__80183fb4(uVar6,uVar7,uVar8);
+  get_tile_data_ptr(uVar6,uVar7,uVar8);
   SelectTargetTile();
   return;
 }
@@ -48806,7 +52777,7 @@ void FUN_BATTLE_BIN__80076c50(undefined4 param_1,undefined4 param_2,undefined4 p
     if (uVar1 < 0x1f) goto LAB_BATTLE_BIN__80076d50;
   }
   else {
-    FUN_BATTLE_BIN__8006f28c();
+    ButtonInput_Map_Rotation();
     FUN_BATTLE_BIN__8006f634();
     FUN_BATTLE_BIN__8006f968();
     if ((DAT_8004594c & 0x20) == 0) {
@@ -49064,12 +53035,12 @@ void FUN_BATTLE_BIN__800771a0(RECT *param_1,RECT *param_2,int param_3,uint param
 void FUN_BATTLE_BIN__80077314(uint param_1,undefined4 param_2,undefined4 param_3,uint param_4)
 
 {
-  bool bVar1;
+  bool _VFX_canOpen;
   undefined3 extraout_var;
   
-  bVar1 = FUN_BATTLE_BIN__801a13bc(param_1);
-  DAT_BATTLE_BIN__8009612c = (uint)(CONCAT31(extraout_var,bVar1) != 0);
-  if (DAT_BATTLE_BIN__8009612c == 0) {
+  _VFX_canOpen = begin_open_VFX(param_1);
+  VFX_canOpen = (uint)(CONCAT31(extraout_var,_VFX_canOpen) != 0);
+  if (VFX_canOpen == 0) {
     FUN_BATTLE_BIN__80073b9c();
   }
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
@@ -49138,7 +53109,7 @@ void FUN_BATTLE_BIN__800773f8(undefined4 param_1,int *param_2,undefined4 param_3
       iVar6 = iVar6 + 1;
       if (piVar2 != (int *)0x0) {
         FUN_BATTLE_BIN__8006db10(piVar2);
-        DAT_BATTLE_BIN__8009612c = *(byte *)((int)piVar2 + 0x7f) | DAT_BATTLE_BIN__8009612c;
+        VFX_canOpen = *(byte *)((int)piVar2 + 0x7f) | VFX_canOpen;
       }
       puVar5 = (uint *)((int)puVar1 + iVar6);
     } while (iVar6 < (int)(uint)*(byte *)((int)puVar1 + 0x18d));
@@ -49149,7 +53120,7 @@ void FUN_BATTLE_BIN__800773f8(undefined4 param_1,int *param_2,undefined4 param_3
     puVar5 = (uint *)Get_OTAG_List();
     param_2 = DAT_80045944;
     FUN_BATTLE_BIN__8013f520(puVar5,(uint)DAT_80045944);
-    if (DAT_BATTLE_BIN__8009612c != 0) {
+    if (VFX_canOpen != 0) {
       return;
     }
     if (*(char *)(puVar1 + 0xaf) != '\0') {
@@ -49180,7 +53151,7 @@ void FUN_BATTLE_BIN__800773f8(undefined4 param_1,int *param_2,undefined4 param_3
     if ((uVar3 != 0) || (*(ushort *)(puVar1 + 0x4e) - 0x196 < 8)) {
       FUN_BATTLE_BIN__80070640();
     }
-    if (DAT_BATTLE_BIN__8009612c != 0) {
+    if (VFX_canOpen != 0) {
       return;
     }
     if (*(char *)(puVar1 + 0xaf) != '\0') {
@@ -49333,7 +53304,7 @@ void FUN_BATTLE_BIN__800779a0(undefined4 param_1,undefined4 param_2,undefined4 p
     DAT_BATTLE_BIN__80098db8 = 1;
   }
 LAB_BATTLE_BIN__80077a94:
-  if (((DAT_BATTLE_BIN__80098db8 != 0) && (DAT_BATTLE_BIN__8009612c == 0)) &&
+  if (((DAT_BATTLE_BIN__80098db8 != 0) && (VFX_canOpen == 0)) &&
      (iVar5 = 0, *(char *)(piVar4 + 0xaf) == '\0')) {
     bVar1 = false;
     piVar3 = piVar4;
@@ -49445,7 +53416,7 @@ void FUN_BATTLE_BIN__80077ca4(undefined4 param_1,undefined4 param_2,undefined4 p
   int *piVar2;
   int *piVar3;
   
-  FUN_BATTLE_BIN__8006f28c();
+  ButtonInput_Map_Rotation();
   FUN_BATTLE_BIN__8006f634();
   FUN_BATTLE_BIN__8006f968();
   FUN_BATTLE_BIN__8006e7c8();
@@ -49742,7 +53713,7 @@ void FUN_BATTLE_BIN__8007843c(undefined4 param_1,undefined4 param_2,undefined4 p
   if ((6 < iVar3) && ((iVar3 < 9 || (iVar3 == 0xff)))) {
     DAT_BATTLE_BIN__80098db8 = 1;
   }
-  if (((DAT_BATTLE_BIN__80098db8 != 0) && (DAT_BATTLE_BIN__8009612c == 0)) &&
+  if (((DAT_BATTLE_BIN__80098db8 != 0) && (VFX_canOpen == 0)) &&
      (piVar2 = FUN_BATTLE_BIN__8007a218(), *(char *)(piVar2 + 0xaf) == '\0')) {
     uVar4 = (uint)*(byte *)(piVar2 + 1);
     FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar2 + 1));
@@ -49767,7 +53738,7 @@ void FUN_BATTLE_BIN__80078504(undefined4 param_1,undefined4 param_2,undefined4 p
   }
   FUN_BATTLE_BIN__80086dc4();
   FUN_BATTLE_BIN__8008f208();
-  if (DAT_BATTLE_BIN__8009612c == 0) {
+  if (VFX_canOpen == 0) {
     BattleGameState = DAT_BATTLE_BIN__800960e8;
     DAT_80045980 = DAT_8004d958;
   }
@@ -50141,18 +54112,18 @@ void FUN_BATTLE_BIN__800792a0(void)
   bool bVar1;
   int iVar2;
   undefined3 extraout_var;
-  MusicDataHeader *pMVar3;
-  void *pvVar4;
-  int iVar5;
-  uint *puVar6;
-  undefined4 *puVar7;
+  void *pvVar3;
+  int iVar4;
+  uint *puVar5;
+  undefined4 *puVar6;
+  undefined4 uVar7;
   undefined4 uVar8;
   undefined4 uVar9;
-  undefined4 uVar10;
-  undefined4 *puVar11;
-  undefined uVar12;
+  undefined4 *puVar10;
+  undefined uVar11;
+  undefined4 *puVar12;
   undefined4 *puVar13;
-  undefined4 *puVar14;
+  int iVar14;
   char cVar15;
   RECT local_70;
   undefined4 local_68;
@@ -50188,13 +54159,13 @@ void FUN_BATTLE_BIN__800792a0(void)
   if (iVar2 != 0) {
     cVar15 = '\0';
   }
-  bVar1 = FUN_BATTLE_BIN__8013d320();
+  bVar1 = Open_ATTACK_OUT_Deployment();
   DAT_BATTLE_BIN__80096108 = CONCAT31(extraout_var,bVar1);
   BuildNowLoading_128_00(DAT_BATTLE_BIN__80096108);
-  pMVar3 = (MusicDataHeader *)GetScriptVariable(CurrentMap);
+  iVar2 = GetScriptVariable(CurrentMap);
   DAT_BATTLE_BIN__800960f4 = 0;
   DAT_BATTLE_BIN__800e6aa4 = 0;
-  DAT_BATTLE_BIN__80096104 = pMVar3;
+  DAT_BATTLE_BIN__80096104 = iVar2;
   SetPolyF4((POLY_F4 *)&DAT_BATTLE_BIN__80098d88);
   DAT_BATTLE_BIN__80098d8c = DAT_BATTLE_BIN__80098d8c & 0xff000000;
   DAT_BATTLE_BIN__80098d90 = 0x80;
@@ -50254,88 +54225,88 @@ void FUN_BATTLE_BIN__800792a0(void)
   SetSemiTrans(&local_68,0);
   uStack_52 = GetTPage(0,0,0x380,0x100);
   uStack_5a = GetClut(0x380,0x11f);
-  puVar7 = local_40;
-  puVar14 = &local_68;
+  puVar6 = local_40;
+  puVar13 = &local_68;
   do {
-    puVar13 = puVar14;
-    puVar11 = puVar7;
-    uVar8 = puVar13[1];
-    uVar9 = puVar13[2];
-    uVar10 = puVar13[3];
-    *puVar11 = *puVar13;
-    puVar11[1] = uVar8;
-    puVar11[2] = uVar9;
-    puVar11[3] = uVar10;
-    puVar14 = puVar13 + 4;
-    puVar7 = puVar11 + 4;
-  } while (puVar14 != (undefined4 *)&local_48);
-  uVar8 = puVar13[5];
-  puVar11[4] = *puVar14;
-  puVar11[5] = uVar8;
+    puVar12 = puVar13;
+    puVar10 = puVar6;
+    uVar7 = puVar12[1];
+    uVar8 = puVar12[2];
+    uVar9 = puVar12[3];
+    *puVar10 = *puVar12;
+    puVar10[1] = uVar7;
+    puVar10[2] = uVar8;
+    puVar10[3] = uVar9;
+    puVar13 = puVar12 + 4;
+    puVar6 = puVar10 + 4;
+  } while (puVar13 != (undefined4 *)&local_48);
+  uVar7 = puVar12[5];
+  puVar10[4] = *puVar13;
+  puVar10[5] = uVar7;
   SetDispMask(1);
-  iVar2 = 0xf8;
+  iVar14 = 0xf8;
   if (cVar15 != '\0') {
     do {
       Set_OTAG_List();
-      uVar12 = (undefined)iVar2;
-      *(undefined *)(&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 6) = uVar12;
-      *(undefined *)((int)&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 0x18 + 1) = uVar12;
-      *(undefined *)((int)&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 0x18 + 2) = uVar12;
-      pvVar4 = (void *)Get_OTAG_List();
-      AddPrim(pvVar4,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
-      pvVar4 = (void *)Get_OTAG_List();
-      AddPrim(pvVar4,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
-      pvVar4 = (void *)Get_OTAG_List();
-      AddPrim(pvVar4,&local_68 + ScreenPolarity * 10);
+      uVar11 = (undefined)iVar14;
+      *(undefined *)(&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 6) = uVar11;
+      *(undefined *)((int)&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 0x18 + 1) = uVar11;
+      *(undefined *)((int)&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 0x18 + 2) = uVar11;
+      pvVar3 = (void *)Get_OTAG_List();
+      AddPrim(pvVar3,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
+      pvVar3 = (void *)Get_OTAG_List();
+      AddPrim(pvVar3,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
+      pvVar3 = (void *)Get_OTAG_List();
+      AddPrim(pvVar3,&local_68 + ScreenPolarity * 10);
       ScreenPolarity = (uint)(ScreenPolarity == 0);
-      iVar5 = Get_OTAG_List();
-      DAT_80045984 = FUN_BATTLE_BIN__80093bf0(iVar5 + 0x5fc);
-      iVar2 = iVar2 + -8;
-    } while (-1 < iVar2 * 0x10000);
+      iVar4 = Get_OTAG_List();
+      DAT_80045984 = FUN_BATTLE_BIN__80093bf0(iVar4 + 0x5fc);
+      iVar14 = iVar14 + -8;
+    } while (-1 < iVar14 * 0x10000);
   }
   do {
-    iVar2 = FUN_BATTLE_BIN__800937f8();
-    if (iVar2 == -1) {
+    iVar14 = FUN_BATTLE_BIN__800937f8();
+    if (iVar14 == -1) {
 LAB_BATTLE_BIN__80079918:
       iVar2 = 0;
       if (cVar15 != '\0') {
-        iVar5 = 0;
+        iVar14 = 0;
         do {
-          if (0xf7 < iVar5 >> 0x10) {
+          if (0xf7 < iVar14 >> 0x10) {
             iVar2 = 0xff;
           }
           Set_OTAG_List();
-          uVar12 = (undefined)iVar2;
-          *(undefined *)(&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 6) = uVar12;
-          *(undefined *)((int)&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 0x18 + 1) = uVar12;
-          *(undefined *)((int)&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 0x18 + 2) = uVar12;
-          pvVar4 = (void *)Get_OTAG_List();
-          AddPrim(pvVar4,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
-          pvVar4 = (void *)Get_OTAG_List();
-          AddPrim(pvVar4,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
-          pvVar4 = (void *)Get_OTAG_List();
-          AddPrim(pvVar4,&local_68 + ScreenPolarity * 10);
+          uVar11 = (undefined)iVar2;
+          *(undefined *)(&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 6) = uVar11;
+          *(undefined *)((int)&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 0x18 + 1) = uVar11;
+          *(undefined *)((int)&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 0x18 + 2) = uVar11;
+          pvVar3 = (void *)Get_OTAG_List();
+          AddPrim(pvVar3,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
+          pvVar3 = (void *)Get_OTAG_List();
+          AddPrim(pvVar3,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
+          pvVar3 = (void *)Get_OTAG_List();
+          AddPrim(pvVar3,&local_68 + ScreenPolarity * 10);
           ScreenPolarity = (uint)(ScreenPolarity == 0);
-          iVar5 = Get_OTAG_List();
-          DAT_80045984 = FUN_BATTLE_BIN__80093bf0(iVar5 + 0x5fc);
+          iVar14 = Get_OTAG_List();
+          DAT_80045984 = FUN_BATTLE_BIN__80093bf0(iVar14 + 0x5fc);
           iVar2 = iVar2 + 8;
-          iVar5 = iVar2 * 0x10000;
+          iVar14 = iVar2 * 0x10000;
         } while (iVar2 * 0x10000 >> 0x10 < 0x100);
       }
       return;
     }
     Set_OTAG_List();
     if (cVar15 == '\0') {
-      puVar6 = (uint *)Get_OTAG_List();
-      Put_NowLoading_ToOTAG(puVar6);
+      puVar5 = (uint *)Get_OTAG_List();
+      Put_NowLoading_ToOTAG(puVar5);
     }
     else {
-      pvVar4 = (void *)Get_OTAG_List();
-      AddPrim(pvVar4,&local_68 + ScreenPolarity * 10);
+      pvVar3 = (void *)Get_OTAG_List();
+      AddPrim(pvVar3,&local_68 + ScreenPolarity * 10);
     }
-    puVar6 = (uint *)Get_OTAG_List();
-    puVar7 = (undefined4 *)FUN_BATTLE_BIN__8013f4f8(puVar6,DAT_80045944);
-    DAT_BATTLE_BIN__800960f4 = FUN_BATTLE_BIN__8008ec70(pMVar3,DAT_BATTLE_BIN__800960f4,puVar7);
+    puVar5 = (uint *)Get_OTAG_List();
+    puVar6 = (undefined4 *)FUN_BATTLE_BIN__8013f4f8(puVar5,DAT_80045944);
+    DAT_BATTLE_BIN__800960f4 = FUN_BATTLE_BIN__8008ec70(iVar2,DAT_BATTLE_BIN__800960f4,puVar6);
     if (DAT_BATTLE_BIN__800960f4 == 0xd) {
       FUN_BATTLE_BIN__800791e8();
       FUN_BATTLE_BIN__800709fc();
@@ -50346,13 +54317,13 @@ LAB_BATTLE_BIN__80079918:
     *(undefined *)(&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 6) = 0xff;
     *(undefined *)((int)&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 0x18 + 1) = 0xff;
     *(undefined *)((int)&DAT_BATTLE_BIN__80098d8c + ScreenPolarity * 0x18 + 2) = 0xff;
-    pvVar4 = (void *)Get_OTAG_List();
-    AddPrim(pvVar4,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
-    pvVar4 = (void *)Get_OTAG_List();
-    AddPrim(pvVar4,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
+    pvVar3 = (void *)Get_OTAG_List();
+    AddPrim(pvVar3,&DAT_BATTLE_BIN__80098d88 + ScreenPolarity * 6);
+    pvVar3 = (void *)Get_OTAG_List();
+    AddPrim(pvVar3,&DAT_BATTLE_BIN__800b72dc + ScreenPolarity * 3);
     ScreenPolarity = (uint)(ScreenPolarity == 0);
-    iVar2 = Get_OTAG_List();
-    DAT_80045984 = FUN_BATTLE_BIN__80093bf0(iVar2 + 0x5fc);
+    iVar14 = Get_OTAG_List();
+    DAT_80045984 = FUN_BATTLE_BIN__80093bf0(iVar14 + 0x5fc);
     Open_File_to_RAM_Centre(&MRTA_fileopenhdr);
     deprecated_000449ec();
   } while( true );
@@ -50414,10 +54385,10 @@ void BATTLE_main(void)
       FUN_BATTLE_BIN__800e840c((undefined4 *)&DAT_BATTLE_BIN__80098a24);
       iVar1 = FUN_BATTLE_BIN__801a1c40();
       if (iVar1 == 0) {
-        DAT_BATTLE_BIN__8009612c = 0;
+        VFX_canOpen = 0;
       }
       else {
-        DAT_BATTLE_BIN__8009612c = 2;
+        VFX_canOpen = 2;
       }
       switch(BattleGameState) {
       default:
@@ -50598,7 +54569,7 @@ void BATTLE_main(void)
         FUN_BATTLE_BIN__80078acc(pRVar7,pRVar4,puVar5,(uint)puVar6);
       }
       FUN_BATTLE_BIN__8006ef00(pRVar7,(uint)pRVar4);
-      FUN_BATTLE_BIN__8006f320();
+      Stop_Map_Rot();
       FUN_BATTLE_BIN__8006f678();
       FUN_BATTLE_BIN__8006f9ac();
       FUN_BATTLE_BIN__800912a4();
@@ -51692,7 +55663,7 @@ void FUN_BATTLE_BIN__8007b9d0(int param_1)
   byte bVar1;
   byte bVar2;
   byte bVar3;
-  undefined1 *puVar4;
+  map_tile_data *pmVar4;
   short sVar5;
   short sVar6;
   int iVar7;
@@ -51704,12 +55675,11 @@ void FUN_BATTLE_BIN__8007b9d0(int param_1)
   
   bVar1 = *(byte *)(param_1 + 0x7e);
   FUN_BATTLE_BIN__8007b96c(local_20,param_1);
-  puVar4 = FUN_BATTLE_BIN__80183fb4
-                     (((int)local_20[0] / 0x1c) * 0x10000 >> 0x10,
-                      ((int)local_1c / 0x1c) * 0x10000 >> 0x10,(uint)bVar1);
-  bVar1 = puVar4[3];
-  bVar2 = puVar4[2];
-  bVar3 = puVar4[4];
+  pmVar4 = get_tile_data_ptr(((int)local_20[0] / 0x1c) * 0x10000 >> 0x10,
+                             ((int)local_1c / 0x1c) * 0x10000 >> 0x10,(uint)bVar1);
+  bVar1 = pmVar4->height_small;
+  bVar2 = pmVar4->height_whole;
+  bVar3 = pmVar4->slope_height;
   *(short *)(param_1 + 0x29c) = local_20[0] + -10;
   *(short *)(param_1 + 0x2a0) = local_1c + 10;
   *(short *)(param_1 + 0x2a4) = local_20[0] + 10;
@@ -51900,18 +55870,17 @@ undefined4 FUN_BATTLE_BIN__8007c444(short *param_1,uint param_2,short *param_3)
   byte bVar1;
   byte bVar2;
   byte bVar3;
-  undefined1 *puVar4;
+  map_tile_data *pmVar4;
   short sVar5;
   short sVar6;
   short sVar7;
   ushort uVar8;
   
-  puVar4 = FUN_BATTLE_BIN__80183fb4
-                     (((int)*param_1 / 0x1c) * 0x10000 >> 0x10,
-                      ((int)param_1[2] / 0x1c) * 0x10000 >> 0x10,param_2 & 0xff);
-  bVar1 = puVar4[2];
-  bVar2 = puVar4[3];
-  bVar3 = puVar4[4];
+  pmVar4 = get_tile_data_ptr(((int)*param_1 / 0x1c) * 0x10000 >> 0x10,
+                             ((int)param_1[2] / 0x1c) * 0x10000 >> 0x10,param_2 & 0xff);
+  bVar1 = pmVar4->height_whole;
+  bVar2 = pmVar4->height_small;
+  bVar3 = pmVar4->slope_height;
   *param_3 = *param_1 + -0xe;
   param_3[2] = param_1[2] + 0xe;
   param_3[4] = *param_1 + 0xe;
@@ -52054,7 +56023,7 @@ int FUN_BATTLE_BIN__8007c80c(short *param_1,uint param_2)
 {
   byte bVar1;
   short sVar2;
-  undefined1 *puVar3;
+  map_tile_data *pmVar3;
   int iVar4;
   uint uVar5;
   int iVar6;
@@ -52062,14 +56031,13 @@ int FUN_BATTLE_BIN__8007c80c(short *param_1,uint param_2)
   int iVar8;
   uint uVar9;
   
-  puVar3 = FUN_BATTLE_BIN__80183fb4
-                     (((int)*param_1 / 0x1c) * 0x10000 >> 0x10,
-                      ((int)param_1[2] / 0x1c) * 0x10000 >> 0x10,param_2 & 0xff);
-  uVar5 = (uint)(byte)puVar3[2];
+  pmVar3 = get_tile_data_ptr(((int)*param_1 / 0x1c) * 0x10000 >> 0x10,
+                             ((int)param_1[2] / 0x1c) * 0x10000 >> 0x10,param_2 & 0xff);
+  uVar5 = (uint)pmVar3->height_whole;
   iVar6 = uVar5 * -0xc;
-  uVar9 = (byte)puVar3[3] & 0x1f;
-  if ((puVar3[3] & 0x1f) != 0) {
-    bVar1 = puVar3[4];
+  uVar9 = pmVar3->height_small & 0x1f;
+  if ((pmVar3->height_small & 0x1f) != 0) {
+    bVar1 = pmVar3->slope_height;
     if (bVar1 == 0x52) {
       sVar2 = *param_1;
 LAB_BATTLE_BIN__8007c998:
@@ -52217,7 +56185,7 @@ int FUN_BATTLE_BIN__8007d0d4(int param_1,short *param_2)
 {
   ushort uVar1;
   int iVar2;
-  undefined1 *puVar3;
+  map_tile_data *pmVar3;
   uint uVar4;
   uint uVar5;
   short sVar6;
@@ -52234,26 +56202,26 @@ int FUN_BATTLE_BIN__8007d0d4(int param_1,short *param_2)
     sVar6 = (short)((int)-(uint)local_12 / 2) * 0xc;
   }
   if (*(int *)(param_1 + 0x134) != 0) {
-    puVar3 = FUN_BATTLE_BIN__80183fb4
-                       (((int)*param_2 / 0x1c) * 0x10000 >> 0x10,
-                        ((int)param_2[2] / 0x1c) * 0x10000 >> 0x10,(int)param_2[1]);
-    if ((puVar3[3] & 0xe0) != 0) {
+    pmVar3 = get_tile_data_ptr(((int)*param_2 / 0x1c) * 0x10000 >> 0x10,
+                               ((int)param_2[2] / 0x1c) * 0x10000 >> 0x10,(int)param_2[1]);
+    if ((pmVar3->height_small & 0xe0) != 0) {
       uVar4 = FUN_BATTLE_BIN__8017f020(*(int *)(param_1 + 0x134));
       uVar5 = (uint)*(byte *)(param_1 + 6);
       if (((uVar4 & 0x40) == 0) && ((uVar4 & 0x20) == 0)) {
         if (uVar5 - 0x9c < 2) {
-          sVar6 = (sVar6 + 4) - ((ushort)((byte)puVar3[3] >> 5) * 0xc + *(short *)(param_1 + 0x74));
+          sVar6 = (sVar6 + 4) -
+                  ((ushort)(pmVar3->height_small >> 5) * 0xc + *(short *)(param_1 + 0x74));
           goto LAB_BATTLE_BIN__8007d2b8;
         }
         if (((uVar4 & 0x10) == 0) && (*(ushort *)(param_1 + 0x1dc) >> 1 != 0x1a)) {
           if ((uVar5 != 0x9e) && (uVar5 != 0x9b)) goto LAB_BATTLE_BIN__8007d2a8;
           goto LAB_BATTLE_BIN__8007d280;
         }
-        uVar1 = ((byte)puVar3[3] >> 5) - 1;
+        uVar1 = (pmVar3->height_small >> 5) - 1;
       }
       else {
 LAB_BATTLE_BIN__8007d280:
-        uVar1 = (ushort)((byte)puVar3[3] >> 5);
+        uVar1 = (ushort)(pmVar3->height_small >> 5);
       }
       sVar6 = sVar6 - (uVar1 * 0xc + *(short *)(param_1 + 0x74));
       goto LAB_BATTLE_BIN__8007d2b8;
@@ -52345,9 +56313,8 @@ void FUN_BATTLE_BIN__8007d5d0(int param_1,uint *param_2)
   short sVar1;
   byte bVar2;
   int iVar3;
-  undefined1 *puVar4;
-  byte *pbVar5;
-  byte bVar6;
+  map_tile_data *pmVar4;
+  byte bVar5;
   void *p;
   undefined2 local_48;
   undefined2 local_44;
@@ -52384,13 +56351,12 @@ void FUN_BATTLE_BIN__8007d5d0(int param_1,uint *param_2)
   *(undefined2 *)((int)p + 0x20) = local_48;
   *(byte *)((int)p + 7) = *(byte *)((int)p + 7) | 2;
   *(undefined2 *)((int)p + 0x22) = local_44;
-  puVar4 = FUN_BATTLE_BIN__80183fb4
-                     (((int)*(short *)(param_1 + 0x40) / 0x1c) * 0x10000 >> 0x10,
-                      ((int)*(short *)(param_1 + 0x44) / 0x1c) * 0x10000 >> 0x10,
-                      (uint)*(byte *)(param_1 + 0x7e));
-  if (((puVar4[3] & 0xe0) == 0) ||
+  pmVar4 = get_tile_data_ptr(((int)*(short *)(param_1 + 0x40) / 0x1c) * 0x10000 >> 0x10,
+                             ((int)*(short *)(param_1 + 0x44) / 0x1c) * 0x10000 >> 0x10,
+                             (uint)*(byte *)(param_1 + 0x7e));
+  if (((pmVar4->height_small & 0xe0) == 0) ||
      ((int)*(short *)(param_1 + 0x42) <=
-      (int)(((uint)(byte)puVar4[2] + (uint)((byte)puVar4[3] >> 5)) * -0xc))) {
+      (int)(((uint)pmVar4->height_whole + (uint)(pmVar4->height_small >> 5)) * -0xc))) {
     *(undefined2 *)((int)p + 0x16) = 0x5f;
     sVar1 = *(short *)(param_1 + 0x10);
     *(undefined *)((int)p + 6) = 0x80;
@@ -52416,9 +56382,9 @@ void FUN_BATTLE_BIN__8007d5d0(int param_1,uint *param_2)
     *(undefined *)((int)p + 6) = 0x80;
     *(undefined *)((int)p + 5) = 0x80;
     *(undefined *)((int)p + 4) = 0x80;
-    bVar6 = bVar2 & 0x30;
+    bVar5 = bVar2 & 0x30;
     *(short *)((int)p + 0xe) = sVar1 + 0x40;
-    if (bVar6 == 0x10) {
+    if (bVar5 == 0x10) {
       *(undefined *)((int)p + 0x24) = 0xa8;
       *(undefined *)((int)p + 0x1c) = 0xa8;
       *(undefined *)((int)p + 0x14) = 0xbb;
@@ -52430,7 +56396,7 @@ void FUN_BATTLE_BIN__8007d5d0(int param_1,uint *param_2)
       *(undefined *)((int)p + 0x25) = 0x53;
       *(undefined *)((int)p + 0x15) = 0x53;
     }
-    else if (bVar6 < 0x11) {
+    else if (bVar5 < 0x11) {
       if ((bVar2 & 0x30) == 0) {
         *(undefined *)((int)p + 0x1c) = 0xa8;
         *(undefined *)((int)p + 0xc) = 0xa8;
@@ -52444,7 +56410,7 @@ void FUN_BATTLE_BIN__8007d5d0(int param_1,uint *param_2)
         *(undefined *)((int)p + 0x1d) = 0x53;
       }
     }
-    else if (bVar6 == 0x20) {
+    else if (bVar5 == 0x20) {
       *(undefined *)((int)p + 0x24) = 0xa8;
       *(undefined *)((int)p + 0x14) = 0xa8;
       *(undefined *)((int)p + 0x1c) = 0xbb;
@@ -52456,7 +56422,7 @@ void FUN_BATTLE_BIN__8007d5d0(int param_1,uint *param_2)
       *(undefined *)((int)p + 0x15) = 0x53;
       *(undefined *)((int)p + 0xd) = 0x53;
     }
-    else if (bVar6 == 0x30) {
+    else if (bVar5 == 0x30) {
       *(undefined *)((int)p + 0x14) = 0xa8;
       *(undefined *)((int)p + 0xc) = 0xa8;
       *(undefined *)((int)p + 0x24) = 0xbb;
@@ -52477,19 +56443,19 @@ void FUN_BATTLE_BIN__8007d5d0(int param_1,uint *param_2)
   iVar3 = FUN_BATTLE_BIN__8007c80c(&local_38,(uint)*(byte *)(param_1 + 0x7e));
   local_36 = (short)iVar3;
   if (*(short *)(param_1 + 0x42) < local_36) {
-    pbVar5 = FUN_BATTLE_BIN__80183fb4
-                       (((int)local_38 / 0x1c) * 0x10000 >> 0x10,
-                        ((int)local_34 / 0x1c) * 0x10000 >> 0x10,(uint)*(byte *)(param_1 + 0x7e));
-    local_36 = local_36 + (ushort)(pbVar5[3] >> 5) * -0xc;
+    pmVar4 = get_tile_data_ptr(((int)local_38 / 0x1c) * 0x10000 >> 0x10,
+                               ((int)local_34 / 0x1c) * 0x10000 >> 0x10,
+                               (uint)*(byte *)(param_1 + 0x7e));
+    local_36 = local_36 + (ushort)(pmVar4->height_small >> 5) * -0xc;
     if (*(char *)(param_1 + 0x7f) == '\0') {
-      if ((*pbVar5 & 0x40) == 0) {
+      if ((pmVar4->TileType & 0x40) == 0) {
         FUN_BATTLE_BIN__8007b92c(&local_38,&aSStack_30[0].vx);
       }
       else {
         FUN_BATTLE_BIN__8007b94c(&local_38,&aSStack_30[0].vx);
       }
     }
-    else if ((*pbVar5 & 0x40) == 0) {
+    else if ((pmVar4->TileType & 0x40) == 0) {
       FUN_BATTLE_BIN__8007b688(&local_38,&aSStack_30[0].vx);
     }
     else {
@@ -53095,7 +57061,7 @@ void FUN_BATTLE_BIN__8007eb8c(int param_1)
   uint uVar3;
   undefined uVar4;
   undefined2 uVar5;
-  undefined1 *puVar6;
+  map_tile_data *pmVar6;
   uint *puVar7;
   uint uVar8;
   uint uVar9;
@@ -53140,10 +57106,9 @@ LAB_BATTLE_BIN__8007ece4:
         switch((&DAT_BATTLE_BIN__80094748)[(uint)*(byte *)(param_1 + 6) * 4]) {
         case 0:
         case 1:
-          puVar6 = FUN_BATTLE_BIN__80183fb4
-                             ((uint)*(byte *)(param_1 + 0x7c),(uint)*(byte *)(param_1 + 0x7d),
-                              (uint)*(byte *)(param_1 + 0x7e));
-          if ((puVar6[3] & 0xe0) == 0) {
+          pmVar6 = get_tile_data_ptr((uint)*(byte *)(param_1 + 0x7c),(uint)*(byte *)(param_1 + 0x7d)
+                                     ,(uint)*(byte *)(param_1 + 0x7e));
+          if ((pmVar6->height_small & 0xe0) == 0) {
             uVar2 = *(ushort *)(param_1 + 0x1dc) >> 1;
             if (uVar2 == 0x24) {
               uVar4 = 0xe2;
@@ -55252,14 +59217,13 @@ switchD_BATTLE_BIN__800826fc_caseD_5:
 byte FUN_BATTLE_BIN__8008278c(int param_1)
 
 {
-  undefined1 *puVar1;
+  map_tile_data *pmVar1;
   uint uVar2;
   uint uVar3;
   
-  puVar1 = FUN_BATTLE_BIN__80183fb4
-                     (((int)*(short *)(param_1 + 0x40) / 0x1c) * 0x10000 >> 0x10,
-                      ((int)*(short *)(param_1 + 0x44) / 0x1c) * 0x10000 >> 0x10,
-                      (uint)*(byte *)(param_1 + 0x7e));
+  pmVar1 = get_tile_data_ptr(((int)*(short *)(param_1 + 0x40) / 0x1c) * 0x10000 >> 0x10,
+                             ((int)*(short *)(param_1 + 0x44) / 0x1c) * 0x10000 >> 0x10,
+                             (uint)*(byte *)(param_1 + 0x7e));
   if (*(int *)(param_1 + 0x134) != 0) {
     uVar2 = FUN_BATTLE_BIN__8017f020(*(int *)(param_1 + 0x134));
     if ((uVar2 & 0x20) != 0) {
@@ -55279,7 +59243,7 @@ byte FUN_BATTLE_BIN__8008278c(int param_1)
       return 0;
     }
   }
-  return (byte)puVar1[3] >> 5;
+  return pmVar1->height_small >> 5;
 }
 
 
@@ -55774,7 +59738,7 @@ void FUN_BATTLE_BIN__8008346c(int *param_1)
 
 {
   undefined *puVar1;
-  undefined1 *puVar2;
+  map_tile_data *pmVar2;
   uint uVar3;
   
   uVar3 = param_1[0x51];
@@ -55792,10 +59756,10 @@ void FUN_BATTLE_BIN__8008346c(int *param_1)
         param_1[0x7e] = (int)puVar1;
         *(undefined *)((int)param_1 + 7) = 0;
         *(ushort *)((int)param_1 + 0xe) = *(byte *)((int)param_1 + 5) + 0x14;
-        puVar2 = FUN_BATTLE_BIN__80183fb4
-                           ((uint)*(byte *)(param_1 + 0x1f),(uint)*(byte *)((int)param_1 + 0x7d),
-                            (uint)*(byte *)((int)param_1 + 0x7e));
-        FUN_BATTLE_BIN__80082468(param_1,(byte)puVar2[6] >> 2 & 3,1);
+        pmVar2 = get_tile_data_ptr((uint)*(byte *)(param_1 + 0x1f),
+                                   (uint)*(byte *)((int)param_1 + 0x7d),
+                                   (uint)*(byte *)((int)param_1 + 0x7e));
+        FUN_BATTLE_BIN__80082468(param_1,pmVar2->tile_interaction >> 2 & 3,1);
         FUN_BATTLE_BIN__80081988(3,*(undefined2 *)(param_1 + 0x1c),(int)param_1);
         FUN_BATTLE_BIN__8018c758((JobID *)param_1[0x4d]);
         FUN_BATTLE_BIN__80199ec8((uint)*(byte *)(param_1[0x4d] + 0x18a));
@@ -56199,7 +60163,7 @@ void FUN_BATTLE_BIN__80083f18
                )
 
 {
-  undefined1 *puVar1;
+  map_tile_data *pmVar1;
   int iVar2;
   uint uVar3;
   undefined4 uVar4;
@@ -56208,17 +60172,16 @@ void FUN_BATTLE_BIN__80083f18
   undefined *puVar7;
   uint uVar8;
   
-  puVar1 = FUN_BATTLE_BIN__80183fb4
-                     (((int)*(short *)(param_1 + 0x40) / 0x1c) * 0x10000 >> 0x10,
-                      ((int)*(short *)(param_1 + 0x44) / 0x1c) * 0x10000 >> 0x10,
-                      (uint)*(byte *)(param_1 + 0x7e));
+  pmVar1 = get_tile_data_ptr(((int)*(short *)(param_1 + 0x40) / 0x1c) * 0x10000 >> 0x10,
+                             ((int)*(short *)(param_1 + 0x44) / 0x1c) * 0x10000 >> 0x10,
+                             (uint)*(byte *)(param_1 + 0x7e));
   uVar8 = param_3 & 0xffff;
   if (0xd1 < uVar8) {
     puVar7 = (undefined *)0x800af244;
     if (param_4 < 600) {
       puVar7 = &DAT_BATTLE_BIN__800a7ce0;
     }
-    if ((puVar1[3] & 0xe0) == 0) {
+    if ((pmVar1->height_small & 0xe0) == 0) {
       uVar4 = *(undefined4 *)(puVar7 + uVar8 * 4 + -0x340);
       *param_5 = (int)puVar7;
     }
@@ -56238,12 +60201,12 @@ LAB_BATTLE_BIN__80084174:
       goto LAB_BATTLE_BIN__800841e0;
     }
   }
-  else if ((puVar1[3] & 0xe0) == 0) {
+  else if ((pmVar1->height_small & 0xe0) == 0) {
 LAB_BATTLE_BIN__80084180:
     iVar2 = uVar8 << 2;
   }
   else if (*(int *)(param_1 + 0x134) == 0) {
-    iVar5 = ((uint)(byte)puVar1[2] + (uint)((byte)puVar1[3] >> 5)) * 0xc;
+    iVar5 = ((uint)pmVar1->height_whole + (uint)(pmVar1->height_small >> 5)) * 0xc;
     if (-(int)*(short *)(param_1 + 0x42) + 0x24 <= iVar5) {
 LAB_BATTLE_BIN__80084154:
       uVar4 = *(undefined4 *)(iVar6 + 0x348);
@@ -56263,7 +60226,7 @@ LAB_BATTLE_BIN__80084154:
       if (*(char *)(param_1 + 6) != -0x62) {
         if ((byte)(*(char *)(param_1 + 6) + 100U) < 2) {
           if (4 - *(short *)(param_1 + 0x42) <=
-              (int)(((uint)(byte)puVar1[2] + (uint)((byte)puVar1[3] >> 5)) * 0xc)) {
+              (int)(((uint)pmVar1->height_whole + (uint)(pmVar1->height_small >> 5)) * 0xc)) {
 LAB_BATTLE_BIN__80084170:
             iVar2 = (param_3 & 0xffff) << 2;
             goto LAB_BATTLE_BIN__80084174;
@@ -56271,7 +60234,7 @@ LAB_BATTLE_BIN__80084170:
           iVar2 = (param_3 & 0xffff) << 2;
         }
         else {
-          iVar5 = ((uint)(byte)puVar1[2] + (uint)((byte)puVar1[3] >> 5)) * 0xc;
+          iVar5 = ((uint)pmVar1->height_whole + (uint)(pmVar1->height_small >> 5)) * 0xc;
           if (-(int)*(short *)(param_1 + 0x42) + 0x24 <= iVar5) goto LAB_BATTLE_BIN__80084154;
           if (-(int)*(short *)(param_1 + 0x42) + 0xc <= iVar5) goto LAB_BATTLE_BIN__80084170;
           iVar2 = (param_3 & 0xffff) << 2;
@@ -56644,7 +60607,7 @@ switchD_BATTLE_BIN__80084930_caseD_ca:
     goto LAB_BATTLE_BIN__800848d0;
   case 0xd3:
     uVar3 = (uint)uVar16;
-    if (DAT_BATTLE_BIN__8009612c != 1) {
+    if (VFX_canOpen != 1) {
       uVar13 = uVar14 + 3;
       goto LAB_BATTLE_BIN__800848d0;
     }
@@ -56661,7 +60624,7 @@ switchD_BATTLE_BIN__80084930_caseD_ca:
     goto switchD_BATTLE_BIN__80084930_caseD_c2;
   case 0xd6:
     uVar3 = (uint)uVar16;
-    if (DAT_BATTLE_BIN__8009612c == 0) {
+    if (VFX_canOpen == 0) {
       uVar13 = uVar14 + 3;
       goto LAB_BATTLE_BIN__800848d0;
     }
@@ -57013,7 +60976,7 @@ LAB_BATTLE_BIN__800859d4:
   sVar4 = (short)uVar14;
   switch(*(undefined *)(iVar7 + ((int)((uVar8 + 1) * 0x10000) >> 0x10))) {
   case 0xd3:
-    if (DAT_BATTLE_BIN__8009612c != 1) goto switchD_BATTLE_BIN__80085378_caseD_d7;
+    if (VFX_canOpen != 1) goto switchD_BATTLE_BIN__80085378_caseD_d7;
     break;
   default:
     goto LAB_BATTLE_BIN__80085310;
@@ -57022,7 +60985,7 @@ LAB_BATTLE_BIN__800859d4:
     param_2[6] = param_2[6] + 1;
     goto switchD_BATTLE_BIN__80085378_caseD_de;
   case 0xd6:
-    if (DAT_BATTLE_BIN__8009612c == 0) {
+    if (VFX_canOpen == 0) {
       uVar14 = uVar8 + 3;
       goto switchD_BATTLE_BIN__80085378_caseD_de;
     }
@@ -57714,7 +61677,7 @@ void FUN_BATTLE_BIN__80086b44(void)
 
 {
   short sVar1;
-  byte *pbVar2;
+  map_tile_data *pmVar2;
   uint uVar3;
   int iVar4;
   int *piVar5;
@@ -57744,19 +61707,18 @@ void FUN_BATTLE_BIN__80086b44(void)
       sVar1 = -*(short *)((int)piVar5 + 0x5a);
     }
     *(short *)((int)piVar5 + 0x122) = local_34 + sVar1;
-    pbVar2 = FUN_BATTLE_BIN__80183fb4
-                       (((int)*(short *)(piVar5 + 0x10) / 0x1c) * 0x10000 >> 0x10,
-                        ((int)*(short *)(piVar5 + 0x11) / 0x1c) * 0x10000 >> 0x10,
-                        (uint)*(byte *)((int)piVar5 + 0x7e));
+    pmVar2 = get_tile_data_ptr(((int)*(short *)(piVar5 + 0x10) / 0x1c) * 0x10000 >> 0x10,
+                               ((int)*(short *)(piVar5 + 0x11) / 0x1c) * 0x10000 >> 0x10,
+                               (uint)*(byte *)((int)piVar5 + 0x7e));
     if (*(char *)((int)piVar5 + 0x7f) == '\0') {
-      if ((*pbVar2 & 0x40) == 0) {
+      if ((pmVar2->TileType & 0x40) == 0) {
         FUN_BATTLE_BIN__8007b92c(&SStack_28.vx,&SStack_20.vx);
       }
       else {
         FUN_BATTLE_BIN__8007b94c(&SStack_28.vx,&SStack_20.vx);
       }
     }
-    else if ((*pbVar2 & 0x40) == 0) {
+    else if ((pmVar2->TileType & 0x40) == 0) {
       FUN_BATTLE_BIN__8007b688(&SStack_28.vx,&SStack_20.vx);
     }
     else {
@@ -57766,10 +61728,10 @@ void FUN_BATTLE_BIN__80086b44(void)
       uVar3 = FUN_BATTLE_BIN__8017f020(piVar5[0x4d]);
       if ((uVar3 & 0x10) == 0) {
         if (((uVar3 & 0x40) == 0) && ((uVar3 & 0x20) == 0)) {
-          SStack_20.vy = SStack_20.vy + (ushort)(pbVar2[3] >> 5) * -0xc;
+          SStack_20.vy = SStack_20.vy + (ushort)(pmVar2->height_small >> 5) * -0xc;
         }
       }
-      else if ((pbVar2[3] & 0xe0) != 0) {
+      else if ((pmVar2->height_small & 0xe0) != 0) {
         SStack_20.vy = SStack_20.vy + -0xc;
       }
     }
@@ -58319,7 +62281,7 @@ FUN_BATTLE_BIN__80087a28
   short sVar2;
   ENTDDisplayUnitData *pEVar3;
   uint uVar4;
-  undefined1 *puVar5;
+  map_tile_data *pmVar5;
   uint uVar6;
   uint uVar7;
   undefined *puVar8;
@@ -58367,8 +62329,8 @@ FUN_BATTLE_BIN__80087a28
       *(undefined4 *)&pEVar3->field_0x144 = 0;
       *(undefined4 *)&pEVar3->field_0x140 = 0;
       FUN_BATTLE_BIN__80087704(param_10,uVar16,uVar19,(int)pEVar3);
-      puVar5 = FUN_BATTLE_BIN__80183fb4(param_1,param_2,param_3);
-      FUN_BATTLE_BIN__80082468((int *)pEVar3,(byte)puVar5[6] >> 2 & 3,1);
+      pmVar5 = get_tile_data_ptr(param_1,param_2,param_3);
+      FUN_BATTLE_BIN__80082468((int *)pEVar3,pmVar5->tile_interaction >> 2 & 3,1);
       FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094bc4,4,uVar19,0);
       uVar1 = GetClut(uVar19 << 4,0x1e3);
       pEVar3->CLUT = uVar1;
@@ -59094,7 +63056,7 @@ void FUN_BATTLE_BIN__800890b8(VECTOR *param_1,short *param_2,SVECTOR *param_3)
 
 {
   int iVar1;
-  byte *pbVar2;
+  map_tile_data *pmVar2;
   long alStack_20 [2];
   
   FUN_BATTLE_BIN__80088eec();
@@ -59104,11 +63066,10 @@ void FUN_BATTLE_BIN__800890b8(VECTOR *param_1,short *param_2,SVECTOR *param_3)
                     (short)DAT_BATTLE_BIN__800961bc * 0x1c + 0xe);
   iVar1 = FUN_BATTLE_BIN__8007c80c(param_2,DAT_BATTLE_BIN__800961b8 & 0xff);
   param_2[1] = (short)iVar1;
-  pbVar2 = FUN_BATTLE_BIN__80183fb4
-                     (((int)*param_2 / 0x1c) * 0x10000 >> 0x10,
-                      ((int)param_2[2] / 0x1c) * 0x10000 >> 0x10,DAT_BATTLE_BIN__800961b8);
-  param_2[1] = param_2[1] + (ushort)(pbVar2[3] >> 5) * -0xc;
-  if ((*pbVar2 & 0x40) == 0) {
+  pmVar2 = get_tile_data_ptr(((int)*param_2 / 0x1c) * 0x10000 >> 0x10,
+                             ((int)param_2[2] / 0x1c) * 0x10000 >> 0x10,DAT_BATTLE_BIN__800961b8);
+  param_2[1] = param_2[1] + (ushort)(pmVar2->height_small >> 5) * -0xc;
+  if ((pmVar2->TileType & 0x40) == 0) {
     FUN_BATTLE_BIN__8007b92c(param_2,&param_3->vx);
   }
   else {
@@ -59126,7 +63087,7 @@ void FUN_BATTLE_BIN__8008924c(void)
 
 {
   int iVar1;
-  undefined1 *puVar2;
+  map_tile_data *pmVar2;
   int iVar3;
   SVECTOR local_58;
   SVECTOR SStack_50;
@@ -59143,12 +63104,11 @@ void FUN_BATTLE_BIN__8008924c(void)
   iVar1 = Get_OTAG_List();
   FUN_BATTLE_BIN__8007e304(&local_58,iVar1);
   iVar1 = FUN_BATTLE_BIN__8007c444(&local_58.vx,DAT_BATTLE_BIN__800961b8 & 0xff,&SStack_48.vx);
-  puVar2 = FUN_BATTLE_BIN__80183fb4
-                     (((int)local_58.vx / 0x1c) * 0x10000 >> 0x10,
-                      ((int)local_58.vz / 0x1c) * 0x10000 >> 0x10,DAT_BATTLE_BIN__800961b8);
+  pmVar2 = get_tile_data_ptr(((int)local_58.vx / 0x1c) * 0x10000 >> 0x10,
+                             ((int)local_58.vz / 0x1c) * 0x10000 >> 0x10,DAT_BATTLE_BIN__800961b8);
   iVar3 = Get_OTAG_List();
   FUN_BATTLE_BIN__8007db1c
-            ((byte)puVar2[6] >> 1 & 1,iVar1,&SStack_48,&SStack_40,&SStack_38,&SStack_30,
+            (pmVar2->tile_interaction >> 1 & 1,iVar1,&SStack_48,&SStack_40,&SStack_38,&SStack_30,
              (uint *)(iVar3 + (VStack_28.vz >> 2) * 4));
   return;
 }
@@ -59537,9 +63497,8 @@ bool FUN_BATTLE_BIN__8008c468(ushort param_1,short *param_2)
   piVar1 = FUN_BATTLE_BIN__8007a724(param_1);
   if (piVar1 != (int *)0x0) {
     iVar2 = piVar1[0x4d];
-    FUN_BATTLE_BIN__80183fb4
-              ((uint)*(byte *)(iVar2 + 0x47),(uint)*(byte *)(iVar2 + 0x48),
-               (uint)(*(ushort *)(iVar2 + 0x48) >> 0xf));
+    get_tile_data_ptr((uint)*(byte *)(iVar2 + 0x47),(uint)*(byte *)(iVar2 + 0x48),
+                      (uint)(*(ushort *)(iVar2 + 0x48) >> 0xf));
     *param_2 = (ushort)*(byte *)(piVar1[0x4d] + 0x47) * 0x1c + 0xe;
     param_2[2] = (ushort)*(byte *)(piVar1[0x4d] + 0x48) * 0x1c + 0xe;
     iVar2 = FUN_BATTLE_BIN__8007d51c(piVar1);
@@ -60041,7 +64000,7 @@ bool SsGetMute(uint param_1)
   bool bVar1;
   undefined3 extraout_var;
   
-  bVar1 = FUN_BATTLE_BIN__801a13bc(param_1);
+  bVar1 = begin_open_VFX(param_1);
   return CONCAT31(extraout_var,bVar1) != 0;
 }
 
@@ -60100,9 +64059,8 @@ void FUN_BATTLE_BIN__8008dfac(ushort param_1)
   int *piVar1;
   
   piVar1 = FUN_BATTLE_BIN__8007a724(param_1);
-  FUN_BATTLE_BIN__80183fb4
-            ((uint)*(byte *)(piVar1 + 0x1f),(uint)*(byte *)((int)piVar1 + 0x7d),
-             (uint)*(byte *)((int)piVar1 + 0x7e));
+  get_tile_data_ptr((uint)*(byte *)(piVar1 + 0x1f),(uint)*(byte *)((int)piVar1 + 0x7d),
+                    (uint)*(byte *)((int)piVar1 + 0x7e));
   return;
 }
 
@@ -60206,7 +64164,7 @@ void FUN_BATTLE_BIN__8008e348(void)
 void FUN_BATTLE_BIN__8008e358(short *param_1,ushort *param_2)
 
 {
-  undefined1 *puVar1;
+  map_tile_data *pmVar1;
   
   Store_3_Words(&DAT_BATTLE_BIN__800e4e74,*param_1 * -0x1000,param_1[1] * -0x1000,
                 param_1[2] * -0x1000);
@@ -60215,8 +64173,8 @@ void FUN_BATTLE_BIN__8008e358(short *param_1,ushort *param_2)
   DAT_BATTLE_BIN__800961b8 = 0;
   DAT_BATTLE_BIN__800961b4 = DAT_BATTLE_BIN__800e4e74 / 0x1c000;
   DAT_BATTLE_BIN__800961bc = DAT_BATTLE_BIN__800e4e7c / 0x1c000;
-  puVar1 = FUN_BATTLE_BIN__80183fb4(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,0);
-  DAT_BATTLE_BIN__800e4e78 = (uint)(byte)puVar1[2] * -0xc000;
+  pmVar1 = get_tile_data_ptr(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,0);
+  DAT_BATTLE_BIN__800e4e78 = (uint)pmVar1->height_whole * -0xc000;
   return;
 }
 
@@ -60410,7 +64368,7 @@ void FUN_BATTLE_BIN__8008e80c(void)
 
 
 
-int FUN_BATTLE_BIN__8008ea6c(MusicDataHeader *param_1,int param_2,undefined4 *param_3)
+int FUN_BATTLE_BIN__8008ea6c(int sfx_ID,int param_2,undefined4 *param_3)
 
 {
   byte bVar1;
@@ -60420,7 +64378,7 @@ int FUN_BATTLE_BIN__8008ea6c(MusicDataHeader *param_1,int param_2,undefined4 *pa
   switch(param_2) {
   case 0:
     param_2 = param_2 + 1;
-    FUN_800440f4(param_1);
+    Stop_Playing_SFX(sfx_ID);
     FUN_BATTLE_BIN__8008e468();
     FUN_BATTLE_BIN__80093048();
     FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094b84,2,0,0);
@@ -60434,13 +64392,13 @@ int FUN_BATTLE_BIN__8008ea6c(MusicDataHeader *param_1,int param_2,undefined4 *pa
     }
     break;
   case 2:
-    iVar2 = FUN_BATTLE_BIN__800f3718((uint)param_1,0x75);
+    iVar2 = FUN_BATTLE_BIN__800f3718(sfx_ID,0x75);
     if (iVar2 != 0) {
       param_2 = param_2 + 1;
     }
     break;
   case 3:
-    iVar2 = FUN_BATTLE_BIN__800f3718((uint)param_1,0x76);
+    iVar2 = FUN_BATTLE_BIN__800f3718(sfx_ID,0x76);
     if (iVar2 == 0) {
       param_2 = param_2 + 1;
     }
@@ -60475,12 +64433,12 @@ int FUN_BATTLE_BIN__8008ea6c(MusicDataHeader *param_1,int param_2,undefined4 *pa
     break;
   case 0xb:
     if (Stream_openmovie != 1) {
-      param_1 = (MusicDataHeader *)0x1fe;
+      sfx_ID = 0x1fe;
       iVar2 = GetScriptVariable(DebugBattleNext);
       if (iVar2 == 0) goto switchD_BATTLE_BIN__8008ea9c_caseD_9;
     }
     FUN_80043f50();
-    FUN_800440f4(param_1);
+    Stop_Playing_SFX(sfx_ID);
     iVar2 = rand();
     if (iVar2 < 0) {
       iVar2 = iVar2 + 0x1fff;
@@ -60491,9 +64449,9 @@ int FUN_BATTLE_BIN__8008ea6c(MusicDataHeader *param_1,int param_2,undefined4 *pa
   case 0xc:
     iVar2 = param_2;
     FUN_BATTLE_BIN__800f59f0();
-    FUN_BATTLE_BIN__80092dc0(param_1,iVar2,param_3);
-    FUN_BATTLE_BIN__80092e98(param_1,iVar2,param_3);
-    FUN_BATTLE_BIN__80092f18(param_1,iVar2,param_3);
+    FUN_BATTLE_BIN__80092dc0(sfx_ID,iVar2,param_3);
+    FUN_BATTLE_BIN__80092e98(sfx_ID,iVar2,param_3);
+    FUN_BATTLE_BIN__80092f18(sfx_ID,iVar2,param_3);
     FUN_BATTLE_BIN__80092f98();
     FUN_BATTLE_BIN__801827f0(1);
     FUN_BATTLE_BIN__80199d20();
@@ -60507,7 +64465,7 @@ switchD_BATTLE_BIN__8008ea9c_caseD_9:
 
 
 
-int FUN_BATTLE_BIN__8008ec70(MusicDataHeader *param_1,int param_2,undefined4 *param_3)
+int FUN_BATTLE_BIN__8008ec70(int param_1,int param_2,undefined4 *param_3)
 
 {
   byte bVar1;
@@ -60517,7 +64475,7 @@ int FUN_BATTLE_BIN__8008ec70(MusicDataHeader *param_1,int param_2,undefined4 *pa
   
   switch(param_2) {
   case 0:
-    FUN_800440f4(param_1);
+    Stop_Playing_SFX(param_1);
     FUN_BATTLE_BIN__8008e468();
     FUN_BATTLE_BIN__80093048();
     param_2 = param_2 + 1;
@@ -60530,13 +64488,13 @@ int FUN_BATTLE_BIN__8008ec70(MusicDataHeader *param_1,int param_2,undefined4 *pa
   case 1:
     goto switchD_BATTLE_BIN__8008eca4_caseD_1;
   case 2:
-    iVar2 = FUN_BATTLE_BIN__800f3718((uint)param_1,0x75);
+    iVar2 = FUN_BATTLE_BIN__800f3718(param_1,0x75);
     if (iVar2 != 0) {
       param_2 = param_2 + 1;
     }
     break;
   case 3:
-    iVar2 = FUN_BATTLE_BIN__800f3718((uint)param_1,0x76);
+    iVar2 = FUN_BATTLE_BIN__800f3718(param_1,0x76);
     if (iVar2 == 0) {
       param_2 = param_2 + 1;
     }
@@ -60603,12 +64561,12 @@ int FUN_BATTLE_BIN__8008ec70(MusicDataHeader *param_1,int param_2,undefined4 *pa
     break;
   case 0xb:
     if (Stream_openmovie != 1) {
-      param_1 = (MusicDataHeader *)0x1fe;
+      param_1 = 0x1fe;
       iVar2 = GetScriptVariable(DebugBattleNext);
       if (iVar2 == 0) goto switchD_BATTLE_BIN__8008eca4_caseD_1;
     }
     FUN_80043f50();
-    FUN_800440f4(param_1);
+    Stop_Playing_SFX(param_1);
     iVar2 = rand();
     if (iVar2 < 0) {
       iVar2 = iVar2 + 0x1fff;
@@ -62557,7 +66515,7 @@ void FUN_BATTLE_BIN__800931c4
 
 {
   int *piVar1;
-  undefined1 *puVar2;
+  map_tile_data *pmVar2;
   short local_48 [2];
   short local_44;
   ushort local_40;
@@ -62570,14 +66528,13 @@ void FUN_BATTLE_BIN__800931c4
   if (piVar1 != (int *)0x0) {
     local_40 = param_4;
     FUN_BATTLE_BIN__8007b96c(local_48,(int)piVar1);
-    puVar2 = FUN_BATTLE_BIN__80183fb4
-                       (((int)local_48[0] / 0x1c) * 0x10000 >> 0x10,
-                        ((int)local_44 / 0x1c) * 0x10000 >> 0x10,(uint)*(byte *)((int)piVar1 + 0x7e)
-                       );
+    pmVar2 = get_tile_data_ptr(((int)local_48[0] / 0x1c) * 0x10000 >> 0x10,
+                               ((int)local_44 / 0x1c) * 0x10000 >> 0x10,
+                               (uint)*(byte *)((int)piVar1 + 0x7e));
     FUN_BATTLE_BIN__8008f710(param_1,param_2,3,param_3,0,param_4,param_5,param_6);
-    if (((puVar2[3] & 0xe0) == 0) ||
+    if (((pmVar2->height_small & 0xe0) == 0) ||
        ((int)*(short *)((int)piVar1 + 0x42) <
-        (int)(((uint)(byte)puVar2[2] + (uint)((byte)puVar2[3] >> 5)) * -0xc))) {
+        (int)(((uint)pmVar2->height_whole + (uint)(pmVar2->height_small >> 5)) * -0xc))) {
       param_4 = -local_40;
       param_5 = -local_38;
       param_6 = -local_30;
@@ -63291,7 +67248,7 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
   bool bVar1;
   byte bVar2;
   undefined2 uVar3;
-  undefined1 *puVar4;
+  map_tile_data *pmVar4;
   char cVar5;
   short sVar6;
   undefined2 uVar7;
@@ -63302,11 +67259,10 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
   ushort uVar12;
   int iVar13;
   int iVar14;
-  MusicDataHeader *pMVar15;
-  int iVar16;
-  char *pcVar17;
+  int iVar15;
+  char *pcVar16;
   MATRIX *m0;
-  int iVar18;
+  int iVar17;
   MATRIX *m;
   SVECTOR *r;
   VECTOR *v;
@@ -63373,13 +67329,13 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
       uVar9 = rand();
       if ((uVar9 & 1) == 0) {
         DAT_BATTLE_BIN__800f5c6c = 0x1000e;
-        pMVar15 = (MusicDataHeader *)0x1000e;
+        uVar9 = 0x1000e;
       }
       else {
         DAT_BATTLE_BIN__800f5c68 = 0x10003;
-        pMVar15 = (MusicDataHeader *)0x10003;
+        uVar9 = 0x10003;
       }
-      Call_Play_SoundEffect(pMVar15);
+      Call_PlaySound_findChannel(uVar9);
     }
     iVar8 = DAT_BATTLE_BIN__800f79c0 + -1;
     if (DAT_BATTLE_BIN__800f79c0 == 0) {
@@ -63547,19 +67503,19 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
         local_90 = (int)*(short *)((int)&DAT_BATTLE_BIN__800fbe20 + iVar8);
         local_8c = (int)*(short *)((int)&DAT_BATTLE_BIN__800fbe20 + iVar8 + 2);
         local_88 = (int)*(short *)((int)&DAT_BATTLE_BIN__800fbe24 + iVar8);
-        iVar18 = 0;
+        iVar17 = 0;
         FUN_8001cf48((int)&MStack_e8,&local_90);
         ScaleMatrix(&MStack_e8,v);
         SetRotMatrix(&MStack_e8);
         SetTransMatrix(&MStack_e8);
         iVar10 = iVar14;
         do {
-          iVar16 = iVar18 * 0x10;
-          iVar18 = iVar18 + 1;
+          iVar15 = iVar17 * 0x10;
+          iVar17 = iVar17 + 1;
           RotTrans((SVECTOR *)(&DAT_BATTLE_BIN__800f7e5c + iVar10 * 0x50),
-                   (VECTOR *)(iVar16 + DAT_BATTLE_BIN__801251c4 + iVar13),alStack_50);
-          iVar10 = iVar18 + iVar14;
-        } while (iVar18 < 4);
+                   (VECTOR *)(iVar15 + DAT_BATTLE_BIN__801251c4 + iVar13),alStack_50);
+          iVar10 = iVar17 + iVar14;
+        } while (iVar17 < 4);
       }
     }
     v = (VECTOR *)&v[9].vz;
@@ -63586,7 +67542,7 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
       iVar8 = iVar8 + 0xfffff;
     }
     do {
-      DAT_BATTLE_BIN__800f6878 = &DAT_BATTLE_BIN__8018f8cc;
+      DAT_BATTLE_BIN__800f6878 = Map_Tile_Data;
       if (0x118 < *(short *)(&DAT_BATTLE_BIN__8010ab8e + local_58 * 0x20)) {
         if (DAT_BATTLE_BIN__800f5be8 != 0) {
           (&DAT_BATTLE_BIN__800fc35a)[local_58 * 4] = (short)(-0x100000 / DAT_BATTLE_BIN__800f5be8);
@@ -63594,16 +67550,16 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
         (&DAT_BATTLE_BIN__800fc35e)[local_58 * 4] = 0;
         iVar13 = rand();
         iVar14 = (iVar13 % 3) * 0x10000 >> 0xd;
-        pcVar17 = (char *)((int)&local_a8 + iVar14);
-        (&DAT_BATTLE_BIN__8010ab90)[local_58 * 0x20] = *pcVar17;
-        (&DAT_BATTLE_BIN__801199b8)[local_58 * 0x20] = *pcVar17;
-        (&DAT_BATTLE_BIN__8010ab98)[local_58 * 0x20] = *pcVar17 + *(char *)((int)&local_a4 + iVar14)
+        pcVar16 = (char *)((int)&local_a8 + iVar14);
+        (&DAT_BATTLE_BIN__8010ab90)[local_58 * 0x20] = *pcVar16;
+        (&DAT_BATTLE_BIN__801199b8)[local_58 * 0x20] = *pcVar16;
+        (&DAT_BATTLE_BIN__8010ab98)[local_58 * 0x20] = *pcVar16 + *(char *)((int)&local_a4 + iVar14)
         ;
-        (&DAT_BATTLE_BIN__801199c0)[local_58 * 0x20] = *pcVar17 + *(char *)((int)&local_a4 + iVar14)
+        (&DAT_BATTLE_BIN__801199c0)[local_58 * 0x20] = *pcVar16 + *(char *)((int)&local_a4 + iVar14)
         ;
-        (&DAT_BATTLE_BIN__8010aba0)[local_58 * 0x20] = *pcVar17 + *(char *)((int)&local_a4 + iVar14)
+        (&DAT_BATTLE_BIN__8010aba0)[local_58 * 0x20] = *pcVar16 + *(char *)((int)&local_a4 + iVar14)
         ;
-        (&DAT_BATTLE_BIN__801199c8)[local_58 * 0x20] = *pcVar17 + *(char *)((int)&local_a4 + iVar14)
+        (&DAT_BATTLE_BIN__801199c8)[local_58 * 0x20] = *pcVar16 + *(char *)((int)&local_a4 + iVar14)
         ;
         (&DAT_BATTLE_BIN__8010ab91)[local_58 * 0x20] = *(undefined *)((int)&local_a8 + iVar14 + 2);
         (&DAT_BATTLE_BIN__801199b9)[local_58 * 0x20] = *(undefined *)((int)&local_a8 + iVar14 + 2);
@@ -63710,7 +67666,7 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
       iVar8 = iVar8 + 0xfffff;
     }
     do {
-      DAT_BATTLE_BIN__800f6878 = &DAT_BATTLE_BIN__8018f8cc;
+      DAT_BATTLE_BIN__800f6878 = Map_Tile_Data;
       iVar13 = DAT_BATTLE_BIN__80122000;
       if (DAT_BATTLE_BIN__80122000 < 0) {
         iVar13 = DAT_BATTLE_BIN__80122000 + 7;
@@ -63738,18 +67694,18 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
         }
         iVar13 = rand();
         iVar14 = (iVar13 % 3) * 0x10000 >> 0xd;
-        pcVar17 = (char *)((int)&local_a8 + iVar14);
+        pcVar16 = (char *)((int)&local_a8 + iVar14);
         (&DAT_BATTLE_BIN__800fc35e)[local_58 * 4] =
              (DAT_BATTLE_BIN__800fa6a4 + 3) - (short)(iVar13 % 3);
-        (&DAT_BATTLE_BIN__8010ab90)[local_58 * 0x20] = *pcVar17;
-        (&DAT_BATTLE_BIN__801199b8)[local_58 * 0x20] = *pcVar17;
-        (&DAT_BATTLE_BIN__8010ab98)[local_58 * 0x20] = *pcVar17 + *(char *)((int)&local_a4 + iVar14)
+        (&DAT_BATTLE_BIN__8010ab90)[local_58 * 0x20] = *pcVar16;
+        (&DAT_BATTLE_BIN__801199b8)[local_58 * 0x20] = *pcVar16;
+        (&DAT_BATTLE_BIN__8010ab98)[local_58 * 0x20] = *pcVar16 + *(char *)((int)&local_a4 + iVar14)
         ;
-        (&DAT_BATTLE_BIN__801199c0)[local_58 * 0x20] = *pcVar17 + *(char *)((int)&local_a4 + iVar14)
+        (&DAT_BATTLE_BIN__801199c0)[local_58 * 0x20] = *pcVar16 + *(char *)((int)&local_a4 + iVar14)
         ;
-        (&DAT_BATTLE_BIN__8010aba0)[local_58 * 0x20] = *pcVar17 + *(char *)((int)&local_a4 + iVar14)
+        (&DAT_BATTLE_BIN__8010aba0)[local_58 * 0x20] = *pcVar16 + *(char *)((int)&local_a4 + iVar14)
         ;
-        (&DAT_BATTLE_BIN__801199c8)[local_58 * 0x20] = *pcVar17 + *(char *)((int)&local_a4 + iVar14)
+        (&DAT_BATTLE_BIN__801199c8)[local_58 * 0x20] = *pcVar16 + *(char *)((int)&local_a4 + iVar14)
         ;
         (&DAT_BATTLE_BIN__8010ab91)[local_58 * 0x20] = *(undefined *)((int)&local_a8 + iVar14 + 2);
         (&DAT_BATTLE_BIN__801199b9)[local_58 * 0x20] = *(undefined *)((int)&local_a8 + iVar14 + 2);
@@ -63871,13 +67827,13 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
     }
     local_58 = 0;
     do {
-      DAT_BATTLE_BIN__800f6878 = &DAT_BATTLE_BIN__8018f8cc;
+      DAT_BATTLE_BIN__800f6878 = Map_Tile_Data;
       iVar14 = (((int)(short)(&DAT_BATTLE_BIN__800fc35c)[local_58 * 4] / 0x1c) * 0x10000 >> 0x10) *
                (uint)DAT_BATTLE_BIN__800f6860 +
                (int)(short)(&DAT_BATTLE_BIN__800fc358)[local_58 * 4] / 0x1c;
       iVar13 = iVar14 * 0x10000 >> 0xd;
-      iVar13 = ((uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar13] +
-               (uint)((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar13] >> 5)) * -0xc;
+      iVar13 = ((uint)(&Map_Tile_Data[0].height_whole)[iVar13] +
+               (uint)((&Map_Tile_Data[0].height_small)[iVar13] >> 5)) * -0xc;
       if (iVar13 < (short)(&DAT_BATTLE_BIN__800fc35a)[(local_58 + 0x20) * 4]) {
         (&DAT_BATTLE_BIN__800fc35e)[local_58 * 4] = 0;
         iVar10 = rand();
@@ -63924,15 +67880,15 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
           RotTrans((SVECTOR *)(&DAT_BATTLE_BIN__800fc458 + local_58 * 4),(VECTOR *)&local_70,
                    &lStack_54);
           iVar10 = DAT_BATTLE_BIN__8011a2d4;
-          iVar18 = local_68;
+          iVar17 = local_68;
           if (local_68 < 0) {
-            iVar18 = local_68 + 3;
+            iVar17 = local_68 + 3;
           }
-          if ((iVar18 >> 2) - 1U < 0x17f) {
-            iVar16 = DAT_BATTLE_BIN__8011a2d4 + local_58 * 0x20;
-            *(short *)(iVar16 + 0xe638) = local_70;
-            *(short *)(iVar16 + 0xe63a) = local_6c;
-            AddPrim((void *)((iVar18 >> 2) * 4 + *(int *)(iVar10 + 0xe5b4)),
+          if ((iVar17 >> 2) - 1U < 0x17f) {
+            iVar15 = DAT_BATTLE_BIN__8011a2d4 + local_58 * 0x20;
+            *(short *)(iVar15 + 0xe638) = local_70;
+            *(short *)(iVar15 + 0xe63a) = local_6c;
+            AddPrim((void *)((iVar17 >> 2) * 4 + *(int *)(iVar10 + 0xe5b4)),
                     (void *)(local_58 * 0x20 + 0xe628 + iVar10));
           }
         }
@@ -63948,10 +67904,10 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
           *(undefined2 *)(&DAT_BATTLE_BIN__8011a1da + iVar10) = 0x10;
           *(short *)(&DAT_BATTLE_BIN__8011a1d6 + iVar10) = (short)iVar13 + -8;
           *(undefined2 *)(&DAT_BATTLE_BIN__8011a1d4 + iVar10) = uVar7;
-          puVar4 = DAT_BATTLE_BIN__800f6878;
+          pmVar4 = DAT_BATTLE_BIN__800f6878;
           *(undefined2 *)(&DAT_BATTLE_BIN__8011a1d8 + iVar10) = uVar3;
           uVar7 = 2;
-          if ((puVar4[(iVar14 * 0x10000 >> 0xd) + 6] & 2) == 0) {
+          if (((&pmVar4->tile_interaction)[iVar14 * 0x10000 >> 0xd] & 2) == 0) {
             uVar7 = 1;
           }
           (&DAT_BATTLE_BIN__800fc35e)[local_58 * 4] = uVar7;
@@ -63985,15 +67941,15 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
              *(short *)(&DAT_BATTLE_BIN__8011a1da + iVar13) + -1;
         if ((*(ushort *)(&DAT_BATTLE_BIN__8011a1da + iVar13) & 3) == 0) {
           iVar13 = (*(ushort *)(&DAT_BATTLE_BIN__8011a1da + iVar13) & 0xc) * 2;
-          pcVar17 = (char *)((int)&local_c8 + iVar13);
-          (&DAT_BATTLE_BIN__8010ab90)[(local_58 + 0x20) * 0x20] = *pcVar17;
-          (&DAT_BATTLE_BIN__801199b8)[(local_58 + 0x20) * 0x20] = *pcVar17;
+          pcVar16 = (char *)((int)&local_c8 + iVar13);
+          (&DAT_BATTLE_BIN__8010ab90)[(local_58 + 0x20) * 0x20] = *pcVar16;
+          (&DAT_BATTLE_BIN__801199b8)[(local_58 + 0x20) * 0x20] = *pcVar16;
           (&DAT_BATTLE_BIN__8010ab98)[(local_58 + 0x20) * 0x20] =
-               *pcVar17 + *(char *)((int)&local_c4 + iVar13);
+               *pcVar16 + *(char *)((int)&local_c4 + iVar13);
           (&DAT_BATTLE_BIN__801199c0)[(local_58 + 0x20) * 0x20] =
-               *pcVar17 + *(char *)((int)&local_c4 + iVar13);
-          (&DAT_BATTLE_BIN__8010aba0)[(local_58 + 0x20) * 0x20] = *pcVar17;
-          (&DAT_BATTLE_BIN__801199c8)[(local_58 + 0x20) * 0x20] = *pcVar17;
+               *pcVar16 + *(char *)((int)&local_c4 + iVar13);
+          (&DAT_BATTLE_BIN__8010aba0)[(local_58 + 0x20) * 0x20] = *pcVar16;
+          (&DAT_BATTLE_BIN__801199c8)[(local_58 + 0x20) * 0x20] = *pcVar16;
           (&DAT_BATTLE_BIN__8010ab91)[(local_58 + 0x20) * 0x20] =
                *(undefined *)((int)&local_c8 + iVar13 + 2);
           (&DAT_BATTLE_BIN__801199b9)[(local_58 + 0x20) * 0x20] =
@@ -64077,7 +68033,7 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
     }
     DAT_BATTLE_BIN__800f5b5c = 0;
   }
-  DAT_BATTLE_BIN__800f6878 = &DAT_BATTLE_BIN__8018f8cc;
+  DAT_BATTLE_BIN__800f6878 = Map_Tile_Data;
   if (DAT_BATTLE_BIN__800f6870 == 1) {
     local_58 = 0;
     if (DAT_BATTLE_BIN__800fbe90 != 0) {
@@ -64090,7 +68046,8 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
           if (((&DAT_BATTLE_BIN__8011a2de)[local_58 * 0xc] & 1) != 0) {
             uVar12 = uVar12 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar12 << 0x10) >> 0xd) + 5] & 0x20) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar12 << 0x10) >> 0xd] & 0x20)
+              != 0) {
             iVar8 = DAT_BATTLE_BIN__8011a2d4 + local_58 * 0x28;
             *(undefined *)(iVar8 + 4) = 0x20;
             *(ushort *)(iVar8 + 0xe) = *(ushort *)(iVar8 + 0xe) & 0x803f | 0x7840;
@@ -64121,7 +68078,8 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
           if (((&DAT_BATTLE_BIN__8011c49e)[local_58 * 0x10] & 1) != 0) {
             uVar12 = uVar12 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar12 << 0x10) >> 0xd) + 5] & 0x20) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar12 << 0x10) >> 0xd] & 0x20)
+              != 0) {
             iVar8 = DAT_BATTLE_BIN__8011a2d4 + local_58 * 0x34;
             *(undefined *)(iVar8 + 0x3844) = 0x20;
             *(ushort *)(iVar8 + 0x384e) = *(ushort *)(iVar8 + 0x384e) & 0x803f | 0x7840;
@@ -64159,7 +68117,8 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
           if (((&DAT_BATTLE_BIN__8011a2de)[local_58 * 0xc] & 1) != 0) {
             uVar12 = uVar12 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar12 << 0x10) >> 0xd) + 5] & 0x40) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar12 << 0x10) >> 0xd] & 0x40)
+              != 0) {
             iVar8 = DAT_BATTLE_BIN__8011a2d4 + local_58 * 0x28;
             *(undefined *)(iVar8 + 4) = 0x60;
             *(ushort *)(iVar8 + 0xe) = *(ushort *)(iVar8 + 0xe) & 0x803f | 0x7840;
@@ -64187,7 +68146,8 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
           if (((&DAT_BATTLE_BIN__8011c49e)[local_58 * 0x10] & 1) != 0) {
             uVar12 = uVar12 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar12 << 0x10) >> 0xd) + 5] & 0x40) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar12 << 0x10) >> 0xd] & 0x40)
+              != 0) {
             iVar8 = DAT_BATTLE_BIN__8011a2d4 + local_58 * 0x34;
             *(undefined *)(iVar8 + 0x3844) = 0x60;
             *(ushort *)(iVar8 + 0x384e) = *(ushort *)(iVar8 + 0x384e) & 0x803f | 0x7840;
@@ -64221,7 +68181,8 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
           if (((&DAT_BATTLE_BIN__8011a2de)[local_58 * 0xc] & 1) != 0) {
             uVar12 = uVar12 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar12 << 0x10) >> 0xd) + 5] & 0x80) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar12 << 0x10) >> 0xd] & 0x80)
+              != 0) {
             iVar8 = DAT_BATTLE_BIN__8011a2d4 + local_58 * 0x28;
             *(undefined *)(iVar8 + 4) = 0x50;
             *(ushort *)(iVar8 + 0xe) = *(ushort *)(iVar8 + 0xe) & 0x803f | 0x7840;
@@ -64252,7 +68213,8 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
           if (((&DAT_BATTLE_BIN__8011c49e)[local_58 * 0x10] & 1) != 0) {
             uVar12 = uVar12 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar12 << 0x10) >> 0xd) + 5] & 0x80) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar12 << 0x10) >> 0xd] & 0x80)
+              != 0) {
             iVar8 = DAT_BATTLE_BIN__8011a2d4 + local_58 * 0x34;
             *(undefined *)(iVar8 + 0x3844) = 0x50;
             *(ushort *)(iVar8 + 0x384e) = *(ushort *)(iVar8 + 0x384e) & 0x803f | 0x7840;
@@ -64428,7 +68390,7 @@ void FUN_BATTLE_BIN__800ec718(undefined4 param_1)
   ushort *puVar7;
   ushort *puVar8;
   
-  DAT_BATTLE_BIN__800f6878 = &DAT_BATTLE_BIN__8018f8cc;
+  DAT_BATTLE_BIN__800f6878 = Map_Tile_Data;
   switch(param_1) {
   case 0:
     iVar5 = 0;
@@ -64470,7 +68432,8 @@ void FUN_BATTLE_BIN__800ec718(undefined4 param_1)
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x20) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x20)
+              != 0) {
             iVar3 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
             *(undefined *)(iVar3 + 4) = 0x20;
             iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
@@ -64508,7 +68471,8 @@ void FUN_BATTLE_BIN__800ec718(undefined4 param_1)
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x20) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x20)
+              != 0) {
             iVar3 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
             *(undefined *)(iVar3 + 0x3844) = 0x20;
             iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
@@ -64565,7 +68529,8 @@ LAB_BATTLE_BIN__800edb14:
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x40) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x40)
+              != 0) {
             iVar3 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
             *(undefined *)(iVar3 + 4) = 0x60;
             iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
@@ -64600,7 +68565,8 @@ LAB_BATTLE_BIN__800edb14:
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x40) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x40)
+              != 0) {
             iVar3 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
             *(undefined *)(iVar3 + 0x3844) = 0x60;
             iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
@@ -64650,7 +68616,8 @@ LAB_BATTLE_BIN__800edb14:
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x40) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x40)
+              != 0) {
             iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
             *(ushort *)(iVar4 + 0xe) = *(ushort *)(iVar4 + 0xe) & 0x803f | 0x7800;
             if (((int)(short)*puVar8 & 0x8000U) == 0) {
@@ -64688,7 +68655,8 @@ LAB_BATTLE_BIN__800edb14:
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x40) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x40)
+              != 0) {
             iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
             *(ushort *)(iVar4 + 0x384e) = *(ushort *)(iVar4 + 0x384e) & 0x803f | 0x7800;
             if (((int)(short)*puVar8 & 0x8000U) == 0) {
@@ -64733,7 +68701,8 @@ LAB_BATTLE_BIN__800edb14:
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x20) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x20)
+              != 0) {
             iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
             *(ushort *)(iVar4 + 0xe) = *(ushort *)(iVar4 + 0xe) & 0x803f | 0x7800;
             if (((int)(short)*puVar8 & 0x8000U) == 0) {
@@ -64771,7 +68740,8 @@ LAB_BATTLE_BIN__800edb14:
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x20) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x20)
+              != 0) {
             iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
             *(ushort *)(iVar4 + 0x384e) = *(ushort *)(iVar4 + 0x384e) & 0x803f | 0x7800;
             if (((int)(short)*puVar8 & 0x8000U) == 0) {
@@ -64816,7 +68786,8 @@ LAB_BATTLE_BIN__800edb14:
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x80) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x80)
+              != 0) {
             iVar3 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
             *(undefined *)(iVar3 + 4) = 0x50;
             iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
@@ -64854,7 +68825,8 @@ LAB_BATTLE_BIN__800edb14:
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x80) != 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x80)
+              != 0) {
             iVar3 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
             *(undefined *)(iVar3 + 0x3844) = 0x50;
             iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
@@ -64910,8 +68882,10 @@ LAB_BATTLE_BIN__800edb1c:
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x80) != 0) {
-            if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x40) == 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x80)
+              != 0) {
+            if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x40
+                ) == 0) {
               iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
               *(ushort *)(iVar4 + 0xe) = *(ushort *)(iVar4 + 0xe) & 0x803f | 0x7800;
               if (((int)(short)*puVar8 & 0x8000U) == 0) {
@@ -64961,8 +68935,10 @@ LAB_BATTLE_BIN__800edb1c:
           if ((*puVar7 & 1) != 0) {
             uVar1 = uVar1 + 0x100;
           }
-          if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x80) != 0) {
-            if ((DAT_BATTLE_BIN__800f6878[((int)((uint)uVar1 << 0x10) >> 0xd) + 5] & 0x40) == 0) {
+          if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x80)
+              != 0) {
+            if (((&DAT_BATTLE_BIN__800f6878->tile_overlay)[(int)((uint)uVar1 << 0x10) >> 0xd] & 0x40
+                ) == 0) {
               iVar4 = DAT_BATTLE_BIN__8011a2d4 + iVar5;
               *(ushort *)(iVar4 + 0x384e) = *(ushort *)(iVar4 + 0x384e) & 0x803f | 0x7800;
               if (((int)(short)*puVar8 & 0x8000U) == 0) {
@@ -65411,7 +69387,7 @@ LAB_BATTLE_BIN__800eee08:
     DAT_BATTLE_BIN__800f79c0 = 0x3c;
     DAT_BATTLE_BIN__800f5c64 = 0x10002;
     if (DAT_BATTLE_BIN__800f5c70 != '\0') {
-      FUN_80044038(0x10002);
+      Call_Play_Sound2(0x10002);
     }
     goto LAB_BATTLE_BIN__800eed70;
   case 0x8a:
@@ -65454,7 +69430,7 @@ LAB_BATTLE_BIN__800eed70:
       if ((DAT_BATTLE_BIN__800b6698 & 1) == 0) {
         DAT_BATTLE_BIN__800f5c64 = 0x10002;
         if (DAT_BATTLE_BIN__800f5c70 != '\0') {
-          FUN_80044038(0x10002);
+          Call_Play_Sound2(0x10002);
         }
         uVar2 = 0x55;
       }
@@ -65472,7 +69448,7 @@ LAB_BATTLE_BIN__800eed70:
         FUN_BATTLE_BIN__800eeaf8(0x8a);
         DAT_BATTLE_BIN__800f5c64 = 0x10002;
         if (DAT_BATTLE_BIN__800f5c70 != '\0') {
-          FUN_80044038(0x10002);
+          Call_Play_Sound2(0x10002);
         }
       }
       else {
@@ -65657,7 +69633,7 @@ void FUN_BATTLE_BIN__800eeecc(char param_1)
     } while (uVar14 < 2);
     PTR_DAT_BATTLE_BIN__800f5c60 = &DAT_80000000;
     uVar14 = (uint)DAT_BATTLE_BIN__800f6860;
-    DAT_BATTLE_BIN__800f6878 = &DAT_BATTLE_BIN__8018f8cc;
+    DAT_BATTLE_BIN__800f6878 = Map_Tile_Data;
     uVar15 = 0;
     if (uVar14 != 0) {
       do {
@@ -65667,8 +69643,8 @@ void FUN_BATTLE_BIN__800eeecc(char param_1)
           do {
             iVar6 = (int)(uVar5 << 0x10) >> 0xd;
             puVar4 = (undefined *)
-                     ((int)(((uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar6] +
-                            (uint)((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar6] >> 5)) * -0xc0000) >>
+                     ((int)(((uint)(&Map_Tile_Data[0].height_whole)[iVar6] +
+                            (uint)((&Map_Tile_Data[0].height_small)[iVar6] >> 5)) * -0xc0000) >>
                      0x10);
             uVar5 = uVar5 + uVar14;
             if ((int)PTR_DAT_BATTLE_BIN__800f5c60 < (int)puVar4) {
@@ -68220,7 +72196,7 @@ void FUN_BATTLE_BIN__800f59f0(void)
 {
   DAT_BATTLE_BIN__800f5c70 = 1;
   if (DAT_BATTLE_BIN__800f5c64 != 0) {
-    FUN_80044038(DAT_BATTLE_BIN__800f5c64);
+    Call_Play_Sound2(DAT_BATTLE_BIN__800f5c64);
   }
   return;
 }
@@ -68230,17 +72206,17 @@ void FUN_BATTLE_BIN__800f59f0(void)
 void FUN_BATTLE_BIN__800f5a64(void)
 
 {
-  if (DAT_BATTLE_BIN__800f5c64 != (MusicDataHeader *)0x0) {
-    FUN_800440f4(DAT_BATTLE_BIN__800f5c64);
-    DAT_BATTLE_BIN__800f5c64 = (MusicDataHeader *)0x0;
+  if (DAT_BATTLE_BIN__800f5c64 != 0) {
+    Stop_Playing_SFX(DAT_BATTLE_BIN__800f5c64);
+    DAT_BATTLE_BIN__800f5c64 = 0;
   }
-  if (DAT_BATTLE_BIN__800f5c68 != (MusicDataHeader *)0x0) {
-    FUN_800440f4(DAT_BATTLE_BIN__800f5c68);
-    DAT_BATTLE_BIN__800f5c68 = (MusicDataHeader *)0x0;
+  if (DAT_BATTLE_BIN__800f5c68 != 0) {
+    Stop_Playing_SFX(DAT_BATTLE_BIN__800f5c68);
+    DAT_BATTLE_BIN__800f5c68 = 0;
   }
-  if (DAT_BATTLE_BIN__800f5c6c != (MusicDataHeader *)0x0) {
-    FUN_800440f4(DAT_BATTLE_BIN__800f5c6c);
-    DAT_BATTLE_BIN__800f5c6c = (MusicDataHeader *)0x0;
+  if (DAT_BATTLE_BIN__800f5c6c != 0) {
+    Stop_Playing_SFX(DAT_BATTLE_BIN__800f5c6c);
+    DAT_BATTLE_BIN__800f5c6c = 0;
   }
   return;
 }
@@ -68728,26 +72704,28 @@ void FUN_BATTLE_BIN__8012da0c(ushort param_1,uint param_2)
 {
   byte bVar1;
   int iVar2;
-  uint UnitID;
-  BattleUnitData *pBVar3;
+  uint uVar3;
+  BattleUnitData *pBVar4;
+  undefined2 in_register_00000012;
+  uint uVar5;
   
   iVar2 = GetScriptVariable(BattleToStart);
   if ((iVar2 == 0) && (iVar2 = GetScriptVariable(ShopAvailability), iVar2 != 0)) {
-    UnitID = FUN_BATTLE_BIN__8008cdd0(param_1);
-    if ((-1 < (int)UnitID) && (param_2 < 500)) {
-      pBVar3 = GetUnitDataPointer(UnitID);
+    uVar3 = FUN_BATTLE_BIN__8008cdd0(param_1);
+    if ((-1 < (int)uVar3) && (param_2 < 500)) {
+      pBVar4 = GetUnitDataPointer(uVar3);
+      uVar3 = (uint)(pBVar4->AllActionUnitData).MapX;
+      uVar5 = (uint)(pBVar4->AllActionUnitData).MapY;
       bVar1 = FUN_BATTLE_BIN__8018401c
-                        (4,(uint)(pBVar3->AllActionUnitData).MapX,
-                         (uint)(pBVar3->AllActionUnitData).MapY,
-                         (uint)(*(ushort *)&(pBVar3->AllActionUnitData).MapY >> 0xf));
-      if (((pBVar3->CurActionTargetData).field_0x14 & 0xc0) == 0) {
+                        (4,uVar3,uVar5,(uint)(*(ushort *)&(pBVar4->AllActionUnitData).MapY >> 0xf));
+      if (((pBVar4->CurActionTargetData).field_0x14 & 0xc0) == 0) {
         if (bVar1 < 2) goto LAB_BATTLE_BIN__8012dadc;
-        DAT_BATTLE_BIN__80173ca8 = &DAT_BATTLE_BIN__8008be04;
+        callOnCurrentThread_Func = (func *)&DAT_BATTLE_BIN__8008be04;
       }
       else {
-        DAT_BATTLE_BIN__80173ca8 = &DAT_BATTLE_BIN__8008be54;
+        callOnCurrentThread_Func = (func *)&DAT_BATTLE_BIN__8008be54;
       }
-      FUN_BATTLE_BIN__8014ceb4();
+      Call_OnCurrentThread(CONCAT22(in_register_00000012,param_1),uVar3,uVar5);
       return;
     }
   }
@@ -68796,13 +72774,29 @@ int FUN_BATTLE_BIN__8012db90(int param_1)
 
 
 
-bool FUN_BATTLE_BIN__8012dc84(void)
+bool Check_If_Tutorial_Event(void)
 
 {
   int iVar1;
   
   iVar1 = GetScriptVariable(CurrentEvent);
   return iVar1 - 0x19aU < 0x10;
+}
+
+
+
+uint FUN_BATTLE_BIN__8012dcac(uint param_1)
+
+{
+  uint uVar1;
+  uint uVar2;
+  
+  uVar1 = FUN_BATTLE_BIN__80133158(param_1);
+  uVar2 = 2000;
+  if ((uVar1 != 2000) && (uVar2 = FUN_BATTLE_BIN__8008cdd0((ushort)uVar1), uVar2 == 0xffffffff)) {
+    uVar2 = 2000;
+  }
+  return uVar2;
 }
 
 
@@ -68833,7 +72827,7 @@ void FUN_BATTLE_BIN__8012df98(uint param_1)
   uint uVar2;
   
   if ((param_1 == 0) ||
-     ((bVar1 = FUN_BATTLE_BIN__8012dc84(), CONCAT31(extraout_var,bVar1) != 0 &&
+     ((bVar1 = Check_If_Tutorial_Event(), CONCAT31(extraout_var,bVar1) != 0 &&
       (uVar2 = GetScriptVariable(TutorialVar2), (uVar2 & 0x5000) != 0)))) {
     DAT_BATTLE_BIN__8016d9a8 = 0;
     DAT_BATTLE_BIN__8016d9ac = 0;
@@ -69222,6 +73216,17 @@ void FUN_BATTLE_BIN__8012ee3c(void)
 
 
 
+void FUN_BATTLE_BIN__80132824(uint param_1)
+
+{
+  FUN_BATTLE_BIN__8014ce78
+            (*(byte **)((int)&DAT_BATTLE_BIN__80173f8c + ((param_1 & 0xf800) >> 9)),param_1 & 0x7ff)
+  ;
+  return;
+}
+
+
+
 void FUN_BATTLE_BIN__801328ac(int param_1,int param_2)
 
 {
@@ -69261,6 +73266,117 @@ void FUN_BATTLE_BIN__80133048(ushort param_1,undefined2 *param_2)
     FUN_BATTLE_BIN__8008c550(pSVar1,param_2);
   }
   return;
+}
+
+
+
+void FUN_BATTLE_BIN__80133150(void)
+
+{
+  return;
+}
+
+
+
+uint FUN_BATTLE_BIN__80133158(uint param_1)
+
+{
+  byte bVar1;
+  JobID JVar2;
+  bool bVar3;
+  BattleUnitData *pBVar4;
+  undefined3 extraout_var;
+  int iVar5;
+  BattleUnitData *pBVar6;
+  uint uVar7;
+  BattleUnitData *unaff_s1;
+  uint local_20;
+  int local_1c;
+  
+  if (((param_1 - 1 < 0x49) && (local_20 = FUN_BATTLE_BIN__80180b2c(param_1), -1 < (int)local_20))
+     && (unaff_s1 = GetUnitDataPointer(local_20), (unaff_s1->AllActionUnitData).ENTDID - 0x78 < 5))
+  {
+    param_1 = (uint)(unaff_s1->AllActionUnitData).ENTDID;
+  }
+  if (param_1 == 0x68) {
+    local_20 = 0;
+    do {
+      pBVar4 = GetUnitDataPointer(local_20);
+      if (((pBVar4->AllActionUnitData).EntdTeamFlags & is_ramza) !=
+          ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) break;
+      local_20 = local_20 + 1;
+    } while ((int)local_20 < 0x10);
+    if (local_20 == 0x10) goto LAB_BATTLE_BIN__80133468;
+    param_1 = (uint)(pBVar4->AllActionUnitData).ENTDID;
+  }
+  else if (param_1 == 0x69) {
+    local_20 = 0;
+    do {
+      bVar3 = FUN_BATTLE_BIN__8008cbb4((ushort)local_20);
+      if (((CONCAT31(extraout_var,bVar3) != 0) &&
+          (param_1 = FUN_BATTLE_BIN__8008cdd0((ushort)local_20), param_1 != 0xffffffff)) &&
+         (unaff_s1 = GetUnitDataPointer(param_1), (unaff_s1->CurActionTargetData).CurrentATUnit != 0
+         )) break;
+      local_20 = local_20 + 1;
+    } while ((int)local_20 < 0x15);
+    if (local_20 == 0x15) {
+      local_20 = 0xffffffff;
+    }
+    else {
+      bVar1 = (unaff_s1->AllActionUnitData).ENTDID;
+      param_1 = (uint)bVar1;
+      FUN_BATTLE_BIN__80180c90(bVar1,(int *)&local_20);
+    }
+    if ((int)local_20 < 0) {
+      param_1 = 1;
+      do {
+        pBVar4 = FUN_BATTLE_BIN__80180c90((byte)param_1,(int *)&local_20);
+        if (-1 < (int)local_20) break;
+        param_1 = param_1 + 1;
+      } while ((int)param_1 < 3);
+      if ((local_20 == 3) || (((pBVar4->AllActionUnitData).CurrentStatuses.Status1 & Jump) != empty)
+         ) goto LAB_BATTLE_BIN__80133468;
+    }
+  }
+  iVar5 = GetScriptVariable(CurrentEvent);
+  if (iVar5 == 0x194) {
+    local_20 = 0;
+    do {
+      pBVar4 = GetUnitDataPointer(local_20);
+      JVar2 = (pBVar4->AllActionUnitData).BaseClass;
+      if ((JVar2 != None) && (JVar2 < SquireD)) break;
+      local_20 = local_20 + 1;
+    } while ((int)local_20 < 0x15);
+    if (local_20 == 0x15) {
+      return 0xffffffff;
+    }
+    param_1 = (uint)(pBVar4->AllActionUnitData).ENTDID;
+  }
+  if (param_1 - 100 < 4) {
+    if (*(ushort *)(&DAT_BATTLE_BIN__80165f20 + param_1 * 2) != 1000) {
+      return (uint)*(ushort *)(&DAT_BATTLE_BIN__80165f20 + param_1 * 2);
+    }
+  }
+  else {
+    pBVar4 = FUN_BATTLE_BIN__80180c90((byte)param_1,&local_1c);
+    if (((-1 < local_1c) || (local_1c == -2)) ||
+       (iVar5 = GetScriptVariable(CurrentEvent), iVar5 == 0x194)) {
+      local_20 = 0;
+      do {
+        pBVar6 = GetUnitDataPointer(local_20);
+        if (pBVar6 == pBVar4) break;
+        local_20 = local_20 + 1;
+      } while ((int)local_20 < 0x15);
+      uVar7 = GetMiscIDByMiscID(local_20);
+      if ((uVar7 != 0xffffffff) &&
+         (((pBVar4->AllActionUnitData).CurrentStatuses.Status2 & Treasure) == empty)) {
+        return uVar7;
+      }
+    }
+  }
+LAB_BATTLE_BIN__80133468:
+  FUN_BATTLE_BIN__80133150();
+  return 2000;
 }
 
 
@@ -69681,6 +73797,44 @@ void FUN_BATTLE_BIN__8013ba68(uint *param_1,int param_2)
 
 
 
+void Open_EVTCHR(void)
+
+{
+  int EVTCHR_block;
+  int EVTCHR_Slot;
+  undefined *_evtchr_addr;
+  int iVar1;
+  int evtchr_LBA;
+  undefined4 filesize;
+  undefined *_evtchr_addr_arg;
+  
+  EVTCHR_block = Thread_getParam1();
+  EVTCHR_Slot = Thread_getParam2();
+  Set_Thread_Task_ID(0x34);
+  _evtchr_addr = BIN_Malloc_FFT(0x7800);
+  do {
+    Thread_doNext();
+    callOnCurrentThread_Func = Call_CalcFileHead_NNL;
+    evtchr_LBA = EVTCHR_Slot * 0xf + 0x1d4c;
+    filesize = 0x7800;
+    _evtchr_addr_arg = _evtchr_addr;
+    iVar1 = Call_OnCurrentThread(evtchr_LBA,0x7800,_evtchr_addr);
+  } while (iVar1 != 0);
+  do {
+    Thread_doNext();
+    callOnCurrentThread_Func = Check_File_Still_Loading;
+    EVTCHR_Slot = Call_OnCurrentThread(evtchr_LBA,filesize,_evtchr_addr_arg);
+  } while (EVTCHR_Slot != 0);
+  Current_EVTCHR_block = EVTCHR_block;
+  Current_EVTCHR_addr = _evtchr_addr;
+  Thread_doNext();
+  BIN_Free_FFT((int)_evtchr_addr);
+  Thread_stop();
+  return;
+}
+
+
+
 void FUN_BATTLE_BIN__8013ca70(undefined *param_1)
 
 {
@@ -69705,11 +73859,14 @@ void FUN_BATTLE_BIN__8013cafc(void)
 
 {
   int iVar1;
+  undefined4 in_a0;
+  undefined4 in_a1;
+  undefined4 in_a2;
   
   if ((DAT_BATTLE_BIN__80166008 == 0) || (DAT_BATTLE_BIN__80169038 != 0)) {
     if ((DAT_BATTLE_BIN__80166008 != 0) && (DAT_BATTLE_BIN__80169038 != 0)) {
-      DAT_BATTLE_BIN__80173ca8 = Check_File_Still_Loading;
-      iVar1 = FUN_BATTLE_BIN__8014ceb4();
+      callOnCurrentThread_Func = Check_File_Still_Loading;
+      iVar1 = Call_OnCurrentThread(in_a0,in_a1,in_a2);
       if (iVar1 == 0) {
         DAT_BATTLE_BIN__80169038 = 0;
         DAT_BATTLE_BIN__80166008 = 0;
@@ -69717,8 +73874,11 @@ void FUN_BATTLE_BIN__8013cafc(void)
     }
   }
   else {
-    DAT_BATTLE_BIN__80173ca8 = Call_CalcFileHead_NNL;
-    iVar1 = FUN_BATTLE_BIN__8014ceb4();
+    callOnCurrentThread_Func = Call_CalcFileHead_NNL;
+    iVar1 = Call_OnCurrentThread
+                      (*(undefined4 *)(&DAT_BATTLE_BIN__80168fb8 + DAT_BATTLE_BIN__80166008 * 4),
+                       *(undefined4 *)(&DAT_BATTLE_BIN__80168ff8 + DAT_BATTLE_BIN__80166008 * 4),
+                       DAT_BATTLE_BIN__8016601c);
     if (iVar1 == 0) {
       DAT_BATTLE_BIN__80169038 = 1;
     }
@@ -69732,11 +73892,14 @@ void FUN_BATTLE_BIN__8013cbdc(void)
 
 {
   int iVar1;
+  undefined4 in_a0;
+  undefined4 in_a1;
+  undefined4 in_a2;
   
   if ((DAT_BATTLE_BIN__80166004 == 0) || (DAT_BATTLE_BIN__8016903c != 0)) {
     if ((DAT_BATTLE_BIN__80166004 != 0) && (DAT_BATTLE_BIN__8016903c != 0)) {
-      DAT_BATTLE_BIN__80173ca8 = Check_File_Still_Loading;
-      iVar1 = FUN_BATTLE_BIN__8014ceb4();
+      callOnCurrentThread_Func = Check_File_Still_Loading;
+      iVar1 = Call_OnCurrentThread(in_a0,in_a1,in_a2);
       if (iVar1 == 0) {
         DAT_BATTLE_BIN__8016903c = 0;
         DAT_BATTLE_BIN__80166004 = 0;
@@ -69744,8 +73907,12 @@ void FUN_BATTLE_BIN__8013cbdc(void)
     }
   }
   else {
-    DAT_BATTLE_BIN__80173ca8 = Call_CalcFileHead_NNL;
-    iVar1 = FUN_BATTLE_BIN__8014ceb4();
+    callOnCurrentThread_Func = Call_CalcFileHead_NNL;
+    iVar1 = DAT_BATTLE_BIN__80166004 * 4;
+    iVar1 = Call_OnCurrentThread
+                      (*(undefined4 *)(&DAT_BATTLE_BIN__80168ef8 + iVar1),
+                       *(undefined4 *)(&DAT_BATTLE_BIN__80168f38 + iVar1),
+                       exe_dest_ptr_arr[2] + *(int *)(&DAT_BATTLE_BIN__80168f78 + iVar1));
     if (iVar1 == 0) {
       DAT_BATTLE_BIN__8016903c = 1;
     }
@@ -69863,11 +74030,15 @@ void FUN_BATTLE_BIN__8013d230(void)
 
 {
   int iVar1;
+  undefined4 uVar2;
+  undefined4 in_a1;
+  undefined4 in_a2;
   
   do {
+    uVar2 = 0;
     VSync(0);
-    DAT_BATTLE_BIN__80173ca8 = FUN_80043708;
-    iVar1 = FUN_BATTLE_BIN__8014ceb4();
+    callOnCurrentThread_Func = FUN_80043708;
+    iVar1 = Call_OnCurrentThread(uVar2,in_a1,in_a2);
   } while (iVar1 != 0);
   return;
 }
@@ -69877,31 +74048,33 @@ void FUN_BATTLE_BIN__8013d230(void)
 void FUN_BATTLE_BIN__8013d278(int param_1,int param_2)
 
 {
+  undefined4 in_a2;
+  
   Unload_ScenarioSongs_and_SFX();
   if (param_1 != 0) {
-    DAT_BATTLE_BIN__80173ca8 = OpenAndPlayMusic;
-    FUN_BATTLE_BIN__8014ceb4();
+    callOnCurrentThread_Func = OpenAndPlayMusic;
+    Call_OnCurrentThread(param_1,1,in_a2);
     FUN_BATTLE_BIN__8013d230();
   }
   if (param_2 != 0) {
-    DAT_BATTLE_BIN__80173ca8 = OpenAndPlayMusic;
-    FUN_BATTLE_BIN__8014ceb4();
+    callOnCurrentThread_Func = OpenAndPlayMusic;
+    Call_OnCurrentThread(param_2,2,in_a2);
     FUN_BATTLE_BIN__8013d230();
   }
   if (param_1 != 0) {
-    DAT_BATTLE_BIN__80173ca8 = FUN_80043a90;
-    FUN_BATTLE_BIN__8014ceb4();
+    callOnCurrentThread_Func = FUN_80043a90;
+    Call_OnCurrentThread(1,0x7f,0);
   }
   return;
 }
 
 
 
-bool FUN_BATTLE_BIN__8013d320(void)
+bool Open_ATTACK_OUT_Deployment(void)
 
 {
-  bool bVar1;
-  int iVar2;
+  bool is_event;
+  uint conditional;
   undefined3 extraout_var;
   
   DAT_BATTLE_BIN__80166044 = 0;
@@ -69912,18 +74085,18 @@ bool FUN_BATTLE_BIN__8013d320(void)
     DAT_BATTLE_BIN__80165fda = 3;
   }
   else {
-    DAT_BATTLE_BIN__80173ca8 = Get_DAT_BIN_as_File;
-    FUN_BATTLE_BIN__8014ceb4();
+    callOnCurrentThread_Func = Get_DAT_BIN_as_File;
+    Call_OnCurrentThread(0x990,0x20000,exe_dest_ptr_arr[2]);
   }
-  iVar2 = FUN_801c34b4();
+  conditional = Load_Scenario_Conditionals();
   if (DAT_BATTLE_BIN__80165fda != 3) {
-    FUN_801c7fe4();
-    FUN_801c8004();
+    Call_Prepare_Formation_Sprites();
+    Call_Portrait_Loading_Routine();
   }
   DAT_BATTLE_BIN__80166060 = 0;
   DAT_BATTLE_BIN__80166064 = 0;
-  bVar1 = FUN_BATTLE_BIN__8012dc84();
-  if (CONCAT31(extraout_var,bVar1) == 0) {
+  is_event = Check_If_Tutorial_Event();
+  if (CONCAT31(extraout_var,is_event) == 0) {
     DAT_BATTLE_BIN__8016603c = 0;
   }
   else {
@@ -69931,19 +74104,19 @@ bool FUN_BATTLE_BIN__8013d320(void)
     DAT_BATTLE_BIN__8016d99c = DAT_800473ac;
     DAT_800473ac = DAT_800473ac & 0xe6667e38 | 0x80040;
   }
-  FUN_801c3078();
-  if (iVar2 == 0) {
+  Determine_Fieldable_Units();
+  if (conditional == 0) {
     DAT_BATTLE_BIN__80165fd4 = 0;
     DAT_BATTLE_BIN__80165fd6 = 0;
     FUN_BATTLE_BIN__8013d278(0x2a,0);
-    FUN_801c9488();
-    FUN_801c9ec0();
+    Save_deployment_textdata();
+    func_0x801c9ec0();
     Thread_initialize(6,(func *)&DAT_801c3f44);
   }
   else {
     Thread_initialize(6,(func *)&DAT_BATTLE_BIN__8013d1f8);
   }
-  return iVar2 != 0;
+  return conditional != 0;
 }
 
 
@@ -70718,19 +74891,22 @@ void FUN_BATTLE_BIN__801419b8(int param_1,uint param_2,uint param_3,uint param_4
 uint FUN_BATTLE_BIN__80141a8c(uint param_1)
 
 {
-  uint uVar1;
+  BattleUnitData *pBVar1;
+  uint uVar2;
+  undefined4 in_a1;
+  undefined4 in_a2;
   
-  GetUnitDataPointer(param_1);
-  DAT_BATTLE_BIN__80173ca8 = &DAT_BATTLE_BIN__80180530;
-  DAT_BATTLE_BIN__80174044 = (int *)FUN_BATTLE_BIN__8014ceb4();
+  pBVar1 = GetUnitDataPointer(param_1);
+  callOnCurrentThread_Func = (func *)&DAT_BATTLE_BIN__80180530;
+  DAT_BATTLE_BIN__80174044 = (int *)Call_OnCurrentThread(pBVar1,in_a1,in_a2);
   if (*DAT_BATTLE_BIN__80174044 + 1U < 2) {
     FUN_800449f8();
   }
-  uVar1 = 0xffffffff;
+  uVar2 = 0xffffffff;
   if (*DAT_BATTLE_BIN__80174044 == 4) {
-    uVar1 = (uint)*(byte *)((int)DAT_BATTLE_BIN__80174044 + 0x52);
+    uVar2 = (uint)*(byte *)((int)DAT_BATTLE_BIN__80174044 + 0x52);
   }
-  return uVar1;
+  return uVar2;
 }
 
 
@@ -71168,7 +75344,7 @@ undefined4 FUN_BATTLE_BIN__801425b0(void)
     if ((iVar4 != 0) && (iVar2 == 0)) {
       return 0;
     }
-    psVar3 = (short *)(&DAT_80049a18 + (iVar2 - (iVar1 >> 0x1f) >> 1) * 2);
+    psVar3 = &DAT_80049a18 + (iVar2 - (iVar1 >> 0x1f) >> 1);
     do {
       iVar1 = FUN_BATTLE_BIN__80142694
                         ((int)*psVar3,(int)psVar3[1],(int)psVar3[2],(int)psVar3[3],(int)psVar3[4]);
@@ -71423,7 +75599,7 @@ short FUN_BATTLE_BIN__80142d58(uint *param_1,uint param_2)
     local_18.x = 0;
     local_18.h = 0xf0;
     local_18.y = ((ushort)ScreenPolarity & 1) * 0xf0;
-    LoadImage(&local_18,(u_long *)PTR_DAT_80010010);
+    LoadImage(&local_18,(u_long *)exe_dest_ptr_arr[4]);
   }
   DAT_BATTLE_BIN__80173f44 = param_1;
   FUN_BATTLE_BIN__8013ba68
@@ -71502,7 +75678,7 @@ short FUN_BATTLE_BIN__80142d58(uint *param_1,uint param_2)
   DAT_BATTLE_BIN__80165fb8 = 0xffff;
   DAT_BATTLE_BIN__80165fc8 = 0xffff;
   DAT_BATTLE_BIN__80165fca = 0xffff;
-  DAT_BATTLE_BIN__80173c9c = 0xffffffff;
+  Current_EVTCHR_block = 0xffffffff;
   DAT_BATTLE_BIN__80173f4c = 0xffffffff;
   DAT_BATTLE_BIN__80173f50 = 0xffffffff;
   DAT_BATTLE_BIN__80173ca0 = 0xffffffff;
@@ -71533,7 +75709,7 @@ short FUN_BATTLE_BIN__80142d58(uint *param_1,uint param_2)
                (void *)((int)DAT_BATTLE_BIN__8016d9c4 + 0xfc));
     }
   }
-  bVar2 = FUN_BATTLE_BIN__8012dc84();
+  bVar2 = Check_If_Tutorial_Event();
   iVar8 = 1;
   if (((CONCAT31(extraout_var,bVar2) == 0) && (DAT_BATTLE_BIN__801697d0 != 0x100)) &&
      (DAT_BATTLE_BIN__801697d0 != 0)) {
@@ -71715,8 +75891,8 @@ LAB_BATTLE_BIN__80143644:
   if (DAT_BATTLE_BIN__8016604e != 0) {
     DAT_BATTLE_BIN__8016604e = FUN_BATTLE_BIN__8008d104();
   }
-  if (-1 < DAT_BATTLE_BIN__80173c9c) {
-    FUN_BATTLE_BIN__8008d2a0(DAT_BATTLE_BIN__80173c9c,DAT_BATTLE_BIN__8017400c);
+  if (-1 < Current_EVTCHR_block) {
+    FUN_BATTLE_BIN__8008d2a0(Current_EVTCHR_block,Current_EVTCHR_addr);
   }
   if (-1 < DAT_BATTLE_BIN__80173f4c) {
     FUN_BATTLE_BIN__8008d5c8(DAT_BATTLE_BIN__80173f4c);
@@ -71814,6 +75990,576 @@ void FUN_BATTLE_BIN__80143a9c(void)
 
 
 
+int FUN_BATTLE_BIN__80146078(short *param_1)
+
+{
+  return (int)*param_1;
+}
+
+
+
+undefined4 FUN_BATTLE_BIN__80147928(ushort *param_1,int *param_2)
+
+{
+  int iVar1;
+  uint uVar2;
+  
+  uVar2 = (uint)*param_1;
+  if (uVar2 != 0) {
+    if (uVar2 < 0x100) {
+      uVar2 = FUN_BATTLE_BIN__80133158(uVar2);
+      *param_1 = (ushort)uVar2;
+      *param_2 = 0;
+      if (*param_1 != 2000) {
+        return 1;
+      }
+      return 0;
+    }
+    iVar1 = uVar2 - 0xfe;
+    if (uVar2 != 0) goto LAB_BATTLE_BIN__8014798c;
+  }
+  iVar1 = 1;
+LAB_BATTLE_BIN__8014798c:
+  *param_2 = iVar1;
+  return 1;
+}
+
+
+
+// WARNING: Type propagation algorithm not settling
+
+bool FUN_BATTLE_BIN__801479ac(ushort *param_1,ushort *param_2,int *param_3)
+
+{
+  bool bVar1;
+  Status1 SVar2;
+  undefined3 extraout_var;
+  undefined3 extraout_var_00;
+  int iVar3;
+  BattleUnitData *unaff_s1;
+  uint unaff_s2;
+  
+  if (*param_3 != 0) {
+    *param_1 = *param_2;
+    bVar1 = FUN_BATTLE_BIN__8008cbb4(*param_1);
+    if ((CONCAT31(extraout_var,bVar1) != 0) &&
+       (unaff_s2 = FUN_BATTLE_BIN__8008cdd0(*param_1), unaff_s2 != 0xffffffff)) {
+      unaff_s1 = GetUnitDataPointer(unaff_s2);
+    }
+    if (*param_3 == 1) {
+      bVar1 = FUN_BATTLE_BIN__8008cbb4(*param_1);
+      return bVar1;
+    }
+    bVar1 = FUN_BATTLE_BIN__8008cbb4(*param_1);
+    if (CONCAT31(extraout_var_00,bVar1) == 0) {
+      return false;
+    }
+    iVar3 = *param_3;
+    if (iVar3 == 2) {
+      if (unaff_s2 != 0xffffffff) {
+        return ((unaff_s1->AllActionUnitData).EntdTeamFlags & light_blue) ==
+               ~(is_ramza|immortal|player_control|light_blue|random_present|always_present);
+      }
+    }
+    else {
+      if (iVar3 != 3) {
+        if (iVar3 == 4) {
+          if (unaff_s2 == 0xffffffff) {
+            return false;
+          }
+          return ((unaff_s1->AllActionUnitData).EntdTeamFlags & light_blue) !=
+                 ~(is_ramza|immortal|player_control|light_blue|random_present|always_present);
+        }
+        if (iVar3 != 5) {
+          return true;
+        }
+        iVar3 = 0;
+        if (unaff_s2 == 0xffffffff) {
+          return false;
+        }
+        do {
+          if (iVar3 == 0) {
+            SVar2 = status_check_table[8].Status1 &
+                    (unaff_s1->AllActionUnitData).CurrentStatuses.Status1 &
+                    (Performing|Defending|Jump|Charging|Dead|Crystal|NONE);
+          }
+          else {
+            SVar2 = (unaff_s1->AllActionUnitData).JobLevels[iVar3 + -0x7a] &
+                    (&status_check_table[8].Status1)[iVar3];
+          }
+        } while ((SVar2 == empty) && (iVar3 = iVar3 + 1, iVar3 < 5));
+        if (((unaff_s1->AllActionUnitData).EntdTeamFlags & light_blue) ==
+            ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) {
+          return false;
+        }
+        return iVar3 == 5;
+      }
+      iVar3 = 0;
+      if (unaff_s2 != 0xffffffff) {
+        do {
+          if (((unaff_s1->AllActionUnitData).JobLevels[iVar3 + -0x7a] &
+              (&status_check_table[8].Status1)[iVar3]) != empty) break;
+          iVar3 = iVar3 + 1;
+        } while (iVar3 < 5);
+        if (((unaff_s1->AllActionUnitData).EntdTeamFlags & light_blue) !=
+            ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) {
+          return false;
+        }
+        return iVar3 == 5;
+      }
+    }
+  }
+  return true;
+}
+
+
+
+undefined4 FUN_BATTLE_BIN__80148580(uint param_1,undefined4 param_2,undefined4 param_3)
+
+{
+  JobID JVar1;
+  Status1 SVar2;
+  undefined4 uVar3;
+  BattleUnitData *pBVar4;
+  int iVar5;
+  BattleUnitData *pBVar6;
+  Status1 SVar7;
+  int iVar8;
+  int iVar9;
+  
+  uVar3 = 0;
+  if (*(char *)(DAT_BATTLE_BIN__80173c78 + param_1 + 0x39c) == '\0') {
+    pBVar4 = GetUnitDataPointer(param_1);
+    iVar8 = param_1 * 5;
+    pBVar6 = pBVar4;
+    iVar5 = 0;
+    do {
+      *(Status1 *)(iVar8 + DAT_BATTLE_BIN__80173c78 + iVar5) =
+           (pBVar6->AllActionUnitData).InnateStatuses.Status1;
+      *(Status1 *)(iVar8 + DAT_BATTLE_BIN__80173c78 + 0xd2 + iVar5) =
+           (pBVar6->CurActionUnitData).FinalInflictStatus.Status1;
+      iVar9 = iVar5 + 1;
+      *(Status1 *)(iVar8 + DAT_BATTLE_BIN__80173c78 + 0x69 + iVar5) =
+           (pBVar6->AllActionUnitData).CurrentStatuses.Status1;
+      pBVar6 = (BattleUnitData *)(&(pBVar4->AllActionUnitData).UnitID + iVar5);
+      iVar5 = iVar9;
+    } while (iVar9 < 5);
+    pBVar6 = pBVar4;
+    iVar5 = 0;
+    do {
+      iVar9 = iVar5 + 1;
+      *(byte *)(param_1 * 0x10 + DAT_BATTLE_BIN__80173c78 + 0x20d + iVar5) =
+           (pBVar6->AllActionUnitData).PoisonCT;
+      pBVar6 = (BattleUnitData *)(&(pBVar4->AllActionUnitData).UnitID + iVar5);
+      iVar5 = iVar9;
+    } while (iVar9 < 0x10);
+    iVar9 = 0;
+    *(byte *)(DAT_BATTLE_BIN__80173c78 + param_1 + 0x35d) = (pBVar4->AllActionUnitData).CurAbCT;
+    *(byte *)(DAT_BATTLE_BIN__80173c78 + param_1 + 0x372) = (pBVar4->AllActionUnitData).DeathCounter
+    ;
+    iVar5 = DAT_BATTLE_BIN__80173c78;
+    *(ushort *)(param_1 * 2 + DAT_BATTLE_BIN__80173c78 + 0x3c6) = (pBVar4->AllActionUnitData).HP;
+    *(ENTD_team_conflict *)(iVar5 + param_1 + 0x387) = (pBVar4->AllActionUnitData).EntdTeamFlags;
+    pBVar6 = pBVar4;
+    do {
+      iVar5 = GetScriptVariable(BattleToStart);
+      if (iVar5 == 0) {
+        SVar7 = (pBVar6->AllActionUnitData).CurrentStatuses.Status1;
+        SVar2 = (&DAT_BATTLE_BIN__80169758)[iVar9];
+      }
+      else if ((((((byte)((pBVar4->AllActionUnitData).PrimarySkillset + 50) < 0x30) ||
+                 (JVar1 = (pBVar4->AllActionUnitData).BaseClass, JVar1 == HolyAngel)) ||
+                (JVar1 == ArchAngel)) ||
+               ((JVar1 = (pBVar4->AllActionUnitData).JobID, JVar1 == KnightMZ || (JVar1 == ArcherMZ)
+                ))) || ((JVar1 == WizardMZ ||
+                        ((JVar1 == TimeMageFZ || ((pBVar4->AllActionUnitData).JobID - 0x46 < 2))))))
+      {
+        SVar7 = (pBVar6->AllActionUnitData).CurrentStatuses.Status1;
+        SVar2 = (&DAT_BATTLE_BIN__80169768)[iVar9];
+      }
+      else {
+        SVar7 = (pBVar6->AllActionUnitData).CurrentStatuses.Status1;
+        SVar2 = (&DAT_BATTLE_BIN__80169760)[iVar9];
+      }
+      SVar7 = SVar7 & SVar2;
+      iVar5 = param_1 * 5 + DAT_BATTLE_BIN__80173c78;
+      (pBVar6->CurActionUnitData).StatusRemoval.Status1 = SVar7;
+      *(Status1 *)(iVar5 + 0x1a4 + iVar9) = SVar7;
+      *(Status1 *)(iVar5 + 0x13b + iVar9) = SVar7;
+      iVar9 = iVar9 + 1;
+      pBVar6 = (BattleUnitData *)&(pBVar6->AllActionUnitData).UnitID;
+    } while (iVar9 < 5);
+    if ((*(byte *)(DAT_BATTLE_BIN__80173c78 + param_1 * 5 + 0x13b) & 4) != 0) {
+      *(ushort *)(DAT_BATTLE_BIN__80173c78 + 0x3f0) =
+           *(ushort *)(DAT_BATTLE_BIN__80173c78 + 0x3f0) | 1;
+    }
+    if ((*(byte *)(DAT_BATTLE_BIN__80173c78 + param_1 * 5 + 0x13d) & 0x40) != 0) {
+      *(ushort *)(DAT_BATTLE_BIN__80173c78 + 0x3f0) =
+           *(ushort *)(DAT_BATTLE_BIN__80173c78 + 0x3f0) | 2;
+    }
+    if (((pBVar4->CurActionUnitData).StatusRemoval.Status5 & Charm) != empty) {
+      (pBVar4->AllActionUnitData).EntdTeamFlags = (pBVar4->CurActionUnitData).ModifiedENTDTeam;
+    }
+    callOnCurrentThread_Func = (func *)&DAT_BATTLE_BIN__8018ec44;
+    Call_OnCurrentThread(pBVar4,iVar8,param_3);
+    uVar3 = 1;
+    *(undefined *)(DAT_BATTLE_BIN__80173c78 + param_1 + 0x39c) = 1;
+  }
+  return uVar3;
+}
+
+
+
+void FUN_BATTLE_BIN__801488a8(BattleUnitData *param_1,undefined4 param_2)
+
+{
+  byte bVar1;
+  Status1 SVar2;
+  UniqueEffect2 UVar3;
+  ushort uVar4;
+  BattleUnitData *pBVar5;
+  int iVar6;
+  Status1 *pSVar7;
+  int iVar8;
+  byte *pbVar9;
+  BattleUnitData *pBVar10;
+  int iVar11;
+  uint uVar12;
+  
+  uVar4 = FUN_BATTLE_BIN__80142b5c();
+  if (((uVar4 & 0x8000) == 0) &&
+     ((&param_1[2].AllActionUnitData.Accessory)[DAT_BATTLE_BIN__80173c78] == Knife)) {
+    pBVar5 = GetUnitDataPointer((uint)param_1);
+    iVar11 = (int)param_1 * 5;
+    pBVar10 = pBVar5;
+    iVar8 = 0;
+    do {
+      *(Status1 *)(iVar11 + DAT_BATTLE_BIN__80173c78 + 0x1a4 + iVar8) =
+           (pBVar10->AllActionUnitData).CurrentStatuses.Status1 ^
+           *(Status1 *)(iVar11 + DAT_BATTLE_BIN__80173c78 + iVar8 + 0x69);
+      iVar6 = iVar11 + DAT_BATTLE_BIN__80173c78;
+      pbVar9 = (byte *)(iVar6 + 0x13b + iVar8);
+      *pbVar9 = *pbVar9 | *(byte *)(iVar6 + iVar8 + 0x1a4) & *(byte *)(iVar6 + iVar8 + 0x69);
+      pSVar7 = (Status1 *)(iVar11 + DAT_BATTLE_BIN__80173c78 + 0x1a4 + iVar8);
+      iVar6 = iVar8 + 1;
+      *pSVar7 = *pSVar7 & (pBVar10->AllActionUnitData).CurrentStatuses.Status1;
+      pBVar10 = (BattleUnitData *)(&(pBVar5->AllActionUnitData).UnitID + iVar8);
+      iVar8 = iVar6;
+    } while (iVar6 < 5);
+    iVar11 = (int)param_1 * 5;
+    iVar8 = 0;
+    do {
+      (&(pBVar5->AllActionUnitData).InnateStatuses.Status1)[iVar8] =
+           *(Status1 *)(iVar11 + DAT_BATTLE_BIN__80173c78 + iVar8);
+      (&(pBVar5->CurActionUnitData).FinalInflictStatus.Status1)[iVar8] =
+           *(Status1 *)(iVar11 + DAT_BATTLE_BIN__80173c78 + iVar8 + 0xd2);
+      iVar6 = iVar8 + 1;
+      (pBVar5->AllActionUnitData).JobLevels[iVar8 + -0x7a] =
+           *(byte *)(iVar11 + DAT_BATTLE_BIN__80173c78 + iVar8 + 0x69);
+      iVar8 = iVar6;
+    } while (iVar6 < 5);
+    iVar11 = 0;
+    do {
+      iVar6 = iVar11 + 1;
+      (pBVar5->AllActionUnitData).JobLevels[iVar11 + -0x75] =
+           *(byte *)((int)param_1 * 0x10 + DAT_BATTLE_BIN__80173c78 + iVar11 + 0x20d);
+      iVar8 = DAT_BATTLE_BIN__80173c78;
+      iVar11 = iVar6;
+    } while (iVar6 < 0x10);
+    iVar11 = 0;
+    (pBVar5->AllActionUnitData).HP =
+         *(ushort *)((int)param_1 * 2 + DAT_BATTLE_BIN__80173c78 + 0x3c6);
+    iVar6 = 1;
+    (pBVar5->AllActionUnitData).EntdTeamFlags = (&param_1[2].AllActionUnitData.DeathCounter)[iVar8];
+    (pBVar5->AllActionUnitData).DeathCounter =
+         *(byte *)((int)&param_1[1].CurActionUnitData.ReactionVar + DAT_BATTLE_BIN__80173c78);
+    callOnCurrentThread_Func = FUN_BATTLE_BIN__80068e80;
+    do {
+      iVar8 = iVar11;
+      if (iVar11 < 0) {
+        iVar8 = iVar11 + 7;
+      }
+      iVar8 = iVar8 >> 3;
+      uVar12 = 0x80 >> (iVar11 + iVar8 * -8 & 0x1fU);
+      if ((*(byte *)((int)param_1 * 5 + DAT_BATTLE_BIN__80173c78 + iVar8 + 0x1a4) & uVar12) != 0) {
+        pbVar9 = (byte *)0x0;
+        pBVar10 = param_1;
+        Call_OnCurrentThread(iVar6,0,param_1);
+      }
+      iVar11 = iVar11 + 1;
+      if ((*(byte *)((int)param_1 * 5 + DAT_BATTLE_BIN__80173c78 + iVar8 + 0x13b) & uVar12) != 0) {
+        pbVar9 = (byte *)0x1;
+        pBVar10 = param_1;
+        Call_OnCurrentThread(iVar6,1,param_1);
+      }
+      iVar6 = iVar6 + 1;
+    } while (iVar11 < 0x28);
+    if ((*(byte *)(DAT_BATTLE_BIN__80173c78 + (int)param_1 * 5 + 0x13b) & 4) != 0) {
+      *(ushort *)(DAT_BATTLE_BIN__80173c78 + 0x3f0) =
+           *(ushort *)(DAT_BATTLE_BIN__80173c78 + 0x3f0) | 1;
+    }
+    if ((*(byte *)(DAT_BATTLE_BIN__80173c78 + (int)param_1 * 5 + 0x13d) & 0x40) != 0) {
+      *(ushort *)(DAT_BATTLE_BIN__80173c78 + 0x3f0) =
+           *(ushort *)(DAT_BATTLE_BIN__80173c78 + 0x3f0) | 2;
+    }
+    bVar1 = (&param_1[2].AllActionUnitData.OriginalMA)[DAT_BATTLE_BIN__80173c78];
+    if (bVar1 != 0) {
+      if (bVar1 == 3) {
+        (pBVar5->CurActionUnitData).StatusInfliction.Status4 =
+             (pBVar5->CurActionUnitData).StatusInfliction.Status4 | Poison;
+      }
+      else if (bVar1 == 2) {
+        (pBVar5->CurActionUnitData).StatusInfliction.Status1 =
+             (pBVar5->CurActionUnitData).StatusInfliction.Status1 | Crystal;
+      }
+      else if (bVar1 == 1) {
+        (pBVar5->AllActionUnitData).HP = 1;
+        SVar2 = (pBVar5->CurActionUnitData).StatusRemoval.Status1;
+        (pBVar5->CurActionUnitData).StatusInfliction.Status3 =
+             (pBVar5->CurActionUnitData).StatusInfliction.Status3 | Critical;
+        (pBVar5->CurActionUnitData).StatusRemoval.Status1 = SVar2 | Dead;
+      }
+      callOnCurrentThread_Func = FUN_BATTLE_BIN__8018e07c;
+      pbVar9 = (byte *)0x1;
+      Call_OnCurrentThread(param_1,1,pBVar10);
+    }
+    UVar3 = Minus_Level|Secondary_Proc|Elem_Absorb|Elem_Weak|Katana_Broken|UNUSED|Knockback|
+            Hit_Golem;
+    if (((pBVar5->AllActionUnitData).CurrentStatuses.Status1 & (Performing|Jump|Charging)) != empty)
+    {
+      UVar3 = (&param_1[1].CurActionUnitData.UniqueEffect2)[DAT_BATTLE_BIN__80173c78];
+    }
+    (pBVar5->AllActionUnitData).CurAbCT = UVar3;
+    (&param_1[2].AllActionUnitData.Accessory)[DAT_BATTLE_BIN__80173c78] = MythrilKnife;
+    callOnCurrentThread_Func = (func *)&DAT_BATTLE_BIN__8008bde4;
+    Call_OnCurrentThread(param_2,pbVar9,pBVar10);
+  }
+  return;
+}
+
+
+
+void FUN_BATTLE_BIN__80148cd8(ushort param_1,short param_2)
+
+{
+  byte bVar1;
+  bool bVar2;
+  int iVar3;
+  undefined3 extraout_var;
+  BattleUnitData *UnitID;
+  BattleUnitData *pBVar4;
+  int *piVar5;
+  int *piVar6;
+  ushort local_20 [2];
+  int local_1c;
+  int local_18;
+  int local_14;
+  
+  DAT_BATTLE_BIN__80173c78 = DAT_BATTLE_BIN__80174048 + 0x5f0;
+  if ((DAT_BATTLE_BIN__80165ff6 == 0) &&
+     (local_20[0] = param_1, iVar3 = FUN_BATTLE_BIN__80147928(local_20,&local_1c), iVar3 != 0)) {
+    local_18 = 0;
+    *(undefined2 *)(DAT_BATTLE_BIN__80173c78 + 0x3f0) = 0;
+    do {
+      pBVar4 = (BattleUnitData *)local_20;
+      piVar5 = &local_18;
+      piVar6 = &local_1c;
+      bVar2 = FUN_BATTLE_BIN__801479ac((ushort *)pBVar4,(ushort *)piVar5,piVar6);
+      if (CONCAT31(extraout_var,bVar2) != 0) {
+        pBVar4 = (BattleUnitData *)(uint)local_20[0];
+        UnitID = (BattleUnitData *)FUN_BATTLE_BIN__8008cdd0(local_20[0]);
+        if (UnitID != (BattleUnitData *)0xffffffff) {
+          pBVar4 = GetUnitDataPointer((uint)UnitID);
+          bVar1 = (pBVar4->AllActionUnitData).ENTDID;
+          pBVar4 = (BattleUnitData *)(uint)bVar1;
+          piVar5 = &local_14;
+          FUN_BATTLE_BIN__80180c90(bVar1,piVar5);
+          if (-1 < local_14) {
+            if (param_2 == 0) {
+              iVar3 = FUN_BATTLE_BIN__80148580((uint)UnitID,piVar5,piVar6);
+              pBVar4 = UnitID;
+              if (iVar3 != 0) {
+                pBVar4 = (BattleUnitData *)(uint)local_20[0];
+                callOnCurrentThread_Func = (func *)&DAT_BATTLE_BIN__8008bde4;
+                Call_OnCurrentThread(pBVar4,piVar5,piVar6);
+              }
+            }
+            else {
+              piVar5 = (int *)(uint)local_20[0];
+              FUN_BATTLE_BIN__801488a8(UnitID,piVar5);
+              pBVar4 = UnitID;
+            }
+          }
+        }
+        if (local_1c == 0) break;
+      }
+      local_18 = local_18 + 1;
+    } while (local_18 < 0x15);
+    if (*(short *)(DAT_BATTLE_BIN__80173c78 + 0x3f0) != 0) {
+      pBVar4 = (BattleUnitData *)0x28;
+      Thread_wait(0x28);
+    }
+    if ((*(ushort *)(DAT_BATTLE_BIN__80173c78 + 0x3f0) & 1) != 0) {
+      pBVar4 = (BattleUnitData *)0x28;
+      Thread_wait(0x28);
+    }
+    if (param_2 == 0) {
+      callOnCurrentThread_Func = FUN_BATTLE_BIN__8008d1c8;
+      Call_OnCurrentThread(pBVar4,piVar5,piVar6);
+    }
+  }
+  return;
+}
+
+
+
+void FUN_BATTLE_BIN__80148e88(undefined4 param_1,undefined4 param_2,undefined4 param_3)
+
+{
+  char cVar1;
+  short *psVar2;
+  int iVar3;
+  int iVar4;
+  uint UnitID;
+  uint uVar5;
+  BattleUnitData *pBVar6;
+  undefined4 uVar7;
+  undefined4 uVar8;
+  uint uVar9;
+  
+  Set_Thread_Task_ID(0x43);
+  psVar2 = (short *)Thread_getParam1();
+  iVar3 = FUN_BATTLE_BIN__80146078(psVar2);
+  cVar1 = *(char *)(psVar2 + 1);
+  uVar9 = (uint)(short)(ushort)iVar3;
+  iVar4 = FUN_BATTLE_BIN__80146078((short *)((int)psVar2 + 3));
+  UnitID = FUN_BATTLE_BIN__8012dcac(uVar9);
+  uVar5 = FUN_BATTLE_BIN__80133158(uVar9);
+  if (uVar5 == 2000) {
+    Thread_stop();
+  }
+  FUN_BATTLE_BIN__80148cd8((ushort)iVar3,0);
+  pBVar6 = GetUnitDataPointer(UnitID);
+  if (((pBVar6->AllActionUnitData).CurrentStatuses.Status1 & Dead) == empty) {
+    iVar3 = 2;
+    if (((pBVar6->AllActionUnitData).CurrentStatuses.Status3 & Critical) != empty) {
+      iVar3 = 1;
+    }
+  }
+  else {
+    iVar3 = 0;
+  }
+  if (cVar1 == '\x02') {
+    uVar7 = 0x1f;
+    uVar8 = 1;
+    FUN_BATTLE_BIN__80149100(uVar9,0x1f,1,1);
+    *(undefined *)(DAT_BATTLE_BIN__80173c78 + UnitID + 0x3b1) = 3;
+    callOnCurrentThread_Func = (func *)&DAT_BATTLE_BIN__8008bde4;
+    Call_OnCurrentThread(uVar5,uVar7,uVar8);
+    FUN_BATTLE_BIN__8012da0c((ushort)uVar5,0x16);
+    goto LAB_BATTLE_BIN__801490c0;
+  }
+  if (cVar1 == '\x01') {
+    FUN_BATTLE_BIN__80149100(uVar9,5,0,1);
+    FUN_BATTLE_BIN__80149100(uVar9,0x10,0,1);
+    uVar7 = 6;
+    param_3 = 1;
+    FUN_BATTLE_BIN__80149100(uVar9,6,1,1);
+    *(undefined *)(DAT_BATTLE_BIN__80173c78 + UnitID + 0x3b1) = 2;
+    callOnCurrentThread_Func = (func *)&DAT_BATTLE_BIN__8008bde4;
+  }
+  else {
+    if (cVar1 != '\0') goto LAB_BATTLE_BIN__801490c0;
+    uVar7 = 5;
+    if (iVar3 == 0) {
+      *(undefined *)(DAT_BATTLE_BIN__80173c78 + UnitID + 0x3b1) = 1;
+      FUN_BATTLE_BIN__80149100(uVar9,5,0,1);
+      uVar7 = 0x10;
+      uVar8 = 1;
+      (pBVar6->AllActionUnitData).HP = 1;
+      FUN_BATTLE_BIN__80149100(uVar9,0x10,1,1);
+      callOnCurrentThread_Func = (func *)&DAT_BATTLE_BIN__8008bde4;
+      Call_OnCurrentThread(uVar5,uVar7,uVar8);
+      DAT_BATTLE_BIN__80165fb4 = 0x41;
+      goto LAB_BATTLE_BIN__801490c0;
+    }
+    if (iVar3 != 2) goto LAB_BATTLE_BIN__801490c0;
+    callOnCurrentThread_Func = (func *)&DAT_BATTLE_BIN__8008be04;
+  }
+  Call_OnCurrentThread(uVar5,uVar7,param_3);
+LAB_BATTLE_BIN__801490c0:
+  if ((short)iVar4 != 0) {
+    Thread_wait((int)(short)iVar4);
+  }
+  Thread_stop();
+  return;
+}
+
+
+
+void FUN_BATTLE_BIN__80149100(uint param_1,int param_2,int param_3,undefined4 param_4)
+
+{
+  uint UnitID;
+  BattleUnitData *pBVar1;
+  int iVar2;
+  Status1 SVar3;
+  int iVar4;
+  int iVar5;
+  
+  iVar5 = param_3;
+  UnitID = FUN_BATTLE_BIN__8012dcac(param_1);
+  if (UnitID != 2000) {
+    pBVar1 = GetUnitDataPointer(UnitID);
+    iVar2 = 0;
+    do {
+      iVar4 = iVar2 + 1;
+      (&(pBVar1->CurActionUnitData).StatusInfliction.Status1)[iVar2] = empty;
+      (&(pBVar1->CurActionUnitData).StatusRemoval.Status1)[iVar2] = empty;
+      iVar2 = iVar4;
+    } while (iVar4 < 5);
+    iVar2 = param_2;
+    if (param_2 < 0) {
+      iVar2 = param_2 + 7;
+    }
+    iVar2 = iVar2 >> 3;
+    SVar3 = (Status1)(1 << (param_2 + iVar2 * -8 & 0x1fU));
+    if (param_3 == 0) {
+      (&(pBVar1->CurActionUnitData).StatusRemoval.Status1)[iVar2] = SVar3;
+    }
+    else {
+      (&(pBVar1->CurActionUnitData).StatusInfliction.Status1)[iVar2] = SVar3;
+    }
+    callOnCurrentThread_Func = FUN_BATTLE_BIN__8018e07c;
+    Call_OnCurrentThread(UnitID,param_4,iVar5);
+  }
+  return;
+}
+
+
+
+int FUN_BATTLE_BIN__80149bec(int param_1)
+
+{
+  int iVar1;
+  int threadID;
+  
+  if (0xf < param_1) {
+    threadID = 1;
+    do {
+      iVar1 = Thread_checkThisRunning(threadID);
+      if (iVar1 == 0) {
+        return threadID;
+      }
+      threadID = threadID + 1;
+    } while (threadID < 0x10);
+    param_1 = Thread_stop();
+  }
+  return param_1;
+}
+
+
+
 int find_next_inactive_thread(int param_1)
 
 {
@@ -71828,6 +76574,33 @@ int find_next_inactive_thread(int param_1)
       }
     }
     param_1 = Thread_stop();
+  }
+  return param_1;
+}
+
+
+
+void Set_Thread_Task_ID(int param_1)
+
+{
+  BattleThreads[Current_Thread].TaskID = param_1;
+  return;
+}
+
+
+
+int FUN_BATTLE_BIN__80149ebc(int param_1,uint param_2)
+
+{
+  uint uVar1;
+  
+  while( true ) {
+    uVar1 = (uint)*(byte *)(DAT_BATTLE_BIN__80173ca4 + param_1);
+    if (uVar1 == 0xdb) {
+      return 0;
+    }
+    if (uVar1 == param_2) break;
+    param_1 = param_1 + 1 + (uint)(byte)(&DAT_BATTLE_BIN__8014d170)[uVar1];
   }
   return param_1;
 }
@@ -72427,7 +77200,24 @@ uint FUN_BATTLE_BIN__8014ccb8(int param_1,int param_2,uint param_3)
 
 
 
-void FUN_BATTLE_BIN__8014ceb4(void)
+byte * FUN_BATTLE_BIN__8014ce78(byte *param_1,int param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = 0;
+  while (param_2 != iVar1) {
+    if ((*param_1 & 0xfe) == 0xfe) {
+      iVar1 = iVar1 + 1;
+    }
+    param_1 = param_1 + 1;
+  }
+  return param_1;
+}
+
+
+
+void Call_OnCurrentThread(undefined4 param_1,undefined4 param_2,undefined4 param_3)
 
 {
   int iVar1;
@@ -72439,10 +77229,10 @@ void FUN_BATTLE_BIN__8014ceb4(void)
     iVar1 = Thread_0_Addr->r29;
     *(BADSPACEBASE **)(iVar1 + -0xc) = register0x00000074;
     *(undefined4 *)(iVar1 + -8) = unaff_retaddr;
-    (*DAT_BATTLE_BIN__80173ca8)();
+    (*callOnCurrentThread_Func)();
     return;
   }
-  (*DAT_BATTLE_BIN__80173ca8)();
+  (*callOnCurrentThread_Func)();
   return;
 }
 
@@ -72738,10 +77528,9 @@ void FUN_BATTLE_BIN__80174430(uint param_1)
         }
         bVar15 = UnitBattleData[0].AllActionUnitData.JobLevels[iVar18 + -0x3d];
         iVar9 = GetUnitTileID(UnitBattlePtr);
-        iVar9 = iVar9 * 8;
-        bVar11 = (&DAT_BATTLE_BIN__8018f8ce)[iVar9] * '\x02' +
-                 ((&DAT_BATTLE_BIN__8018f8cf)[iVar9] & 0x1f);
-        bVar3 = (byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar9] >> 5;
+        bVar11 = Map_Tile_Data[iVar9].height_whole * '\x02' +
+                 (Map_Tile_Data[iVar9].height_small & 0x1f);
+        bVar3 = Map_Tile_Data[iVar9].height_small >> 5;
         if (bVar3 == 0) {
           if ((UnitBattleData[0].AllActionUnitData.JobLevels[iVar18 + -0x78] & 0x40) != 0) {
             bVar11 = bVar11 + 2;
@@ -72825,8 +77614,8 @@ int FUN_BATTLE_BIN__80174b8c(uint param_1)
                   do {
                     *(short *)(puVar4 + 0x1a) =
                          *(short *)(puVar4 + 0x2e) + *(short *)(puVar4 + 0x26);
-                    *(undefined1 **)puVar4 =
-                         &DAT_BATTLE_BIN__8018f8cc +
+                    *(TileType **)puVar4 =
+                         &Map_Tile_Data[0].TileType +
                          ((int)((uint)(ushort)(*(short *)(puVar4 + 0x2e) + *(short *)(puVar4 + 0x26)
                                               ) << 0x10) >> 0xd);
                     *(undefined1 **)(puVar4 + 8) =
@@ -72897,106 +77686,104 @@ void FUN_BATTLE_BIN__80174e84(uint param_1)
   undefined *puVar4;
   byte bVar5;
   byte bVar6;
-  int iVar7;
-  byte *pbVar8;
-  undefined *puVar9;
-  int iVar10;
-  byte *pbVar11;
-  int iVar12;
+  byte *pbVar7;
+  undefined *puVar8;
+  int iVar9;
+  byte *pbVar10;
+  int iVar11;
   int in_t2;
   
   puVar4 = PTR_DAT_BATTLE_BIN__8018f4f0;
-  pbVar11 = PTR_DAT_BATTLE_BIN__8018f4e8;
+  pbVar10 = PTR_DAT_BATTLE_BIN__8018f4e8;
   puVar3 = PTR_DAT_BATTLE_BIN__8018f4e4;
   puVar2 = PTR_DAT_BATTLE_BIN__8018f4e0;
-  iVar12 = 0;
-  iVar10 = 0;
-  pbVar8 = PTR_DAT_BATTLE_BIN__8018f4f0;
-  puVar9 = PTR_DAT_BATTLE_BIN__8018f4f0;
+  iVar11 = 0;
+  iVar9 = 0;
+  pbVar7 = PTR_DAT_BATTLE_BIN__8018f4f0;
+  puVar8 = PTR_DAT_BATTLE_BIN__8018f4f0;
   do {
-    (&DAT_BATTLE_BIN__80192dd9)[iVar10] = 0;
-    (&DAT_BATTLE_BIN__80192dda)[iVar10] = 0;
+    (&DAT_BATTLE_BIN__80192dd9)[iVar9] = 0;
+    (&DAT_BATTLE_BIN__80192dda)[iVar9] = 0;
     if ((param_1 & 1) != 0) {
-      (&DAT_BATTLE_BIN__80192dd8)[iVar10] = 0;
-      (&DAT_BATTLE_BIN__80192ddb)[iVar10] = 0;
-      (&DAT_BATTLE_BIN__80192ddc)[iVar10] = 0xff;
+      (&DAT_BATTLE_BIN__80192dd8)[iVar9] = 0;
+      (&DAT_BATTLE_BIN__80192ddb)[iVar9] = 0;
+      (&DAT_BATTLE_BIN__80192ddc)[iVar9] = 0xff;
     }
-    iVar7 = iVar12 * 8;
-    if (iVar12 < 0x200) {
-      *puVar9 = 0;
-      if ((((&DAT_BATTLE_BIN__8018f8d0)[iVar7] & 5) == 1) ||
-         (((&DAT_BATTLE_BIN__8018f8d0)[iVar7] & 5) == 4)) {
-        bVar6 = *pbVar8;
-        *pbVar8 = bVar6 | 2;
-        if (2 < ((&DAT_BATTLE_BIN__8018f8cf)[iVar7] & 0x1f)) {
-          *pbVar8 = bVar6 | 0x42;
+    if (iVar11 < 0x200) {
+      *puVar8 = 0;
+      bVar6 = Map_Tile_Data[iVar11].slope_height & 5;
+      if ((bVar6 == 1) || (bVar6 == 4)) {
+        bVar6 = *pbVar7;
+        *pbVar7 = bVar6 | 2;
+        if (2 < (Map_Tile_Data[iVar11].height_small & 0x1f)) {
+          *pbVar7 = bVar6 | 0x42;
         }
       }
-      else if ((byte)puVar2[4] < ((&DAT_BATTLE_BIN__8018f8cf)[iVar7] & 0x1f)) {
-        *pbVar8 = *pbVar8 | 0x40;
+      else if ((byte)puVar2[4] < (Map_Tile_Data[iVar11].height_small & 0x1f)) {
+        *pbVar7 = *pbVar7 | 0x40;
       }
-      if (((((&DAT_BATTLE_BIN__8018f8d2)[iVar7] & 1 |
-            (byte)(&DAT_BATTLE_BIN__8018f8d2)[iVar7] >> 1 & 1) == 0) &&
-          (((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar7] >> 5 == 0 || (puVar2[0x11] == '\0')))) &&
-         (((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar7] >> 5 < 4 || (puVar2[0x13] == '\0')))) {
-        *pbVar8 = *pbVar8 | 0x10;
+      if ((((Map_Tile_Data[iVar11].tile_interaction & 1 |
+            Map_Tile_Data[iVar11].tile_interaction >> 1 & 1) == 0) &&
+          ((bVar6 = Map_Tile_Data[iVar11].height_small >> 5, bVar6 == 0 || (puVar2[0x11] == '\0'))))
+         && ((bVar6 < 4 || (puVar2[0x13] == '\0')))) {
+        *pbVar7 = *pbVar7 | 0x10;
       }
-      if (((&DAT_BATTLE_BIN__8018f8d2)[iVar7] & 1) == 0) {
-        if (((puVar2[0xe] != '\0') || (((&DAT_BATTLE_BIN__8018f8d2)[iVar7] & 2) == 0)) ||
-           (((&DAT_BATTLE_BIN__8018f8cc)[iVar7] & 0x3f) == 0x3f)) goto LAB_BATTLE_BIN__80175040;
-        bVar6 = *pbVar8 | 0x10;
+      if ((Map_Tile_Data[iVar11].tile_interaction & 1) == 0) {
+        if (((puVar2[0xe] != '\0') || ((Map_Tile_Data[iVar11].tile_interaction & 2) == 0)) ||
+           ((Map_Tile_Data[iVar11].TileType & 0x3f) == 0x3f)) goto LAB_BATTLE_BIN__80175040;
+        bVar6 = *pbVar7 | 0x10;
       }
       else {
-        bVar6 = *pbVar8 | 0x80;
+        bVar6 = *pbVar7 | 0x80;
       }
-      *pbVar8 = bVar6;
+      *pbVar7 = bVar6;
     }
 LAB_BATTLE_BIN__80175040:
-    pbVar8 = pbVar8 + 1;
-    puVar9 = puVar9 + 1;
-    iVar12 = iVar12 + 1;
-    iVar10 = iVar10 + 5;
-    if (0x20f < iVar12) {
+    pbVar7 = pbVar7 + 1;
+    puVar8 = puVar8 + 1;
+    iVar11 = iVar11 + 1;
+    iVar9 = iVar9 + 5;
+    if (0x20f < iVar11) {
       if (param_1 != 3) {
-        iVar10 = 0;
+        iVar9 = 0;
         do {
-          bVar6 = pbVar11[3];
+          bVar6 = pbVar10[3];
           if (bVar6 != 0xff) {
-            in_t2 = (pbVar11[2] & 0x7f) * 0x100 + (uint)pbVar11[1] * (uint)(byte)puVar2[0x18] +
-                    (uint)*pbVar11;
-            pbVar8 = puVar4 + in_t2;
+            in_t2 = (pbVar10[2] & 0x7f) * 0x100 + (uint)pbVar10[1] * (uint)(byte)puVar2[0x18] +
+                    (uint)*pbVar10;
+            pbVar7 = puVar4 + in_t2;
             if (UnitBattleData[bVar6 & 0x1f].AllActionUnitData.BaseClass == ArchAngel) {
               puVar4[in_t2] = puVar4[in_t2] & 0xef | 0x80;
             }
-            (&DAT_BATTLE_BIN__80192dda)[in_t2 * 5] = (char)iVar10;
-            bVar5 = *pbVar8;
-            *pbVar8 = bVar5 | 4;
+            (&DAT_BATTLE_BIN__80192dda)[in_t2 * 5] = (char)iVar9;
+            bVar5 = *pbVar7;
+            *pbVar7 = bVar5 | 4;
             if ((bVar6 & 0x40) == 0) {
               bVar5 = bVar5 & 0xf7 | 4;
               if (puVar2[0x22] == '\0') {
-                bVar5 = bVar5 | (pbVar11[2] >> 7) << 3;
+                bVar5 = bVar5 | (pbVar10[2] >> 7) << 3;
               }
-              *pbVar8 = bVar5;
-              pbVar8 = puVar4 + in_t2;
+              *pbVar7 = bVar5;
+              pbVar7 = puVar4 + in_t2;
               if ((bVar6 & 0x20) == 0) {
-                *pbVar8 = *pbVar8 | 0x20;
+                *pbVar7 = *pbVar7 | 0x20;
               }
               else {
-                *pbVar8 = *pbVar8 & 0xdf;
+                *pbVar7 = *pbVar7 & 0xdf;
               }
             }
             else {
-              *pbVar8 = bVar5 & 0xcf | 4;
+              *pbVar7 = bVar5 & 0xcf | 4;
               bVar6 = bVar5 & 199 | 4;
               if (puVar2[0xe] == '\0') {
                 bVar6 = bVar5 & 0xcf | 0xc;
               }
-              *pbVar8 = bVar6;
+              *pbVar7 = bVar6;
             }
           }
-          iVar10 = iVar10 + 1;
-          pbVar11 = pbVar11 + 7;
-        } while (iVar10 < 0x10);
+          iVar9 = iVar9 + 1;
+          pbVar10 = pbVar10 + 7;
+        } while (iVar9 < 0x10);
       }
       if ((param_1 & 1) != 0) {
         *(undefined2 *)(puVar3 + 0x18) = 0;
@@ -73004,21 +77791,21 @@ LAB_BATTLE_BIN__80175040:
                 (uint)(byte)puVar2[7];
       }
       if (param_1 == 1) {
-        iVar10 = in_t2 * 5;
+        iVar9 = in_t2 * 5;
         if ((puVar4[in_t2] & 0x20) == 0) {
           puVar3[0x54] = 8;
         }
         else {
           puVar3[0x54] = 0x24;
-          bVar6 = (&DAT_BATTLE_BIN__80192dda)[iVar10];
+          bVar6 = (&DAT_BATTLE_BIN__80192dda)[iVar9];
           cVar1 = puVar2[6];
           (&DAT_BATTLE_BIN__801937dc)[(uint)bVar6 * 5] = 0;
           (&DAT_BATTLE_BIN__801937d8)[(uint)bVar6 * 5] = cVar1 + '\x01';
         }
         puVar3[0x55] = 4;
         cVar1 = puVar2[6];
-        (&DAT_BATTLE_BIN__80192ddc)[iVar10] = 0;
-        (&DAT_BATTLE_BIN__80192dd8)[iVar10] = cVar1 + '\x01';
+        (&DAT_BATTLE_BIN__80192ddc)[iVar9] = 0;
+        (&DAT_BATTLE_BIN__80192dd8)[iVar9] = cVar1 + '\x01';
         puVar4[in_t2] = puVar4[in_t2] | 1;
         puVar3[0x62] = puVar2[6] + '\x01';
       }
@@ -73041,10 +77828,9 @@ void FUN_BATTLE_BIN__80175288(void)
   byte bVar7;
   int iVar8;
   int iVar9;
-  int iVar10;
-  byte *pbVar11;
+  byte *pbVar10;
   
-  pbVar11 = PTR_DAT_BATTLE_BIN__8018f4f0;
+  pbVar10 = PTR_DAT_BATTLE_BIN__8018f4f0;
   puVar6 = PTR_DAT_BATTLE_BIN__8018f4e4;
   puVar5 = PTR_DAT_BATTLE_BIN__8018f4e0;
   bVar1 = PTR_DAT_BATTLE_BIN__8018f4e0[8];
@@ -73052,40 +77838,39 @@ void FUN_BATTLE_BIN__80175288(void)
   bVar3 = PTR_DAT_BATTLE_BIN__8018f4e0[9];
   bVar4 = PTR_DAT_BATTLE_BIN__8018f4e0[7];
   FUN_BATTLE_BIN__80174df8();
+  iVar8 = 0;
   iVar9 = 0;
-  iVar10 = 0;
   do {
-    iVar8 = iVar9 * 8;
-    (&DAT_BATTLE_BIN__8018f8d1)[iVar8] = (&DAT_BATTLE_BIN__8018f8d1)[iVar8] & 0xdf;
-    if (iVar9 != (uint)bVar3 * 0x100 + (uint)bVar1 * (uint)bVar2 + (uint)bVar4) {
-      if (((puVar5[0xe] == '\x01') && ((*pbVar11 & 0x20) != 0)) ||
-         (((&DAT_BATTLE_BIN__80192ddb)[iVar10] != '\0' && (puVar5[0x16] != '\0')))) {
+    Map_Tile_Data[iVar8].tile_overlay = Map_Tile_Data[iVar8].tile_overlay & 0xdf;
+    if (iVar8 != (uint)bVar3 * 0x100 + (uint)bVar1 * (uint)bVar2 + (uint)bVar4) {
+      if (((puVar5[0xe] == '\x01') && ((*pbVar10 & 0x20) != 0)) ||
+         (((&DAT_BATTLE_BIN__80192ddb)[iVar9] != '\0' && (puVar5[0x16] != '\0')))) {
 LAB_BATTLE_BIN__8017547c:
         *(short *)(puVar6 + 0x18) = *(short *)(puVar6 + 0x18) + 1;
-        (&DAT_BATTLE_BIN__8018f8d1)[iVar8] = (&DAT_BATTLE_BIN__8018f8d1)[iVar8] | 0x20;
+        Map_Tile_Data[iVar8].tile_overlay = Map_Tile_Data[iVar8].tile_overlay | 0x20;
       }
       else {
-        bVar7 = (&DAT_BATTLE_BIN__8018f8cf)[iVar8] & 0x1f;
-        if (((((((((bVar7 < 3) || ((*pbVar11 & 2) == 0)) &&
-                 ((&DAT_BATTLE_BIN__80192dd8)[iVar10] != '\0')) &&
-                ((bVar7 < 4 && (((&DAT_BATTLE_BIN__8018f8d2)[iVar8] & 0x80) == 0)))) &&
-               (((&DAT_BATTLE_BIN__8018f8cc)[iVar8] & 0x3f) != 0x1c)) &&
-              ((((&DAT_BATTLE_BIN__8018f8cf)[iVar8] & 0xe0) == 0 || (puVar5[0x14] == '\0')))) &&
-             ((((&DAT_BATTLE_BIN__8018f8cf)[iVar8] & 0xe0) != 0x60 || (puVar5[0x12] == '\0')))) &&
-            ((((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar8] >> 5 < 4 || (puVar5[0x13] == '\0')) &&
-             ((((&DAT_BATTLE_BIN__8018f8cc)[iVar8] & 0x3f) != 0x12 || (puVar5[0x25] != '\0')))))) &&
-           (((&DAT_BATTLE_BIN__8018f8d2)[iVar8] & 2) == 0)) {
-          bVar7 = *pbVar11;
+        bVar7 = Map_Tile_Data[iVar8].height_small & 0x1f;
+        if (((((((((bVar7 < 3) || ((*pbVar10 & 2) == 0)) &&
+                 ((&DAT_BATTLE_BIN__80192dd8)[iVar9] != '\0')) &&
+                ((bVar7 < 4 && ((Map_Tile_Data[iVar8].tile_interaction & 0x80) == 0)))) &&
+               (bVar7 = Map_Tile_Data[iVar8].TileType & 0x3f, bVar7 != 0x1c)) &&
+              (((Map_Tile_Data[iVar8].height_small & 0xe0) == 0 || (puVar5[0x14] == '\0')))) &&
+             (((Map_Tile_Data[iVar8].height_small & 0xe0) != 0x60 || (puVar5[0x12] == '\0')))) &&
+            (((Map_Tile_Data[iVar8].height_small >> 5 < 4 || (puVar5[0x13] == '\0')) &&
+             ((bVar7 != 0x12 || (puVar5[0x25] != '\0')))))) &&
+           ((Map_Tile_Data[iVar8].tile_interaction & 2) == 0)) {
+          bVar7 = *pbVar10;
           if (((bVar7 & 0x10) != 0) &&
              (((bVar7 & 4) == 0 || (((bVar7 & 0x20) != 0 && (puVar5[0x16] != '\0'))))))
           goto LAB_BATTLE_BIN__8017547c;
         }
       }
     }
-    pbVar11 = pbVar11 + 1;
-    iVar9 = iVar9 + 1;
-    iVar10 = iVar10 + 5;
-    if (0x1ff < iVar9) {
+    pbVar10 = pbVar10 + 1;
+    iVar8 = iVar8 + 1;
+    iVar9 = iVar9 + 5;
+    if (0x1ff < iVar8) {
       return;
     }
   } while( true );
@@ -73276,7 +78061,7 @@ undefined4 FUN_BATTLE_BIN__80175958(int param_1,int param_2)
           (int)*(short *)(puVar2 + 0x32) * (uint)(byte)puVar1[0x18] +
           (uint)*(ushort *)(puVar2 + 0x30);
   *(short *)(puVar2 + 0x1c) = (short)iVar7;
-  *(undefined1 **)(puVar2 + 4) = &DAT_BATTLE_BIN__8018f8cc + (iVar7 * 0x10000 >> 0xd);
+  *(TileType **)(puVar2 + 4) = &Map_Tile_Data[0].TileType + (iVar7 * 0x10000 >> 0xd);
   *(undefined1 **)(puVar2 + 0xc) = &DAT_BATTLE_BIN__80192dd8 + *(short *)(puVar2 + 0x1c) * 5;
   puVar2[0x4d] = *(char *)(*(int *)(puVar2 + 4) + 2) << 1;
   puVar2[0x57] = *(byte *)(*(int *)(puVar2 + 4) + 3) & 0x1f;
@@ -73511,13 +78296,13 @@ uint FUN_BATTLE_BIN__80176164(int param_1,int param_2,uint param_3,uint param_4)
   iVar6 = 0;
   uVar4 = 0x7f;
   do {
-    iVar1 = (iVar7 + param_1) * 8;
+    iVar1 = iVar7 + param_1;
     uVar5 = uVar4;
-    if (((&DAT_BATTLE_BIN__8018f8d2)[iVar1] & 1) == 0) {
-      uVar3 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar1] * 2 +
-              ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar1] & 0x1f) *
-              ((int)(uint)(byte)(&DAT_BATTLE_BIN__8018f8d0)[iVar1] >> (param_3 & 0x1f) & 3U) +
-              ((byte)(&DAT_BATTLE_BIN__8018f8d1)[iVar1] & 0x1f) * -2;
+    if ((Map_Tile_Data[iVar1].tile_interaction & 1) == 0) {
+      uVar3 = (uint)Map_Tile_Data[iVar1].height_whole * 2 +
+              (Map_Tile_Data[iVar1].height_small & 0x1f) *
+              ((int)(uint)Map_Tile_Data[iVar1].slope_height >> (param_3 & 0x1f) & 3U) +
+              (Map_Tile_Data[iVar1].tile_overlay & 0x1f) * -2;
       uVar2 = uVar3 & 0xff;
       if (((param_4 & 0xff) < uVar2) && (uVar5 = uVar3, (uVar4 & 0xff) < uVar2)) {
         uVar5 = uVar4;
@@ -73540,57 +78325,55 @@ bool FUN_BATTLE_BIN__8017622c(int param_1,uint param_2,uint param_3,uint param_4
   undefined *puVar3;
   undefined *puVar4;
   bool bVar5;
-  int iVar6;
-  uint uVar7;
-  int iVar8;
+  uint uVar6;
+  int iVar7;
+  uint uVar8;
   uint uVar9;
   uint uVar10;
   uint uVar11;
   uint uVar12;
-  uint uVar13;
   
   puVar4 = PTR_DAT_BATTLE_BIN__8018f4f0;
   puVar3 = PTR_DAT_BATTLE_BIN__8018f4e8;
   puVar2 = PTR_DAT_BATTLE_BIN__8018f4e4;
-  uVar13 = 0x7f;
-  uVar12 = 0;
-  uVar11 = param_4 & 0xff;
+  uVar12 = 0x7f;
+  uVar11 = 0;
+  uVar10 = param_4 & 0xff;
   PTR_DAT_BATTLE_BIN__8018f4e4[0x53] = PTR_DAT_BATTLE_BIN__8018f4e0[0x1b];
   do {
-    iVar8 = ((int)uVar12 / 2) * 0x100 + param_1;
-    iVar6 = iVar8 * 8;
-    if ((uVar12 & 1) == 0) {
-      bVar1 = puVar4[iVar8];
+    iVar7 = ((int)uVar11 / 2) * 0x100 + param_1;
+    if ((uVar11 & 1) == 0) {
+      bVar1 = puVar4[iVar7];
       if ((bVar1 & 0x80) == 0) {
-        puVar2[0x50] = (&DAT_BATTLE_BIN__8018f8ce)[iVar6] << 1;
-        puVar2[0x51] = (&DAT_BATTLE_BIN__8018f8cf)[iVar6] & 0x1f;
-        puVar2[0x52] = (&DAT_BATTLE_BIN__8018f8d0)[iVar6];
-        uVar9 = (uint)(byte)puVar2[0x50] +
+        puVar2[0x50] = Map_Tile_Data[iVar7].height_whole << 1;
+        puVar2[0x51] = Map_Tile_Data[iVar7].height_small & 0x1f;
+        puVar2[0x52] = Map_Tile_Data[iVar7].slope_height;
+        uVar8 = (uint)(byte)puVar2[0x50] +
                 (uint)(byte)puVar2[0x51] * ((int)(uint)(byte)puVar2[0x52] >> (param_2 & 0x1f) & 3U);
-        uVar7 = (uint)(byte)puVar2[0x50] +
+        uVar6 = (uint)(byte)puVar2[0x50] +
                 (uint)(byte)puVar2[0x51] * ((int)(uint)(byte)puVar2[0x52] >> (param_3 & 0x1f) & 3U);
-        if ((uVar7 & 0xff) < (uVar9 & 0xff)) {
-          bVar1 = (&DAT_BATTLE_BIN__8018f8cf)[iVar6];
-          puVar2[0x50] = (char)uVar7 + ((&DAT_BATTLE_BIN__8018f8d1)[iVar6] & 0x1f) * -2;
-          uVar10 = (uint)(byte)puVar2[0x50];
-          uVar7 = uVar9 + (uint)(bVar1 >> 5) * 2;
+        if ((uVar6 & 0xff) < (uVar8 & 0xff)) {
+          bVar1 = Map_Tile_Data[iVar7].height_small;
+          puVar2[0x50] = (char)uVar6 + (Map_Tile_Data[iVar7].tile_overlay & 0x1f) * -2;
+          uVar9 = (uint)(byte)puVar2[0x50];
+          uVar6 = uVar8 + (uint)(bVar1 >> 5) * 2;
         }
         else {
-          uVar7 = uVar7 + (uint)((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar6] >> 5) * 2;
-          uVar10 = uVar9 + ((byte)(&DAT_BATTLE_BIN__8018f8d1)[iVar6] & 0x1f) * -2;
+          uVar6 = uVar6 + (uint)(Map_Tile_Data[iVar7].height_small >> 5) * 2;
+          uVar9 = uVar8 + (Map_Tile_Data[iVar7].tile_overlay & 0x1f) * -2;
         }
-        uVar9 = uVar10 & 0xff;
+        uVar8 = uVar9 & 0xff;
 LAB_BATTLE_BIN__80176428:
-        if (uVar9 < (uVar13 & 0xff)) {
-          uVar13 = uVar10;
+        if (uVar8 < (uVar12 & 0xff)) {
+          uVar12 = uVar9;
         }
-        if ((uVar11 < uVar9) && (uVar9 < uVar11 + (byte)puVar2[0x53])) {
+        if ((uVar10 < uVar8) && (uVar8 < uVar10 + (byte)puVar2[0x53])) {
           return true;
         }
-        if ((uVar11 < (uVar7 & 0xff)) && ((uVar7 & 0xff) < uVar11 + (byte)puVar2[0x53])) {
+        if ((uVar10 < (uVar6 & 0xff)) && ((uVar6 & 0xff) < uVar10 + (byte)puVar2[0x53])) {
           return true;
         }
-        if (((uVar10 & 0xff) <= uVar11) && (uVar11 + (byte)puVar2[0x53] <= (uVar7 & 0xff))) {
+        if (((uVar9 & 0xff) <= uVar10) && (uVar10 + (byte)puVar2[0x53] <= (uVar6 & 0xff))) {
           return true;
         }
       }
@@ -73598,24 +78381,24 @@ LAB_BATTLE_BIN__80176428:
         return true;
       }
     }
-    else if ((puVar4[iVar8] & 0xc) == 4) {
-      puVar2[0x50] = (&DAT_BATTLE_BIN__80192dda)[iVar8 * 5];
+    else if ((puVar4[iVar7] & 0xc) == 4) {
+      puVar2[0x50] = (&DAT_BATTLE_BIN__80192dda)[iVar7 * 5];
       if ((puVar3[(uint)(byte)puVar2[0x50] * 7 + 3] & 0x40) != 0) {
-        uVar9 = (uint)(byte)puVar3[(uint)(byte)puVar2[0x50] * 7 + 5];
-        uVar7 = uVar9 + 3 & 0xff;
-        if ((uVar11 < uVar7) && (uVar7 < uVar11 + (byte)puVar2[0x53])) {
+        uVar8 = (uint)(byte)puVar3[(uint)(byte)puVar2[0x50] * 7 + 5];
+        uVar6 = uVar8 + 3 & 0xff;
+        if ((uVar10 < uVar6) && (uVar6 < uVar10 + (byte)puVar2[0x53])) {
           return true;
         }
-        uVar7 = (uint)(byte)puVar3[(uint)(byte)puVar2[0x50] * 7 + 6];
-        uVar10 = uVar9;
+        uVar6 = (uint)(byte)puVar3[(uint)(byte)puVar2[0x50] * 7 + 6];
+        uVar9 = uVar8;
         goto LAB_BATTLE_BIN__80176428;
       }
     }
-    uVar12 = uVar12 + 1;
-    if (3 < (int)uVar12) {
+    uVar11 = uVar11 + 1;
+    if (3 < (int)uVar11) {
       bVar5 = false;
-      if ((uVar13 & 0xff) != 0x7f) {
-        bVar5 = (param_4 & 0xff) < (uVar13 & 0xff);
+      if ((uVar12 & 0xff) != 0x7f) {
+        bVar5 = (param_4 & 0xff) < (uVar12 & 0xff);
       }
       return bVar5;
     }
@@ -73719,9 +78502,9 @@ undefined1 * FUN_BATTLE_BIN__801766b4(uint param_1,byte param_2,byte param_3,byt
   puVar1[0xc] = param_4;
   *(ushort *)(puVar2 + 0x2a) = (ushort)param_4;
   FUN_BATTLE_BIN__80174430(param_1);
-  if (((byte)(&DAT_BATTLE_BIN__8018f8d1)
-             [((uint)(byte)puVar1[0xc] * 0x100 + (uint)(byte)puVar1[0xb] * (uint)(byte)puVar1[0x18]
-              + (uint)(byte)puVar1[10]) * 8] >> 5 & 1) == 0) {
+  if ((Map_Tile_Data
+       [(uint)(byte)puVar1[0xc] * 0x100 + (uint)(byte)puVar1[0xb] * (uint)(byte)puVar1[0x18] +
+        (uint)(byte)puVar1[10]].tile_overlay >> 5 & 1) == 0) {
     return (undefined1 *)0x0;
   }
   if (DAT_BATTLE_BIN__8018f510 == 0) {
@@ -73796,7 +78579,7 @@ undefined1 * FUN_BATTLE_BIN__801766b4(uint param_1,byte param_2,byte param_3,byt
               (uint)*(ushort *)(puVar2 + 0x26);
       *(short *)(puVar2 + 0x1a) = (short)iVar7;
       puVar2[0x5e] = bVar9;
-      *(undefined1 **)puVar2 = &DAT_BATTLE_BIN__8018f8cc + (iVar7 * 0x10000 >> 0xd);
+      *(TileType **)puVar2 = &Map_Tile_Data[0].TileType + (iVar7 * 0x10000 >> 0xd);
       *(undefined1 **)(puVar2 + 8) = &DAT_BATTLE_BIN__80192dd8 + *(short *)(puVar2 + 0x1a) * 5;
       if ((byte)puVar2[0x54] < 5) {
         if (puVar2[0x40] == '\0') {
@@ -73927,7 +78710,7 @@ void FUN_BATTLE_BIN__80176c90(void)
               (int)*(short *)(puVar5 + 0x28) * (uint)(byte)puVar4[0x18] +
               (uint)*(ushort *)(puVar5 + 0x26);
       *(short *)(puVar5 + 0x1a) = (short)iVar9;
-      *(undefined1 **)puVar5 = &DAT_BATTLE_BIN__8018f8cc + (iVar9 * 0x10000 >> 0xd);
+      *(TileType **)puVar5 = &Map_Tile_Data[0].TileType + (iVar9 * 0x10000 >> 0xd);
       *(undefined1 **)(puVar5 + 8) = &DAT_BATTLE_BIN__80192dd8 + *(short *)(puVar5 + 0x1a) * 5;
       pbVar17 = puVar7;
       do {
@@ -73980,17 +78763,17 @@ LAB_BATTLE_BIN__80176e04:
           }
           puVar5[0x60] = 0;
           if ((puVar5[0x43] == '\0') && (!bVar3)) {
-            puVar5[0x4a] = ((&DAT_BATTLE_BIN__8018f8cf)[iVar16] & 0x1f) *
-                           ((byte)((int)(uint)(byte)(&DAT_BATTLE_BIN__8018f8d0)[iVar16] >>
+            puVar5[0x4a] = ((&Map_Tile_Data[0].height_small)[iVar16] & 0x1f) *
+                           ((byte)((int)(uint)(&Map_Tile_Data[0].slope_height)[iVar16] >>
                                   ((byte)puVar5[0x44] & 0x1f)) & 3);
-            puVar5[0x4b] = ((&DAT_BATTLE_BIN__8018f8cf)[iVar16] & 0x1f) *
-                           ((byte)((int)(uint)(byte)(&DAT_BATTLE_BIN__8018f8d0)[iVar16] >>
+            puVar5[0x4b] = ((&Map_Tile_Data[0].height_small)[iVar16] & 0x1f) *
+                           ((byte)((int)(uint)(&Map_Tile_Data[0].slope_height)[iVar16] >>
                                   ((byte)puVar5[0x45] & 0x1f)) & 3);
             *(ushort *)(puVar5 + 0x38) = (ushort)(byte)puVar5[0x4a] - (ushort)(byte)puVar5[0x4b];
-            if ((byte)puVar4[4] < ((&DAT_BATTLE_BIN__8018f8cf)[iVar16] & 0x1f)) {
+            if ((byte)puVar4[4] < ((&Map_Tile_Data[0].height_small)[iVar16] & 0x1f)) {
               puVar5[0x60] = 1;
             }
-            if ((2 < ((&DAT_BATTLE_BIN__8018f8cf)[iVar16] & 0x1f)) && ((*pbVar17 & 2) != 0)) {
+            if ((2 < ((&Map_Tile_Data[0].height_small)[iVar16] & 0x1f)) && ((*pbVar17 & 2) != 0)) {
               puVar5[0x60] = 1;
             }
             if (-1 < *(short *)(puVar5 + 0x38)) {
@@ -74168,7 +78951,7 @@ undefined4 FUN_BATTLE_BIN__801773b8(int param_1)
           (int)*(short *)(puVar2 + 0x32) * (uint)(byte)puVar1[0x18] +
           (uint)*(ushort *)(puVar2 + 0x30);
   *(short *)(puVar2 + 0x1c) = (short)iVar5;
-  *(undefined1 **)(puVar2 + 4) = &DAT_BATTLE_BIN__8018f8cc + (iVar5 * 0x10000 >> 0xd);
+  *(TileType **)(puVar2 + 4) = &Map_Tile_Data[0].TileType + (iVar5 * 0x10000 >> 0xd);
   *(undefined1 **)(puVar2 + 0xc) = &DAT_BATTLE_BIN__80192dd8 + *(short *)(puVar2 + 0x1c) * 5;
   puVar2[0x4d] = *(char *)(*(int *)(puVar2 + 4) + 2) << 1;
   puVar2[0x57] = *(byte *)(*(int *)(puVar2 + 4) + 3) & 0x1f;
@@ -74667,8 +79450,8 @@ int FUN_BATTLE_BIN__80178ca4
               if (puVar4[0x18] != '\0') {
                 do {
                   *(short *)(puVar5 + 0x1a) = *(short *)(puVar5 + 0x2e) + *(short *)(puVar5 + 0x26);
-                  *(undefined1 **)puVar5 =
-                       &DAT_BATTLE_BIN__8018f8cc +
+                  *(TileType **)puVar5 =
+                       &Map_Tile_Data[0].TileType +
                        ((int)((uint)(ushort)(*(short *)(puVar5 + 0x2e) + *(short *)(puVar5 + 0x26))
                              << 0x10) >> 0xd);
                   *(undefined1 **)(puVar5 + 8) =
@@ -74700,8 +79483,8 @@ int FUN_BATTLE_BIN__80178ca4
               if (puVar4[0x18] != '\0') {
                 do {
                   *(short *)(puVar5 + 0x1a) = *(short *)(puVar5 + 0x2e) + *(short *)(puVar5 + 0x26);
-                  *(undefined1 **)puVar5 =
-                       &DAT_BATTLE_BIN__8018f8cc +
+                  *(TileType **)puVar5 =
+                       &Map_Tile_Data[0].TileType +
                        ((int)((uint)(ushort)(*(short *)(puVar5 + 0x2e) + *(short *)(puVar5 + 0x26))
                              << 0x10) >> 0xd);
                   *(undefined1 **)(puVar5 + 8) =
@@ -74742,17 +79525,17 @@ void FUN_BATTLE_BIN__80179204(short param_1)
 
 {
   byte *pbVar1;
-  undefined1 *puVar2;
+  map_tile_data *pmVar2;
   undefined *puVar3;
   int iVar4;
   
   if (param_1 == 0x149) {
     iVar4 = 0;
     puVar3 = &DAT_BATTLE_BIN__80192dd8;
-    puVar2 = &DAT_BATTLE_BIN__8018f8cc;
+    pmVar2 = Map_Tile_Data;
     do {
-      pbVar1 = puVar2 + 3;
-      puVar2 = puVar2 + 8;
+      pbVar1 = &pmVar2->height_small;
+      pmVar2 = pmVar2 + 1;
       if ((*pbVar1 & 0xe0) != 0) {
         *puVar3 = 0;
       }
@@ -74770,15 +79553,15 @@ void FUN_BATTLE_BIN__8017925c(void)
 {
   byte *pbVar1;
   undefined *puVar2;
-  undefined1 *puVar3;
+  map_tile_data *pmVar3;
   int iVar4;
   
   iVar4 = 0;
   puVar2 = &DAT_BATTLE_BIN__80192dd8;
-  puVar3 = &DAT_BATTLE_BIN__8018f8cc;
+  pmVar3 = Map_Tile_Data;
   do {
-    pbVar1 = puVar3 + 6;
-    puVar3 = puVar3 + 8;
+    pbVar1 = &pmVar3->tile_interaction;
+    pmVar3 = pmVar3 + 1;
     if ((*pbVar1 & 2) != 0) {
       *puVar2 = 0;
       puVar2[1] = 0;
@@ -74812,50 +79595,49 @@ void FUN_BATTLE_BIN__801792a4(uint param_1,uint param_2,int param_3)
   iVar10 = 0x500;
   iVar9 = 0x800;
   do {
-    iVar1 = iVar8 * 8;
     iVar4 = -0xff;
-    if (((&DAT_BATTLE_BIN__8018f8d2)[iVar1] & 1) == 0) {
-      iVar4 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar1] * 2 +
-              ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar1] & 0x1f) +
-              (uint)((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar1] >> 5) * 2;
+    if ((Map_Tile_Data[iVar8].tile_interaction & 1) == 0) {
+      iVar4 = (uint)Map_Tile_Data[iVar8].height_whole * 2 +
+              (Map_Tile_Data[iVar8].height_small & 0x1f) +
+              (uint)(Map_Tile_Data[iVar8].height_small >> 5) * 2;
     }
     else {
       *puVar6 = 0;
       puVar6[1] = 0;
     }
     puVar5 = &DAT_BATTLE_BIN__80192dd8 + iVar10;
-    if (((&DAT_BATTLE_BIN__8018f8d2)[iVar9] & 1) == 0) {
-      iVar1 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar9] * 2 +
-              ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar9] & 0x1f) +
-              (uint)((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar9] >> 5) * 2;
+    if (((&Map_Tile_Data[0].tile_interaction)[iVar9] & 1) == 0) {
+      iVar2 = (uint)(&Map_Tile_Data[0].height_whole)[iVar9] * 2 +
+              ((&Map_Tile_Data[0].height_small)[iVar9] & 0x1f) +
+              (uint)((&Map_Tile_Data[0].height_small)[iVar9] >> 5) * 2;
     }
     else {
-      iVar1 = -0xff;
+      iVar2 = -0xff;
       *puVar5 = 0;
       (&DAT_BATTLE_BIN__80192dd9)[iVar10] = 0;
     }
     if (param_3 != 0) {
-      if (iVar4 < iVar1) {
+      if (iVar4 < iVar2) {
         iVar4 = -0xff;
       }
       else {
-        iVar1 = -0xff;
+        iVar2 = -0xff;
       }
     }
-    iVar2 = uVar7 - iVar4;
+    iVar1 = uVar7 - iVar4;
     if ((int)uVar7 <= iVar4) {
-      iVar2 = iVar4 - uVar7;
+      iVar1 = iVar4 - uVar7;
     }
-    if (iVar1 < (int)uVar7) {
-      iVar1 = uVar7 - iVar1;
+    if (iVar2 < (int)uVar7) {
+      iVar2 = uVar7 - iVar2;
     }
     else {
-      iVar1 = iVar1 - uVar7;
+      iVar2 = iVar2 - uVar7;
     }
-    if (iVar1 < iVar2) {
+    if (iVar2 < iVar1) {
       *puVar6 = 0;
       puVar6[1] = 0;
-      if (iVar3 < iVar1) {
+      if (iVar3 < iVar2) {
         *puVar5 = 0;
         (&DAT_BATTLE_BIN__80192dd9)[iVar10] = 0;
       }
@@ -74863,7 +79645,7 @@ void FUN_BATTLE_BIN__801792a4(uint param_1,uint param_2,int param_3)
     else {
       *puVar5 = 0;
       (&DAT_BATTLE_BIN__80192dd9)[iVar10] = 0;
-      if (iVar3 < iVar2) {
+      if (iVar3 < iVar1) {
         *puVar6 = 0;
         puVar6[1] = 0;
       }
@@ -75064,36 +79846,37 @@ char FUN_BATTLE_BIN__801797b4(BattleUnitData *param_1)
 {
   byte bVar1;
   Movements3 MVar2;
-  bool bVar3;
-  char cVar4;
-  int iVar5;
-  char cVar6;
+  byte bVar3;
+  bool bVar4;
+  char cVar5;
+  int iVar6;
+  char cVar7;
   
-  bVar3 = false;
-  iVar5 = GetUnitTileID(param_1);
-  iVar5 = iVar5 * 8;
+  bVar4 = false;
+  iVar6 = GetUnitTileID(param_1);
   bVar1 = (param_1->CurActionTargetData).field_0x14;
-  cVar4 = (&DAT_BATTLE_BIN__8018f8ce)[iVar5] * '\x02' + ((&DAT_BATTLE_BIN__8018f8cf)[iVar5] & 0x1f);
-  cVar6 = ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar5] >> 5) * '\x02';
+  cVar5 = Map_Tile_Data[iVar6].height_whole * '\x02' + (Map_Tile_Data[iVar6].height_small & 0x1f);
+  bVar3 = Map_Tile_Data[iVar6].height_small >> 5;
+  cVar7 = bVar3 * '\x02';
   if ((bVar1 & 0x80) != 0) {
     param_1 = UnitBattleData + (bVar1 & 0x1f);
-    cVar4 = cVar4 + '\x02';
+    cVar5 = cVar5 + '\x02';
   }
   MVar2 = (param_1->AllActionUnitData).Movements3;
   if (((MVar2 & Float) != None) ||
      (((param_1->AllActionUnitData).CurrentStatuses.Status3 & Float) != empty)) {
-    cVar4 = cVar4 + '\x02';
-    bVar3 = true;
+    cVar5 = cVar5 + '\x02';
+    bVar4 = true;
   }
-  if ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar5] >> 5 != 0) {
-    if ((bVar3) || ((MVar2 & Walk_on_Water) != None)) {
-      cVar4 = cVar4 + cVar6;
+  if (bVar3 != 0) {
+    if ((bVar4) || ((MVar2 & Walk_on_Water) != None)) {
+      cVar5 = cVar5 + cVar7;
     }
     else if ((MVar2 & Move_in_Water) != None) {
-      cVar4 = cVar6 + cVar4 + -2;
+      cVar5 = cVar7 + cVar5 + -2;
     }
   }
-  return cVar4;
+  return cVar5;
 }
 
 
@@ -75136,11 +79919,10 @@ void FUN_BATTLE_BIN__801798b0(BattleUnitData *param_1,uint param_2)
             iVar6 = 0;
             do {
               iVar5 = iVar6 * 0x100 + iVar8 * (uint)DAT_BATTLE_BIN__800e4e9c + iVar7;
-              iVar4 = iVar5 * 8;
               iVar4 = (uint)bVar2 -
-                      ((uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar4] * 2 +
-                       ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar4] & 0x1f) +
-                       (uint)((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar4] >> 5) * 2 & 0xff);
+                      ((uint)Map_Tile_Data[iVar5].height_whole * 2 +
+                       (Map_Tile_Data[iVar5].height_small & 0x1f) +
+                       (uint)(Map_Tile_Data[iVar5].height_small >> 5) * 2 & 0xff);
               if (iVar4 < 0) {
                 iVar4 = iVar4 + 3;
               }
@@ -75267,10 +80049,9 @@ void FUN_BATTLE_BIN__80179c9c(int param_1,int param_2,int param_3,int param_4)
     }
     do {
       iVar1 = iVar3 * 0x100 + param_2 * (uint)DAT_BATTLE_BIN__800e4e9c + param_1;
-      iVar2 = iVar1 * 8;
-      iVar2 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar2] * 2 +
-              ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar2] & 0x1f) +
-              (uint)((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar2] >> 5) * 2;
+      iVar2 = (uint)Map_Tile_Data[iVar1].height_whole * 2 +
+              (Map_Tile_Data[iVar1].height_small & 0x1f) +
+              (uint)(Map_Tile_Data[iVar1].height_small >> 5) * 2;
       iVar3 = iVar3 + 1;
       if ((param_3 <= iVar2) && (iVar2 <= param_4)) {
         (&DAT_BATTLE_BIN__80192dd8)[iVar1 * 5] = 1;
@@ -75286,16 +80067,16 @@ void FUN_BATTLE_BIN__80179d84(void)
 
 {
   byte *pbVar1;
-  undefined1 *puVar2;
+  map_tile_data *pmVar2;
   undefined *puVar3;
   int iVar4;
   
   iVar4 = 0;
   puVar3 = &DAT_BATTLE_BIN__80192dd8;
-  puVar2 = &DAT_BATTLE_BIN__8018f8cc;
+  pmVar2 = Map_Tile_Data;
   do {
-    pbVar1 = puVar2 + 6;
-    puVar2 = puVar2 + 8;
+    pbVar1 = &pmVar2->tile_interaction;
+    pmVar2 = pmVar2 + 1;
     if ((*pbVar1 & 2) != 0) {
       *puVar3 = 0;
     }
@@ -75315,17 +80096,16 @@ int FUN_BATTLE_BIN__80179dc8(CurActionTargetData *param_1)
   int iVar3;
   int iVar4;
   char *pcVar5;
-  int iVar6;
-  short sVar7;
-  uint uVar8;
-  undefined1 *puVar9;
-  short sVar10;
-  short *psVar11;
-  undefined1 *puVar12;
-  int iVar13;
-  char *pcVar14;
+  short sVar6;
+  uint uVar7;
+  map_tile_data *pmVar8;
+  short sVar9;
+  short *psVar10;
+  map_tile_data *pmVar11;
+  int iVar12;
+  char *pcVar13;
+  uint uVar14;
   uint uVar15;
-  uint uVar16;
   short local_100 [20];
   byte abStack_d8 [24];
   byte abStack_c0 [72];
@@ -75335,99 +80115,96 @@ int FUN_BATTLE_BIN__80179dc8(CurActionTargetData *param_1)
   
   bVar1 = 1;
   BATTLE_Unit_Targetting_to_Temp(param_1,&local_48);
-  uVar15 = 2;
+  uVar14 = 2;
   if (UnitBattleData[local_48.AttackerID].AllActionUnitData.JobID == Mime) {
     bVar1 = 8;
-    uVar15 = 0x10;
+    uVar14 = 0x10;
   }
   iVar3 = GetUnitTileID(UnitBattleData + local_48.AttackerID);
-  uVar16 = ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar3 * 8] & 0x1f) +
-           (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar3 * 8] * 2;
+  uVar15 = (Map_Tile_Data[iVar3].height_small & 0x1f) + (uint)Map_Tile_Data[iVar3].height_whole * 2;
   iVar4 = FUN_BATTLE_BIN__801817c0
                     ((uint)local_48.AttackerID,local_48.SkillsetOfAttack,local_100,abStack_d8,
                      abStack_c0,0,abStack_78,auStack_60);
-  iVar13 = 0;
+  iVar12 = 0;
   if (0 < iVar4) {
-    psVar11 = local_100;
+    psVar10 = local_100;
     do {
-      uVar2 = *psVar11 - 0x18a;
-      if ((ushort)(*psVar11 - 0x18aU) < 0xc) {
-        uVar8 = (uint)SecondaryJumpData[uVar2].Vert << 1;
+      uVar2 = *psVar10 - 0x18a;
+      if ((ushort)(*psVar10 - 0x18aU) < 0xc) {
+        uVar7 = (uint)SecondaryJumpData[uVar2].Vert << 1;
         if (bVar1 < SecondaryJumpData[uVar2].Range) {
           bVar1 = SecondaryJumpData[uVar2].Range;
         }
-        if ((uVar15 & 0xff) < (uVar8 & 0xff)) {
-          uVar15 = uVar8;
+        if ((uVar14 & 0xff) < (uVar7 & 0xff)) {
+          uVar14 = uVar7;
         }
       }
-      iVar13 = iVar13 + 1;
-      psVar11 = psVar11 + 1;
-    } while (iVar13 < iVar4);
+      iVar12 = iVar12 + 1;
+      psVar10 = psVar10 + 1;
+    } while (iVar12 < iVar4);
   }
-  iVar4 = uVar16 - (uVar15 & 0xff);
+  iVar4 = uVar15 - (uVar14 & 0xff);
   if (iVar4 < 0) {
     iVar4 = 0;
   }
   FUN_BATTLE_BIN__8017ded0();
-  iVar13 = iVar3 + 0x100;
+  iVar12 = iVar3 + 0x100;
   if (0xff < iVar3) {
-    iVar13 = iVar3 + -0x100;
+    iVar12 = iVar3 + -0x100;
   }
   (&DAT_BATTLE_BIN__80192dd8)[iVar3 * 5] = bVar1 + 1;
-  (&DAT_BATTLE_BIN__80192dd8)[iVar13 * 5] = bVar1 + 1;
+  (&DAT_BATTLE_BIN__80192dd8)[iVar12 * 5] = bVar1 + 1;
   if (iVar3 < 0x100) {
     (&DAT_BATTLE_BIN__80192dd9)[iVar3 * 5] = 1;
   }
   else {
-    (&DAT_BATTLE_BIN__80192dd9)[iVar13 * 5] = 1;
+    (&DAT_BATTLE_BIN__80192dd9)[iVar12 * 5] = 1;
   }
   FUN_BATTLE_BIN__80179518(bVar1);
-  iVar6 = iVar13 * 8;
   (&DAT_BATTLE_BIN__80192dd8)[iVar3 * 5] = '\0';
-  (&DAT_BATTLE_BIN__80192dd8)[iVar13 * 5] = '\0';
-  if ((((&DAT_BATTLE_BIN__8018f8d2)[iVar6] & 1) != 0) ||
+  (&DAT_BATTLE_BIN__80192dd8)[iVar12 * 5] = '\0';
+  if (((Map_Tile_Data[iVar12].tile_interaction & 1) != 0) ||
      (iVar3 = 0,
-     ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar6] & 0x1f) +
-     (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar6] * 2 <= uVar16)) {
+     (Map_Tile_Data[iVar12].height_small & 0x1f) + (uint)Map_Tile_Data[iVar12].height_whole * 2 <=
+     uVar15)) {
     iVar3 = 0;
-    iVar13 = 0;
+    iVar12 = 0;
     pcVar5 = &DAT_BATTLE_BIN__80192dd8;
-    pcVar14 = &DAT_BATTLE_BIN__801932d8;
+    pcVar13 = &DAT_BATTLE_BIN__801932d8;
     do {
-      iVar6 = iVar13 * 8;
-      if ((*pcVar5 == '\0') || (((&DAT_BATTLE_BIN__8018f8d2)[iVar6] & 1) != 0)) {
-        sVar10 = -1;
+      pmVar11 = (map_tile_data *)(iVar12 * 8 + -0x7fe6ff34);
+      if ((*pcVar5 == '\0') || ((Map_Tile_Data[iVar12].tile_interaction & 1) != 0)) {
+        sVar9 = -1;
       }
       else {
-        sVar10 = ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar6] & 0x1f) +
-                 (ushort)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar6] * 2;
+        sVar9 = (Map_Tile_Data[iVar12].height_small & 0x1f) +
+                (ushort)Map_Tile_Data[iVar12].height_whole * 2;
       }
-      sVar7 = -1;
-      if ((*pcVar14 != '\0') && (((&DAT_BATTLE_BIN__801900d2)[iVar6] & 1) == 0)) {
-        sVar7 = ((byte)(&DAT_BATTLE_BIN__801900cf)[iVar6] & 0x1f) +
-                (ushort)(byte)(&DAT_BATTLE_BIN__801900ce)[iVar6] * 2;
+      sVar6 = -1;
+      if ((*pcVar13 != '\0') && ((Map_Tile_Data[iVar12 + 0x100].tile_interaction & 1) == 0)) {
+        sVar6 = (Map_Tile_Data[iVar12 + 0x100].height_small & 0x1f) +
+                (ushort)Map_Tile_Data[iVar12 + 0x100].height_whole * 2;
       }
-      puVar9 = &DAT_BATTLE_BIN__8018f8cc + iVar6;
-      puVar12 = (undefined1 *)(iVar6 + -0x7fe6ff34);
-      if (sVar10 < sVar7) {
-        puVar9 = (undefined1 *)(iVar6 + -0x7fe6ff34);
-        puVar12 = &DAT_BATTLE_BIN__8018f8cc + iVar6;
-        sVar10 = sVar7;
+      pmVar8 = Map_Tile_Data + iVar12;
+      if (sVar9 < sVar6) {
+        pmVar8 = pmVar11;
+        pmVar11 = Map_Tile_Data + iVar12;
+        sVar9 = sVar6;
       }
-      if ((((int)sVar10 < (int)(short)iVar4) || ((int)(uVar16 + (uVar15 & 0xff)) < (int)sVar10)) ||
-         ((puVar9[6] & 2) != 0)) {
-        bVar1 = puVar9[5] & 0xbf;
+      if ((((int)sVar9 < (int)(short)iVar4) || ((int)(uVar15 + (uVar14 & 0xff)) < (int)sVar9)) ||
+         ((pmVar8->tile_interaction & 2) != 0)) {
+        bVar1 = pmVar8->tile_overlay & 0xbf;
       }
       else {
         iVar3 = iVar3 + 1;
-        bVar1 = puVar9[5] | 0x40;
+        bVar1 = pmVar8->tile_overlay | 0x40;
       }
-      puVar9[5] = bVar1;
+      pmVar8->tile_overlay = bVar1;
       pcVar5 = pcVar5 + 5;
-      iVar13 = iVar13 + 1;
-      puVar12[5] = puVar12[5] & 0xbf;
-      pcVar14 = pcVar14 + 5;
-    } while (iVar13 < 0x100);
+      iVar12 = iVar12 + 1;
+      pmVar11->tile_overlay = pmVar11->tile_overlay & 0xbf;
+      pcVar13 = pcVar13 + 5;
+    } while (iVar12 < 0x100);
   }
   return iVar3;
 }
@@ -75440,7 +80217,7 @@ int FUN_BATTLE_BIN__8017a16c(int param_1,byte param_2)
   byte bVar1;
   byte bVar2;
   uint uVar3;
-  undefined1 *puVar4;
+  map_tile_data *pmVar4;
   char cVar5;
   int iVar6;
   int iVar7;
@@ -75463,19 +80240,19 @@ int FUN_BATTLE_BIN__8017a16c(int param_1,byte param_2)
     (&DAT_BATTLE_BIN__801932d8)[iVar6] = '\0';
   }
   iVar6 = 0;
-  puVar4 = &DAT_BATTLE_BIN__8018f8cc;
+  pmVar4 = Map_Tile_Data;
   do {
-    if ((*pcVar8 == '\0') || ((puVar4[6] & 3) != 0)) {
-      bVar2 = puVar4[5] & 0xbf;
+    if ((*pcVar8 == '\0') || ((pmVar4->tile_interaction & 3) != 0)) {
+      bVar2 = pmVar4->tile_overlay & 0xbf;
     }
     else {
       iVar7 = iVar7 + 1;
-      bVar2 = puVar4[5] | 0x40;
+      bVar2 = pmVar4->tile_overlay | 0x40;
     }
-    puVar4[5] = bVar2;
+    pmVar4->tile_overlay = bVar2;
     pcVar8 = pcVar8 + 5;
     iVar6 = iVar6 + 1;
-    puVar4 = puVar4 + 8;
+    pmVar4 = pmVar4 + 1;
   } while (iVar6 < 0x200);
   return iVar7;
 }
@@ -75490,8 +80267,8 @@ void FUN_BATTLE_BIN__8017a290(CurActionTargetData *param_1)
   byte bVar3;
   byte bVar4;
   byte bVar5;
-  int iVar6;
-  uint uVar7;
+  uint uVar6;
+  int iVar7;
   int iVar8;
   undefined *puVar9;
   BattleUnitData *UnitBattlePtr;
@@ -75502,54 +80279,53 @@ void FUN_BATTLE_BIN__8017a290(CurActionTargetData *param_1)
   byte local_30;
   
   BATTLE_Unit_Targetting_to_Temp(param_1,&local_58);
-  uVar7 = (uint)local_58.AttackerID;
-  UnitBattlePtr = UnitBattleData + uVar7;
-  iVar8 = (int)(short)local_58.AttackToUse;
-  local_58.CurrentATUnit = SecondaryAbilityData[iVar8].AOE;
-  bVar1 = SecondaryAbilityData[iVar8].Range;
-  local_38 = SecondaryAbilityData[iVar8].Vert;
-  bVar2 = SecondaryAbilityData[iVar8].field_0x3;
-  local_30 = SecondaryAbilityData[iVar8].field_0x6;
-  uVar10 = (uint)UnitBattleData[uVar7].AllActionUnitData.MapX;
-  uVar11 = (uint)UnitBattleData[uVar7].AllActionUnitData.MapY;
-  iVar8 = GetUnitTileID(UnitBattlePtr);
-  iVar6 = iVar8 * 8;
+  uVar6 = (uint)local_58.AttackerID;
+  UnitBattlePtr = UnitBattleData + uVar6;
+  iVar7 = (int)(short)local_58.AttackToUse;
+  local_58.CurrentATUnit = SecondaryAbilityData[iVar7].AOE;
+  bVar1 = SecondaryAbilityData[iVar7].Range;
+  local_38 = SecondaryAbilityData[iVar7].Vert;
+  bVar2 = SecondaryAbilityData[iVar7].field_0x3;
+  local_30 = SecondaryAbilityData[iVar7].field_0x6;
+  uVar10 = (uint)UnitBattleData[uVar6].AllActionUnitData.MapX;
+  uVar11 = (uint)UnitBattleData[uVar6].AllActionUnitData.MapY;
+  iVar7 = GetUnitTileID(UnitBattlePtr);
   puVar9 = &DAT_BATTLE_BIN__80192dd8;
-  bVar3 = (&DAT_BATTLE_BIN__8018f8cf)[iVar6];
-  uVar7 = (uint)DAT_BATTLE_BIN__800e4e9c;
-  bVar4 = (&DAT_BATTLE_BIN__8018f8ce)[iVar6];
-  bVar5 = (&DAT_BATTLE_BIN__8018f8cf)[iVar6];
-  iVar6 = 0;
+  bVar3 = Map_Tile_Data[iVar7].height_small;
+  uVar6 = (uint)DAT_BATTLE_BIN__800e4e9c;
+  bVar4 = Map_Tile_Data[iVar7].height_whole;
+  bVar5 = Map_Tile_Data[iVar7].height_small;
+  iVar8 = 0;
   if (bVar1 == 0xff) {
     do {
       *puVar9 = 1;
       puVar9[1] = 0;
-      iVar6 = iVar6 + 1;
+      iVar8 = iVar8 + 1;
       puVar9 = puVar9 + 5;
-    } while (iVar6 < 0x200);
+    } while (iVar8 < 0x200);
   }
   else {
     do {
       *puVar9 = 0;
       puVar9[1] = 0;
-      iVar6 = iVar6 + 1;
+      iVar8 = iVar8 + 1;
       puVar9 = puVar9 + 5;
-    } while (iVar6 < 0x200);
-    iVar6 = (uVar11 * uVar7 + uVar10) * 5;
-    (&DAT_BATTLE_BIN__80192dd8)[iVar6] = bVar1 + 1;
-    (&DAT_BATTLE_BIN__801932d8)[iVar6] = bVar1 + 1;
-    (&DAT_BATTLE_BIN__80192dd9)[iVar6] = 1;
+    } while (iVar8 < 0x200);
+    iVar8 = (uVar11 * uVar6 + uVar10) * 5;
+    (&DAT_BATTLE_BIN__80192dd8)[iVar8] = bVar1 + 1;
+    (&DAT_BATTLE_BIN__801932d8)[iVar8] = bVar1 + 1;
+    (&DAT_BATTLE_BIN__80192dd9)[iVar8] = 1;
     if ((bVar2 & 0x20) == 0) {
       FUN_BATTLE_BIN__80179518(bVar1);
     }
     else {
       FUN_BATTLE_BIN__80179a20(UnitBattlePtr);
-      (&DAT_BATTLE_BIN__80192dd8)[iVar6] = '\0';
-      (&DAT_BATTLE_BIN__801932d8)[iVar6] = '\0';
+      (&DAT_BATTLE_BIN__80192dd8)[iVar8] = '\0';
+      (&DAT_BATTLE_BIN__801932d8)[iVar8] = '\0';
     }
   }
   if ((bVar2 & 1) != 0) {
-    (&DAT_BATTLE_BIN__80192dd8)[iVar8 * 5] = 0;
+    (&DAT_BATTLE_BIN__80192dd8)[iVar7 * 5] = 0;
   }
   if ((bVar2 & 0x10) != 0) {
     FUN_BATTLE_BIN__8017a7bc(uVar10,uVar11);
@@ -75605,25 +80381,26 @@ int FUN_BATTLE_BIN__8017a5bc(void)
 
 {
   byte bVar1;
-  byte *pbVar2;
+  map_tile_data *pmVar2;
   char *pcVar3;
   int iVar4;
   int iVar5;
   
   iVar5 = 0;
   iVar4 = 0;
-  pbVar2 = &DAT_BATTLE_BIN__8018f8cc;
+  pmVar2 = Map_Tile_Data;
   pcVar3 = &DAT_BATTLE_BIN__80192dd8;
   do {
-    if (((*pcVar3 == '\0') || ((pbVar2[6] & 1) != 0)) || ((*pbVar2 & 0x3f) == 0x3f)) {
-      bVar1 = pbVar2[5] & 0xbf;
+    if (((*pcVar3 == '\0') || ((pmVar2->tile_interaction & 1) != 0)) ||
+       ((pmVar2->TileType & 0x3f) == 0x3f)) {
+      bVar1 = pmVar2->tile_overlay & 0xbf;
     }
     else {
       iVar5 = iVar5 + 1;
-      bVar1 = pbVar2[5] | 0x40;
+      bVar1 = pmVar2->tile_overlay | 0x40;
     }
-    pbVar2[5] = bVar1;
-    pbVar2 = pbVar2 + 8;
+    pmVar2->tile_overlay = bVar1;
+    pmVar2 = pmVar2 + 1;
     iVar4 = iVar4 + 1;
     pcVar3 = pcVar3 + 5;
   } while (iVar4 < 0x200);
@@ -75636,25 +80413,26 @@ int FUN_BATTLE_BIN__8017a64c(void)
 
 {
   byte bVar1;
-  byte *pbVar2;
+  map_tile_data *pmVar2;
   undefined1 *puVar3;
   int iVar4;
   int iVar5;
   
   iVar5 = 0;
   iVar4 = 0;
-  pbVar2 = &DAT_BATTLE_BIN__8018f8cc;
+  pmVar2 = Map_Tile_Data;
   puVar3 = &DAT_BATTLE_BIN__80192dd8;
   do {
-    if (((puVar3[1] == '\0') || ((pbVar2[6] & 1) != 0)) || ((*pbVar2 & 0x3f) == 0x3f)) {
-      bVar1 = pbVar2[5] & 0xbf;
+    if (((puVar3[1] == '\0') || ((pmVar2->tile_interaction & 1) != 0)) ||
+       ((pmVar2->TileType & 0x3f) == 0x3f)) {
+      bVar1 = pmVar2->tile_overlay & 0xbf;
     }
     else {
       iVar5 = iVar5 + 1;
-      bVar1 = pbVar2[5] | 0x40;
+      bVar1 = pmVar2->tile_overlay | 0x40;
     }
-    pbVar2[5] = bVar1;
-    pbVar2 = pbVar2 + 8;
+    pmVar2->tile_overlay = bVar1;
+    pmVar2 = pmVar2 + 1;
     iVar4 = iVar4 + 1;
     puVar3 = puVar3 + 5;
   } while (iVar4 < 0x200);
@@ -75778,8 +80556,7 @@ uint FUN_BATTLE_BIN__8017a8c0(CurActionTargetData *param_1)
     goto LAB_BATTLE_BIN__8017aad0;
   case Geomancy:
     iVar3 = GetUnitTileID(UnitBattleData + uVar1);
-    unaff_s4 = (AbilityID)
-               (byte)GeomancyAbilityTable[(byte)(&DAT_BATTLE_BIN__8018f8cc)[iVar3 * 8] & 0x3f];
+    unaff_s4 = (AbilityID)(byte)GeomancyAbilityTable[Map_Tile_Data[iVar3].TileType & 0x3f];
     iVar3 = 1;
     break;
   case DEPRECATED:
@@ -76010,7 +80787,7 @@ undefined4 FUN_BATTLE_BIN__8017ac90(CurActionTargetData *param_1)
     uVar3 = 0;
     if (uVar5 < 0x15) {
       iVar4 = GetUnitTileID(UnitBattleData + uVar5);
-      (&DAT_BATTLE_BIN__8018f8d1)[iVar4 * 8] = (&DAT_BATTLE_BIN__8018f8d1)[iVar4 * 8] | 0x80;
+      Map_Tile_Data[iVar4].tile_overlay = Map_Tile_Data[iVar4].tile_overlay | 0x80;
       uVar3 = 0;
     }
   }
@@ -76108,18 +80885,17 @@ LAB_BATTLE_BIN__8017b088:
           uVar8 = uVar7;
         }
         iVar3 = local_30 * DAT_BATTLE_BIN__800e4e9c + local_38;
-        iVar2 = iVar3 * 8;
-        iVar3 = (iVar3 + 0x100) * 8;
-        uVar5 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar2] * 2 +
-                ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar2] & 0x1f);
-        uVar1 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar3] * 2 +
-                ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar3] & 0x1f);
+        iVar2 = iVar3 + 0x100;
+        uVar5 = (uint)Map_Tile_Data[iVar3].height_whole * 2 +
+                (Map_Tile_Data[iVar3].height_small & 0x1f);
+        uVar1 = (uint)Map_Tile_Data[iVar2].height_whole * 2 +
+                (Map_Tile_Data[iVar2].height_small & 0x1f);
         uVar7 = FUN_BATTLE_BIN__8017dc88(local_38,local_30,0);
         uVar4 = FUN_BATTLE_BIN__8017dc88(local_38,local_30,1);
-        if (((&DAT_BATTLE_BIN__8018f8d2)[iVar2] & 1) != 0) {
+        if ((Map_Tile_Data[iVar3].tile_interaction & 1) != 0) {
           uVar5 = 0xff;
         }
-        if (((&DAT_BATTLE_BIN__8018f8d2)[iVar3] & 1) != 0) {
+        if ((Map_Tile_Data[iVar2].tile_interaction & 1) != 0) {
           uVar1 = 0xff;
         }
         uVar6 = uVar5;
@@ -76205,15 +80981,15 @@ uint FUN_BATTLE_BIN__8017b3f4(uint param_1)
 void FUN_BATTLE_BIN__8017b4a0(void)
 
 {
-  undefined1 *puVar1;
+  map_tile_data *pmVar1;
   int iVar2;
   
   iVar2 = 0;
-  puVar1 = &DAT_BATTLE_BIN__8018f8cc;
+  pmVar1 = Map_Tile_Data;
   do {
     iVar2 = iVar2 + 1;
-    puVar1[5] = puVar1[5] & 0x7f;
-    puVar1 = puVar1 + 8;
+    pmVar1->tile_overlay = pmVar1->tile_overlay & 0x7f;
+    pmVar1 = pmVar1 + 1;
   } while (iVar2 < 0x200);
   return;
 }
@@ -76305,8 +81081,7 @@ LAB_BATTLE_BIN__8017b740:
               if (bVar4) {
                 iVar5 = GetUnitTileID(UnitBattlePtr);
                 iVar9 = iVar9 + 1;
-                (&DAT_BATTLE_BIN__8018f8d1)[iVar5 * 8] =
-                     (&DAT_BATTLE_BIN__8018f8d1)[iVar5 * 8] | 0x80;
+                Map_Tile_Data[iVar5].tile_overlay = Map_Tile_Data[iVar5].tile_overlay | 0x80;
               }
             }
           }
@@ -76337,13 +81112,13 @@ undefined4 FUN_BATTLE_BIN__8017b7b4(CurActionTargetData *param_1)
   BATTLE_Unit_Targetting_to_Temp(param_1,(CurActionTargetData *)&stack0xffffffe0);
   if ((((uint)local_14 < (uint)DAT_BATTLE_BIN__800e4e9c) &&
       ((uint)local_10 < (uint)DAT_BATTLE_BIN__800e4ea0)) && (local_12 < 2)) {
-    iVar1 = ((uint)local_12 * 0x100 + (uint)local_10 * (uint)DAT_BATTLE_BIN__800e4e9c +
-            (uint)local_14) * 8;
+    iVar1 = (uint)local_12 * 0x100 + (uint)local_10 * (uint)DAT_BATTLE_BIN__800e4e9c +
+            (uint)local_14;
     uVar2 = 0xffffffff;
-    if (((&DAT_BATTLE_BIN__8018f8d2)[iVar1] & 1) == 0) {
+    if ((Map_Tile_Data[iVar1].tile_interaction & 1) == 0) {
       FUN_BATTLE_BIN__8017b4a0();
       uVar2 = 1;
-      (&DAT_BATTLE_BIN__8018f8d1)[iVar1] = (&DAT_BATTLE_BIN__8018f8d1)[iVar1] | 0x80;
+      Map_Tile_Data[iVar1].tile_overlay = Map_Tile_Data[iVar1].tile_overlay | 0x80;
     }
   }
   else {
@@ -76367,12 +81142,13 @@ int FUN_BATTLE_BIN__8017b874(CurActionTargetData *param_1)
   uint uVar8;
   undefined1 *puVar9;
   undefined *puVar10;
-  uint uVar11;
-  int iVar12;
-  uint uVar13;
+  map_tile_data *pmVar11;
+  uint uVar12;
+  int iVar13;
   uint uVar14;
-  char *pcVar15;
-  uint uVar16;
+  uint uVar15;
+  char *pcVar16;
+  uint uVar17;
   byte local_38;
   AbilityID local_36;
   byte local_2e;
@@ -76383,131 +81159,129 @@ int FUN_BATTLE_BIN__8017b874(CurActionTargetData *param_1)
   
   BATTLE_Unit_Targetting_to_Temp(param_1,(CurActionTargetData *)&local_38);
   iVar7 = (int)(short)local_36;
-  uVar16 = (uint)local_38;
+  uVar17 = (uint)local_38;
   bVar6 = SecondaryAbilityData[iVar7].field_0x3;
-  uVar14 = (uint)(byte)SecondaryAbilityData[iVar7].field_0x4;
+  uVar15 = (uint)(byte)SecondaryAbilityData[iVar7].field_0x4;
   bVar1 = SecondaryAbilityData[iVar7].AOE;
   bVar2 = SecondaryAbilityData[iVar7].Vert;
   if ((SecondaryAbilityData[iVar7].field_0x6 & 0x20) != 0) {
     bVar6 = bVar6 | 0x20;
-    uVar14 = uVar14 & 0x39;
+    uVar15 = uVar15 & 0x39;
   }
-  if ((uVar14 & 6) == 0) {
+  if ((uVar15 & 6) == 0) {
     if (local_2e == 6) {
       uVar8 = (uint)local_2d;
-      uVar13 = (uint)UnitBattleData[uVar8].AllActionUnitData.MapX;
-      uVar11 = (uint)UnitBattleData[uVar8].AllActionUnitData.MapY;
+      uVar14 = (uint)UnitBattleData[uVar8].AllActionUnitData.MapX;
+      uVar12 = (uint)UnitBattleData[uVar8].AllActionUnitData.MapY;
       uVar8 = (uint)(*(ushort *)&UnitBattleData[uVar8].AllActionUnitData.MapY >> 0xf);
     }
     else {
-      uVar13 = (uint)local_2c;
-      uVar11 = (uint)local_28;
+      uVar14 = (uint)local_2c;
+      uVar12 = (uint)local_28;
       uVar8 = (uint)local_2a;
     }
   }
   else {
-    uVar13 = (uint)UnitBattleData[uVar16].AllActionUnitData.MapX;
-    uVar11 = (uint)UnitBattleData[uVar16].AllActionUnitData.MapY;
-    uVar8 = (uint)(*(ushort *)&UnitBattleData[uVar16].AllActionUnitData.MapY >> 0xf);
+    uVar14 = (uint)UnitBattleData[uVar17].AllActionUnitData.MapX;
+    uVar12 = (uint)UnitBattleData[uVar17].AllActionUnitData.MapY;
+    uVar8 = (uint)(*(ushort *)&UnitBattleData[uVar17].AllActionUnitData.MapY >> 0xf);
   }
-  if (((uVar13 < DAT_BATTLE_BIN__800e4e9c) && (uVar11 < DAT_BATTLE_BIN__800e4ea0)) && (uVar8 < 2)) {
-    uVar13 = uVar8 * 0x100 + uVar11 * DAT_BATTLE_BIN__800e4e9c + uVar13;
-    iVar7 = uVar13 * 8;
-    if (((&DAT_BATTLE_BIN__8018f8d2)[iVar7] & 1) == 0) {
-      bVar3 = (&DAT_BATTLE_BIN__8018f8ce)[iVar7];
-      bVar4 = (&DAT_BATTLE_BIN__8018f8cf)[iVar7];
-      bVar5 = (&DAT_BATTLE_BIN__8018f8cf)[iVar7];
-      iVar7 = 0;
-      if (bVar1 == 0xff) {
-        puVar9 = &DAT_BATTLE_BIN__80192dd8;
-        do {
-          *puVar9 = 1;
-          puVar9[1] = 0;
-          iVar7 = iVar7 + 1;
-          puVar9 = puVar9 + 5;
-        } while (iVar7 < 0x200);
-      }
-      else {
-        puVar10 = &DAT_BATTLE_BIN__80192dd8;
-        do {
-          *puVar10 = 0;
-          puVar10[1] = 0;
-          iVar7 = iVar7 + 1;
-          puVar10 = puVar10 + 5;
-        } while (iVar7 < 0x200);
-        iVar7 = uVar13 * 5;
-        (&DAT_BATTLE_BIN__80192dd8)[iVar7] = bVar1 + 1;
-        if (uVar13 < 0x100) {
-          pcVar15 = &DAT_BATTLE_BIN__801932d8 + iVar7;
-          (&DAT_BATTLE_BIN__80192dd9)[iVar7] = 1;
-        }
-        else {
-          pcVar15 = (char *)((int)UnitBattleData + iVar7 + 0x200c);
-          *(undefined *)((int)UnitBattleData + iVar7 + 0x200d) = 1;
-        }
-        (&DAT_BATTLE_BIN__80192dd9)[(uVar13 & 0xff) * 5] = 1;
-        if ((bVar6 & 0x20) == 0) {
-          (&DAT_BATTLE_BIN__80192dd8)[iVar7] = bVar1 + 1;
-          *pcVar15 = bVar1 + 1;
-          FUN_BATTLE_BIN__80179518(bVar1);
-          FUN_BATTLE_BIN__801792a4
-                    ((uint)bVar3 * 2 + (bVar4 & 0x1f) + (uint)(bVar5 >> 5) * 2 & 0xff,(uint)bVar2,
-                     uVar14 >> 5 & 1);
-          FUN_BATTLE_BIN__80179204(local_36);
-        }
-      }
-      iVar7 = GetUnitTileID(UnitBattleData + uVar16);
-      pcVar15 = &DAT_BATTLE_BIN__80192dd8;
-      if ((uVar14 & 1) != 0) {
-        (&DAT_BATTLE_BIN__80192dd8)[iVar7 * 5] = 0;
-      }
-      if ((uVar14 & 4) != 0) {
-        FUN_BATTLE_BIN__8017be68((CurActionTargetData *)&local_38,'\x01');
-      }
-      if ((uVar14 & 2) != 0) {
-        FUN_BATTLE_BIN__8017be68((CurActionTargetData *)&local_38,'\x03');
-      }
-      if ((uVar14 & 0xc0) != 0) {
-        FUN_BATTLE_BIN__8017bc78(uVar16,(byte)uVar14 & 0x80,(byte)uVar14 & 0x40,bVar1 == 0xff);
-      }
-      iVar7 = 0;
-      if ((uVar14 & 0xc0) != 0) {
-        iVar12 = 0;
-        puVar9 = &DAT_BATTLE_BIN__8018f8cc;
-        do {
-          if ((pcVar15[1] == '\0') || ((puVar9[6] & 3) != 0)) {
-            bVar6 = puVar9[5] & 0x7f;
-          }
-          else {
-            iVar7 = iVar7 + 1;
-            bVar6 = puVar9[5] | 0x80;
-          }
-          puVar9[5] = bVar6;
-          pcVar15 = pcVar15 + 5;
-          iVar12 = iVar12 + 1;
-          puVar9 = puVar9 + 8;
-        } while (iVar12 < 0x200);
-        return iVar7;
-      }
-      iVar12 = 0;
-      puVar9 = &DAT_BATTLE_BIN__8018f8cc;
-      do {
-        if ((*pcVar15 == '\0') || ((puVar9[6] & 3) != 0)) {
-          bVar6 = puVar9[5] & 0x7f;
-        }
-        else {
-          iVar7 = iVar7 + 1;
-          bVar6 = puVar9[5] | 0x80;
-        }
-        puVar9[5] = bVar6;
-        pcVar15 = pcVar15 + 5;
-        iVar12 = iVar12 + 1;
-        puVar9 = puVar9 + 8;
-      } while (iVar12 < 0x200);
-      return iVar7;
+  if ((((DAT_BATTLE_BIN__800e4e9c <= uVar14) || (DAT_BATTLE_BIN__800e4ea0 <= uVar12)) || (1 < uVar8)
+      ) || (uVar14 = uVar8 * 0x100 + uVar12 * DAT_BATTLE_BIN__800e4e9c + uVar14,
+           (Map_Tile_Data[uVar14].tile_interaction & 1) != 0)) {
+    return -1;
+  }
+  bVar3 = Map_Tile_Data[uVar14].height_whole;
+  bVar4 = Map_Tile_Data[uVar14].height_small;
+  bVar5 = Map_Tile_Data[uVar14].height_small;
+  iVar7 = 0;
+  if (bVar1 == 0xff) {
+    puVar9 = &DAT_BATTLE_BIN__80192dd8;
+    do {
+      *puVar9 = 1;
+      puVar9[1] = 0;
+      iVar7 = iVar7 + 1;
+      puVar9 = puVar9 + 5;
+    } while (iVar7 < 0x200);
+  }
+  else {
+    puVar10 = &DAT_BATTLE_BIN__80192dd8;
+    do {
+      *puVar10 = 0;
+      puVar10[1] = 0;
+      iVar7 = iVar7 + 1;
+      puVar10 = puVar10 + 5;
+    } while (iVar7 < 0x200);
+    iVar7 = uVar14 * 5;
+    (&DAT_BATTLE_BIN__80192dd8)[iVar7] = bVar1 + 1;
+    if (uVar14 < 0x100) {
+      pcVar16 = &DAT_BATTLE_BIN__801932d8 + iVar7;
+      (&DAT_BATTLE_BIN__80192dd9)[iVar7] = 1;
+    }
+    else {
+      pcVar16 = (char *)((int)UnitBattleData + iVar7 + 0x200c);
+      *(undefined *)((int)UnitBattleData + iVar7 + 0x200d) = 1;
+    }
+    (&DAT_BATTLE_BIN__80192dd9)[(uVar14 & 0xff) * 5] = 1;
+    if ((bVar6 & 0x20) == 0) {
+      (&DAT_BATTLE_BIN__80192dd8)[iVar7] = bVar1 + 1;
+      *pcVar16 = bVar1 + 1;
+      FUN_BATTLE_BIN__80179518(bVar1);
+      FUN_BATTLE_BIN__801792a4
+                ((uint)bVar3 * 2 + (bVar4 & 0x1f) + (uint)(bVar5 >> 5) * 2 & 0xff,(uint)bVar2,
+                 uVar15 >> 5 & 1);
+      FUN_BATTLE_BIN__80179204(local_36);
     }
   }
-  return -1;
+  iVar7 = GetUnitTileID(UnitBattleData + uVar17);
+  pcVar16 = &DAT_BATTLE_BIN__80192dd8;
+  if ((uVar15 & 1) != 0) {
+    (&DAT_BATTLE_BIN__80192dd8)[iVar7 * 5] = 0;
+  }
+  if ((uVar15 & 4) != 0) {
+    FUN_BATTLE_BIN__8017be68((CurActionTargetData *)&local_38,'\x01');
+  }
+  if ((uVar15 & 2) != 0) {
+    FUN_BATTLE_BIN__8017be68((CurActionTargetData *)&local_38,'\x03');
+  }
+  if ((uVar15 & 0xc0) != 0) {
+    FUN_BATTLE_BIN__8017bc78(uVar17,(byte)uVar15 & 0x80,(byte)uVar15 & 0x40,bVar1 == 0xff);
+  }
+  iVar7 = 0;
+  if ((uVar15 & 0xc0) != 0) {
+    iVar13 = 0;
+    pmVar11 = Map_Tile_Data;
+    do {
+      if ((pcVar16[1] == '\0') || ((pmVar11->tile_interaction & 3) != 0)) {
+        bVar6 = pmVar11->tile_overlay & 0x7f;
+      }
+      else {
+        iVar7 = iVar7 + 1;
+        bVar6 = pmVar11->tile_overlay | 0x80;
+      }
+      pmVar11->tile_overlay = bVar6;
+      pcVar16 = pcVar16 + 5;
+      iVar13 = iVar13 + 1;
+      pmVar11 = pmVar11 + 1;
+    } while (iVar13 < 0x200);
+    return iVar7;
+  }
+  iVar13 = 0;
+  pmVar11 = Map_Tile_Data;
+  do {
+    if ((*pcVar16 == '\0') || ((pmVar11->tile_interaction & 3) != 0)) {
+      bVar6 = pmVar11->tile_overlay & 0x7f;
+    }
+    else {
+      iVar7 = iVar7 + 1;
+      bVar6 = pmVar11->tile_overlay | 0x80;
+    }
+    pmVar11->tile_overlay = bVar6;
+    pcVar16 = pcVar16 + 5;
+    iVar13 = iVar13 + 1;
+    pmVar11 = pmVar11 + 1;
+  } while (iVar13 < 0x200);
+  return iVar7;
 }
 
 
@@ -76765,10 +81539,9 @@ undefined4 * FUN_BATTLE_BIN__8017c158(undefined4 *param_1,uint param_2)
     }
     MVar1 = (UnitBattlePtr->AllActionUnitData).Movements3;
     iVar5 = GetUnitTileID(UnitBattlePtr);
-    iVar5 = iVar5 * 8;
-    local_13 = (&DAT_BATTLE_BIN__8018f8ce)[iVar5] * '\x02' +
-               ((&DAT_BATTLE_BIN__8018f8cf)[iVar5] & 0x1f);
-    bVar9 = (byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar5] >> 5;
+    local_13 = Map_Tile_Data[iVar5].height_whole * '\x02' +
+               (Map_Tile_Data[iVar5].height_small & 0x1f);
+    bVar9 = Map_Tile_Data[iVar5].height_small >> 5;
     if (bVar9 == 0) {
       if (((UnitBattlePtr->AllActionUnitData).CurrentStatuses.Status3 & Float) != empty) {
         local_13 = local_13 + '\x02';
@@ -77288,7 +82061,7 @@ undefined4 FUN_BATTLE_BIN__8017ce44(int param_1,undefined *param_2)
         pbVar6 = pbVar6 + 1;
       } while ((int)pbVar6 < (int)(local_40 + 0x10));
       iVar7 = GetUnitTileID(UnitBattleData + CurrentAbilityData.PostActionTarID);
-      (&DAT_BATTLE_BIN__8018f8d1)[iVar7 * 8] = (&DAT_BATTLE_BIN__8018f8d1)[iVar7 * 8] | 0x80;
+      Map_Tile_Data[iVar7].tile_overlay = Map_Tile_Data[iVar7].tile_overlay | 0x80;
     }
     local_28 = FUN_BATTLE_BIN__8017d850((int)local_40,(int)pBVar8);
   }
@@ -77544,28 +82317,28 @@ void FUN_BATTLE_BIN__8017d708(void)
   int iVar1;
   uint uVar2;
   int iVar3;
-  undefined1 *puVar4;
+  map_tile_data *pmVar4;
   int iVar5;
   int iVar6;
   int unaff_s1;
   
   iVar6 = 0;
   iVar3 = 0;
-  puVar4 = &DAT_BATTLE_BIN__8018f8cc;
+  pmVar4 = Map_Tile_Data;
   iVar1 = 0;
   do {
     if (iVar3 == 0x100) {
       unaff_s1 = iVar6;
     }
     iVar5 = iVar1;
-    if ((puVar4[5] & 0x80) != 0) {
+    if ((pmVar4->tile_overlay & 0x80) != 0) {
       iVar5 = iVar1 + 5;
       iVar6 = iVar6 + 1;
-      puVar4[5] = puVar4[5] & 0x7f;
+      pmVar4->tile_overlay = pmVar4->tile_overlay & 0x7f;
       (&DAT_BATTLE_BIN__80192dd9)[iVar1] = (char)iVar3;
     }
     iVar3 = iVar3 + 1;
-    puVar4 = puVar4 + 8;
+    pmVar4 = pmVar4 + 1;
     iVar1 = iVar5;
   } while (iVar3 < 0x200);
   iVar1 = rand();
@@ -77579,7 +82352,7 @@ void FUN_BATTLE_BIN__8017d708(void)
     uVar2 = uVar2 + 0x100;
     iVar3 = uVar2 * 8;
   }
-  (&DAT_BATTLE_BIN__8018f8d1)[iVar3] = (&DAT_BATTLE_BIN__8018f8d1)[iVar3] | 0x80;
+  (&Map_Tile_Data[0].tile_overlay)[iVar3] = (&Map_Tile_Data[0].tile_overlay)[iVar3] | 0x80;
   CurrentAbilityData._115_1_ = 1;
   CurrentAbilityData.TarNewMapZ = (byte)(uVar2 >> 8);
   CurrentAbilityData.TarNewMapY = (byte)((uVar2 & 0xff) / (uint)DAT_BATTLE_BIN__800e4e9c);
@@ -77617,7 +82390,7 @@ int FUN_BATTLE_BIN__8017d850(int param_1,int param_2)
   do {
     if ((((&UnitBattleData[0].AllActionUnitData.UnitID)[iVar12] != 0xff) &&
         (bVar3 = FUN_BATTLE_BIN__8017bdd0(iVar11,local_44 + 3), CONCAT31(extraout_var,bVar3) == 0))
-       && (((&DAT_BATTLE_BIN__8018f8d1)[local_44[3] * 8] & 0x80) != 0)) {
+       && ((Map_Tile_Data[local_44[3]].tile_overlay & 0x80) != 0)) {
       iVar8 = iVar10;
       if (DAT_BATTLE_BIN__8018f4f8 != 0) {
         iVar5 = (uint)bVar1 - (uint)(&UnitBattleData[0].AllActionUnitData.MapX)[iVar12];
@@ -77778,8 +82551,8 @@ uint FUN_BATTLE_BIN__8017dca8(uint param_1,uint param_2,uint param_3,uint param_
       return 0xfffffffe;
     }
     if (((int)param_2 < (int)(uint)DAT_BATTLE_BIN__800e4ea0) && (param_3 < 2)) {
-      iVar1 = (param_3 * 0x100 + param_2 * DAT_BATTLE_BIN__800e4e9c + param_1) * 8;
-      if (((&DAT_BATTLE_BIN__8018f8d2)[iVar1] & 3) != 0) {
+      iVar1 = param_3 * 0x100 + param_2 * DAT_BATTLE_BIN__800e4e9c + param_1;
+      if ((Map_Tile_Data[iVar1].tile_interaction & 3) != 0) {
         return 0xfffffffe;
       }
       uVar3 = 0;
@@ -77787,11 +82560,11 @@ uint FUN_BATTLE_BIN__8017dca8(uint param_1,uint param_2,uint param_3,uint param_
         iVar4 = 0;
       }
       else {
-        if (((&DAT_BATTLE_BIN__8018f8cf)[iVar1] & 0xe0) != 0) {
+        if ((Map_Tile_Data[iVar1].height_small & 0xe0) != 0) {
           return 0xfffffffe;
         }
         iVar4 = 0;
-        if (2 < ((&DAT_BATTLE_BIN__8018f8cf)[iVar1] & 0x1f)) {
+        if (2 < (Map_Tile_Data[iVar1].height_small & 0x1f)) {
           return 0xfffffffe;
         }
       }
@@ -77994,8 +82767,7 @@ int FUN_BATTLE_BIN__8017e178(AbilityID *param_1)
       case CounterFlood:
         iVar2 = GetUnitTileID(UnitBattlePtr);
         uVar4 = 0x11;
-        uVar5 = (ushort)(byte)GeomancyAbilityTable
-                              [(byte)(&DAT_BATTLE_BIN__8018f8cc)[iVar2 * 8] & 0x3f];
+        uVar5 = (ushort)(byte)GeomancyAbilityTable[Map_Tile_Data[iVar2].TileType & 0x3f];
 LAB_BATTLE_BIN__8017e34c:
         uVar7 = FUN_BATTLE_BIN__8017e650((int)UnitBattlePtr,uVar4,uVar5,0);
         uVar7 = (uint)(uVar7 == 0) << 1;
@@ -78135,7 +82907,7 @@ uint FUN_BATTLE_BIN__8017e650(int param_1,undefined param_2,undefined2 param_3,i
       return 0xffffffff;
     }
     iVar4 = GetUnitTileID(UnitBattleData + iVar2);
-    if (((&DAT_BATTLE_BIN__8018f8d1)[iVar4 * 8] & 0x40) == 0) {
+    if ((Map_Tile_Data[iVar4].tile_overlay & 0x40) == 0) {
       return 0xfffffffe;
     }
   }
@@ -78359,9 +83131,9 @@ undefined4 FUN_BATTLE_BIN__8017ec18(int param_1,undefined2 *param_2)
   int iVar3;
   int iVar4;
   int iVar5;
-  int iVar6;
-  uint uVar7;
-  int iVar8;
+  uint uVar6;
+  int iVar7;
+  byte bVar8;
   int iVar9;
   int iVar10;
   int iVar11;
@@ -78386,8 +83158,8 @@ undefined4 FUN_BATTLE_BIN__8017ec18(int param_1,undefined2 *param_2)
       iVar5 = GetUnitTileID((BattleUnitData *)
                             (&UnitBattleData[0].AllActionUnitData.BaseClass + iVar4));
       if (iVar14 == param_1) {
-        iVar5 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar5 * 8] * 2 +
-                ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar5 * 8] & 0x1f);
+        iVar5 = (uint)Map_Tile_Data[iVar5].height_whole * 2 +
+                (Map_Tile_Data[iVar5].height_small & 0x1f);
         unaff_s3 = iVar5 + -10;
         unaff_s5 = iVar5 + 4;
         if (unaff_s3 < 0) {
@@ -78434,33 +83206,32 @@ undefined4 FUN_BATTLE_BIN__8017ec18(int param_1,undefined2 *param_2)
             iVar10 = (uint)bVar2 - (iVar5 + iVar3);
             do {
               if ((-1 < iVar10) && (iVar10 < (int)(uint)DAT_BATTLE_BIN__800e4ea0)) {
-                iVar8 = 0;
+                iVar7 = 0;
                 do {
-                  iVar9 = iVar8 * 0x100 + (uint)DAT_BATTLE_BIN__800e4e9c * iVar10 + iVar13;
-                  iVar6 = iVar9 * 8;
-                  uVar7 = (byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar6] & 0x1f;
-                  if (((((((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar6] >> 5 < 3) && (uVar7 < 3)) &&
-                        (((&DAT_BATTLE_BIN__8018f8d2)[iVar6] & 1) == 0)) &&
-                       ((((&DAT_BATTLE_BIN__8018f8d2)[iVar6] & 2) == 0 &&
+                  iVar9 = iVar7 * 0x100 + (uint)DAT_BATTLE_BIN__800e4e9c * iVar10 + iVar13;
+                  uVar6 = Map_Tile_Data[iVar9].height_small & 0x1f;
+                  if ((((((Map_Tile_Data[iVar9].height_small >> 5 < 3) && (uVar6 < 3)) &&
+                        ((Map_Tile_Data[iVar9].tile_interaction & 1) == 0)) &&
+                       (((Map_Tile_Data[iVar9].tile_interaction & 2) == 0 &&
                         ((&DAT_BATTLE_BIN__80192dda)[iVar9 * 5] == '\0')))) &&
-                      ((((&DAT_BATTLE_BIN__8018f8cc)[iVar6] & 0x3f) != 0x12 &&
-                       (((&DAT_BATTLE_BIN__8018f8cc)[iVar6] & 0x3f) != 0x1c)))) &&
+                      ((bVar8 = Map_Tile_Data[iVar9].TileType & 0x3f, bVar8 != 0x12 &&
+                       (bVar8 != 0x1c)))) &&
                      ((iVar14 != 0 ||
-                      ((iVar6 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar6] * 2 + uVar7,
-                       iVar6 <= unaff_s5 && (unaff_s3 <= iVar6)))))) {
+                      ((iVar9 = (uint)Map_Tile_Data[iVar9].height_whole * 2 + uVar6,
+                       iVar9 <= unaff_s5 && (unaff_s3 <= iVar9)))))) {
                     *param_2 = (short)iVar13;
                     (&DAT_BATTLE_BIN__80193880)[iVar4 * 3] = (char)iVar13;
                     iVar4 = DAT_BATTLE_BIN__8018f4f4;
                     param_2[2] = (short)iVar10;
                     (&DAT_BATTLE_BIN__80193881)[iVar4 * 3] = (char)iVar10;
                     iVar4 = DAT_BATTLE_BIN__8018f4f4;
-                    param_2[1] = (short)iVar8;
-                    (&DAT_BATTLE_BIN__80193882)[iVar4 * 3] = (char)iVar8;
+                    param_2[1] = (short)iVar7;
+                    (&DAT_BATTLE_BIN__80193882)[iVar4 * 3] = (char)iVar7;
                     DAT_BATTLE_BIN__8018f4f4 = DAT_BATTLE_BIN__8018f4f4 + 1;
                     return 0;
                   }
-                  iVar8 = iVar8 + 1;
-                } while (iVar8 < 2);
+                  iVar7 = iVar7 + 1;
+                } while (iVar7 < 2);
               }
               iVar10 = iVar10 + (iVar5 + iVar3) * 2;
               iVar12 = iVar12 + 2;
@@ -78572,7 +83343,7 @@ AbilityIDByte FUN_BATTLE_BIN__8017f2d8(BattleUnitData *param_1)
   int iVar1;
   
   iVar1 = GetUnitTileID(param_1);
-  return GeomancyAbilityTable[(byte)(&DAT_BATTLE_BIN__8018f8cc)[iVar1 * 8] & 0x3f];
+  return GeomancyAbilityTable[Map_Tile_Data[iVar1].TileType & 0x3f];
 }
 
 
@@ -78725,7 +83496,8 @@ undefined4 FUN_BATTLE_BIN__8017f6c4(int param_1)
   byte bVar2;
   ushort uVar3;
   int iVar4;
-  BattleUnitData *pBVar5;
+  byte bVar5;
+  BattleUnitData *pBVar6;
   
   bVar1 = UnitBattleData[param_1].AllActionUnitData.MapX;
   uVar3 = *(ushort *)&UnitBattleData[param_1].AllActionUnitData.MapY;
@@ -78735,37 +83507,36 @@ undefined4 FUN_BATTLE_BIN__8017f6c4(int param_1)
       return 0xffffffff;
     }
     iVar4 = GetUnitTileID(UnitBattleData + param_1);
-    iVar4 = iVar4 * 8;
-    if (((&DAT_BATTLE_BIN__8018f8d2)[iVar4] & 3) != 0) {
+    if ((Map_Tile_Data[iVar4].tile_interaction & 3) != 0) {
       return 0xffffffff;
     }
-    if (2 < ((&DAT_BATTLE_BIN__8018f8cf)[iVar4] & 0x1f)) {
+    if (2 < (Map_Tile_Data[iVar4].height_small & 0x1f)) {
       return 0xffffffff;
     }
     if ((((UnitBattleData[param_1].AllActionUnitData.Movements2 & Cannot_Enter_Water) != None) &&
-        (((&DAT_BATTLE_BIN__8018f8cf)[iVar4] & 0xe0) != 0)) &&
+        ((Map_Tile_Data[iVar4].height_small & 0xe0) != 0)) &&
        ((UnitBattleData[param_1].AllActionUnitData.Movements3 & Float) == None)) {
       return 0xffffffff;
     }
-    if ((2 < (byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar4] >> 5) &&
+    if ((2 < Map_Tile_Data[iVar4].height_small >> 5) &&
        ((UnitBattleData[param_1].AllActionUnitData.Movements3 &
         (Float|Move_Underwater|Move_in_Water|Walk_on_Water)) == None)) {
       return 0xffffffff;
     }
-    if ((((&DAT_BATTLE_BIN__8018f8cc)[iVar4] & 0x3f) != 0x12) &&
-       (((&DAT_BATTLE_BIN__8018f8cc)[iVar4] & 0x3f) != 0x1c)) {
+    bVar5 = Map_Tile_Data[iVar4].TileType & 0x3f;
+    if ((bVar5 != 0x12) && (bVar5 != 0x1c)) {
       iVar4 = 0;
       if (0 < param_1) {
-        pBVar5 = UnitBattleData;
+        pBVar6 = UnitBattleData;
         do {
           iVar4 = iVar4 + 1;
-          if (((((pBVar5->AllActionUnitData).UnitID != 0xff) &&
-               ((pBVar5->AllActionUnitData).MapX == bVar1)) &&
-              ((pBVar5->AllActionUnitData).MapY == bVar2)) &&
-             (*(ushort *)&(pBVar5->AllActionUnitData).MapY >> 0xf == uVar3 >> 0xf)) {
+          if (((((pBVar6->AllActionUnitData).UnitID != 0xff) &&
+               ((pBVar6->AllActionUnitData).MapX == bVar1)) &&
+              ((pBVar6->AllActionUnitData).MapY == bVar2)) &&
+             (*(ushort *)&(pBVar6->AllActionUnitData).MapY >> 0xf == uVar3 >> 0xf)) {
             return 0xffffffff;
           }
-          pBVar5 = pBVar5 + 1;
+          pBVar6 = pBVar6 + 1;
         } while (iVar4 < param_1);
       }
       return 0;
@@ -79017,13 +83788,13 @@ FUN_BATTLE_BIN__8017fddc(uint param_1,byte param_2,byte param_3,uint param_4,byt
     unaff_s6 = uVar6;
   }
   uVar7 = 0xffffffff;
-  if ((((&DAT_BATTLE_BIN__8018f8d2)
-        [((param_4 & 0xff) * 0x100 + (uint)param_3 * (uint)DAT_BATTLE_BIN__800e4e9c + (uint)param_2)
-         * 8] & 1) == 0) &&
+  if (((Map_Tile_Data
+        [(param_4 & 0xff) * 0x100 + (uint)param_3 * (uint)DAT_BATTLE_BIN__800e4e9c + (uint)param_2].
+        tile_interaction & 1) == 0) &&
      (uVar7 = 0xffffffff,
-     ((&DAT_BATTLE_BIN__8018f8d2)
-      [((param_4 & 0xff) * 0x100 + (uint)param_3 * (uint)DAT_BATTLE_BIN__800e4e9c + (uint)param_2) *
-       8] & 2) == 0)) {
+     (Map_Tile_Data
+      [(param_4 & 0xff) * 0x100 + (uint)param_3 * (uint)DAT_BATTLE_BIN__800e4e9c + (uint)param_2].
+      tile_interaction & 2) == 0)) {
     bVar1 = UnitBattleData[param_1].CurActionTargetData.field_0x14;
     uVar6 = (uint)bVar1;
     if (((bVar1 & 0x40) == 0) &&
@@ -79686,7 +84457,7 @@ int CheckIfCanAct(BattleUnitData *param_1)
      (iVar1 = 1, ((param_1->CurActionTargetData).field_0x14 & 0x40) == 0)) {
     iVar2 = GetUnitTileID(param_1);
     iVar1 = 0;
-    if ((1 < (byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar2 * 8] >> 5) &&
+    if ((1 < Map_Tile_Data[iVar2].height_small >> 5) &&
        ((iVar1 = 0,
         ((param_1->AllActionUnitData).CurrentStatuses.Status3 & (Frog|Chicken|Float)) == empty &&
         (iVar1 = 0,
@@ -80811,41 +85582,108 @@ undefined4 FUN_BATTLE_BIN__80183e00(int param_1)
 void FUN_BATTLE_BIN__80183ea0(undefined *param_1)
 
 {
-  undefined4 uVar1;
-  undefined4 uVar2;
-  undefined4 uVar3;
-  undefined4 *puVar4;
-  undefined4 *puVar5;
+  undefined4 *puVar1;
+  undefined uVar2;
+  undefined uVar3;
+  undefined uVar4;
+  undefined uVar5;
+  undefined uVar6;
+  undefined uVar7;
+  undefined uVar8;
+  undefined uVar9;
+  undefined uVar10;
+  undefined uVar11;
+  undefined uVar12;
+  undefined uVar13;
+  undefined uVar14;
+  undefined uVar15;
+  undefined uVar16;
+  undefined4 *puVar17;
+  map_tile_data *pmVar18;
   
   DAT_BATTLE_BIN__800e4e9c = *param_1;
-  puVar5 = (undefined4 *)&DAT_BATTLE_BIN__8018f8cc;
-  puVar4 = (undefined4 *)(param_1 + 2);
+  pmVar18 = Map_Tile_Data;
+  puVar17 = (undefined4 *)(param_1 + 2);
   DAT_BATTLE_BIN__800e4ea0 = param_1[1];
-  if (((uint)puVar4 & 3) == 0) {
+  if (((uint)puVar17 & 3) == 0) {
     do {
-      uVar1 = puVar4[1];
-      uVar2 = puVar4[2];
-      uVar3 = puVar4[3];
-      *puVar5 = *puVar4;
-      puVar5[1] = uVar1;
-      puVar5[2] = uVar2;
-      puVar5[3] = uVar3;
-      puVar4 = puVar4 + 4;
-      puVar5 = puVar5 + 4;
-    } while (puVar4 != (undefined4 *)(param_1 + 0x1002));
+      uVar2 = *(undefined *)((int)puVar17 + 1);
+      uVar3 = *(undefined *)((int)puVar17 + 2);
+      uVar4 = *(undefined *)((int)puVar17 + 3);
+      puVar1 = puVar17 + 1;
+      uVar5 = *(undefined *)puVar1;
+      uVar6 = *(undefined *)((int)puVar1 + 1);
+      uVar7 = *(undefined *)((int)puVar1 + 2);
+      uVar8 = *(undefined *)((int)puVar1 + 3);
+      puVar1 = puVar17 + 2;
+      uVar9 = *(undefined *)puVar1;
+      uVar10 = *(undefined *)((int)puVar1 + 1);
+      uVar11 = *(undefined *)((int)puVar1 + 2);
+      uVar12 = *(undefined *)((int)puVar1 + 3);
+      puVar1 = puVar17 + 3;
+      uVar13 = *(undefined *)puVar1;
+      uVar14 = *(undefined *)((int)puVar1 + 1);
+      uVar15 = *(undefined *)((int)puVar1 + 2);
+      uVar16 = *(undefined *)((int)puVar1 + 3);
+      pmVar18->TileType = *(undefined *)puVar17;
+      pmVar18->field_0x1 = uVar2;
+      pmVar18->height_whole = uVar3;
+      pmVar18->height_small = uVar4;
+      pmVar18->slope_height = uVar5;
+      pmVar18->tile_overlay = uVar6;
+      pmVar18->tile_interaction = uVar7;
+      pmVar18->field_0x7 = uVar8;
+      pmVar18[1].TileType = uVar9;
+      pmVar18[1].field_0x1 = uVar10;
+      pmVar18[1].height_whole = uVar11;
+      pmVar18[1].height_small = uVar12;
+      pmVar18[1].slope_height = uVar13;
+      pmVar18[1].tile_overlay = uVar14;
+      pmVar18[1].tile_interaction = uVar15;
+      pmVar18[1].field_0x7 = uVar16;
+      puVar17 = puVar17 + 4;
+      pmVar18 = pmVar18 + 2;
+    } while (puVar17 != (undefined4 *)(param_1 + 0x1002));
   }
   else {
     do {
-      uVar1 = puVar4[1];
-      uVar2 = puVar4[2];
-      uVar3 = puVar4[3];
-      *puVar5 = *puVar4;
-      puVar5[1] = uVar1;
-      puVar5[2] = uVar2;
-      puVar5[3] = uVar3;
-      puVar4 = puVar4 + 4;
-      puVar5 = puVar5 + 4;
-    } while (puVar4 != (undefined4 *)(param_1 + 0x1002));
+      uVar2 = *(undefined *)((int)puVar17 + 1);
+      uVar3 = *(undefined *)((int)puVar17 + 2);
+      uVar4 = *(undefined *)((int)puVar17 + 3);
+      puVar1 = puVar17 + 1;
+      uVar5 = *(undefined *)puVar1;
+      uVar6 = *(undefined *)((int)puVar1 + 1);
+      uVar7 = *(undefined *)((int)puVar1 + 2);
+      uVar8 = *(undefined *)((int)puVar1 + 3);
+      puVar1 = puVar17 + 2;
+      uVar9 = *(undefined *)puVar1;
+      uVar10 = *(undefined *)((int)puVar1 + 1);
+      uVar11 = *(undefined *)((int)puVar1 + 2);
+      uVar12 = *(undefined *)((int)puVar1 + 3);
+      puVar1 = puVar17 + 3;
+      uVar13 = *(undefined *)puVar1;
+      uVar14 = *(undefined *)((int)puVar1 + 1);
+      uVar15 = *(undefined *)((int)puVar1 + 2);
+      uVar16 = *(undefined *)((int)puVar1 + 3);
+      pmVar18->TileType = *(undefined *)puVar17;
+      pmVar18->field_0x1 = uVar2;
+      pmVar18->height_whole = uVar3;
+      pmVar18->height_small = uVar4;
+      pmVar18->slope_height = uVar5;
+      pmVar18->tile_overlay = uVar6;
+      pmVar18->tile_interaction = uVar7;
+      pmVar18->field_0x7 = uVar8;
+      pmVar18[1].TileType = uVar9;
+      pmVar18[1].field_0x1 = uVar10;
+      pmVar18[1].height_whole = uVar11;
+      pmVar18[1].height_small = uVar12;
+      pmVar18[1].slope_height = uVar13;
+      pmVar18[1].tile_overlay = uVar14;
+      pmVar18[1].tile_interaction = uVar15;
+      pmVar18[1].field_0x7 = uVar16;
+      puVar17 = puVar17 + 4;
+      pmVar18 = pmVar18 + 2;
+    } while (puVar17 != (undefined4 *)(param_1 + 0x1002));
   }
   return;
 }
@@ -80866,20 +85704,20 @@ void FUN_BATTLE_BIN__80183f60(undefined4 *param_1)
 
 
 
-undefined1 * FUN_BATTLE_BIN__80183fb4(int param_1,int param_2,uint param_3)
+map_tile_data * get_tile_data_ptr(int param_1,int param_2,uint param_3)
 
 {
-  undefined1 *puVar1;
+  map_tile_data *tile_data;
   
   if ((((param_1 < 0) || ((int)(uint)DAT_BATTLE_BIN__800e4e9c <= param_1)) || (param_2 < 0)) ||
      (((int)(uint)DAT_BATTLE_BIN__800e4ea0 <= param_2 || (1 < param_3)))) {
-    puVar1 = (undefined1 *)0x0;
+    tile_data = (map_tile_data *)0x0;
   }
   else {
-    puVar1 = &DAT_BATTLE_BIN__8018f8cc +
-             (param_3 * 0x100 + param_2 * (uint)DAT_BATTLE_BIN__800e4e9c + param_1) * 8;
+    tile_data = Map_Tile_Data + param_3 * 0x100 + param_2 * (uint)DAT_BATTLE_BIN__800e4e9c + param_1
+    ;
   }
-  return puVar1;
+  return tile_data;
 }
 
 
@@ -80890,49 +85728,49 @@ byte FUN_BATTLE_BIN__8018401c(undefined4 param_1,int param_2,int param_3,int par
   byte bVar1;
   int iVar2;
   
-  iVar2 = (param_4 * 0x100 + param_3 * (uint)DAT_BATTLE_BIN__800e4e9c + param_2) * 8;
+  iVar2 = param_4 * 0x100 + param_3 * (uint)DAT_BATTLE_BIN__800e4e9c + param_2;
   switch(param_1) {
   case 0:
-    bVar1 = (&DAT_BATTLE_BIN__8018f8cc)[iVar2] & 0x3f;
+    bVar1 = Map_Tile_Data[iVar2].TileType & 0x3f;
     break;
   case 1:
-    bVar1 = (&DAT_BATTLE_BIN__8018f8cd)[iVar2];
+    bVar1 = Map_Tile_Data[iVar2].field_0x1;
     break;
   case 2:
-    bVar1 = (&DAT_BATTLE_BIN__8018f8ce)[iVar2];
+    bVar1 = Map_Tile_Data[iVar2].height_whole;
     break;
   case 3:
-    bVar1 = (&DAT_BATTLE_BIN__8018f8cf)[iVar2] & 0x1f;
+    bVar1 = Map_Tile_Data[iVar2].height_small & 0x1f;
     break;
   case 4:
-    bVar1 = (byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar2] >> 5;
+    bVar1 = Map_Tile_Data[iVar2].height_small >> 5;
     break;
   case 5:
-    bVar1 = (&DAT_BATTLE_BIN__8018f8d0)[iVar2];
+    bVar1 = Map_Tile_Data[iVar2].slope_height;
     break;
   case 6:
-    bVar1 = (&DAT_BATTLE_BIN__8018f8d1)[iVar2] & 0x1f;
+    bVar1 = Map_Tile_Data[iVar2].tile_overlay & 0x1f;
     break;
   case 7:
-    bVar1 = (&DAT_BATTLE_BIN__8018f8d2)[iVar2] & 1;
+    bVar1 = Map_Tile_Data[iVar2].tile_interaction & 1;
     break;
   case 8:
-    bVar1 = (byte)(&DAT_BATTLE_BIN__8018f8d2)[iVar2] >> 1 & 1;
+    bVar1 = Map_Tile_Data[iVar2].tile_interaction >> 1 & 1;
     break;
   case 9:
-    bVar1 = (byte)(&DAT_BATTLE_BIN__8018f8d2)[iVar2] >> 2 & 3;
+    bVar1 = Map_Tile_Data[iVar2].tile_interaction >> 2 & 3;
     break;
   case 10:
-    bVar1 = (byte)(&DAT_BATTLE_BIN__8018f8d2)[iVar2] >> 4 & 7;
+    bVar1 = Map_Tile_Data[iVar2].tile_interaction >> 4 & 7;
     break;
   case 0xb:
-    bVar1 = (&DAT_BATTLE_BIN__8018f8d3)[iVar2] & 0xf;
+    bVar1 = Map_Tile_Data[iVar2].field_0x7 & 0xf;
     break;
   case 0xc:
-    bVar1 = (byte)(&DAT_BATTLE_BIN__8018f8d1)[iVar2] >> 5 & 1;
+    bVar1 = Map_Tile_Data[iVar2].tile_overlay >> 5 & 1;
     break;
   case 0xd:
-    bVar1 = (byte)(&DAT_BATTLE_BIN__8018f8d1)[iVar2] >> 6 & 1;
+    bVar1 = Map_Tile_Data[iVar2].tile_overlay >> 6 & 1;
     break;
   default:
     bVar1 = 0xff;
@@ -81006,12 +85844,13 @@ void FUN_BATTLE_BIN__801843ec(void)
   UniqueEffect2 *pUVar3;
   uint uVar4;
   uint uVar5;
-  int iVar6;
+  byte bVar6;
   int iVar7;
-  uint uVar8;
-  int iVar9;
+  int iVar8;
+  uint uVar9;
   int iVar10;
-  uint uVar11;
+  int iVar11;
+  uint uVar12;
   
   if (CurrentAbilityData.CanKnockback) {
     EVar1 = (TarBattlePtr->AllActionUnitData).EntdTeamFlags;
@@ -81019,47 +85858,47 @@ void FUN_BATTLE_BIN__801843ec(void)
            ~(is_ramza|immortal|player_control|light_blue|random_present|always_present)) &&
          ((EVar1 & is_ramza) != is_ramza)) && (TarBattlePtr != CasBattlePtr)) &&
        ((TarBattlePtr->CurActionTargetData).field_0x14 == '\0')) {
-      uVar11 = (uint)(TarBattlePtr->AllActionUnitData).MapX;
-      uVar8 = (uint)(TarBattlePtr->AllActionUnitData).MapY;
-      iVar10 = uVar11 - (CasBattlePtr->AllActionUnitData).MapX;
-      iVar9 = uVar8 - (CasBattlePtr->AllActionUnitData).MapY;
+      uVar12 = (uint)(TarBattlePtr->AllActionUnitData).MapX;
+      uVar9 = (uint)(TarBattlePtr->AllActionUnitData).MapY;
+      iVar11 = uVar12 - (CasBattlePtr->AllActionUnitData).MapX;
+      iVar10 = uVar9 - (CasBattlePtr->AllActionUnitData).MapY;
+      iVar8 = iVar11;
+      if (iVar11 < 0) {
+        iVar8 = -iVar11;
+      }
       iVar7 = iVar10;
       if (iVar10 < 0) {
         iVar7 = -iVar10;
       }
-      iVar6 = iVar9;
-      if (iVar9 < 0) {
-        iVar6 = -iVar9;
-      }
-      if (iVar7 + iVar6 != 0) {
-        if (iVar6 < iVar7) {
-          iVar7 = 3;
-          if (iVar10 < 1) {
-            iVar7 = 1;
-            uVar11 = uVar11 - 1;
+      if (iVar8 + iVar7 != 0) {
+        if (iVar7 < iVar8) {
+          iVar8 = 3;
+          if (iVar11 < 1) {
+            iVar8 = 1;
+            uVar12 = uVar12 - 1;
           }
           else {
-            uVar11 = uVar11 + 1;
+            uVar12 = uVar12 + 1;
           }
         }
         else {
-          iVar7 = 2;
-          if (iVar9 < 1) {
-            iVar7 = 0;
-            uVar8 = uVar8 - 1;
+          iVar8 = 2;
+          if (iVar10 < 1) {
+            iVar8 = 0;
+            uVar9 = uVar9 - 1;
           }
           else {
-            uVar8 = uVar8 + 1;
+            uVar9 = uVar9 + 1;
           }
         }
-        uVar4 = FUN_BATTLE_BIN__80184610(iVar7,uVar11,uVar8);
+        uVar4 = FUN_BATTLE_BIN__80184610(iVar8,uVar12,uVar9);
         if (-1 < (int)uVar4) {
-          iVar7 = (uVar4 * 0x100 + uVar8 * DAT_BATTLE_BIN__800e4e9c + uVar11) * 8;
-          if (((((&DAT_BATTLE_BIN__8018f8d2)[iVar7] & 2) == 0) &&
-              (((&DAT_BATTLE_BIN__8018f8cf)[iVar7] & 0xe0) == 0)) &&
-             ((((&DAT_BATTLE_BIN__8018f8cf)[iVar7] & 0x1f) < 3 &&
-              ((((&DAT_BATTLE_BIN__8018f8cc)[iVar7] & 0x3f) != 0x12 &&
-               (((&DAT_BATTLE_BIN__8018f8cc)[iVar7] & 0x3f) != 0x1c)))))) {
+          iVar8 = uVar4 * 0x100 + uVar9 * DAT_BATTLE_BIN__800e4e9c + uVar12;
+          bVar6 = Map_Tile_Data[iVar8].TileType & 0x3f;
+          if ((((Map_Tile_Data[iVar8].tile_interaction & 2) == 0) &&
+              ((Map_Tile_Data[iVar8].height_small & 0xe0) == 0)) &&
+             (((Map_Tile_Data[iVar8].height_small & 0x1f) < 3 &&
+              ((bVar6 != 0x12 && (bVar6 != 0x1c)))))) {
             uVar5 = FUN_BATTLE_BIN__8017f020((int)TarBattlePtr);
             CurrentAbilityData._81_1_ = 0x81;
             if (((uVar5 & 0x80) != 0) &&
@@ -81068,8 +85907,8 @@ void FUN_BATTLE_BIN__801843ec(void)
                )) {
               CurrentAbilityData._81_1_ = 0x82;
             }
-            CurrentAbilityData.TarNewMapX = (byte)uVar11;
-            CurrentAbilityData.TarNewMapY = (byte)uVar8;
+            CurrentAbilityData.TarNewMapX = (byte)uVar12;
+            CurrentAbilityData.TarNewMapY = (byte)uVar9;
             CurrentAbilityData.TarNewMapZ = (byte)uVar4;
             uVar2._0_1_ = TarCurActPtr->UniqueEffect1;
             uVar2._1_1_ = TarCurActPtr->UniqueEffect2;
@@ -81129,26 +85968,24 @@ uint FUN_BATTLE_BIN__80184610(int param_1,uint param_2,uint param_3)
     unaff_s1 = 2;
   }
   iVar1 = GetUnitTileID(TarBattlePtr);
-  iVar1 = iVar1 * 8;
-  uVar5 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar1] * 2 +
-          ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar1] & 0x1f) *
-          ((int)(uint)(byte)(&DAT_BATTLE_BIN__8018f8d0)[iVar1] >> (unaff_s0 & 0x1f) & 3U);
+  uVar5 = (uint)Map_Tile_Data[iVar1].height_whole * 2 +
+          (Map_Tile_Data[iVar1].height_small & 0x1f) *
+          ((int)(uint)Map_Tile_Data[iVar1].slope_height >> (unaff_s0 & 0x1f) & 3U);
   iVar1 = param_3 * DAT_BATTLE_BIN__800e4e9c + param_2;
-  iVar2 = iVar1 * 8;
-  iVar1 = (iVar1 + 0x100) * 8;
-  if (((&DAT_BATTLE_BIN__8018f8d2)[iVar2] & 1) == 0) {
-    uVar4 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar2] * 2 +
-            ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar2] & 0x1f) *
-            ((int)(uint)(byte)(&DAT_BATTLE_BIN__8018f8d0)[iVar2] >> (unaff_s1 & 0x1f) & 3U);
+  iVar2 = iVar1 + 0x100;
+  if ((Map_Tile_Data[iVar1].tile_interaction & 1) == 0) {
+    uVar4 = (uint)Map_Tile_Data[iVar1].height_whole * 2 +
+            (Map_Tile_Data[iVar1].height_small & 0x1f) *
+            ((int)(uint)Map_Tile_Data[iVar1].slope_height >> (unaff_s1 & 0x1f) & 3U);
   }
   else {
     uVar4 = 0xff;
   }
   uVar3 = 0xff;
-  if (((&DAT_BATTLE_BIN__8018f8d2)[iVar1] & 1) == 0) {
-    uVar3 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar1] * 2 +
-            ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar1] & 0x1f) *
-            ((int)(uint)(byte)(&DAT_BATTLE_BIN__8018f8d0)[iVar1] >> (unaff_s1 & 0x1f) & 3U);
+  if ((Map_Tile_Data[iVar2].tile_interaction & 1) == 0) {
+    uVar3 = (uint)Map_Tile_Data[iVar2].height_whole * 2 +
+            (Map_Tile_Data[iVar2].height_small & 0x1f) *
+            ((int)(uint)Map_Tile_Data[iVar2].slope_height >> (unaff_s1 & 0x1f) & 3U);
   }
   if (uVar5 < uVar4) {
     if (uVar3 > uVar5) {
@@ -81158,7 +85995,7 @@ LAB_BATTLE_BIN__80184820:
     if (uVar5 < uVar4) {
 LAB_BATTLE_BIN__80184828:
       if (uVar5 < uVar3) goto LAB_BATTLE_BIN__8018485c;
-      if ((int)(uVar4 - ((byte)(&DAT_BATTLE_BIN__8018f8d1)[iVar2] & 0x1f)) < (int)(uVar5 + 4)) {
+      if ((int)(uVar4 - (Map_Tile_Data[iVar1].tile_overlay & 0x1f)) < (int)(uVar5 + 4)) {
         return 0xffffffff;
       }
     }
@@ -81172,7 +86009,7 @@ LAB_BATTLE_BIN__8018485c:
   else {
     if (uVar3 <= uVar5) goto LAB_BATTLE_BIN__80184820;
     if (uVar5 < uVar4) goto LAB_BATTLE_BIN__80184828;
-    if ((int)(uVar3 - ((byte)(&DAT_BATTLE_BIN__8018f8d1)[iVar1] & 0x1f)) < (int)(uVar5 + 4)) {
+    if ((int)(uVar3 - (Map_Tile_Data[iVar2].tile_overlay & 0x1f)) < (int)(uVar5 + 4)) {
       return 0xffffffff;
     }
 LAB_BATTLE_BIN__80184868:
@@ -85744,7 +90581,7 @@ int PreFormulaSetup(CurActionTargetData *CasCurActData,byte TarID)
   if ((DAT_BATTLE_BIN__8018f5f0 == 0) || (TileID = FUN_BATTLE_BIN__8018af2c(), TileID == 0)) {
     if ((CurrentAbilityData._81_1_ & 0x80) == 0) {
       TileID = GetUnitTileID(TarBattlePtr);
-      CurrentAbilityData.CasTileType = (&DAT_BATTLE_BIN__8018f8cc)[TileID * 8] & 0x3f;
+      CurrentAbilityData.CasTileType = Map_Tile_Data[TileID].TileType & 0x3f;
       UsedItem = CurrentAbilityData.SecondaryUsedItem;
       if (CurrentAbilityData.NumHitsExecuted == 0) {
         UsedItem = CurrentAbilityData.PrimaryUsedItem;
@@ -87214,7 +92051,7 @@ undefined4 FUN_BATTLE_BIN__8018da88(BattleUnitData *param_1)
       TarBattlePtr = param_1;
       FUN_BATTLE_BIN__8018bd74(&(param_1->CurActionUnitData).HitFlag);
       iVar4 = GetUnitTileID(param_1);
-      if (((&DAT_8005ea10)[(byte)(&DAT_BATTLE_BIN__8018f8cc)[iVar4 * 8] & 0x3f] & 0x80) != 0) {
+      if (((&DAT_8005ea10)[Map_Tile_Data[iVar4].TileType & 0x3f] & 0x80) != 0) {
         (TarCurActPtr->StatusInfliction).Status4 = Poison;
         iVar4 = FUN_BATTLE_BIN__80184b24(0);
         if (iVar4 != 0) {
@@ -88037,9 +92874,9 @@ undefined4 FUN_BATTLE_BIN__8018f038(BattleUnitData *param_1)
         uVar2 = ActionState;
         if (((uVar5 == 0xffffffff) || (uVar5 == 3)) ||
            (((int)uVar5 < 2 &&
-            (((&DAT_BATTLE_BIN__8018f8d1)
-              [(local_20[0] * 0x100 + (uint)DAT_BATTLE_BIN__800e4e9c * local_24 + local_40._24_4_) *
-               8] & 0x40) == 0)))) {
+            ((Map_Tile_Data
+              [local_20[0] * 0x100 + (uint)DAT_BATTLE_BIN__800e4e9c * local_24 + local_40._24_4_].
+              tile_overlay & 0x40) == 0)))) {
           uVar4 = 0xffffffff;
           (param_1->AllActionUnitData).RHWeapon = NONE_ENTD;
           (param_1->AllActionUnitData).LHWeapon = NONE_ENTD;
@@ -88076,71 +92913,68 @@ FUN_BATTLE_BIN__8018f2b0
   uint uVar2;
   int iVar3;
   int iVar4;
-  int iVar5;
+  uint uVar5;
   uint uVar6;
-  uint uVar7;
   
   uVar2 = param_4 & 3;
   if (uVar2 == 2) {
-    iVar5 = -param_2;
+    iVar4 = -param_2;
     param_3 = -param_3;
   }
   else {
-    iVar5 = param_2;
+    iVar4 = param_2;
     if (uVar2 < 3) {
       if (uVar2 == 1) {
-        iVar5 = param_3;
+        iVar4 = param_3;
         param_3 = -param_2;
       }
     }
     else if (uVar2 == 3) {
-      iVar5 = -param_3;
+      iVar4 = -param_3;
       param_3 = param_2;
     }
   }
-  *param_5 = (uint)(param_1->AllActionUnitData).MapX + iVar5;
-  iVar5 = (uint)(param_1->AllActionUnitData).MapY + param_3;
-  *param_6 = iVar5;
+  *param_5 = (uint)(param_1->AllActionUnitData).MapX + iVar4;
+  iVar4 = (uint)(param_1->AllActionUnitData).MapY + param_3;
+  *param_6 = iVar4;
   if (*param_5 < 0) {
     return 0xffffffff;
   }
   if (*param_5 < (int)(uint)DAT_BATTLE_BIN__800e4e9c) {
-    if (iVar5 < 0) {
+    if (iVar4 < 0) {
       return 0xffffffff;
     }
-    if ((int)(uint)DAT_BATTLE_BIN__800e4ea0 <= iVar5) {
+    if ((int)(uint)DAT_BATTLE_BIN__800e4ea0 <= iVar4) {
       return 0xffffffff;
     }
-    iVar5 = GetUnitTileID(param_1);
-    iVar4 = (uint)DAT_BATTLE_BIN__800e4e9c * *param_6 + *param_5;
-    iVar3 = (iVar4 + 0x100) * 8;
-    iVar4 = iVar4 * 8;
-    if (((&DAT_BATTLE_BIN__8018f8d2)[iVar4] & 1) == 0) {
-      if (((&DAT_BATTLE_BIN__8018f8d2)[iVar3] & 1) == 0) {
-        uVar6 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar3];
-        uVar7 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar5 * 8];
-        uVar2 = (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar4];
+    iVar4 = GetUnitTileID(param_1);
+    iVar3 = (uint)DAT_BATTLE_BIN__800e4e9c * *param_6 + *param_5;
+    if ((Map_Tile_Data[iVar3].tile_interaction & 1) == 0) {
+      if ((Map_Tile_Data[iVar3 + 0x100].tile_interaction & 1) == 0) {
+        uVar5 = (uint)Map_Tile_Data[iVar3 + 0x100].height_whole;
+        uVar6 = (uint)Map_Tile_Data[iVar4].height_whole;
+        uVar2 = (uint)Map_Tile_Data[iVar3].height_whole;
         if ((param_4 & 0x100) == 0) {
-          iVar5 = uVar2 - uVar7;
-          if (uVar2 <= uVar7) {
-            iVar5 = uVar7 - uVar2;
+          iVar4 = uVar2 - uVar6;
+          if (uVar2 <= uVar6) {
+            iVar4 = uVar6 - uVar2;
           }
-          if (uVar7 < uVar6) {
-            iVar3 = uVar6 - uVar7;
+          if (uVar6 < uVar5) {
+            iVar3 = uVar5 - uVar6;
           }
           else {
-            iVar3 = uVar7 - uVar6;
+            iVar3 = uVar6 - uVar5;
           }
-          if (iVar3 < iVar5) goto LAB_BATTLE_BIN__8018f4a0;
-          if (iVar5 < iVar3) goto LAB_BATTLE_BIN__8018f498;
+          if (iVar3 < iVar4) goto LAB_BATTLE_BIN__8018f4a0;
+          if (iVar4 < iVar3) goto LAB_BATTLE_BIN__8018f498;
         }
-        if (uVar2 <= uVar6) goto LAB_BATTLE_BIN__8018f4a0;
+        if (uVar2 <= uVar5) goto LAB_BATTLE_BIN__8018f4a0;
       }
 LAB_BATTLE_BIN__8018f498:
       *param_7 = 0;
     }
     else {
-      if (((&DAT_BATTLE_BIN__8018f8d2)[iVar3] & 1) != 0) goto LAB_BATTLE_BIN__8018f40c;
+      if ((Map_Tile_Data[iVar3 + 0x100].tile_interaction & 1) != 0) goto LAB_BATTLE_BIN__8018f40c;
 LAB_BATTLE_BIN__8018f4a0:
       *param_7 = 1;
     }
@@ -88580,9 +93414,9 @@ undefined4 FUN_BATTLE_BIN__80194944(int param_1)
           uVar6 = 0;
           if (uVar4 != 0) {
             do {
-              iVar2 = (iVar10 * 0x100 + iVar8 * uVar4 + uVar6) * 8;
-              if ((((&DAT_BATTLE_BIN__8018f8d2)[iVar2] & 1) == 0) &&
-                 (((&DAT_BATTLE_BIN__8018f8cc)[iVar2] & 0x3f) != 0x3f)) {
+              iVar2 = iVar10 * 0x100 + iVar8 * uVar4 + uVar6;
+              if (((Map_Tile_Data[iVar2].tile_interaction & 1) == 0) &&
+                 ((Map_Tile_Data[iVar2].TileType & 0x3f) != 0x3f)) {
                 *(ushort *)(puVar9 + iVar8 * 2 + 0xc24) =
                      *(ushort *)(puVar9 + iVar8 * 2 + 0xc24) | (ushort)(0x8000 >> (uVar6 & 0x1f));
               }
@@ -88631,8 +93465,8 @@ undefined4 FUN_BATTLE_BIN__80194944(int param_1)
               if (((*(byte *)(DAT_BATTLE_BIN__801a0bbc + 0x94) & 8) == 0) ||
                  ((*(byte *)(DAT_BATTLE_BIN__801a0bbc + 0x182) & 0x80) != 0)) {
 LAB_BATTLE_BIN__80194c4c:
-                if (((&DAT_BATTLE_BIN__8018f8d1)[(iVar8 * 0x100 + iVar10 * uVar4 + uVar6) * 8] &
-                    0x20) != 0) {
+                if ((Map_Tile_Data[iVar8 * 0x100 + iVar10 * uVar4 + uVar6].tile_overlay & 0x20) != 0
+                   ) {
                   *(ushort *)(puVar11 + iVar10 * 2 + 0xa74) =
                        *(ushort *)(puVar11 + iVar10 * 2 + 0xa74) |
                        (ushort)(0x8000 >> (uVar6 & 0x1f));
@@ -90322,16 +95156,15 @@ int FUN_BATTLE_BIN__8019795c(void)
   iVar11 = 0;
   if (DAT_BATTLE_BIN__8019f3c8 == '\0') {
     iVar9 = 0;
-    pbVar3 = &DAT_BATTLE_BIN__8018f8d1;
+    pbVar3 = &Map_Tile_Data[0].tile_overlay;
     do {
       iVar9 = iVar9 + 1;
       *pbVar3 = *pbVar3 & 0xbf;
       pbVar3 = pbVar3 + 8;
     } while (iVar9 < 0x200);
-    iVar9 = ((uint)DAT_BATTLE_BIN__8019f3dc._2_1_ * (uint)DAT_BATTLE_BIN__801a01fe +
-             (uint)(byte)DAT_BATTLE_BIN__8019f3dc + (uint)DAT_BATTLE_BIN__8019f3dc._1_1_ * 0x100) *
-            8;
-    (&DAT_BATTLE_BIN__8018f8d1)[iVar9] = (&DAT_BATTLE_BIN__8018f8d1)[iVar9] | 0x40;
+    iVar9 = (uint)DAT_BATTLE_BIN__8019f3dc._2_1_ * (uint)DAT_BATTLE_BIN__801a01fe +
+            (uint)(byte)DAT_BATTLE_BIN__8019f3dc + (uint)DAT_BATTLE_BIN__8019f3dc._1_1_ * 0x100;
+    Map_Tile_Data[iVar9].tile_overlay = Map_Tile_Data[iVar9].tile_overlay | 0x40;
   }
   else {
     uVar1 = FUN_BATTLE_BIN__8017a8c0((CurActionTargetData *)&DAT_BATTLE_BIN__8019f3e0);
@@ -90356,8 +95189,8 @@ int FUN_BATTLE_BIN__8019795c(void)
           if (uVar4 != 0) {
             do {
               if (((uVar2 & 0x8000) != 0) &&
-                 (((byte)(&DAT_BATTLE_BIN__8018f8d1)[(iVar6 * uVar4 + uVar5 + iVar9 * 0x100) * 8] >>
-                   6 & 1) != 0)) {
+                 ((Map_Tile_Data[iVar6 * uVar4 + uVar5 + iVar9 * 0x100].tile_overlay >> 6 & 1) != 0)
+                 ) {
                 iVar11 = iVar11 + 1;
                 *puVar7 = *puVar7 | (ushort)(0x8000 >> (uVar5 & 0x1f));
               }
@@ -92414,12 +97247,12 @@ bool FUN_BATTLE_BIN__8019ad74(byte *param_1,byte *param_2)
   bVar1 = true;
   if (*param_2 < uVar3) {
     if (((uint)param_2[2] < (uint)DAT_BATTLE_BIN__801a01ff) &&
-       (iVar2 = (param_2[2] * uVar3 + (uint)*param_2) * 8,
-       ((&DAT_BATTLE_BIN__8018f8d2)[iVar2] & 1) == 0)) {
-      bVar1 = 2 < (int)((uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar2] -
-                       (uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)
-                                   [((uint)param_1[1] * 0x100 + param_1[2] * uVar3 + (uint)*param_1)
-                                    * 8]);
+       (iVar2 = param_2[2] * uVar3 + (uint)*param_2,
+       (Map_Tile_Data[iVar2].tile_interaction & 1) == 0)) {
+      bVar1 = 2 < (int)((uint)Map_Tile_Data[iVar2].height_whole -
+                       (uint)Map_Tile_Data
+                             [(uint)param_1[1] * 0x100 + param_1[2] * uVar3 + (uint)*param_1].
+                             height_whole);
     }
     else {
       bVar1 = true;
@@ -92744,9 +97577,9 @@ bool FUN_BATTLE_BIN__8019b4f4(byte *param_1)
   
   if ((DAT_BATTLE_BIN__801a0d7d == '\0') ||
      (bVar1 = false,
-     (byte)(&DAT_BATTLE_BIN__8018f8cf)
-           [((uint)param_1[2] * (uint)DAT_BATTLE_BIN__801a01fe + (uint)*param_1 +
-            (uint)param_1[1] * 0x100) * 8] >> 5 < 2)) {
+     Map_Tile_Data
+     [(uint)param_1[2] * (uint)DAT_BATTLE_BIN__801a01fe + (uint)*param_1 + (uint)param_1[1] * 0x100]
+     .height_small >> 5 < 2)) {
     if (ActionMenus[DAT_BATTLE_BIN__8019f3c4] == Geomancy) {
       bVar1 = FUN_BATTLE_BIN__8019b754(param_1);
     }
@@ -92795,15 +97628,15 @@ int FUN_BATTLE_BIN__8019b6b0(byte *param_1,int param_2)
   int iVar1;
   int iVar2;
   
-  iVar1 = ((uint)(*(ushort *)(param_2 + 0x48) >> 0xf) * 0x100 +
-           (uint)*(byte *)(param_2 + 0x48) * (uint)DAT_BATTLE_BIN__801a01fe +
-          (uint)*(byte *)(param_2 + 0x47)) * 8;
-  iVar2 = ((uint)param_1[1] * 0x100 + (uint)param_1[2] * (uint)DAT_BATTLE_BIN__801a01fe +
-          (uint)*param_1) * 8;
-  return (int)(((uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar1] * 2 +
-               ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar1] & 0x1f)) -
-              ((uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)[iVar2] * 2 +
-              ((byte)(&DAT_BATTLE_BIN__8018f8cf)[iVar2] & 0x1f))) / 2;
+  iVar1 = (uint)(*(ushort *)(param_2 + 0x48) >> 0xf) * 0x100 +
+          (uint)*(byte *)(param_2 + 0x48) * (uint)DAT_BATTLE_BIN__801a01fe +
+          (uint)*(byte *)(param_2 + 0x47);
+  iVar2 = (uint)param_1[1] * 0x100 + (uint)param_1[2] * (uint)DAT_BATTLE_BIN__801a01fe +
+          (uint)*param_1;
+  return (int)(((uint)Map_Tile_Data[iVar1].height_whole * 2 +
+               (Map_Tile_Data[iVar1].height_small & 0x1f)) -
+              ((uint)Map_Tile_Data[iVar2].height_whole * 2 +
+              (Map_Tile_Data[iVar2].height_small & 0x1f))) / 2;
 }
 
 
@@ -92812,9 +97645,9 @@ bool FUN_BATTLE_BIN__8019b754(byte *param_1)
 
 {
   return (byte)GeomancyAbilityTable
-               [(byte)(&DAT_BATTLE_BIN__8018f8cc)
-                      [((uint)param_1[1] * 0x100 + (uint)param_1[2] * (uint)DAT_BATTLE_BIN__801a01fe
-                       + (uint)*param_1) * 8] & 0x3f] == DAT_BATTLE_BIN__8019f3c6;
+               [Map_Tile_Data
+                [(uint)param_1[1] * 0x100 + (uint)param_1[2] * (uint)DAT_BATTLE_BIN__801a01fe +
+                 (uint)*param_1].TileType & 0x3f] == DAT_BATTLE_BIN__8019f3c6;
 }
 
 
@@ -93292,8 +98125,8 @@ void FUN_BATTLE_BIN__8019c3d4(void)
               do {
                 if ((uVar4 & 0x8000) != 0) {
                   if ((DAT_BATTLE_BIN__801a0d7d == '\0') ||
-                     ((byte)(&DAT_BATTLE_BIN__8018f8cf)
-                            [(iVar7 * uVar6 + uVar11 + iVar12 * 0x100) * 8] >> 5 < 2)) {
+                     (Map_Tile_Data[iVar7 * uVar6 + uVar11 + iVar12 * 0x100].height_small >> 5 < 2))
+                  {
                     if (ActionMenus[DAT_BATTLE_BIN__8019f3c4] == Geomancy) {
                       DAT_BATTLE_BIN__801a0038._0_1_ = (undefined)uVar11;
                       DAT_BATTLE_BIN__801a0038._2_1_ = (undefined)iVar7;
@@ -93554,11 +98387,11 @@ void FUN_BATTLE_BIN__8019cb94(void)
                                 (&UnitBattleData[0].AllActionUnitData.BaseClass + iVar5),can_act),
        CONCAT31(extraout_var,bVar2) == 0)) {
       iVar9 = 0;
-      bVar1 = (&DAT_BATTLE_BIN__8018f8ce)
-              [((uint)(*(ushort *)(&UnitBattleData[0].AllActionUnitData.MapY + iVar5) >> 0xf) *
-                0x100 + (uint)(&UnitBattleData[0].AllActionUnitData.MapY)[iVar5] *
-                        (uint)DAT_BATTLE_BIN__801a01fe +
-               (uint)(&UnitBattleData[0].AllActionUnitData.MapX)[iVar5]) * 8];
+      bVar1 = Map_Tile_Data
+              [(uint)(*(ushort *)(&UnitBattleData[0].AllActionUnitData.MapY + iVar5) >> 0xf) * 0x100
+               + (uint)(&UnitBattleData[0].AllActionUnitData.MapY)[iVar5] *
+                 (uint)DAT_BATTLE_BIN__801a01fe +
+               (uint)(&UnitBattleData[0].AllActionUnitData.MapX)[iVar5]].height_whole;
       do {
         uVar8 = (uint)(&UnitBattleData[0].AllActionUnitData.MapX)[iVar5] +
                 (uint)(byte)(&DAT_BATTLE_BIN__8019f358)[iVar9];
@@ -93571,9 +98404,8 @@ void FUN_BATTLE_BIN__8019cb94(void)
           do {
             iVar3 = iVar6 * 0x100;
             iVar6 = iVar6 + 1;
-            if (((uint)(byte)(&DAT_BATTLE_BIN__8018f8ce)
-                             [(iVar3 + uVar7 * DAT_BATTLE_BIN__801a01fe + uVar8) * 8] - (uint)bVar1)
-                + 2 < 5) {
+            if (((uint)Map_Tile_Data[iVar3 + uVar7 * DAT_BATTLE_BIN__801a01fe + uVar8].height_whole
+                - (uint)bVar1) + 2 < 5) {
               *(ushort *)(puVar4 + uVar7 * 2 + 0xb4c) =
                    *(ushort *)(puVar4 + uVar7 * 2 + 0xb4c) | (ushort)(0x8000 >> (uVar8 & 0x1f));
             }
@@ -93623,15 +98455,15 @@ undefined4 FUN_BATTLE_BIN__8019cd9c(void)
       FUN_BATTLE_BIN__8019f258((undefined *)puVar8);
       iVar1 = 0;
       if (DAT_BATTLE_BIN__8019f3c8 == '\0') {
-        pbVar4 = &DAT_BATTLE_BIN__8018f8d1;
+        pbVar4 = &Map_Tile_Data[0].tile_overlay;
         do {
           iVar1 = iVar1 + 1;
           *pbVar4 = *pbVar4 & 0xbf;
           pbVar4 = pbVar4 + 8;
         } while (iVar1 < 0x200);
-        iVar1 = ((uint)*(byte *)((int)puVar8 + 2) * (uint)DAT_BATTLE_BIN__801a01fe +
-                 (uint)*(byte *)puVar8 + (uint)*(byte *)((int)puVar8 + 1) * 0x100) * 8;
-        (&DAT_BATTLE_BIN__8018f8d1)[iVar1] = (&DAT_BATTLE_BIN__8018f8d1)[iVar1] | 0x40;
+        iVar1 = (uint)*(byte *)((int)puVar8 + 2) * (uint)DAT_BATTLE_BIN__801a01fe +
+                (uint)*(byte *)puVar8 + (uint)*(byte *)((int)puVar8 + 1) * 0x100;
+        Map_Tile_Data[iVar1].tile_overlay = Map_Tile_Data[iVar1].tile_overlay | 0x40;
       }
       else {
         uVar12 = FUN_BATTLE_BIN__8017a8c0((CurActionTargetData *)&DAT_BATTLE_BIN__8019f3e0);
@@ -93655,8 +98487,8 @@ undefined4 FUN_BATTLE_BIN__8019cd9c(void)
               if (uVar7 != 0) {
                 do {
                   if (((uVar13 & 0x8000) != 0) &&
-                     (((byte)(&DAT_BATTLE_BIN__8018f8d1)
-                             [(iVar11 * uVar7 + uVar10 + iVar1 * 0x100) * 8] >> 6 & 1) != 0)) {
+                     ((Map_Tile_Data[iVar11 * uVar7 + uVar10 + iVar1 * 0x100].tile_overlay >> 6 & 1)
+                      != 0)) {
                     *puVar5 = *puVar5 | (ushort)(0x8000 >> (uVar10 & 0x1f));
                   }
                   uVar7 = (uint)DAT_BATTLE_BIN__801a01fe;
@@ -94978,31 +99810,32 @@ void FUN_BATTLE_BIN__8019f2a4(int param_1,byte *param_2)
 // WARNING: Removing unreachable block (ram,0x801a0f08)
 // WARNING: Removing unreachable block (ram,0x801a0f30)
 
-void FUN_BATTLE_BIN__801a0e80(int param_1)
+void get_vfx_PAL(int vfx_ID)
 
 {
-  int iVar1;
-  ushort *puVar2;
+  int _vfx_addr;
+  ushort *_vfx_pal_addr;
   RECT local_10;
   
-  iVar1 = *(int *)((int)&PTR_DAT_BATTLE_BIN__801b48d0 + ((param_1 << 0x10) >> 0xe));
-  puVar2 = (ushort *)(iVar1 + *(int *)(iVar1 + 0x24));
-  DAT_BATTLE_BIN__801bbf80 = puVar2;
-  FUN_BATTLE_BIN__800926d8(puVar2,0xc,0,1);
-  FUN_BATTLE_BIN__800926d8(puVar2 + 0x100,0xd,0,1);
-  iVar1 = (uint)*(byte *)(puVar2 + 0x200) + (uint)*(byte *)((int)puVar2 + 0x401) * 0x100 +
-          (uint)*(byte *)(puVar2 + 0x201) * 0x10000;
-  if (*(char *)((int)puVar2 + 0x403) == '\0') {
-    local_10.h = (short)(iVar1 >> 7);
+  _vfx_addr = *(int *)((int)VFX_hdr_addr + ((vfx_ID << 0x10) >> 0xe));
+  _vfx_pal_addr = (ushort *)(_vfx_addr + *(int *)(_vfx_addr + 0x24));
+  DAT_BATTLE_BIN__801bbf80 = _vfx_pal_addr;
+  FUN_BATTLE_BIN__800926d8(_vfx_pal_addr,0xc,0,1);
+  FUN_BATTLE_BIN__800926d8(_vfx_pal_addr + 0x100,0xd,0,1);
+  _vfx_addr = (uint)*(byte *)(_vfx_pal_addr + 0x200) +
+              (uint)*(byte *)((int)_vfx_pal_addr + 0x401) * 0x100 +
+              (uint)*(byte *)(_vfx_pal_addr + 0x201) * 0x10000;
+  if (*(char *)((int)_vfx_pal_addr + 0x403) == '\0') {
+    local_10.h = (short)(_vfx_addr >> 7);
     local_10.w = 0x40;
   }
   else {
-    local_10.h = (short)((uint)iVar1 >> 8);
+    local_10.h = (short)((uint)_vfx_addr >> 8);
     local_10.w = 0x80;
   }
   local_10.x = 0x180;
   local_10.y = 0;
-  LoadImage(&local_10,(u_long *)(puVar2 + 0x202));
+  LoadImage(&local_10,(u_long *)(_vfx_pal_addr + 0x202));
   return;
 }
 
@@ -95011,7 +99844,7 @@ void FUN_BATTLE_BIN__801a0e80(int param_1)
 void FUN_BATTLE_BIN__801a0f70(void)
 
 {
-  DAT_BATTLE_BIN__801bbf78 = DAT_BATTLE_BIN__801badd4;
+  vfx_SEQ_addr = DAT_BATTLE_BIN__801badd4;
   return;
 }
 
@@ -95020,165 +99853,164 @@ void FUN_BATTLE_BIN__801a0f70(void)
 void FUN_BATTLE_BIN__801a0f88(void)
 
 {
-  DAT_BATTLE_BIN__801bbf8c = DAT_BATTLE_BIN__801baddc;
+  vfx_SEQ2_addr = DAT_BATTLE_BIN__801baddc;
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__801a0fa0(int param_1)
+void get_vfx_SEQ_addr(int vfx_ID)
 
 {
-  int *piVar1;
+  vfx_hdr *piVar1;
   
-  piVar1 = *(int **)((int)&PTR_DAT_BATTLE_BIN__801b48d0 + ((param_1 << 0x10) >> 0xe));
-  DAT_BATTLE_BIN__801bbf78 = (int)piVar1 + *piVar1 + 4;
+  piVar1 = *(vfx_hdr **)((int)VFX_hdr_addr + ((vfx_ID << 0x10) >> 0xe));
+  vfx_SEQ_addr = (undefined *)((int)&piVar1->vfx_SEQ + (int)piVar1->vfx_start_data);
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__801a0fd8(int param_1)
+void get_vfx_SEQ2_addr(int param_1)
 
 {
-  int iVar1;
+  vfx_hdr *iVar1;
   
-  iVar1 = *(int *)((int)&PTR_DAT_BATTLE_BIN__801b48d0 + ((param_1 << 0x10) >> 0xe));
-  DAT_BATTLE_BIN__801bbf8c = iVar1 + *(int *)(iVar1 + 4) + 4;
+  iVar1 = *(vfx_hdr **)((int)VFX_hdr_addr + ((param_1 << 0x10) >> 0xe));
+  vfx_SEQ2_addr = iVar1->vfx_SEQ + (int)(&iVar1->vfx_start_data + 1);
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__801a1010(int param_1)
+void get_vfx_Script_addr(int param_1)
 
 {
-  int iVar1;
+  vfx_hdr *iVar1;
   
-  iVar1 = *(int *)((int)&PTR_DAT_BATTLE_BIN__801b48d0 + ((param_1 << 0x10) >> 0xe));
-  DAT_BATTLE_BIN__801bc094 = iVar1 + *(int *)(iVar1 + 8);
+  iVar1 = *(vfx_hdr **)((int)VFX_hdr_addr + ((param_1 << 0x10) >> 0xe));
+  vfx_Script_addr = iVar1->vfx_Script + (int)&iVar1->vfx_start_data;
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__801a1044(int param_1)
+void get_vfx_coordinate_addr(int param_1)
 
 {
-  int iVar1;
+  vfx_hdr *iVar1;
   
-  iVar1 = *(int *)((int)&PTR_DAT_BATTLE_BIN__801b48d0 + ((param_1 << 0x10) >> 0xe));
-  DAT_BATTLE_BIN__801bbf7c = iVar1 + *(int *)(iVar1 + 0x10);
+  iVar1 = *(vfx_hdr **)((int)VFX_hdr_addr + ((param_1 << 0x10) >> 0xe));
+  vfx_coord_addr = iVar1->vfx_coordinates + (int)&iVar1->vfx_start_data;
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__801a1078(int param_1)
+void get_vfx_emitter_addr(int param_1)
 
 {
-  int iVar1;
+  vfx_hdr *iVar1;
   
-  iVar1 = *(int *)((int)&PTR_DAT_BATTLE_BIN__801b48d0 + ((param_1 << 0x10) >> 0xe));
-  DAT_BATTLE_BIN__801bbf88 = iVar1 + *(int *)(iVar1 + 0xc);
+  iVar1 = *(vfx_hdr **)((int)VFX_hdr_addr + ((param_1 << 0x10) >> 0xe));
+  vfx_emitter_addr = iVar1->vfx_emitter_control + (int)&iVar1->vfx_start_data;
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__801a10ac(int param_1)
+void get_vfx_timer2_addr(int param_1)
 
 {
-  int iVar1;
+  vfx_hdr *iVar1;
   
-  iVar1 = *(int *)((int)&PTR_DAT_BATTLE_BIN__801b48d0 + ((param_1 << 0x10) >> 0xe));
-  DAT_BATTLE_BIN__801bc0c8 = iVar1 + *(int *)(iVar1 + 0x1c);
-  DAT_BATTLE_BIN__801bbf84 = DAT_BATTLE_BIN__801bc0c8 + 8;
+  iVar1 = *(vfx_hdr **)((int)VFX_hdr_addr + ((param_1 << 0x10) >> 0xe));
+  vfx_timer2_addr =
+       (int)iVar1->vfx_timers->emit_timers[0].field0_0x0 + (int)(&iVar1->vfx_start_data + -3);
+  vfx_timer2_2_addr = vfx_timer2_addr + 8;
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__801a10ec(int param_1)
+void get_vfx_SMD_addr(int param_1)
 
 {
-  int iVar1;
-  int iVar2;
+  vfx_hdr *iVar2;
   
-  if (DAT_BATTLE_BIN__801bbf74 != 0) {
-    FUN_80017eb8(DAT_BATTLE_BIN__801bbf74);
+  if (vfx_SMD_addr != (vfx_SMD_hdr *)0x0) {
+    vfx_SMD_pop(vfx_SMD_addr);
   }
-  iVar2 = *(int *)((int)&PTR_DAT_BATTLE_BIN__801b48d0 + ((param_1 << 0x10) >> 0xe));
-  iVar1 = *(int *)(iVar2 + 0x20);
-  DAT_BATTLE_BIN__801bbf74 = iVar2 + iVar1;
-  if (iVar1 == 0) {
-    DAT_BATTLE_BIN__801bbf74 = 0;
-    DAT_BATTLE_BIN__801bc0dc = 0;
+  iVar2 = *(vfx_hdr **)((int)VFX_hdr_addr + ((param_1 << 0x10) >> 0xe));
+  vfx_SMD_addr = (vfx_SMD_hdr *)(iVar2->vfx_SMD->feds + (int)&iVar2->vfx_start_data);
+  if (iVar2->vfx_SMD == (vfx_SMD_hdr *)0x0) {
+    vfx_SMD_addr = (vfx_SMD_hdr *)0x0;
+    vfx_sfx_ID = 0;
   }
   else {
-    FUN_80017e7c(DAT_BATTLE_BIN__801bbf74);
-    DAT_BATTLE_BIN__801bc0dc = (uint)*(ushort *)(DAT_BATTLE_BIN__801bbf74 + 10) << 0x10;
+    append_vfx_SMD(vfx_SMD_addr);
+    vfx_sfx_ID = (uint)(ushort)vfx_SMD_addr->field3_0xa << 0x10;
   }
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__801a1198(int param_1)
+void get_vfx_timer1_addr(int param_1)
 
 {
-  int iVar1;
+  vfx_hdr *iVar1;
   
-  iVar1 = *(int *)((int)&PTR_DAT_BATTLE_BIN__801b48d0 + ((param_1 << 0x10) >> 0xe));
-  DAT_BATTLE_BIN__801bacc8 = iVar1 + *(int *)(iVar1 + 0x18);
+  iVar1 = *(vfx_hdr **)((int)VFX_hdr_addr + ((param_1 << 0x10) >> 0xe));
+  vfx_timer1_addr = (int)&iVar1->vfx_timers_hdr->vfx_type + (int)&iVar1->vfx_start_data;
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__801a11cc(int param_1)
+void get_vfx_x14_addr(int param_1)
 
 {
-  int iVar1;
+  vfx_hdr *iVar1;
   
-  iVar1 = *(int *)((int)&PTR_DAT_BATTLE_BIN__801b48d0 + ((param_1 << 0x10) >> 0xe));
-  DAT_BATTLE_BIN__801b9258 = iVar1 + *(int *)(iVar1 + 0x14);
+  iVar1 = *(vfx_hdr **)((int)VFX_hdr_addr + ((param_1 << 0x10) >> 0xe));
+  vfx_x14_addr = iVar1->field5_0x14 + (int)&iVar1->vfx_start_data;
   return;
 }
 
 
 
-void FUN_BATTLE_BIN__801a12a4(int param_1,undefined4 *param_2,undefined4 *param_3)
+void Build_VFX_LBAFilesize(int param_1,undefined4 *LBA_addr,undefined4 *filesize_addr)
 
 {
-  *param_2 = *(undefined4 *)(&DAT_BATTLE_BIN__801b53e8 + param_1 * 8);
-  *param_3 = *(undefined4 *)(&DAT_BATTLE_BIN__801b53ec + param_1 * 8);
+  *LBA_addr = VFX_LBA[param_1].LBA;
+  *filesize_addr = VFX_LBA[param_1].Filesize;
   return;
 }
 
 
 
-bool FUN_BATTLE_BIN__801a13bc(uint param_1)
+bool begin_open_VFX(uint file_loading)
 
 {
   byte bVar1;
   byte bVar2;
   int iVar3;
-  u_long *puVar4;
-  int local_20;
-  uint local_1c [3];
+  u_long *dest_ptr;
+  int LBA;
+  uint filesize [3];
   
-  puVar4 = (u_long *)(PTR_DAT_80010008 + 0x3500);
-  if (DAT_801c24d0 < 0) {
+  dest_ptr = (u_long *)(exe_dest_ptr_arr[2] + 0x3500);
+  if (vfx_toOpen < 0) {
     return false;
   }
   if (DAT_801c24c8 == 1) {
-    param_1 = Check_File_Still_Loading();
+    file_loading = Check_File_Still_Loading();
     bVar2 = 2;
     bVar1 = DAT_801c24c8;
 joined_r0x801a14c8:
     DAT_801c24c8 = bVar2;
-    if (param_1 != 0) goto code_r0x801a157c;
+    if (file_loading != 0) goto code_r0x801a157c;
   }
   else {
     bVar1 = DAT_801c24c8;
@@ -95190,12 +100022,12 @@ joined_r0x801a14c8:
       else {
         DAT_BATTLE_BIN__801b895c = 0x3c;
       }
-      FUN_BATTLE_BIN__801a12a4((int)DAT_801c24d0,&local_20,local_1c);
-      if (local_1c[0] == 0) {
-        DAT_801c24d0 = 1;
-        FUN_BATTLE_BIN__801a12a4(1,&local_20,local_1c);
+      Build_VFX_LBAFilesize((int)vfx_toOpen,&LBA,filesize);
+      if (filesize[0] == 0) {
+        vfx_toOpen = 1;
+        Build_VFX_LBAFilesize(1,&LBA,filesize);
       }
-      param_1 = Call_CalcFileHead_NNL(local_20,local_1c[0],puVar4);
+      file_loading = Call_CalcFileHead_NNL(LBA,filesize[0],dest_ptr);
       bVar2 = 1;
       bVar1 = DAT_801c24c8;
       goto joined_r0x801a14c8;
@@ -95203,33 +100035,33 @@ joined_r0x801a14c8:
     if (DAT_801c24c8 != 2) {
       if (DAT_801c24c8 == 3) {
         iVar3 = FUN_BATTLE_BIN__801adae0((uint)DAT_BATTLE_BIN__801bbf64);
-        param_1 = (uint)(iVar3 != 0);
+        file_loading = (uint)(iVar3 != 0);
         bVar1 = DAT_801c24c8;
       }
       goto code_r0x801a157c;
     }
-    param_1 = 1;
+    file_loading = 1;
     if (DAT_BATTLE_BIN__801b895c != 0) goto code_r0x801a157c;
     if (DAT_BATTLE_BIN__801bbf64 != 0) {
       FUN_BATTLE_BIN__801adb0c((uint)DAT_BATTLE_BIN__801bbf64);
     }
     DAT_801c24c8 = 3;
-    FUN_BATTLE_BIN__801a1198((int)DAT_801c24d0);
-    if ((*DAT_BATTLE_BIN__801bacc8 & 0x10) != 0) {
+    get_vfx_timer1_addr((int)vfx_toOpen);
+    if ((*vfx_timer1_addr & 0x10) != 0) {
       change_volume_currentSong(0x40,0xf0);
-      param_1 = 1;
+      file_loading = 1;
       bVar1 = DAT_801c24c8;
       goto code_r0x801a157c;
     }
   }
-  param_1 = 1;
+  file_loading = 1;
   bVar1 = DAT_801c24c8;
 code_r0x801a157c:
   DAT_801c24c8 = bVar1;
   if (0 < DAT_BATTLE_BIN__801b895c) {
     DAT_BATTLE_BIN__801b895c = DAT_BATTLE_BIN__801b895c + -1;
   }
-  return param_1 != 0;
+  return file_loading != 0;
 }
 
 
@@ -95237,7 +100069,7 @@ code_r0x801a157c:
 void FUN_BATTLE_BIN__801a15b4(uint param_1,int param_2,undefined4 *param_3)
 
 {
-  ushort uVar1;
+  short sVar1;
   uint uVar2;
   undefined4 uVar3;
   undefined4 uVar4;
@@ -95250,26 +100082,26 @@ void FUN_BATTLE_BIN__801a15b4(uint param_1,int param_2,undefined4 *param_3)
     if (param_2 == 0x189) {
       uVar2 = FUN_BATTLE_BIN__801adfac(param_1 >> 0x10);
       if (uVar2 == 1) {
-        uVar1 = 0x10;
+        sVar1 = 0x10;
       }
       else if (uVar2 == 2) {
-        uVar1 = 0x18;
+        sVar1 = 0x18;
       }
       else {
-        uVar1 = 0x14;
+        sVar1 = 0x14;
         if (uVar2 != 8) goto LAB_BATTLE_BIN__801a165c;
       }
     }
     else {
-      uVar1 = *(ushort *)(&DAT_BATTLE_BIN__801b63f0 + param_2 * 2);
+      sVar1 = *(short *)(&DAT_BATTLE_BIN__801b63f0 + param_2 * 2);
     }
   }
   else {
-    uVar1 = *(ushort *)(&DAT_BATTLE_BIN__801b637c + param_2 * 2);
+    sVar1 = *(short *)((int)&VFX_LBA[0x1f2].Filesize + param_2 * 2);
   }
-  DAT_801c24d0 = uVar1;
+  vfx_toOpen = sVar1;
 LAB_BATTLE_BIN__801a165c:
-  if ((short)DAT_801c24d0 < 0) {
+  if (vfx_toOpen < 0) {
     if (param_2 - 0x8aU < 8) {
       FUN_BATTLE_BIN__801add54(0x12,0,(int)param_3);
     }
@@ -95278,7 +100110,7 @@ LAB_BATTLE_BIN__801a165c:
     }
   }
   else {
-    DAT_801c24d0 = DAT_801c24d0 & 0x1ff;
+    vfx_toOpen = vfx_toOpen & 0x1ff;
     DAT_BATTLE_BIN__801b63e8 = 1;
     if ((&DAT_BATTLE_BIN__801b84ac)[param_1 & 0xffff] == 0) {
       DAT_BATTLE_BIN__801bbf64 = 0;
@@ -95390,7 +100222,7 @@ undefined4 FUN_BATTLE_BIN__801a18d8(void)
   case 2:
     FUN_BATTLE_BIN__80093118();
     FUN_BATTLE_BIN__801343bc();
-    FUN_BATTLE_BIN__801a0e80((int)DAT_801c24d0);
+    get_vfx_PAL((int)vfx_toOpen);
     DAT_BATTLE_BIN__801b63e8 = 3;
     DAT_801bf000 = 0;
     FUN_BATTLE_BIN__8008de90();
@@ -95399,28 +100231,28 @@ undefined4 FUN_BATTLE_BIN__801a18d8(void)
     break;
   case 3:
     FUN_BATTLE_BIN__801a4d9c
-              (DAT_BATTLE_BIN__801bbf80,(int)PTR_DAT_8001000c - DAT_BATTLE_BIN__801bbf80);
+              (DAT_BATTLE_BIN__801bbf80,(int)exe_dest_ptr_arr[3] - DAT_BATTLE_BIN__801bbf80);
     FUN_BATTLE_BIN__801aa8e8();
     FUN_BATTLE_BIN__801aa920();
     FUN_BATTLE_BIN__8008e348();
-    FUN_BATTLE_BIN__801a0fa0((int)DAT_801c24d0);
-    FUN_BATTLE_BIN__801a0fd8((int)DAT_801c24d0);
-    FUN_BATTLE_BIN__801a1010((int)DAT_801c24d0);
-    FUN_BATTLE_BIN__801a1044((int)DAT_801c24d0);
-    FUN_BATTLE_BIN__801a1078((int)DAT_801c24d0);
-    FUN_BATTLE_BIN__801a10ac((int)DAT_801c24d0);
-    FUN_BATTLE_BIN__801a10ec((int)DAT_801c24d0);
-    FUN_BATTLE_BIN__801a1198((int)DAT_801c24d0);
-    FUN_BATTLE_BIN__801a11cc((int)DAT_801c24d0);
+    get_vfx_SEQ_addr((int)vfx_toOpen);
+    get_vfx_SEQ2_addr((int)vfx_toOpen);
+    get_vfx_Script_addr((int)vfx_toOpen);
+    get_vfx_coordinate_addr((int)vfx_toOpen);
+    get_vfx_emitter_addr((int)vfx_toOpen);
+    get_vfx_timer2_addr((int)vfx_toOpen);
+    get_vfx_SMD_addr((int)vfx_toOpen);
+    get_vfx_timer1_addr((int)vfx_toOpen);
+    get_vfx_x14_addr((int)vfx_toOpen);
     if (DAT_BATTLE_BIN__801bad0c._3_1_ != '\0') {
-      if (*(char *)(DAT_BATTLE_BIN__801bacc8 + 1) == '\0') {
-        *(undefined2 *)(DAT_BATTLE_BIN__801bc0c8 + 6) = 100;
+      if (*(char *)(vfx_timer1_addr + 1) == '\0') {
+        *(undefined2 *)(vfx_timer2_addr + 6) = 100;
       }
       else {
-        *(ushort *)(DAT_BATTLE_BIN__801bc0c8 + 6) = (ushort)*(byte *)(DAT_BATTLE_BIN__801bacc8 + 1);
+        *(ushort *)(vfx_timer2_addr + 6) = (ushort)*(byte *)(vfx_timer1_addr + 1);
       }
     }
-    iVar4 = FUN_BATTLE_BIN__801a20e8(DAT_BATTLE_BIN__801bc094,0,0);
+    iVar4 = FUN_BATTLE_BIN__801a20e8(vfx_Script_addr,0,0);
     DAT_801c24d4 = (undefined2)iVar4;
     DAT_BATTLE_BIN__801b63e8 = 4;
     FUN_BATTLE_BIN__800ef6a0(0x88);
@@ -95443,12 +100275,12 @@ undefined4 FUN_BATTLE_BIN__801a18d8(void)
     if (DAT_BATTLE_BIN__801bbf90 != 0) {
       return 1;
     }
-    if ((*DAT_BATTLE_BIN__801bacc8 & 0x10) != 0) {
+    if ((*vfx_timer1_addr & 0x10) != 0) {
       volume_with_targetTime_currentSong(0x78);
     }
-    if (DAT_BATTLE_BIN__801bbf74 != 0) {
-      FUN_80017eb8(DAT_BATTLE_BIN__801bbf74);
-      DAT_BATTLE_BIN__801bbf74 = 0;
+    if (vfx_SMD_addr != (vfx_SMD_hdr *)0x0) {
+      vfx_SMD_pop(vfx_SMD_addr);
+      vfx_SMD_addr = (vfx_SMD_hdr *)0x0;
     }
     FUN_BATTLE_BIN__800ef6a0(0x87);
     FUN_BATTLE_BIN__80093144();
@@ -95460,11 +100292,11 @@ undefined4 FUN_BATTLE_BIN__801a18d8(void)
     break;
   case 6:
     FUN_BATTLE_BIN__801a4d9c
-              (DAT_BATTLE_BIN__801bbf80,(int)PTR_DAT_8001000c - DAT_BATTLE_BIN__801bbf80);
+              (DAT_BATTLE_BIN__801bbf80,(int)exe_dest_ptr_arr[3] - DAT_BATTLE_BIN__801bbf80);
     FUN_BATTLE_BIN__801aa8e8();
     FUN_BATTLE_BIN__801a0f70();
     FUN_BATTLE_BIN__801a0f88();
-    iVar4 = FUN_BATTLE_BIN__801a20e8(DAT_BATTLE_BIN__801bc094,0,0);
+    iVar4 = FUN_BATTLE_BIN__801a20e8(vfx_Script_addr,0,0);
     DAT_801c24d4 = (undefined2)iVar4;
     DAT_BATTLE_BIN__801b63e8 = 4;
     in_v1 = 1;
@@ -97376,7 +102208,7 @@ void FUN_BATTLE_BIN__801af770(uint param_1,uint param_2,int **param_3)
 undefined4 FUN_BATTLE_BIN__801af8b4(int *param_1,int *param_2,uint *param_3,short *param_4)
 
 {
-  undefined1 *puVar1;
+  map_tile_data *pmVar1;
   int iVar2;
   uint uVar3;
   int *piVar4;
@@ -97386,22 +102218,22 @@ undefined4 FUN_BATTLE_BIN__801af8b4(int *param_1,int *param_2,uint *param_3,shor
   *param_4 = (short)(*param_2 / 0x1c);
   iVar2 = param_2[2];
   param_4[2] = (short)(iVar2 / 0x1c);
-  puVar1 = FUN_BATTLE_BIN__80183fb4((int)*param_4,(iVar2 / 0x1c) * 0x10000 >> 0x10,0);
-  if ((puVar1[5] & 0x1f) == 0) {
-    uVar3 = (uint)(byte)puVar1[2];
+  pmVar1 = get_tile_data_ptr((int)*param_4,(iVar2 / 0x1c) * 0x10000 >> 0x10,0);
+  if ((pmVar1->tile_overlay & 0x1f) == 0) {
+    uVar3 = (uint)pmVar1->height_whole;
   }
   else {
-    uVar3 = (byte)puVar1[5] & 0x1f;
+    uVar3 = pmVar1->tile_overlay & 0x1f;
   }
-  if ((param_2[1] < (int)((uint)(byte)puVar1[2] * -0xc)) ||
-     ((int)(((byte)puVar1[2] - uVar3) * -0xc) <= param_2[1])) {
-    puVar1 = FUN_BATTLE_BIN__80183fb4((int)*param_4,(int)param_4[2],1);
+  if ((param_2[1] < (int)((uint)pmVar1->height_whole * -0xc)) ||
+     ((int)((pmVar1->height_whole - uVar3) * -0xc) <= param_2[1])) {
+    pmVar1 = get_tile_data_ptr((int)*param_4,(int)param_4[2],1);
     uVar3 = 1;
-    if ((puVar1[5] & 0x1f) != 0) {
-      uVar3 = (byte)puVar1[5] & 0x1f;
+    if ((pmVar1->tile_overlay & 0x1f) != 0) {
+      uVar3 = pmVar1->tile_overlay & 0x1f;
     }
-    if ((param_2[1] < (int)((uint)(byte)puVar1[2] * -0xc)) ||
-       ((int)(((byte)puVar1[2] - uVar3) * -0xc) <= param_2[1])) {
+    if ((param_2[1] < (int)((uint)pmVar1->height_whole * -0xc)) ||
+       ((int)((pmVar1->height_whole - uVar3) * -0xc) <= param_2[1])) {
       iVar2 = 0;
       if (0 < *param_1) {
         piVar4 = param_1;
@@ -97430,7 +102262,7 @@ undefined4 FUN_BATTLE_BIN__801af8b4(int *param_1,int *param_2,uint *param_3,shor
   else {
     param_4[1] = 0;
   }
-  DAT_BATTLE_BIN__801b8b94 = (byte)puVar1[6] >> 4 & 7;
+  DAT_BATTLE_BIN__801b8b94 = pmVar1->tile_interaction >> 4 & 7;
   return 1;
 }
 
@@ -97592,7 +102424,7 @@ uint FUN_BATTLE_BIN__801aff18(uint param_1,short *param_2,uint param_3)
   undefined4 uVar1;
   bool bVar2;
   int iVar3;
-  undefined1 *puVar4;
+  map_tile_data *pmVar4;
   long lVar5;
   undefined3 extraout_var;
   undefined3 extraout_var_00;
@@ -97643,10 +102475,11 @@ uint FUN_BATTLE_BIN__801aff18(uint param_1,short *param_2,uint param_3)
   FUN_BATTLE_BIN__8008c468((ushort)param_1,&DAT_BATTLE_BIN__801b925c);
   DAT_BATTLE_BIN__801b925e = DAT_BATTLE_BIN__801b925e - (short)local_54;
   if (param_3 == 0xffffffff) {
-    puVar4 = FUN_BATTLE_BIN__80183fb4((int)*param_2,(int)param_2[2],(int)param_2[1]);
+    pmVar4 = get_tile_data_ptr((int)*param_2,(int)param_2[2],(int)param_2[1]);
     DAT_BATTLE_BIN__801b9264 = *param_2 * 0x1c + 0xe;
     DAT_BATTLE_BIN__801b9268 = param_2[2] * 0x1c + 0xe;
-    DAT_BATTLE_BIN__801b9266 = ((ushort)(byte)puVar4[2] + (ushort)((byte)puVar4[3] >> 5)) * -0xc;
+    DAT_BATTLE_BIN__801b9266 =
+         ((ushort)pmVar4->height_whole + (ushort)(pmVar4->height_small >> 5)) * -0xc;
   }
   else {
     FUN_BATTLE_BIN__8008c468((ushort)param_3,&DAT_BATTLE_BIN__801b9264);
@@ -97889,7 +102722,7 @@ int FUN_BATTLE_BIN__801b0818(uint param_1,short *param_2,int param_3)
 {
   int iVar1;
   int iVar2;
-  undefined1 *puVar3;
+  map_tile_data *pmVar3;
   long lVar4;
   int unaff_s2;
   int local_38;
@@ -97914,10 +102747,10 @@ int FUN_BATTLE_BIN__801b0818(uint param_1,short *param_2,int param_3)
        ((short)((ulonglong)((longlong)(iVar1 << 1) * 0x55555556) >> 0x20) -
        (short)((iVar1 << 1) >> 0x1f));
   if (param_3 == -1) {
-    puVar3 = FUN_BATTLE_BIN__80183fb4((int)*param_2,(int)param_2[2],(int)param_2[1]);
+    pmVar3 = get_tile_data_ptr((int)*param_2,(int)param_2[2],(int)param_2[1]);
     DAT_BATTLE_BIN__801b9264 = *param_2 * 0x1c + 0xe;
     DAT_BATTLE_BIN__801b9268 = param_2[2] * 0x1c + 0xe;
-    DAT_BATTLE_BIN__801b9266 = (ushort)(byte)puVar3[2] * -0xc;
+    DAT_BATTLE_BIN__801b9266 = (ushort)pmVar3->height_whole * -0xc;
   }
   else {
     FUN_BATTLE_BIN__8008c468((ushort)param_3,&DAT_BATTLE_BIN__801b9264);
@@ -109422,7 +114255,7 @@ int FUN_WORLD__80107e10(undefined4 param_1,uint param_2)
   FUN_WORLD__8010754c();
   FUN_WORLD__801075bc();
   DAT_WORLD__801531c8 = -2;
-  DAT_WORLD__80153298 = (MusicDataHeader *)0xffffffff;
+  DAT_WORLD__80153298 = 0xffffffff;
   DAT_WORLD__801cd814 = param_1;
   FUN_WORLD__800e28ac();
   FUN_WORLD__800fda54(&DAT_WORLD__801aed44);
@@ -109453,8 +114286,8 @@ int FUN_WORLD__80107e10(undefined4 param_1,uint param_2)
   }
   DAT_WORLD__801532f4 = DAT_WORLD__801532f4 + 1;
   DAT_WORLD__801532f8 = DAT_WORLD__801532f8 + 1 & 1;
-  if (DAT_WORLD__80153298 != (MusicDataHeader *)0xffffffff) {
-    Call_Play_SoundEffect(DAT_WORLD__80153298);
+  if (DAT_WORLD__80153298 != 0xffffffff) {
+    Call_PlaySound_findChannel(DAT_WORLD__80153298);
   }
   if (DAT_WORLD__801531c8 == 0) {
     FUN_WORLD__800ef25c(0x33,(int)DAT_WORLD__801531ca);
@@ -110005,7 +114838,7 @@ void FUN_WORLD__8011315c(void)
   DAT_WORLD__801cd908 = &DAT_WORLD__801cd558;
   DAT_WORLD__801cd910 = &DAT_WORLD__8018b670;
   DAT_WORLD__8018ba28 = 0;
-  DAT_WORLD__8018e48c = 0;
+  Current_Tutorial_ID = 0;
   return;
 }
 
@@ -110144,7 +114977,7 @@ void FUN_WORLD__80113748(uint param_1)
   undefined4 uVar8;
   short sVar9;
   uint uVar10;
-  uint uVar11;
+  uint Tutorial_ID;
   uint unaff_s3;
   undefined auStack_408 [512];
   undefined auStack_208 [496];
@@ -110165,9 +114998,9 @@ void FUN_WORLD__80113748(uint param_1)
   FUN_WORLD__80126058((int)auStack_208,(int)puVar5);
   DAT_WORLD__801cd218 = 0xffff;
   FUN_WORLD__80113f00();
-  uVar11 = -(uint)((int)param_1 < 0xb) & param_1;
-  FUN_WORLD__8012d964(uVar11,puVar5,uVar6,uVar8);
-  if (uVar11 == 0) {
+  Tutorial_ID = -(uint)((int)param_1 < 0xb) & param_1;
+  Open_Tutorial_Files(Tutorial_ID,puVar5,uVar6,uVar8);
+  if (Tutorial_ID == 0) {
     iVar2 = OpenSMDIntoFreeSlot(0x1f);
     DAT_WORLD__801cd548 = (char)iVar2;
     do {
@@ -110275,7 +115108,7 @@ void FUN_WORLD__80113748(uint param_1)
     }
     FUN_WORLD__801128e0(*DAT_WORLD__801cd528,0,0);
   } while (bVar1);
-  if (uVar11 == 0) {
+  if (Tutorial_ID == 0) {
     Unload_Scenario_MUS((int)DAT_WORLD__801cd548);
   }
   FUN_WORLD__801212b8();
@@ -110290,34 +115123,33 @@ void FUN_WORLD__80113748(uint param_1)
 void FUN_WORLD__80113dd4(void)
 
 {
-  MusicDataHeader *pMVar1;
+  uint uVar1;
   
   if (DAT_WORLD__8018bacd != '\0') {
     DAT_WORLD__8018bacc = 0;
   }
-  if ((DAT_WORLD__80153298 == (MusicDataHeader *)0x73) ||
-     (DAT_WORLD__80153298 == (MusicDataHeader *)0x2d)) {
-    Call_Play_SoundEffect(DAT_WORLD__80153298);
-    DAT_WORLD__80153298 = (MusicDataHeader *)0x0;
+  if ((DAT_WORLD__80153298 == 0x73) || (DAT_WORLD__80153298 == 0x2d)) {
+    Call_PlaySound_findChannel(DAT_WORLD__80153298);
+    DAT_WORLD__80153298 = 0;
   }
   else if (DAT_WORLD__8018bacc == 0x30) {
-    Call_Play_SoundEffect((MusicDataHeader *)0x30);
+    Call_PlaySound_findChannel(0x30);
     DAT_WORLD__8018bacc = 0;
   }
-  if (&DAT_WORLD__80153298[-1].field_0xb6 < (undefined *)0x2) {
+  if (DAT_WORLD__80153298 - 2 < 2) {
     DAT_WORLD__8018bacc = (byte)DAT_WORLD__80153298;
   }
   if (((int)DAT_WORLD__80153298 < 0) || (DAT_WORLD__801532a0 != 0)) {
-    DAT_WORLD__80153298 = (MusicDataHeader *)0x0;
+    DAT_WORLD__80153298 = 0;
   }
-  pMVar1 = DAT_WORLD__80153298;
-  if (DAT_WORLD__80153298 == (MusicDataHeader *)0x0) {
-    pMVar1 = (MusicDataHeader *)(uint)DAT_WORLD__8018bacc;
+  uVar1 = DAT_WORLD__80153298;
+  if (DAT_WORLD__80153298 == 0) {
+    uVar1 = (uint)DAT_WORLD__8018bacc;
   }
   DAT_WORLD__8018bacc = 0;
-  DAT_WORLD__80153298 = (MusicDataHeader *)0x0;
-  if (pMVar1 != (MusicDataHeader *)0x0) {
-    Call_Play_Sound((uint)pMVar1);
+  DAT_WORLD__80153298 = 0;
+  if (uVar1 != 0) {
+    Call_Play_Sound(uVar1);
   }
   return;
 }
@@ -114643,7 +119475,7 @@ uint FUN_WORLD__8012bd14(void)
 {
   u_long uVar1;
   
-  if (DAT_WORLD__8018e48c == '\0') {
+  if (Current_Tutorial_ID == '\0') {
     uVar1 = PadRead(0);
   }
   else {
@@ -115253,19 +120085,17 @@ void FUN_WORLD__8012d7b4(undefined4 param_1)
 
 
 
-void FUN_WORLD__8012d8b0(int param_1,int param_2)
+void Get_TUTO_MES_and_TUTO_SCR(int tutorial_ID,int param_2)
 
 {
-  u_long *puVar1;
-  int iVar2;
+  u_long *tuto_addr;
+  int iVar1;
   
-  iVar2 = (param_1 + -1) * 8;
-  puVar1 = Get_BIN_as_TIM(*(int *)(&DAT_WORLD__80193c40 + iVar2),
-                          *(uint *)(&DAT_WORLD__80193c44 + iVar2));
-  *(u_long **)(param_2 + 0x1e00) = puVar1;
-  puVar1 = Get_BIN_as_TIM(*(int *)(&DAT_WORLD__80193c78 + iVar2),
-                          *(uint *)(&DAT_WORLD__80193c7c + iVar2));
-  *(u_long **)(param_2 + 0x1e04) = puVar1;
+  iVar1 = tutorial_ID + -1;
+  tuto_addr = Get_BIN_as_TIM(TUTO_MES_LBA[iVar1].LBA,TUTO_MES_LBA[iVar1].Filesize);
+  *(u_long **)(param_2 + 0x1e00) = tuto_addr;
+  tuto_addr = Get_BIN_as_TIM(TUTO_SCR_LBA[iVar1].LBA,TUTO_SCR_LBA[iVar1].Filesize);
+  *(u_long **)(param_2 + 0x1e04) = tuto_addr;
   return;
 }
 
@@ -115279,18 +120109,18 @@ int FUN_WORLD__8012d92c(void)
 
 
 
-void FUN_WORLD__8012d964(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4)
+void Open_Tutorial_Files(int Tutorial_ID,undefined4 param_2,undefined4 param_3,undefined4 param_4)
 
 {
   u_long *puVar1;
-  undefined local_res0;
+  undefined _tutorial_ID;
   
-  local_res0 = (undefined)param_1;
-  DAT_WORLD__8018e48c = local_res0;
-  if (param_1 != 0) {
-    FUN_WORLD__8012d8b0(param_1,(int)&DAT_WORLD__801ca768);
-    DAT_WORLD__801cc570 = DAT_WORLD__801cc56c;
-    DAT_WORLD__801cd900 = DAT_WORLD__801cc568;
+  _tutorial_ID = (undefined)Tutorial_ID;
+  Current_Tutorial_ID = _tutorial_ID;
+  if (Tutorial_ID != 0) {
+    Get_TUTO_MES_and_TUTO_SCR(Tutorial_ID,(int)&DAT_WORLD__801ca768);
+    current_script_ptr = script_ptr;
+    current_mes_ptr = mes_ptr;
     FUN_WORLD__80130898();
     FUN_WORLD__8012fdd8(-1);
     bcopy((uchar *)DAT_WORLD__801cd1ec,&DAT_WORLD__801ca768,0x1e00);
@@ -115318,7 +120148,7 @@ int FUN_WORLD__8012dae0(void)
   byte bVar1;
   int iVar2;
   
-  if (DAT_WORLD__8018e48c != '\0') {
+  if (Current_Tutorial_ID != '\0') {
     _DAT_WORLD__801cc578 = PadRead(0);
     if (_DAT_WORLD__801cc578 == 0x90c) {
       FUN_WORLD__8012bd9c();
@@ -115327,7 +120157,7 @@ int FUN_WORLD__8012dae0(void)
     if (DAT_WORLD__80193cb0 != 0) {
       FUN_WORLD__8012e674();
     }
-    bVar1 = *DAT_WORLD__801cc570;
+    bVar1 = *current_script_ptr;
     if (bVar1 < 0x10) {
       FUN_WORLD__8012ddc8();
     }
@@ -115383,9 +120213,9 @@ int FUN_WORLD__8012dcd4(void)
     bVar1 = FUN_WORLD__8012d5bc();
     iVar2 = CONCAT31(extraout_var,bVar1);
     if (iVar2 == 0) {
-      DAT_WORLD__8018e48c = 0;
-      Call_BIN_Free_FFT(DAT_WORLD__801cc568);
-      Call_BIN_Free_FFT(DAT_WORLD__801cc56c);
+      Current_Tutorial_ID = 0;
+      Call_BIN_Free_FFT(mes_ptr);
+      Call_BIN_Free_FFT(script_ptr);
       uVar4 = 0x1e00;
       puVar3 = DAT_WORLD__801cd1ec;
       bcopy(&DAT_WORLD__801ca768,DAT_WORLD__801cd1ec,0x1e00);
@@ -115408,7 +120238,7 @@ void FUN_WORLD__8012ddc8(void)
   
   if (DAT_WORLD__801cc574 == 0) {
     DAT_WORLD__801cc574 = 0x1e;
-    DAT_WORLD__801cd810 = (undefined2)(1 << (*DAT_WORLD__801cc570 & 0x1f));
+    DAT_WORLD__801cd810 = (undefined2)(1 << (*current_script_ptr & 0x1f));
   }
   else {
     iVar1 = FUN_WORLD__801263a8();
@@ -115416,7 +120246,7 @@ void FUN_WORLD__8012ddc8(void)
     DAT_WORLD__801cd810 = 0;
     if (DAT_WORLD__801cc574 < 1) {
       DAT_WORLD__801cc574 = 0;
-      DAT_WORLD__801cc570 = DAT_WORLD__801cc570 + 1;
+      current_script_ptr = current_script_ptr + 1;
     }
   }
   return;
@@ -115430,11 +120260,11 @@ void FUN_WORLD__8012de98(void)
   Initialize_Thread_WORLD(0x10,&DAT_WORLD__800e4d9c);
   ParseThreadParamWORLD
             (0x10,0x99,
-             (uint)*(byte *)(DAT_WORLD__801cc570 + 2) * 0x100 +
-             *(byte *)(DAT_WORLD__801cc570 + 1) + 0xb800,0);
+             (uint)*(byte *)(current_script_ptr + 2) * 0x100 +
+             *(byte *)(current_script_ptr + 1) + 0xb800,0);
   *(uint *)(PTR_DAT_WORLD__80195cd0_WORLD__8015327c + 0x405c) =
-       (uint)*(byte *)(DAT_WORLD__801cc570 + 3);
-  DAT_WORLD__801cc570 = DAT_WORLD__801cc570 + 4;
+       (uint)*(byte *)(current_script_ptr + 3);
+  current_script_ptr = current_script_ptr + 4;
   return;
 }
 
@@ -115448,7 +120278,7 @@ void FUN_WORLD__8012df80(void)
   FUN_WORLD__80106834(0x10);
   iVar1 = Check_Thread_Status_WORLD(0x10);
   if (iVar1 == 0) {
-    DAT_WORLD__801cc570 = DAT_WORLD__801cc570 + 1;
+    current_script_ptr = current_script_ptr + 1;
   }
   return;
 }
@@ -115465,9 +120295,9 @@ void FUN_WORLD__8012dfe4(void)
   if (CONCAT31(extraout_var,bVar1) != 1) {
     ParseThreadParamWORLD
               (0x10,0x99,
-               (uint)*(byte *)(DAT_WORLD__801cc570 + 2) * 0x100 +
-               *(byte *)(DAT_WORLD__801cc570 + 1) + 0xb800,0);
-    DAT_WORLD__801cc570 = DAT_WORLD__801cc570 + 3;
+               (uint)*(byte *)(current_script_ptr + 2) * 0x100 +
+               *(byte *)(current_script_ptr + 1) + 0xb800,0);
+    current_script_ptr = current_script_ptr + 3;
     *(undefined4 *)(PTR_DAT_WORLD__80195cd0_WORLD__8015327c + 0x404c) = 1;
   }
   return;
@@ -115484,36 +120314,36 @@ void FUN_WORLD__8012e0b8(void)
   int iVar4;
   int local_10;
   
-  uVar1 = (uint)*(byte *)(DAT_WORLD__801cc570 + 3);
-  uVar2 = (uint)*(byte *)(DAT_WORLD__801cc570 + 4);
-  uVar3 = (uint)*(byte *)(DAT_WORLD__801cc570 + 5);
+  uVar1 = (uint)*(byte *)(current_script_ptr + 3);
+  uVar2 = (uint)*(byte *)(current_script_ptr + 4);
+  uVar3 = (uint)*(byte *)(current_script_ptr + 5);
   for (local_10 = 0; local_10 < 0x1e; local_10 = local_10 + 1) {
     iVar4 = rcos(local_10 * 0x88 + 0x400);
     *(ushort *)(&DAT_WORLD__801cc57c + local_10 * 8) =
          (short)((int)(iVar4 * (uVar1 + 8) * uVar2) >> 0x13) +
-         (ushort)*(byte *)(DAT_WORLD__801cc570 + 1);
+         (ushort)*(byte *)(current_script_ptr + 1);
     iVar4 = rsin(local_10 * 0x88 + 0x400);
     *(ushort *)(&DAT_WORLD__801cc57e + local_10 * 8) =
          (short)((int)(iVar4 * (uVar1 + 8) * uVar3) >> 0x13) +
-         (ushort)*(byte *)(DAT_WORLD__801cc570 + 2);
+         (ushort)*(byte *)(current_script_ptr + 2);
     iVar4 = rcos(local_10 * 0x88 + 0x400);
     *(ushort *)(&DAT_WORLD__801cc580 + local_10 * 8) =
          (short)((int)(iVar4 * (uVar1 + 4) * uVar2) >> 0x13) +
-         (ushort)*(byte *)(DAT_WORLD__801cc570 + 1);
+         (ushort)*(byte *)(current_script_ptr + 1);
     iVar4 = rsin(local_10 * 0x88 + 0x400);
     *(ushort *)(&DAT_WORLD__801cc582 + local_10 * 8) =
          (short)((int)(iVar4 * (uVar1 + 4) * uVar3) >> 0x13) +
-         (ushort)*(byte *)(DAT_WORLD__801cc570 + 2);
+         (ushort)*(byte *)(current_script_ptr + 2);
     *(undefined2 *)(&DAT_WORLD__801cc674 + local_10 * 8) =
          *(undefined2 *)(&DAT_WORLD__801cc580 + local_10 * 8);
     *(undefined2 *)(&DAT_WORLD__801cc676 + local_10 * 8) =
          *(undefined2 *)(&DAT_WORLD__801cc582 + local_10 * 8);
     iVar4 = rcos(local_10 * 0x88 + 0x400);
     *(ushort *)(&DAT_WORLD__801cc678 + local_10 * 8) =
-         (short)((int)(iVar4 * uVar1 * uVar2) >> 0x13) + (ushort)*(byte *)(DAT_WORLD__801cc570 + 1);
+         (short)((int)(iVar4 * uVar1 * uVar2) >> 0x13) + (ushort)*(byte *)(current_script_ptr + 1);
     iVar4 = rsin(local_10 * 0x88 + 0x400);
     *(ushort *)(&DAT_WORLD__801cc67a + local_10 * 8) =
-         (short)((int)(iVar4 * uVar1 * uVar3) >> 0x13) + (ushort)*(byte *)(DAT_WORLD__801cc570 + 2);
+         (short)((int)(iVar4 * uVar1 * uVar3) >> 0x13) + (ushort)*(byte *)(current_script_ptr + 2);
   }
   for (local_10 = 0; local_10 < 4; local_10 = local_10 + 1) {
     *(undefined2 *)(&DAT_WORLD__801cc66c + local_10 * 2) =
@@ -115522,7 +120352,7 @@ void FUN_WORLD__8012e0b8(void)
          *(undefined2 *)(&DAT_WORLD__801cc674 + local_10 * 2);
   }
   DAT_WORLD__80193cb0 = 2;
-  DAT_WORLD__801cc570 = DAT_WORLD__801cc570 + 6;
+  current_script_ptr = current_script_ptr + 6;
   DAT_WORLD__801cc784 = 0;
   return;
 }
@@ -115534,7 +120364,7 @@ void FUN_WORLD__8012e674(void)
 {
   int iVar1;
   
-  if (*DAT_WORLD__801cc570 != '\x14') {
+  if (*current_script_ptr != '\x14') {
     DAT_WORLD__80193cb0 = 0x12;
     iVar1 = FUN_WORLD__801263a8();
     DAT_WORLD__801cc784 = DAT_WORLD__801cc784 + (char)iVar1;
@@ -115557,7 +120387,7 @@ void FUN_WORLD__8012e720(void)
   DAT_WORLD__80193cb0 = DAT_WORLD__80193cb0 - (short)iVar1;
   if (DAT_WORLD__80193cb0 < 1) {
     DAT_WORLD__80193cb0 = 0;
-    DAT_WORLD__801cc570 = DAT_WORLD__801cc570 + 1;
+    current_script_ptr = current_script_ptr + 1;
   }
   return;
 }
@@ -115616,14 +120446,14 @@ void FUN_WORLD__8012ea44(void)
   
   if (DAT_WORLD__801cc574 == 0) {
     DAT_WORLD__801cc574 = 1;
-    DAT_WORLD__801ca764 = (ushort)*(byte *)(DAT_WORLD__801cc570 + 1);
+    DAT_WORLD__801ca764 = (ushort)*(byte *)(current_script_ptr + 1);
   }
   else {
     iVar1 = FUN_WORLD__801263a8();
     DAT_WORLD__801ca764 = DAT_WORLD__801ca764 - (short)iVar1;
     if ((short)DAT_WORLD__801ca764 < 0) {
       DAT_WORLD__801cc574 = 0;
-      DAT_WORLD__801cc570 = DAT_WORLD__801cc570 + 2;
+      current_script_ptr = current_script_ptr + 2;
     }
   }
   return;
@@ -115643,13 +120473,13 @@ void FUN_WORLD__8012eb08(void)
   iVar2 = Check_Thread_Status_WORLD(0x10);
   if (iVar2 == 0) {
     if (_DAT_WORLD__801cc578 != 0) {
-      DAT_WORLD__801cc570 = DAT_WORLD__801cc570 + 1;
+      current_script_ptr = current_script_ptr + 1;
     }
   }
   else {
     bVar1 = FUN_WORLD__80106868(0x10);
     if ((CONCAT31(extraout_var,bVar1) != 1) && (_DAT_WORLD__801cc578 != 0)) {
-      DAT_WORLD__801cc570 = DAT_WORLD__801cc570 + 1;
+      current_script_ptr = current_script_ptr + 1;
     }
   }
   return;
@@ -115917,7 +120747,7 @@ undefined FUN_WORLD__8012f0f8(undefined2 param_1)
   Initialize_Thread_WORLD(2,&DAT_WORLD__80108f9c);
   ParseThreadParamWORLD(2,0,0,0);
   while (bVar1 = FUN_WORLD__8012d5bc(), CONCAT31(extraout_var,bVar1) != 0) {
-    DAT_WORLD__8018e48c = 0;
+    Current_Tutorial_ID = 0;
     FUN_WORLD__80125cfc(0,0);
     FUN_WORLD__8012efcc();
     FUN_WORLD__8012d4c0();
@@ -118043,15 +122873,119 @@ size_t FUN_WORLD__801333c0(int param_1,void *param_2,size_t param_3)
 
 
 
+void Determine_Fieldable_Units(void)
+
+{
+  byte bVar1;
+  PartyUnit *pPVar2;
+  PartyUnit *pPVar3;
+  uint uVar4;
+  int iVar5;
+  int iVar6;
+  byte *pbVar7;
+  byte *pbVar8;
+  int iVar9;
+  undefined *puVar10;
+  
+  iVar9 = 0;
+  DAT_80173fac = DAT_ATTACK__801cd2b4 + -0x7fe32cd0;
+  puVar10 = &DAT_ATTACK__801cd25c;
+  DAT_ATTACK__801cd05c = 0;
+  DAT_80173f94 = DAT_80173fe4;
+  DAT_80173fa4 = DAT_ATTACK__801cd2b8 + -0x7fe32cd0;
+  pbVar8 = DAT_80173fb8;
+  do {
+    pPVar2 = Get_Party_Data_Pointer(iVar9);
+    if ((((pPVar2->PartyID == 0xff) || (0xf < iVar9)) || (pPVar2->Proposition != 0)) ||
+       ((pPVar2->field_0x4 & 4) != 0)) {
+      *puVar10 = 0;
+      *pbVar8 = 0xfe;
+LAB_ATTACK__801c3148:
+      pbVar7 = pbVar8 + 1;
+    }
+    else {
+      *puVar10 = 1;
+      DAT_ATTACK__801cd05c = DAT_ATTACK__801cd05c + 1;
+      pPVar3 = pPVar2;
+      iVar5 = 0;
+      do {
+        bVar1 = pPVar3->UnitName[0];
+        *pbVar8 = bVar1;
+        if ((bVar1 & 0xfe) == 0xfe) goto LAB_ATTACK__801c3148;
+        pbVar7 = pbVar8 + 1;
+        if (iVar5 == 0xf) {
+          *pbVar7 = 0xfe;
+          pbVar7 = pbVar8 + 2;
+        }
+        iVar6 = iVar5 + 1;
+        pPVar3 = (PartyUnit *)((int)pPVar2->JobJP + iVar5 + -0x6d);
+        iVar5 = iVar6;
+        pbVar8 = pbVar7;
+      } while (iVar6 < 0x10);
+    }
+    iVar9 = iVar9 + 1;
+    puVar10 = puVar10 + 1;
+    pbVar8 = pbVar7;
+  } while (iVar9 < 0x14);
+  if (DAT_80173cb0 == 0) {
+    if (*(int *)(PTR_DAT_ATTACK__801cabd4_ATTACK__801cd270 + DAT_ATTACK__801dcc78 * 0xc) == 0) {
+      DAT_ATTACK__801dcc78 = 0;
+    }
+    iVar9 = FUN_8013b590();
+    if (iVar9 == 0) {
+      DAT_800459dc = 0;
+      DAT_ATTACK__801dcc78 = FUN_8013b590();
+      FUN_8013b644();
+    }
+    else {
+      uVar4 = FUN_8013b590();
+      iVar9 = 0;
+      DAT_ATTACK__801dcc78 = 0;
+      puVar10 = PTR_DAT_ATTACK__801cabd4_ATTACK__801cd270;
+      do {
+        iVar5 = iVar9;
+        if ((byte)puVar10[9] == uVar4) break;
+        iVar9 = iVar9 + 1;
+        puVar10 = puVar10 + 0xc;
+        iVar5 = DAT_ATTACK__801dcc78;
+      } while (iVar9 < 0x300);
+      DAT_ATTACK__801dcc78 = iVar5;
+      if (*(int *)(PTR_DAT_ATTACK__801cabd4_ATTACK__801cd270 + DAT_ATTACK__801dcc78 * 0xc) == 0) {
+        DAT_ATTACK__801dcc78 = 0;
+      }
+      FUN_8013b644();
+      FUN_8013b644();
+      FUN_8013b644();
+      FUN_8013b644();
+      PTR_DAT_ATTACK__801cabd4_ATTACK__801cd270[DAT_ATTACK__801dcc78 * 0xc + 8] = 4;
+    }
+  }
+  return;
+}
+
+
+
+int FUN_ATTACK__801c33a8(short *param_1)
+
+{
+  return (int)*param_1;
+}
+
+
+
 void FUN_ATTACK__801c33c4(void)
 
 {
   int iVar1;
+  undefined4 uVar2;
+  undefined4 in_a1;
+  undefined4 in_a2;
   
   do {
+    uVar2 = 0;
     VSync(0);
     DAT_80173ca8 = FUN_80043708;
-    iVar1 = FUN_BATTLE_BIN__8014ceb4();
+    iVar1 = Call_OnCurrentThread(uVar2,in_a1,in_a2);
   } while (iVar1 != 0);
   return;
 }
@@ -118061,22 +122995,235 @@ void FUN_ATTACK__801c33c4(void)
 void FUN_ATTACK__801c340c(int param_1,int param_2)
 
 {
+  undefined4 in_a2;
+  
   Unload_ScenarioSongs_and_SFX();
   if (param_1 != 0) {
     DAT_80173ca8 = OpenAndPlayMusic;
-    FUN_BATTLE_BIN__8014ceb4();
+    Call_OnCurrentThread(param_1,1,in_a2);
     FUN_ATTACK__801c33c4();
   }
   if (param_2 != 0) {
     DAT_80173ca8 = OpenAndPlayMusic;
-    FUN_BATTLE_BIN__8014ceb4();
+    Call_OnCurrentThread(param_2,2,in_a2);
     FUN_ATTACK__801c33c4();
   }
   if (param_1 != 0) {
     DAT_80173ca8 = FUN_80043a90;
-    FUN_BATTLE_BIN__8014ceb4();
+    Call_OnCurrentThread(1,0x7f,0);
   }
   return;
+}
+
+
+
+uint Load_Scenario_Conditionals(void)
+
+{
+  byte *pbVar1;
+  byte *pbVar2;
+  byte bVar3;
+  short sVar4;
+  short sVar5;
+  int iVar6;
+  uint uVar7;
+  uint uVar8;
+  short *psVar9;
+  undefined2 *puVar10;
+  int iVar11;
+  int iVar12;
+  int iVar13;
+  byte *pbVar14;
+  byte *pbVar15;
+  short *psVar16;
+  
+  iVar6 = FUN_8013b590();
+  if ((iVar6 != 0) && (iVar6 = FUN_8013b590(), iVar6 == 8)) {
+    FUN_8013b644();
+    FUN_8013b644();
+    DAT_80165fda = 1;
+    DAT_800473a0 = '\0';
+  }
+  iVar6 = 0x70;
+  if (DAT_80165fda == 2) {
+    DAT_8004d9ac = 0;
+    CurUniquePortrait = 0;
+    iVar6 = FUN_8013b590();
+    uVar8 = (uint)*(ushort *)(&DAT_8004e5d0 + iVar6 * 2);
+    iVar12 = 0;
+    if (uVar8 == 0) {
+      return iVar6 * 2;
+    }
+    pbVar14 = &DAT_ATTACK__801cf938;
+    do {
+      uVar7 = (uint)pbVar14[1] * 0x100;
+      iVar6 = *pbVar14 + uVar7;
+      if (iVar6 == ((int)(uVar8 & 0xc00) >> 2) + (uVar8 & 0xff)) break;
+      iVar12 = iVar12 + 1;
+      if (iVar6 == 0) {
+        return uVar7;
+      }
+      uVar7 = (uint)(iVar12 < 500);
+      pbVar14 = pbVar14 + 0x18;
+    } while (uVar7 != 0);
+    if (iVar6 == 0) {
+      return uVar7;
+    }
+    CurUniquePortrait = pbVar14[0xe];
+    DAT_8004d9ac = pbVar14[0xd];
+    return (uint)pbVar14[0xe];
+  }
+  DAT_80173cb0 = 0;
+  do {
+    FUN_8013b644();
+    iVar6 = iVar6 + 1;
+  } while (iVar6 < 0x90);
+  FUN_8013b644();
+  iVar6 = FUN_8013b590();
+  if (((iVar6 == 0) || (iVar6 = FUN_8013b590(), iVar6 == 0)) ||
+     (iVar6 = FUN_8013b590(), iVar6 != 0x12a)) {
+    iVar6 = FUN_8013b590();
+    if (iVar6 == 0) {
+      if (DAT_800473a0 != '\0') {
+        FUN_8013b644();
+        iVar6 = 1;
+        do {
+          Remove_Unit(iVar6);
+          iVar6 = iVar6 + 1;
+        } while (iVar6 < 0x14);
+      }
+    }
+    else {
+      iVar6 = FUN_8013b590();
+      if (iVar6 == 0x5a) {
+        FUN_8013b644();
+      }
+      else if (iVar6 == 0x12a) {
+        FUN_8013b644();
+      }
+      else {
+        FUN_8013b644();
+      }
+    }
+  }
+  else {
+    FUN_8013b644();
+  }
+  DAT_800473a0 = 0;
+  FUN_8013b644();
+  iVar6 = FUN_8013b590();
+  pbVar15 = &DAT_ATTACK__801cf938;
+  iVar12 = 0;
+  pbVar14 = &DAT_ATTACK__801cf94a;
+  do {
+    iVar11 = (uint)*pbVar15 + (uint)pbVar14[-0x11] * 0x100;
+    iVar12 = iVar12 + 1;
+    if (iVar11 == 0) break;
+    pbVar1 = pbVar14 + 2;
+    pbVar2 = pbVar14 + 1;
+    bVar3 = *pbVar14;
+    pbVar14 = pbVar14 + 0x18;
+    *(ushort *)(&DAT_8004e5d0 + iVar11 * 2) =
+         (ushort)*pbVar1 << 8 | (ushort)bVar3 + (ushort)*pbVar2 * 0x400;
+    pbVar15 = pbVar15 + 0x18;
+  } while (iVar12 < 500);
+  DAT_8004e8f4 = 0x8000;
+  DAT_8004e8f2 = 0;
+  DAT_8004e8f6 = 0;
+  iVar12 = FUN_8013b590();
+  if (iVar12 == 0) {
+    DAT_8004e8f0 = 0x8200;
+    DAT_8004e8f8 = 0x8200;
+  }
+  else {
+    DAT_8004e8f0 = 0x8000;
+    DAT_8004e8f8 = 0x8000;
+  }
+  psVar16 = (short *)&DAT_ATTACK__801cf938;
+  iVar12 = 0;
+  do {
+    iVar11 = (uint)*(byte *)psVar16 + (uint)*(byte *)((int)psVar16 + 1) * 0x100;
+    if (iVar11 == iVar6) break;
+    iVar12 = iVar12 + 1;
+    if (iVar11 == 0) goto LAB_ATTACK__801c380c;
+    psVar16 = psVar16 + 0xc;
+  } while (iVar12 < 500);
+  if (iVar11 == 0) {
+LAB_ATTACK__801c380c:
+    FUN_8013b644();
+    goto LAB_ATTACK__801c3ac8;
+  }
+  DAT_80173cb0 = DAT_80173cb0 + 1;
+  FUN_ATTACK__801c33a8(psVar16);
+  DAT_801660a4 = (ushort)*(byte *)((int)psVar16 + 5);
+  DAT_801660a6 = (ushort)*(byte *)(psVar16 + 3);
+  iVar6 = FUN_ATTACK__801c33a8((short *)((int)psVar16 + 7));
+  iVar12 = FUN_ATTACK__801c33a8((short *)((int)psVar16 + 9));
+  FUN_ATTACK__801c33a8((short *)((int)psVar16 + 0xb));
+  DAT_8004d9ac = *(undefined *)((int)psVar16 + 0xd);
+  iVar13 = 0;
+  CurUniquePortrait = *(byte *)(psVar16 + 7);
+  FUN_ATTACK__801c33a8((short *)((int)psVar16 + 0xf));
+  FUN_ATTACK__801c33a8(psVar16 + 9);
+  FUN_ATTACK__801c33a8(psVar16 + 10);
+  iVar11 = FUN_ATTACK__801c33a8(psVar16 + 0xb);
+  psVar9 = &DAT_800475e0;
+  psVar16 = (short *)(&DAT_ATTACK__801d3938 +
+                     (((int)((uint)*(ushort *)(&DAT_ATTACK__801d3938 + ((iVar11 << 0x10) >> 0xf)) <<
+                            0x10) >> 0x10) -
+                      ((int)((uint)*(ushort *)(&DAT_ATTACK__801d3938 + ((iVar11 << 0x10) >> 0xf)) <<
+                            0x10) >> 0x1f) >> 1) * 2);
+  sVar4 = *psVar16;
+  do {
+    *psVar9 = *psVar16 - sVar4;
+    sVar5 = *psVar16;
+    psVar16 = psVar16 + 1;
+    if (sVar5 == 0) {
+      *psVar9 = 0;
+      break;
+    }
+    iVar13 = iVar13 + 1;
+    psVar9 = psVar9 + 1;
+  } while (iVar13 < 0x10);
+  iVar11 = 0;
+  puVar10 = &DAT_80049a18;
+  do {
+    iVar13 = iVar11 * 2;
+    iVar11 = iVar11 + 1;
+    *puVar10 = *(undefined2 *)
+                (&DAT_ATTACK__801d3938 + iVar13 + (((int)DAT_800475e0 + (int)sVar4) / 2) * 2);
+    puVar10 = puVar10 + 1;
+  } while (iVar11 < 0x100);
+  iVar11 = 0;
+  do {
+    iVar11 = iVar11 + 1;
+  } while (iVar11 < 2);
+  FUN_8013b644();
+  FUN_8013b644();
+  FUN_8013b644();
+  FUN_8013b644();
+  if ((short)iVar6 == 0) {
+    iVar6 = FUN_8013b590();
+    if (4 < iVar6) goto LAB_ATTACK__801c3a5c;
+  }
+  else {
+    FUN_8013b590();
+LAB_ATTACK__801c3a5c:
+    FUN_8013b644();
+  }
+  DAT_800459dc = 0;
+  FUN_8013b644();
+  FUN_8013b644();
+  if ((short)iVar12 == 0) {
+    return 1;
+  }
+  FUN_8013b644();
+  FUN_8013b644();
+  FUN_8013b644();
+  FUN_8013b644();
+LAB_ATTACK__801c3ac8:
+  FUN_8013b644();
+  return 0;
 }
 
 
@@ -118085,12 +123232,16 @@ void FUN_ATTACK__801c3b00(void)
 
 {
   ushort uVar1;
-  int iVar2;
+  int iVar3;
+  undefined4 *puVar4;
+  undefined4 in_a2;
   undefined4 local_10 [2];
+  ushort uVar2;
   
+  puVar4 = &DAT_ATTACK__801bf000;
   local_10[0] = DAT_ATTACK__801bf000;
-  iVar2 = GetScriptVariable(CurrentEvent);
-  if ((DAT_80173cb0 == 0) || (iVar2 - 0x19aU < 0x10)) goto LAB_ATTACK__801c3c80;
+  iVar3 = GetScriptVariable(CurrentEvent);
+  if ((DAT_80173cb0 == 0) || (iVar3 - 0x19aU < 0x10)) goto LAB_ATTACK__801c3c80;
   if ((DAT_80165fd4 == 0) && (DAT_80165fd6 == 0)) {
 LAB_ATTACK__801c3bf4:
     DAT_80165fd8 = 0;
@@ -118098,14 +123249,18 @@ LAB_ATTACK__801c3bf4:
   }
   else {
     uVar1 = DAT_80165fd6;
+    uVar2 = DAT_801660a6;
     if (DAT_80165fd8 == 0) {
       uVar1 = DAT_80165fd4;
+      uVar2 = DAT_801660a4;
     }
-    if ((uVar1 != DAT_801660a4) && (uVar1 != DAT_801660a6)) goto LAB_ATTACK__801c3bf4;
+    if (((undefined4 *)(uint)uVar1 != (undefined4 *)(uint)DAT_801660a4) &&
+       (puVar4 = (undefined4 *)(uint)DAT_801660a6, (undefined4 *)(uint)uVar1 != puVar4))
+    goto LAB_ATTACK__801c3bf4;
     DAT_80173ca8 = Unload_Scenario_MUS;
-    FUN_BATTLE_BIN__8014ceb4();
+    Call_OnCurrentThread((DAT_80165fd8 ^ 1) + 1,puVar4,in_a2);
     DAT_80173ca8 = OpenAndPlayMusic;
-    FUN_BATTLE_BIN__8014ceb4();
+    Call_OnCurrentThread((uint)uVar2,(DAT_80165fd8 ^ 1) + 1,in_a2);
     FUN_ATTACK__801c33c4();
   }
   DAT_80165fd4 = DAT_801660a4;
@@ -118131,6 +123286,711 @@ undefined * FUN_ATTACK__801c5a50(void)
     puVar1 = &DAT_ATTACK__801dcac4;
   }
   return puVar1;
+}
+
+
+
+void FUN_ATTACK__801c5be0(undefined4 param_1,int param_2)
+
+{
+  byte bVar1;
+  undefined2 uVar2;
+  PrimaryItemData *pPVar3;
+  undefined2 *puVar4;
+  int iVar5;
+  uint uVar6;
+  undefined2 *puVar7;
+  
+  Initialize_Unit_JobData(&DAT_ATTACK__801dcdfc,param_2,0);
+  puVar7 = &DAT_ATTACK__801ca0e8;
+  DAT_ATTACK__801ca0c8 = (short)param_2;
+  DAT_ATTACK__801ca0ca = (ushort)DAT_ATTACK__801dcdff;
+  DAT_ATTACK__801ca0d0 = DAT_ATTACK__801dce04 >> 0xc;
+  DAT_ATTACK__801ca0cc = (ushort)DAT_ATTACK__801dce20;
+  DAT_ATTACK__801ca0ce = (ushort)DAT_ATTACK__801dce22;
+  DAT_ATTACK__801ca082 = (ushort)((DAT_ATTACK__801dcfb6 & 0x30) != 0);
+  DAT_ATTACK__801ca08a = DAT_ATTACK__801ca0c8 + 0x200;
+  if ((DAT_ATTACK__801dcfb6 & 0x38) == 0) {
+    DAT_ATTACK__801ca082 = 2;
+  }
+  DAT_ATTACK__801ca084 = 0;
+  DAT_ATTACK__801ca086 = 0;
+  DAT_ATTACK__801ca080 = (ushort)DAT_ATTACK__801dce1e;
+  DAT_ATTACK__801ca088 = (ushort)DAT_ATTACK__801dce1d;
+  DAT_ATTACK__801ca090 = DAT_ATTACK__801dce26;
+  if (DAT_ATTACK__801dce26 == 0) {
+    DAT_ATTACK__801ca090 = DAT_ATTACK__801dce26 + 1;
+  }
+  DAT_ATTACK__801ca08c = DAT_ATTACK__801ca090;
+  DAT_ATTACK__801ca096 = DAT_ATTACK__801dce2a;
+  if (DAT_ATTACK__801dce2a == 0) {
+    DAT_ATTACK__801ca096 = DAT_ATTACK__801dce2a + 1;
+  }
+  DAT_ATTACK__801ca09c = 100;
+  DAT_ATTACK__801ca098 = 100;
+  DAT_ATTACK__801ca092 = DAT_ATTACK__801ca096;
+  DAT_ATTACK__801ca0e8 = (ushort)DAT_ATTACK__801dce36;
+  DAT_ATTACK__801ca0ea = (ushort)DAT_ATTACK__801dce34;
+  DAT_ATTACK__801ca0ec = (ushort)DAT_ATTACK__801dce37;
+  DAT_ATTACK__801ca0f2 = (ushort)DAT_ATTACK__801dce3a;
+  DAT_ATTACK__801ca0f4 = (ushort)DAT_ATTACK__801dce3b;
+  DAT_ATTACK__801ca0ee = (ushort)DAT_ATTACK__801dce38;
+  DAT_ATTACK__801ca0f0 = (ushort)DAT_ATTACK__801dce39;
+  DAT_ATTACK__801ca0fa = (ushort)DAT_ATTACK__801dce32;
+  DAT_ATTACK__801ca0fc = (ushort)DAT_ATTACK__801dce3f;
+  bVar1 = DAT_ATTACK__801dce3d;
+  if (DAT_ATTACK__801dce3d <= DAT_ATTACK__801dce3e) {
+    bVar1 = DAT_ATTACK__801dce3e;
+  }
+  DAT_ATTACK__801ca0fe = (ushort)bVar1;
+  DAT_ATTACK__801ca106 = 0;
+  DAT_ATTACK__801ca100 = (ushort)DAT_ATTACK__801dce3c;
+  DAT_ATTACK__801ca104 = (ushort)DAT_ATTACK__801dce33;
+  iVar5 = 4;
+  bVar1 = DAT_ATTACK__801dce41;
+  if (DAT_ATTACK__801dce41 <= DAT_ATTACK__801dce42) {
+    bVar1 = DAT_ATTACK__801dce42;
+  }
+  DAT_ATTACK__801ca108 = (ushort)bVar1;
+  puVar4 = &DAT_ATTACK__801ca0f0;
+  DAT_ATTACK__801ca10a = (ushort)DAT_ATTACK__801dce40;
+  DAT_ATTACK__801ca0d2 = DAT_ATTACK__801ca0c8;
+  do {
+    puVar4[0x12] = 0;
+    iVar5 = iVar5 + -1;
+    puVar4 = puVar4 + -1;
+  } while (-1 < iVar5);
+  if ((DAT_ATTACK__801dce02 & 0x20) == 0) {
+    bVar1 = DAT_ATTACK__801dce1a;
+    if (DAT_ATTACK__801dce19 != 0xff) {
+      bVar1 = DAT_ATTACK__801dce19;
+    }
+    DAT_ATTACK__801ca10c = (ushort)bVar1;
+    bVar1 = DAT_ATTACK__801dce1c;
+    if (DAT_ATTACK__801dce1b != 0xff) {
+      bVar1 = DAT_ATTACK__801dce1b;
+    }
+    DAT_ATTACK__801ca10e = (ushort)bVar1;
+    DAT_ATTACK__801ca110 = (ushort)DAT_ATTACK__801dce16;
+    DAT_ATTACK__801ca112 = (ushort)DAT_ATTACK__801dce17;
+    DAT_ATTACK__801ca114 = (ushort)DAT_ATTACK__801dce18;
+  }
+  iVar5 = 0;
+  puVar4 = puVar7;
+  do {
+    if ((puVar4[0x12] == 0) || (puVar4[0x12] == 0xff)) {
+      puVar4[0x12] = 0xffff;
+    }
+    iVar5 = iVar5 + 1;
+    puVar4 = puVar4 + 1;
+  } while (iVar5 < 5);
+  DAT_ATTACK__801ca0f6 = (ushort)((byte)(DAT_ATTACK__801dce0e + 0x50) < 0x30);
+  if (DAT_ATTACK__801ca0f6 == 0) {
+    DAT_ATTACK__801ca116 = (ushort)DAT_ATTACK__801dce0e;
+    if (DAT_ATTACK__801dce0e == 0) {
+      DAT_ATTACK__801ca168 = 0xfe;
+    }
+    DAT_ATTACK__801ca118 = (ushort)DAT_ATTACK__801dce0f;
+    if (DAT_ATTACK__801dce0f == 0) {
+      DAT_ATTACK__801ca17d = 0xfe;
+    }
+    DAT_ATTACK__801ca11a = DAT_ATTACK__801dce10;
+    DAT_ATTACK__801ca11c = DAT_ATTACK__801dce12;
+    DAT_ATTACK__801ca11e = DAT_ATTACK__801dce14;
+  }
+  else {
+    puVar4 = Store_SkillsetAbilities((uint)DAT_ATTACK__801dce0e,1);
+    iVar5 = 0;
+    do {
+      uVar2 = *puVar4;
+      puVar4 = puVar4 + 1;
+      iVar5 = iVar5 + 1;
+      puVar7[0x17] = uVar2;
+      puVar7 = puVar7 + 1;
+    } while (iVar5 < 5);
+    DAT_ATTACK__801ca11c = 0;
+  }
+  DAT_ATTACK__801ca0f8 = 0;
+  if ((int)(short)DAT_ATTACK__801ca10c == 0xffffffff) {
+    uVar6 = 0;
+    if ((int)(short)DAT_ATTACK__801ca10e != 0xffffffff) {
+      uVar6 = (int)(short)DAT_ATTACK__801ca10e;
+    }
+  }
+  else {
+    uVar6 = (int)(short)DAT_ATTACK__801ca10c & -(uint)(DAT_ATTACK__801ca10e == 0xffff);
+  }
+  if (((uVar6 != 0) && (pPVar3 = Get_Item_DataPointer(uVar6), (pPVar3->field_0x3 & 0x80) != 0)) &&
+     (((WeaponSecondary[uVar6].field_0x1 & 1) != 0 ||
+      (((DAT_ATTACK__801dce8d & 2) != 0 && ((WeaponSecondary[uVar6].field_0x1 & 4) != 0)))))) {
+    DAT_ATTACK__801ca0f8 = 1;
+  }
+  return;
+}
+
+
+
+// Possible GS_106.OBJ/GsSetProjection
+// Possible _OP_VDEL.OBJ/__builtin_vec_delete
+// Possible _OP_VNEW.OBJ/__builtin_vec_new
+// Possible SCNOFF.OBJ/SsSetNoiseOff
+// Possible SSQUIT.OBJ/SsQuit
+
+void Call_Prepare_Formation_Sprites(void)
+
+{
+  FUN_ATTACK__801c8598();
+  return;
+}
+
+
+
+// Possible GS_106.OBJ/GsSetProjection
+// Possible _OP_VDEL.OBJ/__builtin_vec_delete
+// Possible _OP_VNEW.OBJ/__builtin_vec_new
+// Possible SCNOFF.OBJ/SsSetNoiseOff
+// Possible SSQUIT.OBJ/SsQuit
+
+void Call_Portrait_Loading_Routine(void)
+
+{
+  FUN_ATTACK__801c80d0();
+  return;
+}
+
+
+
+void FUN_ATTACK__801c8024(void)
+
+{
+  int iVar1;
+  
+  while( true ) {
+    DAT_80173ca8 = Call_CalcFileHead_NNL;
+    iVar1 = FUN_8014ceb4();
+    if (iVar1 == 0) break;
+    FUN_8014ca80();
+  }
+  while( true ) {
+    DAT_80173ca8 = Check_File_Still_Loading;
+    iVar1 = FUN_8014ceb4();
+    if (iVar1 == 0) break;
+    FUN_8014ca80();
+  }
+  return;
+}
+
+
+
+// WARNING: Removing unreachable block (ram,0x801c8320)
+// WARNING: Removing unreachable block (ram,0x801c8494)
+
+void FUN_ATTACK__801c80d0(void)
+
+{
+  short sVar1;
+  u_long *p;
+  PartyUnit *pPVar2;
+  int iVar3;
+  int iVar4;
+  undefined *puVar5;
+  RECT *pRVar6;
+  int iVar7;
+  uint uVar8;
+  undefined *puVar9;
+  uint uVar10;
+  int iVar11;
+  int iVar12;
+  
+  p = (u_long *)BIN_Malloc_FFT(0x20000);
+  if (DAT_80165fda == 0) {
+    StoreImage((RECT *)((int)&PTR_DAT_ATTACK__801d5d65 + 3),p);
+    StoreImage((RECT *)&DAT_ATTACK__801d5d70,p + 0x2000);
+    StoreImage((RECT *)&DAT_ATTACK__801d5d78,p + 0x4000);
+    StoreImage((RECT *)&DAT_ATTACK__801d5d80,p + 0x6000);
+    DrawSync(0);
+  }
+  else if (DAT_80165fda == 2) {
+    FUN_ATTACK__801c8024();
+  }
+  else {
+    DAT_80173ca8 = Get_DAT_BIN_as_File;
+    FUN_8014ceb4();
+  }
+  iVar11 = 0;
+  do {
+    if (iVar11 == 0x14) {
+      uVar8 = (uint)DAT_8004d9ac;
+    }
+    else {
+      pPVar2 = Get_Party_Data_Pointer(iVar11);
+      uVar8 = (uint)pPVar2->SpriteSet;
+      if (0x7f < uVar8) {
+        if (uVar8 == 0x80) {
+          iVar4 = (pPVar2->JobID - 0x4a) * 2;
+          uVar8 = iVar4 + 0x60;
+          if (pPVar2->JobID == 0x5d) {
+            uVar8 = iVar4 + 0x5e;
+          }
+        }
+        else if (uVar8 == 0x81) {
+          iVar4 = (pPVar2->JobID - 0x4a) * 2;
+          uVar8 = iVar4 + 0x61;
+          if (pPVar2->JobID == 0x5d) {
+            uVar8 = iVar4 + 0x5f;
+          }
+        }
+        else {
+          DAT_ATTACK__801dcaa8 = Get_Job_DataPointer((uint)pPVar2->JobID);
+          uVar8 = (uint)DAT_ATTACK__801dcaa8->MonPortrait;
+        }
+        if (pPVar2->JobID == Bard) {
+          uVar8 = 0x82;
+        }
+        if (pPVar2->JobID == Dancer) {
+          uVar8 = 0x83;
+        }
+      }
+      uVar8 = (uint)*(ushort *)(&DAT_ATTACK__801d5bb0 + uVar8 * 2);
+      if (pPVar2->SpriteSet == 0) {
+        uVar8 = 0;
+      }
+      if (pPVar2->SpriteSet == 0x82) {
+        uVar8 = uVar8 | (uint)DAT_ATTACK__801dcaa8->MonPal << 10;
+      }
+    }
+    uVar10 = uVar8 & 0xff;
+    iVar12 = (int)(uVar8 & 0xc00) >> 10;
+    iVar4 = 0;
+    puVar9 = (undefined *)
+             ((int)p + ((int)((uVar10 % 0x28) * 0x20 + ((int)(uVar10 % 0x28) >> 3) * 0x2f00) >> 1) +
+                       (uVar10 / 0x28) * 0x8000);
+    DAT_ATTACK__801dd2d8 = 8;
+    DAT_ATTACK__801dd2da = 0x30;
+    sVar1 = (short)(iVar11 / 7);
+    DAT_ATTACK__801dd2d4 = ((short)iVar11 + sVar1 * -7) * 8 + 0x100;
+    DAT_ATTACK__801dd2d6 = sVar1 * 0x30 + 0x28;
+    do {
+      iVar7 = 0;
+      puVar5 = puVar9;
+      do {
+        iVar3 = iVar4 * 0x10 + iVar7;
+        iVar7 = iVar7 + 1;
+        (&DAT_ATTACK__801dd2e4)[iVar3] = *puVar5;
+        puVar5 = puVar5 + 1;
+      } while (iVar7 < 0x10);
+      iVar4 = iVar4 + 1;
+      puVar9 = puVar9 + 0x80;
+    } while (iVar4 < 0x30);
+    pRVar6 = (RECT *)&DAT_ATTACK__801dd2d4;
+    if (iVar11 == 0x14) {
+      pRVar6 = (RECT *)&DAT_ATTACK__801d5d58;
+    }
+    LoadImage(pRVar6,(u_long *)&DAT_ATTACK__801dd2e4);
+    DAT_ATTACK__801dd2e0 = 0x10;
+    DAT_ATTACK__801dd2e2 = 1;
+    DAT_ATTACK__801dd2de = (short)(iVar11 / 3);
+    DAT_ATTACK__801dd2dc = ((short)iVar11 + DAT_ATTACK__801dd2de * -3) * 0x10 + 0x100;
+    uVar8 = uVar10 / 0x28;
+    iVar7 = (int)(uVar10 % 0x28) >> 2;
+    iVar4 = uVar10 % 0x28 + iVar7 * -4;
+    if (iVar12 != 0) {
+      uVar8 = (int)(uVar10 - 0x3f) / 6;
+      iVar7 = (int)(uVar10 - 0x3f) % 6 + 10;
+      iVar4 = iVar12;
+    }
+    pRVar6 = (RECT *)&DAT_ATTACK__801dd2dc;
+    if (iVar11 == 0x14) {
+      pRVar6 = (RECT *)&DAT_ATTACK__801d5d60;
+    }
+    LoadImage(pRVar6,(u_long *)
+                     ((int)p + (iVar7 * 0x100 + iVar4 * 0x40 + 0xf000 >> 1) + uVar8 * 0x8000));
+    if (DAT_80165fda == 2) {
+      FUN_8014ca80();
+    }
+    else {
+      DrawSync(0);
+    }
+    iVar11 = iVar11 + 1;
+  } while (iVar11 < 0x15);
+  Call_BIN_Free_FFT((int)p);
+  return;
+}
+
+
+
+void FUN_ATTACK__801c8598(void)
+
+{
+  short sVar1;
+  short sVar2;
+  u_long *p;
+  PartyUnit *pPVar3;
+  undefined *puVar4;
+  uint uVar5;
+  int iVar6;
+  int iVar7;
+  int iVar8;
+  int iVar9;
+  int iVar10;
+  int iVar11;
+  int iVar12;
+  uint uVar13;
+  int iVar14;
+  int iVar15;
+  
+  p = (u_long *)BIN_Malloc_FFT(0x10000);
+  if (DAT_80165fda == 0) {
+    StoreImage((RECT *)(s_D>EG__FABCHIJKLMNOPQ_ATTACK__801d5da4 + 0x14),p);
+    StoreImage((RECT *)&DAT_ATTACK__801d5dc0,p + 0x2000);
+    DrawSync(0);
+  }
+  else if (DAT_80165fda == 2) {
+    FUN_ATTACK__801c8024();
+  }
+  else {
+    DAT_80173ca8 = Get_DAT_BIN_as_File;
+    FUN_8014ceb4();
+  }
+  LoadImage((RECT *)(s_D>EG__FABCHIJKLMNOPQ_ATTACK__801d5da4 + 0x14),p + 0x2000);
+  if (DAT_80165fda == 2) {
+    FUN_8014ca80();
+  }
+  else {
+    DrawSync(0);
+  }
+  iVar15 = 0;
+  do {
+    pPVar3 = Get_Party_Data_Pointer(iVar15);
+    uVar5 = (uint)pPVar3->SpriteSet;
+    if (0x7f < uVar5) {
+      if (uVar5 == 0x80) {
+        iVar9 = (pPVar3->JobID - 0x4a) * 2;
+        uVar5 = iVar9 + 0x60;
+        if (pPVar3->JobID == 0x5d) {
+          uVar5 = iVar9 + 0x5e;
+        }
+      }
+      else if (uVar5 == 0x81) {
+        iVar9 = (pPVar3->JobID - 0x4a) * 2;
+        uVar5 = iVar9 + 0x61;
+        if (pPVar3->JobID == 0x5d) {
+          uVar5 = iVar9 + 0x5f;
+        }
+      }
+      else {
+        DAT_ATTACK__801dcaa8 = Get_Job_DataPointer((uint)pPVar3->JobID);
+        uVar5 = (uint)DAT_ATTACK__801dcaa8->MonPortrait;
+      }
+      if (pPVar3->JobID == Bard) {
+        uVar5 = 0x82;
+      }
+      if (pPVar3->JobID == Dancer) {
+        uVar5 = 0x83;
+      }
+    }
+    uVar5 = (uint)*(ushort *)(&DAT_ATTACK__801d5bb0 + uVar5 * 2);
+    if (pPVar3->SpriteSet == 0) {
+      uVar5 = 0;
+    }
+    uVar5 = uVar5 & 0xff;
+    if (uVar5 == 0x18) {
+      uVar5 = 0x4c;
+      uVar13 = 0xffffffff;
+    }
+    else if (uVar5 < 0x3f) {
+      uVar13 = uVar5;
+      if ((pPVar3->SpriteSet & 0x80) != 0) {
+        uVar5 = uVar5 - 1;
+        uVar13 = uVar5;
+      }
+    }
+    else {
+      uVar5 = (uint)*(byte *)((int)&PTR_DAT_ATTACK__801d5d65 + uVar5);
+      uVar13 = uVar5;
+    }
+    iVar9 = (int)uVar5 / 0x3c;
+    iVar12 = (int)uVar5 % 0x3c;
+    if (iVar9 == 0) {
+      iVar6 = iVar12 / 10;
+      iVar14 = iVar12 % 10;
+    }
+    else if (iVar12 < 8) {
+      iVar6 = iVar12 / 10;
+      iVar14 = iVar12 % 10;
+    }
+    else {
+      iVar6 = (iVar12 + -8) / 5;
+      iVar14 = (iVar12 + -8) % 5;
+    }
+    iVar10 = 0x47f;
+    puVar4 = &DAT_ATTACK__801dda63;
+    do {
+      *puVar4 = 0;
+      iVar10 = iVar10 + -1;
+      puVar4 = puVar4 + -1;
+    } while (-1 < iVar10);
+    sVar1 = (short)iVar15;
+    if ((iVar9 == 1) && (7 < iVar12)) {
+      iVar9 = 0;
+      iVar12 = 0;
+      DAT_ATTACK__801dd2d8 = 0xc;
+      DAT_ATTACK__801dd2da = 0x30;
+      sVar2 = (short)(iVar15 / 5);
+      DAT_ATTACK__801dd2d4 = (sVar1 + sVar2 * -5) * 0xc + 0x180;
+      DAT_ATTACK__801dd2d6 = sVar2 * 0x30;
+      do {
+        iVar10 = 0;
+        do {
+          iVar7 = iVar12 + iVar10;
+          iVar11 = iVar10 + (iVar14 * 0x30 + iVar6 * 0x3000 + 0x2800 >> 1) + 0x8000;
+          iVar10 = iVar10 + 1;
+          (&DAT_ATTACK__801dd5e4)[iVar7] = *(undefined *)((int)p + iVar9 * 0x80 + iVar11);
+        } while (iVar10 < 0x18);
+        iVar9 = iVar9 + 1;
+        iVar12 = iVar12 + 0x18;
+      } while (iVar9 < 0x30);
+      LoadImage((RECT *)&DAT_ATTACK__801dd2d4,(u_long *)&DAT_ATTACK__801dd5e4);
+      (&DAT_ATTACK__801cd014)[iVar15] = 1;
+    }
+    else {
+      iVar12 = 8;
+      iVar10 = 0xc0;
+      DAT_ATTACK__801dd2d8 = 0xc;
+      DAT_ATTACK__801dd2da = 0x30;
+      sVar2 = (short)(iVar15 / 5);
+      DAT_ATTACK__801dd2d4 = (sVar1 + sVar2 * -5) * 0xc + 0x180;
+      DAT_ATTACK__801dd2d6 = sVar2 * 0x30;
+      do {
+        iVar11 = 6;
+        do {
+          iVar8 = iVar10 + iVar11;
+          iVar7 = iVar11 + iVar9 * 0x8000 + (iVar14 * 0x18 + iVar6 * 0x2800 >> 1);
+          iVar11 = iVar11 + 1;
+          (&DAT_ATTACK__801dd5e4)[iVar8] = *(undefined *)((int)p + iVar12 * 0x80 + iVar7 + -0x406);
+        } while (iVar11 < 0x12);
+        iVar12 = iVar12 + 1;
+        iVar10 = iVar10 + 0x18;
+      } while (iVar12 < 0x30);
+      LoadImage((RECT *)&DAT_ATTACK__801dd2d4,(u_long *)&DAT_ATTACK__801dd5e4);
+      (&DAT_ATTACK__801cd014)[iVar15] = 0;
+    }
+    if (uVar13 == 0xffffffff) {
+      uVar13 = 0x7a;
+    }
+    else if (0x3d < (int)uVar13) {
+      uVar13 = (uVar13 - 0x3e) * 3 + DAT_ATTACK__801dcaa8->MonPal + 0x3e;
+    }
+    iVar9 = iVar15;
+    if (iVar15 < 0) {
+      iVar9 = iVar15 + 3;
+    }
+    sVar2 = (short)(iVar9 >> 2);
+    DAT_ATTACK__801dd2dc = (sVar1 + sVar2 * -4) * 0x10 + 0x180;
+    DAT_ATTACK__801dd2de = sVar2 + 0xe0;
+    DAT_ATTACK__801dd2e0 = 0x10;
+    DAT_ATTACK__801dd2e2 = 1;
+    LoadImage((RECT *)&DAT_ATTACK__801dd2dc,
+              (u_long *)((int)p + ((int)(uVar13 * 0x40) >> 1) + 0xf000));
+    if (DAT_80165fda == 2) {
+      FUN_8014ca80();
+    }
+    else {
+      DrawSync(0);
+    }
+    iVar15 = iVar15 + 1;
+  } while (iVar15 < 0x10);
+  Call_BIN_Free_FFT((int)p);
+  return;
+}
+
+
+
+void FUN_ATTACK__801c9444(int *param_1)
+
+{
+  int iVar1;
+  int *piVar2;
+  int *piVar3;
+  
+  iVar1 = 0;
+  piVar3 = &DAT_80173f8c;
+  piVar2 = param_1;
+  do {
+    if (iVar1 != 0) {
+      *piVar3 = (int)param_1 + *piVar2 + 0x80;
+    }
+    piVar2 = piVar2 + 1;
+    iVar1 = iVar1 + 1;
+    piVar3 = piVar3 + 1;
+  } while (iVar1 < 0x20);
+  return;
+}
+
+
+
+void Save_deployment_textdata(void)
+
+{
+  byte bVar1;
+  undefined uVar2;
+  int *piVar3;
+  PartyUnit *pPVar4;
+  int iVar5;
+  byte *pbVar6;
+  undefined *puVar7;
+  uint uVar8;
+  byte *pbVar9;
+  undefined1 *puVar10;
+  short *psVar11;
+  int iVar12;
+  
+  pbVar9 = &DAT_ATTACK__801cf938;
+  piVar3 = (int *)BIN_Malloc_FFT(0x18000);
+  DAT_80173ca8 = Get_DAT_BIN_as_File;
+  Call_OnCurrentThread(0x1a3a,0x16800,piVar3);
+  iVar12 = 0;
+  FUN_BATTLE_BIN__80134020();
+  FUN_ATTACK__801c9444(piVar3);
+  do {
+    pPVar4 = Get_Party_Data_Pointer(iVar12);
+    if (pPVar4->PartyID == 0xff) {
+LAB_ATTACK__801c9548:
+      iVar5 = 10;
+    }
+    else {
+      iVar5 = 10;
+      if (iVar12 < 0x10) {
+        if (pPVar4->Proposition != 0) goto LAB_ATTACK__801c9548;
+        FUN_ATTACK__801c5be0(1,iVar12);
+        iVar5 = 0;
+        psVar11 = &DAT_ATTACK__801ca10c;
+        do {
+          uVar8 = (uint)*psVar11;
+          if ((uVar8 == 0) || ((uVar8 & 0x7ff) == 0x7ff)) {
+            *pbVar9 = 0xfe;
+            pbVar9 = pbVar9 + 1;
+          }
+          else {
+            pbVar6 = (byte *)FUN_BATTLE_BIN__80132824(uVar8 + 0x6800);
+            *pbVar9 = *pbVar6;
+            bVar1 = *pbVar9;
+            while (pbVar9 = pbVar9 + 1, (bVar1 & 0xfe) != 0xfe) {
+              pbVar6 = pbVar6 + 1;
+              if ((byte *)0x801d3937 < pbVar9) goto LAB_ATTACK__801c98e8;
+              *pbVar9 = *pbVar6;
+              bVar1 = *pbVar9;
+            }
+          }
+          iVar5 = iVar5 + 1;
+          psVar11 = psVar11 + 1;
+        } while (iVar5 < 5);
+        iVar5 = 0;
+        psVar11 = &DAT_ATTACK__801ca116;
+        if (DAT_ATTACK__801ca0f6 == 0) {
+          do {
+            uVar8 = (uint)*psVar11;
+            if ((uVar8 == 0) || ((uVar8 & 0x7ff) == 0x7ff)) {
+              *pbVar9 = 0xfe;
+              pbVar9 = pbVar9 + 1;
+            }
+            else {
+              pbVar6 = (byte *)FUN_BATTLE_BIN__80132824(uVar8 + 0x9800);
+              *pbVar9 = *pbVar6;
+              bVar1 = *pbVar9;
+              while (pbVar9 = pbVar9 + 1, (bVar1 & 0xfe) != 0xfe) {
+                pbVar6 = pbVar6 + 1;
+                if ((byte *)0x801d3937 < pbVar9) goto LAB_ATTACK__801c98e8;
+                *pbVar9 = *pbVar6;
+                bVar1 = *pbVar9;
+              }
+            }
+            iVar5 = iVar5 + 1;
+            psVar11 = psVar11 + 1;
+          } while (iVar5 < 2);
+          iVar5 = 2;
+          psVar11 = &DAT_ATTACK__801ca11a;
+          do {
+            uVar8 = (uint)*psVar11;
+            if ((uVar8 == 0) || ((uVar8 & 0x7ff) == 0x7ff)) {
+              *pbVar9 = 0xfe;
+              pbVar9 = pbVar9 + 1;
+            }
+            else {
+              pbVar6 = (byte *)FUN_BATTLE_BIN__80132824(uVar8 + 0x7800);
+              *pbVar9 = *pbVar6;
+              bVar1 = *pbVar9;
+              while (pbVar9 = pbVar9 + 1, (bVar1 & 0xfe) != 0xfe) {
+                pbVar6 = pbVar6 + 1;
+                if ((byte *)0x801d3937 < pbVar9) goto LAB_ATTACK__801c98e8;
+                *pbVar9 = *pbVar6;
+                bVar1 = *pbVar9;
+              }
+            }
+            iVar5 = iVar5 + 1;
+            psVar11 = psVar11 + 1;
+          } while (iVar5 < 5);
+        }
+        else {
+          do {
+            uVar8 = (uint)*psVar11;
+            if ((uVar8 == 0) || ((uVar8 & 0x7ff) == 0x7ff)) {
+              *pbVar9 = 0xfe;
+              pbVar9 = pbVar9 + 1;
+            }
+            else {
+              pbVar6 = (byte *)FUN_BATTLE_BIN__80132824(uVar8 + 0x7800);
+              *pbVar9 = *pbVar6;
+              bVar1 = *pbVar9;
+              while (pbVar9 = pbVar9 + 1, (bVar1 & 0xfe) != 0xfe) {
+                pbVar6 = pbVar6 + 1;
+                if ((byte *)0x801d3937 < pbVar9) goto LAB_ATTACK__801c98e8;
+                *pbVar9 = *pbVar6;
+                bVar1 = *pbVar9;
+              }
+            }
+            iVar5 = iVar5 + 1;
+            psVar11 = psVar11 + 1;
+          } while (iVar5 < 5);
+        }
+        pbVar6 = (byte *)FUN_BATTLE_BIN__80132824((int)DAT_ATTACK__801ca0ca + 0x6000);
+        *pbVar9 = *pbVar6;
+        bVar1 = *pbVar9;
+        while (pbVar9 = pbVar9 + 1, (bVar1 & 0xfe) != 0xfe) {
+          pbVar6 = pbVar6 + 1;
+          if ((byte *)0x801d3937 < pbVar9) goto LAB_ATTACK__801c98e8;
+          *pbVar9 = *pbVar6;
+          bVar1 = *pbVar9;
+        }
+        goto LAB_ATTACK__801c9890;
+      }
+    }
+    do {
+      *pbVar9 = 0xfe;
+      iVar5 = iVar5 + -1;
+      pbVar9 = pbVar9 + 1;
+    } while (-1 < iVar5);
+LAB_ATTACK__801c9890:
+    iVar12 = iVar12 + 1;
+    if (0xf < iVar12) {
+      puVar10 = &DAT_ATTACK__801d3938;
+      PTR_DAT_ATTACK__801cf938_ATTACK__801d5fb8 = &DAT_ATTACK__801cf938;
+      PTR_DAT_ATTACK__801cf938_ATTACK__801d5fbc = &DAT_ATTACK__801d3938;
+      puVar7 = (undefined *)FUN_BATTLE_BIN__80132824(0x5800);
+      iVar12 = 0;
+      do {
+        uVar2 = *puVar7;
+        puVar7 = puVar7 + 1;
+        iVar12 = iVar12 + 1;
+        *puVar10 = uVar2;
+        puVar10 = puVar10 + 1;
+      } while (iVar12 < 0x1400);
+LAB_ATTACK__801c98e8:
+      FUN_BATTLE_BIN__80134074();
+      Call_BIN_Free_FFT((int)piVar3);
+      return;
+    }
+  } while( true );
 }
 
 
@@ -118696,7 +124556,7 @@ int BUNIT_Entrypoint(void)
       uVar3 = (uint)DAT_BUNIT__801ecaac;
     }
     if (uVar3 == 0x30) {
-      Call_Play_SoundEffect((MusicDataHeader *)0x30);
+      Call_PlaySound_findChannel(0x30);
     }
     else if (uVar3 != 0) {
       Call_Play_Sound(uVar3);

@@ -999,6 +999,41 @@ struct PrimaryAbilityData {
     int AIUsable:1;
 };
 
+typedef struct vfx_sfx_timers vfx_sfx_timers, *Pvfx_sfx_timers;
+
+struct vfx_sfx_timers {
+    undefined field0_0x0;
+    undefined field1_0x1;
+    undefined field2_0x2;
+    undefined field3_0x3;
+    undefined field4_0x4;
+    undefined field5_0x5;
+    undefined field6_0x6;
+    undefined field7_0x7;
+    undefined field8_0x8;
+    undefined field9_0x9;
+    undefined field10_0xa;
+    undefined field11_0xb;
+    undefined field12_0xc;
+    undefined field13_0xd;
+    undefined field14_0xe;
+    undefined field15_0xf;
+    undefined field16_0x10;
+    undefined field17_0x11;
+    undefined field18_0x12;
+    undefined field19_0x13;
+    undefined field20_0x14;
+    undefined field21_0x15;
+    undefined field22_0x16;
+    undefined field23_0x17;
+    undefined field24_0x18;
+    undefined field25_0x19;
+    undefined field26_0x1a;
+    undefined field27_0x1b;
+    undefined field28_0x1c;
+    undefined field29_0x1d;
+};
+
 typedef struct MusicChannelInner MusicChannelInner, *PMusicChannelInner;
 
 typedef struct MusicChannelRepeat MusicChannelRepeat, *PMusicChannelRepeat;
@@ -1068,7 +1103,7 @@ struct MusicChannelInner {
     undefined field52_0x5b;
     short field53_0x5c;
     short Vol_Bal; // Created by retype action
-    short field55_0x60;
+    short echo;
     undefined field56_0x62;
     undefined field57_0x63;
     short vol_left;
@@ -1212,4931 +1247,11 @@ struct MusicChannelInner {
     undefined field196_0x12b;
 };
 
-typedef struct PrimaryItemData PrimaryItemData, *PPrimaryItemData;
-
-struct PrimaryItemData {
-    byte Palette;
-    byte SpriteID;
-    byte ReqLevel;
-    int NA:1;
-    int Rare:1;
-    int NA:1;
-    int Accessory:1;
-    int Armor:1;
-    int Headgear:1;
-    int Shield:1;
-    int Weapon:1;
-    byte SecondID;
-    byte ItemType;
-    undefined field13_0x6;
-    byte ItemAttr;
-    short Price;
-    byte ShopAvailability;
-    undefined field17_0xb;
-};
-
-typedef unsigned short    wchar16;
-typedef enum SUZUKIchannel_flags {
-    action1=1,
-    action4=4,
-    sfx=8,
-    note_active=128,
-    hold_note=256,
-    action200=512,
-    rest_note=1024,
-    action800=2048,
-    change_instrument=32768
-} SUZUKIchannel_flags;
-
-typedef enum Status2 {
-    empty=0,
-    Treasure=1,
-    Cursed=2,
-    Blood_Suck=4,
-    Silence=8,
-    Confusion=16,
-    Darkness=32,
-    Invite=64,
-    Petrify=128
-} Status2;
-
-typedef enum Status3 {
-    empty=0,
-    Critical=1,
-    Frog=2,
-    Chicken=4,
-    Berserk=8,
-    Transparent=16,
-    Reraise=32,
-    Float=64,
-    Oil=128
-} Status3;
-
-typedef enum Status4 {
-    empty=0,
-    Wall=1,
-    Stop=2,
-    Slow=4,
-    Haste=8,
-    Shell=16,
-    Protect=32,
-    Regen=64,
-    Poison=128
-} Status4;
-
-typedef enum Status5 {
-    empty=0,
-    Death_Sentence=1,
-    Reflect=2,
-    Dont_Act=4,
-    Dont_Move=8,
-    Sleep=16,
-    Charm=32,
-    Innocent=64,
-    Faith=128
-} Status5;
-
-typedef enum SUZUKInoteflags3 {
-    stop_instrument=4,
-    attacktime_change=16,
-    actionflag20=32,
-    sustain_change=64,
-    actionflag80=128,
-    sustain2_change=256
-} SUZUKInoteflags3;
-
-typedef enum SUZUKInoteflags4 {
-    default_dynamic=8
-} SUZUKInoteflags4;
-
-typedef enum FormulaID {
-    Weapon=1,
-    SpellWeapon=2,
-    GunWeapon=3,
-    MagicGun=4,
-    Weapon2=5,
-    AbsorbWeapon=6,
-    HealWeapon=7,
-    DamageSpell=8,
-    DemiSpell=9,
-    AilmentSpell=10,
-    BoonSpell=11,
-    HealSpell=12,
-    RaiseSpell=13,
-    DeathSpell=14,
-    MPAbsorbSpell=15,
-    AbsorbSpell=16,
-    11=17,
-    Quick=18,
-    13=19,
-    Golem=20,
-    Return2=21,
-    Mute=22,
-    Gravi2=23,
-    18=24,
-    19=25,
-    ZalbagRuin=26,
-    ZalbagMPRuin=27,
-    Song=28,
-    Dance=29,
-    Truth=30,
-    Untruth=31,
-    DmgKatana=32,
-    DmgMPKatana=33,
-    BoonKatana=34,
-    HealKatana=35,
-    Geomancy=36,
-    EquipBreak=37,
-    EquipSteal=38,
-    GilSteal=39,
-    EXPSteal=40,
-    HeartSteal=41,
-    TalkSkill=42,
-    StatBreak=43,
-    MPBreak=44,
-    HolySword=45,
-    MightySword=46,
-    DarkSword=47,
-    NightSword=48,
-    Barehand=49,
-    BarehandRND=50,
-    Stigma=51,
-    Chakra=52,
-    Revive=53,
-    PlusPA=54,
-    KnockbackRND=55,
-    InflictStatus=56,
-    PlusSP=57,
-    PlusBrave=58,
-    Scream=59,
-    Wish=60,
-    MonStatus=61,
-    GraviUnused=62,
-    AimLimb=63,
-    SealEvil=64,
-    GalaxyStop=65,
-    Work=66,
-    RevengeDMG=67,
-    Difference=68,
-    Climhazzard=69,
-    46=70,
-    BloodSuck=71,
-    ItemHeal=72,
-    ItemMPHeal=73,
-    Elixir=74,
-    PhoenixDown=75,
-    MonHeal=76,
-    MonAbsorb=77,
-    Bracelet=78,
-    GoblinPunch=79,
-    MonPhysSpell=80,
-    MonEsuna=81,
-    SelfDestruct=82,
-    Hurricane=83,
-    MagicSpirit=84,
-    Beaking=85,
-    Circle=86,
-    PleaseEat=87,
-    Moldball=88,
-    LevelBlast=89,
-    DragonTame=90,
-    DragonCare=91,
-    DragonPowerUP=92,
-    DragonLevelUP=93,
-    HydraBracelet=94,
-    Nanoflare=95,
-    HydraStatusUnused=96,
-    Foxbird=97,
-    FrightLook=98,
-    Throw=99,
-    Jump=100
-} FormulaID;
-
-typedef struct SuzukiVolStorageStruct SuzukiVolStorageStruct, *PSuzukiVolStorageStruct;
-
-typedef struct SuzukiVolStore SuzukiVolStore, *PSuzukiVolStore;
-
-struct SuzukiVolStore {
-    short field0_0x0;
-    short Volume;
-};
-
-struct SuzukiVolStorageStruct {
-    struct SuzukiVolStore hasVolume;
-    undefined4 ChangeInVolume;
-    short ChangeVol;
-};
-
-typedef struct MusicChannelData MusicChannelData, *PMusicChannelData;
-
-typedef struct MusicChannelIntermediary MusicChannelIntermediary, *PMusicChannelIntermediary;
-
-typedef enum SUZUKIintermediary_flags {
-    rest_note=2,
-    action80=128,
-    volume_change=256,
-    playing_note=512
-} SUZUKIintermediary_flags;
-
-typedef struct MusicChannelSecondary MusicChannelSecondary, *PMusicChannelSecondary;
-
-typedef enum mus_voiceChannelFunc {
-    Adjust_Voice_Vol_Both=1,
-    Set_Sweep_VolMode=2,
-    CalcLFOVoices=4,
-    Set_ADPCM_Addrs=8,
-    CalcNoiseVoices=16,
-    Adjust_Voice_Decay_Shift=32,
-    CalcReverbVoices=64,
-    Adjust_Release=128,
-    Adjust_Sustain_Level=256,
-    action200=512,
-    action400=1024,
-    action800=2048,
-    All=32767
-} mus_voiceChannelFunc;
-
-typedef enum MusicInstruction {
-    PlayNote=127,
-    Instruction=128,
-    Rest=128,
-    Fermata=129,
-    EndBar=144,
-    Loop=145,
-    Octave=148,
-    RaiseOctave=149,
-    LowerOctave=150,
-    TimeSignature=151,
-    Repeat=152,
-    Coda=153,
-    ToCoda=154,
-    Tempo=160,
-    Instrument=172,
-    Cue=186,
-    Naturale=192,
-    AttackTime=194,
-    Sustain=196,
-    AttackTime2=198,
-    PitchShift=216,
-    Dynamic=224,
-    Balance=232
-} MusicInstruction;
-
-typedef struct SoundFontHeader SoundFontHeader, *PSoundFontHeader;
-
-typedef struct sf_wave_settings sf_wave_settings, *Psf_wave_settings;
-
-struct sf_wave_settings {
-    int Wavefont_ptr;
-    ushort ADPCM_Repeat_addr;
-    undefined field2_0x6;
-    undefined field3_0x7;
-    byte Attack_Shiftstep; // Created by retype action
-    byte Decay_Shift; // Created by retype action
-    byte Sustain_Flags; // Created by retype action
-    byte Release_Flags; // Created by retype action
-    byte Sustain_Level;
-    byte Attack_Mode;
-    byte Sustain_Mode; // Created by retype action
-    byte Release_Mode; // Created by retype action
-};
-
-struct SoundFontHeader {
-    char FileDesignation[5];
-    undefined field1_0x5;
-    undefined field2_0x6;
-    undefined field3_0x7;
-    uint wholeFileSize;
-    undefined field5_0xc;
-    undefined field6_0xd;
-    undefined field7_0xe;
-    undefined field8_0xf;
-    uint waveFontStart;
-    uint waveFontSize;
-    uint field11_0x18;
-    undefined field12_0x1c;
-    undefined field13_0x1d;
-    undefined field14_0x1e;
-    undefined field15_0x1f;
-    short soundfont_ID;
-    undefined field17_0x22;
-    undefined field18_0x23;
-    undefined field19_0x24;
-    undefined field20_0x25;
-    undefined field21_0x26;
-    undefined field22_0x27;
-    int ADPCM_offset; // Created by retype action
-    struct SoundFontHeader * next_soundfont; // Created by retype action
-    struct sf_wave_settings waveFontArray[176];
-};
-
-struct MusicChannelSecondary {
-    enum mus_voiceChannelFunc channelFunc;
-    enum SUZUKInoteflags4 instrumentflags;
-    undefined field2_0x4;
-    undefined field3_0x5;
-    short field4_0x6;
-    undefined field5_0x8;
-    undefined field6_0x9;
-    undefined field7_0xa;
-    undefined field8_0xb;
-    undefined field9_0xc;
-    undefined field10_0xd;
-    undefined field11_0xe;
-    undefined field12_0xf;
-    undefined field13_0x10;
-    undefined field14_0x11;
-    undefined field15_0x12;
-    undefined field16_0x13;
-    enum MusicInstruction * MUS_Instr;
-    byte * SMD_instr_start;
-    undefined field19_0x1c;
-    undefined field20_0x1d;
-    undefined field21_0x1e;
-    undefined field22_0x1f;
-    undefined field23_0x20;
-    undefined field24_0x21;
-    undefined field25_0x22;
-    undefined field26_0x23;
-    short loops;
-    undefined field28_0x26;
-    byte field29_0x27;
-    byte instrument; // Created by retype action
-    byte voice_ID;
-    short releaseflags_small;
-    struct SoundFontHeader * Waveset_addr;
-    struct MusicChannelInner channel_notedata;
-};
-
-struct MusicChannelIntermediary {
-    enum SUZUKIintermediary_flags intermediaryflags;
-    struct MusicChannelSecondary channelSecondary; // Created by retype action
-};
-
-struct MusicChannelData {
-    enum SUZUKIchannel_flags channelflags;
-    struct MusicChannelIntermediary channel_inter;
-};
-
-typedef enum Status1 {
-    empty=0,
-    Performing=1,
-    Defending=2,
-    Jump=4,
-    Charging=8,
-    Undead=16,
-    Dead=32,
-    Crystal=64,
-    NONE=128
-} Status1;
-
-typedef struct SMDDataAll SMDDataAll, *PSMDDataAll;
-
-typedef struct SMDHeaderData SMDHeaderData, *PSMDHeaderData;
-
-struct SMDHeaderData {
-    uchar smds[4];
-    uint clearhere;
-    uint filesize;
-    undefined field3_0xc;
-    undefined field4_0xd;
-    undefined field5_0xe;
-    undefined field6_0xf;
-    short field7_0x10;
-    undefined field8_0x12;
-    undefined1 length_192; // Created by retype action
-    byte NumChannels; // Created by retype action
-    undefined field11_0x15;
-    short field12_0x16;
-    short field13_0x18;
-    char reverbMode_small; // Created by retype action
-    byte volumeDepth_small; // Created by retype action
-    byte reverbDelay_small; // Created by retype action
-    byte reverbFeedback_small;
-    short filename_ptr;
-    short data_ptr;
-    short channel_ptr;
-};
-
-struct SMDDataAll {
-    struct SMDHeaderData HeaderData;
-    undefined field1_0x24;
-    undefined field2_0x25;
-    undefined field3_0x26;
-    undefined field4_0x27;
-    undefined field5_0x28;
-    undefined field6_0x29;
-    undefined field7_0x2a;
-    undefined field8_0x2b;
-    undefined field9_0x2c;
-    undefined field10_0x2d;
-    undefined field11_0x2e;
-    undefined field12_0x2f;
-    undefined field13_0x30;
-    undefined field14_0x31;
-    undefined field15_0x32;
-    undefined field16_0x33;
-    undefined field17_0x34;
-    undefined field18_0x35;
-    undefined field19_0x36;
-    undefined field20_0x37;
-    undefined field21_0x38;
-    undefined field22_0x39;
-    undefined field23_0x3a;
-    undefined field24_0x3b;
-    undefined field25_0x3c;
-    undefined field26_0x3d;
-    undefined field27_0x3e;
-    undefined field28_0x3f;
-    undefined field29_0x40;
-    undefined field30_0x41;
-    undefined field31_0x42;
-    undefined field32_0x43;
-    undefined field33_0x44;
-    undefined field34_0x45;
-    undefined field35_0x46;
-    undefined field36_0x47;
-    undefined field37_0x48;
-    undefined field38_0x49;
-    undefined field39_0x4a;
-    undefined field40_0x4b;
-    undefined field41_0x4c;
-    undefined field42_0x4d;
-    undefined field43_0x4e;
-    undefined field44_0x4f;
-    undefined field45_0x50;
-    undefined field46_0x51;
-    undefined field47_0x52;
-    undefined field48_0x53;
-    undefined field49_0x54;
-    undefined field50_0x55;
-    undefined field51_0x56;
-    undefined field52_0x57;
-    undefined field53_0x58;
-    undefined field54_0x59;
-    undefined field55_0x5a;
-    undefined field56_0x5b;
-    undefined field57_0x5c;
-    undefined field58_0x5d;
-    undefined field59_0x5e;
-    undefined field60_0x5f;
-    undefined field61_0x60;
-    undefined field62_0x61;
-    undefined field63_0x62;
-    undefined field64_0x63;
-    undefined field65_0x64;
-    undefined field66_0x65;
-    undefined field67_0x66;
-    undefined field68_0x67;
-    undefined field69_0x68;
-    undefined field70_0x69;
-    undefined field71_0x6a;
-    undefined field72_0x6b;
-    undefined field73_0x6c;
-    undefined field74_0x6d;
-    undefined field75_0x6e;
-    undefined field76_0x6f;
-    undefined field77_0x70;
-    undefined field78_0x71;
-    undefined field79_0x72;
-    undefined field80_0x73;
-    undefined field81_0x74;
-    undefined field82_0x75;
-    undefined field83_0x76;
-    undefined field84_0x77;
-    undefined field85_0x78;
-    undefined field86_0x79;
-    undefined field87_0x7a;
-    undefined field88_0x7b;
-    undefined field89_0x7c;
-    undefined field90_0x7d;
-    undefined field91_0x7e;
-    undefined field92_0x7f;
-    undefined field93_0x80;
-    undefined field94_0x81;
-    undefined field95_0x82;
-    undefined field96_0x83;
-    undefined field97_0x84;
-    undefined field98_0x85;
-    undefined field99_0x86;
-    undefined field100_0x87;
-    undefined field101_0x88;
-    undefined field102_0x89;
-    undefined field103_0x8a;
-    undefined field104_0x8b;
-    undefined field105_0x8c;
-    undefined field106_0x8d;
-    undefined field107_0x8e;
-    undefined field108_0x8f;
-    undefined field109_0x90;
-    undefined field110_0x91;
-    undefined field111_0x92;
-    undefined field112_0x93;
-    undefined field113_0x94;
-    undefined field114_0x95;
-    undefined field115_0x96;
-    undefined field116_0x97;
-    undefined field117_0x98;
-    undefined field118_0x99;
-    undefined field119_0x9a;
-    undefined field120_0x9b;
-    undefined field121_0x9c;
-    undefined field122_0x9d;
-    undefined field123_0x9e;
-    undefined field124_0x9f;
-    undefined field125_0xa0;
-    undefined field126_0xa1;
-    undefined field127_0xa2;
-    undefined field128_0xa3;
-    undefined field129_0xa4;
-    undefined field130_0xa5;
-    undefined field131_0xa6;
-    undefined field132_0xa7;
-    undefined field133_0xa8;
-    undefined field134_0xa9;
-    undefined field135_0xaa;
-    undefined field136_0xab;
-    undefined field137_0xac;
-    undefined field138_0xad;
-    undefined field139_0xae;
-    undefined field140_0xaf;
-    undefined field141_0xb0;
-    undefined field142_0xb1;
-    undefined field143_0xb2;
-    undefined field144_0xb3;
-    undefined field145_0xb4;
-    undefined field146_0xb5;
-    undefined field147_0xb6;
-    undefined field148_0xb7;
-    struct MusicChannelData ChannelData[8];
-    undefined field150_0xbb8;
-    undefined field151_0xbb9;
-    undefined field152_0xbba;
-    undefined field153_0xbbb;
-    undefined field154_0xbbc;
-    undefined field155_0xbbd;
-    undefined field156_0xbbe;
-    undefined field157_0xbbf;
-    undefined field158_0xbc0;
-    undefined field159_0xbc1;
-    undefined field160_0xbc2;
-    undefined field161_0xbc3;
-    undefined field162_0xbc4;
-    undefined field163_0xbc5;
-    undefined field164_0xbc6;
-    undefined field165_0xbc7;
-};
-
-typedef struct InflictStatuses InflictStatuses, *PInflictStatuses;
-
-typedef struct StatusList StatusList, *PStatusList;
-
-struct StatusList {
-    enum Status1 Status1;
-    enum Status2 Status2;
-    enum Status3 Status3;
-    enum Status4 Status4;
-    enum Status5 Status5;
-};
-
-struct InflictStatuses {
-    bool Cancel:1;
-    bool InflictSeperate:1;
-    bool InflictRandom:1;
-    bool InflictAll:1;
-    struct StatusList field4_0x1;
-};
-
-typedef struct MusicDataHeader MusicDataHeader, *PMusicDataHeader;
-
-typedef struct MusDataAll MusDataAll, *PMusDataAll;
-
-typedef enum mus_10 {
-    actionflag1=1,
-    end_on_endbar=2,
-    recalculate_reverb=256,
-    actionflag2000=8192,
-    music_playing=32768
-} mus_10;
-
-struct MusicDataHeader {
-    struct MusDataAll * PrevPlayedMus;
-    struct MusDataAll * NextMus;
-    struct SMDDataAll * TransferAddr;
-    int DedicatedSpace;
-    enum mus_10 10_cmdfield;
-    short field5_0x12;
-    byte NumChannelDedicate; // Created by retype action
-    byte length_192;
-    byte NumChannels;
-    undefined field9_0x17;
-    short Soundfont_ID;
-    short field11_0x1a;
-    undefined field12_0x1c;
-    undefined field13_0x1d;
-    ushort noise_clock;
-    uint field15_0x20;
-    uint field16_0x24;
-    uint field17_0x28;
-    undefined field18_0x2c;
-    undefined field19_0x2d;
-    undefined field20_0x2e;
-    undefined field21_0x2f;
-    short field22_0x30;
-    short CurMeasure;
-    short CurBeat;
-    short 192s_Until_nextBeat;
-    short timeSignature_top;
-    short 192s_Per_Beat;
-    short timeSignature_bottom;
-    short timeSigTop;
-    undefined field30_0x40;
-    undefined field31_0x41;
-    undefined field32_0x42;
-    undefined field33_0x43;
-    uint ReverbMode; // Created by retype action
-    short volumeDepth; // Created by retype action
-    undefined field36_0x4a;
-    undefined field37_0x4b;
-    long reverbDelay; // Created by retype action
-    long reverbFeedback; // Created by retype action
-    undefined field40_0x54;
-    undefined field41_0x55;
-    undefined field42_0x56;
-    undefined field43_0x57;
-    undefined4 OwnedChannels;
-    undefined field45_0x5c;
-    undefined field46_0x5d;
-    undefined field47_0x5e;
-    undefined field48_0x5f;
-    uint ModifiedChannels;
-    uint field50_0x64;
-    uint LFOVoiceBits;
-    uint NoiseVoiceBits;
-    uint ReverbVoiceBits;
-    uint microtimer;
-    uint modified_tempo;
-    short field56_0x7c;
-    short raw_tempo;
-    uint field58_0x80;
-    short field59_0x84;
-    undefined field60_0x86;
-    undefined field61_0x87;
-    short field62_0x88;
-    short tempo_scalar;
-    undefined field64_0x8c;
-    undefined field65_0x8d;
-    undefined field66_0x8e;
-    undefined field67_0x8f;
-    short field68_0x90;
-    undefined field69_0x92;
-    undefined field70_0x93;
-    struct SuzukiVolStorageStruct volset1;
-    undefined field72_0x9e;
-    undefined field73_0x9f;
-    struct SuzukiVolStorageStruct volset2;
-    undefined field75_0xaa;
-    undefined field76_0xab;
-    struct SuzukiVolStorageStruct volset3;
-    undefined field78_0xb6;
-    undefined field79_0xb7;
-};
-
-struct MusDataAll {
-    struct MusicDataHeader HeaderData;
-    struct MusicChannelData ChannelData[8];
-    undefined field2_0xbb8;
-    undefined field3_0xbb9;
-    undefined field4_0xbba;
-    undefined field5_0xbbb;
-    undefined field6_0xbbc;
-    undefined field7_0xbbd;
-    undefined field8_0xbbe;
-    undefined field9_0xbbf;
-    undefined field10_0xbc0;
-    undefined field11_0xbc1;
-    undefined field12_0xbc2;
-    undefined field13_0xbc3;
-    undefined field14_0xbc4;
-    undefined field15_0xbc5;
-    undefined field16_0xbc6;
-    undefined field17_0xbc7;
-};
-
-typedef enum ItemID {
-    None=0,
-    Knife=1,
-    MythrilKnife=2,
-    BlindKnife=3,
-    MageKnife=4,
-    PlatKnife=5,
-    GaucheKnife=6,
-    OrichKnife=7,
-    AssassinKnife=8,
-    AirKnife=9,
-    ZorlinKnife=10,
-    HiddenNinjato=11,
-    Ninjato=12,
-    ShortNinjato=13,
-    EdgeNinjato=14,
-    SpellNinjato=15,
-    SasukeNinjato=16,
-    IgaNinjato=17,
-    KogaNinjato=18,
-    BroadSword=19,
-    LongSword=20,
-    IronSword=21,
-    MythrilSword=22,
-    BloodSword=23,
-    CoralSword=24,
-    AncientSword=25,
-    SleepSword=26,
-    PlatSword=27,
-    DiamondSword=28,
-    IceSword=29,
-    RuneSword=30,
-    NagrarokSword=31,
-    MateriaSword=32,
-    DefendKnSword=33,
-    QueenKnSword=34,
-    ExcKnSword=35,
-    RagnarokKnSword=36,
-    ChaosKnSword=37,
-    AsuraKatana=38,
-    KoutetsuKatana=39,
-    BizenKatana=40,
-    MurasameKatana=41,
-    HeavenKatana=42,
-    KiyomoriKatana=43,
-    MuramasaKatana=44,
-    KikuiKatana=45,
-    MasamuneKatana=46,
-    ChiriKatana=47,
-    BattleAxe=48,
-    GiantAxe=49,
-    SlashAxe=50,
-    Rod=51,
-    ThunderRod=52,
-    FlameRod=53,
-    IceRod=54,
-    PoisonRod=55,
-    WizardRod=56,
-    DragonRod=57,
-    FaithRod=58,
-    OakStaff=59,
-    WhiteStaff=60,
-    HealStaff=61,
-    RainbowStaff=62,
-    WizardStaff=63,
-    GoldStaff=64,
-    ZeusStaff=65,
-    SageStaff=66,
-    Flail=67,
-    FlameFlail=68,
-    MSFlail=69,
-    ScorpionFlail=70,
-    RomandaGun=71,
-    MythrilGun=72,
-    StoneGun=73,
-    BlazeGun=74,
-    GlacierGun=75,
-    BlastGun=76,
-    BowgunXBow=77,
-    KnightXBow=78,
-    XBow=79,
-    PoisonXBow=80,
-    HuntingXBow=81,
-    GastrifitisXBow=82,
-    LongBow=83,
-    SilverBow=84,
-    IceBow=85,
-    LightningBow=86,
-    WindBow=87,
-    MythrilBow=88,
-    UltimaBow=89,
-    YoichiBow=90,
-    PerseusBow=91,
-    LamiaHarp=92,
-    BloodyHarp=93,
-    FairyHarp=94,
-    BattleDict=95,
-    MonsterDict=96,
-    PapyrusDict=97,
-    MadlemDict=98,
-    JavelinPolearm=99,
-    SpearPolearm=100,
-    MythrilPolearm=101,
-    PartisanPolearm=102,
-    ObeliskPolearm=103,
-    HolyPolearm=104,
-    WhiskerPolearm=105,
-    JavelinPolearm2=106,
-    CypressPole=107,
-    BambooPole=108,
-    MuskPole=109,
-    IronPole=110,
-    GokuuPole=111,
-    IvoryPole=112,
-    OctagonPole=113,
-    WhiskerPole=114,
-    CBag=115,
-    FSBag=116,
-    PBag=117,
-    HBag=118,
-    PersiaCloth=119,
-    CashmereCloth=120,
-    RyozanCloth=121,
-    Shuriken=122,
-    MagicShuriken=123,
-    YagyuShuriken=124,
-    FireBall=125,
-    WaterBall=126,
-    LightningBall=127,
-    EscutchShield=128,
-    BucklerShield=129,
-    BronzeShield=130,
-    RoundShield=131,
-    MythrilShield=132,
-    GoldShield=133,
-    IceShield=134,
-    FlameShield=135,
-    AegisShield=136,
-    DiamondShield=137,
-    PlatShield=138,
-    CrystalShield=139,
-    GenjiShield=140,
-    KaiserShield=141,
-    VeniceShield=142,
-    EscutchShield2=143,
-    LeatherHelm=144,
-    BronzeHelm=145,
-    IronHelm=146,
-    BarbutaHelm=147,
-    MythrilHelm=148,
-    GoldHelm=149,
-    CrossHelm=150,
-    DiamondHelm=151,
-    PlatHelm=152,
-    CircletHelm=153,
-    CrystalHelm=154,
-    GenjiHelm=155,
-    GrandHelm=156,
-    LeatherHat=157,
-    FeatherHat=158,
-    RedHat=159,
-    HeadgearHat=160,
-    TriangleHat=161,
-    BeretHat=162,
-    HeadbandHat=163,
-    MiterHat=164,
-    Blackhat=165,
-    HairpinHat=166,
-    FlashHat=167,
-    ThiefHat=168,
-    CachushaAdrn=169,
-    BaretteAdrn=170,
-    RibbonAdrn=171,
-    LeatherArmor=172,
-    LinenArmor=173,
-    BronzeArmor=174,
-    ChainArmor=175,
-    MythrilArmor=176,
-    PlateArmor=177,
-    GoldArmor=178,
-    DiamondArmor=179,
-    PlatArmor=180,
-    CarabiniArmor=181,
-    CrystalArmor=182,
-    GenjiArmor=183,
-    ReflectArmor=184,
-    MaxArmor=185,
-    Clothes=186,
-    LeatherClothes=187,
-    LeatherClothes2=188,
-    ChainClothes=189,
-    MythrilClothes=190,
-    AdamClothes=191,
-    WizardClothes=192,
-    BrigClothes=193,
-    JudoClothes=194,
-    PowerClothes=195,
-    EarthClothes=196,
-    SecretClothes=197,
-    BlackClothes=198,
-    RubberClothes=199,
-    LinenRobe=200,
-    SilkRobe=201,
-    WizardRobe=202,
-    ChamRobe=203,
-    WhiteRobe=204,
-    BlackRobe=205,
-    LightRobe=206,
-    LordRobe=207,
-    BattleShoe=208,
-    SpikeShoe=209,
-    GermShoe=210,
-    RubberShoe=211,
-    FeatherShoe=212,
-    SprintShoe=213,
-    RedShoe=214,
-    PowerGauntlet=215,
-    GenjiGauntlet=216,
-    MagicGauntlet=217,
-    BraceGauntlet=218,
-    ReflectRing=219,
-    DefenseRing=220,
-    MagicRing=221,
-    CursedRing=222,
-    AngelRing=223,
-    DiamondArmlet=224,
-    JadeArmlet=225,
-    108Armlet=226,
-    NKaiArmlet=227,
-    DefenseArmlet=228,
-    SmallMantle=229,
-    LeatherMantle=230,
-    WizardMantle=231,
-    ElfMantle=232,
-    DraculaMantle=233,
-    FeatherMantle=234,
-    VanishMantle=235,
-    Chantage=236,
-    Cherche=237,
-    Setiemson=238,
-    SaltyRage=239,
-    Potion=240,
-    HiPotion=241,
-    XPotion=242,
-    Ether=243,
-    HiEther=244,
-    Elixir=245,
-    Antidote=246,
-    EyeDrop=247,
-    EchoGrass=248,
-    MaidenKiss=249,
-    Soft=250,
-    HolyWater=251,
-    Remedy=252,
-    PhoenixDown=253,
-    RND_ENTD=254,
-    NONE_ENTD=255
-} ItemID;
-
-typedef struct AccessorySecondary AccessorySecondary, *PAccessorySecondary;
-
-struct AccessorySecondary {
-    byte PhysicalEvade;
-    byte MagicalEvade;
-};
-
-typedef enum Eq1 {
-    Rod=1,
-    Axe=2,
-    Katana=4,
-    Knight_Sword=8,
-    Sword=16,
-    Ninja_Blade=32,
-    Knife=64,
-    NONE=128
-} Eq1;
-
-typedef enum Eq3 {
-    Armor=1,
-    Hair_Adornment=2,
-    Hat=4,
-    Helmet=8,
-    Shield=16,
-    Cloth=32,
-    Bag=64,
-    Pole=128
-} Eq3;
-
-typedef enum Eq2 {
-    Polearm=1,
-    Book=2,
-    Instrument=4,
-    Bow=8,
-    Crossbow=16,
-    Gun=32,
-    Flail=64,
-    Staff=128
-} Eq2;
-
-typedef enum SUZUKIInstr { // Bit encoded currently executing instruction halfword
-    Off=0,
-    SysCounterInitialised=1,
-    SPUTransfering=16,
-    SPUWriting=32,
-    SPUReading=64,
-    Sound_Stereo=256,
-    Wide=512,
-    Sound_Wide=768,
-    Unused=1024,
-    Sound_Unused=1280,
-    WideOrUnused=1536,
-    Sound_Type=1792,
-    MusicPlayable=4096,
-    Lock_Volume=8192,
-    SPUMallocInitialised=32768
-} SUZUKIInstr;
-
-typedef enum Eq4 {
-    Perfume=1,
-    Cloak=2,
-    Armlet=4,
-    Ring=8,
-    Armguard=16,
-    Shoes=32,
-    Robe=64,
-    Clothing=128
-} Eq4;
-
-typedef enum status_legal {
-    is_dead=0,
-    team_loss_enemy=1,
-    team_loss_ally=2,
-    freeze_ct=3,
-    can_act=4,
-    immortal_immune=5,
-    formation_immune=6,
-    0x7=7,
-    0x8=8,
-    no_mount=9,
-    0x9=10
-} status_legal;
-
-typedef struct Skillset Skillset, *PSkillset;
-
-typedef enum AbilityID {
-    None=0,
-    Cure=1,
-    Cure2=2,
-    Cure3=3,
-    Cure4=4,
-    Raise=5,
-    Raise2=6,
-    Reraise=7,
-    Regen=8,
-    Protect=9,
-    Protect2=10,
-    Shell=11,
-    Shell2=12,
-    Wall=13,
-    Esuna=14,
-    Holy=15,
-    Fire=16,
-    Fire2=17,
-    Fire3=18,
-    Fire4=19,
-    Bolt=20,
-    Bolt2=21,
-    Bolt3=22,
-    Bolt4=23,
-    Ice=24,
-    Ice2=25,
-    Ice3=26,
-    Ice4=27,
-    Poison=28,
-    Frog=29,
-    Death=30,
-    Flare=31,
-    Haste=32,
-    Haste2=33,
-    Slow=34,
-    Slow2=35,
-    Stop=36,
-    DontMove=37,
-    Float=38,
-    Reflect=39,
-    KANZENTeleportArrive=40,
-    Quick=41,
-    Demi=42,
-    Demi2=43,
-    Meteor=44,
-    2d=45,
-    Blind=46,
-    SpellAbsorb=47,
-    LifeDrain=48,
-    PrayFaith=49,
-    DoubtFaith=50,
-    Zombie=51,
-    SilenceSong=52,
-    BlindRage=53,
-    Foxbird=54,
-    ConfusionSong=55,
-    DispelMagic=56,
-    Paralyze=57,
-    Sleep=58,
-    Petrify=59,
-    Moogle=60,
-    Shiva=61,
-    Ramuh=62,
-    Ifrit=63,
-    Titan=64,
-    Golem=65,
-    Carbunkle=66,
-    Bahamut=67,
-    Odin=68,
-    Leviathan=69,
-    Salamander=70,
-    Silf=71,
-    Fairy=72,
-    Lich=73,
-    Cyclops=74,
-    Zodiac=75,
-    Asura=76,
-    Koutetsu=77,
-    BizenBoat=78,
-    Murasame=79,
-    HeavensCloud=80,
-    Kiyomori=81,
-    Muramasa=82,
-    Kikuichimoji=83,
-    Masamune=84,
-    Chirijiraden=85,
-    AngelSong=86,
-    LifeSong=87,
-    CheerSong=88,
-    BattleSong=89,
-    MagicSong=90,
-    NamelessSong=91,
-    LastSong=92,
-    WitchHunt=93,
-    Wiznaibus=94,
-    SlowDance=95,
-    PolkaPolka=96,
-    Disillusion=97,
-    NamelessDance=98,
-    LastDance=99,
-    SpinFist=100,
-    RepeatingFist=101,
-    WaveFist=102,
-    EarthSlash=103,
-    SecretFist=104,
-    StigmaMagic=105,
-    Chakra=106,
-    Revive=107,
-    GilTaking=108,
-    StealHeart=109,
-    StealHelmet=110,
-    StealArmor=111,
-    StealShield=112,
-    StealWeapon=113,
-    StealAccessory=114,
-    StealEXP=115,
-    Invitation=116,
-    Persuade=117,
-    Praise=118,
-    Threaten=119,
-    Preach=120,
-    Solution=121,
-    DeathSentence=122,
-    Negotiate=123,
-    Insult=124,
-    MimicDaravon=125,
-    Pitfall=126,
-    WaterBall=127,
-    HellIvy=128,
-    CarveModel=129,
-    LocalQuake=130,
-    Kamaitachi=131,
-    DemonFire=132,
-    Quicksand=133,
-    SandStorm=134,
-    Blizzard=135,
-    GustyWind=136,
-    LavaBall=137,
-    HeadBreak=138,
-    ArmorBreak=139,
-    ShieldBreak=140,
-    WeaponBreak=141,
-    MagicBreak=142,
-    SpeedBreak=143,
-    PowerBreak=144,
-    MindBreak=145,
-    Accumulate=146,
-    Dash=147,
-    ThrowStone=148,
-    Heal=149,
-    Yell=150,
-    CheerUp=151,
-    Wish=152,
-    Scream=153,
-    Ultima=154,
-    StasisSword=155,
-    SplitPunch=156,
-    CrushPunch=157,
-    LightningStab=158,
-    HolyExplosion=159,
-    ShellburstStab=160,
-    BlastarPunch=161,
-    HellcryPunch=162,
-    IcewolfBite=163,
-    DarkSword=164,
-    NightSword=165,
-    DarkHoly=166,
-    Deathspell2=167,
-    GalaxyStop=168,
-    HeavenThunder=169,
-    Asura(Truth)=170,
-    DiamondSword=171,
-    HydragonPit=172,
-    SpaceStorage=173,
-    SkyDemon=174,
-    HeavenBoltBack=175,
-    AsuraBack=176,
-    DiamondSwordBack=177,
-    HydragonPitBack=178,
-    SpaceStorageBack=179,
-    SkyDemonback=180,
-    Seal(UseHand)=181,
-    ShadowStitch=182,
-    StopBracelet=183,
-    ARUTETeleportArrive=184,
-    Shock=185,
-    Difference=186,
-    Seal(Fear)=187,
-    ChickenRace=188,
-    HoldTight=189,
-    Darkness=190,
-    LoseVoice=191,
-    Loss=192,
-    Spell=193,
-    Nightmare=194,
-    DeathCold=195,
-    MagicRuin=196,
-    SpeedRuin=197,
-    PowerRuin=198,
-    MindRuin=199,
-    BloodSuck=200,
-    Allure=201,
-    Bio(ca)=202,
-    Bio(cb)=203,
-    Bio(cc)=204,
-    Bio2(cd)=205,
-    Bio2(ce)=206,
-    Bio2(cf)=207,
-    Bio2(d0)=208,
-    Bio3(d1)=209,
-    Bio3(d2)=210,
-    Bio3(d3)=211,
-    MagicBarrier=212,
-    LegAim=213,
-    ArmAim=214,
-    SealEvil=215,
-    Melt=216,
-    Tornado=217,
-    Quake=218,
-    ARUTETeleportSend=219,
-    KANZENTeleportSend=220,
-    Toad2=221,
-    Gravi2=222,
-    Flare2=223,
-    Blind2=224,
-    SmallBomb(Blue)=225,
-    SmallBomb(Black)=226,
-    Confuse2=227,
-    Sleep2=228,
-    Ultima(ARUTE)=229,
-    All-Ultima=230,
-    Mute=231,
-    Despair2=232,
-    Return2=233,
-    Blind(MagicSword)=234,
-    Aspel=235,
-    Drain=236,
-    Faith=237,
-    Innocent=238,
-    Zombie(MagicSword)=239,
-    Silence=240,
-    Berserk=241,
-    Chicken=242,
-    Confuse=243,
-    Despair=244,
-    DontAct=245,
-    Sleep(MagicSword)=246,
-    Break=247,
-    IceBracelet=248,
-    FireBracelet=249,
-    ThunderBracelet=250,
-    DragonTame=251,
-    DragonCare=252,
-    DragonPowerUp=253,
-    DragonLevelUp=254,
-    HolyBracelet=255,
-    Shock!=256,
-    Braver=257,
-    Cross-slash=258,
-    BladeBeam=259,
-    Climhazzard=260,
-    Meteorain=261,
-    FinishTouch=262,
-    Omnislash=263,
-    CherryBlossom=264,
-    ChocoAttack=265,
-    ChocoBall=266,
-    ChocoMeteor=267,
-    ChocoEsuna=268,
-    ChocoCure=269,
-    Tackle=270,
-    GoblinPunch=271,
-    TurnPunch=272,
-    EyeGouge=273,
-    Mutilate=274,
-    Bite=275,
-    SmallBomb(red)=276,
-    SelfDestruct=277,
-    FlameAttack=278,
-    Spark=279,
-    Scratch=280,
-    CatKick=281,
-    Blastar=282,
-    PoisonNail=283,
-    BloodSuck(Panther)=284,
-    Tentacle(PiscoDemon)=285,
-    BlackInk=286,
-    OddSoundwave=287,
-    MindBlast=288,
-    LevelBlast=289,
-    KnifeHand=290,
-    ThunderSoul=291,
-    AquaSoul=292,
-    IceSoul=293,
-    WindSoul=294,
-    ThrowSpirit=295,
-    ZombieTouch=296,
-    SleepTouch=297,
-    DrainTouch=298,
-    GreaseTouch=299,
-    WingAttack=300,
-    LookofDevil=301,
-    LookofFright=302,
-    Circle=303,
-    DeathSentence(Flotibol)=304,
-    ScratchUp=305,
-    Beak=306,
-    ShineLover=307,
-    FeatherBomb=308,
-    Beaking=309,
-    StraightDash=310,
-    NoseBracelet=311,
-    Oink=312,
-    Pooh-=313,
-    PleaseEat=314,
-    LeafDance=315,
-    ProtectSpirit=316,
-    ClamSpirit=317,
-    SpiritofLife=318,
-    MagicSpirit=319,
-    ShakeOff=320,
-    WaveAround=321,
-    MimicTitan=322,
-    GatherPower=323,
-    BlowFire=324,
-    Tentacle(Marlboro)=325,
-    Lick=326,
-    Goo=327,
-    BadBracelet=328,
-    MoldballVirus=329,
-    StabUp=330,
-    SuddenCry=331,
-    Hurricane=332,
-    Ulmaguest=333,
-    GigaFlare=334,
-    Dash(Dragon)=335,
-    TailSwing=336,
-    IceBracelet(Dragon)=337,
-    FireBracelet(Dragon)=338,
-    ThunderBracelet(Dragon)=339,
-    TripleAttack=340,
-    TripleBracelet=341,
-    TripleThunder=342,
-    TripleFlame=343,
-    DarkWhisper=344,
-    SnakeCarrier=345,
-    PoisonFrog=346,
-    MidgarSwarm=347,
-    Lifebreak=348,
-    Nanoflare=349,
-    GrandCross=350,
-    Destroy=351,
-    Compress=352,
-    Dispose=353,
-    Crush=354,
-    Energy=355,
-    Parasite=356,
-    165=357,
-    166=358,
-    167=359,
-    168=360,
-    169=361,
-    16a=362,
-    16b=363,
-    16c=364,
-    16d=365,
-    16e=366,
-    FrogAttack=367,
-    Potion=368,
-    HiPotion=369,
-    XPotion=370,
-    Ether=371,
-    HiEther=372,
-    Elixir=373,
-    Antidote=374,
-    EyeDrop=375,
-    EchoGrass=376,
-    MaidensKiss=377,
-    Soft=378,
-    HolyWater=379,
-    Remedy=380,
-    PhoenixDown=381,
-    Shuriken=382,
-    Knife=383,
-    Sword=384,
-    Hammer=385,
-    Katana=386,
-    NinjaSword=387,
-    Axe=388,
-    Spear=389,
-    Stick=390,
-    KnightSword=391,
-    Dictionary=392,
-    Ball=393,
-    LevelJump2=394,
-    LevelJump3=395,
-    LevelJump4=396,
-    LevelJump5=397,
-    LevelJump8=398,
-    VerticalJump2=399,
-    VerticalJump3=400,
-    VerticalJump4=401,
-    VerticalJump5=402,
-    VerticalJump6=403,
-    VerticalJump7=404,
-    VerticalJump8=405,
-    Charge+1=406,
-    Charge+2=407,
-    Charge+3=408,
-    Charge+4=409,
-    Charge+5=410,
-    Charge+7=411,
-    Charge+10=412,
-    Charge+20=413,
-    CT=414,
-    Level=415,
-    Exp=416,
-    Height=417,
-    PrimeNumber=418,
-    5=419,
-    4=420,
-    3=421,
-    ASave=422,
-    MASave=423,
-    SpeedSave=424,
-    SunkenState=425,
-    Caution=426,
-    DragonSpirit=427,
-    Regenerator=428,
-    BraveUp=429,
-    FaceUp=430,
-    HPRestore=431,
-    MPRestore=432,
-    CriticalQuick=433,
-    MeatboneSlash=434,
-    CounterMagic=435,
-    CounterTackle=436,
-    CounterFlood=437,
-    AbsorbUsedMP=438,
-    GilgameHeart=439,
-    Reflect(Reaction)=440,
-    AutoPotion=441,
-    Counter=442,
-    1bb=443,
-    Distribute=444,
-    MPSwitch=445,
-    DamageSplit=446,
-    WeaponGuard=447,
-    FingerGuard=448,
-    Abandon=449,
-    Catch=450,
-    BladeGrasp=451,
-    ArrowGuard=452,
-    Hamedo=453,
-    EquipArmor=454,
-    EquipShield=455,
-    EquipSword=456,
-    EquipKnife=457,
-    EquipCrossbow=458,
-    EquipSpear=459,
-    EquipAxe=460,
-    EquipGun=461,
-    HalfofMP=462,
-    GainedJpUP=463,
-    GainedExpUP=464,
-    AttackUP=465,
-    DefenseUP=466,
-    MagicAttackUP=467,
-    MagicDefendUP=468,
-    Concentrate=469,
-    Train=470,
-    SecretHunt=471,
-    MartialArts=472,
-    MonsterTalk=473,
-    ThrowItem=474,
-    Maintenance=475,
-    TwoHands=476,
-    TwoSwords=477,
-    MonsterSkill=478,
-    Defend=479,
-    EquipChange=480,
-    1e1=481,
-    ShortCharge=482,
-    NonCharge=483,
-    1e4=484,
-    1e5=485,
-    Move+1=486,
-    Move+2=487,
-    Move+3=488,
-    Jump+1=489,
-    Jump+2=490,
-    Jump+3=491,
-    IgnoreHeight=492,
-    MoveHPUp=493,
-    MoveMPUp=494,
-    MoveGetExp=495,
-    MoveGetJp=496,
-    CannotEnterWater=497,
-    Teleport=498,
-    Teleport2=499,
-    AnyWeather=500,
-    AnyGround=501,
-    WalkonWater=502,
-    MoveinWater=503,
-    MoveonLava=504,
-    MoveUnderwater=505,
-    Float(Movement)=506,
-    Fly=507,
-    SilentWalk=508,
-    MoveFindItem=509,
-    1fe=510,
-    1ff=511,
-    FallDamage=512
-} AbilityID;
-
-struct Skillset {
-    short ActionFlags;
-    byte RSMFlags;
-    enum AbilityID Ability0:8;
-    enum AbilityID Ability1:8;
-    enum AbilityID Ability2:8;
-    enum AbilityID Ability3:8;
-    enum AbilityID Ability4:8;
-    enum AbilityID Ability5:8;
-    enum AbilityID Ability6:8;
-    enum AbilityID Ability7:8;
-    enum AbilityID Ability8:8;
-    enum AbilityID Ability9:8;
-    enum AbilityID AbilityA:8;
-    enum AbilityID AbilityB:8;
-    enum AbilityID AbilityC:8;
-    enum AbilityID AbilityD:8;
-    enum AbilityID AbilityE:8;
-    enum AbilityID AbilityF:8;
-    enum AbilityID RSM0:8;
-    enum AbilityID RSM1:8;
-    enum AbilityID RSM2:8;
-    enum AbilityID RSM3:8;
-    enum AbilityID RSM4:8;
-    enum AbilityID RSM5:8;
-};
-
-typedef struct PartyUnit PartyUnit, *PPartyUnit;
-
-typedef enum JobID {
-    None=0,
-    SquireR1=1,
-    SquireR2=2,
-    SquireR3=3,
-    SquireD=4,
-    HolyKnightD=5,
-    ArcKnightD=6,
-    SquireA=7,
-    ArcKnight=8,
-    LuneKnightD=9,
-    DukeL=10,
-    DukeG=11,
-    Princess=12,
-    HolySwordsman=13,
-    HighPriest=14,
-    Dragoner=15,
-    HolyPriest=16,
-    DarkKnightE=17,
-    HellKnightD=18,
-    Bishop=19,
-    ClericB=20,
-    Astrologist=21,
-    EngineerMJ=22,
-    DarkKnightG=23,
-    Cardinal=24,
-    HeavenKnightG=25,
-    HellKnightEJ=26,
-    ArcKnightE=27,
-    DelitasSis=28,
-    ArcDuke=29,
-    HolyKnightAJ=30,
-    TempleKnight=31,
-    WhiteKnight1=32,
-    ArcWitch=33,
-    EngineerMG=34,
-    BiCount=35,
-    DivineKnightV=36,
-    DivineKnightR=37,
-    KnightBlade=38,
-    Sorceror=39,
-    WhiteKnight2=40,
-    HeavenKnightJ=41,
-    DivineKnightMJ=42,
-    EngineerB=43,
-    ClericD=44,
-    AssassinC=45,
-    AssassinL=46,
-    DivineKnightME=47,
-    ClericE=48,
-    PhonySaint=49,
-    Soldier=50,
-    ArcKnightZ=51,
-    HolyKnightAG=52,
-    ChemistF1=53,
-    PriestF1=54,
-    WizardM1=55,
-    OracleM1=56,
-    SquireM1=57,
-    AssassinCU=58,
-    AssassinLU=59,
-    Warlock=60,
-    KnightMZ=61,
-    AngelofDeath=62,
-    ArcherMZ=63,
-    Regulator=64,
-    HolyAngel=65,
-    WizardMZ=66,
-    ImpureKing=67,
-    TimeMageFZ=68,
-    GhostofFury=69,
-    OracleMZ=70,
-    SummonerMZ=71,
-    HolyDragon=72,
-    ArchAngel=73,
-    Squire=74,
-    Chemist=75,
-    Knight=76,
-    Archer=77,
-    Monk=78,
-    Priest=79,
-    Wizard=80,
-    TimeMage=81,
-    Summoner=82,
-    Thief=83,
-    Mediator=84,
-    Oracle=85,
-    Geomancer=86,
-    Lancer=87,
-    Samurai=88,
-    Ninja=89,
-    Calculator=90,
-    Bard=91,
-    Dancer=92,
-    Mime=93,
-    Chocobo=94,
-    BlackChocobo=95,
-    RedChocobo=96,
-    Goblin=97,
-    BlackGoblin=98,
-    Gobbledeguck=99,
-    Bomb=100,
-    Grenade=101,
-    Explosive=102,
-    RedPanther=103,
-    Cuar=104,
-    Vampire=105,
-    PiscoDemon=106,
-    Squidlarken=107,
-    Mindflare=108,
-    Skeleton=109,
-    BoneSnatch=110,
-    LivingBone=111,
-    Ghoul=112,
-    Gust=113,
-    Revnant=114,
-    Flotiball=115,
-    Ahriman=116,
-    Plague=117,
-    Juravis=118,
-    SteelHawk=119,
-    Cocatoris=120,
-    Uribo=121,
-    Porky=122,
-    Wildbow=123,
-    Woodman=124,
-    Trent=125,
-    Taiju=126,
-    BullDemon=127,
-    Minitaurus=128,
-    Sacred=129,
-    Morbol=130,
-    Ochu=131,
-    GreatMorbol=132,
-    Behemoth=133,
-    KingBehemoth=134,
-    DarkBehemoth=135,
-    Dragon=136,
-    BlueDragon=137,
-    RedDragon=138,
-    Hyudra=139,
-    Hydra=140,
-    Tiamat=141,
-    8e=142,
-    8f=143,
-    Byblos=144,
-    SteelGiant=145,
-    92=146,
-    93=147,
-    94=148,
-    95=149,
-    Apanda=150,
-    Serpentarius=151,
-    HolyDragon2=152,
-    ArchaicDemon=153,
-    UltimaDemon=154,
-    Crystal=155,
-    Chicken=156,
-    Frog=157,
-    Treasure=158
-} JobID;
-
-typedef enum SkillsetID {
-    NONE=0,
-    Attack=1,
-    Defend=2,
-    EqChng=3,
-    DEPRECATED=4,
-    BasicSkill=5,
-    Item=6,
-    BattleSkill=7,
-    Charge=8,
-    PunchArt=9,
-    WhiteMagic=10,
-    BlackMagic=11,
-    TimeMagic=12,
-    SummonMagic=13,
-    Steal=14,
-    TalkSkill=15,
-    YinYangMagic=16,
-    Geomancy=17,
-    Jump=18,
-    DrawOut=19,
-    Throw=20,
-    Math=21,
-    Sing=22,
-    Dance=23,
-    Mimic=24,
-    GutsR1=25,
-    GutsR2=26,
-    GutsR4=27,
-    GutsD=28,
-    HolySword1=29,
-    MightySword=30,
-    BasicSkillA=31,
-    DarkSword1=32,
-    HolySword2=33,
-    HolySword3=34,
-    Magic=35,
-    HolyMagic1=36,
-    Snipe1=37,
-    Snipe2=38,
-    DarkSword2=39,
-    HolySword4=40,
-    Limit=41,
-    WhiteAid=42,
-    Dragoner=43,
-    Bracelet=44,
-    Truth1=45,
-    Untruth1=46,
-    StarryHeaven=47,
-    HolySword5=48,
-    HolyMagic2=49,
-    Truth2=50,
-    BattleSkill2=51,
-    Jump2=52,
-    PunchSkill2=53,
-    UseHandC=54,
-    UseHandL=55,
-    Throw2=56,
-    Throw3=57,
-    HolySword6=58,
-    SwordSpirit1=59,
-    MightySword2=60,
-    AllMagic1=61,
-    SwordSpirit2=62,
-    BloodSuck=63,
-    MightySword3=64,
-    AllMagic2=65,
-    MightySword4=66,
-    MightySword5=67,
-    Snipe3=68,
-    MagicSword1=69,
-    SwordSkill1=70,
-    AllMagic3=71,
-    AllMagic4=72,
-    Phantom=73,
-    AllSwordskill=74,
-    DestroySword=75,
-    HolyMagic3=76,
-    4d=77,
-    4e=78,
-    4f=79,
-    50=80,
-    51=81,
-    52=82,
-    53=83,
-    54=84,
-    55=85,
-    56=86,
-    57=87,
-    58=88,
-    59=89,
-    5a=90,
-    5b=91,
-    5c=92,
-    5d=93,
-    5e=94,
-    5f=95,
-    60=96,
-    61=97,
-    62=98,
-    63=99,
-    64=100,
-    65=101,
-    66=102,
-    Fear1=103,
-    WarlockSummon=104,
-    nice=105,
-    6a=106,
-    Fear2=107,
-    JaMagic=108,
-    6d=109,
-    6e=110,
-    Fear3=111,
-    DimensionMagic=112,
-    71=113,
-    72=114,
-    Fear4=115,
-    Impure=116,
-    75=117,
-    76=118,
-    Fear5=119,
-    AllMagic5=120,
-    79=121,
-    7a=122,
-    UltimaMagic=123,
-    Chaos=124,
-    CompletMagic=125,
-    Saturation=126,
-    7f=127,
-    80=128,
-    81=129,
-    82=130,
-    83=131,
-    84=132,
-    85=133,
-    86=134,
-    87=135,
-    88=136,
-    89=137,
-    8a=138,
-    8b=139,
-    8c=140,
-    8d=141,
-    8e=142,
-    8f=143,
-    90=144,
-    91=145,
-    92=146,
-    93=147,
-    94=148,
-    95=149,
-    96=150,
-    97=151,
-    98=152,
-    99=153,
-    9a=154,
-    SwordSkill2=155,
-    Charge2=156,
-    BlackMagic2=157,
-    TimeMagic2=158,
-    YinYangMagic2=159,
-    SummonMagic2=160,
-    Item2=161,
-    WhiteMagic2=162,
-    BlackMagic3=163,
-    YinYangMagic3=164,
-    a5=165,
-    a6=166,
-    BloodSuckAllowed=167,
-    FrogAllowed=168,
-    BerserkAllowed=169,
-    Byblos=170,
-    Work=171,
-    Bio=172,
-    DarkCloud=173,
-    DarkMagic=174,
-    NightMagic=175,
-    Choco0=176,
-    Choco1=177,
-    Choco2=178,
-    Gob0=179,
-    Gob1=180,
-    Gob2=181,
-    Bomb0=182,
-    Bomb1=183,
-    Bomb2=184,
-    Pnthr0=185,
-    Pnthr1=186,
-    Pnthr2=187,
-    Pisc0=188,
-    Pisc1=189,
-    Pisc2=190,
-    Skel0=191,
-    Skel1=192,
-    Skel2=193,
-    Ghost0=194,
-    Ghost1=195,
-    Ghost2=196,
-    Eye0=197,
-    Eye1=198,
-    Eye2=199,
-    Bird0=200,
-    Bird1=201,
-    Bird2=202,
-    Pig0=203,
-    Pig1=204,
-    Pig2=205,
-    Tree0=206,
-    Tree1=207,
-    Tree2=208,
-    Bull0=209,
-    Bull1=210,
-    Bull2=211,
-    Morb0=212,
-    Morb1=213,
-    Morb2=214,
-    Bhmth0=215,
-    Bhmth1=216,
-    Bhmth2=217,
-    Drg0=218,
-    Drg1=219,
-    Drg2=220,
-    Hydr0=221,
-    Hydr1=222,
-    Hydr2=223
-} SkillsetID;
-
-struct PartyUnit {
-    byte SpriteSet;
-    byte PartyID;
-    enum JobID JobID;
-    byte Palette;
-    int SaveFormation:1;
-    int BossStats:1;
-    int LoadFormation:1;
-    int JoinAfterEvent:1;
-    int Monster:1;
-    int Female:1;
-    int Male:1;
-    int Birthday:9;
-    int ZodiacSign:4;
-    enum SkillsetID SecondarySkillset;
-    enum AbilityID Reaction;
-    enum AbilityID Support;
-    enum AbilityID Movement;
-    enum ItemID Head;
-    enum ItemID Body;
-    enum ItemID Accessory;
-    enum ItemID RHWeapon;
-    enum ItemID RHShield;
-    enum ItemID LHWeapon;
-    enum ItemID LHShield;
-    byte Experience;
-    byte Level;
-    byte Brave;
-    byte Faith;
-    int RawHP:24;
-    int RawMP:24;
-    int RawSP:24;
-    int RawPA:24;
-    int RawMA:24;
-    int UnlockedJobs:24;
-    short BaseAction;
-    byte BaseRSM;
-    short ChemistAction;
-    byte ChemistRSM;
-    short KnightAction;
-    byte KnightRSM;
-    short ArcherAction;
-    byte ArcherRSM;
-    short MonkAction;
-    byte MonkRSM;
-    short PriestAction;
-    byte PriestRSM;
-    short WizardAction;
-    byte WizardRSM;
-    short TimeMageAction;
-    byte TimeMageRSM;
-    short SummonerAction;
-    byte SummonerRSM;
-    short ThiefAction;
-    byte ThiefRSM;
-    short MediatorAction;
-    byte MediatorRSM;
-    short OracleAction;
-    byte OracleRSM;
-    short GeomancerAction;
-    byte GeomancerRSM;
-    short LancerAction;
-    byte LancerRSM;
-    short SamuraiAction;
-    byte SamuraiRSM;
-    short NinjaAction;
-    byte NinjaRSM;
-    short CalculatorAction;
-    byte CalculatorRSM;
-    short BardAction;
-    byte BardRSM;
-    short DancerAction;
-    byte DancerRSM;
-    int ChemistLevel:4;
-    int SquireLevel:4;
-    int ArcherLevel:4;
-    int KnightLevel:4;
-    int PriestLevel:4;
-    int MonkLevel:4;
-    int TimeMageLevel:4;
-    int WizardLevel:4;
-    int ThiefLevel:4;
-    int SummonerLevel:4;
-    int OracleLevel:4;
-    int MediatorLevel:4;
-    int LancerLevel:4;
-    int GeomancerLevel:4;
-    int NinjaLevel:4;
-    int SamuraiLevel:4;
-    int BardLevel:4;
-    int CalculatorLevel:4;
-    int MimeLevel:4;
-    int DancerLevel:4;
-    short JobJP[20];
-    short JobTotalJP[20];
-    char UnitName[16];
-    short UnitNameID;
-    byte Proposition;
-    undefined field97_0xd1;
-    byte EggStage;
-    undefined field99_0xd3;
-    undefined field100_0xd4;
-    undefined field101_0xd5;
-    undefined field102_0xd6;
-    undefined field103_0xd7;
-    undefined field104_0xd8;
-    undefined field105_0xd9;
-    undefined field106_0xda;
-    undefined field107_0xdb;
-    undefined field108_0xdc;
-    undefined field109_0xdd;
-    undefined field110_0xde;
-    undefined field111_0xdf;
-    undefined field112_0xe0;
-    undefined field113_0xe1;
-    undefined field114_0xe2;
-    undefined field115_0xe3;
-    undefined field116_0xe4;
-    undefined field117_0xe5;
-    undefined field118_0xe6;
-    undefined field119_0xe7;
-    undefined field120_0xe8;
-    undefined field121_0xe9;
-    undefined field122_0xea;
-    undefined field123_0xeb;
-    undefined field124_0xec;
-    undefined field125_0xed;
-    undefined field126_0xee;
-    undefined field127_0xef;
-    undefined field128_0xf0;
-    undefined field129_0xf1;
-    undefined field130_0xf2;
-    undefined field131_0xf3;
-    undefined field132_0xf4;
-    undefined field133_0xf5;
-    undefined field134_0xf6;
-    undefined field135_0xf7;
-    undefined field136_0xf8;
-    undefined field137_0xf9;
-    undefined field138_0xfa;
-    undefined field139_0xfb;
-    undefined field140_0xfc;
-    undefined field141_0xfd;
-    undefined field142_0xfe;
-    undefined field143_0xff;
-};
-
-typedef struct ArmorSecondary ArmorSecondary, *PArmorSecondary;
-
-struct ArmorSecondary {
-    byte HP;
-    byte MP;
-};
-
-typedef struct SecondaryAbilityItem SecondaryAbilityItem, *PSecondaryAbilityItem;
-
-struct SecondaryAbilityItem {
-    byte UsedItemID;
-};
-
-typedef struct Fileaddress Fileaddress, *PFileaddress;
-
-struct Fileaddress {
-    int LBA;
-    int Filesize;
-};
-
-typedef struct JobData JobData, *PJobData;
-
-struct JobData {
-    enum SkillsetID Skillset;
-    enum AbilityID InnateAbility1;
-    enum AbilityID InnateAbility2;
-    enum AbilityID InnateAbility3;
-    enum AbilityID InnateAbility4;
-    int Rod:1;
-    int Axe:1;
-    int Katana:1;
-    int KnightSword:1;
-    int Sword:1;
-    int NinjaBlade:1;
-    int Knife:1;
-    int Unarmed:1;
-    int Polearm:1;
-    int Book:1;
-    int Instrument:1;
-    int Bow:1;
-    int Crossbow:1;
-    int Gun:1;
-    int Flail:1;
-    int Staff:1;
-    int Armor:1;
-    int HairAdrn:1;
-    int Hat:1;
-    int Helmet:1;
-    int Shield:1;
-    int Cloth:1;
-    int Bag:1;
-    int Pole:1;
-    int Perfume:1;
-    int Cloak:1;
-    int Armlet:1;
-    int Ring:1;
-    int Armguard:1;
-    int Shoes:1;
-    int Robe:1;
-    int Clothing:1;
-    byte HPGrowth;
-    byte HPMult;
-    byte MPGrowth;
-    byte MPMult;
-    byte SpeedGrowth;
-    byte SpeedMult;
-    byte PAGrowth;
-    byte PAMult;
-    byte MAGrowth;
-    byte MAMult;
-    byte Move;
-    byte Jump;
-    byte CEV;
-    struct StatusList AlwaysStatus;
-    struct StatusList ImmuneStatus;
-    struct StatusList StartStatus;
-    byte AbsorbElem;
-    byte NullElem;
-    byte HalfElem;
-    byte DoubleElem;
-    byte MonPortrait;
-    byte MonPal;
-    byte MonGraphic;
-};
-
-typedef struct SecondaryAbilityData SecondaryAbilityData, *PSecondaryAbilityData;
-
-struct SecondaryAbilityData {
-    byte Range;
-    byte AOE;
-    byte Vert;
-    int NoTargetSelf:1;
-    int AutoTarget:1;
-    int WeaponStrike:1;
-    int VertTolerance:1;
-    int VertFixed:1;
-    int WeaponRange:1;
-    int OnlyEnemyTilesDEPRECATED:1;
-    int OnlyAllyTilesDEPRECATED:1;
-    int NoHitSelf:1;
-    int 3Dir:1;
-    int Linear:1;
-    int RandomFire:1;
-    int NoTarFollow:1;
-    int TopDownTarget:1;
-    int NoAllyHit:1;
-    int NoEnemyHit:1;
-    int AnimateMiss:1;
-    int Quote:1;
-    int PersevereCast:1;
-    int HitGolem:1;
-    int NoMimic:1;
-    int Silenceable:1;
-    int MathSkill:1;
-    int Reflectable:1;
-    int NoTargetting:1;
-    int Evadeable:1;
-    int ReqMatBlade:1;
-    int ReqSword:1;
-    int BladeGrasp:1;
-    int Direct:1;
-    int CounterMagic:1;
-    int CounterFlood:1;
-    byte Element;
-    enum FormulaID Formula;
-    byte X;
-    byte Y;
-    byte InflictStatus;
-    byte CT;
-    byte MPCost;
-};
-
-typedef struct SecondaryAbilityRSM SecondaryAbilityRSM, *PSecondaryAbilityRSM;
-
-struct SecondaryAbilityRSM {
-    byte ID;
-};
-
-typedef struct SecondaryAbilityCharge SecondaryAbilityCharge, *PSecondaryAbilityCharge;
-
-struct SecondaryAbilityCharge {
-    byte CT;
-    byte Power;
-};
-
-typedef struct SecondaryAbilityMath SecondaryAbilityMath, *PSecondaryAbilityMath;
-
-struct SecondaryAbilityMath {
-    int Mult:4;
-    int Stat:4;
-};
-
-typedef struct ItemAttributes ItemAttributes, *PItemAttributes;
-
-struct ItemAttributes {
-    byte PA;
-    byte MA;
-    byte Speed;
-    byte Move;
-    byte Jump;
-    struct StatusList AlwaysStatuses;
-    struct StatusList ImmuneStatuses;
-    struct StatusList StartStatuses;
-    byte AbsorbElem;
-    byte NullElem;
-    byte HalfElem;
-    byte DoubleElem;
-    byte BoostElem;
-};
-
-typedef struct MonSkillset MonSkillset, *PMonSkillset;
-
-struct MonSkillset {
-    byte ActionFlags;
-    enum AbilityID Ability0:8;
-    enum AbilityID Ability1:8;
-    enum AbilityID Ability2:8;
-    enum AbilityID AbilityMS:8;
-};
-
-typedef enum chooseVoice {
-    CalcLFOVoices=1,
-    CalcNoiseVoices=2,
-    CalcReverbVoices=4
-} chooseVoice;
-
-typedef enum EventVar {
-    Temp0=0,
-    Temp1=1,
-    DialogueSelect=24,
-    CameraX=26,
-    CameraZ=27,
-    CameraY=28,
-    CameraTheta=29,
-    MapRot=30,
-    CameraRot=31,
-    CameraZoom=32,
-    Weather=35,
-    DayNight=36,
-    CurrentEvent=39,
-    TutorialVar1=40,
-    TutorialVar2=41,
-    TutorialVar3=42,
-    WarFunds=44,
-    Month=46,
-    Day=47,
-    MapArrangement=48,
-    CurrentWorldLocation=49,
-    CurrentENTD=50,
-    CurrentMap=51,
-    NumSquads=52,
-    Squad1ID=53,
-    Squad2ID=54,
-    NumUnitsDeployed=82,
-    MuteAudio=83,
-    PostCombatDateAdvance=84,
-    SaveToFormationVar=85,
-    TotalCharPrintNum=87,
-    DeepDungeonListID=92,
-    NumInjured=98,
-    NumDeaths=99,
-    NewScenario=100,
-    DeepDungeonListLength=101,
-    DeepDungeonExitID=104,
-    ChapterTownBackground=105,
-    WorldmapMessage=109,
-    StoryProg=110,
-    ShopAvailability=111,
-    CurrentCrystalCount=112,
-    EventBitflags0=128,
-    EventBitflags1=129,
-    EventBitflags2=130,
-    EventBitflags3=131,
-    EventBitflags4=132,
-    FurShopOpen=144,
-    PropositionsOpen=145,
-    BraveStoryFactsOpen=146,
-    WorkerSidequestOpen=148,
-    DeepDungeonFoundExit=149,
-    SaveAlgusChoice=150,
-    SaveBocoChoice=151,
-    SaveMustadioChoice=152,
-    WorkerStep0=153,
-    WorkerStep1=154,
-    CloudStep0=155,
-    CloudStep1=156,
-    ReadScriptures=157,
-    OrbonneMonasteryOpen=159,
-    PostGame=160,
-    AerisChoice=161,
-    WentFlowerShopping=162,
-    BoughtFlowers=163,
-    DeepDungeonStep0=164,
-    DeepDungeonOpen=165,
-    ReadGhostRumor=166,
-    BeowulfOfferChoice=167,
-    AcceptedBeowulf=168,
-    RescuedReisDragon=169,
-    WorkerStep2=171,
-    RescuedReisHuman=172,
-    FactsPage0=420,
-    FactsPage1=421,
-    FactsPage2=422,
-    FactsPage3=423,
-    FactsPage4=424,
-    FactsPage5=425,
-    FactsPage6=426,
-    FactsPage7=427,
-    FactsPage8=428,
-    FactsPage9=429,
-    FactsPageA=430,
-    FactsPageB=431,
-    FactsPageC=432,
-    FactsPageD=433,
-    FactsPageE=434,
-    FactsPageF=435,
-    FactsPage10=436,
-    FactsPage11=437,
-    FactsPage12=438,
-    FactsPage13=439,
-    FactsPage14=440,
-    FactsPage15=441,
-    FactsPage16=442,
-    FactsPage17=443,
-    RecordCadets=444,
-    RecordsBalbanesDeath=445,
-    RecordsAlgusMeet=446,
-    RecordsReunionDycedarg=447,
-    RecordsAtIgros=448,
-    RecordsAfterGustav=449,
-    RecordsRescueElmdor=450,
-    RecordsMasterGallione=451,
-    RecordsDeathCorpsMiluda=452,
-    RecordsDeathCorpsAttack=453,
-    RecordsDelitaAnger=454,
-    RecordsReedPipe=455,
-    RecordsRockRipple=456,
-    RecordsEndChapter1=457,
-    RecordsOveliaPrayer=458,
-    RecordsOveliaChase=459,
-    RecordsRuinionDelita=460,
-    RecordsMachinist=461,
-    RecordsOveliaWorry=462,
-    RecordsDycedargPlan=463,
-    RecordsDraclauHolyStone=464,
-    RecordsSeekStone=465,
-    RecordsRescueBesrodio=466,
-    RecordsDelitaAdvice=467,
-    RecordsCardinalAnger=468,
-    RecordsUseGetUsed=469,
-    RecordsTheLionWar=470,
-    RecordsCidolfas=471,
-    RecordsOlanMeet=472,
-    RecordsReunionZalbag=473,
-    RecordsHeretic=474,
-    RecordsSimonConfession=475,
-    RecordsVelius=476,
-    RecordsOveliaDelita=477,
-    RecordsSonOfCid=478,
-    RecordsDivineRafa=479,
-    RecordsBarintenAmbition=480,
-    RecordsEscapeAlma=481,
-    RecordsScarsTragedy=482,
-    RecordsStonesOtherPower=483,
-    RecordsLyingHeart=484,
-    RecordsSquirmDark=485,
-    RecordsHeWithHolyStone=486,
-    RecordsDelitaThoughts=487,
-    RecordsUnstoppableCog=488,
-    RecordsCidSeized=489,
-    RecordsAssassinLarg=490,
-    RecordsRescueCid=491,
-    RecordsGoltanaDeath=492,
-    RecordsDycedargAmbition=493,
-    RecordsOddMen=494,
-    RecordsMysterLucavi=495,
-    RecordsDelitaBetray=496,
-    RecordsMosfungus=497,
-    RecordsFuneralDeath=498,
-    RecordsRequiem=499,
-    RecordsSteelBall=500,
-    RecordsSteelGiant=501,
-    RecordsCelestBall=502,
-    RecordsMeetCloud=503,
-    RecordsReisCurse=504,
-    RecordsOtherWorld=505,
-    RecordsReunionFinal=506,
-    RecordsThingsObtained=507,
-    BraveStoryRecord=508,
-    BattleToStart=509,
-    DebugBattleNext=510,
-    RamzaMandatory=511,
-    LesaliaImperialCastle=512,
-    RiovanesCastle=513,
-    IgrosCastle=514,
-    LionelCastle=515,
-    LimberryCastle=516,
-    ZeltenniaCastle=517,
-    GarilandMagicCity=518,
-    YardrowFortCity=519,
-    GolandCoalCity=520,
-    DorterTradeCity=521,
-    ZalandFortCity=522,
-    GougMachineCity=523,
-    WarjilisTradeCity=524,
-    BerveniaFreeCity=525,
-    ZarghidasTradeCity=526,
-    FortZeakden=527,
-    MorundHolyPlace=528,
-    ThievesFort=529,
-    OrbonneMonastery=530,
-    GolgorandExecutionSite=531,
-    MorundDeathCity=532,
-    BethlaGarrison=533,
-    DeepDungeon=534,
-    NelveskaTemple=535,
-    MandaliaPlains=536,
-    FovohamPlains=537,
-    SweegyWoods=538,
-    BerveniaVolcano=539,
-    ZeklausDesert=540,
-    LenaliaPlateau=541,
-    ZigolisSwamp=542,
-    YuguoWoods=543,
-    AraguayWoods=544,
-    GrogHill=545,
-    BedDesert=546,
-    ZirekileFalls=547,
-    DolbodarSwamp=548,
-    BariausHill=549,
-    DoguolaPass=550,
-    BariausValley=551,
-    FinathRiver=552,
-    PoeskasLake=553,
-    GerminasPeak=554,
-    NOLOCALE=555,
-    IgrosCZeakdenF=556,
-    IgrosCMandaliaP=557,
-    ThievesFMandaliaP=558,
-    GarilandMMandaliaP=559,
-    GarilandMLenaliaP=560,
-    LenaliaPFovohamP=561,
-    FovohamPZeakdenF=562,
-    RiovanesCFovohamP=563,
-    RiovanesCBerveniaV=564,
-    ZeklausDBerveniaV=565,
-    DorterTZeklausD=566,
-    DorterTSweegyW=567,
-    GarilandMSweegyW=568,
-    RiovanesCYuguoW=569,
-    YardrowFYuguoW=570,
-    YardrowFGrogH=571,
-    LesaliaCGrogH=572,
-    LesaliaCGolandC=573,
-    GolandCZeklausD=574,
-    DorterTOrbonneM=575,
-    DorterTAraguayW=576,
-    AraguayWZirekileF=577,
-    BethlaGZirekileF=578,
-    BethlaGBedD=579,
-    BerveniaFBedD=580,
-    BerveniaFDoguolaP=581,
-    DoguolaPGrogH=582,
-    BerveniaFFinathR=583,
-    ZeltenniaCFinathR=584,
-    ZelteniaCNelveskaT=585,
-    ZelteniaCZargidhasT=586,
-    ZarghidasTGerminasP=587,
-    GerminasPPoeskasL=588,
-    LimberryCPoeskasL=589,
-    LimberryCDolbodarS=590,
-    BethlaGDolbodarS=591,
-    ZalandFZirekileF=592,
-    ZalandFBariausH=593,
-    LionelCBariausH=594,
-    LionelCBariausV=595,
-    WarjilisTBariausV=596,
-    WajilisTDeepD=597,
-    GolgorondEBariausV=598,
-    LionelCZigolisS=599,
-    GougMZigolisS=600,
-    GougMMorundH=601,
-    GarilandMMorundH=602,
-    WarjilisTGougM=603,
-    EventFromBraveStory=604,
-    LesaliaCColor=615,
-    RiovanesCColor=616,
-    IgrosCColor=617,
-    LionelCColor=618,
-    LimberryCColor=619,
-    ZeltenniaCColor=620,
-    GarilandMColor=621,
-    YardrowFColor=622,
-    GolandCColor=623,
-    DorterTColor=624,
-    ZalandFColor=625,
-    GougMColor=626,
-    WarjilisTColor=627,
-    BerveniaFColor=628,
-    ZighardasTColor=629,
-    ZeakdenFColor=630,
-    MorundHColor=631,
-    ThievesFColor=632,
-    OrbonneMColor=633,
-    GolgorandEColor=634,
-    MorundDColor=635,
-    BethlaGColor=636,
-    DeepDColor=637,
-    NelveskaTColor=638,
-    MandaliaPColor=639,
-    FovohamPColor=640,
-    SweegyWColor=641,
-    BerveniaVColor=642,
-    ZeklausDColor=643,
-    LenaliaPColor=644,
-    ZigolasSColor=645,
-    YuguoWColor=646,
-    AraguayWColor=647,
-    GrogHColor=648,
-    BedDColor=649,
-    ZirekileFColor=650,
-    DolbodarSColor=651,
-    BariausHColor=652,
-    DoguolaPColor=653,
-    BariausVColor=654,
-    FinathRColor=655,
-    PoeskasLColor=656,
-    GerminasPColor=657,
-    NOLOCALEColor=658,
-    BraveStoryFactsEvent=720,
-    RumorDeathCorps=721,
-    RumorKingOmdoria=722,
-    RumorFiftyWar=723,
-    RumorOmdoriaCondition=724,
-    RumorDeathCorpsGone=725,
-    RumorAttemptedDycedarg=726,
-    RumorKingsDeath=727,
-    RumorLargGoltanaFeud=728,
-    RumorPeasantRiotZeltennia=729,
-    RumorPrincessKidnap=730,
-    RumorZodiacBraves=731,
-    RumorZodiacStone=732,
-    RumorBartCompany=733,
-    RumorFutureofWar=734,
-    RumorOveliaRescue=735,
-    RumorDraclauDeath=736,
-    RumorNatDisasterDamage=737,
-    RumorElmdoreDeath=738,
-    RumorFutureofWar2=739,
-    RumorRiovanesMonster=740,
-    RumorGhostColliery=741,
-    RumorNelveska=742,
-    NoTreasure=800,
-    FourGods=801,
-    StatueLylis=802,
-    BeetleCharm=803,
-    TobaccoPipe=804,
-    ZeniSword=805,
-    BlackCat=806,
-    MaliceMask=807,
-    ParadeHelmet=808,
-    KidBread=809,
-    AdultBread=810,
-    Calcobrina=811,
-    Yurgeivogue=812,
-    RedMateria=813,
-    BlueMateria=814,
-    BlackMateria=815,
-    WhiteMateria=816,
-    RatTail=817,
-    MFictionNovel=818,
-    DiaryNanai=819,
-    Wyuvle=820,
-    EnaviaBook=821,
-    MagicalGun=822,
-    MMachineGun=823,
-    MagiSword=824,
-    MinuOrb=825,
-    TarotBen=826,
-    Excalipar=827,
-    ParasiteTree=828,
-    LongibunneSpear=829,
-    ChocoboCannon=830,
-    StElmoFire=831,
-    GermonikScriptures=832,
-    DUMMYTreasure1=833,
-    DUMMYTreasure2=834,
-    Aries=835,
-    Taurus=836,
-    Gemini=837,
-    Cancer=838,
-    Leo=839,
-    Virgo=840,
-    Libra=841,
-    Scorpio=842,
-    Sagittarius=843,
-    Capricorn=844,
-    Aquarius=845,
-    Pisces=846,
-    Serpentarius=847,
-    ChaosShrine=848,
-    ForbiddenLandEureka=849,
-    Pandemonium=850,
-    MirageTower=851,
-    FloatingCastle=852,
-    MatoyaCave=853,
-    CrystalTower=854,
-    MagicContinent=855,
-    TrialCastle=856,
-    BabelTower=857,
-    RonkanRuin=858,
-    Falgabird=859,
-    MagicTrain=860,
-    TouzasVillage=861,
-    ChocoboForest=862,
-    SemiteFalls=863,
-    CompanyDestiny=864,
-    SunkenSalvage=865,
-    SailorTour=866,
-    LarnerChannel=867,
-    AttractiveWorkplace=868,
-    TradeshipSalvage=869,
-    EnvoyFalcon=870,
-    MesaHeir=871,
-    TradeshipSalvage2=872,
-    LionelEmissary=873,
-    ZalandEmbassy=874,
-    StolenAncientWritings=875,
-    GoodWorkplace=876,
-    GrediaIslandSea=877,
-    StrandedTradeship=878,
-    DouingTradeship=879,
-    MineExcavation=880,
-    MinerTour=881,
-    EldaTopaWill=882,
-    MinerTour2=883,
-    MinerDream=884,
-    Vacancy=885,
-    MinersWanted=886,
-    GulgVolcanoGirl=887,
-    MazeHiddenTrap=888,
-    HimkaCliffs=889,
-    LordOre=890,
-    OneActivity=891,
-    MinersWanted2=892,
-    RoladeOreCompany=893,
-    ExMinerTestimony=894,
-    DeathCanyon=895,
-    DiscoveryRace=896,
-    PoeskasLakeBottom=897,
-    DiscoveryRace2=898,
-    LegendaryTrace=899,
-    DiscoveryRace3=900,
-    DeepSweegyWoods=901,
-    BedDesertRuins=902,
-    AdventureRamzen=903,
-    ISawIt=904,
-    DiscoveryTour=905,
-    ZigolisStorm=906,
-    OminousDungeon=907,
-    AdventurerWanted=908,
-    ISawIt2=909,
-    MerchantConcerns=910,
-    RainMountain=911,
-    BeatGoldenGotsko=912,
-    BeatBehemoth=913,
-    BanditTrap=914,
-    SonPappa=915,
-    WithinDarkness=916,
-    BeatWhirlwindKarz=917,
-    MinimumMelancholy=918,
-    AssaultCaveTerror=919,
-    ZeroChallenge=920,
-    PhantomThiefZero=921,
-    ThiefZeroReturns=922,
-    ThiefZeroReborn=923,
-    ThiefZeroLast=924,
-    LegendaryMonster=925,
-    SullenExperiment=926,
-    FiarRequest=927,
-    DreamChild=928,
-    ProtectLittleLife=929,
-    WishesComeTrue=930,
-    LittleCarrot=931,
-    SecretDoor=932,
-    CoastGuardOrders=933,
-    DevilDark=934,
-    Mother=935,
-    MyTreasure=936,
-    GreatestPlan=937,
-    SecretSociety=938,
-    LifeWorth=939,
-    LoveLetter=940,
-    MinimumMelancholy2=941,
-    BeastRoad=942,
-    TrueRomance=943,
-    SkyKatedona=944,
-    MasterMath=945,
-    SadTravelArtist=946,
-    MinimumMelancholy3=947,
-    MachinistContest=948,
-    TravelArtistMameko=949,
-    ChocoboRestaurant=950,
-    WanderingGambler=951,
-    WanderingGambler2=952,
-    BellRinging=953,
-    Memories=954,
-    HardLecture=955,
-    WinYardrowFight=956,
-    WinZalandFight=957,
-    WinMagicContest=958,
-    MeisterContest=959,
-    BioRamza=960,
-    BioDelita=961,
-    BioOvelia=962,
-    BioAlma=963,
-    BioZalbag=964,
-    BioDycedarg=965,
-    BioLarg=966,
-    BioGoltana=967,
-    BioOrinas=968,
-    BioRuvelia=969,
-    BioOmdolia=970,
-    BioFuneral=971,
-    BioAlgus=972,
-    BioGafgarion=973,
-    BioAgrias=974,
-    BioOrlandu=975,
-    BioOlan=976,
-    BioZalmo=977,
-    BioSimon=980,
-    BioBeowulf=982,
-    BioWiegraf=983,
-    BioReis=984,
-    BioBalmafula=985,
-    BioDraclau=986,
-    BioRafa=988,
-    Biomalak=989,
-    BioElmdor=990,
-    BioBarinten=992,
-    BioMustadio=994,
-    BioBesrodio=995,
-    BioRudvich=996,
-    BioCelia=997,
-    BioLede=998,
-    BioAjora=999,
-    BioVormav=1000,
-    BioRofel=1001,
-    BioIzlude=1002,
-    BioKletian=1003,
-    BioBalk=1004,
-    BioMeliadoul=1005,
-    BioCloud=1006,
-    BioTeta=1007,
-    BioBalbanes=1008,
-    BioGustav=1009,
-    BioMiluda=1010,
-    BioGolagros=1011,
-    BioDaravon=1021,
-    BioElidibs=1022,
-    BioAlazlam=1023,
-    New_Name=1024,
-    New_Name_(1)=1025,
-    New_Name_(2)=1026,
-    New_Name_(3)=1027,
-    New_Name_(4)=1028,
-    New_Name_(5)=1029,
-    New_Name_(6)=1030,
-    New_Name_(7)=1031,
-    New_Name_(8)=1032,
-    New_Name_(9)=1033,
-    New_Name_(10)=1034,
-    New_Name_(11)=1035,
-    New_Name_(12)=1036,
-    New_Name_(13)=1037,
-    New_Name_(14)=1038,
-    New_Name_(15)=1039,
-    New_Name_(16)=1040,
-    New_Name_(17)=1041,
-    New_Name_(18)=1042,
-    New_Name_(19)=1043,
-    New_Name_(20)=1044,
-    New_Name_(21)=1045,
-    New_Name_(22)=1046,
-    New_Name_(23)=1047,
-    New_Name_(24)=1048,
-    New_Name_(25)=1049,
-    New_Name_(26)=1050,
-    New_Name_(27)=1051,
-    New_Name_(28)=1052,
-    New_Name_(29)=1053,
-    New_Name_(30)=1054,
-    New_Name_(31)=1055,
-    New_Name_(32)=1056,
-    New_Name_(33)=1057,
-    New_Name_(34)=1058,
-    New_Name_(35)=1059,
-    New_Name_(36)=1060,
-    New_Name_(37)=1061,
-    New_Name_(38)=1062,
-    New_Name_(39)=1063,
-    New_Name_(40)=1064,
-    New_Name_(41)=1065,
-    New_Name_(42)=1066,
-    New_Name_(43)=1067,
-    New_Name_(44)=1068,
-    New_Name_(45)=1069,
-    New_Name_(46)=1070,
-    New_Name_(47)=1071,
-    New_Name_(48)=1072,
-    New_Name_(49)=1073,
-    New_Name_(50)=1074,
-    New_Name_(51)=1075,
-    New_Name_(52)=1076,
-    New_Name_(53)=1077,
-    New_Name_(54)=1078,
-    New_Name_(55)=1079,
-    New_Name_(56)=1080,
-    New_Name_(57)=1081,
-    New_Name_(58)=1082,
-    New_Name_(59)=1083,
-    New_Name_(60)=1084,
-    New_Name_(61)=1085,
-    New_Name_(62)=1086,
-    New_Name_(63)=1087,
-    New_Name_(64)=1088,
-    New_Name_(65)=1089,
-    New_Name_(66)=1090,
-    New_Name_(67)=1091,
-    New_Name_(68)=1092,
-    New_Name_(69)=1093,
-    New_Name_(70)=1094,
-    New_Name_(71)=1095,
-    New_Name_(72)=1096,
-    New_Name_(73)=1097,
-    New_Name_(74)=1098,
-    New_Name_(75)=1099,
-    New_Name_(76)=1100,
-    New_Name_(77)=1101,
-    New_Name_(78)=1102,
-    New_Name_(79)=1103,
-    New_Name_(80)=1104,
-    New_Name_(81)=1105,
-    New_Name_(82)=1106,
-    New_Name_(83)=1107,
-    New_Name_(84)=1108,
-    New_Name_(85)=1109,
-    New_Name_(86)=1110,
-    New_Name_(87)=1111,
-    New_Name_(88)=1112,
-    New_Name_(89)=1113,
-    New_Name_(90)=1114,
-    New_Name_(91)=1115,
-    New_Name_(92)=1116,
-    New_Name_(93)=1117,
-    New_Name_(94)=1118,
-    New_Name_(95)=1119,
-    New_Name_(96)=1120,
-    New_Name_(97)=1121,
-    New_Name_(98)=1122,
-    New_Name_(99)=1123,
-    New_Name_(100)=1124,
-    New_Name_(101)=1125,
-    New_Name_(102)=1126,
-    New_Name_(103)=1127,
-    New_Name_(104)=1128,
-    New_Name_(105)=1129,
-    New_Name_(106)=1130,
-    New_Name_(107)=1131,
-    New_Name_(108)=1132,
-    New_Name_(109)=1133,
-    New_Name_(110)=1134,
-    New_Name_(111)=1135,
-    New_Name_(112)=1136,
-    New_Name_(113)=1137,
-    New_Name_(114)=1138,
-    New_Name_(115)=1139,
-    New_Name_(116)=1140,
-    New_Name_(117)=1141,
-    New_Name_(118)=1142,
-    New_Name_(119)=1143,
-    New_Name_(120)=1144,
-    New_Name_(121)=1145,
-    New_Name_(122)=1146,
-    New_Name_(123)=1147,
-    New_Name_(124)=1148,
-    New_Name_(125)=1149,
-    New_Name_(126)=1150,
-    New_Name_(127)=1151,
-    New_Name_(128)=1152,
-    New_Name_(129)=1153,
-    New_Name_(130)=1154,
-    New_Name_(131)=1155,
-    New_Name_(132)=1156,
-    New_Name_(133)=1157,
-    New_Name_(134)=1158,
-    New_Name_(135)=1159,
-    New_Name_(136)=1160,
-    New_Name_(137)=1161,
-    New_Name_(138)=1162,
-    New_Name_(139)=1163,
-    New_Name_(140)=1164,
-    New_Name_(141)=1165,
-    New_Name_(142)=1166,
-    New_Name_(143)=1167,
-    New_Name_(144)=1168,
-    New_Name_(145)=1169,
-    New_Name_(146)=1170,
-    New_Name_(147)=1171,
-    New_Name_(148)=1172,
-    New_Name_(149)=1173,
-    New_Name_(150)=1174,
-    New_Name_(151)=1175,
-    New_Name_(152)=1176,
-    New_Name_(153)=1177,
-    New_Name_(154)=1178,
-    New_Name_(155)=1179,
-    New_Name_(156)=1180,
-    New_Name_(157)=1181,
-    New_Name_(158)=1182,
-    New_Name_(159)=1183,
-    New_Name_(160)=1184,
-    New_Name_(161)=1185,
-    New_Name_(162)=1186,
-    New_Name_(163)=1187,
-    New_Name_(164)=1188,
-    New_Name_(165)=1189,
-    New_Name_(166)=1190,
-    New_Name_(167)=1191,
-    New_Name_(168)=1192,
-    New_Name_(169)=1193,
-    New_Name_(170)=1194,
-    New_Name_(171)=1195,
-    New_Name_(172)=1196,
-    New_Name_(173)=1197,
-    New_Name_(174)=1198,
-    New_Name_(175)=1199,
-    New_Name_(176)=1200,
-    New_Name_(177)=1201,
-    New_Name_(178)=1202,
-    New_Name_(179)=1203,
-    New_Name_(180)=1204,
-    New_Name_(181)=1205,
-    New_Name_(182)=1206,
-    New_Name_(183)=1207,
-    New_Name_(184)=1208,
-    New_Name_(185)=1209,
-    New_Name_(186)=1210,
-    New_Name_(187)=1211,
-    New_Name_(188)=1212,
-    New_Name_(189)=1213,
-    New_Name_(190)=1214,
-    New_Name_(191)=1215,
-    New_Name_(192)=1216,
-    New_Name_(193)=1217,
-    New_Name_(194)=1218,
-    New_Name_(195)=1219,
-    New_Name_(196)=1220,
-    New_Name_(197)=1221,
-    New_Name_(198)=1222,
-    New_Name_(199)=1223,
-    New_Name_(200)=1224,
-    New_Name_(201)=1225,
-    New_Name_(202)=1226,
-    New_Name_(203)=1227,
-    New_Name_(204)=1228,
-    New_Name_(205)=1229,
-    New_Name_(206)=1230,
-    New_Name_(207)=1231,
-    New_Name_(208)=1232,
-    New_Name_(209)=1233,
-    New_Name_(210)=1234,
-    New_Name_(211)=1235,
-    New_Name_(212)=1236,
-    New_Name_(213)=1237,
-    New_Name_(214)=1238,
-    New_Name_(215)=1239,
-    New_Name_(216)=1240,
-    New_Name_(217)=1241,
-    New_Name_(218)=1242,
-    New_Name_(219)=1243,
-    New_Name_(220)=1244,
-    New_Name_(221)=1245,
-    New_Name_(222)=1246,
-    New_Name_(223)=1247,
-    New_Name_(224)=1248,
-    New_Name_(225)=1249,
-    New_Name_(226)=1250,
-    New_Name_(227)=1251,
-    New_Name_(228)=1252,
-    New_Name_(229)=1253,
-    New_Name_(230)=1254,
-    New_Name_(231)=1255,
-    New_Name_(232)=1256,
-    New_Name_(233)=1257,
-    New_Name_(234)=1258,
-    New_Name_(235)=1259,
-    New_Name_(236)=1260,
-    New_Name_(237)=1261,
-    New_Name_(238)=1262,
-    New_Name_(239)=1263,
-    New_Name_(240)=1264,
-    New_Name_(241)=1265,
-    New_Name_(242)=1266,
-    New_Name_(243)=1267,
-    New_Name_(244)=1268,
-    New_Name_(245)=1269,
-    New_Name_(246)=1270,
-    New_Name_(247)=1271,
-    New_Name_(248)=1272,
-    New_Name_(249)=1273,
-    New_Name_(250)=1274,
-    New_Name_(251)=1275,
-    New_Name_(252)=1276,
-    New_Name_(253)=1277,
-    New_Name_(254)=1278,
-    New_Name_(255)=1279
-} EventVar;
-
-typedef struct ItemSecondary ItemSecondary, *PItemSecondary;
-
-struct ItemSecondary {
-    enum FormulaID Formula;
-    byte Z;
-    byte InflictStatusID;
-};
-
-typedef enum SUZUKInoteflags12 {
-    action1=1,
-    action4=4,
-    New_Name=128,
-    hold_note=256,
-    action200=512,
-    rest_note=1024,
-    action800=2048,
-    change_instrument=32768,
-    rest_note_2=131072,
-    action80=8388608,
-    volume_change=16777216,
-    playing_note=33554432
-} SUZUKInoteflags12;
-
-typedef struct WeaponSecondary WeaponSecondary, *PWeaponSecondary;
-
-struct WeaponSecondary {
-    byte Range;
-    int Forced2Hands:1;
-    int Throwable:1;
-    int 2Hands:1;
-    int 2Swords:1;
-    int Arc:1;
-    int Direct:1;
-    int Lunging:1;
-    int Striking:1;
-    enum FormulaID Formula;
-    undefined field10_0x3;
-    byte WeaponPower;
-    byte Evade;
-    int Dark:1;
-    int Holy:1;
-    int Water:1;
-    int Earth:1;
-    int Wind:1;
-    int ice:1;
-    int Lightning:1;
-    int Fire:1;
-    byte SecondaryEffect;
-};
-
-typedef struct SecondaryAbilityJump SecondaryAbilityJump, *PSecondaryAbilityJump;
-
-struct SecondaryAbilityJump {
-    byte Range;
-    byte Vert;
-};
-
-typedef struct 16Palette 16Palette, *P16Palette;
-
-struct 16Palette {
-    short argb0;
-    short argb1;
-    short argb2;
-    short argb3;
-    short argb4;
-    short argb5;
-    short argb6;
-    short argb7;
-    short argb8;
-    short argb9;
-    short argbA;
-    short argbB;
-    short argbC;
-    short argbD;
-    short argbE;
-    short argbF;
-};
-
-typedef struct ShieldSecondary ShieldSecondary, *PShieldSecondary;
-
-struct ShieldSecondary {
-    byte PhysicalEvade;
-    byte MagicalEvade;
-};
-
-typedef struct AbilityIDByte AbilityIDByte, *PAbilityIDByte;
-
-struct AbilityIDByte {
-    enum AbilityID AbilityID:8;
-};
-
-typedef enum SpritesheetID {
-    None=0,
-    SquireR1=1,
-    SquireR2=2,
-    SquireR3=3,
-    SquireD=4,
-    HolyKnightD=5,
-    ArcKnightD=6,
-    SquireA=7,
-    ArcKnight=8,
-    LuneKnightD=9,
-    DukeL=10,
-    DukeG=11,
-    Princess=12,
-    HolySwordsman=13,
-    HighPriest=14,
-    Dragoner=15,
-    HolyPriest=16,
-    DarkKnightE=17,
-    HellKnightD=18,
-    Bishop=19,
-    ClericB=20,
-    Astrologist=21,
-    EngineerMJ=22,
-    DarkKnightG=23,
-    Cardinal=24,
-    HeavenKnightG=25,
-    HellKnightEJ=26,
-    ArcKnightE=27,
-    DelitasSis=28,
-    ArcDuke=29,
-    HolyKnightAJ=30,
-    TempleKnight=31,
-    WhiteKnight1=32,
-    ArcWitch=33,
-    EngineerMG=34,
-    BiCount=35,
-    DivineKnightV=36,
-    DivineKnightR=37,
-    KnightBlade=38,
-    Sorceror=39,
-    WhiteKnight2=40,
-    HeavenKnightJ=41,
-    DivineKnightMJ=42,
-    EngineerB=43,
-    ClericD=44,
-    AssassinC=45,
-    AssassinL=46,
-    DivineKnightME=47,
-    ClericE=48,
-    PhonySaint=49,
-    Soldier=50,
-    ArcKnightZ=51,
-    HolyKnightAG=52,
-    ChemistF1=53,
-    PriestF1=54,
-    WizardM1=55,
-    OracleM1=56,
-    SquireM1=57,
-    AssassinCU=58,
-    AssassinLU=59,
-    Warlock=60,
-    KnightMZ=61,
-    AngelofDeath=62,
-    ArcherMZ=63,
-    Regulator=64,
-    HolyAngel=65,
-    WizardMZ=66,
-    ImpureKing=67,
-    TimeMageFZ=68,
-    GhostofFury=69,
-    OracleMZ=70,
-    SummonerMZ=71,
-    HolyDragon=72,
-    ArchAngel=73,
-    10YearOldMan=74,
-    10YearOldWoman=75,
-    20YearOldMan=76,
-    20YearOldWoman=77,
-    40YearOldMan=78,
-    40YearOldWoman=79,
-    60YearOldMan=80,
-    60YearOldWoman=81,
-    OldFuneralMan=82,
-    OldFuneralWoman=83,
-    FuneralMan=84,
-    FuneralWoman=85,
-    FuneralPriest=86,
-    MaleSquire1=87,
-    MaleSquire2=88,
-    MaleSquire3=89,
-    MaleSquire4=90,
-    MaleSquire5=91,
-    MaleSquire6=92,
-    UnusedLucavi=93,
-    UnusedCloakedFigure=94,
-    UnusedRobedFigure=95,
-    SquireM=96,
-    SquireF=97,
-    ChemistM=98,
-    ChemistF=99,
-    KnightM=100,
-    KnightF=101,
-    ArcherM=102,
-    ArcherF=103,
-    MonkM=104,
-    MonkF=105,
-    PriestM=106,
-    PriestF=107,
-    WizardM=108,
-    WizardF=109,
-    TimeMageM=110,
-    TimeMageF=111,
-    SummonerM=112,
-    SummonerF=113,
-    ThiefM=114,
-    ThiefF=115,
-    MediatorM=116,
-    MediatorF=117,
-    OracleM=118,
-    OracleF=119,
-    GeomancerM=120,
-    GeomancerF=121,
-    LancerM=122,
-    LancerF=123,
-    SamuraiM=124,
-    SamuraiF=125,
-    NinjaM=126,
-    NinjaF=127,
-    CalculatorM=128,
-    CalculatorF=129,
-    Bard=130,
-    Dancer=131,
-    MimeM=132,
-    MimeF=133,
-    Chocobo=134,
-    Goblin=135,
-    Bomb=136,
-    Coeurl=137,
-    Squid=138,
-    Skeleton=139,
-    Ghost=140,
-    Ahriman=141,
-    Cockatrice=142,
-    uribo=143,
-    Treant=144,
-    Minotaur=145,
-    Marlboro=146,
-    Behemoth=147,
-    Dragon=148,
-    Tiamat=149,
-    Apanda=150,
-    Serpentarius=151,
-    Dragon2=152,
-    Demon=153,
-    SteelGiant=154,
-    Crystal=155,
-    Chicken=156,
-    Frog=157,
-    Treasure=158
-} SpritesheetID;
-
-typedef struct fileOpenDesc fileOpenDesc, *PfileOpenDesc;
-
-typedef struct CdlLOC CdlLOC, *PCdlLOC;
-
-typedef ulong __u_long;
-
-typedef __u_long u_long;
-
-typedef uchar u_char;
-
-struct CdlLOC {
-    u_char minute;
-    u_char second;
-    u_char sector;
-    u_char track;
-};
-
-struct fileOpenDesc { // custom FFT file header used to load most files
-    undefined4 field0_0x0;
-    int busy;
-    undefined4 field2_0x8;
-    undefined4 successful_passes;
-    int num_sect;
-    int lba;
-    undefined4 field6_0x18;
-    struct CdlLOC CdlLOC;
-    u_long addr;
-};
-
-typedef enum bbool {
-    false=0,
-    true=1
-} bbool;
-
-
-// WARNING! conflicting data type names: /TYPES.H/u_long - /types.h/u_long
-
-typedef ushort u_short;
-
-typedef struct GsSPRITE GsSPRITE, *PGsSPRITE;
-
-struct GsSPRITE {
-    ulong attribute;
-    short x;
-    short y;
-    ushort w;
-    ushort h;
-    ushort tpage;
-    uchar u;
-    uchar v;
-    short cx;
-    short cy;
-    uchar r;
-    uchar g;
-    uchar b;
-    short mx;
-    short my;
-    short scalex;
-    short scaley;
-    long rotate;
-};
-
-typedef struct GsOT_TAG GsOT_TAG, *PGsOT_TAG;
-
-struct GsOT_TAG {
-    uint p:24;
-    uchar num:8;
-};
-
-typedef struct GsOT GsOT, *PGsOT;
-
-struct GsOT {
-    ulong length;
-    struct GsOT_TAG * org;
-    ulong offset;
-    ulong point;
-    struct GsOT_TAG * tag;
-};
-
-typedef struct GsBOXF GsBOXF, *PGsBOXF;
-
-struct GsBOXF {
-    ulong attribute;
-    short x;
-    short y;
-    ushort w;
-    ushort h;
-    uchar r;
-    uchar g;
-    uchar b;
-};
-
-typedef struct GsIMAGE GsIMAGE, *PGsIMAGE;
-
-struct GsIMAGE {
-    ulong pmode;
-    short px;
-    short py;
-    ushort pw;
-    ushort ph;
-    ulong * pixel;
-    short cx;
-    short cy;
-    ushort cw;
-    ushort ch;
-    ulong * clut;
-};
-
-typedef struct GsLINE GsLINE, *PGsLINE;
-
-struct GsLINE {
-    ulong attribute;
-    short x0;
-    short y0;
-    short x1;
-    short y1;
-    uchar r;
-    uchar g;
-    uchar b;
-};
-
-typedef struct VERTC VERTC, *PVERTC;
-
-typedef struct CVECTOR CVECTOR, *PCVECTOR;
-
-struct CVECTOR {
-    u_char r;
-    u_char g;
-    u_char b;
-    u_char cd;
-};
-
-struct VERTC {
-    short vx;
-    short vy;
-    short vz;
-    u_char tu;
-    u_char tv;
-    struct CVECTOR col;
-};
-
-typedef struct DECDCTENV DECDCTENV, *PDECDCTENV;
-
-struct DECDCTENV {
-    u_char iq_y[64];
-    u_char iq_c[64];
-    short dct[64];
-};
-
-typedef void (* CdlCB)(u_char, u_char *);
-
-typedef struct CdlATV CdlATV, *PCdlATV;
-
-struct CdlATV {
-    u_char val0;
-    u_char val1;
-    u_char val2;
-    u_char val3;
-};
-
-typedef struct TILE_8 TILE_8, *PTILE_8;
-
-struct TILE_8 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-};
-
-typedef struct POLY_G3 POLY_G3, *PPOLY_G3;
-
-struct POLY_G3 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char r1;
-    u_char g1;
-    u_char b1;
-    u_char pad1;
-    short x1;
-    short y1;
-    u_char r2;
-    u_char g2;
-    u_char b2;
-    u_char pad2;
-    short x2;
-    short y2;
-};
-
-typedef struct TMD_PRIM TMD_PRIM, *PTMD_PRIM;
-
-typedef struct SVECTOR SVECTOR, *PSVECTOR;
-
-struct SVECTOR {
-    short vx;
-    short vy;
-    short vz;
-    short pad;
-};
-
-struct TMD_PRIM {
-    u_long id;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char p0;
-    u_char r1;
-    u_char g1;
-    u_char b1;
-    u_char p1;
-    u_char r2;
-    u_char g2;
-    u_char b2;
-    u_char p2;
-    u_char r3;
-    u_char g3;
-    u_char b3;
-    u_char p3;
-    u_short tpage;
-    u_short clut;
-    u_char u0;
-    u_char $2;
-    u_char u1;
-    u_char $3;
-    u_char u2;
-    u_char v2;
-    u_char u3;
-    u_char v3;
-    struct SVECTOR x0;
-    struct SVECTOR x1;
-    struct SVECTOR x2;
-    struct SVECTOR x3;
-    struct SVECTOR n0;
-    struct SVECTOR n1;
-    struct SVECTOR n2;
-    struct SVECTOR n3;
-    struct SVECTOR * v_ofs;
-    struct SVECTOR * n_ofs;
-    u_short vert0;
-    u_short vert1;
-    u_short vert2;
-    u_short vert3;
-    u_short norm0;
-    u_short norm1;
-    u_short norm2;
-    u_short norm3;
-};
-
-typedef struct POLY_F3 POLY_F3, *PPOLY_F3;
-
-struct POLY_F3 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    short x1;
-    short y1;
-    short x2;
-    short y2;
-};
-
-typedef struct POLY_F4 POLY_F4, *PPOLY_F4;
-
-struct POLY_F4 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    short x1;
-    short y1;
-    short x2;
-    short y2;
-    short x3;
-    short y3;
-};
-
-typedef struct POLY_GT3 POLY_GT3, *PPOLY_GT3;
-
-struct POLY_GT3 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char u0;
-    u_char $2;
-    u_short clut;
-    u_char r1;
-    u_char g1;
-    u_char b1;
-    u_char p1;
-    short x1;
-    short y1;
-    u_char u1;
-    u_char $3;
-    u_short tpage;
-    u_char r2;
-    u_char g2;
-    u_char b2;
-    u_char p2;
-    short x2;
-    short y2;
-    u_char u2;
-    u_char v2;
-    u_short pad2;
-};
-
-typedef struct POLY_FT4 POLY_FT4, *PPOLY_FT4;
-
-struct POLY_FT4 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char u0;
-    u_char v1;
-    u_short clut;
-    short x1;
-    short y1;
-    u_char u1;
-    u_char v0;
-    u_short tpage;
-    short x2;
-    short y2;
-    u_char u2;
-    u_char v2;
-    u_short pad1;
-    short x3;
-    short y3;
-    u_char u3;
-    u_char v3;
-    u_short pad2;
-};
-
-typedef struct POLY_FT3 POLY_FT3, *PPOLY_FT3;
-
-struct POLY_FT3 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char u0;
-    u_char $2;
-    u_short clut;
-    short x1;
-    short y1;
-    u_char u1;
-    u_char $3;
-    u_short tpage;
-    short x2;
-    short y2;
-    u_char u2;
-    u_char v2;
-    u_short pad1;
-};
-
-typedef struct DR_MODE DR_MODE, *PDR_MODE;
-
-struct DR_MODE {
-    u_long tag;
-    u_long code[2];
-};
-
-typedef struct LINE_F3 LINE_F3, *PLINE_F3;
-
-struct LINE_F3 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    short x1;
-    short y1;
-    short x2;
-    short y2;
-    u_long pad;
-};
-
-typedef struct DR_ENV DR_ENV, *PDR_ENV;
-
-struct DR_ENV {
-    u_long tag;
-    u_long code[15];
-};
-
-typedef struct DR_OFFSET DR_OFFSET, *PDR_OFFSET;
-
-struct DR_OFFSET {
-    u_long tag;
-    u_long code[2];
-};
-
-typedef struct RECT RECT, *PRECT;
-
-struct RECT {
-    short x;
-    short y;
-    short w;
-    short h;
-};
-
-typedef struct POLY_G4 POLY_G4, *PPOLY_G4;
-
-struct POLY_G4 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char r1;
-    u_char g1;
-    u_char b1;
-    u_char pad1;
-    short x1;
-    short y1;
-    u_char r2;
-    u_char g2;
-    u_char b2;
-    u_char pad2;
-    short x2;
-    short y2;
-    u_char r3;
-    u_char g3;
-    u_char b3;
-    u_char pad3;
-    short x3;
-    short y3;
-};
-
-typedef struct TILE_16 TILE_16, *PTILE_16;
-
-struct TILE_16 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-};
-
-typedef struct SPRT_16 SPRT_16, *PSPRT_16;
-
-struct SPRT_16 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char u0;
-    u_char $2;
-    u_short clut;
-};
-
-typedef struct LINE_G2 LINE_G2, *PLINE_G2;
-
-struct LINE_G2 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char r1;
-    u_char g1;
-    u_char b1;
-    u_char p1;
-    short x1;
-    short y1;
-};
-
-typedef struct TILE TILE, *PTILE;
-
-struct TILE {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    short w;
-    short h;
-};
-
-typedef struct DISPENV DISPENV, *PDISPENV;
-
-struct DISPENV {
-    struct RECT disp;
-    struct RECT screen;
-    u_char isinter;
-    u_char isrgb24;
-    u_char pad0;
-    u_char pad1;
-};
-
-typedef struct TIM_IMAGE TIM_IMAGE, *PTIM_IMAGE;
-
-struct TIM_IMAGE {
-    u_long mode;
-    struct RECT * crect;
-    u_long * caddr;
-    struct RECT * prect;
-    u_long * paddr;
-};
-
-typedef struct DR_PRIO DR_PRIO, *PDR_PRIO;
-
-struct DR_PRIO {
-    u_long tag;
-    u_long code[2];
-};
-
-typedef struct DR_AREA DR_AREA, *PDR_AREA;
-
-struct DR_AREA {
-    u_long tag;
-    u_long code[2];
-};
-
-typedef struct LINE_F4 LINE_F4, *PLINE_F4;
-
-struct LINE_F4 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    short x1;
-    short y1;
-    short x2;
-    short y2;
-    short x3;
-    short y3;
-    u_long pad;
-};
-
-typedef struct SPRT_8 SPRT_8, *PSPRT_8;
-
-struct SPRT_8 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char u0;
-    u_char $2;
-    u_short clut;
-};
-
-typedef struct SPRT SPRT, *PSPRT;
-
-struct SPRT {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char u0;
-    u_char $2;
-    u_short clut;
-    short w;
-    short h;
-};
-
-typedef struct LINE_F2 LINE_F2, *PLINE_F2;
-
-struct LINE_F2 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    short x1;
-    short y1;
-};
-
-typedef struct DR_TPAGE DR_TPAGE, *PDR_TPAGE;
-
-struct DR_TPAGE {
-    u_long tag;
-    u_long code[1];
-};
-
-typedef struct DR_LOAD DR_LOAD, *PDR_LOAD;
-
-struct DR_LOAD {
-    u_long tag;
-    u_long code[4];
-    u_long p[12];
-};
-
-typedef struct LINE_G3 LINE_G3, *PLINE_G3;
-
-struct LINE_G3 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char r1;
-    u_char g1;
-    u_char b1;
-    u_char p1;
-    short x1;
-    short y1;
-    u_char r2;
-    u_char g2;
-    u_char b2;
-    u_char p2;
-    short x2;
-    short y2;
-    u_long pad;
-};
-
-typedef struct DR_TWIN DR_TWIN, *PDR_TWIN;
-
-struct DR_TWIN {
-    u_long tag;
-    u_long code[2];
-};
-
-typedef struct DR_MOVE DR_MOVE, *PDR_MOVE;
-
-struct DR_MOVE {
-    u_long tag;
-    u_long code;
-    u_long code2;
-    short sx;
-    short sy;
-    short x0;
-    short y0;
-    short w;
-    short h;
-};
-
-typedef struct TILE_1 TILE_1, *PTILE_1;
-
-struct TILE_1 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-};
-
-typedef struct LINE_G4 LINE_G4, *PLINE_G4;
-
-struct LINE_G4 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char r1;
-    u_char g1;
-    u_char b1;
-    u_char p1;
-    short x1;
-    short y1;
-    u_char r2;
-    u_char g2;
-    u_char b2;
-    u_char p2;
-    short x2;
-    short y2;
-    u_char r3;
-    u_char g3;
-    u_char b3;
-    u_char p3;
-    short x3;
-    short y3;
-    u_long pad;
-};
-
-typedef struct DRAWENV DRAWENV, *PDRAWENV;
-
-struct DRAWENV {
-    struct RECT clip;
-    short ofs[2];
-    struct RECT tw;
-    u_short tpage;
-    u_char dtd;
-    u_char dfe;
-    u_char isbg;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    struct DR_ENV dr_env;
-};
-
-typedef struct POLY_GT4 POLY_GT4, *PPOLY_GT4;
-
-struct POLY_GT4 {
-    u_long tag;
-    u_char r0;
-    u_char g0;
-    u_char b0;
-    u_char code;
-    short x0;
-    short y0;
-    u_char u0;
-    u_char $2;
-    u_short clut;
-    u_char r1;
-    u_char g1;
-    u_char b1;
-    u_char p1;
-    short x1;
-    short y1;
-    u_char u1;
-    u_char $3;
-    u_short tpage;
-    u_char r2;
-    u_char g2;
-    u_char b2;
-    u_char p2;
-    short x2;
-    short y2;
-    u_char u2;
-    u_char v2;
-    u_short pad2;
-    u_char r3;
-    u_char g3;
-    u_char b3;
-    u_char p3;
-    short x3;
-    short y3;
-    u_char u3;
-    u_char v3;
-    u_short pad3;
-};
-
-typedef int __jmp_buf[6];
-
-typedef int __ssize_t;
-
-typedef __ssize_t ssize_t;
-
-typedef uint __u_int;
-
-typedef __u_int u_int;
-
-typedef long __off_t;
-
-typedef enum Movements2 {
-    None=0,
-    Any_Ground=1,
-    Any_Weather=2,
-    Teleport_2=4,
-    Teleport=8,
-    Cannot_Enter_Water=16,
-    Move-Get_JP=32,
-    Move-Get_EXP=64,
-    Move-MP_UP=128
-} Movements2;
-
-typedef struct BattleUnitData BattleUnitData, *PBattleUnitData;
-
-typedef struct AllActionUnitData AllActionUnitData, *PAllActionUnitData;
-
-typedef struct CurActionTargetData CurActionTargetData, *PCurActionTargetData;
-
-typedef struct CurActionUnitData CurActionUnitData, *PCurActionUnitData;
-
-typedef enum ENTD_team.conflict {
-    is_ramza=3,
-    immortal=4,
-    player_control=8,
-    red=16,
-    green=32,
-    light_blue=48,
-    random_present=64,
-    always_present=128
-} ENTD_team.conflict;
-
-typedef enum ENTD_gender {
-    save_formation=1,
-    boss_stats=4,
-    load_formation=8,
-    join_after_event=16,
-    monster=32,
-    female=64,
-    male=128
-} ENTD_gender;
-
-typedef enum birthday {
-    birthday=511,
-    Taurus=4096,
-    Gemini=8192,
-    Cancer=12288,
-    Leo=16384,
-    Virgo=20480,
-    Libra=24576,
-    Scorpio=28672,
-    Sagittarius=32768,
-    Capricorn=36864,
-    Aquarius=40960,
-    Pisces=45056,
-    Serpentarius=49152,
-    Zodiac=61440
-} birthday;
-
-typedef enum ElemAffinity {
-    Dark=1,
-    Holy=2,
-    Water=4,
-    Earth=8,
-    Wind=16,
-    Ice=32,
-    Lightning=64,
-    Fire=128
-} ElemAffinity;
-
-typedef enum Reactions1 {
-    None=0,
-    Brave_UP=1,
-    Regenerator=2,
-    Dragon_Spirit=4,
-    Caution=8,
-    Sunken_State=16,
-    Speed_Save=32,
-    MA_Save=64,
-    PA_Save=128
-} Reactions1;
-
-typedef enum Reactions2 {
-    None=0,
-    Counter_Flood=1,
-    Counter_Tackle=2,
-    Counter_Magic=4,
-    Meatbone_Slash=8,
-    Critical_Quick=16,
-    MP_Restore=32,
-    HP_Restore=64,
-    Face_UP=128
-} Reactions2;
-
-typedef enum Reactions3 {
-    None=0,
-    MP_Switch=1,
-    Distribute=2,
-    UNUSED=4,
-    Counter=8,
-    Auto_Potion=16,
-    Reflect_Status=32,
-    Gilgame_Heart=64,
-    Absorb_Used_MP=128
-} Reactions3;
-
-typedef enum Reactions4 {
-    None=0,
-    Hamedo=1,
-    Arrow_Guard=2,
-    Blade_Grasp=4,
-    Catch=8,
-    Abandon=16,
-    Finger_Guard=32,
-    Weapon_Guard=64,
-    Damage_Split=128
-} Reactions4;
-
-typedef enum Supports1 {
-    None=0,
-    Equip_Gun=1,
-    Equip_Axe=2,
-    Equip_Spear=4,
-    Equip_Crossbow=8,
-    Equip_Katana=16,
-    Equip_Sword=32,
-    Equip_Shield=64,
-    Equip_Armor=128
-} Supports1;
-
-typedef enum Supports2 {
-    None=0,
-    Concentrate=1,
-    Magic_Defense_UP=2,
-    Magic_Attack_UP=4,
-    Defense_UP=8,
-    Attack_UP=16,
-    Gained_EXP-UP=32,
-    Gained_JP-UP=64,
-    Half_of_MP=128
-} Supports2;
-
-typedef enum Supports3 {
-    None=0,
-    Two_Swords=1,
-    Two_Hands=2,
-    Maintenance=4,
-    Throw_Item=8,
-    Monster_Talk=16,
-    Martial_Arts=32,
-    Secret_Hunt=64,
-    Train=128
-} Supports3;
-
-typedef enum Supports4 {
-    None=0,
-    UNUSED_1=1,
-    UNUSED_2=2,
-    Non-Charge=4,
-    Short_Charge=8,
-    UNUSED_10=16,
-    Equip_Change=32,
-    Defend=64,
-    Monster_Skill=128
-} Supports4;
-
-typedef enum Movements1 {
-    None=0,
-    Move-HP_UP=1,
-    Ignore_Height=2,
-    Jump_Plus3=4,
-    Jump_Plus2=8,
-    Jump_Plus1=16,
-    Move_Plus3=32,
-    Move_Plus2=64,
-    Move_Plus1=128
-} Movements1;
-
-typedef enum Movements3 {
-    None=0,
-    Move-Find_Item=1,
-    Silent_Walk=2,
-    Fly=4,
-    Float=8,
-    Move_Underwater=16,
-    Move_on_Lava=32,
-    Move_in_Water=64,
-    Walk_on_Water=128
-} Movements3;
-
-typedef enum all_action_aiflags {
-    BehaviourMod=24,
-    Focus_coords=32,
-    Focus_target=64,
-    Map_level_stay=128
-} all_action_aiflags;
-
-typedef enum UniqueEffect1 {
-    Golem=1,
-    Moldball=2,
-    Break_Item=4,
-    Stole_Target_Item=8,
-    Stolen_Item=16,
-    Poached=32,
-    SwitchTeam=64,
-    Plus_Level=128
-} UniqueEffect1;
-
-typedef enum UniqueEffect2 {
-    Minus_Level=1,
-    Secondary_Proc=2,
-    Elem_Absorb=4,
-    Elem_Weak=8,
-    Katana_Broken=16,
-    UNUSED=32,
-    Knockback=64,
-    Hit_Golem=128
-} UniqueEffect2;
-
-typedef enum StatChange {
-    Value=127,
-    Bonus=128
-} StatChange;
-
-typedef enum CTStatChange {
-    Value=127,
-    Bonus=128,
-    Quick=255
-} CTStatChange;
-
-typedef enum StatusMissMessageByte {
-    Failed=1,
-    Guarded=2,
-    AnimateOnMiss=128
-} StatusMissMessageByte;
-
-typedef enum EquipSlotRemove {
-    LeftHandShield=2,
-    LeftHandWeapon=4,
-    RightHandShield=8,
-    RightHandWeapon=16,
-    Accessory=32,
-    Armor=64,
-    Helmet=128
-} EquipSlotRemove;
-
-typedef enum AttackType {
-    StatAlter=1,
-    StatusChange=8,
-    MPRecovery=16,
-    MPDamage=32,
-    HPRecovery=64,
-    HPDamage=128
-} AttackType;
-
-struct AllActionUnitData {
-    enum JobID BaseClass;
-    byte UnitID;
-    byte PartyID;
-    enum JobID JobID;
-    byte TeamPalette;
-    enum ENTD_team.conflict EntdTeamFlags;
-    enum ENTD_gender EntdGenderFlags;
-    byte DeathCounter;
-    enum birthday Birthday;
-    enum AbilityID Innate0;
-    enum AbilityID Innate1;
-    enum AbilityID Innate2;
-    enum AbilityID Innate3;
-    enum SkillsetID PrimarySkillset;
-    enum SkillsetID SecondarySkillset;
-    enum AbilityID ReactionAbility;
-    enum AbilityID SupportAbility;
-    enum AbilityID MovementAbility;
-    enum ItemID Head;
-    enum ItemID Body;
-    enum ItemID Accessory;
-    enum ItemID RHWeapon;
-    enum ItemID RHShield;
-    enum ItemID LHWeapon;
-    enum ItemID LHShield;
-    byte Exp;
-    byte Level;
-    byte OriginalBrave;
-    byte Brave;
-    byte OriginalFaith;
-    byte Faith;
-    byte ActiveUnit;
-    ushort HP;
-    ushort MaxHP;
-    short MP;
-    ushort MaxMP;
-    byte OriginalPA;
-    byte OriginalMA;
-    byte OriginalSP;
-    byte BonusPA;
-    byte BonusMA;
-    byte BonusSP;
-    byte PA;
-    byte MA;
-    byte SP;
-    byte CT;
-    byte Move;
-    byte Jump;
-    byte WP1;
-    byte WP2;
-    byte WEv1;
-    byte WEv2;
-    byte AccPEv;
-    byte RHShieldPEv;
-    byte LHShieldPEv;
-    byte CEv;
-    byte AccMEv;
-    byte RHShieldMEv;
-    byte LHShieldMEv;
-    byte MapX;
-    byte MapY;
-    int FacingValue:4;
-    bool SteppingStone:1;
-    int MapElevation:1;
-    enum Eq1 EquippableItems1;
-    enum Eq2 EquippableItems2;
-    enum Eq3 EquippableItems3;
-    enum Eq4 EquippableItems4;
-    struct StatusList InnateStatuses;
-    struct StatusList ImmuneStatuses;
-    struct StatusList CurrentStatuses;
-    byte PoisonCT;
-    byte RegenCT;
-    byte ProtectCT;
-    byte ShellCT;
-    byte HasteCT;
-    byte SlowCT;
-    byte StopCT;
-    byte WallCT;
-    byte FaithCT;
-    byte InnocentCT;
-    byte CharmCT;
-    byte SleepCT;
-    byte DontMoveCT;
-    byte DontActCT;
-    byte ReflectCT;
-    byte DeathSentenceCT;
-    enum ElemAffinity AbsorbElem;
-    enum ElemAffinity NullElem;
-    enum ElemAffinity HalfElem;
-    enum ElemAffinity WeakElem;
-    enum ElemAffinity BoostElem;
-    int RawHP:24;
-    int RawMP:24;
-    int RawSP:24;
-    int RawPA:24;
-    int RawMA:24;
-    byte HPGrowth;
-    byte HPMult;
-    byte MPGrowth;
-    byte MPMult;
-    byte SPGrowth;
-    byte SPMult;
-    byte PAGrowth;
-    byte PAMult;
-    byte MAGrowth;
-    byte MAMult;
-    enum Reactions1 Reactions1;
-    enum Reactions2 Reactions2;
-    enum Reactions3 Reactions3;
-    enum Reactions4 Reactions4;
-    enum Supports1 Supports1;
-    enum Supports2 Supports2;
-    enum Supports3 Supports3;
-    enum Supports4 Supports4;
-    enum Movements1 Movements1;
-    enum Movements2 Movements2;
-    enum Movements3 Movements3;
-    int UnlockedJobs:24;
-    int BaseAbilities:24;
-    int ChemistAbilities:24;
-    int KnightAbilities:24;
-    int ArcherAbilities:24;
-    int MonkAbilities:24;
-    int PriestAbilities:24;
-    int WizardAbilities:24;
-    int TimeMageAbilities:24;
-    int SummonerAbilities:24;
-    int ThiefAbilities:24;
-    int MediatorAbilities:24;
-    int OracleAbilities:24;
-    int GeomancerAbilities:24;
-    int LancerAbilities:24;
-    int SamuraiAbilities:24;
-    int NinjaAbilities:24;
-    int CalculatorAbilities:24;
-    int BardAbilities:24;
-    int DancerAbilities:24;
-    byte JobLevels[10];
-    short JobJP[20];
-    short JobTotalJP[20];
-    char UnitName[16];
-    char JobName[16];
-    char PrimarySkillsetName[8];
-    char SecondarySkillsetName[8];
-    byte KOCount;
-    byte CurAbCT;
-    byte Graphic;
-    byte Portrait;
-    byte Palette;
-    byte ENTDID;
-    byte SpecialSkillset;
-    byte WarTrophy;
-    byte BonusMoneyMod;
-    byte AIXStay;
-    byte AIYStay;
-    enum all_action_aiflags Ai_behavious_flags;
-    byte PrioritisedTarID;
-    undefined field158_0x169;
-    undefined field159_0x16a;
-    undefined field160_0x16b;
-    short UnitNameID;
-};
-
-struct CurActionTargetData {
-    byte AttackerID;
-    enum SkillsetID SkillsetOfAttack;
-    enum AbilityID AttackToUse;
-    short CalcTypeAb;
-    short CalcMultAb;
-    enum ItemID UsedItem;
-    undefined field6_0x9;
-    byte TileTarget;
-    byte TargetID;
-    short XMapCoordTarget;
-    short ZMapCoordTarget;
-    short YMapCoordTarget;
-    byte DeathOnChocobo;
-    bool Walkable:1;
-    bool SteppingStone:1;
-    byte RiderID:5;
-    bool BeingRidden:1;
-    bool RidingUnit:1;
-    undefined field18_0x15;
-    bool MatBladeEquipped:1;
-    bool SwordEquipped:1;
-    undefined field21_0x17;
-    byte CurrentATUnit;
-    byte MoveUnavailable;
-    byte ActUnavailable;
-    bool TurnEnded:1;
-    bool TargetHit:1;
-    bool TargetLearn:1;
-    byte UnitID2;
-    byte AbilityCT;
-};
-
-struct CurActionUnitData {
-    byte HitFlag;
-    byte CritFlag;
-    byte EvadeType;
-    byte ItemBreakID;
-    short HPDamage;
-    short HPRecovery;
-    short MPDamage;
-    short MPRecovery;
-    short GilLost;
-    enum AbilityID ReactionID;
-    enum UniqueEffect1 UniqueEffect1;
-    enum UniqueEffect2 UniqueEffect2;
-    enum StatChange SPChange;
-    enum CTStatChange CTChange;
-    enum StatChange PAChange;
-    enum StatChange MAChange;
-    enum StatChange BraveChange;
-    enum StatChange FaithChange;
-    enum StatusMissMessageByte StatusMissMessageByte;
-    enum EquipSlotRemove RemoveEquipmentFlags;
-    enum ItemID StolenItemID;
-    struct StatusList StatusInfliction;
-    struct StatusList StatusRemoval;
-    enum AttackType AttackType;
-    short ReactionVar;
-    byte StolenEXP;
-    byte StolenJP;
-    byte Hit%;
-    byte hi_hit%;
-    byte AutoBattle;
-    byte MainTargetID;
-    enum ENTD_team.conflict ModifiedENTDTeam;
-    struct StatusList FinalInflictStatus;
-};
-
-struct BattleUnitData {
-    struct AllActionUnitData AllActionUnitData;
-    struct CurActionTargetData CurActionTargetData;
-    struct CurActionUnitData CurActionUnitData;
-};
-
-typedef struct vfx_col_all vfx_col_all, *Pvfx_col_all;
-
-struct vfx_col_all {
-    undefined field0_0x0;
-    undefined field1_0x1;
-    undefined field2_0x2;
-    undefined field3_0x3;
-    undefined field4_0x4;
-    undefined field5_0x5;
-    undefined field6_0x6;
-    undefined field7_0x7;
-    undefined field8_0x8;
-    undefined field9_0x9;
-    undefined field10_0xa;
-    undefined field11_0xb;
-    undefined field12_0xc;
-    undefined field13_0xd;
-    undefined field14_0xe;
-    undefined field15_0xf;
-    undefined field16_0x10;
-    undefined field17_0x11;
-    undefined field18_0x12;
-    undefined field19_0x13;
-    undefined field20_0x14;
-    undefined field21_0x15;
-    undefined field22_0x16;
-    undefined field23_0x17;
-    undefined field24_0x18;
-    undefined field25_0x19;
-    undefined field26_0x1a;
-    undefined field27_0x1b;
-    undefined field28_0x1c;
-    undefined field29_0x1d;
-    undefined field30_0x1e;
-    undefined field31_0x1f;
-    undefined field32_0x20;
-    undefined field33_0x21;
-    undefined field34_0x22;
-    undefined field35_0x23;
-    undefined field36_0x24;
-    undefined field37_0x25;
-    undefined field38_0x26;
-    undefined field39_0x27;
-    undefined field40_0x28;
-    undefined field41_0x29;
-    undefined field42_0x2a;
-    undefined field43_0x2b;
-    undefined field44_0x2c;
-    undefined field45_0x2d;
-    undefined field46_0x2e;
-    undefined field47_0x2f;
-    undefined field48_0x30;
-    undefined field49_0x31;
-    undefined field50_0x32;
-    undefined field51_0x33;
-    undefined field52_0x34;
-    undefined field53_0x35;
-    undefined field54_0x36;
-    undefined field55_0x37;
-    undefined field56_0x38;
-    undefined field57_0x39;
-    undefined field58_0x3a;
-    undefined field59_0x3b;
-    undefined field60_0x3c;
-    undefined field61_0x3d;
-    undefined field62_0x3e;
-    undefined field63_0x3f;
-    undefined field64_0x40;
-    undefined field65_0x41;
-    undefined field66_0x42;
-    undefined field67_0x43;
-    undefined field68_0x44;
-    undefined field69_0x45;
-    undefined field70_0x46;
-    undefined field71_0x47;
-    undefined field72_0x48;
-    undefined field73_0x49;
-    undefined field74_0x4a;
-    undefined field75_0x4b;
-    undefined field76_0x4c;
-    undefined field77_0x4d;
-    undefined field78_0x4e;
-    undefined field79_0x4f;
-    undefined field80_0x50;
-    undefined field81_0x51;
-    undefined field82_0x52;
-    undefined field83_0x53;
-    undefined field84_0x54;
-    undefined field85_0x55;
-    undefined field86_0x56;
-    undefined field87_0x57;
-    undefined field88_0x58;
-    undefined field89_0x59;
-    undefined field90_0x5a;
-    undefined field91_0x5b;
-    undefined field92_0x5c;
-    undefined field93_0x5d;
-    undefined field94_0x5e;
-    undefined field95_0x5f;
-    undefined field96_0x60;
-    undefined field97_0x61;
-    undefined field98_0x62;
-    undefined field99_0x63;
-    undefined field100_0x64;
-    undefined field101_0x65;
-    undefined field102_0x66;
-    undefined field103_0x67;
-    undefined field104_0x68;
-    undefined field105_0x69;
-    undefined field106_0x6a;
-    undefined field107_0x6b;
-    undefined field108_0x6c;
-    undefined field109_0x6d;
-    undefined field110_0x6e;
-    undefined field111_0x6f;
-    undefined field112_0x70;
-    undefined field113_0x71;
-    undefined field114_0x72;
-    undefined field115_0x73;
-    undefined field116_0x74;
-    undefined field117_0x75;
-    undefined field118_0x76;
-    undefined field119_0x77;
-    undefined field120_0x78;
-    undefined field121_0x79;
-    undefined field122_0x7a;
-    undefined field123_0x7b;
-    undefined field124_0x7c;
-    undefined field125_0x7d;
-    undefined field126_0x7e;
-    undefined field127_0x7f;
-    undefined field128_0x80;
-    undefined field129_0x81;
-    undefined field130_0x82;
-    undefined field131_0x83;
-    undefined field132_0x84;
-    undefined field133_0x85;
-    undefined field134_0x86;
-    undefined field135_0x87;
-    undefined field136_0x88;
-    undefined field137_0x89;
-    undefined field138_0x8a;
-    undefined field139_0x8b;
-    undefined field140_0x8c;
-    undefined field141_0x8d;
-    undefined field142_0x8e;
-    undefined field143_0x8f;
-    undefined field144_0x90;
-    undefined field145_0x91;
-    undefined field146_0x92;
-    undefined field147_0x93;
-    undefined field148_0x94;
-    undefined field149_0x95;
-    undefined field150_0x96;
-    undefined field151_0x97;
-    undefined field152_0x98;
-    undefined field153_0x99;
-    undefined field154_0x9a;
-    undefined field155_0x9b;
-    undefined field156_0x9c;
-    undefined field157_0x9d;
-    undefined field158_0x9e;
-    undefined field159_0x9f;
-    undefined field160_0xa0;
-    undefined field161_0xa1;
-    undefined field162_0xa2;
-    undefined field163_0xa3;
-    undefined field164_0xa4;
-    undefined field165_0xa5;
-    undefined field166_0xa6;
-    undefined field167_0xa7;
-    undefined field168_0xa8;
-    undefined field169_0xa9;
-    undefined field170_0xaa;
-    undefined field171_0xab;
-    undefined field172_0xac;
-    undefined field173_0xad;
-    undefined field174_0xae;
-    undefined field175_0xaf;
-    undefined field176_0xb0;
-    undefined field177_0xb1;
-    undefined field178_0xb2;
-    undefined field179_0xb3;
-    undefined field180_0xb4;
-    undefined field181_0xb5;
-    undefined field182_0xb6;
-    undefined field183_0xb7;
-    undefined field184_0xb8;
-    undefined field185_0xb9;
-    undefined field186_0xba;
-    undefined field187_0xbb;
-    undefined field188_0xbc;
-    undefined field189_0xbd;
-    undefined field190_0xbe;
-    undefined field191_0xbf;
-    undefined field192_0xc0;
-    undefined field193_0xc1;
-    undefined field194_0xc2;
-    undefined field195_0xc3;
-    undefined field196_0xc4;
-    undefined field197_0xc5;
-    undefined field198_0xc6;
-    undefined field199_0xc7;
-};
-
-typedef struct map_tile_data map_tile_data, *Pmap_tile_data;
-
-typedef enum TileType {
-    NaturalSurface=0,
-    SandArea=1,
-    Stalactite=2,
-    Grassland=3,
-    Thicket=4,
-    Snow=5,
-    RockyCliff=6,
-    Gravel=7,
-    Wasteland=8,
-    Swamp=9,
-    Marsh=10,
-    PoisonMarsh=11,
-    LavaRocks=12,
-    Ice=13,
-    Waterway=14,
-    River=15,
-    Lake=16,
-    Sea=17,
-    Lava=18,
-    Road=19,
-    WoodenFloor=20,
-    StoneFloor=21,
-    Roof=22,
-    StoneWall=23,
-    Sky=24,
-    Darkness=25,
-    Salt=26,
-    Book=27,
-    Obstacle=28,
-    Rug=29,
-    Tree=30,
-    Box=31,
-    Brick=32,
-    Chimney=33,
-    MudWall=34,
-    Bridge=35,
-    WaterPlant=36,
-    Stairs=37,
-    Furniture=38,
-    Ivy=39,
-    Deck=40,
-    Machine=41,
-    IronPlate=42,
-    Moss=43,
-    Tombstone=44,
-    Waterfall=45,
-    Coffin=46,
-    CrossSection=63
-} TileType;
-
-struct map_tile_data {
-    enum TileType TileType;
-    undefined field1_0x1;
-    byte height_whole;
-    byte height_small;
-    byte slope_height;
-    byte tile_overlay;
-    byte tile_interaction;
-    undefined field7_0x7;
-};
-
-typedef struct vfx_hdr vfx_hdr, *Pvfx_hdr;
+typedef struct vfx_timers_all vfx_timers_all, *Pvfx_timers_all;
 
 typedef struct vfx_timers_hdr vfx_timers_hdr, *Pvfx_timers_hdr;
 
 typedef struct vfx_timers vfx_timers, *Pvfx_timers;
-
-typedef struct vfx_SMD_hdr vfx_SMD_hdr, *Pvfx_SMD_hdr;
 
 typedef enum vfx_type {
     action8=8
@@ -6154,40 +1269,7 @@ typedef struct vfx_col_background vfx_col_background, *Pvfx_col_background;
 
 typedef struct vfx_cam_ctrl vfx_cam_ctrl, *Pvfx_cam_ctrl;
 
-typedef struct vfx_sfx_timers vfx_sfx_timers, *Pvfx_sfx_timers;
-
-struct vfx_sfx_timers {
-    undefined field0_0x0;
-    undefined field1_0x1;
-    undefined field2_0x2;
-    undefined field3_0x3;
-    undefined field4_0x4;
-    undefined field5_0x5;
-    undefined field6_0x6;
-    undefined field7_0x7;
-    undefined field8_0x8;
-    undefined field9_0x9;
-    undefined field10_0xa;
-    undefined field11_0xb;
-    undefined field12_0xc;
-    undefined field13_0xd;
-    undefined field14_0xe;
-    undefined field15_0xf;
-    undefined field16_0x10;
-    undefined field17_0x11;
-    undefined field18_0x12;
-    undefined field19_0x13;
-    undefined field20_0x14;
-    undefined field21_0x15;
-    undefined field22_0x16;
-    undefined field23_0x17;
-    undefined field24_0x18;
-    undefined field25_0x19;
-    undefined field26_0x1a;
-    undefined field27_0x1b;
-    undefined field28_0x1c;
-    undefined field29_0x1d;
-};
+typedef struct vfx_col_all vfx_col_all, *Pvfx_col_all;
 
 struct vfx_col_background {
     undefined field0_0x0;
@@ -6560,33 +1642,216 @@ struct vfx_timers_hdr {
     int _400;
 };
 
-struct vfx_hdr {
-    pointer vfx_start_data;
-    pointer vfx_SEQ;
-    pointer vfx_Script;
-    pointer vfx_emitter_control;
-    pointer vfx_coordinates;
-    pointer field5_0x14;
-    struct vfx_timers_hdr * vfx_timers_hdr;
-    struct vfx_timers * vfx_timers;
-    struct vfx_SMD_hdr * vfx_SMD;
-    pointer vfx_TIM;
+struct vfx_col_all {
+    undefined field0_0x0;
+    undefined field1_0x1;
+    undefined field2_0x2;
+    undefined field3_0x3;
+    undefined field4_0x4;
+    undefined field5_0x5;
+    undefined field6_0x6;
+    undefined field7_0x7;
+    undefined field8_0x8;
+    undefined field9_0x9;
+    undefined field10_0xa;
+    undefined field11_0xb;
+    undefined field12_0xc;
+    undefined field13_0xd;
+    undefined field14_0xe;
+    undefined field15_0xf;
+    undefined field16_0x10;
+    undefined field17_0x11;
+    undefined field18_0x12;
+    undefined field19_0x13;
+    undefined field20_0x14;
+    undefined field21_0x15;
+    undefined field22_0x16;
+    undefined field23_0x17;
+    undefined field24_0x18;
+    undefined field25_0x19;
+    undefined field26_0x1a;
+    undefined field27_0x1b;
+    undefined field28_0x1c;
+    undefined field29_0x1d;
+    undefined field30_0x1e;
+    undefined field31_0x1f;
+    undefined field32_0x20;
+    undefined field33_0x21;
+    undefined field34_0x22;
+    undefined field35_0x23;
+    undefined field36_0x24;
+    undefined field37_0x25;
+    undefined field38_0x26;
+    undefined field39_0x27;
+    undefined field40_0x28;
+    undefined field41_0x29;
+    undefined field42_0x2a;
+    undefined field43_0x2b;
+    undefined field44_0x2c;
+    undefined field45_0x2d;
+    undefined field46_0x2e;
+    undefined field47_0x2f;
+    undefined field48_0x30;
+    undefined field49_0x31;
+    undefined field50_0x32;
+    undefined field51_0x33;
+    undefined field52_0x34;
+    undefined field53_0x35;
+    undefined field54_0x36;
+    undefined field55_0x37;
+    undefined field56_0x38;
+    undefined field57_0x39;
+    undefined field58_0x3a;
+    undefined field59_0x3b;
+    undefined field60_0x3c;
+    undefined field61_0x3d;
+    undefined field62_0x3e;
+    undefined field63_0x3f;
+    undefined field64_0x40;
+    undefined field65_0x41;
+    undefined field66_0x42;
+    undefined field67_0x43;
+    undefined field68_0x44;
+    undefined field69_0x45;
+    undefined field70_0x46;
+    undefined field71_0x47;
+    undefined field72_0x48;
+    undefined field73_0x49;
+    undefined field74_0x4a;
+    undefined field75_0x4b;
+    undefined field76_0x4c;
+    undefined field77_0x4d;
+    undefined field78_0x4e;
+    undefined field79_0x4f;
+    undefined field80_0x50;
+    undefined field81_0x51;
+    undefined field82_0x52;
+    undefined field83_0x53;
+    undefined field84_0x54;
+    undefined field85_0x55;
+    undefined field86_0x56;
+    undefined field87_0x57;
+    undefined field88_0x58;
+    undefined field89_0x59;
+    undefined field90_0x5a;
+    undefined field91_0x5b;
+    undefined field92_0x5c;
+    undefined field93_0x5d;
+    undefined field94_0x5e;
+    undefined field95_0x5f;
+    undefined field96_0x60;
+    undefined field97_0x61;
+    undefined field98_0x62;
+    undefined field99_0x63;
+    undefined field100_0x64;
+    undefined field101_0x65;
+    undefined field102_0x66;
+    undefined field103_0x67;
+    undefined field104_0x68;
+    undefined field105_0x69;
+    undefined field106_0x6a;
+    undefined field107_0x6b;
+    undefined field108_0x6c;
+    undefined field109_0x6d;
+    undefined field110_0x6e;
+    undefined field111_0x6f;
+    undefined field112_0x70;
+    undefined field113_0x71;
+    undefined field114_0x72;
+    undefined field115_0x73;
+    undefined field116_0x74;
+    undefined field117_0x75;
+    undefined field118_0x76;
+    undefined field119_0x77;
+    undefined field120_0x78;
+    undefined field121_0x79;
+    undefined field122_0x7a;
+    undefined field123_0x7b;
+    undefined field124_0x7c;
+    undefined field125_0x7d;
+    undefined field126_0x7e;
+    undefined field127_0x7f;
+    undefined field128_0x80;
+    undefined field129_0x81;
+    undefined field130_0x82;
+    undefined field131_0x83;
+    undefined field132_0x84;
+    undefined field133_0x85;
+    undefined field134_0x86;
+    undefined field135_0x87;
+    undefined field136_0x88;
+    undefined field137_0x89;
+    undefined field138_0x8a;
+    undefined field139_0x8b;
+    undefined field140_0x8c;
+    undefined field141_0x8d;
+    undefined field142_0x8e;
+    undefined field143_0x8f;
+    undefined field144_0x90;
+    undefined field145_0x91;
+    undefined field146_0x92;
+    undefined field147_0x93;
+    undefined field148_0x94;
+    undefined field149_0x95;
+    undefined field150_0x96;
+    undefined field151_0x97;
+    undefined field152_0x98;
+    undefined field153_0x99;
+    undefined field154_0x9a;
+    undefined field155_0x9b;
+    undefined field156_0x9c;
+    undefined field157_0x9d;
+    undefined field158_0x9e;
+    undefined field159_0x9f;
+    undefined field160_0xa0;
+    undefined field161_0xa1;
+    undefined field162_0xa2;
+    undefined field163_0xa3;
+    undefined field164_0xa4;
+    undefined field165_0xa5;
+    undefined field166_0xa6;
+    undefined field167_0xa7;
+    undefined field168_0xa8;
+    undefined field169_0xa9;
+    undefined field170_0xaa;
+    undefined field171_0xab;
+    undefined field172_0xac;
+    undefined field173_0xad;
+    undefined field174_0xae;
+    undefined field175_0xaf;
+    undefined field176_0xb0;
+    undefined field177_0xb1;
+    undefined field178_0xb2;
+    undefined field179_0xb3;
+    undefined field180_0xb4;
+    undefined field181_0xb5;
+    undefined field182_0xb6;
+    undefined field183_0xb7;
+    undefined field184_0xb8;
+    undefined field185_0xb9;
+    undefined field186_0xba;
+    undefined field187_0xbb;
+    undefined field188_0xbc;
+    undefined field189_0xbd;
+    undefined field190_0xbe;
+    undefined field191_0xbf;
+    undefined field192_0xc0;
+    undefined field193_0xc1;
+    undefined field194_0xc2;
+    undefined field195_0xc3;
+    undefined field196_0xc4;
+    undefined field197_0xc5;
+    undefined field198_0xc6;
+    undefined field199_0xc7;
 };
 
-struct vfx_SMD_hdr {
-    char feds[4];
-    int smd_size;
-    short num_channels;
-    short field3_0xa;
-    undefined field4_0xc;
-    undefined field5_0xd;
-    undefined field6_0xe;
-    undefined field7_0xf;
-    struct vfx_SMD_hdr * prev_vfx_SMD;
-    undefined field9_0x14;
-    undefined field10_0x15;
-    undefined field11_0x16;
-    undefined field12_0x17;
+struct vfx_init_timers {
+    short field0_0x0;
+    short field1_0x2;
+    short start_offset;
+    short targetswap_offset;
+    short field4_0x8;
+    short duration;
 };
 
 struct vfx_cam_ctrl {
@@ -6890,6 +2155,72 @@ struct vfx_cam_ctrl {
     short cam_ctrl_script[20];
 };
 
+struct vfx_emitter_timers {
+    short field0_0x0[16];
+    byte field1_0x20[16];
+    undefined field2_0x30;
+    undefined field3_0x31;
+    byte field4_0x32[16];
+    undefined field5_0x42;
+    undefined field6_0x43;
+    undefined field7_0x44;
+    undefined field8_0x45;
+    undefined field9_0x46;
+    undefined field10_0x47;
+    undefined field11_0x48;
+    undefined field12_0x49;
+    undefined field13_0x4a;
+    undefined field14_0x4b;
+    int tar_anim_offset;
+    undefined field16_0x50;
+    undefined field17_0x51;
+    undefined field18_0x52;
+    undefined field19_0x53;
+    undefined field20_0x54;
+    undefined field21_0x55;
+    undefined field22_0x56;
+    undefined field23_0x57;
+    undefined field24_0x58;
+    undefined field25_0x59;
+    undefined field26_0x5a;
+    undefined field27_0x5b;
+    undefined field28_0x5c;
+    undefined field29_0x5d;
+    undefined field30_0x5e;
+    undefined field31_0x5f;
+    undefined field32_0x60;
+    undefined field33_0x61;
+    undefined field34_0x62;
+    undefined field35_0x63;
+    undefined field36_0x64;
+    undefined field37_0x65;
+    undefined field38_0x66;
+    undefined field39_0x67;
+    undefined field40_0x68;
+    undefined field41_0x69;
+    undefined field42_0x6a;
+    undefined field43_0x6b;
+    undefined field44_0x6c;
+    undefined field45_0x6d;
+    undefined field46_0x6e;
+    undefined field47_0x6f;
+    undefined field48_0x70;
+    undefined field49_0x71;
+    undefined field50_0x72;
+    undefined field51_0x73;
+    undefined field52_0x74;
+    undefined field53_0x75;
+    undefined field54_0x76;
+    undefined field55_0x77;
+    undefined field56_0x78;
+    undefined field57_0x79;
+    undefined field58_0x7a;
+    undefined field59_0x7b;
+    undefined field60_0x7c;
+    undefined field61_0x7d;
+    short field62_0x7e;
+};
+
 struct vfx_col_foreground {
     undefined field0_0x0;
     undefined field1_0x1;
@@ -7091,81 +2422,6 @@ struct vfx_col_foreground {
     undefined field197_0xc5;
     undefined field198_0xc6;
     undefined field199_0xc7;
-};
-
-struct vfx_init_timers {
-    short field0_0x0;
-    short field1_0x2;
-    short start_offset;
-    short targetswap_offset;
-    short field4_0x8;
-    short duration;
-};
-
-struct vfx_emitter_timers {
-    short field0_0x0[16];
-    byte field1_0x20[16];
-    undefined field2_0x30;
-    undefined field3_0x31;
-    byte field4_0x32[16];
-    undefined field5_0x42;
-    undefined field6_0x43;
-    undefined field7_0x44;
-    undefined field8_0x45;
-    undefined field9_0x46;
-    undefined field10_0x47;
-    undefined field11_0x48;
-    undefined field12_0x49;
-    undefined field13_0x4a;
-    undefined field14_0x4b;
-    int tar_anim_offset;
-    undefined field16_0x50;
-    undefined field17_0x51;
-    undefined field18_0x52;
-    undefined field19_0x53;
-    undefined field20_0x54;
-    undefined field21_0x55;
-    undefined field22_0x56;
-    undefined field23_0x57;
-    undefined field24_0x58;
-    undefined field25_0x59;
-    undefined field26_0x5a;
-    undefined field27_0x5b;
-    undefined field28_0x5c;
-    undefined field29_0x5d;
-    undefined field30_0x5e;
-    undefined field31_0x5f;
-    undefined field32_0x60;
-    undefined field33_0x61;
-    undefined field34_0x62;
-    undefined field35_0x63;
-    undefined field36_0x64;
-    undefined field37_0x65;
-    undefined field38_0x66;
-    undefined field39_0x67;
-    undefined field40_0x68;
-    undefined field41_0x69;
-    undefined field42_0x6a;
-    undefined field43_0x6b;
-    undefined field44_0x6c;
-    undefined field45_0x6d;
-    undefined field46_0x6e;
-    undefined field47_0x6f;
-    undefined field48_0x70;
-    undefined field49_0x71;
-    undefined field50_0x72;
-    undefined field51_0x73;
-    undefined field52_0x74;
-    undefined field53_0x75;
-    undefined field54_0x76;
-    undefined field55_0x77;
-    undefined field56_0x78;
-    undefined field57_0x79;
-    undefined field58_0x7a;
-    undefined field59_0x7b;
-    undefined field60_0x7c;
-    undefined field61_0x7d;
-    short field62_0x7e;
 };
 
 struct vfx_timers {
@@ -9696,6 +4952,5104 @@ struct vfx_timers {
     undefined field2524_0x1887;
 };
 
+struct vfx_timers_all {
+    struct vfx_timers_hdr timers_hdr;
+    struct vfx_timers timers;
+};
+
+typedef struct PrimaryItemData PrimaryItemData, *PPrimaryItemData;
+
+struct PrimaryItemData {
+    byte Palette;
+    byte SpriteID;
+    byte ReqLevel;
+    int NA:1;
+    int Rare:1;
+    int NA:1;
+    int Accessory:1;
+    int Armor:1;
+    int Headgear:1;
+    int Shield:1;
+    int Weapon:1;
+    byte SecondID;
+    byte ItemType;
+    undefined field13_0x6;
+    byte ItemAttr;
+    short Price;
+    byte ShopAvailability;
+    undefined field17_0xb;
+};
+
+typedef unsigned short    wchar16;
+typedef struct SED_hdr SED_hdr, *PSED_hdr;
+
+struct SED_hdr {
+    char feds[4];
+    int smd_size;
+    short num_channels;
+    short SED_ID;
+    short num_SFX;
+    undefined field5_0xe;
+    undefined field6_0xf;
+    struct SED_hdr * prev_SED;
+    undefined field8_0x14;
+    undefined field9_0x15;
+    undefined field10_0x16;
+    undefined field11_0x17;
+};
+
+typedef enum SUZUKIchannel_flags {
+    action1=1,
+    action4=4,
+    sfx=8,
+    note_active=128,
+    hold_note=256,
+    action200=512,
+    rest_note=1024,
+    action800=2048,
+    change_instrument=32768
+} SUZUKIchannel_flags;
+
+typedef enum Status2 {
+    empty=0,
+    Treasure=1,
+    Cursed=2,
+    Blood_Suck=4,
+    Silence=8,
+    Confusion=16,
+    Darkness=32,
+    Invite=64,
+    Petrify=128
+} Status2;
+
+typedef enum Status3 {
+    empty=0,
+    Critical=1,
+    Frog=2,
+    Chicken=4,
+    Berserk=8,
+    Transparent=16,
+    Reraise=32,
+    Float=64,
+    Oil=128
+} Status3;
+
+typedef enum Status4 {
+    empty=0,
+    Wall=1,
+    Stop=2,
+    Slow=4,
+    Haste=8,
+    Shell=16,
+    Protect=32,
+    Regen=64,
+    Poison=128
+} Status4;
+
+typedef enum Status5 {
+    empty=0,
+    Death_Sentence=1,
+    Reflect=2,
+    Dont_Act=4,
+    Dont_Move=8,
+    Sleep=16,
+    Charm=32,
+    Innocent=64,
+    Faith=128
+} Status5;
+
+typedef enum SUZUKInoteflags3 {
+    stop_instrument=4,
+    attacktime_change=16,
+    actionflag20=32,
+    sustain_change=64,
+    actionflag80=128,
+    sustain2_change=256
+} SUZUKInoteflags3;
+
+typedef enum SUZUKInoteflags4 {
+    default_dynamic=8
+} SUZUKInoteflags4;
+
+typedef enum FormulaID {
+    Weapon=1,
+    SpellWeapon=2,
+    GunWeapon=3,
+    MagicGun=4,
+    Weapon2=5,
+    AbsorbWeapon=6,
+    HealWeapon=7,
+    DamageSpell=8,
+    DemiSpell=9,
+    AilmentSpell=10,
+    BoonSpell=11,
+    HealSpell=12,
+    RaiseSpell=13,
+    DeathSpell=14,
+    MPAbsorbSpell=15,
+    AbsorbSpell=16,
+    11=17,
+    Quick=18,
+    13=19,
+    Golem=20,
+    Return2=21,
+    Mute=22,
+    Gravi2=23,
+    18=24,
+    19=25,
+    ZalbagRuin=26,
+    ZalbagMPRuin=27,
+    Song=28,
+    Dance=29,
+    Truth=30,
+    Untruth=31,
+    DmgKatana=32,
+    DmgMPKatana=33,
+    BoonKatana=34,
+    HealKatana=35,
+    Geomancy=36,
+    EquipBreak=37,
+    EquipSteal=38,
+    GilSteal=39,
+    EXPSteal=40,
+    HeartSteal=41,
+    TalkSkill=42,
+    StatBreak=43,
+    MPBreak=44,
+    HolySword=45,
+    MightySword=46,
+    DarkSword=47,
+    NightSword=48,
+    Barehand=49,
+    BarehandRND=50,
+    Stigma=51,
+    Chakra=52,
+    Revive=53,
+    PlusPA=54,
+    KnockbackRND=55,
+    InflictStatus=56,
+    PlusSP=57,
+    PlusBrave=58,
+    Scream=59,
+    Wish=60,
+    MonStatus=61,
+    GraviUnused=62,
+    AimLimb=63,
+    SealEvil=64,
+    GalaxyStop=65,
+    Work=66,
+    RevengeDMG=67,
+    Difference=68,
+    Climhazzard=69,
+    46=70,
+    BloodSuck=71,
+    ItemHeal=72,
+    ItemMPHeal=73,
+    Elixir=74,
+    PhoenixDown=75,
+    MonHeal=76,
+    MonAbsorb=77,
+    Bracelet=78,
+    GoblinPunch=79,
+    MonPhysSpell=80,
+    MonEsuna=81,
+    SelfDestruct=82,
+    Hurricane=83,
+    MagicSpirit=84,
+    Beaking=85,
+    Circle=86,
+    PleaseEat=87,
+    Moldball=88,
+    LevelBlast=89,
+    DragonTame=90,
+    DragonCare=91,
+    DragonPowerUP=92,
+    DragonLevelUP=93,
+    HydraBracelet=94,
+    Nanoflare=95,
+    HydraStatusUnused=96,
+    Foxbird=97,
+    FrightLook=98,
+    Throw=99,
+    Jump=100
+} FormulaID;
+
+typedef struct SuzukiVolStorageStruct SuzukiVolStorageStruct, *PSuzukiVolStorageStruct;
+
+typedef struct SuzukiVolStore SuzukiVolStore, *PSuzukiVolStore;
+
+struct SuzukiVolStore {
+    short field0_0x0;
+    short Volume;
+};
+
+struct SuzukiVolStorageStruct {
+    struct SuzukiVolStore hasVolume;
+    undefined4 ChangeInVolume;
+    short ChangeVol;
+};
+
+typedef struct MusicChannelData MusicChannelData, *PMusicChannelData;
+
+typedef struct MusicChannelIntermediary MusicChannelIntermediary, *PMusicChannelIntermediary;
+
+typedef enum SUZUKIintermediary_flags {
+    rest_note=2,
+    action80=128,
+    volume_change=256,
+    playing_note=512
+} SUZUKIintermediary_flags;
+
+typedef struct MusicChannelSecondary MusicChannelSecondary, *PMusicChannelSecondary;
+
+typedef enum mus_voiceChannelFunc {
+    Adjust_Voice_Vol_Both=1,
+    Set_Sweep_VolMode=2,
+    CalcLFOVoices=4,
+    Set_ADPCM_Addrs=8,
+    CalcNoiseVoices=16,
+    Adjust_Voice_Decay_Shift=32,
+    CalcReverbVoices=64,
+    Adjust_Release=128,
+    Adjust_Sustain_Level=256,
+    action200=512,
+    action400=1024,
+    action800=2048,
+    All=32767
+} mus_voiceChannelFunc;
+
+typedef enum SFX_ID {
+    confirm=1,
+    cancel=2,
+    cursor_move=3,
+    roll_gil=4,
+    invalid=5,
+    trigger_click=6,
+    remove_equip=7,
+    power_up=8,
+    remove_unit=9,
+    best_equip=10,
+    clockwise_rot=11,
+    counter_rot=12,
+    stop_rot=13,
+    zoom_in_quick=14,
+    zoom_in=15,
+    zoom_out=16,
+    zoom_out_quick=17,
+    help_popup=18,
+    slash=19,
+    w_slash=20,
+    punch_blocked=21,
+    punch2=22,
+    punch3=23,
+    blunt_weapon_hit=24,
+    light_weapon_swing=25,
+    med_weapon_swing=26,
+    heavy_weapon_swing=27,
+    dragoon_land=28,
+    igros_open=29,
+    DEP_mag_charge=30,
+    mag_charge=31,
+    balmafula_scream=32,
+    summon=33,
+    trap=34,
+    water_land1=35,
+    water_land2=36,
+    wet_land=37,
+    jingle=38,
+    dragoon_jump=39,
+    land1=40,
+    land2=41,
+    land3=42,
+    balmafula_scream2=43,
+    throw=44,
+    turn_page=45,
+    shield_light=46,
+    shield_heavy=47,
+    shirahadori=48,
+    change_cam_angle=49,
+    sparkle1=50,
+    sparkle2=51,
+    sparkle3=52,
+    sparkle4=53,
+    sparkle5=54,
+    sparkle6=55,
+    hit_staff=56,
+    hit2=57,
+    land_wood=58,
+    land_water=59,
+    menu_cursor_move1=60,
+    menu_cursor_move2=61,
+    hit_polearm=62,
+    sfx_3f=63,
+    footsteps=64,
+    exit_map=65,
+    high_pitch=66,
+    menu_confirm=67,
+    male_dead=68,
+    female_dead=69,
+    monster_dead=70,
+    bullet_parry=71,
+    locked_door=72,
+    shield_arrow=73,
+    sfx_4a=74,
+    door_bang=75,
+    door_click=76,
+    prop_finish_1=77,
+    prop_finish_2=78,
+    prop_finish_3=79,
+    applause=80,
+    trumpet_prop=81,
+    bow_twang=82,
+    choke_2=83,
+    arrow_1=84,
+    arrow_2=85,
+    crossbow_fire=86,
+    sfx_57=87,
+    sfx_58=88,
+    arrow_3=89,
+    gun_load=90,
+    gun_shot_1=91,
+    gun_shot_2=92,
+    gun_shot_3=93,
+    explosion=94,
+    wet_slap=95,
+    sfx_60=96,
+    remove_ability=97,
+    sfx_62=98,
+    slap=99,
+    balmafula_scream3=100,
+    sword_clash=101,
+    zodiac_howl_1=102,
+    zodiac_howl_2=103,
+    zodiac_howl_3=104,
+    door_lever=105,
+    tele_out=106,
+    tele_in=107,
+    encounter_1=108,
+    encounter_2=109,
+    crossbow_1=110,
+    crossbow_2=111,
+    riovanes_footsteps=112,
+    AT_halt=113,
+    impale_hit=114,
+    text=115,
+    lever_2=116,
+    sparkle_7=117,
+    draw_map_path=118,
+    select_battle=119,
+    reinforcements_footsteps=120,
+    reed_flute_1=121,
+    reed_flute_2=122,
+    reed_flute_3=123,
+    reed_flute_fail=124,
+    whistle=125,
+    sfx_7e=126,
+    lionel_gate_open=127,
+    bad_breath=132,
+    crystal_pickup=133,
+    feather_bomb=134,
+    scratch_up=135,
+    sfx_88=136,
+    altima_1_attack=137,
+    shield_heavy_2=138,
+    sfx_8b=139,
+    lick=140,
+    straight_dash=141,
+    dash=144,
+    shield_heavy_3=145,
+    mon_attack_heavy=146,
+    equipped=147,
+    choco_beak=148,
+    ability_learn=152,
+    magic_hit=153,
+    male_death_2=154,
+    bio_hit=155,
+    dict_hit=156,
+    final_fantasy_harps=157,
+    laugh1=158,
+    laugh2=159,
+    laugh3=160,
+    zodiac_pulse=161,
+    church_bells=162,
+    male_zodiac_death=163,
+    impact1=164,
+    impact2=165,
+    impact3=166,
+    zodiac_sparkle=167,
+    ENV_SED=65536,
+    rain_lake=65537,
+    rain_random=65538,
+    thunder_random_1=65539,
+    rain_storm1=65540,
+    wind1=65541,
+    young_birds=65542,
+    bird=65543,
+    birds=65544,
+    beast_howl=65545,
+    rain_storm2=65546,
+    wind2=65547,
+    cadets_training=65548,
+    night1=65549,
+    thunder_random_2=65550,
+    night2=65551,
+    thunder_bolt1=65552,
+    thunder_bolt2=65553,
+    thunder_bolt3=65554,
+    thunder_bolt4=65555,
+    thunder_bolt5=65556,
+    ENV_NONE=65557,
+    ENV_NONE2=65558,
+    ENV_NONE3=65559,
+    windmill_pt1=65560,
+    windmill_pt2=65561,
+    exploding=65562,
+    foreign_music=65563
+} SFX_ID;
+
+typedef enum MusicInstruction {
+    PlayNote=127,
+    Instruction=128,
+    Rest=128,
+    Fermata=129,
+    EndBar=144,
+    Loop=145,
+    Octave=148,
+    RaiseOctave=149,
+    LowerOctave=150,
+    TimeSignature=151,
+    Repeat=152,
+    Coda=153,
+    ToCoda=154,
+    Tempo=160,
+    Instrument=172,
+    Cue=186,
+    Naturale=192,
+    AttackTime=194,
+    Sustain=196,
+    AttackTime2=198,
+    PitchShift=216,
+    Dynamic=224,
+    Balance=232
+} MusicInstruction;
+
+typedef struct SoundFontHeader SoundFontHeader, *PSoundFontHeader;
+
+typedef struct sf_wave_settings sf_wave_settings, *Psf_wave_settings;
+
+struct sf_wave_settings {
+    int Wavefont_ptr;
+    ushort ADPCM_Repeat_addr;
+    undefined field2_0x6;
+    undefined field3_0x7;
+    byte Attack_Shiftstep; // Created by retype action
+    byte Decay_Shift; // Created by retype action
+    byte Sustain_Flags; // Created by retype action
+    byte Release_Flags; // Created by retype action
+    byte Sustain_Level;
+    byte Attack_Mode;
+    byte Sustain_Mode; // Created by retype action
+    byte Release_Mode; // Created by retype action
+};
+
+struct SoundFontHeader {
+    char FileDesignation[5];
+    undefined field1_0x5;
+    undefined field2_0x6;
+    undefined field3_0x7;
+    uint wholeFileSize;
+    undefined field5_0xc;
+    undefined field6_0xd;
+    undefined field7_0xe;
+    undefined field8_0xf;
+    uint waveFontStart;
+    uint waveFontSize;
+    uint field11_0x18;
+    undefined field12_0x1c;
+    undefined field13_0x1d;
+    undefined field14_0x1e;
+    undefined field15_0x1f;
+    short soundfont_ID;
+    undefined field17_0x22;
+    undefined field18_0x23;
+    undefined field19_0x24;
+    undefined field20_0x25;
+    undefined field21_0x26;
+    undefined field22_0x27;
+    int ADPCM_offset; // Created by retype action
+    struct SoundFontHeader * next_soundfont; // Created by retype action
+    struct sf_wave_settings waveFontArray[176];
+};
+
+struct MusicChannelSecondary {
+    enum mus_voiceChannelFunc channelFunc;
+    enum SUZUKInoteflags4 instrumentflags;
+    enum SFX_ID SFX_ID;
+    undefined field3_0x8;
+    undefined field4_0x9;
+    undefined field5_0xa;
+    undefined field6_0xb;
+    undefined field7_0xc;
+    undefined field8_0xd;
+    undefined field9_0xe;
+    undefined field10_0xf;
+    undefined field11_0x10;
+    undefined field12_0x11;
+    undefined field13_0x12;
+    undefined field14_0x13;
+    enum MusicInstruction * MUS_Instr;
+    byte * SMD_instr_start;
+    undefined field17_0x1c;
+    undefined field18_0x1d;
+    undefined field19_0x1e;
+    undefined field20_0x1f;
+    undefined field21_0x20;
+    undefined field22_0x21;
+    undefined field23_0x22;
+    undefined field24_0x23;
+    short loops;
+    undefined field26_0x26;
+    byte field27_0x27;
+    byte instrument; // Created by retype action
+    byte voice_ID;
+    short releaseflags_small;
+    struct SoundFontHeader * Waveset_addr;
+    struct MusicChannelInner channel_notedata;
+};
+
+struct MusicChannelIntermediary {
+    enum SUZUKIintermediary_flags intermediaryflags;
+    struct MusicChannelSecondary channelSecondary; // Created by retype action
+};
+
+struct MusicChannelData {
+    enum SUZUKIchannel_flags channelflags;
+    struct MusicChannelIntermediary channel_inter;
+};
+
+typedef enum Status1 {
+    empty=0,
+    Performing=1,
+    Defending=2,
+    Jump=4,
+    Charging=8,
+    Undead=16,
+    Dead=32,
+    Crystal=64,
+    NONE=128
+} Status1;
+
+typedef struct SMDDataAll SMDDataAll, *PSMDDataAll;
+
+typedef struct SMDHeaderData SMDHeaderData, *PSMDHeaderData;
+
+struct SMDHeaderData {
+    uchar smds[4];
+    uint clearhere;
+    uint filesize;
+    undefined field3_0xc;
+    undefined field4_0xd;
+    undefined field5_0xe;
+    undefined field6_0xf;
+    short field7_0x10;
+    undefined field8_0x12;
+    undefined1 length_192; // Created by retype action
+    byte NumChannels; // Created by retype action
+    undefined field11_0x15;
+    short field12_0x16;
+    short field13_0x18;
+    char reverbMode_small; // Created by retype action
+    byte volumeDepth_small; // Created by retype action
+    byte reverbDelay_small; // Created by retype action
+    byte reverbFeedback_small;
+    short filename_ptr;
+    short data_ptr;
+    short channel_ptr;
+};
+
+struct SMDDataAll {
+    struct SMDHeaderData HeaderData;
+    undefined field1_0x24;
+    undefined field2_0x25;
+    undefined field3_0x26;
+    undefined field4_0x27;
+    undefined field5_0x28;
+    undefined field6_0x29;
+    undefined field7_0x2a;
+    undefined field8_0x2b;
+    undefined field9_0x2c;
+    undefined field10_0x2d;
+    undefined field11_0x2e;
+    undefined field12_0x2f;
+    undefined field13_0x30;
+    undefined field14_0x31;
+    undefined field15_0x32;
+    undefined field16_0x33;
+    undefined field17_0x34;
+    undefined field18_0x35;
+    undefined field19_0x36;
+    undefined field20_0x37;
+    undefined field21_0x38;
+    undefined field22_0x39;
+    undefined field23_0x3a;
+    undefined field24_0x3b;
+    undefined field25_0x3c;
+    undefined field26_0x3d;
+    undefined field27_0x3e;
+    undefined field28_0x3f;
+    undefined field29_0x40;
+    undefined field30_0x41;
+    undefined field31_0x42;
+    undefined field32_0x43;
+    undefined field33_0x44;
+    undefined field34_0x45;
+    undefined field35_0x46;
+    undefined field36_0x47;
+    undefined field37_0x48;
+    undefined field38_0x49;
+    undefined field39_0x4a;
+    undefined field40_0x4b;
+    undefined field41_0x4c;
+    undefined field42_0x4d;
+    undefined field43_0x4e;
+    undefined field44_0x4f;
+    undefined field45_0x50;
+    undefined field46_0x51;
+    undefined field47_0x52;
+    undefined field48_0x53;
+    undefined field49_0x54;
+    undefined field50_0x55;
+    undefined field51_0x56;
+    undefined field52_0x57;
+    undefined field53_0x58;
+    undefined field54_0x59;
+    undefined field55_0x5a;
+    undefined field56_0x5b;
+    undefined field57_0x5c;
+    undefined field58_0x5d;
+    undefined field59_0x5e;
+    undefined field60_0x5f;
+    undefined field61_0x60;
+    undefined field62_0x61;
+    undefined field63_0x62;
+    undefined field64_0x63;
+    undefined field65_0x64;
+    undefined field66_0x65;
+    undefined field67_0x66;
+    undefined field68_0x67;
+    undefined field69_0x68;
+    undefined field70_0x69;
+    undefined field71_0x6a;
+    undefined field72_0x6b;
+    undefined field73_0x6c;
+    undefined field74_0x6d;
+    undefined field75_0x6e;
+    undefined field76_0x6f;
+    undefined field77_0x70;
+    undefined field78_0x71;
+    undefined field79_0x72;
+    undefined field80_0x73;
+    undefined field81_0x74;
+    undefined field82_0x75;
+    undefined field83_0x76;
+    undefined field84_0x77;
+    undefined field85_0x78;
+    undefined field86_0x79;
+    undefined field87_0x7a;
+    undefined field88_0x7b;
+    undefined field89_0x7c;
+    undefined field90_0x7d;
+    undefined field91_0x7e;
+    undefined field92_0x7f;
+    undefined field93_0x80;
+    undefined field94_0x81;
+    undefined field95_0x82;
+    undefined field96_0x83;
+    undefined field97_0x84;
+    undefined field98_0x85;
+    undefined field99_0x86;
+    undefined field100_0x87;
+    undefined field101_0x88;
+    undefined field102_0x89;
+    undefined field103_0x8a;
+    undefined field104_0x8b;
+    undefined field105_0x8c;
+    undefined field106_0x8d;
+    undefined field107_0x8e;
+    undefined field108_0x8f;
+    undefined field109_0x90;
+    undefined field110_0x91;
+    undefined field111_0x92;
+    undefined field112_0x93;
+    undefined field113_0x94;
+    undefined field114_0x95;
+    undefined field115_0x96;
+    undefined field116_0x97;
+    undefined field117_0x98;
+    undefined field118_0x99;
+    undefined field119_0x9a;
+    undefined field120_0x9b;
+    undefined field121_0x9c;
+    undefined field122_0x9d;
+    undefined field123_0x9e;
+    undefined field124_0x9f;
+    undefined field125_0xa0;
+    undefined field126_0xa1;
+    undefined field127_0xa2;
+    undefined field128_0xa3;
+    undefined field129_0xa4;
+    undefined field130_0xa5;
+    undefined field131_0xa6;
+    undefined field132_0xa7;
+    undefined field133_0xa8;
+    undefined field134_0xa9;
+    undefined field135_0xaa;
+    undefined field136_0xab;
+    undefined field137_0xac;
+    undefined field138_0xad;
+    undefined field139_0xae;
+    undefined field140_0xaf;
+    undefined field141_0xb0;
+    undefined field142_0xb1;
+    undefined field143_0xb2;
+    undefined field144_0xb3;
+    undefined field145_0xb4;
+    undefined field146_0xb5;
+    undefined field147_0xb6;
+    undefined field148_0xb7;
+    struct MusicChannelData ChannelData[8];
+    undefined field150_0xbb8;
+    undefined field151_0xbb9;
+    undefined field152_0xbba;
+    undefined field153_0xbbb;
+    undefined field154_0xbbc;
+    undefined field155_0xbbd;
+    undefined field156_0xbbe;
+    undefined field157_0xbbf;
+    undefined field158_0xbc0;
+    undefined field159_0xbc1;
+    undefined field160_0xbc2;
+    undefined field161_0xbc3;
+    undefined field162_0xbc4;
+    undefined field163_0xbc5;
+    undefined field164_0xbc6;
+    undefined field165_0xbc7;
+};
+
+typedef struct InflictStatuses InflictStatuses, *PInflictStatuses;
+
+typedef struct StatusList StatusList, *PStatusList;
+
+struct StatusList {
+    enum Status1 Status1;
+    enum Status2 Status2;
+    enum Status3 Status3;
+    enum Status4 Status4;
+    enum Status5 Status5;
+};
+
+struct InflictStatuses {
+    bool Cancel:1;
+    bool InflictSeperate:1;
+    bool InflictRandom:1;
+    bool InflictAll:1;
+    struct StatusList field4_0x1;
+};
+
+typedef struct MusicDataHeader MusicDataHeader, *PMusicDataHeader;
+
+typedef struct MusDataAll MusDataAll, *PMusDataAll;
+
+typedef enum mus_10 {
+    actionflag1=1,
+    end_on_endbar=2,
+    recalculate_reverb=256,
+    actionflag2000=8192,
+    music_playing=32768
+} mus_10;
+
+struct MusicDataHeader {
+    struct MusDataAll * PrevPlayedMus;
+    struct MusDataAll * NextMus;
+    struct SMDDataAll * TransferAddr;
+    int DedicatedSpace;
+    enum mus_10 10_cmdfield;
+    short field5_0x12;
+    byte NumChannelDedicate; // Created by retype action
+    byte length_192;
+    byte NumChannels;
+    undefined field9_0x17;
+    short Soundfont_ID;
+    short field11_0x1a;
+    undefined field12_0x1c;
+    undefined field13_0x1d;
+    ushort noise_clock;
+    uint field15_0x20;
+    uint field16_0x24;
+    uint field17_0x28;
+    undefined field18_0x2c;
+    undefined field19_0x2d;
+    undefined field20_0x2e;
+    undefined field21_0x2f;
+    short field22_0x30;
+    short CurMeasure;
+    short CurBeat;
+    short 192s_Until_nextBeat;
+    short timeSignature_top;
+    short 192s_Per_Beat;
+    short timeSignature_bottom;
+    short timeSigTop;
+    undefined field30_0x40;
+    undefined field31_0x41;
+    undefined field32_0x42;
+    undefined field33_0x43;
+    uint ReverbMode; // Created by retype action
+    short volumeDepth; // Created by retype action
+    undefined field36_0x4a;
+    undefined field37_0x4b;
+    long reverbDelay; // Created by retype action
+    long reverbFeedback; // Created by retype action
+    undefined field40_0x54;
+    undefined field41_0x55;
+    undefined field42_0x56;
+    undefined field43_0x57;
+    undefined4 OwnedChannels;
+    undefined field45_0x5c;
+    undefined field46_0x5d;
+    undefined field47_0x5e;
+    undefined field48_0x5f;
+    uint ModifiedChannels;
+    uint field50_0x64;
+    uint LFOVoiceBits;
+    uint NoiseVoiceBits;
+    uint ReverbVoiceBits;
+    uint microtimer;
+    uint modified_tempo;
+    short field56_0x7c;
+    short raw_tempo;
+    uint field58_0x80;
+    short field59_0x84;
+    undefined field60_0x86;
+    undefined field61_0x87;
+    short field62_0x88;
+    short tempo_scalar;
+    undefined field64_0x8c;
+    undefined field65_0x8d;
+    undefined field66_0x8e;
+    undefined field67_0x8f;
+    short field68_0x90;
+    undefined field69_0x92;
+    undefined field70_0x93;
+    struct SuzukiVolStorageStruct volset1;
+    undefined field72_0x9e;
+    undefined field73_0x9f;
+    struct SuzukiVolStorageStruct volset2;
+    undefined field75_0xaa;
+    undefined field76_0xab;
+    struct SuzukiVolStorageStruct volset3;
+    undefined field78_0xb6;
+    undefined field79_0xb7;
+};
+
+struct MusDataAll {
+    struct MusicDataHeader HeaderData;
+    struct MusicChannelData ChannelData[8];
+    undefined field2_0xbb8;
+    undefined field3_0xbb9;
+    undefined field4_0xbba;
+    undefined field5_0xbbb;
+    undefined field6_0xbbc;
+    undefined field7_0xbbd;
+    undefined field8_0xbbe;
+    undefined field9_0xbbf;
+    undefined field10_0xbc0;
+    undefined field11_0xbc1;
+    undefined field12_0xbc2;
+    undefined field13_0xbc3;
+    undefined field14_0xbc4;
+    undefined field15_0xbc5;
+    undefined field16_0xbc6;
+    undefined field17_0xbc7;
+};
+
+typedef enum ItemID {
+    None=0,
+    Knife=1,
+    MythrilKnife=2,
+    BlindKnife=3,
+    MageKnife=4,
+    PlatKnife=5,
+    GaucheKnife=6,
+    OrichKnife=7,
+    AssassinKnife=8,
+    AirKnife=9,
+    ZorlinKnife=10,
+    HiddenNinjato=11,
+    Ninjato=12,
+    ShortNinjato=13,
+    EdgeNinjato=14,
+    SpellNinjato=15,
+    SasukeNinjato=16,
+    IgaNinjato=17,
+    KogaNinjato=18,
+    BroadSword=19,
+    LongSword=20,
+    IronSword=21,
+    MythrilSword=22,
+    BloodSword=23,
+    CoralSword=24,
+    AncientSword=25,
+    SleepSword=26,
+    PlatSword=27,
+    DiamondSword=28,
+    IceSword=29,
+    RuneSword=30,
+    NagrarokSword=31,
+    MateriaSword=32,
+    DefendKnSword=33,
+    QueenKnSword=34,
+    ExcKnSword=35,
+    RagnarokKnSword=36,
+    ChaosKnSword=37,
+    AsuraKatana=38,
+    KoutetsuKatana=39,
+    BizenKatana=40,
+    MurasameKatana=41,
+    HeavenKatana=42,
+    KiyomoriKatana=43,
+    MuramasaKatana=44,
+    KikuiKatana=45,
+    MasamuneKatana=46,
+    ChiriKatana=47,
+    BattleAxe=48,
+    GiantAxe=49,
+    SlashAxe=50,
+    Rod=51,
+    ThunderRod=52,
+    FlameRod=53,
+    IceRod=54,
+    PoisonRod=55,
+    WizardRod=56,
+    DragonRod=57,
+    FaithRod=58,
+    OakStaff=59,
+    WhiteStaff=60,
+    HealStaff=61,
+    RainbowStaff=62,
+    WizardStaff=63,
+    GoldStaff=64,
+    ZeusStaff=65,
+    SageStaff=66,
+    Flail=67,
+    FlameFlail=68,
+    MSFlail=69,
+    ScorpionFlail=70,
+    RomandaGun=71,
+    MythrilGun=72,
+    StoneGun=73,
+    BlazeGun=74,
+    GlacierGun=75,
+    BlastGun=76,
+    BowgunXBow=77,
+    KnightXBow=78,
+    XBow=79,
+    PoisonXBow=80,
+    HuntingXBow=81,
+    GastrifitisXBow=82,
+    LongBow=83,
+    SilverBow=84,
+    IceBow=85,
+    LightningBow=86,
+    WindBow=87,
+    MythrilBow=88,
+    UltimaBow=89,
+    YoichiBow=90,
+    PerseusBow=91,
+    LamiaHarp=92,
+    BloodyHarp=93,
+    FairyHarp=94,
+    BattleDict=95,
+    MonsterDict=96,
+    PapyrusDict=97,
+    MadlemDict=98,
+    JavelinPolearm=99,
+    SpearPolearm=100,
+    MythrilPolearm=101,
+    PartisanPolearm=102,
+    ObeliskPolearm=103,
+    HolyPolearm=104,
+    WhiskerPolearm=105,
+    JavelinPolearm2=106,
+    CypressPole=107,
+    BambooPole=108,
+    MuskPole=109,
+    IronPole=110,
+    GokuuPole=111,
+    IvoryPole=112,
+    OctagonPole=113,
+    WhiskerPole=114,
+    CBag=115,
+    FSBag=116,
+    PBag=117,
+    HBag=118,
+    PersiaCloth=119,
+    CashmereCloth=120,
+    RyozanCloth=121,
+    Shuriken=122,
+    MagicShuriken=123,
+    YagyuShuriken=124,
+    FireBall=125,
+    WaterBall=126,
+    LightningBall=127,
+    EscutchShield=128,
+    BucklerShield=129,
+    BronzeShield=130,
+    RoundShield=131,
+    MythrilShield=132,
+    GoldShield=133,
+    IceShield=134,
+    FlameShield=135,
+    AegisShield=136,
+    DiamondShield=137,
+    PlatShield=138,
+    CrystalShield=139,
+    GenjiShield=140,
+    KaiserShield=141,
+    VeniceShield=142,
+    EscutchShield2=143,
+    LeatherHelm=144,
+    BronzeHelm=145,
+    IronHelm=146,
+    BarbutaHelm=147,
+    MythrilHelm=148,
+    GoldHelm=149,
+    CrossHelm=150,
+    DiamondHelm=151,
+    PlatHelm=152,
+    CircletHelm=153,
+    CrystalHelm=154,
+    GenjiHelm=155,
+    GrandHelm=156,
+    LeatherHat=157,
+    FeatherHat=158,
+    RedHat=159,
+    HeadgearHat=160,
+    TriangleHat=161,
+    BeretHat=162,
+    HeadbandHat=163,
+    MiterHat=164,
+    Blackhat=165,
+    HairpinHat=166,
+    FlashHat=167,
+    ThiefHat=168,
+    CachushaAdrn=169,
+    BaretteAdrn=170,
+    RibbonAdrn=171,
+    LeatherArmor=172,
+    LinenArmor=173,
+    BronzeArmor=174,
+    ChainArmor=175,
+    MythrilArmor=176,
+    PlateArmor=177,
+    GoldArmor=178,
+    DiamondArmor=179,
+    PlatArmor=180,
+    CarabiniArmor=181,
+    CrystalArmor=182,
+    GenjiArmor=183,
+    ReflectArmor=184,
+    MaxArmor=185,
+    Clothes=186,
+    LeatherClothes=187,
+    LeatherClothes2=188,
+    ChainClothes=189,
+    MythrilClothes=190,
+    AdamClothes=191,
+    WizardClothes=192,
+    BrigClothes=193,
+    JudoClothes=194,
+    PowerClothes=195,
+    EarthClothes=196,
+    SecretClothes=197,
+    BlackClothes=198,
+    RubberClothes=199,
+    LinenRobe=200,
+    SilkRobe=201,
+    WizardRobe=202,
+    ChamRobe=203,
+    WhiteRobe=204,
+    BlackRobe=205,
+    LightRobe=206,
+    LordRobe=207,
+    BattleShoe=208,
+    SpikeShoe=209,
+    GermShoe=210,
+    RubberShoe=211,
+    FeatherShoe=212,
+    SprintShoe=213,
+    RedShoe=214,
+    PowerGauntlet=215,
+    GenjiGauntlet=216,
+    MagicGauntlet=217,
+    BraceGauntlet=218,
+    ReflectRing=219,
+    DefenseRing=220,
+    MagicRing=221,
+    CursedRing=222,
+    AngelRing=223,
+    DiamondArmlet=224,
+    JadeArmlet=225,
+    108Armlet=226,
+    NKaiArmlet=227,
+    DefenseArmlet=228,
+    SmallMantle=229,
+    LeatherMantle=230,
+    WizardMantle=231,
+    ElfMantle=232,
+    DraculaMantle=233,
+    FeatherMantle=234,
+    VanishMantle=235,
+    Chantage=236,
+    Cherche=237,
+    Setiemson=238,
+    SaltyRage=239,
+    Potion=240,
+    HiPotion=241,
+    XPotion=242,
+    Ether=243,
+    HiEther=244,
+    Elixir=245,
+    Antidote=246,
+    EyeDrop=247,
+    EchoGrass=248,
+    MaidenKiss=249,
+    Soft=250,
+    HolyWater=251,
+    Remedy=252,
+    PhoenixDown=253,
+    RND_ENTD=254,
+    NONE_ENTD=255
+} ItemID;
+
+typedef enum SFX_ID_small {
+    confirm=1,
+    cancel=2,
+    cursor_move=3,
+    roll_gil=4,
+    invalid=5,
+    trigger_click=6,
+    remove_equip=7,
+    power_up=8,
+    remove_unit=9,
+    best_equip=10,
+    clockwise_rot=11,
+    counter_rot=12,
+    stop_rot=13,
+    zoom_in_quick=14,
+    zoom_in=15,
+    zoom_out=16,
+    zoom_out_quick=17,
+    help_popup=18,
+    slash=19,
+    w_slash=20,
+    punch_blocked=21,
+    punch2=22,
+    punch3=23,
+    blunt_weapon_hit=24,
+    light_weapon_swing=25,
+    med_weapon_swing=26,
+    heavy_weapon_swing=27,
+    dragoon_land=28,
+    igros_open=29,
+    DEP_mag_charge=30,
+    mag_charge=31,
+    balmafula_scream=32,
+    summon=33,
+    trap=34,
+    water_land1=35,
+    water_land2=36,
+    wet_land=37,
+    jingle=38,
+    dragoon_jump=39,
+    land1=40,
+    land2=41,
+    land3=42,
+    balmafula_scream2=43,
+    throw=44,
+    turn_page=45,
+    shield_light=46,
+    shield_heavy=47,
+    shirahadori=48,
+    change_cam_angle=49,
+    sparkle1=50,
+    sparkle2=51,
+    sparkle3=52,
+    sparkle4=53,
+    sparkle5=54,
+    sparkle6=55,
+    hit_staff=56,
+    hit2=57,
+    land_wood=58,
+    land_water=59,
+    menu_cursor_move1=60,
+    menu_cursor_move2=61,
+    hit_polearm=62,
+    sfx_3f=63,
+    footsteps=64,
+    exit_map=65,
+    high_pitch=66,
+    menu_confirm=67,
+    male_dead=68,
+    female_dead=69,
+    monster_dead=70,
+    bullet_parry=71,
+    locked_door=72,
+    shield_arrow=73,
+    sfx_4a=74,
+    door_bang=75,
+    door_click=76,
+    prop_finish_1=77,
+    prop_finish_2=78,
+    prop_finish_3=79,
+    applause=80,
+    trumpet_prop=81,
+    bow_twang=82,
+    choke_2=83,
+    arrow_1=84,
+    arrow_2=85,
+    crossbow_fire=86,
+    sfx_57=87,
+    sfx_58=88,
+    arrow_3=89,
+    gun_load=90,
+    gun_shot_1=91,
+    gun_shot_2=92,
+    gun_shot_3=93,
+    explosion=94,
+    wet_slap=95,
+    sfx_60=96,
+    remove_ability=97,
+    sfx_62=98,
+    slap=99,
+    balmafula_scream3=100,
+    sword_clash=101,
+    zodiac_howl_1=102,
+    zodiac_howl_2=103,
+    zodiac_howl_3=104,
+    door_lever=105,
+    tele_out=106,
+    tele_in=107,
+    encounter_1=108,
+    encounter_2=109,
+    crossbow_1=110,
+    crossbow_2=111,
+    riovanes_footsteps=112,
+    AT_halt=113,
+    impale_hit=114,
+    text=115,
+    lever_2=116,
+    sparkle_7=117,
+    draw_map_path=118,
+    select_battle=119,
+    reinforcements_footsteps=120,
+    reed_flute_1=121,
+    reed_flute_2=122,
+    reed_flute_3=123,
+    reed_flute_fail=124,
+    whistle=125,
+    sfx_7e=126,
+    lionel_gate_open=127,
+    bad_breath=132,
+    crystal_pickup=133,
+    feather_bomb=134,
+    scratch_up=135,
+    sfx_88=136,
+    altima_1_attack=137,
+    shield_heavy_2=138,
+    sfx_8b=139,
+    lick=140,
+    straight_dash=141,
+    dash=144,
+    shield_heavy_3=145,
+    mon_attack_heavy=146,
+    equipped=147,
+    choco_beak=148,
+    ability_learn=152,
+    magic_hit=153,
+    male_death_2=154,
+    bio_hit=155,
+    dict_hit=156,
+    final_fantasy_harps=157,
+    laugh1=158,
+    laugh2=159,
+    laugh3=160,
+    zodiac_pulse=161,
+    church_bells=162,
+    male_zodiac_death=163,
+    impact1=164,
+    impact2=165,
+    impact3=166,
+    zodiac_sparkle=167
+} SFX_ID_small;
+
+typedef struct AccessorySecondary AccessorySecondary, *PAccessorySecondary;
+
+struct AccessorySecondary {
+    byte PhysicalEvade;
+    byte MagicalEvade;
+};
+
+typedef enum Eq1 {
+    Rod=1,
+    Axe=2,
+    Katana=4,
+    Knight_Sword=8,
+    Sword=16,
+    Ninja_Blade=32,
+    Knife=64,
+    NONE=128
+} Eq1;
+
+typedef enum Eq3 {
+    Armor=1,
+    Hair_Adornment=2,
+    Hat=4,
+    Helmet=8,
+    Shield=16,
+    Cloth=32,
+    Bag=64,
+    Pole=128
+} Eq3;
+
+typedef enum Eq2 {
+    Polearm=1,
+    Book=2,
+    Instrument=4,
+    Bow=8,
+    Crossbow=16,
+    Gun=32,
+    Flail=64,
+    Staff=128
+} Eq2;
+
+typedef enum SUZUKIInstr { // Bit encoded currently executing instruction halfword
+    Off=0,
+    SysCounterInitialised=1,
+    SPUTransfering=16,
+    SPUWriting=32,
+    SPUReading=64,
+    Sound_Stereo=256,
+    Wide=512,
+    Sound_Wide=768,
+    Unused=1024,
+    Sound_Unused=1280,
+    WideOrUnused=1536,
+    Sound_Type=1792,
+    MusicPlayable=4096,
+    Lock_Volume=8192,
+    SPUMallocInitialised=32768
+} SUZUKIInstr;
+
+typedef enum Eq4 {
+    Perfume=1,
+    Cloak=2,
+    Armlet=4,
+    Ring=8,
+    Armguard=16,
+    Shoes=32,
+    Robe=64,
+    Clothing=128
+} Eq4;
+
+typedef enum status_legal {
+    is_dead=0,
+    team_loss_enemy=1,
+    team_loss_ally=2,
+    freeze_ct=3,
+    can_act=4,
+    immortal_immune=5,
+    formation_immune=6,
+    0x7=7,
+    0x8=8,
+    no_mount=9,
+    0x9=10
+} status_legal;
+
+typedef struct Skillset Skillset, *PSkillset;
+
+typedef enum AbilityID {
+    None=0,
+    Cure=1,
+    Cure2=2,
+    Cure3=3,
+    Cure4=4,
+    Raise=5,
+    Raise2=6,
+    Reraise=7,
+    Regen=8,
+    Protect=9,
+    Protect2=10,
+    Shell=11,
+    Shell2=12,
+    Wall=13,
+    Esuna=14,
+    Holy=15,
+    Fire=16,
+    Fire2=17,
+    Fire3=18,
+    Fire4=19,
+    Bolt=20,
+    Bolt2=21,
+    Bolt3=22,
+    Bolt4=23,
+    Ice=24,
+    Ice2=25,
+    Ice3=26,
+    Ice4=27,
+    Poison=28,
+    Frog=29,
+    Death=30,
+    Flare=31,
+    Haste=32,
+    Haste2=33,
+    Slow=34,
+    Slow2=35,
+    Stop=36,
+    DontMove=37,
+    Float=38,
+    Reflect=39,
+    KANZENTeleportArrive=40,
+    Quick=41,
+    Demi=42,
+    Demi2=43,
+    Meteor=44,
+    2d=45,
+    Blind=46,
+    SpellAbsorb=47,
+    LifeDrain=48,
+    PrayFaith=49,
+    DoubtFaith=50,
+    Zombie=51,
+    SilenceSong=52,
+    BlindRage=53,
+    Foxbird=54,
+    ConfusionSong=55,
+    DispelMagic=56,
+    Paralyze=57,
+    Sleep=58,
+    Petrify=59,
+    Moogle=60,
+    Shiva=61,
+    Ramuh=62,
+    Ifrit=63,
+    Titan=64,
+    Golem=65,
+    Carbunkle=66,
+    Bahamut=67,
+    Odin=68,
+    Leviathan=69,
+    Salamander=70,
+    Silf=71,
+    Fairy=72,
+    Lich=73,
+    Cyclops=74,
+    Zodiac=75,
+    Asura=76,
+    Koutetsu=77,
+    BizenBoat=78,
+    Murasame=79,
+    HeavensCloud=80,
+    Kiyomori=81,
+    Muramasa=82,
+    Kikuichimoji=83,
+    Masamune=84,
+    Chirijiraden=85,
+    AngelSong=86,
+    LifeSong=87,
+    CheerSong=88,
+    BattleSong=89,
+    MagicSong=90,
+    NamelessSong=91,
+    LastSong=92,
+    WitchHunt=93,
+    Wiznaibus=94,
+    SlowDance=95,
+    PolkaPolka=96,
+    Disillusion=97,
+    NamelessDance=98,
+    LastDance=99,
+    SpinFist=100,
+    RepeatingFist=101,
+    WaveFist=102,
+    EarthSlash=103,
+    SecretFist=104,
+    StigmaMagic=105,
+    Chakra=106,
+    Revive=107,
+    GilTaking=108,
+    StealHeart=109,
+    StealHelmet=110,
+    StealArmor=111,
+    StealShield=112,
+    StealWeapon=113,
+    StealAccessory=114,
+    StealEXP=115,
+    Invitation=116,
+    Persuade=117,
+    Praise=118,
+    Threaten=119,
+    Preach=120,
+    Solution=121,
+    DeathSentence=122,
+    Negotiate=123,
+    Insult=124,
+    MimicDaravon=125,
+    Pitfall=126,
+    WaterBall=127,
+    HellIvy=128,
+    CarveModel=129,
+    LocalQuake=130,
+    Kamaitachi=131,
+    DemonFire=132,
+    Quicksand=133,
+    SandStorm=134,
+    Blizzard=135,
+    GustyWind=136,
+    LavaBall=137,
+    HeadBreak=138,
+    ArmorBreak=139,
+    ShieldBreak=140,
+    WeaponBreak=141,
+    MagicBreak=142,
+    SpeedBreak=143,
+    PowerBreak=144,
+    MindBreak=145,
+    Accumulate=146,
+    Dash=147,
+    ThrowStone=148,
+    Heal=149,
+    Yell=150,
+    CheerUp=151,
+    Wish=152,
+    Scream=153,
+    Ultima=154,
+    StasisSword=155,
+    SplitPunch=156,
+    CrushPunch=157,
+    LightningStab=158,
+    HolyExplosion=159,
+    ShellburstStab=160,
+    BlastarPunch=161,
+    HellcryPunch=162,
+    IcewolfBite=163,
+    DarkSword=164,
+    NightSword=165,
+    DarkHoly=166,
+    Deathspell2=167,
+    GalaxyStop=168,
+    HeavenThunder=169,
+    Asura(Truth)=170,
+    DiamondSword=171,
+    HydragonPit=172,
+    SpaceStorage=173,
+    SkyDemon=174,
+    HeavenBoltBack=175,
+    AsuraBack=176,
+    DiamondSwordBack=177,
+    HydragonPitBack=178,
+    SpaceStorageBack=179,
+    SkyDemonback=180,
+    Seal(UseHand)=181,
+    ShadowStitch=182,
+    StopBracelet=183,
+    ARUTETeleportArrive=184,
+    Shock=185,
+    Difference=186,
+    Seal(Fear)=187,
+    ChickenRace=188,
+    HoldTight=189,
+    Darkness=190,
+    LoseVoice=191,
+    Loss=192,
+    Spell=193,
+    Nightmare=194,
+    DeathCold=195,
+    MagicRuin=196,
+    SpeedRuin=197,
+    PowerRuin=198,
+    MindRuin=199,
+    BloodSuck=200,
+    Allure=201,
+    Bio(ca)=202,
+    Bio(cb)=203,
+    Bio(cc)=204,
+    Bio2(cd)=205,
+    Bio2(ce)=206,
+    Bio2(cf)=207,
+    Bio2(d0)=208,
+    Bio3(d1)=209,
+    Bio3(d2)=210,
+    Bio3(d3)=211,
+    MagicBarrier=212,
+    LegAim=213,
+    ArmAim=214,
+    SealEvil=215,
+    Melt=216,
+    Tornado=217,
+    Quake=218,
+    ARUTETeleportSend=219,
+    KANZENTeleportSend=220,
+    Toad2=221,
+    Gravi2=222,
+    Flare2=223,
+    Blind2=224,
+    SmallBomb(Blue)=225,
+    SmallBomb(Black)=226,
+    Confuse2=227,
+    Sleep2=228,
+    Ultima(ARUTE)=229,
+    All-Ultima=230,
+    Mute=231,
+    Despair2=232,
+    Return2=233,
+    Blind(MagicSword)=234,
+    Aspel=235,
+    Drain=236,
+    Faith=237,
+    Innocent=238,
+    Zombie(MagicSword)=239,
+    Silence=240,
+    Berserk=241,
+    Chicken=242,
+    Confuse=243,
+    Despair=244,
+    DontAct=245,
+    Sleep(MagicSword)=246,
+    Break=247,
+    IceBracelet=248,
+    FireBracelet=249,
+    ThunderBracelet=250,
+    DragonTame=251,
+    DragonCare=252,
+    DragonPowerUp=253,
+    DragonLevelUp=254,
+    HolyBracelet=255,
+    Shock!=256,
+    Braver=257,
+    Cross-slash=258,
+    BladeBeam=259,
+    Climhazzard=260,
+    Meteorain=261,
+    FinishTouch=262,
+    Omnislash=263,
+    CherryBlossom=264,
+    ChocoAttack=265,
+    ChocoBall=266,
+    ChocoMeteor=267,
+    ChocoEsuna=268,
+    ChocoCure=269,
+    Tackle=270,
+    GoblinPunch=271,
+    TurnPunch=272,
+    EyeGouge=273,
+    Mutilate=274,
+    Bite=275,
+    SmallBomb(red)=276,
+    SelfDestruct=277,
+    FlameAttack=278,
+    Spark=279,
+    Scratch=280,
+    CatKick=281,
+    Blastar=282,
+    PoisonNail=283,
+    BloodSuck(Panther)=284,
+    Tentacle(PiscoDemon)=285,
+    BlackInk=286,
+    OddSoundwave=287,
+    MindBlast=288,
+    LevelBlast=289,
+    KnifeHand=290,
+    ThunderSoul=291,
+    AquaSoul=292,
+    IceSoul=293,
+    WindSoul=294,
+    ThrowSpirit=295,
+    ZombieTouch=296,
+    SleepTouch=297,
+    DrainTouch=298,
+    GreaseTouch=299,
+    WingAttack=300,
+    LookofDevil=301,
+    LookofFright=302,
+    Circle=303,
+    DeathSentence(Flotibol)=304,
+    ScratchUp=305,
+    Beak=306,
+    ShineLover=307,
+    FeatherBomb=308,
+    Beaking=309,
+    StraightDash=310,
+    NoseBracelet=311,
+    Oink=312,
+    Pooh-=313,
+    PleaseEat=314,
+    LeafDance=315,
+    ProtectSpirit=316,
+    ClamSpirit=317,
+    SpiritofLife=318,
+    MagicSpirit=319,
+    ShakeOff=320,
+    WaveAround=321,
+    MimicTitan=322,
+    GatherPower=323,
+    BlowFire=324,
+    Tentacle(Marlboro)=325,
+    Lick=326,
+    Goo=327,
+    BadBracelet=328,
+    MoldballVirus=329,
+    StabUp=330,
+    SuddenCry=331,
+    Hurricane=332,
+    Ulmaguest=333,
+    GigaFlare=334,
+    Dash(Dragon)=335,
+    TailSwing=336,
+    IceBracelet(Dragon)=337,
+    FireBracelet(Dragon)=338,
+    ThunderBracelet(Dragon)=339,
+    TripleAttack=340,
+    TripleBracelet=341,
+    TripleThunder=342,
+    TripleFlame=343,
+    DarkWhisper=344,
+    SnakeCarrier=345,
+    PoisonFrog=346,
+    MidgarSwarm=347,
+    Lifebreak=348,
+    Nanoflare=349,
+    GrandCross=350,
+    Destroy=351,
+    Compress=352,
+    Dispose=353,
+    Crush=354,
+    Energy=355,
+    Parasite=356,
+    165=357,
+    166=358,
+    167=359,
+    168=360,
+    169=361,
+    16a=362,
+    16b=363,
+    16c=364,
+    16d=365,
+    16e=366,
+    FrogAttack=367,
+    Potion=368,
+    HiPotion=369,
+    XPotion=370,
+    Ether=371,
+    HiEther=372,
+    Elixir=373,
+    Antidote=374,
+    EyeDrop=375,
+    EchoGrass=376,
+    MaidensKiss=377,
+    Soft=378,
+    HolyWater=379,
+    Remedy=380,
+    PhoenixDown=381,
+    Shuriken=382,
+    Knife=383,
+    Sword=384,
+    Hammer=385,
+    Katana=386,
+    NinjaSword=387,
+    Axe=388,
+    Spear=389,
+    Stick=390,
+    KnightSword=391,
+    Dictionary=392,
+    Ball=393,
+    LevelJump2=394,
+    LevelJump3=395,
+    LevelJump4=396,
+    LevelJump5=397,
+    LevelJump8=398,
+    VerticalJump2=399,
+    VerticalJump3=400,
+    VerticalJump4=401,
+    VerticalJump5=402,
+    VerticalJump6=403,
+    VerticalJump7=404,
+    VerticalJump8=405,
+    Charge+1=406,
+    Charge+2=407,
+    Charge+3=408,
+    Charge+4=409,
+    Charge+5=410,
+    Charge+7=411,
+    Charge+10=412,
+    Charge+20=413,
+    CT=414,
+    Level=415,
+    Exp=416,
+    Height=417,
+    PrimeNumber=418,
+    5=419,
+    4=420,
+    3=421,
+    ASave=422,
+    MASave=423,
+    SpeedSave=424,
+    SunkenState=425,
+    Caution=426,
+    DragonSpirit=427,
+    Regenerator=428,
+    BraveUp=429,
+    FaceUp=430,
+    HPRestore=431,
+    MPRestore=432,
+    CriticalQuick=433,
+    MeatboneSlash=434,
+    CounterMagic=435,
+    CounterTackle=436,
+    CounterFlood=437,
+    AbsorbUsedMP=438,
+    GilgameHeart=439,
+    Reflect(Reaction)=440,
+    AutoPotion=441,
+    Counter=442,
+    1bb=443,
+    Distribute=444,
+    MPSwitch=445,
+    DamageSplit=446,
+    WeaponGuard=447,
+    FingerGuard=448,
+    Abandon=449,
+    Catch=450,
+    BladeGrasp=451,
+    ArrowGuard=452,
+    Hamedo=453,
+    EquipArmor=454,
+    EquipShield=455,
+    EquipSword=456,
+    EquipKnife=457,
+    EquipCrossbow=458,
+    EquipSpear=459,
+    EquipAxe=460,
+    EquipGun=461,
+    HalfofMP=462,
+    GainedJpUP=463,
+    GainedExpUP=464,
+    AttackUP=465,
+    DefenseUP=466,
+    MagicAttackUP=467,
+    MagicDefendUP=468,
+    Concentrate=469,
+    Train=470,
+    SecretHunt=471,
+    MartialArts=472,
+    MonsterTalk=473,
+    ThrowItem=474,
+    Maintenance=475,
+    TwoHands=476,
+    TwoSwords=477,
+    MonsterSkill=478,
+    Defend=479,
+    EquipChange=480,
+    1e1=481,
+    ShortCharge=482,
+    NonCharge=483,
+    1e4=484,
+    1e5=485,
+    Move+1=486,
+    Move+2=487,
+    Move+3=488,
+    Jump+1=489,
+    Jump+2=490,
+    Jump+3=491,
+    IgnoreHeight=492,
+    MoveHPUp=493,
+    MoveMPUp=494,
+    MoveGetExp=495,
+    MoveGetJp=496,
+    CannotEnterWater=497,
+    Teleport=498,
+    Teleport2=499,
+    AnyWeather=500,
+    AnyGround=501,
+    WalkonWater=502,
+    MoveinWater=503,
+    MoveonLava=504,
+    MoveUnderwater=505,
+    Float(Movement)=506,
+    Fly=507,
+    SilentWalk=508,
+    MoveFindItem=509,
+    1fe=510,
+    1ff=511,
+    FallDamage=512
+} AbilityID;
+
+struct Skillset {
+    short ActionFlags;
+    byte RSMFlags;
+    enum AbilityID Ability0:8;
+    enum AbilityID Ability1:8;
+    enum AbilityID Ability2:8;
+    enum AbilityID Ability3:8;
+    enum AbilityID Ability4:8;
+    enum AbilityID Ability5:8;
+    enum AbilityID Ability6:8;
+    enum AbilityID Ability7:8;
+    enum AbilityID Ability8:8;
+    enum AbilityID Ability9:8;
+    enum AbilityID AbilityA:8;
+    enum AbilityID AbilityB:8;
+    enum AbilityID AbilityC:8;
+    enum AbilityID AbilityD:8;
+    enum AbilityID AbilityE:8;
+    enum AbilityID AbilityF:8;
+    enum AbilityID RSM0:8;
+    enum AbilityID RSM1:8;
+    enum AbilityID RSM2:8;
+    enum AbilityID RSM3:8;
+    enum AbilityID RSM4:8;
+    enum AbilityID RSM5:8;
+};
+
+typedef struct PartyUnit PartyUnit, *PPartyUnit;
+
+typedef enum JobID {
+    None=0,
+    SquireR1=1,
+    SquireR2=2,
+    SquireR3=3,
+    SquireD=4,
+    HolyKnightD=5,
+    ArcKnightD=6,
+    SquireA=7,
+    ArcKnight=8,
+    LuneKnightD=9,
+    DukeL=10,
+    DukeG=11,
+    Princess=12,
+    HolySwordsman=13,
+    HighPriest=14,
+    Dragoner=15,
+    HolyPriest=16,
+    DarkKnightE=17,
+    HellKnightD=18,
+    Bishop=19,
+    ClericB=20,
+    Astrologist=21,
+    EngineerMJ=22,
+    DarkKnightG=23,
+    Cardinal=24,
+    HeavenKnightG=25,
+    HellKnightEJ=26,
+    ArcKnightE=27,
+    DelitasSis=28,
+    ArcDuke=29,
+    HolyKnightAJ=30,
+    TempleKnight=31,
+    WhiteKnight1=32,
+    ArcWitch=33,
+    EngineerMG=34,
+    BiCount=35,
+    DivineKnightV=36,
+    DivineKnightR=37,
+    KnightBlade=38,
+    Sorceror=39,
+    WhiteKnight2=40,
+    HeavenKnightJ=41,
+    DivineKnightMJ=42,
+    EngineerB=43,
+    ClericD=44,
+    AssassinC=45,
+    AssassinL=46,
+    DivineKnightME=47,
+    ClericE=48,
+    PhonySaint=49,
+    Soldier=50,
+    ArcKnightZ=51,
+    HolyKnightAG=52,
+    ChemistF1=53,
+    PriestF1=54,
+    WizardM1=55,
+    OracleM1=56,
+    SquireM1=57,
+    AssassinCU=58,
+    AssassinLU=59,
+    Warlock=60,
+    KnightMZ=61,
+    AngelofDeath=62,
+    ArcherMZ=63,
+    Regulator=64,
+    HolyAngel=65,
+    WizardMZ=66,
+    ImpureKing=67,
+    TimeMageFZ=68,
+    GhostofFury=69,
+    OracleMZ=70,
+    SummonerMZ=71,
+    HolyDragon=72,
+    ArchAngel=73,
+    Squire=74,
+    Chemist=75,
+    Knight=76,
+    Archer=77,
+    Monk=78,
+    Priest=79,
+    Wizard=80,
+    TimeMage=81,
+    Summoner=82,
+    Thief=83,
+    Mediator=84,
+    Oracle=85,
+    Geomancer=86,
+    Lancer=87,
+    Samurai=88,
+    Ninja=89,
+    Calculator=90,
+    Bard=91,
+    Dancer=92,
+    Mime=93,
+    Chocobo=94,
+    BlackChocobo=95,
+    RedChocobo=96,
+    Goblin=97,
+    BlackGoblin=98,
+    Gobbledeguck=99,
+    Bomb=100,
+    Grenade=101,
+    Explosive=102,
+    RedPanther=103,
+    Cuar=104,
+    Vampire=105,
+    PiscoDemon=106,
+    Squidlarken=107,
+    Mindflare=108,
+    Skeleton=109,
+    BoneSnatch=110,
+    LivingBone=111,
+    Ghoul=112,
+    Gust=113,
+    Revnant=114,
+    Flotiball=115,
+    Ahriman=116,
+    Plague=117,
+    Juravis=118,
+    SteelHawk=119,
+    Cocatoris=120,
+    Uribo=121,
+    Porky=122,
+    Wildbow=123,
+    Woodman=124,
+    Trent=125,
+    Taiju=126,
+    BullDemon=127,
+    Minitaurus=128,
+    Sacred=129,
+    Morbol=130,
+    Ochu=131,
+    GreatMorbol=132,
+    Behemoth=133,
+    KingBehemoth=134,
+    DarkBehemoth=135,
+    Dragon=136,
+    BlueDragon=137,
+    RedDragon=138,
+    Hyudra=139,
+    Hydra=140,
+    Tiamat=141,
+    8e=142,
+    8f=143,
+    Byblos=144,
+    SteelGiant=145,
+    92=146,
+    93=147,
+    94=148,
+    95=149,
+    Apanda=150,
+    Serpentarius=151,
+    HolyDragon2=152,
+    ArchaicDemon=153,
+    UltimaDemon=154,
+    Crystal=155,
+    Chicken=156,
+    Frog=157,
+    Treasure=158
+} JobID;
+
+typedef enum SkillsetID {
+    NONE=0,
+    Attack=1,
+    Defend=2,
+    EqChng=3,
+    DEPRECATED=4,
+    BasicSkill=5,
+    Item=6,
+    BattleSkill=7,
+    Charge=8,
+    PunchArt=9,
+    WhiteMagic=10,
+    BlackMagic=11,
+    TimeMagic=12,
+    SummonMagic=13,
+    Steal=14,
+    TalkSkill=15,
+    YinYangMagic=16,
+    Geomancy=17,
+    Jump=18,
+    DrawOut=19,
+    Throw=20,
+    Math=21,
+    Sing=22,
+    Dance=23,
+    Mimic=24,
+    GutsR1=25,
+    GutsR2=26,
+    GutsR4=27,
+    GutsD=28,
+    HolySword1=29,
+    MightySword=30,
+    BasicSkillA=31,
+    DarkSword1=32,
+    HolySword2=33,
+    HolySword3=34,
+    Magic=35,
+    HolyMagic1=36,
+    Snipe1=37,
+    Snipe2=38,
+    DarkSword2=39,
+    HolySword4=40,
+    Limit=41,
+    WhiteAid=42,
+    Dragoner=43,
+    Bracelet=44,
+    Truth1=45,
+    Untruth1=46,
+    StarryHeaven=47,
+    HolySword5=48,
+    HolyMagic2=49,
+    Truth2=50,
+    BattleSkill2=51,
+    Jump2=52,
+    PunchSkill2=53,
+    UseHandC=54,
+    UseHandL=55,
+    Throw2=56,
+    Throw3=57,
+    HolySword6=58,
+    SwordSpirit1=59,
+    MightySword2=60,
+    AllMagic1=61,
+    SwordSpirit2=62,
+    BloodSuck=63,
+    MightySword3=64,
+    AllMagic2=65,
+    MightySword4=66,
+    MightySword5=67,
+    Snipe3=68,
+    MagicSword1=69,
+    SwordSkill1=70,
+    AllMagic3=71,
+    AllMagic4=72,
+    Phantom=73,
+    AllSwordskill=74,
+    DestroySword=75,
+    HolyMagic3=76,
+    4d=77,
+    4e=78,
+    4f=79,
+    50=80,
+    51=81,
+    52=82,
+    53=83,
+    54=84,
+    55=85,
+    56=86,
+    57=87,
+    58=88,
+    59=89,
+    5a=90,
+    5b=91,
+    5c=92,
+    5d=93,
+    5e=94,
+    5f=95,
+    60=96,
+    61=97,
+    62=98,
+    63=99,
+    64=100,
+    65=101,
+    66=102,
+    Fear1=103,
+    WarlockSummon=104,
+    nice=105,
+    6a=106,
+    Fear2=107,
+    JaMagic=108,
+    6d=109,
+    6e=110,
+    Fear3=111,
+    DimensionMagic=112,
+    71=113,
+    72=114,
+    Fear4=115,
+    Impure=116,
+    75=117,
+    76=118,
+    Fear5=119,
+    AllMagic5=120,
+    79=121,
+    7a=122,
+    UltimaMagic=123,
+    Chaos=124,
+    CompletMagic=125,
+    Saturation=126,
+    7f=127,
+    80=128,
+    81=129,
+    82=130,
+    83=131,
+    84=132,
+    85=133,
+    86=134,
+    87=135,
+    88=136,
+    89=137,
+    8a=138,
+    8b=139,
+    8c=140,
+    8d=141,
+    8e=142,
+    8f=143,
+    90=144,
+    91=145,
+    92=146,
+    93=147,
+    94=148,
+    95=149,
+    96=150,
+    97=151,
+    98=152,
+    99=153,
+    9a=154,
+    SwordSkill2=155,
+    Charge2=156,
+    BlackMagic2=157,
+    TimeMagic2=158,
+    YinYangMagic2=159,
+    SummonMagic2=160,
+    Item2=161,
+    WhiteMagic2=162,
+    BlackMagic3=163,
+    YinYangMagic3=164,
+    a5=165,
+    a6=166,
+    BloodSuckAllowed=167,
+    FrogAllowed=168,
+    BerserkAllowed=169,
+    Byblos=170,
+    Work=171,
+    Bio=172,
+    DarkCloud=173,
+    DarkMagic=174,
+    NightMagic=175,
+    Choco0=176,
+    Choco1=177,
+    Choco2=178,
+    Gob0=179,
+    Gob1=180,
+    Gob2=181,
+    Bomb0=182,
+    Bomb1=183,
+    Bomb2=184,
+    Pnthr0=185,
+    Pnthr1=186,
+    Pnthr2=187,
+    Pisc0=188,
+    Pisc1=189,
+    Pisc2=190,
+    Skel0=191,
+    Skel1=192,
+    Skel2=193,
+    Ghost0=194,
+    Ghost1=195,
+    Ghost2=196,
+    Eye0=197,
+    Eye1=198,
+    Eye2=199,
+    Bird0=200,
+    Bird1=201,
+    Bird2=202,
+    Pig0=203,
+    Pig1=204,
+    Pig2=205,
+    Tree0=206,
+    Tree1=207,
+    Tree2=208,
+    Bull0=209,
+    Bull1=210,
+    Bull2=211,
+    Morb0=212,
+    Morb1=213,
+    Morb2=214,
+    Bhmth0=215,
+    Bhmth1=216,
+    Bhmth2=217,
+    Drg0=218,
+    Drg1=219,
+    Drg2=220,
+    Hydr0=221,
+    Hydr1=222,
+    Hydr2=223
+} SkillsetID;
+
+struct PartyUnit {
+    byte SpriteSet;
+    byte PartyID;
+    enum JobID JobID;
+    byte Palette;
+    int SaveFormation:1;
+    int BossStats:1;
+    int LoadFormation:1;
+    int JoinAfterEvent:1;
+    int Monster:1;
+    int Female:1;
+    int Male:1;
+    int Birthday:9;
+    int ZodiacSign:4;
+    enum SkillsetID SecondarySkillset;
+    enum AbilityID Reaction;
+    enum AbilityID Support;
+    enum AbilityID Movement;
+    enum ItemID Head;
+    enum ItemID Body;
+    enum ItemID Accessory;
+    enum ItemID RHWeapon;
+    enum ItemID RHShield;
+    enum ItemID LHWeapon;
+    enum ItemID LHShield;
+    byte Experience;
+    byte Level;
+    byte Brave;
+    byte Faith;
+    int RawHP:24;
+    int RawMP:24;
+    int RawSP:24;
+    int RawPA:24;
+    int RawMA:24;
+    int UnlockedJobs:24;
+    short BaseAction;
+    byte BaseRSM;
+    short ChemistAction;
+    byte ChemistRSM;
+    short KnightAction;
+    byte KnightRSM;
+    short ArcherAction;
+    byte ArcherRSM;
+    short MonkAction;
+    byte MonkRSM;
+    short PriestAction;
+    byte PriestRSM;
+    short WizardAction;
+    byte WizardRSM;
+    short TimeMageAction;
+    byte TimeMageRSM;
+    short SummonerAction;
+    byte SummonerRSM;
+    short ThiefAction;
+    byte ThiefRSM;
+    short MediatorAction;
+    byte MediatorRSM;
+    short OracleAction;
+    byte OracleRSM;
+    short GeomancerAction;
+    byte GeomancerRSM;
+    short LancerAction;
+    byte LancerRSM;
+    short SamuraiAction;
+    byte SamuraiRSM;
+    short NinjaAction;
+    byte NinjaRSM;
+    short CalculatorAction;
+    byte CalculatorRSM;
+    short BardAction;
+    byte BardRSM;
+    short DancerAction;
+    byte DancerRSM;
+    int ChemistLevel:4;
+    int SquireLevel:4;
+    int ArcherLevel:4;
+    int KnightLevel:4;
+    int PriestLevel:4;
+    int MonkLevel:4;
+    int TimeMageLevel:4;
+    int WizardLevel:4;
+    int ThiefLevel:4;
+    int SummonerLevel:4;
+    int OracleLevel:4;
+    int MediatorLevel:4;
+    int LancerLevel:4;
+    int GeomancerLevel:4;
+    int NinjaLevel:4;
+    int SamuraiLevel:4;
+    int BardLevel:4;
+    int CalculatorLevel:4;
+    int MimeLevel:4;
+    int DancerLevel:4;
+    short JobJP[20];
+    short JobTotalJP[20];
+    char UnitName[16];
+    short UnitNameID;
+    byte Proposition;
+    undefined field97_0xd1;
+    byte EggStage;
+    undefined field99_0xd3;
+    undefined field100_0xd4;
+    undefined field101_0xd5;
+    undefined field102_0xd6;
+    undefined field103_0xd7;
+    undefined field104_0xd8;
+    undefined field105_0xd9;
+    undefined field106_0xda;
+    undefined field107_0xdb;
+    undefined field108_0xdc;
+    undefined field109_0xdd;
+    undefined field110_0xde;
+    undefined field111_0xdf;
+    undefined field112_0xe0;
+    undefined field113_0xe1;
+    undefined field114_0xe2;
+    undefined field115_0xe3;
+    undefined field116_0xe4;
+    undefined field117_0xe5;
+    undefined field118_0xe6;
+    undefined field119_0xe7;
+    undefined field120_0xe8;
+    undefined field121_0xe9;
+    undefined field122_0xea;
+    undefined field123_0xeb;
+    undefined field124_0xec;
+    undefined field125_0xed;
+    undefined field126_0xee;
+    undefined field127_0xef;
+    undefined field128_0xf0;
+    undefined field129_0xf1;
+    undefined field130_0xf2;
+    undefined field131_0xf3;
+    undefined field132_0xf4;
+    undefined field133_0xf5;
+    undefined field134_0xf6;
+    undefined field135_0xf7;
+    undefined field136_0xf8;
+    undefined field137_0xf9;
+    undefined field138_0xfa;
+    undefined field139_0xfb;
+    undefined field140_0xfc;
+    undefined field141_0xfd;
+    undefined field142_0xfe;
+    undefined field143_0xff;
+};
+
+typedef struct ArmorSecondary ArmorSecondary, *PArmorSecondary;
+
+struct ArmorSecondary {
+    byte HP;
+    byte MP;
+};
+
+typedef struct SecondaryAbilityItem SecondaryAbilityItem, *PSecondaryAbilityItem;
+
+struct SecondaryAbilityItem {
+    byte UsedItemID;
+};
+
+typedef struct Fileaddress Fileaddress, *PFileaddress;
+
+struct Fileaddress {
+    int LBA;
+    int Filesize;
+};
+
+typedef struct vfx_hdr vfx_hdr, *Pvfx_hdr;
+
+struct vfx_hdr {
+    pointer vfx_start_data;
+    pointer vfx_SEQ;
+    pointer vfx_Script;
+    pointer vfx_emitter_control;
+    pointer vfx_coordinates;
+    pointer field5_0x14;
+    struct vfx_timers_hdr * vfx_timers_hdr;
+    struct vfx_timers * vfx_timers;
+    struct SED_hdr * vfx_SED;
+    pointer vfx_TIM;
+};
+
+typedef struct JobData JobData, *PJobData;
+
+struct JobData {
+    enum SkillsetID Skillset;
+    enum AbilityID InnateAbility1;
+    enum AbilityID InnateAbility2;
+    enum AbilityID InnateAbility3;
+    enum AbilityID InnateAbility4;
+    int Rod:1;
+    int Axe:1;
+    int Katana:1;
+    int KnightSword:1;
+    int Sword:1;
+    int NinjaBlade:1;
+    int Knife:1;
+    int Unarmed:1;
+    int Polearm:1;
+    int Book:1;
+    int Instrument:1;
+    int Bow:1;
+    int Crossbow:1;
+    int Gun:1;
+    int Flail:1;
+    int Staff:1;
+    int Armor:1;
+    int HairAdrn:1;
+    int Hat:1;
+    int Helmet:1;
+    int Shield:1;
+    int Cloth:1;
+    int Bag:1;
+    int Pole:1;
+    int Perfume:1;
+    int Cloak:1;
+    int Armlet:1;
+    int Ring:1;
+    int Armguard:1;
+    int Shoes:1;
+    int Robe:1;
+    int Clothing:1;
+    byte HPGrowth;
+    byte HPMult;
+    byte MPGrowth;
+    byte MPMult;
+    byte SpeedGrowth;
+    byte SpeedMult;
+    byte PAGrowth;
+    byte PAMult;
+    byte MAGrowth;
+    byte MAMult;
+    byte Move;
+    byte Jump;
+    byte CEV;
+    struct StatusList AlwaysStatus;
+    struct StatusList ImmuneStatus;
+    struct StatusList StartStatus;
+    byte AbsorbElem;
+    byte NullElem;
+    byte HalfElem;
+    byte DoubleElem;
+    byte MonPortrait;
+    byte MonPal;
+    byte MonGraphic;
+};
+
+typedef struct SecondaryAbilityData SecondaryAbilityData, *PSecondaryAbilityData;
+
+struct SecondaryAbilityData {
+    byte Range;
+    byte AOE;
+    byte Vert;
+    int NoTargetSelf:1;
+    int AutoTarget:1;
+    int WeaponStrike:1;
+    int VertTolerance:1;
+    int VertFixed:1;
+    int WeaponRange:1;
+    int OnlyEnemyTilesDEPRECATED:1;
+    int OnlyAllyTilesDEPRECATED:1;
+    int NoHitSelf:1;
+    int 3Dir:1;
+    int Linear:1;
+    int RandomFire:1;
+    int NoTarFollow:1;
+    int TopDownTarget:1;
+    int NoAllyHit:1;
+    int NoEnemyHit:1;
+    int AnimateMiss:1;
+    int Quote:1;
+    int PersevereCast:1;
+    int HitGolem:1;
+    int NoMimic:1;
+    int Silenceable:1;
+    int MathSkill:1;
+    int Reflectable:1;
+    int NoTargetting:1;
+    int Evadeable:1;
+    int ReqMatBlade:1;
+    int ReqSword:1;
+    int BladeGrasp:1;
+    int Direct:1;
+    int CounterMagic:1;
+    int CounterFlood:1;
+    byte Element;
+    enum FormulaID Formula;
+    byte X;
+    byte Y;
+    byte InflictStatus;
+    byte CT;
+    byte MPCost;
+};
+
+typedef struct SecondaryAbilityRSM SecondaryAbilityRSM, *PSecondaryAbilityRSM;
+
+struct SecondaryAbilityRSM {
+    byte ID;
+};
+
+typedef struct SecondaryAbilityCharge SecondaryAbilityCharge, *PSecondaryAbilityCharge;
+
+struct SecondaryAbilityCharge {
+    byte CT;
+    byte Power;
+};
+
+typedef struct SecondaryAbilityMath SecondaryAbilityMath, *PSecondaryAbilityMath;
+
+struct SecondaryAbilityMath {
+    int Mult:4;
+    int Stat:4;
+};
+
+typedef struct ItemAttributes ItemAttributes, *PItemAttributes;
+
+struct ItemAttributes {
+    byte PA;
+    byte MA;
+    byte Speed;
+    byte Move;
+    byte Jump;
+    struct StatusList AlwaysStatuses;
+    struct StatusList ImmuneStatuses;
+    struct StatusList StartStatuses;
+    byte AbsorbElem;
+    byte NullElem;
+    byte HalfElem;
+    byte DoubleElem;
+    byte BoostElem;
+};
+
+typedef struct MonSkillset MonSkillset, *PMonSkillset;
+
+struct MonSkillset {
+    byte ActionFlags;
+    enum AbilityID Ability0:8;
+    enum AbilityID Ability1:8;
+    enum AbilityID Ability2:8;
+    enum AbilityID AbilityMS:8;
+};
+
+typedef enum chooseVoice {
+    CalcLFOVoices=1,
+    CalcNoiseVoices=2,
+    CalcReverbVoices=4
+} chooseVoice;
+
+typedef enum EventVar {
+    Temp0=0,
+    Temp1=1,
+    DialogueSelect=24,
+    CameraX=26,
+    CameraZ=27,
+    CameraY=28,
+    CameraTheta=29,
+    MapRot=30,
+    CameraRot=31,
+    CameraZoom=32,
+    Weather=35,
+    DayNight=36,
+    CurrentEvent=39,
+    TutorialVar1=40,
+    TutorialVar2=41,
+    TutorialVar3=42,
+    WarFunds=44,
+    Month=46,
+    Day=47,
+    MapArrangement=48,
+    CurrentWorldLocation=49,
+    CurrentENTD=50,
+    CurrentMap=51,
+    NumSquads=52,
+    Squad1ID=53,
+    Squad2ID=54,
+    NumUnitsDeployed=82,
+    MuteAudio=83,
+    PostCombatDateAdvance=84,
+    SaveToFormationVar=85,
+    TotalCharPrintNum=87,
+    DeepDungeonListID=92,
+    NumInjured=98,
+    NumDeaths=99,
+    NewScenario=100,
+    DeepDungeonListLength=101,
+    DeepDungeonExitID=104,
+    ChapterTownBackground=105,
+    WorldmapMessage=109,
+    StoryProg=110,
+    ShopAvailability=111,
+    CurrentCrystalCount=112,
+    EventBitflags0=128,
+    EventBitflags1=129,
+    EventBitflags2=130,
+    EventBitflags3=131,
+    EventBitflags4=132,
+    FurShopOpen=144,
+    PropositionsOpen=145,
+    BraveStoryFactsOpen=146,
+    WorkerSidequestOpen=148,
+    DeepDungeonFoundExit=149,
+    SaveAlgusChoice=150,
+    SaveBocoChoice=151,
+    SaveMustadioChoice=152,
+    WorkerStep0=153,
+    WorkerStep1=154,
+    CloudStep0=155,
+    CloudStep1=156,
+    ReadScriptures=157,
+    OrbonneMonasteryOpen=159,
+    PostGame=160,
+    AerisChoice=161,
+    WentFlowerShopping=162,
+    BoughtFlowers=163,
+    DeepDungeonStep0=164,
+    DeepDungeonOpen=165,
+    ReadGhostRumor=166,
+    BeowulfOfferChoice=167,
+    AcceptedBeowulf=168,
+    RescuedReisDragon=169,
+    WorkerStep2=171,
+    RescuedReisHuman=172,
+    FactsPage0=420,
+    FactsPage1=421,
+    FactsPage2=422,
+    FactsPage3=423,
+    FactsPage4=424,
+    FactsPage5=425,
+    FactsPage6=426,
+    FactsPage7=427,
+    FactsPage8=428,
+    FactsPage9=429,
+    FactsPageA=430,
+    FactsPageB=431,
+    FactsPageC=432,
+    FactsPageD=433,
+    FactsPageE=434,
+    FactsPageF=435,
+    FactsPage10=436,
+    FactsPage11=437,
+    FactsPage12=438,
+    FactsPage13=439,
+    FactsPage14=440,
+    FactsPage15=441,
+    FactsPage16=442,
+    FactsPage17=443,
+    RecordCadets=444,
+    RecordsBalbanesDeath=445,
+    RecordsAlgusMeet=446,
+    RecordsReunionDycedarg=447,
+    RecordsAtIgros=448,
+    RecordsAfterGustav=449,
+    RecordsRescueElmdor=450,
+    RecordsMasterGallione=451,
+    RecordsDeathCorpsMiluda=452,
+    RecordsDeathCorpsAttack=453,
+    RecordsDelitaAnger=454,
+    RecordsReedPipe=455,
+    RecordsRockRipple=456,
+    RecordsEndChapter1=457,
+    RecordsOveliaPrayer=458,
+    RecordsOveliaChase=459,
+    RecordsRuinionDelita=460,
+    RecordsMachinist=461,
+    RecordsOveliaWorry=462,
+    RecordsDycedargPlan=463,
+    RecordsDraclauHolyStone=464,
+    RecordsSeekStone=465,
+    RecordsRescueBesrodio=466,
+    RecordsDelitaAdvice=467,
+    RecordsCardinalAnger=468,
+    RecordsUseGetUsed=469,
+    RecordsTheLionWar=470,
+    RecordsCidolfas=471,
+    RecordsOlanMeet=472,
+    RecordsReunionZalbag=473,
+    RecordsHeretic=474,
+    RecordsSimonConfession=475,
+    RecordsVelius=476,
+    RecordsOveliaDelita=477,
+    RecordsSonOfCid=478,
+    RecordsDivineRafa=479,
+    RecordsBarintenAmbition=480,
+    RecordsEscapeAlma=481,
+    RecordsScarsTragedy=482,
+    RecordsStonesOtherPower=483,
+    RecordsLyingHeart=484,
+    RecordsSquirmDark=485,
+    RecordsHeWithHolyStone=486,
+    RecordsDelitaThoughts=487,
+    RecordsUnstoppableCog=488,
+    RecordsCidSeized=489,
+    RecordsAssassinLarg=490,
+    RecordsRescueCid=491,
+    RecordsGoltanaDeath=492,
+    RecordsDycedargAmbition=493,
+    RecordsOddMen=494,
+    RecordsMysterLucavi=495,
+    RecordsDelitaBetray=496,
+    RecordsMosfungus=497,
+    RecordsFuneralDeath=498,
+    RecordsRequiem=499,
+    RecordsSteelBall=500,
+    RecordsSteelGiant=501,
+    RecordsCelestBall=502,
+    RecordsMeetCloud=503,
+    RecordsReisCurse=504,
+    RecordsOtherWorld=505,
+    RecordsReunionFinal=506,
+    RecordsThingsObtained=507,
+    BraveStoryRecord=508,
+    BattleToStart=509,
+    DebugBattleNext=510,
+    RamzaMandatory=511,
+    LesaliaImperialCastle=512,
+    RiovanesCastle=513,
+    IgrosCastle=514,
+    LionelCastle=515,
+    LimberryCastle=516,
+    ZeltenniaCastle=517,
+    GarilandMagicCity=518,
+    YardrowFortCity=519,
+    GolandCoalCity=520,
+    DorterTradeCity=521,
+    ZalandFortCity=522,
+    GougMachineCity=523,
+    WarjilisTradeCity=524,
+    BerveniaFreeCity=525,
+    ZarghidasTradeCity=526,
+    FortZeakden=527,
+    MorundHolyPlace=528,
+    ThievesFort=529,
+    OrbonneMonastery=530,
+    GolgorandExecutionSite=531,
+    MorundDeathCity=532,
+    BethlaGarrison=533,
+    DeepDungeon=534,
+    NelveskaTemple=535,
+    MandaliaPlains=536,
+    FovohamPlains=537,
+    SweegyWoods=538,
+    BerveniaVolcano=539,
+    ZeklausDesert=540,
+    LenaliaPlateau=541,
+    ZigolisSwamp=542,
+    YuguoWoods=543,
+    AraguayWoods=544,
+    GrogHill=545,
+    BedDesert=546,
+    ZirekileFalls=547,
+    DolbodarSwamp=548,
+    BariausHill=549,
+    DoguolaPass=550,
+    BariausValley=551,
+    FinathRiver=552,
+    PoeskasLake=553,
+    GerminasPeak=554,
+    NOLOCALE=555,
+    IgrosCZeakdenF=556,
+    IgrosCMandaliaP=557,
+    ThievesFMandaliaP=558,
+    GarilandMMandaliaP=559,
+    GarilandMLenaliaP=560,
+    LenaliaPFovohamP=561,
+    FovohamPZeakdenF=562,
+    RiovanesCFovohamP=563,
+    RiovanesCBerveniaV=564,
+    ZeklausDBerveniaV=565,
+    DorterTZeklausD=566,
+    DorterTSweegyW=567,
+    GarilandMSweegyW=568,
+    RiovanesCYuguoW=569,
+    YardrowFYuguoW=570,
+    YardrowFGrogH=571,
+    LesaliaCGrogH=572,
+    LesaliaCGolandC=573,
+    GolandCZeklausD=574,
+    DorterTOrbonneM=575,
+    DorterTAraguayW=576,
+    AraguayWZirekileF=577,
+    BethlaGZirekileF=578,
+    BethlaGBedD=579,
+    BerveniaFBedD=580,
+    BerveniaFDoguolaP=581,
+    DoguolaPGrogH=582,
+    BerveniaFFinathR=583,
+    ZeltenniaCFinathR=584,
+    ZelteniaCNelveskaT=585,
+    ZelteniaCZargidhasT=586,
+    ZarghidasTGerminasP=587,
+    GerminasPPoeskasL=588,
+    LimberryCPoeskasL=589,
+    LimberryCDolbodarS=590,
+    BethlaGDolbodarS=591,
+    ZalandFZirekileF=592,
+    ZalandFBariausH=593,
+    LionelCBariausH=594,
+    LionelCBariausV=595,
+    WarjilisTBariausV=596,
+    WajilisTDeepD=597,
+    GolgorondEBariausV=598,
+    LionelCZigolisS=599,
+    GougMZigolisS=600,
+    GougMMorundH=601,
+    GarilandMMorundH=602,
+    WarjilisTGougM=603,
+    EventFromBraveStory=604,
+    LesaliaCColor=615,
+    RiovanesCColor=616,
+    IgrosCColor=617,
+    LionelCColor=618,
+    LimberryCColor=619,
+    ZeltenniaCColor=620,
+    GarilandMColor=621,
+    YardrowFColor=622,
+    GolandCColor=623,
+    DorterTColor=624,
+    ZalandFColor=625,
+    GougMColor=626,
+    WarjilisTColor=627,
+    BerveniaFColor=628,
+    ZighardasTColor=629,
+    ZeakdenFColor=630,
+    MorundHColor=631,
+    ThievesFColor=632,
+    OrbonneMColor=633,
+    GolgorandEColor=634,
+    MorundDColor=635,
+    BethlaGColor=636,
+    DeepDColor=637,
+    NelveskaTColor=638,
+    MandaliaPColor=639,
+    FovohamPColor=640,
+    SweegyWColor=641,
+    BerveniaVColor=642,
+    ZeklausDColor=643,
+    LenaliaPColor=644,
+    ZigolasSColor=645,
+    YuguoWColor=646,
+    AraguayWColor=647,
+    GrogHColor=648,
+    BedDColor=649,
+    ZirekileFColor=650,
+    DolbodarSColor=651,
+    BariausHColor=652,
+    DoguolaPColor=653,
+    BariausVColor=654,
+    FinathRColor=655,
+    PoeskasLColor=656,
+    GerminasPColor=657,
+    NOLOCALEColor=658,
+    BraveStoryFactsEvent=720,
+    RumorDeathCorps=721,
+    RumorKingOmdoria=722,
+    RumorFiftyWar=723,
+    RumorOmdoriaCondition=724,
+    RumorDeathCorpsGone=725,
+    RumorAttemptedDycedarg=726,
+    RumorKingsDeath=727,
+    RumorLargGoltanaFeud=728,
+    RumorPeasantRiotZeltennia=729,
+    RumorPrincessKidnap=730,
+    RumorZodiacBraves=731,
+    RumorZodiacStone=732,
+    RumorBartCompany=733,
+    RumorFutureofWar=734,
+    RumorOveliaRescue=735,
+    RumorDraclauDeath=736,
+    RumorNatDisasterDamage=737,
+    RumorElmdoreDeath=738,
+    RumorFutureofWar2=739,
+    RumorRiovanesMonster=740,
+    RumorGhostColliery=741,
+    RumorNelveska=742,
+    NoTreasure=800,
+    FourGods=801,
+    StatueLylis=802,
+    BeetleCharm=803,
+    TobaccoPipe=804,
+    ZeniSword=805,
+    BlackCat=806,
+    MaliceMask=807,
+    ParadeHelmet=808,
+    KidBread=809,
+    AdultBread=810,
+    Calcobrina=811,
+    Yurgeivogue=812,
+    RedMateria=813,
+    BlueMateria=814,
+    BlackMateria=815,
+    WhiteMateria=816,
+    RatTail=817,
+    MFictionNovel=818,
+    DiaryNanai=819,
+    Wyuvle=820,
+    EnaviaBook=821,
+    MagicalGun=822,
+    MMachineGun=823,
+    MagiSword=824,
+    MinuOrb=825,
+    TarotBen=826,
+    Excalipar=827,
+    ParasiteTree=828,
+    LongibunneSpear=829,
+    ChocoboCannon=830,
+    StElmoFire=831,
+    GermonikScriptures=832,
+    DUMMYTreasure1=833,
+    DUMMYTreasure2=834,
+    Aries=835,
+    Taurus=836,
+    Gemini=837,
+    Cancer=838,
+    Leo=839,
+    Virgo=840,
+    Libra=841,
+    Scorpio=842,
+    Sagittarius=843,
+    Capricorn=844,
+    Aquarius=845,
+    Pisces=846,
+    Serpentarius=847,
+    ChaosShrine=848,
+    ForbiddenLandEureka=849,
+    Pandemonium=850,
+    MirageTower=851,
+    FloatingCastle=852,
+    MatoyaCave=853,
+    CrystalTower=854,
+    MagicContinent=855,
+    TrialCastle=856,
+    BabelTower=857,
+    RonkanRuin=858,
+    Falgabird=859,
+    MagicTrain=860,
+    TouzasVillage=861,
+    ChocoboForest=862,
+    SemiteFalls=863,
+    CompanyDestiny=864,
+    SunkenSalvage=865,
+    SailorTour=866,
+    LarnerChannel=867,
+    AttractiveWorkplace=868,
+    TradeshipSalvage=869,
+    EnvoyFalcon=870,
+    MesaHeir=871,
+    TradeshipSalvage2=872,
+    LionelEmissary=873,
+    ZalandEmbassy=874,
+    StolenAncientWritings=875,
+    GoodWorkplace=876,
+    GrediaIslandSea=877,
+    StrandedTradeship=878,
+    DouingTradeship=879,
+    MineExcavation=880,
+    MinerTour=881,
+    EldaTopaWill=882,
+    MinerTour2=883,
+    MinerDream=884,
+    Vacancy=885,
+    MinersWanted=886,
+    GulgVolcanoGirl=887,
+    MazeHiddenTrap=888,
+    HimkaCliffs=889,
+    LordOre=890,
+    OneActivity=891,
+    MinersWanted2=892,
+    RoladeOreCompany=893,
+    ExMinerTestimony=894,
+    DeathCanyon=895,
+    DiscoveryRace=896,
+    PoeskasLakeBottom=897,
+    DiscoveryRace2=898,
+    LegendaryTrace=899,
+    DiscoveryRace3=900,
+    DeepSweegyWoods=901,
+    BedDesertRuins=902,
+    AdventureRamzen=903,
+    ISawIt=904,
+    DiscoveryTour=905,
+    ZigolisStorm=906,
+    OminousDungeon=907,
+    AdventurerWanted=908,
+    ISawIt2=909,
+    MerchantConcerns=910,
+    RainMountain=911,
+    BeatGoldenGotsko=912,
+    BeatBehemoth=913,
+    BanditTrap=914,
+    SonPappa=915,
+    WithinDarkness=916,
+    BeatWhirlwindKarz=917,
+    MinimumMelancholy=918,
+    AssaultCaveTerror=919,
+    ZeroChallenge=920,
+    PhantomThiefZero=921,
+    ThiefZeroReturns=922,
+    ThiefZeroReborn=923,
+    ThiefZeroLast=924,
+    LegendaryMonster=925,
+    SullenExperiment=926,
+    FiarRequest=927,
+    DreamChild=928,
+    ProtectLittleLife=929,
+    WishesComeTrue=930,
+    LittleCarrot=931,
+    SecretDoor=932,
+    CoastGuardOrders=933,
+    DevilDark=934,
+    Mother=935,
+    MyTreasure=936,
+    GreatestPlan=937,
+    SecretSociety=938,
+    LifeWorth=939,
+    LoveLetter=940,
+    MinimumMelancholy2=941,
+    BeastRoad=942,
+    TrueRomance=943,
+    SkyKatedona=944,
+    MasterMath=945,
+    SadTravelArtist=946,
+    MinimumMelancholy3=947,
+    MachinistContest=948,
+    TravelArtistMameko=949,
+    ChocoboRestaurant=950,
+    WanderingGambler=951,
+    WanderingGambler2=952,
+    BellRinging=953,
+    Memories=954,
+    HardLecture=955,
+    WinYardrowFight=956,
+    WinZalandFight=957,
+    WinMagicContest=958,
+    MeisterContest=959,
+    BioRamza=960,
+    BioDelita=961,
+    BioOvelia=962,
+    BioAlma=963,
+    BioZalbag=964,
+    BioDycedarg=965,
+    BioLarg=966,
+    BioGoltana=967,
+    BioOrinas=968,
+    BioRuvelia=969,
+    BioOmdolia=970,
+    BioFuneral=971,
+    BioAlgus=972,
+    BioGafgarion=973,
+    BioAgrias=974,
+    BioOrlandu=975,
+    BioOlan=976,
+    BioZalmo=977,
+    BioSimon=980,
+    BioBeowulf=982,
+    BioWiegraf=983,
+    BioReis=984,
+    BioBalmafula=985,
+    BioDraclau=986,
+    BioRafa=988,
+    Biomalak=989,
+    BioElmdor=990,
+    BioBarinten=992,
+    BioMustadio=994,
+    BioBesrodio=995,
+    BioRudvich=996,
+    BioCelia=997,
+    BioLede=998,
+    BioAjora=999,
+    BioVormav=1000,
+    BioRofel=1001,
+    BioIzlude=1002,
+    BioKletian=1003,
+    BioBalk=1004,
+    BioMeliadoul=1005,
+    BioCloud=1006,
+    BioTeta=1007,
+    BioBalbanes=1008,
+    BioGustav=1009,
+    BioMiluda=1010,
+    BioGolagros=1011,
+    BioDaravon=1021,
+    BioElidibs=1022,
+    BioAlazlam=1023,
+    New_Name=1024,
+    New_Name_(1)=1025,
+    New_Name_(2)=1026,
+    New_Name_(3)=1027,
+    New_Name_(4)=1028,
+    New_Name_(5)=1029,
+    New_Name_(6)=1030,
+    New_Name_(7)=1031,
+    New_Name_(8)=1032,
+    New_Name_(9)=1033,
+    New_Name_(10)=1034,
+    New_Name_(11)=1035,
+    New_Name_(12)=1036,
+    New_Name_(13)=1037,
+    New_Name_(14)=1038,
+    New_Name_(15)=1039,
+    New_Name_(16)=1040,
+    New_Name_(17)=1041,
+    New_Name_(18)=1042,
+    New_Name_(19)=1043,
+    New_Name_(20)=1044,
+    New_Name_(21)=1045,
+    New_Name_(22)=1046,
+    New_Name_(23)=1047,
+    New_Name_(24)=1048,
+    New_Name_(25)=1049,
+    New_Name_(26)=1050,
+    New_Name_(27)=1051,
+    New_Name_(28)=1052,
+    New_Name_(29)=1053,
+    New_Name_(30)=1054,
+    New_Name_(31)=1055,
+    New_Name_(32)=1056,
+    New_Name_(33)=1057,
+    New_Name_(34)=1058,
+    New_Name_(35)=1059,
+    New_Name_(36)=1060,
+    New_Name_(37)=1061,
+    New_Name_(38)=1062,
+    New_Name_(39)=1063,
+    New_Name_(40)=1064,
+    New_Name_(41)=1065,
+    New_Name_(42)=1066,
+    New_Name_(43)=1067,
+    New_Name_(44)=1068,
+    New_Name_(45)=1069,
+    New_Name_(46)=1070,
+    New_Name_(47)=1071,
+    New_Name_(48)=1072,
+    New_Name_(49)=1073,
+    New_Name_(50)=1074,
+    New_Name_(51)=1075,
+    New_Name_(52)=1076,
+    New_Name_(53)=1077,
+    New_Name_(54)=1078,
+    New_Name_(55)=1079,
+    New_Name_(56)=1080,
+    New_Name_(57)=1081,
+    New_Name_(58)=1082,
+    New_Name_(59)=1083,
+    New_Name_(60)=1084,
+    New_Name_(61)=1085,
+    New_Name_(62)=1086,
+    New_Name_(63)=1087,
+    New_Name_(64)=1088,
+    New_Name_(65)=1089,
+    New_Name_(66)=1090,
+    New_Name_(67)=1091,
+    New_Name_(68)=1092,
+    New_Name_(69)=1093,
+    New_Name_(70)=1094,
+    New_Name_(71)=1095,
+    New_Name_(72)=1096,
+    New_Name_(73)=1097,
+    New_Name_(74)=1098,
+    New_Name_(75)=1099,
+    New_Name_(76)=1100,
+    New_Name_(77)=1101,
+    New_Name_(78)=1102,
+    New_Name_(79)=1103,
+    New_Name_(80)=1104,
+    New_Name_(81)=1105,
+    New_Name_(82)=1106,
+    New_Name_(83)=1107,
+    New_Name_(84)=1108,
+    New_Name_(85)=1109,
+    New_Name_(86)=1110,
+    New_Name_(87)=1111,
+    New_Name_(88)=1112,
+    New_Name_(89)=1113,
+    New_Name_(90)=1114,
+    New_Name_(91)=1115,
+    New_Name_(92)=1116,
+    New_Name_(93)=1117,
+    New_Name_(94)=1118,
+    New_Name_(95)=1119,
+    New_Name_(96)=1120,
+    New_Name_(97)=1121,
+    New_Name_(98)=1122,
+    New_Name_(99)=1123,
+    New_Name_(100)=1124,
+    New_Name_(101)=1125,
+    New_Name_(102)=1126,
+    New_Name_(103)=1127,
+    New_Name_(104)=1128,
+    New_Name_(105)=1129,
+    New_Name_(106)=1130,
+    New_Name_(107)=1131,
+    New_Name_(108)=1132,
+    New_Name_(109)=1133,
+    New_Name_(110)=1134,
+    New_Name_(111)=1135,
+    New_Name_(112)=1136,
+    New_Name_(113)=1137,
+    New_Name_(114)=1138,
+    New_Name_(115)=1139,
+    New_Name_(116)=1140,
+    New_Name_(117)=1141,
+    New_Name_(118)=1142,
+    New_Name_(119)=1143,
+    New_Name_(120)=1144,
+    New_Name_(121)=1145,
+    New_Name_(122)=1146,
+    New_Name_(123)=1147,
+    New_Name_(124)=1148,
+    New_Name_(125)=1149,
+    New_Name_(126)=1150,
+    New_Name_(127)=1151,
+    New_Name_(128)=1152,
+    New_Name_(129)=1153,
+    New_Name_(130)=1154,
+    New_Name_(131)=1155,
+    New_Name_(132)=1156,
+    New_Name_(133)=1157,
+    New_Name_(134)=1158,
+    New_Name_(135)=1159,
+    New_Name_(136)=1160,
+    New_Name_(137)=1161,
+    New_Name_(138)=1162,
+    New_Name_(139)=1163,
+    New_Name_(140)=1164,
+    New_Name_(141)=1165,
+    New_Name_(142)=1166,
+    New_Name_(143)=1167,
+    New_Name_(144)=1168,
+    New_Name_(145)=1169,
+    New_Name_(146)=1170,
+    New_Name_(147)=1171,
+    New_Name_(148)=1172,
+    New_Name_(149)=1173,
+    New_Name_(150)=1174,
+    New_Name_(151)=1175,
+    New_Name_(152)=1176,
+    New_Name_(153)=1177,
+    New_Name_(154)=1178,
+    New_Name_(155)=1179,
+    New_Name_(156)=1180,
+    New_Name_(157)=1181,
+    New_Name_(158)=1182,
+    New_Name_(159)=1183,
+    New_Name_(160)=1184,
+    New_Name_(161)=1185,
+    New_Name_(162)=1186,
+    New_Name_(163)=1187,
+    New_Name_(164)=1188,
+    New_Name_(165)=1189,
+    New_Name_(166)=1190,
+    New_Name_(167)=1191,
+    New_Name_(168)=1192,
+    New_Name_(169)=1193,
+    New_Name_(170)=1194,
+    New_Name_(171)=1195,
+    New_Name_(172)=1196,
+    New_Name_(173)=1197,
+    New_Name_(174)=1198,
+    New_Name_(175)=1199,
+    New_Name_(176)=1200,
+    New_Name_(177)=1201,
+    New_Name_(178)=1202,
+    New_Name_(179)=1203,
+    New_Name_(180)=1204,
+    New_Name_(181)=1205,
+    New_Name_(182)=1206,
+    New_Name_(183)=1207,
+    New_Name_(184)=1208,
+    New_Name_(185)=1209,
+    New_Name_(186)=1210,
+    New_Name_(187)=1211,
+    New_Name_(188)=1212,
+    New_Name_(189)=1213,
+    New_Name_(190)=1214,
+    New_Name_(191)=1215,
+    New_Name_(192)=1216,
+    New_Name_(193)=1217,
+    New_Name_(194)=1218,
+    New_Name_(195)=1219,
+    New_Name_(196)=1220,
+    New_Name_(197)=1221,
+    New_Name_(198)=1222,
+    New_Name_(199)=1223,
+    New_Name_(200)=1224,
+    New_Name_(201)=1225,
+    New_Name_(202)=1226,
+    New_Name_(203)=1227,
+    New_Name_(204)=1228,
+    New_Name_(205)=1229,
+    New_Name_(206)=1230,
+    New_Name_(207)=1231,
+    New_Name_(208)=1232,
+    New_Name_(209)=1233,
+    New_Name_(210)=1234,
+    New_Name_(211)=1235,
+    New_Name_(212)=1236,
+    New_Name_(213)=1237,
+    New_Name_(214)=1238,
+    New_Name_(215)=1239,
+    New_Name_(216)=1240,
+    New_Name_(217)=1241,
+    New_Name_(218)=1242,
+    New_Name_(219)=1243,
+    New_Name_(220)=1244,
+    New_Name_(221)=1245,
+    New_Name_(222)=1246,
+    New_Name_(223)=1247,
+    New_Name_(224)=1248,
+    New_Name_(225)=1249,
+    New_Name_(226)=1250,
+    New_Name_(227)=1251,
+    New_Name_(228)=1252,
+    New_Name_(229)=1253,
+    New_Name_(230)=1254,
+    New_Name_(231)=1255,
+    New_Name_(232)=1256,
+    New_Name_(233)=1257,
+    New_Name_(234)=1258,
+    New_Name_(235)=1259,
+    New_Name_(236)=1260,
+    New_Name_(237)=1261,
+    New_Name_(238)=1262,
+    New_Name_(239)=1263,
+    New_Name_(240)=1264,
+    New_Name_(241)=1265,
+    New_Name_(242)=1266,
+    New_Name_(243)=1267,
+    New_Name_(244)=1268,
+    New_Name_(245)=1269,
+    New_Name_(246)=1270,
+    New_Name_(247)=1271,
+    New_Name_(248)=1272,
+    New_Name_(249)=1273,
+    New_Name_(250)=1274,
+    New_Name_(251)=1275,
+    New_Name_(252)=1276,
+    New_Name_(253)=1277,
+    New_Name_(254)=1278,
+    New_Name_(255)=1279
+} EventVar;
+
+typedef struct ItemSecondary ItemSecondary, *PItemSecondary;
+
+struct ItemSecondary {
+    enum FormulaID Formula;
+    byte Z;
+    byte InflictStatusID;
+};
+
+typedef enum SUZUKInoteflags12 {
+    action1=1,
+    action4=4,
+    New_Name=128,
+    hold_note=256,
+    action200=512,
+    rest_note=1024,
+    action800=2048,
+    change_instrument=32768,
+    rest_note_2=131072,
+    action80=8388608,
+    volume_change=16777216,
+    playing_note=33554432
+} SUZUKInoteflags12;
+
+typedef struct WeaponSecondary WeaponSecondary, *PWeaponSecondary;
+
+struct WeaponSecondary {
+    byte Range;
+    int Forced2Hands:1;
+    int Throwable:1;
+    int 2Hands:1;
+    int 2Swords:1;
+    int Arc:1;
+    int Direct:1;
+    int Lunging:1;
+    int Striking:1;
+    enum FormulaID Formula;
+    undefined field10_0x3;
+    byte WeaponPower;
+    byte Evade;
+    int Dark:1;
+    int Holy:1;
+    int Water:1;
+    int Earth:1;
+    int Wind:1;
+    int ice:1;
+    int Lightning:1;
+    int Fire:1;
+    byte SecondaryEffect;
+};
+
+typedef struct SecondaryAbilityJump SecondaryAbilityJump, *PSecondaryAbilityJump;
+
+struct SecondaryAbilityJump {
+    byte Range;
+    byte Vert;
+};
+
+typedef struct 16Palette 16Palette, *P16Palette;
+
+struct 16Palette {
+    short argb0;
+    short argb1;
+    short argb2;
+    short argb3;
+    short argb4;
+    short argb5;
+    short argb6;
+    short argb7;
+    short argb8;
+    short argb9;
+    short argbA;
+    short argbB;
+    short argbC;
+    short argbD;
+    short argbE;
+    short argbF;
+};
+
+typedef struct ShieldSecondary ShieldSecondary, *PShieldSecondary;
+
+struct ShieldSecondary {
+    byte PhysicalEvade;
+    byte MagicalEvade;
+};
+
+typedef struct AbilityIDByte AbilityIDByte, *PAbilityIDByte;
+
+struct AbilityIDByte {
+    enum AbilityID AbilityID:8;
+};
+
+typedef enum SpritesheetID {
+    None=0,
+    SquireR1=1,
+    SquireR2=2,
+    SquireR3=3,
+    SquireD=4,
+    HolyKnightD=5,
+    ArcKnightD=6,
+    SquireA=7,
+    ArcKnight=8,
+    LuneKnightD=9,
+    DukeL=10,
+    DukeG=11,
+    Princess=12,
+    HolySwordsman=13,
+    HighPriest=14,
+    Dragoner=15,
+    HolyPriest=16,
+    DarkKnightE=17,
+    HellKnightD=18,
+    Bishop=19,
+    ClericB=20,
+    Astrologist=21,
+    EngineerMJ=22,
+    DarkKnightG=23,
+    Cardinal=24,
+    HeavenKnightG=25,
+    HellKnightEJ=26,
+    ArcKnightE=27,
+    DelitasSis=28,
+    ArcDuke=29,
+    HolyKnightAJ=30,
+    TempleKnight=31,
+    WhiteKnight1=32,
+    ArcWitch=33,
+    EngineerMG=34,
+    BiCount=35,
+    DivineKnightV=36,
+    DivineKnightR=37,
+    KnightBlade=38,
+    Sorceror=39,
+    WhiteKnight2=40,
+    HeavenKnightJ=41,
+    DivineKnightMJ=42,
+    EngineerB=43,
+    ClericD=44,
+    AssassinC=45,
+    AssassinL=46,
+    DivineKnightME=47,
+    ClericE=48,
+    PhonySaint=49,
+    Soldier=50,
+    ArcKnightZ=51,
+    HolyKnightAG=52,
+    ChemistF1=53,
+    PriestF1=54,
+    WizardM1=55,
+    OracleM1=56,
+    SquireM1=57,
+    AssassinCU=58,
+    AssassinLU=59,
+    Warlock=60,
+    KnightMZ=61,
+    AngelofDeath=62,
+    ArcherMZ=63,
+    Regulator=64,
+    HolyAngel=65,
+    WizardMZ=66,
+    ImpureKing=67,
+    TimeMageFZ=68,
+    GhostofFury=69,
+    OracleMZ=70,
+    SummonerMZ=71,
+    HolyDragon=72,
+    ArchAngel=73,
+    10YearOldMan=74,
+    10YearOldWoman=75,
+    20YearOldMan=76,
+    20YearOldWoman=77,
+    40YearOldMan=78,
+    40YearOldWoman=79,
+    60YearOldMan=80,
+    60YearOldWoman=81,
+    OldFuneralMan=82,
+    OldFuneralWoman=83,
+    FuneralMan=84,
+    FuneralWoman=85,
+    FuneralPriest=86,
+    MaleSquire1=87,
+    MaleSquire2=88,
+    MaleSquire3=89,
+    MaleSquire4=90,
+    MaleSquire5=91,
+    MaleSquire6=92,
+    UnusedLucavi=93,
+    UnusedCloakedFigure=94,
+    UnusedRobedFigure=95,
+    SquireM=96,
+    SquireF=97,
+    ChemistM=98,
+    ChemistF=99,
+    KnightM=100,
+    KnightF=101,
+    ArcherM=102,
+    ArcherF=103,
+    MonkM=104,
+    MonkF=105,
+    PriestM=106,
+    PriestF=107,
+    WizardM=108,
+    WizardF=109,
+    TimeMageM=110,
+    TimeMageF=111,
+    SummonerM=112,
+    SummonerF=113,
+    ThiefM=114,
+    ThiefF=115,
+    MediatorM=116,
+    MediatorF=117,
+    OracleM=118,
+    OracleF=119,
+    GeomancerM=120,
+    GeomancerF=121,
+    LancerM=122,
+    LancerF=123,
+    SamuraiM=124,
+    SamuraiF=125,
+    NinjaM=126,
+    NinjaF=127,
+    CalculatorM=128,
+    CalculatorF=129,
+    Bard=130,
+    Dancer=131,
+    MimeM=132,
+    MimeF=133,
+    Chocobo=134,
+    Goblin=135,
+    Bomb=136,
+    Coeurl=137,
+    Squid=138,
+    Skeleton=139,
+    Ghost=140,
+    Ahriman=141,
+    Cockatrice=142,
+    uribo=143,
+    Treant=144,
+    Minotaur=145,
+    Marlboro=146,
+    Behemoth=147,
+    Dragon=148,
+    Tiamat=149,
+    Apanda=150,
+    Serpentarius=151,
+    Dragon2=152,
+    Demon=153,
+    SteelGiant=154,
+    Crystal=155,
+    Chicken=156,
+    Frog=157,
+    Treasure=158
+} SpritesheetID;
+
+typedef struct fileOpenDesc fileOpenDesc, *PfileOpenDesc;
+
+typedef struct CdlLOC CdlLOC, *PCdlLOC;
+
+typedef ulong __u_long;
+
+typedef __u_long u_long;
+
+typedef uchar u_char;
+
+struct CdlLOC {
+    u_char minute;
+    u_char second;
+    u_char sector;
+    u_char track;
+};
+
+struct fileOpenDesc { // custom FFT file header used to load most files
+    undefined4 field0_0x0;
+    int busy;
+    undefined4 field2_0x8;
+    undefined4 successful_passes;
+    int num_sect;
+    int lba;
+    undefined4 field6_0x18;
+    struct CdlLOC CdlLOC;
+    u_long addr;
+};
+
+typedef enum bbool {
+    false=0,
+    true=1
+} bbool;
+
+
+// WARNING! conflicting data type names: /TYPES.H/u_long - /types.h/u_long
+
+typedef ushort u_short;
+
+typedef struct GsSPRITE GsSPRITE, *PGsSPRITE;
+
+struct GsSPRITE {
+    ulong attribute;
+    short x;
+    short y;
+    ushort w;
+    ushort h;
+    ushort tpage;
+    uchar u;
+    uchar v;
+    short cx;
+    short cy;
+    uchar r;
+    uchar g;
+    uchar b;
+    short mx;
+    short my;
+    short scalex;
+    short scaley;
+    long rotate;
+};
+
+typedef struct GsOT_TAG GsOT_TAG, *PGsOT_TAG;
+
+struct GsOT_TAG {
+    uint p:24;
+    uchar num:8;
+};
+
+typedef struct GsOT GsOT, *PGsOT;
+
+struct GsOT {
+    ulong length;
+    struct GsOT_TAG * org;
+    ulong offset;
+    ulong point;
+    struct GsOT_TAG * tag;
+};
+
+typedef struct GsBOXF GsBOXF, *PGsBOXF;
+
+struct GsBOXF {
+    ulong attribute;
+    short x;
+    short y;
+    ushort w;
+    ushort h;
+    uchar r;
+    uchar g;
+    uchar b;
+};
+
+typedef struct GsIMAGE GsIMAGE, *PGsIMAGE;
+
+struct GsIMAGE {
+    ulong pmode;
+    short px;
+    short py;
+    ushort pw;
+    ushort ph;
+    ulong * pixel;
+    short cx;
+    short cy;
+    ushort cw;
+    ushort ch;
+    ulong * clut;
+};
+
+typedef struct GsLINE GsLINE, *PGsLINE;
+
+struct GsLINE {
+    ulong attribute;
+    short x0;
+    short y0;
+    short x1;
+    short y1;
+    uchar r;
+    uchar g;
+    uchar b;
+};
+
+typedef struct VERTC VERTC, *PVERTC;
+
+typedef struct CVECTOR CVECTOR, *PCVECTOR;
+
+struct CVECTOR {
+    u_char r;
+    u_char g;
+    u_char b;
+    u_char cd;
+};
+
+struct VERTC {
+    short vx;
+    short vy;
+    short vz;
+    u_char tu;
+    u_char tv;
+    struct CVECTOR col;
+};
+
+typedef struct DECDCTENV DECDCTENV, *PDECDCTENV;
+
+struct DECDCTENV {
+    u_char iq_y[64];
+    u_char iq_c[64];
+    short dct[64];
+};
+
+typedef void (* CdlCB)(u_char, u_char *);
+
+typedef struct CdlATV CdlATV, *PCdlATV;
+
+struct CdlATV {
+    u_char val0;
+    u_char val1;
+    u_char val2;
+    u_char val3;
+};
+
+typedef struct TILE_8 TILE_8, *PTILE_8;
+
+struct TILE_8 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+};
+
+typedef struct POLY_G3 POLY_G3, *PPOLY_G3;
+
+struct POLY_G3 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char r1;
+    u_char g1;
+    u_char b1;
+    u_char pad1;
+    short x1;
+    short y1;
+    u_char r2;
+    u_char g2;
+    u_char b2;
+    u_char pad2;
+    short x2;
+    short y2;
+};
+
+typedef struct TMD_PRIM TMD_PRIM, *PTMD_PRIM;
+
+typedef struct SVECTOR SVECTOR, *PSVECTOR;
+
+struct SVECTOR {
+    short vx;
+    short vy;
+    short vz;
+    short pad;
+};
+
+struct TMD_PRIM {
+    u_long id;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char p0;
+    u_char r1;
+    u_char g1;
+    u_char b1;
+    u_char p1;
+    u_char r2;
+    u_char g2;
+    u_char b2;
+    u_char p2;
+    u_char r3;
+    u_char g3;
+    u_char b3;
+    u_char p3;
+    u_short tpage;
+    u_short clut;
+    u_char u0;
+    u_char $2;
+    u_char u1;
+    u_char $3;
+    u_char u2;
+    u_char v2;
+    u_char u3;
+    u_char v3;
+    struct SVECTOR x0;
+    struct SVECTOR x1;
+    struct SVECTOR x2;
+    struct SVECTOR x3;
+    struct SVECTOR n0;
+    struct SVECTOR n1;
+    struct SVECTOR n2;
+    struct SVECTOR n3;
+    struct SVECTOR * v_ofs;
+    struct SVECTOR * n_ofs;
+    u_short vert0;
+    u_short vert1;
+    u_short vert2;
+    u_short vert3;
+    u_short norm0;
+    u_short norm1;
+    u_short norm2;
+    u_short norm3;
+};
+
+typedef struct POLY_F3 POLY_F3, *PPOLY_F3;
+
+struct POLY_F3 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    short x1;
+    short y1;
+    short x2;
+    short y2;
+};
+
+typedef struct POLY_F4 POLY_F4, *PPOLY_F4;
+
+struct POLY_F4 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    short x1;
+    short y1;
+    short x2;
+    short y2;
+    short x3;
+    short y3;
+};
+
+typedef struct POLY_GT3 POLY_GT3, *PPOLY_GT3;
+
+struct POLY_GT3 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char u0;
+    u_char $2;
+    u_short clut;
+    u_char r1;
+    u_char g1;
+    u_char b1;
+    u_char p1;
+    short x1;
+    short y1;
+    u_char u1;
+    u_char $3;
+    u_short tpage;
+    u_char r2;
+    u_char g2;
+    u_char b2;
+    u_char p2;
+    short x2;
+    short y2;
+    u_char u2;
+    u_char v2;
+    u_short pad2;
+};
+
+typedef struct POLY_FT4 POLY_FT4, *PPOLY_FT4;
+
+struct POLY_FT4 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char u0;
+    u_char v1;
+    u_short clut;
+    short x1;
+    short y1;
+    u_char u1;
+    u_char v0;
+    u_short tpage;
+    short x2;
+    short y2;
+    u_char u2;
+    u_char v2;
+    u_short pad1;
+    short x3;
+    short y3;
+    u_char u3;
+    u_char v3;
+    u_short pad2;
+};
+
+typedef struct POLY_FT3 POLY_FT3, *PPOLY_FT3;
+
+struct POLY_FT3 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char u0;
+    u_char $2;
+    u_short clut;
+    short x1;
+    short y1;
+    u_char u1;
+    u_char $3;
+    u_short tpage;
+    short x2;
+    short y2;
+    u_char u2;
+    u_char v2;
+    u_short pad1;
+};
+
+typedef struct DR_MODE DR_MODE, *PDR_MODE;
+
+struct DR_MODE {
+    u_long tag;
+    u_long code[2];
+};
+
+typedef struct LINE_F3 LINE_F3, *PLINE_F3;
+
+struct LINE_F3 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    short x1;
+    short y1;
+    short x2;
+    short y2;
+    u_long pad;
+};
+
+typedef struct DR_ENV DR_ENV, *PDR_ENV;
+
+struct DR_ENV {
+    u_long tag;
+    u_long code[15];
+};
+
+typedef struct DR_OFFSET DR_OFFSET, *PDR_OFFSET;
+
+struct DR_OFFSET {
+    u_long tag;
+    u_long code[2];
+};
+
+typedef struct RECT RECT, *PRECT;
+
+struct RECT {
+    short x;
+    short y;
+    short w;
+    short h;
+};
+
+typedef struct POLY_G4 POLY_G4, *PPOLY_G4;
+
+struct POLY_G4 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char r1;
+    u_char g1;
+    u_char b1;
+    u_char pad1;
+    short x1;
+    short y1;
+    u_char r2;
+    u_char g2;
+    u_char b2;
+    u_char pad2;
+    short x2;
+    short y2;
+    u_char r3;
+    u_char g3;
+    u_char b3;
+    u_char pad3;
+    short x3;
+    short y3;
+};
+
+typedef struct TILE_16 TILE_16, *PTILE_16;
+
+struct TILE_16 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+};
+
+typedef struct SPRT_16 SPRT_16, *PSPRT_16;
+
+struct SPRT_16 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char u0;
+    u_char $2;
+    u_short clut;
+};
+
+typedef struct LINE_G2 LINE_G2, *PLINE_G2;
+
+struct LINE_G2 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char r1;
+    u_char g1;
+    u_char b1;
+    u_char p1;
+    short x1;
+    short y1;
+};
+
+typedef struct TILE TILE, *PTILE;
+
+struct TILE {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    short w;
+    short h;
+};
+
+typedef struct DISPENV DISPENV, *PDISPENV;
+
+struct DISPENV {
+    struct RECT disp;
+    struct RECT screen;
+    u_char isinter;
+    u_char isrgb24;
+    u_char pad0;
+    u_char pad1;
+};
+
+typedef struct TIM_IMAGE TIM_IMAGE, *PTIM_IMAGE;
+
+struct TIM_IMAGE {
+    u_long mode;
+    struct RECT * crect;
+    u_long * caddr;
+    struct RECT * prect;
+    u_long * paddr;
+};
+
+typedef struct DR_PRIO DR_PRIO, *PDR_PRIO;
+
+struct DR_PRIO {
+    u_long tag;
+    u_long code[2];
+};
+
+typedef struct DR_AREA DR_AREA, *PDR_AREA;
+
+struct DR_AREA {
+    u_long tag;
+    u_long code[2];
+};
+
+typedef struct LINE_F4 LINE_F4, *PLINE_F4;
+
+struct LINE_F4 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    short x1;
+    short y1;
+    short x2;
+    short y2;
+    short x3;
+    short y3;
+    u_long pad;
+};
+
+typedef struct SPRT_8 SPRT_8, *PSPRT_8;
+
+struct SPRT_8 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char u0;
+    u_char $2;
+    u_short clut;
+};
+
+typedef struct SPRT SPRT, *PSPRT;
+
+struct SPRT {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char u0;
+    u_char $2;
+    u_short clut;
+    short w;
+    short h;
+};
+
+typedef struct LINE_F2 LINE_F2, *PLINE_F2;
+
+struct LINE_F2 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    short x1;
+    short y1;
+};
+
+typedef struct DR_TPAGE DR_TPAGE, *PDR_TPAGE;
+
+struct DR_TPAGE {
+    u_long tag;
+    u_long code[1];
+};
+
+typedef struct DR_LOAD DR_LOAD, *PDR_LOAD;
+
+struct DR_LOAD {
+    u_long tag;
+    u_long code[4];
+    u_long p[12];
+};
+
+typedef struct LINE_G3 LINE_G3, *PLINE_G3;
+
+struct LINE_G3 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char r1;
+    u_char g1;
+    u_char b1;
+    u_char p1;
+    short x1;
+    short y1;
+    u_char r2;
+    u_char g2;
+    u_char b2;
+    u_char p2;
+    short x2;
+    short y2;
+    u_long pad;
+};
+
+typedef struct DR_TWIN DR_TWIN, *PDR_TWIN;
+
+struct DR_TWIN {
+    u_long tag;
+    u_long code[2];
+};
+
+typedef struct DR_MOVE DR_MOVE, *PDR_MOVE;
+
+struct DR_MOVE {
+    u_long tag;
+    u_long code;
+    u_long code2;
+    short sx;
+    short sy;
+    short x0;
+    short y0;
+    short w;
+    short h;
+};
+
+typedef struct TILE_1 TILE_1, *PTILE_1;
+
+struct TILE_1 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+};
+
+typedef struct LINE_G4 LINE_G4, *PLINE_G4;
+
+struct LINE_G4 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char r1;
+    u_char g1;
+    u_char b1;
+    u_char p1;
+    short x1;
+    short y1;
+    u_char r2;
+    u_char g2;
+    u_char b2;
+    u_char p2;
+    short x2;
+    short y2;
+    u_char r3;
+    u_char g3;
+    u_char b3;
+    u_char p3;
+    short x3;
+    short y3;
+    u_long pad;
+};
+
+typedef struct DRAWENV DRAWENV, *PDRAWENV;
+
+struct DRAWENV {
+    struct RECT clip;
+    short ofs[2];
+    struct RECT tw;
+    u_short tpage;
+    u_char dtd;
+    u_char dfe;
+    u_char isbg;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    struct DR_ENV dr_env;
+};
+
+typedef struct POLY_GT4 POLY_GT4, *PPOLY_GT4;
+
+struct POLY_GT4 {
+    u_long tag;
+    u_char r0;
+    u_char g0;
+    u_char b0;
+    u_char code;
+    short x0;
+    short y0;
+    u_char u0;
+    u_char $2;
+    u_short clut;
+    u_char r1;
+    u_char g1;
+    u_char b1;
+    u_char p1;
+    short x1;
+    short y1;
+    u_char u1;
+    u_char $3;
+    u_short tpage;
+    u_char r2;
+    u_char g2;
+    u_char b2;
+    u_char p2;
+    short x2;
+    short y2;
+    u_char u2;
+    u_char v2;
+    u_short pad2;
+    u_char r3;
+    u_char g3;
+    u_char b3;
+    u_char p3;
+    short x3;
+    short y3;
+    u_char u3;
+    u_char v3;
+    u_short pad3;
+};
+
+typedef int __jmp_buf[6];
+
+typedef int __ssize_t;
+
+typedef __ssize_t ssize_t;
+
+typedef uint __u_int;
+
+typedef __u_int u_int;
+
+typedef long __off_t;
+
+typedef enum Movements2 {
+    None=0,
+    Any_Ground=1,
+    Any_Weather=2,
+    Teleport_2=4,
+    Teleport=8,
+    Cannot_Enter_Water=16,
+    Move-Get_JP=32,
+    Move-Get_EXP=64,
+    Move-MP_UP=128
+} Movements2;
+
+typedef struct BattleUnitData BattleUnitData, *PBattleUnitData;
+
+typedef struct AllActionUnitData AllActionUnitData, *PAllActionUnitData;
+
+typedef struct CurActionTargetData CurActionTargetData, *PCurActionTargetData;
+
+typedef struct CurActionUnitData CurActionUnitData, *PCurActionUnitData;
+
+typedef enum ENTD_team.conflict {
+    is_ramza=3,
+    immortal=4,
+    player_control=8,
+    red=16,
+    green=32,
+    light_blue=48,
+    random_present=64,
+    always_present=128
+} ENTD_team.conflict;
+
+typedef enum ENTD_gender {
+    save_formation=1,
+    boss_stats=4,
+    load_formation=8,
+    join_after_event=16,
+    monster=32,
+    female=64,
+    male=128
+} ENTD_gender;
+
+typedef enum birthday {
+    birthday=511,
+    Taurus=4096,
+    Gemini=8192,
+    Cancer=12288,
+    Leo=16384,
+    Virgo=20480,
+    Libra=24576,
+    Scorpio=28672,
+    Sagittarius=32768,
+    Capricorn=36864,
+    Aquarius=40960,
+    Pisces=45056,
+    Serpentarius=49152,
+    Zodiac=61440
+} birthday;
+
+typedef enum ElemAffinity {
+    Dark=1,
+    Holy=2,
+    Water=4,
+    Earth=8,
+    Wind=16,
+    Ice=32,
+    Lightning=64,
+    Fire=128
+} ElemAffinity;
+
+typedef enum Reactions1 {
+    None=0,
+    Brave_UP=1,
+    Regenerator=2,
+    Dragon_Spirit=4,
+    Caution=8,
+    Sunken_State=16,
+    Speed_Save=32,
+    MA_Save=64,
+    PA_Save=128
+} Reactions1;
+
+typedef enum Reactions2 {
+    None=0,
+    Counter_Flood=1,
+    Counter_Tackle=2,
+    Counter_Magic=4,
+    Meatbone_Slash=8,
+    Critical_Quick=16,
+    MP_Restore=32,
+    HP_Restore=64,
+    Face_UP=128
+} Reactions2;
+
+typedef enum Reactions3 {
+    None=0,
+    MP_Switch=1,
+    Distribute=2,
+    UNUSED=4,
+    Counter=8,
+    Auto_Potion=16,
+    Reflect_Status=32,
+    Gilgame_Heart=64,
+    Absorb_Used_MP=128
+} Reactions3;
+
+typedef enum Reactions4 {
+    None=0,
+    Hamedo=1,
+    Arrow_Guard=2,
+    Blade_Grasp=4,
+    Catch=8,
+    Abandon=16,
+    Finger_Guard=32,
+    Weapon_Guard=64,
+    Damage_Split=128
+} Reactions4;
+
+typedef enum Supports1 {
+    None=0,
+    Equip_Gun=1,
+    Equip_Axe=2,
+    Equip_Spear=4,
+    Equip_Crossbow=8,
+    Equip_Katana=16,
+    Equip_Sword=32,
+    Equip_Shield=64,
+    Equip_Armor=128
+} Supports1;
+
+typedef enum Supports2 {
+    None=0,
+    Concentrate=1,
+    Magic_Defense_UP=2,
+    Magic_Attack_UP=4,
+    Defense_UP=8,
+    Attack_UP=16,
+    Gained_EXP-UP=32,
+    Gained_JP-UP=64,
+    Half_of_MP=128
+} Supports2;
+
+typedef enum Supports3 {
+    None=0,
+    Two_Swords=1,
+    Two_Hands=2,
+    Maintenance=4,
+    Throw_Item=8,
+    Monster_Talk=16,
+    Martial_Arts=32,
+    Secret_Hunt=64,
+    Train=128
+} Supports3;
+
+typedef enum Supports4 {
+    None=0,
+    UNUSED_1=1,
+    UNUSED_2=2,
+    Non-Charge=4,
+    Short_Charge=8,
+    UNUSED_10=16,
+    Equip_Change=32,
+    Defend=64,
+    Monster_Skill=128
+} Supports4;
+
+typedef enum Movements1 {
+    None=0,
+    Move-HP_UP=1,
+    Ignore_Height=2,
+    Jump_Plus3=4,
+    Jump_Plus2=8,
+    Jump_Plus1=16,
+    Move_Plus3=32,
+    Move_Plus2=64,
+    Move_Plus1=128
+} Movements1;
+
+typedef enum Movements3 {
+    None=0,
+    Move-Find_Item=1,
+    Silent_Walk=2,
+    Fly=4,
+    Float=8,
+    Move_Underwater=16,
+    Move_on_Lava=32,
+    Move_in_Water=64,
+    Walk_on_Water=128
+} Movements3;
+
+typedef enum all_action_aiflags {
+    BehaviourMod=24,
+    Focus_coords=32,
+    Focus_target=64,
+    Map_level_stay=128
+} all_action_aiflags;
+
+typedef enum UniqueEffect1 {
+    Golem=1,
+    Moldball=2,
+    Break_Item=4,
+    Stole_Target_Item=8,
+    Stolen_Item=16,
+    Poached=32,
+    SwitchTeam=64,
+    Plus_Level=128
+} UniqueEffect1;
+
+typedef enum UniqueEffect2 {
+    Minus_Level=1,
+    Secondary_Proc=2,
+    Elem_Absorb=4,
+    Elem_Weak=8,
+    Katana_Broken=16,
+    UNUSED=32,
+    Knockback=64,
+    Hit_Golem=128
+} UniqueEffect2;
+
+typedef enum StatChange {
+    Value=127,
+    Bonus=128
+} StatChange;
+
+typedef enum CTStatChange {
+    Value=127,
+    Bonus=128,
+    Quick=255
+} CTStatChange;
+
+typedef enum StatusMissMessageByte {
+    Failed=1,
+    Guarded=2,
+    AnimateOnMiss=128
+} StatusMissMessageByte;
+
+typedef enum EquipSlotRemove {
+    LeftHandShield=2,
+    LeftHandWeapon=4,
+    RightHandShield=8,
+    RightHandWeapon=16,
+    Accessory=32,
+    Armor=64,
+    Helmet=128
+} EquipSlotRemove;
+
+typedef enum AttackType {
+    StatAlter=1,
+    StatusChange=8,
+    MPRecovery=16,
+    MPDamage=32,
+    HPRecovery=64,
+    HPDamage=128
+} AttackType;
+
+struct AllActionUnitData {
+    enum JobID BaseClass;
+    byte UnitID;
+    byte PartyID;
+    enum JobID JobID;
+    byte TeamPalette;
+    enum ENTD_team.conflict EntdTeamFlags;
+    enum ENTD_gender EntdGenderFlags;
+    byte DeathCounter;
+    enum birthday Birthday;
+    enum AbilityID Innate0;
+    enum AbilityID Innate1;
+    enum AbilityID Innate2;
+    enum AbilityID Innate3;
+    enum SkillsetID PrimarySkillset;
+    enum SkillsetID SecondarySkillset;
+    enum AbilityID ReactionAbility;
+    enum AbilityID SupportAbility;
+    enum AbilityID MovementAbility;
+    enum ItemID Head;
+    enum ItemID Body;
+    enum ItemID Accessory;
+    enum ItemID RHWeapon;
+    enum ItemID RHShield;
+    enum ItemID LHWeapon;
+    enum ItemID LHShield;
+    byte Exp;
+    byte Level;
+    byte OriginalBrave;
+    byte Brave;
+    byte OriginalFaith;
+    byte Faith;
+    byte ActiveUnit;
+    ushort HP;
+    ushort MaxHP;
+    short MP;
+    ushort MaxMP;
+    byte OriginalPA;
+    byte OriginalMA;
+    byte OriginalSP;
+    byte BonusPA;
+    byte BonusMA;
+    byte BonusSP;
+    byte PA;
+    byte MA;
+    byte SP;
+    byte CT;
+    byte Move;
+    byte Jump;
+    byte WP1;
+    byte WP2;
+    byte WEv1;
+    byte WEv2;
+    byte AccPEv;
+    byte RHShieldPEv;
+    byte LHShieldPEv;
+    byte CEv;
+    byte AccMEv;
+    byte RHShieldMEv;
+    byte LHShieldMEv;
+    byte MapX;
+    byte MapY;
+    int FacingValue:4;
+    bool SteppingStone:1;
+    int MapElevation:1;
+    enum Eq1 EquippableItems1;
+    enum Eq2 EquippableItems2;
+    enum Eq3 EquippableItems3;
+    enum Eq4 EquippableItems4;
+    struct StatusList InnateStatuses;
+    struct StatusList ImmuneStatuses;
+    struct StatusList CurrentStatuses;
+    byte PoisonCT;
+    byte RegenCT;
+    byte ProtectCT;
+    byte ShellCT;
+    byte HasteCT;
+    byte SlowCT;
+    byte StopCT;
+    byte WallCT;
+    byte FaithCT;
+    byte InnocentCT;
+    byte CharmCT;
+    byte SleepCT;
+    byte DontMoveCT;
+    byte DontActCT;
+    byte ReflectCT;
+    byte DeathSentenceCT;
+    enum ElemAffinity AbsorbElem;
+    enum ElemAffinity NullElem;
+    enum ElemAffinity HalfElem;
+    enum ElemAffinity WeakElem;
+    enum ElemAffinity BoostElem;
+    int RawHP:24;
+    int RawMP:24;
+    int RawSP:24;
+    int RawPA:24;
+    int RawMA:24;
+    byte HPGrowth;
+    byte HPMult;
+    byte MPGrowth;
+    byte MPMult;
+    byte SPGrowth;
+    byte SPMult;
+    byte PAGrowth;
+    byte PAMult;
+    byte MAGrowth;
+    byte MAMult;
+    enum Reactions1 Reactions1;
+    enum Reactions2 Reactions2;
+    enum Reactions3 Reactions3;
+    enum Reactions4 Reactions4;
+    enum Supports1 Supports1;
+    enum Supports2 Supports2;
+    enum Supports3 Supports3;
+    enum Supports4 Supports4;
+    enum Movements1 Movements1;
+    enum Movements2 Movements2;
+    enum Movements3 Movements3;
+    int UnlockedJobs:24;
+    int BaseAbilities:24;
+    int ChemistAbilities:24;
+    int KnightAbilities:24;
+    int ArcherAbilities:24;
+    int MonkAbilities:24;
+    int PriestAbilities:24;
+    int WizardAbilities:24;
+    int TimeMageAbilities:24;
+    int SummonerAbilities:24;
+    int ThiefAbilities:24;
+    int MediatorAbilities:24;
+    int OracleAbilities:24;
+    int GeomancerAbilities:24;
+    int LancerAbilities:24;
+    int SamuraiAbilities:24;
+    int NinjaAbilities:24;
+    int CalculatorAbilities:24;
+    int BardAbilities:24;
+    int DancerAbilities:24;
+    byte JobLevels[10];
+    short JobJP[20];
+    short JobTotalJP[20];
+    char UnitName[16];
+    char JobName[16];
+    char PrimarySkillsetName[8];
+    char SecondarySkillsetName[8];
+    byte KOCount;
+    byte CurAbCT;
+    byte Graphic;
+    byte Portrait;
+    byte Palette;
+    byte ENTDID;
+    byte SpecialSkillset;
+    byte WarTrophy;
+    byte BonusMoneyMod;
+    byte AIXStay;
+    byte AIYStay;
+    enum all_action_aiflags Ai_behavious_flags;
+    byte PrioritisedTarID;
+    undefined field158_0x169;
+    undefined field159_0x16a;
+    undefined field160_0x16b;
+    short UnitNameID;
+};
+
+struct CurActionTargetData {
+    byte AttackerID;
+    enum SkillsetID SkillsetOfAttack;
+    enum AbilityID AttackToUse;
+    short CalcTypeAb;
+    short CalcMultAb;
+    enum ItemID UsedItem;
+    undefined field6_0x9;
+    byte TileTarget;
+    byte TargetID;
+    short XMapCoordTarget;
+    short ZMapCoordTarget;
+    short YMapCoordTarget;
+    byte DeathOnChocobo;
+    bool Walkable:1;
+    bool SteppingStone:1;
+    byte RiderID:5;
+    bool BeingRidden:1;
+    bool RidingUnit:1;
+    undefined field18_0x15;
+    bool MatBladeEquipped:1;
+    bool SwordEquipped:1;
+    undefined field21_0x17;
+    byte CurrentATUnit;
+    byte MoveUnavailable;
+    byte ActUnavailable;
+    bool TurnEnded:1;
+    bool TargetHit:1;
+    bool TargetLearn:1;
+    byte UnitID2;
+    byte AbilityCT;
+};
+
+struct CurActionUnitData {
+    byte HitFlag;
+    byte CritFlag;
+    byte EvadeType;
+    byte ItemBreakID;
+    short HPDamage;
+    short HPRecovery;
+    short MPDamage;
+    short MPRecovery;
+    short GilLost;
+    enum AbilityID ReactionID;
+    enum UniqueEffect1 UniqueEffect1;
+    enum UniqueEffect2 UniqueEffect2;
+    enum StatChange SPChange;
+    enum CTStatChange CTChange;
+    enum StatChange PAChange;
+    enum StatChange MAChange;
+    enum StatChange BraveChange;
+    enum StatChange FaithChange;
+    enum StatusMissMessageByte StatusMissMessageByte;
+    enum EquipSlotRemove RemoveEquipmentFlags;
+    enum ItemID StolenItemID;
+    struct StatusList StatusInfliction;
+    struct StatusList StatusRemoval;
+    enum AttackType AttackType;
+    short ReactionVar;
+    byte StolenEXP;
+    byte StolenJP;
+    byte Hit%;
+    byte hi_hit%;
+    byte AutoBattle;
+    byte MainTargetID;
+    enum ENTD_team.conflict ModifiedENTDTeam;
+    struct StatusList FinalInflictStatus;
+};
+
+struct BattleUnitData {
+    struct AllActionUnitData AllActionUnitData;
+    struct CurActionTargetData CurActionTargetData;
+    struct CurActionUnitData CurActionUnitData;
+};
+
+typedef struct map_tile_data map_tile_data, *Pmap_tile_data;
+
+typedef enum TileType {
+    NaturalSurface=0,
+    SandArea=1,
+    Stalactite=2,
+    Grassland=3,
+    Thicket=4,
+    Snow=5,
+    RockyCliff=6,
+    Gravel=7,
+    Wasteland=8,
+    Swamp=9,
+    Marsh=10,
+    PoisonMarsh=11,
+    LavaRocks=12,
+    Ice=13,
+    Waterway=14,
+    River=15,
+    Lake=16,
+    Sea=17,
+    Lava=18,
+    Road=19,
+    WoodenFloor=20,
+    StoneFloor=21,
+    Roof=22,
+    StoneWall=23,
+    Sky=24,
+    Darkness=25,
+    Salt=26,
+    Book=27,
+    Obstacle=28,
+    Rug=29,
+    Tree=30,
+    Box=31,
+    Brick=32,
+    Chimney=33,
+    MudWall=34,
+    Bridge=35,
+    WaterPlant=36,
+    Stairs=37,
+    Furniture=38,
+    Ivy=39,
+    Deck=40,
+    Machine=41,
+    IronPlate=42,
+    Moss=43,
+    Tombstone=44,
+    Waterfall=45,
+    Coffin=46,
+    CrossSection=63
+} TileType;
+
+struct map_tile_data {
+    enum TileType TileType;
+    undefined field1_0x1;
+    byte height_whole;
+    byte height_small;
+    byte slope_height;
+    byte tile_overlay;
+    byte tile_interaction;
+    undefined field7_0x7;
+};
+
 typedef enum ENTD_team {
     player_control=8,
     random_present=64,
@@ -10578,13 +10932,6 @@ typedef enum motion_flags {
     Drg_Jump=128
 } motion_flags;
 
-typedef struct vfx_timers_all vfx_timers_all, *Pvfx_timers_all;
-
-struct vfx_timers_all {
-    struct vfx_timers_hdr timers_hdr;
-    struct vfx_timers timers;
-};
-
 typedef enum GameStateVar {
     FreeCursor=0,
     HighlightUnits=1,
@@ -11361,7 +11708,7 @@ void Toggle_Music_Playing(int onOff)
 
 
 
-void Play_Sound(uint sfx_ID)
+void Play_Sound(SFX_ID sfx_ID)
 
 {
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
@@ -11373,7 +11720,7 @@ void Play_Sound(uint sfx_ID)
 
 
 
-void Play_Sound2(uint sfx_ID)
+void Play_Sound2(SFX_ID sfx_ID)
 
 {
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
@@ -11385,7 +11732,7 @@ void Play_Sound2(uint sfx_ID)
 
 
 
-void PlaySound_findChannel(uint sfx_ID)
+void PlaySound_findChannel(SFX_ID sfx_ID)
 
 {
   uint channel_ID;
@@ -11400,7 +11747,7 @@ void PlaySound_findChannel(uint sfx_ID)
 
 
 
-void PlaySound_inChannel(uint sfx_ID,ushort channel_ID)
+void PlaySound_inChannel(SFX_ID sfx_ID,ushort channel_ID)
 
 {
   if ((SuzukiInstrHalf & MusicPlayable) != Off) {
@@ -11512,7 +11859,7 @@ void Pause_SpecificMUS(int param_1)
 
 {
   short sVar1;
-  int param1;
+  SFX_ID param1;
   MusicChannelData *ChannelData;
   int numChannels;
   
@@ -11522,8 +11869,8 @@ void Pause_SpecificMUS(int param_1)
   do {
     numChannels = numChannels + -1;
     if (((ChannelData->channelflags & action1) != 0) &&
-       (param1 = *(int *)&(ChannelData->channel_inter).channelSecondary.field_0x4,
-       param1 >> 0x10 == (int)sVar1)) {
+       (param1 = (ChannelData->channel_inter).channelSecondary.SFX_ID,
+       (int)param1 >> 0x10 == (int)sVar1)) {
       AccumulateChannelsToPause(param1);
     }
     ChannelData = ChannelData + 1;
@@ -11631,13 +11978,13 @@ void PauseNeededChannels(MusDataAll *MusData,uint OwnedChannels,uint neededChann
 
 
 
-void FUN_80012b6c(MusDataAll *MusData,uint param_2)
+void SFX_Set_Echo(SFX_ID SFX_ID,uint echo)
 
 {
   MusicChannelData *pMVar1;
   uint uVar2;
-  MusicChannelIntermediary *pMVar3;
-  MusicChannelInner *pMVar4;
+  MusicChannelIntermediary *mus_intermed;
+  MusicChannelInner *pMVar3;
   uint OwnedChannels;
   MusicChannelData *channelData;
   uint neededChannels;
@@ -11649,24 +11996,24 @@ void FUN_80012b6c(MusDataAll *MusData,uint param_2)
   firstMus = FirstMUS;
   numChannels = 8;
   channelData = FirstMUS->ChannelData;
-  if ((param_2 & 0xffff) == 0) {
+  if ((echo & 0xffff) == 0) {
     mask = 1;
     neededChannels = 0;
     OwnedChannels = 0;
     numChannels = 8;
     pMVar1 = FirstMUS->ChannelData;
     do {
-      pMVar4 = &(pMVar1->channel_inter).channelSecondary.channel_notedata;
+      pMVar3 = &(pMVar1->channel_inter).channelSecondary.channel_notedata;
       numChannels = numChannels + -1;
       if (((channelData->channelflags & action1) != 0) &&
-         (*(MusDataAll **)((int)(pMVar4 + -1) + 0x100) == MusData)) {
-        uVar2 = pMVar4->using_channels;
+         (*(SFX_ID *)((int)(pMVar3 + -1) + 0x100) == SFX_ID)) {
+        uVar2 = pMVar3->using_channels;
         OwnedChannels = OwnedChannels | mask;
         channelData->channelflags = 0;
         neededChannels = neededChannels | uVar2;
       }
       mask = mask << 1;
-      pMVar1 = (MusicChannelData *)(pMVar4 + 1);
+      pMVar1 = (MusicChannelData *)(pMVar3 + 1);
       channelData = channelData + 1;
     } while (numChannels != 0);
     if (OwnedChannels != 0) {
@@ -11676,16 +12023,15 @@ void FUN_80012b6c(MusDataAll *MusData,uint param_2)
   else {
     pMVar1 = FirstMUS->ChannelData;
     do {
-      pMVar3 = &pMVar1->channel_inter;
+      mus_intermed = &pMVar1->channel_inter;
       hasSound = &channelData->channelflags;
       channelData = channelData + 1;
-      if (((*hasSound & action1) != 0) &&
-         (*(MusDataAll **)&(pMVar3->channelSecondary).field_0x4 == MusData)) {
-        (pMVar3->channelSecondary).channel_notedata.field55_0x60 = (short)(param_2 << 8);
-        pMVar3->intermediaryflags = volume_change;
+      if (((*hasSound & action1) != 0) && ((mus_intermed->channelSecondary).SFX_ID == SFX_ID)) {
+        (mus_intermed->channelSecondary).channel_notedata.echo = (short)(echo << 8);
+        mus_intermed->intermediaryflags = volume_change;
       }
       numChannels = numChannels + -1;
-      pMVar1 = (MusicChannelData *)(pMVar3 + 1);
+      pMVar1 = (MusicChannelData *)(mus_intermed + 1);
     } while (numChannels != 0);
   }
   return;
@@ -11709,8 +12055,8 @@ void FUN_80012c58(MusDataAll *musData,int param_2)
     pMVar3 = &pMVar1->channel_inter;
     pSVar2 = &_channelData->channelflags;
     _channelData = _channelData + 1;
-    if (((*pSVar2 & action1) != 0) &&
-       (*(MusDataAll **)&(pMVar3->channelSecondary).field_0x4 == musData)) {
+    if (((*pSVar2 & action1) != 0) && ((MusDataAll *)(pMVar3->channelSecondary).SFX_ID == musData))
+    {
       (pMVar3->channelSecondary).channel_notedata.Vol_Bal = (short)(param_2 << 8);
       pMVar3->intermediaryflags = volume_change;
     }
@@ -11750,7 +12096,7 @@ uint get_MUS_channels(MusDataAll *musData)
     do {
       numChannels = numChannels + -1;
       if (((firstChannel->channelflags & action1) != 0) &&
-         (*(MusDataAll **)&(firstChannel->channel_inter).channelSecondary.field_0x4 == musData)) {
+         ((MusDataAll *)(firstChannel->channel_inter).channelSecondary.SFX_ID == musData)) {
         acc_Channels = acc_Channels | mask;
       }
       firstChannel = firstChannel + 1;
@@ -12211,43 +12557,43 @@ LAB_8001394c:
 
 
 
-void Play_Sound_Worker(uint channel_ID,uint sfx_ID,short param_3,short volume_balance)
+void Play_Sound_Worker(uint channel_ID,SFX_ID sfx_ID,short param_3,short volume_balance)
 
 {
-  ushort uVar1;
-  MusicChannelData *pMVar2;
-  undefined4 uVar3;
-  MusicChannelSecondary *pMVar4;
-  uint uVar5;
+  MusicChannelSecondary *pMVar3;
+  uint uVar4;
   uint *_release_mode;
-  int iVar6;
+  int iVar5;
   MusicChannelInner *_noteData;
   MusicChannelData *ChannelData;
   MusicChannelData *_channeldata;
-  int iVar7;
+  int iVar6;
   uint _channels;
   SoundFontHeader *_waveset_addr;
-  vfx_SMD_hdr *_cur_vfx_smd;
-  char *pcVar8;
+  SED_hdr *_cur_vfx_smd;
+  char *pcVar7;
   uint _channel_flag;
-  uint uVar9;
+  uint uVar8;
   short local_50;
   uint local_40;
   MusDataAll *MusData;
+  ushort SED_ID_check;
   SUZUKIchannel_flags *_channel_flags;
   mus_10 _cmdfield;
+  MusicChannelData *pMVar1;
+  undefined4 uVar2;
   
   MusData = FirstMUS;
   local_40 = 0;
   _channels = 0;
-  uVar1 = current_vfx_SMD->field3_0xa;
-  _cur_vfx_smd = current_vfx_SMD;
-  while ((uint)uVar1 != (int)sfx_ID >> 0x10) {
-    _cur_vfx_smd = _cur_vfx_smd->prev_vfx_SMD;
-    if (_cur_vfx_smd == (vfx_SMD_hdr *)0x0) {
+  SED_ID_check = current_SED->SED_ID;
+  _cur_vfx_smd = current_SED;
+  while ((uint)SED_ID_check != (int)sfx_ID >> 0x10) {
+    _cur_vfx_smd = _cur_vfx_smd->prev_SED;
+    if (_cur_vfx_smd == (SED_hdr *)0x0) {
       return;
     }
-    uVar1 = _cur_vfx_smd->field3_0xa;
+    SED_ID_check = _cur_vfx_smd->SED_ID;
   }
   _waveset_addr = WAVESET_addr;
   if (WAVESET_addr != (SoundFontHeader *)0x0) {
@@ -12260,27 +12606,26 @@ void Play_Sound_Worker(uint channel_ID,uint sfx_ID,short param_3,short volume_ba
       _waveset_addr = WAVESET_addr;
     }
   }
-  uVar9 = (int)param_3 *
-          (uint)(byte)_cur_vfx_smd->feds
-                      [(sfx_ID & 0xffff) + (uint)*(ushort *)&_cur_vfx_smd->field_0xc];
-  local_50 = (short)(uVar9 >> 7);
-  if ((uVar9 >> 0x16 & 1) != 0) {
+  uVar8 = (int)param_3 *
+          (uint)(byte)_cur_vfx_smd->feds[(sfx_ID & 0xffff) + (uint)(ushort)_cur_vfx_smd->num_SFX];
+  local_50 = (short)(uVar8 >> 7);
+  if ((uVar8 >> 0x16 & 1) != 0) {
     local_50 = 0x7fff;
   }
-  pcVar8 = _cur_vfx_smd->feds + (sfx_ID & 0xffff) * 4 + 0x14;
+  pcVar7 = _cur_vfx_smd->feds + (sfx_ID & 0xffff) * 4 + 0x14;
   _channel_flag = 1 << (channel_ID & 0x1f);
   ChannelData = FirstMUS->ChannelData + (channel_ID & 0xff);
-  iVar7 = (int)always2;
+  iVar6 = (int)always2;
   _noteData = &(ChannelData->channel_inter).channelSecondary.channel_notedata;
   DisableEvent(rootCounter2Event);
-  uVar9 = 0;
+  uVar8 = 0;
   do {
-    uVar3 = DAT_80032a2c;
-    *(uint *)((int)(_noteData + -1) + 0x100) = sfx_ID;
-    *(undefined4 *)((int)(_noteData + -1) + 0x108) = uVar3;
+    uVar2 = DAT_80032a2c;
+    *(SFX_ID *)((int)(_noteData + -1) + 0x100) = sfx_ID;
+    *(undefined4 *)((int)(_noteData + -1) + 0x108) = uVar2;
     *(char *)((int)(_noteData + -1) + 0x105) = (char)(channel_ID >> 8);
-    iVar6 = 3;
-    if (*(ushort *)pcVar8 == 0) {
+    iVar5 = 3;
+    if (*(ushort *)pcVar7 == 0) {
       if ((ChannelData->channelflags & action1) != 0) {
         _channels = _channels | _noteData->using_channels;
       }
@@ -12288,12 +12633,12 @@ void Play_Sound_Worker(uint channel_ID,uint sfx_ID,short param_3,short volume_ba
     }
     else {
       local_40 = local_40 | _channel_flag;
-      uVar5 = _noteData->using_channels;
+      uVar4 = _noteData->using_channels;
       _release_mode = &(ChannelData->channel_inter).channelSecondary.channel_notedata.release_mode;
       ChannelData->channelflags = action1|sfx|rest_note;
       *(undefined2 *)((int)(_noteData + -1) + 0xfa) = 0x100;
       *(undefined2 *)((int)(_noteData + -1) + 0xfe) = 0;
-      uVar1 = *(ushort *)pcVar8;
+      SED_ID_check = *(ushort *)pcVar7;
       _noteData->octave = 0x3c;
       _noteData->field38_0x46 = 0xf;
       *(undefined4 *)((int)(_noteData + -1) + 0x114) = 0;
@@ -12307,41 +12652,41 @@ void Play_Sound_Worker(uint channel_ID,uint sfx_ID,short param_3,short volume_ba
       _noteData->repeat_count = -1;
       _noteData->vol_left = 0;
       _noteData->vol_right = 0x7f00;
-      uVar9 = uVar9 | uVar5;
-      _noteData->field55_0x60 = local_50;
+      uVar8 = uVar8 | uVar4;
+      _noteData->echo = local_50;
       _noteData->field53_0x5c = 0;
       _noteData->field48_0x54 = 0;
       _noteData->field49_0x56 = 0;
       _noteData->field50_0x58 = 0;
       _noteData->left_sweep_type = 0;
       _noteData->right_sweep_type = 0;
-      *(char **)((int)(_noteData + -1) + 0x10c) = _cur_vfx_smd->feds + uVar1;
-      *(char **)((int)(_noteData + -1) + 0x110) = _cur_vfx_smd->feds + uVar1;
+      *(char **)((int)(_noteData + -1) + 0x10c) = _cur_vfx_smd->feds + SED_ID_check;
+      *(char **)((int)(_noteData + -1) + 0x110) = _cur_vfx_smd->feds + SED_ID_check;
       _noteData->Vol_Bal = volume_balance;
       do {
         *(undefined2 *)((int)_release_mode + 0xfe) = 0;
-        iVar6 = iVar6 + -1;
+        iVar5 = iVar5 + -1;
         _release_mode = _release_mode + -8;
-      } while (-1 < iVar6);
+      } while (-1 < iVar5);
       *(SoundFontHeader **)((int)(_noteData + -1) + 0x128) = _waveset_addr;
       if (_waveset_addr != (SoundFontHeader *)0x0) {
         Set_Instrument((int)base_instrument,ChannelData);
       }
     }
-    pcVar8 = pcVar8 + 2;
+    pcVar7 = pcVar7 + 2;
     _channel_flag = _channel_flag << 1;
     _noteData = (MusicChannelInner *)((int)(_noteData + 1) + 0x34);
-    iVar7 = iVar7 + -1;
+    iVar6 = iVar6 + -1;
     ChannelData = ChannelData + 1;
-  } while (iVar7 != 0);
-  _channels = _channels | uVar9 | acc_activeChannels;
+  } while (iVar6 != 0);
+  _channels = _channels | uVar8 | acc_activeChannels;
   _channel_flag = ~_channels;
   (MusData->HeaderData).OwnedChannels =
        local_40 | ~acc_inactiveChannels & (MusData->HeaderData).OwnedChannels;
   (MusData->HeaderData).field50_0x64 = _channel_flag & (MusData->HeaderData).field50_0x64;
   (MusData->HeaderData).ModifiedChannels = _channel_flag & (MusData->HeaderData).ModifiedChannels;
   PausedMusicChannels = _channels | PausedMusicChannels;
-  PitchLFO_onlyInclude = uVar9 | _channel_flag & PitchLFO_onlyInclude;
+  PitchLFO_onlyInclude = uVar8 | _channel_flag & PitchLFO_onlyInclude;
   (MusData->HeaderData).LFOVoiceBits = _channel_flag & (MusData->HeaderData).LFOVoiceBits;
   (MusData->HeaderData).NoiseVoiceBits = _channel_flag & (MusData->HeaderData).NoiseVoiceBits;
   acc_inactiveChannels = 0;
@@ -12350,23 +12695,23 @@ void Play_Sound_Worker(uint channel_ID,uint sfx_ID,short param_3,short volume_ba
   ChooseVoice = ChooseVoice | (CalcLFOVoices|CalcNoiseVoices|CalcReverbVoices);
   (MusData->HeaderData)._0_cmdfield = (MusData->HeaderData)._0_cmdfield | music_playing;
   MusData = CurrentlyPlayingMus;
-  if (uVar9 != 0) {
+  if (uVar8 != 0) {
     for (; MusData != (MusDataAll *)0x0; MusData = (MusData->HeaderData).PrevPlayedMus) {
       _cmdfield = (MusData->HeaderData)._0_cmdfield;
       if (((_cmdfield & actionflag1) != 0) && ((int)((uint)_cmdfield << 0x10) < 0)) {
         _channeldata = MusData->ChannelData;
         _channels = (uint)(MusData->HeaderData).NumChannels;
-        pMVar2 = MusData->ChannelData;
+        pMVar1 = MusData->ChannelData;
         do {
-          pMVar4 = &(pMVar2->channel_inter).channelSecondary;
+          pMVar3 = &(pMVar1->channel_inter).channelSecondary;
           _channel_flags = &_channeldata->channelflags;
           _channeldata = _channeldata + 1;
           if (((*_channel_flags & action1) != 0) &&
-             ((uVar9 & (pMVar4->channel_notedata).using_channels) != 0)) {
-            pMVar4->channelFunc = pMVar4->channelFunc | 0x71ff;
+             ((uVar8 & (pMVar3->channel_notedata).using_channels) != 0)) {
+            pMVar3->channelFunc = pMVar3->channelFunc | 0x71ff;
           }
           _channels = _channels - 1;
-          pMVar2 = (MusicChannelData *)(pMVar4 + 1);
+          pMVar1 = (MusicChannelData *)(pMVar3 + 1);
         } while (_channels != 0);
       }
     }
@@ -13320,8 +13665,7 @@ void Read_SMD_Instructions(MusDataAll *Mus,MusicChannelData *channel_notedata,sh
         Instruction = *MusInstrList;
         if (Instruction < 0x80) {
           if ((channel_notedata->channelflags & sfx) == 0) {
-            (_intermediary_data->channelSecondary).channel_notedata.field55_0x60 =
-                 (ushort)Instruction << 8;
+            (_intermediary_data->channelSecondary).channel_notedata.echo = (ushort)Instruction << 8;
           }
           _intermediary_data->intermediaryflags =
                _intermediary_data->intermediaryflags | volume_change;
@@ -13561,7 +13905,7 @@ byte * FUN_800158c0(byte *instruction_list,MusDataAll *musData,MusicChannelData 
   if (*instruction_list == (musData->HeaderData).field_0x1d) {
     bVar1 = *(byte *)&(music_notedata->channel_inter).channelSecondary.channel_notedata.octave;
     (music_notedata->channel_inter).channelSecondary.SMD_instr_start = instruction_list + 1;
-    (music_notedata->channel_inter).channelSecondary.field29_0x27 = bVar1;
+    (music_notedata->channel_inter).channelSecondary.field27_0x27 = bVar1;
   }
   return instruction_list + 1;
 }
@@ -13620,7 +13964,7 @@ byte * EndBar(byte *instruction_list,MusDataAll *musData,MusicChannelData *chann
     _instrlist_return = instruction_list + -1;
   }
   else {
-    bVar1 = (channel_data->channel_inter).channelSecondary.field29_0x27;
+    bVar1 = (channel_data->channel_inter).channelSecondary.field27_0x27;
     (channel_data->channel_inter).channelSecondary.loops =
          (channel_data->channel_inter).channelSecondary.loops + 1;
     (channel_data->channel_inter).channelSecondary.channel_notedata.octave = (ushort)bVar1;
@@ -13637,7 +13981,7 @@ byte * Loop(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel
   
   bVar1 = *(byte *)&(channel_data->channel_inter).channelSecondary.channel_notedata.octave;
   (channel_data->channel_inter).channelSecondary.SMD_instr_start = instruction_list;
-  (channel_data->channel_inter).channelSecondary.field29_0x27 = bVar1;
+  (channel_data->channel_inter).channelSecondary.field27_0x27 = bVar1;
   return instruction_list;
 }
 
@@ -13803,11 +14147,11 @@ byte * FUN_80015bfc(byte *instruction_list)
 byte * Play_VFX_SMD(byte *instruction_list,MusDataAll *musData,MusicChannelData *channel_notedata)
 
 {
-  vfx_SMD_hdr *_cur_vfx_SMD;
+  SED_hdr *_cur_vfx_SMD;
   uint uVar1;
   
-  uVar1 = (uint)(channel_notedata->channel_inter).channelSecondary.field4_0x6;
-  _cur_vfx_SMD = current_vfx_SMD;
+  uVar1 = (uint)*(short *)((int)&(channel_notedata->channel_inter).channelSecondary.SFX_ID + 2);
+  _cur_vfx_SMD = current_SED;
   if (uVar1 == 0) {
 LAB_80015c84:
     instruction_list =
@@ -13819,9 +14163,9 @@ LAB_80015c84:
   }
   else {
     do {
-      if ((ushort)_cur_vfx_SMD->field3_0xa == uVar1) goto LAB_80015c84;
-      _cur_vfx_SMD = _cur_vfx_SMD->prev_vfx_SMD;
-    } while (_cur_vfx_SMD != (vfx_SMD_hdr *)0x0);
+      if ((ushort)_cur_vfx_SMD->SED_ID == uVar1) goto LAB_80015c84;
+      _cur_vfx_SMD = _cur_vfx_SMD->prev_SED;
+    } while (_cur_vfx_SMD != (SED_hdr *)0x0);
   }
   return instruction_list;
 }
@@ -15586,7 +15930,7 @@ void Suzuki_Initialisation_Func(ushort param_1)
     DAT_80032a18 = 0x12345678;
     CurrentlyPlayingMus = (MusDataAll *)0x0;
     FirstMUS = (MusDataAll *)0x0;
-    current_vfx_SMD = (vfx_SMD_hdr *)0x0;
+    current_SED = (SED_hdr *)0x0;
     WAVESET_addr = (SoundFontHeader *)0x0;
     PitchLFO_onlyInclude = 0;
     acc_inactiveChannels = 0;
@@ -15707,50 +16051,50 @@ undefined4 * Put_WAVESET_SPU(SoundFontHeader *SoundFontPtr)
 
 
 
-void append_vfx_SMD(vfx_SMD_hdr *vfx_SMD)
+void append_SED(SED_hdr *vfx_SMD)
 
 {
-  vfx_SMD_hdr *_cur_vfx_SMD;
-  vfx_SMD_hdr **_prev_vfx_SMD;
+  SED_hdr *_cur_SED;
+  SED_hdr **_prev_SED;
   
-  _prev_vfx_SMD = &current_vfx_SMD;
-  if (current_vfx_SMD != (vfx_SMD_hdr *)0x0) {
+  _prev_SED = &current_SED;
+  if (current_SED != (SED_hdr *)0x0) {
     do {
-      _cur_vfx_SMD = *_prev_vfx_SMD;
-      _prev_vfx_SMD = &_cur_vfx_SMD->prev_vfx_SMD;
-    } while (_cur_vfx_SMD->prev_vfx_SMD != (vfx_SMD_hdr *)0x0);
+      _cur_SED = *_prev_SED;
+      _prev_SED = &_cur_SED->prev_SED;
+    } while (_cur_SED->prev_SED != (SED_hdr *)0x0);
   }
-  *_prev_vfx_SMD = vfx_SMD;
-  vfx_SMD->prev_vfx_SMD = (vfx_SMD_hdr *)0x0;
+  *_prev_SED = vfx_SMD;
+  vfx_SMD->prev_SED = (SED_hdr *)0x0;
   return;
 }
 
 
 
-void vfx_SMD_pop(vfx_SMD_hdr *param_1)
+void vfx_SMD_pop(SED_hdr *param_1)
 
 {
-  vfx_SMD_hdr *_vfx_SMD_check;
-  vfx_SMD_hdr *_cur_vfx_SMD;
-  vfx_SMD_hdr *_next_vfx_SMD;
+  SED_hdr *_vfx_SMD_check;
+  SED_hdr *_cur_vfx_SMD;
+  SED_hdr *_next_vfx_SMD;
   
-  _cur_vfx_SMD = current_vfx_SMD;
-  _next_vfx_SMD = (vfx_SMD_hdr *)0x0;
-  if (current_vfx_SMD != (vfx_SMD_hdr *)0x0) {
+  _cur_vfx_SMD = current_SED;
+  _next_vfx_SMD = (SED_hdr *)0x0;
+  if (current_SED != (SED_hdr *)0x0) {
     do {
       _vfx_SMD_check = _cur_vfx_SMD;
       _cur_vfx_SMD = _vfx_SMD_check;
       if (_vfx_SMD_check == param_1) break;
-      _cur_vfx_SMD = _vfx_SMD_check->prev_vfx_SMD;
+      _cur_vfx_SMD = _vfx_SMD_check->prev_SED;
       _next_vfx_SMD = _vfx_SMD_check;
-    } while (_cur_vfx_SMD != (vfx_SMD_hdr *)0x0);
-    if (_cur_vfx_SMD != (vfx_SMD_hdr *)0x0) {
+    } while (_cur_vfx_SMD != (SED_hdr *)0x0);
+    if (_cur_vfx_SMD != (SED_hdr *)0x0) {
       Pause_SpecificMUS((int)param_1);
-      if (_next_vfx_SMD == (vfx_SMD_hdr *)0x0) {
-        current_vfx_SMD = param_1->prev_vfx_SMD;
+      if (_next_vfx_SMD == (SED_hdr *)0x0) {
+        current_SED = param_1->prev_SED;
       }
       else {
-        _next_vfx_SMD->prev_vfx_SMD = param_1->prev_vfx_SMD;
+        _next_vfx_SMD->prev_SED = param_1->prev_SED;
       }
     }
   }
@@ -39299,7 +39643,7 @@ void FUN_80043f88(int SMD_ID)
 // Possible SCNOFF.OBJ/SsSetNoiseOff
 // Possible SSQUIT.OBJ/SsQuit
 
-void Call_Play_Sound(uint param_1)
+void Call_Play_Sound(SFX_ID param_1)
 
 {
   Play_Sound(param_1);
@@ -39314,7 +39658,7 @@ void Call_Play_Sound(uint param_1)
 // Possible SCNOFF.OBJ/SsSetNoiseOff
 // Possible SSQUIT.OBJ/SsQuit
 
-void Call_PlaySound_findChannel(uint sfx_ID)
+void Call_PlaySound_findChannel(SFX_ID sfx_ID)
 
 {
   PlaySound_findChannel(sfx_ID);
@@ -39323,10 +39667,10 @@ void Call_PlaySound_findChannel(uint sfx_ID)
 
 
 
-void Call_Play_Sound2(uint param_1)
+void Call_Play_Sound2(SFX_ID param_1)
 
 {
-  DAT_8004599c = param_1;
+  ENV_SFX = param_1;
   Play_Sound2(param_1);
   return;
 }
@@ -39336,8 +39680,8 @@ void Call_Play_Sound2(uint param_1)
 void __builtin_delete_a(void)
 
 {
-  if (DAT_8004599c != 0) {
-    Play_Sound2(DAT_8004599c);
+  if (ENV_SFX != 0) {
+    Play_Sound2(ENV_SFX);
   }
   return;
 }
@@ -39355,21 +39699,33 @@ void __builtin_delete(uint param_1)
 
 
 
+void Call_SFX_Set_Echo(SFX_ID SFX_ID,int echo)
+
+{
+  if ((ENV_SFX == SFX_ID) && (echo == 0)) {
+    ENV_SFX = 0;
+  }
+  SFX_Set_Echo(SFX_ID,(int)(short)echo);
+  return;
+}
+
+
+
 void FUN_800440cc(void)
 
 {
-  DAT_8004599c = 0;
+  ENV_SFX = 0;
   PauseActiveMUS();
   return;
 }
 
 
 
-void Stop_Playing_SFX(int sfx_ID)
+void Stop_Playing_ENV_SFX(int sfx_ID)
 
 {
-  if (sfx_ID == DAT_8004599c) {
-    DAT_8004599c = 0;
+  if (sfx_ID == ENV_SFX) {
+    ENV_SFX = 0;
   }
   AccumulateChannelsToPause(sfx_ID);
   return;
@@ -39380,8 +39736,8 @@ void Stop_Playing_SFX(int sfx_ID)
 void FUN_80044128(void)
 
 {
-  if (DAT_8004599c != 0) {
-    AccumulateChannelsToPause(DAT_8004599c);
+  if (ENV_SFX != 0) {
+    AccumulateChannelsToPause(ENV_SFX);
   }
   return;
 }
@@ -39392,7 +39748,7 @@ void Open_Permanent_SoundFiles(void)
 
 {
   SoundFontHeader *SoundFontPtr;
-  vfx_SMD_hdr *temp_ptr;
+  SED_hdr *temp_ptr;
   SMDDataAll **ppSVar1;
   int iVar2;
   
@@ -39402,11 +39758,11 @@ void Open_Permanent_SoundFiles(void)
   SoundFontPtr = (SoundFontHeader *)Get_File(0x14c0f,0x79000,(u_long *)exe_dest_ptr_arr[0]);
   Put_WAVESET_SPU(SoundFontPtr);
                     // Opens SYSTEM.SED
-  temp_ptr = (vfx_SMD_hdr *)Get_File(0x14c0a,0x2800,(u_long *)&DAT_80047610);
-  append_vfx_SMD(temp_ptr);
+  temp_ptr = (SED_hdr *)Get_File(0x14c0a,0x2800,(u_long *)&DAT_80047610);
+  append_SED(temp_ptr);
                     // Opens ENV.SED
-  temp_ptr = (vfx_SMD_hdr *)Get_File(85000,0x1000,(u_long *)&DAT_8004d9b8);
-  append_vfx_SMD(temp_ptr);
+  temp_ptr = (SED_hdr *)Get_File(85000,0x1000,(u_long *)&DAT_8004d9b8);
+  append_SED(temp_ptr);
   iVar2 = 6;
   ppSVar1 = openedSMDs + 1;
   forcePlayedSmd = (MusDataAll *)0x0;
@@ -39417,7 +39773,7 @@ void Open_Permanent_SoundFiles(void)
     iVar2 = iVar2 + -1;
     ppSVar1 = ppSVar1 + -1;
   } while (-1 < iVar2);
-  DAT_8004599c = 0;
+  ENV_SFX = 0;
   openedSMDs[4] = Get_SMD(SMD_LBA[45].LBA,SMD_LBA[45].Filesize);
   openedSMDs[5] = Get_SMD(SMD_LBA[46].LBA,SMD_LBA[46].Filesize);
   openedSMDs[6] = Get_SMD(SMD_LBA[47].LBA,SMD_LBA[47].Filesize);
@@ -43800,7 +44156,7 @@ void FUN_BATTLE_BIN__800683e4(int param_1)
 void FUN_BATTLE_BIN__80068418(int param_1)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   int iVar2;
   
   iVar2 = *(int *)(param_1 + 0x134);
@@ -43810,8 +44166,8 @@ void FUN_BATTLE_BIN__80068418(int param_1)
     DAT_BATTLE_BIN__800961bc = (int)*(short *)(*(int *)(param_1 + 0x134) + 0x17e);
   }
   else {
-    piVar1 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(iVar2 + 0x179));
-    FUN_BATTLE_BIN__800683e4((int)piVar1);
+    pEVar1 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(iVar2 + 0x179));
+    FUN_BATTLE_BIN__800683e4((int)pEVar1);
   }
   return;
 }
@@ -43925,19 +44281,19 @@ void FUN_BATTLE_BIN__800686b0(void)
 
 {
   uint uVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   
   while (uVar1 = FUN_BATTLE_BIN__80183544(DAT_BATTLE_BIN__80096100), (int)uVar1 < 0) {
     FUN_BATTLE_BIN__8006867c();
   }
-  piVar2 = FUN_BATTLE_BIN__8007a724((ushort)uVar1 & 0xff);
+  pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)uVar1 & 0xff);
   if ((uVar1 & 0x100) == 0) {
-    FUN_BATTLE_BIN__800683e4((int)piVar2);
+    FUN_BATTLE_BIN__800683e4((int)pEVar2);
     FUN_BATTLE_BIN__800ec718(0);
   }
   else {
-    FUN_BATTLE_BIN__80068418((int)piVar2);
-    FUN_BATTLE_BIN__8017aaf8((CurActionTargetData *)(piVar2[0x4d] + 0x16e));
+    FUN_BATTLE_BIN__80068418((int)pEVar2);
+    FUN_BATTLE_BIN__8017aaf8(&pEVar2->UnitBattleData->CurActionTargetData);
     FUN_BATTLE_BIN__800ec718(7);
   }
   FUN_BATTLE_BIN__8006867c();
@@ -43958,7 +44314,7 @@ void FUN_BATTLE_BIN__80068768(void)
 
 
 
-void FUN_BATTLE_BIN__80068794(void)
+void Clear_AT_listID(void)
 
 {
   DAT_BATTLE_BIN__80096100 = 0;
@@ -44000,8 +44356,8 @@ void FUN_BATTLE_BIN__800687e0(int param_1,ushort *param_2)
   ushort uVar2;
   ushort uVar3;
   ushort uVar4;
-  int *piVar5;
-  int iVar6;
+  ENTDDisplayUnitData *pEVar5;
+  BattleUnitData *pBVar6;
   ushort *puVar7;
   int iVar8;
   
@@ -44024,11 +44380,11 @@ void FUN_BATTLE_BIN__800687e0(int param_1,ushort *param_2)
     puVar7 = param_2;
     if (*param_2 != 0) {
       do {
-        piVar5 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(param_1 + iVar8 + 0x18e));
+        pEVar5 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(param_1 + iVar8 + 0x18e));
         puVar7[2] = 0;
-        *(undefined *)(puVar7 + 3) = *(undefined *)(piVar5 + 1);
-        iVar6 = piVar5[0x4d];
-        switch(*(undefined *)(iVar6 + 0x18e)) {
+        *(byte *)(puVar7 + 3) = pEVar5->ENTDID;
+        pBVar6 = pEVar5->UnitBattleData;
+        switch((pBVar6->CurActionUnitData).EvadeType) {
         case 1:
         case 2:
         case 3:
@@ -44044,8 +44400,10 @@ void FUN_BATTLE_BIN__800687e0(int param_1,ushort *param_2)
           *(undefined *)((int)puVar7 + 7) = 4;
           break;
         default:
-          if ((*(ushort *)(iVar6 + 0x19c) & 4) == 0) {
-            if (*(char *)(iVar6 + 0x18d) == '\0') {
+          uVar2._0_1_ = (pBVar6->CurActionUnitData).UniqueEffect1;
+          uVar2._1_1_ = (pBVar6->CurActionUnitData).UniqueEffect2;
+          if ((uVar2 & 4) == 0) {
+            if ((pBVar6->CurActionUnitData).CritFlag == 0) {
               *(undefined *)((int)puVar7 + 7) = 0;
             }
             else {
@@ -44244,12 +44602,12 @@ void FUN_BATTLE_BIN__80068e30(ushort param_1)
 undefined4 FUN_BATTLE_BIN__80068e80(int param_1,int param_2,int param_3)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   uint uVar2;
   uint uVar3;
   
-  piVar1 = FUN_BATTLE_BIN__8007a724((ushort)param_3);
-  if (piVar1 == (int *)0x0) {
+  pEVar1 = FUN_BATTLE_BIN__8007a724((ushort)param_3);
+  if (pEVar1 == (ENTDDisplayUnitData *)0x0) {
     return 0;
   }
   if (param_2 != 1) {
@@ -44265,28 +44623,31 @@ undefined4 FUN_BATTLE_BIN__80068e80(int param_1,int param_2,int param_3)
         return 1;
       case 2:
       case 0x16:
-        piVar1[0x55] = piVar1[0x55] | 2;
-        uVar2 = piVar1[0x53];
+        pEVar1->StatusesRem56 = pEVar1->StatusesRem56 | 2;
+        uVar2 = pEVar1->StatusesAdd56;
         uVar3 = 0xfffffffd;
         break;
       default:
-        piVar1[0x54] = piVar1[0x54] | *(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4);
-        piVar1[0x52] = ~*(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4) & piVar1[0x52];
+        pEVar1->StatusesRem1234 =
+             pEVar1->StatusesRem1234 | *(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4);
+        pEVar1->StatusesAdd1234 =
+             ~*(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4) & pEVar1->StatusesAdd1234;
         return 1;
       case 6:
       case 0x12:
       case 0x14:
-        piVar1[0x55] = piVar1[0x55] | *(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4);
-        uVar3 = piVar1[0x53];
+        pEVar1->StatusesRem56 =
+             pEVar1->StatusesRem56 | *(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4);
+        uVar3 = pEVar1->StatusesAdd56;
         uVar2 = ~*(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4);
         break;
       case 0x17:
-        piVar1[0x55] = piVar1[0x55] | 4;
-        piVar1[0x53] = piVar1[0x53] & 0xfffffffb;
+        pEVar1->StatusesRem56 = pEVar1->StatusesRem56 | 4;
+        pEVar1->StatusesAdd56 = pEVar1->StatusesAdd56 & 0xfffffffb;
         FUN_BATTLE_BIN__80199ec8(param_3);
         return 1;
       }
-      piVar1[0x53] = uVar2 & uVar3;
+      pEVar1->StatusesAdd56 = uVar2 & uVar3;
       return 1;
     }
     return 1;
@@ -44297,38 +44658,41 @@ undefined4 FUN_BATTLE_BIN__80068e80(int param_1,int param_2,int param_3)
   case 0x20:
     goto LAB_BATTLE_BIN__800690dc;
   case 2:
-    piVar1[0x53] = piVar1[0x53] | 1;
-    uVar2 = piVar1[0x55];
+    pEVar1->StatusesAdd56 = pEVar1->StatusesAdd56 | 1;
+    uVar2 = pEVar1->StatusesRem56;
     uVar3 = 0xfffffffe;
     break;
   default:
-    piVar1[0x52] = piVar1[0x52] | *(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4);
-    piVar1[0x54] = ~*(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4) & piVar1[0x54];
+    pEVar1->StatusesAdd1234 =
+         pEVar1->StatusesAdd1234 | *(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4);
+    pEVar1->StatusesRem1234 =
+         ~*(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4) & pEVar1->StatusesRem1234;
     return 1;
   case 6:
   case 0x12:
   case 0x14:
-    piVar1[0x53] = piVar1[0x53] | *(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4);
-    uVar3 = piVar1[0x55];
+    pEVar1->StatusesAdd56 =
+         pEVar1->StatusesAdd56 | *(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4);
+    uVar3 = pEVar1->StatusesRem56;
     uVar2 = ~*(uint *)(&DAT_BATTLE_BIN__80094a40 + param_1 * 4);
     break;
   case 0x10:
-    piVar1[0x53] = piVar1[0x53] | 8;
-    uVar2 = piVar1[0x55];
+    pEVar1->StatusesAdd56 = pEVar1->StatusesAdd56 | 8;
+    uVar2 = pEVar1->StatusesRem56;
     uVar3 = 0xfffffff7;
     break;
   case 0x16:
-    piVar1[0x53] = piVar1[0x53] | 2;
-    uVar2 = piVar1[0x55];
+    pEVar1->StatusesAdd56 = pEVar1->StatusesAdd56 | 2;
+    uVar2 = pEVar1->StatusesRem56;
     uVar3 = 0xfffffffd;
     break;
   case 0x17:
-    piVar1[0x53] = piVar1[0x53] | 4;
-    piVar1[0x55] = piVar1[0x55] & 0xfffffffb;
+    pEVar1->StatusesAdd56 = pEVar1->StatusesAdd56 | 4;
+    pEVar1->StatusesRem56 = pEVar1->StatusesRem56 & 0xfffffffb;
     FUN_BATTLE_BIN__80199ec8(param_3);
     return 1;
   }
-  piVar1[0x55] = uVar2 & uVar3;
+  pEVar1->StatusesRem56 = uVar2 & uVar3;
 LAB_BATTLE_BIN__800690dc:
   return 1;
 }
@@ -45723,11 +46087,11 @@ switchD_BATTLE_BIN__8006b1f0_caseD_11:
 
 
 
-void FUN_BATTLE_BIN__8006b960(int param_1,MusicDataHeader *param_2)
+void FUN_BATTLE_BIN__8006b960(int param_1,SFX_ID sfx_ID)
 
 {
   if ((*(uint *)(param_1 + 0x80) & 0x2000000) == 0) {
-    Call_PlaySound_findChannel((uint)param_2);
+    Call_PlaySound_findChannel(sfx_ID);
   }
   return;
 }
@@ -45739,7 +46103,7 @@ void Play_Land_SFX_per_Tile(ENTDDisplayUnitData *Tile_Coords)
 {
   motion_flags_4 _moveflags;
   map_tile_data *tile_ptr;
-  uint sfx_ID;
+  SFX_ID sfx_ID;
   
   _moveflags._0_1_ = Tile_Coords->MoveX;
   _moveflags._1_1_ = Tile_Coords->MoveY;
@@ -45752,10 +46116,10 @@ void Play_Land_SFX_per_Tile(ENTDDisplayUnitData *Tile_Coords)
     case Grassland:
     case Thicket:
     case Rug:
-      sfx_ID = 0x28;
+      sfx_ID = land1;
       break;
     default:
-      sfx_ID = 0x29;
+      sfx_ID = land2;
       break;
     case Swamp:
     case Marsh:
@@ -45765,12 +46129,12 @@ void Play_Land_SFX_per_Tile(ENTDDisplayUnitData *Tile_Coords)
     case Lake:
     case Sea:
     case Waterfall:
-      sfx_ID = 0x23;
+      sfx_ID = water_land1;
       break;
     case WoodenFloor:
     case Tree:
     case Box:
-      sfx_ID = 0x3a;
+      sfx_ID = land_wood;
     }
     Call_PlaySound_findChannel(sfx_ID);
   }
@@ -45923,37 +46287,38 @@ void FUN_BATTLE_BIN__8006bbfc(int *param_1)
 void FUN_BATTLE_BIN__8006bce4(int *param_1)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   int *piVar2;
+  int *piVar3;
   
   FUN_BATTLE_BIN__8006bbfc(param_1);
   if ((*(byte *)((int)param_1 + 0x11b) & 0x80) == 0) {
-    piVar1 = (int *)FUN_BATTLE_BIN__8007a4f4
+    piVar2 = (int *)FUN_BATTLE_BIN__8007a4f4
                               ((uint)*(byte *)(param_1 + 0x1f),(uint)*(byte *)((int)param_1 + 0x7d),
                                (uint)*(byte *)((int)param_1 + 0x7e));
-    if (piVar1 == (int *)0x0) {
+    if (piVar2 == (int *)0x0) {
       if (*(char *)(param_1 + 0x4c) != '\x02') {
         return;
       }
-      piVar2 = FUN_BATTLE_BIN__8007a6e4((ushort)*(byte *)((int)param_1 + 0x131));
-      piVar1 = param_1;
-      if (piVar2 == (int *)0x0) {
+      piVar3 = FUN_BATTLE_BIN__8007a6e4((ushort)*(byte *)((int)param_1 + 0x131));
+      piVar2 = param_1;
+      if (piVar3 == (int *)0x0) {
         return;
       }
     }
     else {
-      piVar2 = param_1;
-      if (piVar1 == param_1) {
+      piVar3 = param_1;
+      if (piVar2 == param_1) {
         return;
       }
     }
-    FUN_BATTLE_BIN__80069130((int)piVar2,(int)piVar1);
+    FUN_BATTLE_BIN__80069130((int)piVar3,(int)piVar2);
   }
   else {
-    piVar1 = FUN_BATTLE_BIN__8007a724(*(byte *)((int)param_1 + 0x11b) & 0x7f);
-    if (piVar1 != (int *)0x0) {
-      FUN_BATTLE_BIN__80069130((int)param_1,(int)piVar1);
-      FUN_BATTLE_BIN__8006b960((int)param_1,(MusicDataHeader *)0x29);
+    pEVar1 = FUN_BATTLE_BIN__8007a724(*(byte *)((int)param_1 + 0x11b) & 0x7f);
+    if (pEVar1 != (ENTDDisplayUnitData *)0x0) {
+      FUN_BATTLE_BIN__80069130((int)param_1,(int)pEVar1);
+      FUN_BATTLE_BIN__8006b960((int)param_1,land2);
     }
   }
   return;
@@ -46318,7 +46683,7 @@ void FUN_BATTLE_BIN__8006c4f8(int *param_1)
     }
   }
   if ((DAT_BATTLE_BIN__8009621c & 0x10) != 0) {
-    FUN_BATTLE_BIN__8006b960((int)param_1,(MusicDataHeader *)0x28);
+    FUN_BATTLE_BIN__8006b960((int)param_1,land1);
     return;
   }
 LAB_BATTLE_BIN__8006c768:
@@ -46798,7 +47163,7 @@ void FUN_BATTLE_BIN__8006d434(int *param_1)
   int iVar2;
   undefined3 extraout_var;
   int iVar3;
-  int *piVar4;
+  ENTDDisplayUnitData *pEVar4;
   
   iVar2 = FUN_BATTLE_BIN__8006c2bc((int)param_1);
   FUN_BATTLE_BIN__8006af7c(param_1);
@@ -46810,9 +47175,9 @@ void FUN_BATTLE_BIN__8006d434(int *param_1)
     DAT_BATTLE_BIN__80096228 = (short)iVar3;
     if (((param_1[0x26] == (uint)*(byte *)(param_1 + 0x27)) &&
         ((*(byte *)((int)param_1 + 0x11b) & 0x80) != 0)) &&
-       (piVar4 = FUN_BATTLE_BIN__8007a724(*(byte *)((int)param_1 + 0x11b) & 0x7f),
-       piVar4 != (int *)0x0)) {
-      iVar3 = FUN_BATTLE_BIN__8007d3f4(piVar4);
+       (pEVar4 = FUN_BATTLE_BIN__8007a724(*(byte *)((int)param_1 + 0x11b) & 0x7f),
+       pEVar4 != (ENTDDisplayUnitData *)0x0)) {
+      iVar3 = FUN_BATTLE_BIN__8007d3f4((int *)pEVar4);
       DAT_BATTLE_BIN__80096228 = (short)iVar3 + -10;
     }
     if (param_1[0xb] < 1) {
@@ -46966,7 +47331,7 @@ void FUN_BATTLE_BIN__8006d818(int *param_1)
     if (*(short *)((int)param_1 + 0x1e2) == 0) {
       *(char *)((int)param_1 + 0x7f) = *(char *)((int)param_1 + 0x7f) + '\x01';
       FUN_BATTLE_BIN__80081978(0x1f,*(undefined2 *)(param_1 + 0x1c),(int)param_1);
-      FUN_BATTLE_BIN__8006b960((int)param_1,(MusicDataHeader *)0x27);
+      FUN_BATTLE_BIN__8006b960((int)param_1,dragoon_jump);
       FUN_BATTLE_BIN__80069254((int)param_1);
     }
     break;
@@ -47224,7 +47589,7 @@ undefined4 FUN_BATTLE_BIN__8006ddec(int param_1,uint param_2)
           uVar3 = 0xc;
           uVar2 = 0x3c;
         }
-        param_2 = DAT_8004594c;
+        param_2 = PAD_input2;
         if ((uVar2 < DAT_80045974) && (DAT_80045974 % uVar3 == 0)) {
 LAB_BATTLE_BIN__8006ded0:
           param_2 = DAT_80045948;
@@ -47244,34 +47609,32 @@ joined_r0x8006de44:
       if (param_1 == 1) {
         uVar2 = DAT_80045948 | DAT_80045954;
         param_2 = 0;
-        if ((DAT_8004594c & 0x1000) == 0) {
-          if ((DAT_8004594c & 0x4000) == 0) {
-            if ((DAT_8004594c & 0x8000) != 0) {
+        if ((PAD_input2 & 0x1000) == 0) {
+          if ((PAD_input2 & 0x4000) == 0) {
+            if ((PAD_input2 & 0x8000) != 0) {
               uVar3 = uVar2 & 0x4000;
               if ((uVar2 & 0x1000) != 0) goto LAB_BATTLE_BIN__8006df4c;
               goto LAB_BATTLE_BIN__8006df84;
             }
-            if ((DAT_8004594c & 0x2000) == 0) {
+            if ((PAD_input2 & 0x2000) == 0) {
               if ((DAT_80045968 & 0x1000) == 0) {
                 if ((DAT_80045968 & 0x4000) == 0) {
                   if ((DAT_80045968 & 0x8000) == 0) {
                     if ((((DAT_80045968 & 0x2000) != 0) &&
-                        (((DAT_8004594c | DAT_80045964) & 0x2000) == 0)) && ((uVar2 & 0x2000) != 0))
-                    {
+                        (((PAD_input2 | DAT_80045964) & 0x2000) == 0)) && ((uVar2 & 0x2000) != 0)) {
                       param_2 = 0x2000;
                     }
                   }
-                  else if ((((DAT_8004594c | DAT_80045964) & 0x8000) == 0) &&
-                          ((uVar2 & 0x8000) != 0)) {
+                  else if ((((PAD_input2 | DAT_80045964) & 0x8000) == 0) && ((uVar2 & 0x8000) != 0))
+                  {
                     param_2 = 0x8000;
                   }
                 }
-                else if ((((DAT_8004594c | DAT_80045964) & 0x4000) == 0) && ((uVar2 & 0x4000) != 0))
-                {
+                else if ((((PAD_input2 | DAT_80045964) & 0x4000) == 0) && ((uVar2 & 0x4000) != 0)) {
                   param_2 = 0x4000;
                 }
               }
-              else if ((((DAT_8004594c | DAT_80045964) & 0x1000) == 0) && ((uVar2 & 0x1000) != 0)) {
+              else if ((((PAD_input2 | DAT_80045964) & 0x1000) == 0) && ((uVar2 & 0x1000) != 0)) {
                 param_2 = 0x1000;
               }
             }
@@ -47516,7 +47879,7 @@ LAB_BATTLE_BIN__8006e2c8:
     uVar4 = 0x400;
   }
 LAB_BATTLE_BIN__8006e538:
-  if ((DAT_8004594c & 0x9f0) != 0) {
+  if ((PAD_input2 & 0x9f0) != 0) {
     uVar4 = 0xffffffff;
   }
   return uVar4;
@@ -47541,7 +47904,7 @@ void FUN_BATTLE_BIN__8006e55c(void)
   else {
     uVar3 = (uint)*(byte *)(piVar1[0x4d] + 0x18a);
   }
-  FUN_BATTLE_BIN__8013d634(iVar2,uVar3,0xff);
+  Store_unitname_evtblock_dat(iVar2,uVar3,0xff);
   return;
 }
 
@@ -47556,7 +47919,7 @@ void FUN_BATTLE_BIN__8006e5c0(void)
   
   piVar1 = FUN_BATTLE_BIN__8007a2b8
                      (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
-  FUN_BATTLE_BIN__8007a218();
+  get_Caster_ENTD_Dat();
   iVar2 = 4;
   if (piVar1 == (int *)0x0) {
     iVar2 = 1;
@@ -47565,7 +47928,7 @@ void FUN_BATTLE_BIN__8006e5c0(void)
   else {
     uVar3 = (uint)*(byte *)(piVar1[0x4d] + 0x18a);
   }
-  FUN_BATTLE_BIN__8013d634(iVar2,0xff,uVar3);
+  Store_unitname_evtblock_dat(iVar2,0xff,uVar3);
   return;
 }
 
@@ -47576,24 +47939,24 @@ void FUN_BATTLE_BIN__8006e634(void)
 {
   byte bVar1;
   int *piVar2;
-  int *piVar3;
+  ENTDDisplayUnitData *pEVar3;
   int iVar4;
   uint uVar5;
   
   piVar2 = FUN_BATTLE_BIN__8007a2b8
                      (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
-  piVar3 = FUN_BATTLE_BIN__8007a218();
+  pEVar3 = get_Caster_ENTD_Dat();
   iVar4 = 5;
   if (piVar2 == (int *)0x0) {
     iVar4 = 2;
-    bVar1 = *(byte *)(piVar3[0x4d] + 0x18a);
+    bVar1 = (pEVar3->UnitBattleData->CurActionTargetData).UnitID2;
     uVar5 = 0xff;
   }
   else {
-    bVar1 = *(byte *)(piVar3[0x4d] + 0x18a);
+    bVar1 = (pEVar3->UnitBattleData->CurActionTargetData).UnitID2;
     uVar5 = (uint)*(byte *)(piVar2[0x4d] + 0x18a);
   }
-  FUN_BATTLE_BIN__8013d634(iVar4,(uint)bVar1,uVar5);
+  Store_unitname_evtblock_dat(iVar4,(uint)bVar1,uVar5);
   return;
 }
 
@@ -47671,7 +48034,7 @@ undefined4 FUN_BATTLE_BIN__8006e7c8(void)
   pmVar2 = get_tile_data_ptr(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
                              DAT_BATTLE_BIN__800961b8);
   if ((DAT_800473ac & 0x1c0) == 0xc0) {
-    if ((DAT_8004594c & 0x800) != 0) {
+    if ((PAD_input2 & 0x800) != 0) {
 LAB_BATTLE_BIN__8006e8c0:
       pmVar3 = get_tile_data_ptr(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
                                  DAT_BATTLE_BIN__800961b8 ^ 1);
@@ -47804,7 +48167,7 @@ LAB_BATTLE_BIN__8006edfc:
       DAT_BATTLE_BIN__800961bc == DAT_BATTLE_BIN__800e4e98) {
     return 0;
   }
-  Call_Play_Sound(3);
+  Call_Play_Sound(cursor_move);
   DAT_BATTLE_BIN__800961c0 = 0;
   if (BattleGameState != CloseMoveHelp) {
     if ((int)BattleGameState < 0xe) {
@@ -47972,16 +48335,16 @@ void CountClock_Map_Rot(uint param_1)
 void Map_Rotation(int map_rot_speed)
 
 {
-  uint sfx_ID;
+  SFX_ID sfx_ID;
   
   if (DAT_BATTLE_BIN__800960c8 == 0) {
     if (map_rot_speed < 0) {
       Clockwise_Map_Rot(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) + map_rot_speed);
-      sfx_ID = 0xb;
+      sfx_ID = clockwise_rot;
     }
     else {
       CountClock_Map_Rot(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) + map_rot_speed);
-      sfx_ID = 0xc;
+      sfx_ID = counter_rot;
     }
     Call_PlaySound_findChannel(sfx_ID);
   }
@@ -47994,13 +48357,13 @@ void ButtonInput_Map_Rotation(void)
 
 {
   if (DAT_BATTLE_BIN__800960c8 == 0) {
-    if ((DAT_8004594c & 4) != 0) {
+    if ((PAD_input2 & 4) != 0) {
       Clockwise_Map_Rot(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) - 0x400);
-      Call_PlaySound_findChannel(0xb);
+      Call_PlaySound_findChannel(clockwise_rot);
     }
-    if ((DAT_8004594c & 8) != 0) {
+    if ((PAD_input2 & 8) != 0) {
       CountClock_Map_Rot(((int)DAT_BATTLE_BIN__800a7786 & 0xfe00U) + 0x400);
-      Call_PlaySound_findChannel(0xc);
+      Call_PlaySound_findChannel(counter_rot);
     }
   }
   return;
@@ -48042,9 +48405,9 @@ void Stop_Map_Rot(void)
   }
   DAT_BATTLE_BIN__800a7786 = (ushort)DAT_BATTLE_BIN__800c7c60 & 0xfff;
   DAT_BATTLE_BIN__800960c8 = 0;
-  Stop_Playing_SFX(0xc);
-  Stop_Playing_SFX(0xb);
-  Call_PlaySound_findChannel(0xd);
+  Stop_Playing_ENV_SFX(0xc);
+  Stop_Playing_ENV_SFX(0xb);
+  Call_PlaySound_findChannel(stop_rot);
 LAB_BATTLE_BIN__8006f46c:
   if ((int)DAT_BATTLE_BIN__800e4e88 < 0x30) {
     DAT_BATTLE_BIN__800e4e88 = DAT_80045980 * 2 + DAT_BATTLE_BIN__800e4e88;
@@ -48054,18 +48417,18 @@ LAB_BATTLE_BIN__8006f46c:
 
 
 
-void FUN_BATTLE_BIN__8006f5bc(void)
+void Do_Camera_Zoom_quick(void)
 
 {
-  uint sfx_id;
+  SFX_ID sfx_id;
   
   if (DAT_BATTLE_BIN__800960d0 == 1) {
     DAT_BATTLE_BIN__800960cc = 4;
     DAT_BATTLE_BIN__800960d0 = 4;
-    sfx_id = 0x11;
+    sfx_id = zoom_out_quick;
   }
   else {
-    sfx_id = 0xe;
+    sfx_id = zoom_in_quick;
     if (DAT_BATTLE_BIN__800960d0 != 4) {
       DAT_BATTLE_BIN__800c7c64 = 4;
       return;
@@ -48083,8 +48446,8 @@ void FUN_BATTLE_BIN__8006f5bc(void)
 void FUN_BATTLE_BIN__8006f634(void)
 
 {
-  if ((DAT_BATTLE_BIN__800960cc == 0) && ((DAT_8004594c & 1) != 0)) {
-    FUN_BATTLE_BIN__8006f5bc();
+  if ((DAT_BATTLE_BIN__800960cc == 0) && ((PAD_input2 & 1) != 0)) {
+    Do_Camera_Zoom_quick();
   }
   return;
 }
@@ -48162,7 +48525,7 @@ void FUN_BATTLE_BIN__8006f8c8(void)
   DAT_BATTLE_BIN__800960d8 = iVar2;
   DAT_BATTLE_BIN__800960d4 = iVar1;
   DAT_BATTLE_BIN__800e4e84 = 1;
-  Call_Play_Sound(0x31);
+  Call_Play_Sound(change_cam_angle);
   return;
 }
 
@@ -48171,7 +48534,7 @@ void FUN_BATTLE_BIN__8006f8c8(void)
 void FUN_BATTLE_BIN__8006f968(void)
 
 {
-  if ((DAT_BATTLE_BIN__800960d4 == 0) && ((DAT_8004594c & 2) != 0)) {
+  if ((DAT_BATTLE_BIN__800960d4 == 0) && ((PAD_input2 & 2) != 0)) {
     FUN_BATTLE_BIN__8006f8c8();
   }
   return;
@@ -48231,26 +48594,26 @@ LAB_BATTLE_BIN__8006fb14:
 void FUN_BATTLE_BIN__8006fb50(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   int iVar2;
   VECTOR local_18;
   
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar1 = get_Caster_ENTD_Dat();
   iVar2 = DAT_BATTLE_BIN__800e4e74;
   if (DAT_BATTLE_BIN__800e4e74 < 0) {
     iVar2 = DAT_BATTLE_BIN__800e4e74 + 0xfff;
   }
-  local_18.vx = (int)*(short *)(piVar1 + 0x10) - (iVar2 >> 0xc);
+  local_18.vx = (int)pEVar1->ScreenX - (iVar2 >> 0xc);
   iVar2 = DAT_BATTLE_BIN__800e4e78;
   if (DAT_BATTLE_BIN__800e4e78 < 0) {
     iVar2 = DAT_BATTLE_BIN__800e4e78 + 0xfff;
   }
-  local_18.vy = (int)*(short *)((int)piVar1 + 0x42) - (iVar2 >> 0xc);
+  local_18.vy = (int)pEVar1->ScreenZ - (iVar2 >> 0xc);
   iVar2 = DAT_BATTLE_BIN__800e4e7c;
   if (DAT_BATTLE_BIN__800e4e7c < 0) {
     iVar2 = DAT_BATTLE_BIN__800e4e7c + 0xfff;
   }
-  local_18.vz = (int)*(short *)(piVar1 + 0x11) - (iVar2 >> 0xc);
+  local_18.vz = (int)pEVar1->ScreenY - (iVar2 >> 0xc);
   VectorNormal(&local_18,(VECTOR *)&DAT_BATTLE_BIN__800a1c48);
   DAT_BATTLE_BIN__800a1c4c = DAT_BATTLE_BIN__800a1c4c << 2;
   return;
@@ -48554,45 +48917,46 @@ void FUN_BATTLE_BIN__800702e4(void)
 {
   short sVar1;
   int *piVar2;
-  int iVar3;
+  ENTDDisplayUnitData *pEVar3;
   int iVar4;
+  int iVar5;
   
   if (BattleGameState == CrystalLearn) {
     piVar2 = FUN_BATTLE_BIN__8007a2b8
                        (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
-    iVar3 = 0;
+    iVar4 = 0;
     if (piVar2 != (int *)0x0) {
-      iVar4 = (uint)((byte)(&DAT_BATTLE_BIN__8009474b)[(uint)*(byte *)((int)piVar2 + 6) * 4] >> 1) *
+      iVar5 = (uint)((byte)(&DAT_BATTLE_BIN__8009474b)[(uint)*(byte *)((int)piVar2 + 6) * 4] >> 1) *
               _DAT_BATTLE_BIN__800c7ca4;
-      iVar3 = iVar4 >> 0xc;
-      if (iVar4 < 0) {
-        iVar3 = iVar4 + 0xfff >> 0xc;
+      iVar4 = iVar5 >> 0xc;
+      if (iVar5 < 0) {
+        iVar4 = iVar5 + 0xfff >> 0xc;
       }
     }
-    if (((DAT_BATTLE_BIN__800c7c68 - 0xf9 < 0xf) && (0xa0 < DAT_BATTLE_BIN__800c7c6c - iVar3)) &&
+    if (((DAT_BATTLE_BIN__800c7c68 - 0xf9 < 0xf) && (0xa0 < DAT_BATTLE_BIN__800c7c6c - iVar4)) &&
        (DAT_BATTLE_BIN__800c7c6c < 0xb0)) goto LAB_BATTLE_BIN__80070614;
   }
   else {
     if (((BattleGameState == UnitMoving) || (BattleGameState == WaitDirection)) ||
        (BattleGameState == PreAttackAnim1)) {
-      piVar2 = FUN_BATTLE_BIN__8007a218();
-      iVar3 = (uint)((byte)(&DAT_BATTLE_BIN__8009474b)[(uint)*(byte *)((int)piVar2 + 6) * 4] >> 1) *
+      pEVar3 = get_Caster_ENTD_Dat();
+      iVar4 = (uint)((byte)(&DAT_BATTLE_BIN__8009474b)[(uint)pEVar3->SpritesheetID * 4] >> 1) *
               _DAT_BATTLE_BIN__800c7ca4;
-      if (iVar3 < 0) {
-        iVar3 = iVar3 + 0xfff;
+      if (iVar4 < 0) {
+        iVar4 = iVar4 + 0xfff;
       }
-      if (((0x9e < *(ushort *)(piVar2 + 0x48) - 0xb1) ||
-          ((int)*(short *)((int)piVar2 + 0x122) - (iVar3 >> 0xc) < 0x51)) ||
-         (0x9f < *(short *)((int)piVar2 + 0x122))) {
-        if (((*(ushort *)(piVar2 + 0x48) - 0xa1 < 0xbf) &&
-            (0x40 < (int)*(short *)((int)piVar2 + 0x122) - (iVar3 >> 0xc))) &&
-           (*(short *)((int)piVar2 + 0x122) < 0xb0)) {
+      if (((0x9e < *(ushort *)&pEVar3->field_0x120 - 0xb1) ||
+          ((int)*(short *)&pEVar3->field_0x122 - (iVar4 >> 0xc) < 0x51)) ||
+         (0x9f < *(short *)&pEVar3->field_0x122)) {
+        if (((*(ushort *)&pEVar3->field_0x120 - 0xa1 < 0xbf) &&
+            (0x40 < (int)*(short *)&pEVar3->field_0x122 - (iVar4 >> 0xc))) &&
+           (*(short *)&pEVar3->field_0x122 < 0xb0)) {
           FUN_BATTLE_BIN__8006fb50();
         }
         else {
           FUN_BATTLE_BIN__8006fc08();
         }
-        FUN_BATTLE_BIN__800700bc((int)piVar2);
+        FUN_BATTLE_BIN__800700bc((int)pEVar3);
         return;
       }
 LAB_BATTLE_BIN__80070614:
@@ -48614,21 +48978,21 @@ LAB_BATTLE_BIN__80070614:
     }
     piVar2 = FUN_BATTLE_BIN__8007a2b8
                        (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
-    iVar3 = 0;
+    iVar4 = 0;
     if (piVar2 != (int *)0x0) {
-      iVar4 = (uint)((byte)(&DAT_BATTLE_BIN__8009474b)[(uint)*(byte *)((int)piVar2 + 6) * 4] >> 1) *
+      iVar5 = (uint)((byte)(&DAT_BATTLE_BIN__8009474b)[(uint)*(byte *)((int)piVar2 + 6) * 4] >> 1) *
               _DAT_BATTLE_BIN__800c7ca4;
-      iVar3 = iVar4 >> 0xc;
-      if (iVar4 < 0) {
-        iVar3 = iVar4 + 0xfff >> 0xc;
+      iVar4 = iVar5 >> 0xc;
+      if (iVar5 < 0) {
+        iVar4 = iVar5 + 0xfff >> 0xc;
       }
     }
-    if (((DAT_BATTLE_BIN__800c7c68 - 0xb1 < 0x9f) && (0x50 < DAT_BATTLE_BIN__800c7c6c - iVar3)) &&
+    if (((DAT_BATTLE_BIN__800c7c68 - 0xb1 < 0x9f) && (0x50 < DAT_BATTLE_BIN__800c7c6c - iVar4)) &&
        (DAT_BATTLE_BIN__800c7c6c < 0xa0)) goto LAB_BATTLE_BIN__80070614;
-    if (((DAT_BATTLE_BIN__800c7c68 - 0xa1 < 0xbf) && (0x40 < DAT_BATTLE_BIN__800c7c6c - iVar3)) &&
+    if (((DAT_BATTLE_BIN__800c7c68 - 0xa1 < 0xbf) && (0x40 < DAT_BATTLE_BIN__800c7c6c - iVar4)) &&
        (DAT_BATTLE_BIN__800c7c6c < 0xb0)) {
-      iVar3 = FUN_BATTLE_BIN__8006fc68();
-      sVar1 = (short)iVar3;
+      iVar4 = FUN_BATTLE_BIN__8006fc68();
+      sVar1 = (short)iVar4;
       goto LAB_BATTLE_BIN__80070604;
     }
   }
@@ -48806,7 +49170,7 @@ void FUN_BATTLE_BIN__80070998(void)
   FUN_BATTLE_BIN__800683d4();
   DAT_BATTLE_BIN__800e4e8c = 0;
   DAT_BATTLE_BIN__8009611c = 0xff;
-  DAT_BATTLE_BIN__80096118 = 0xff;
+  AT_Unit_ID = 0xff;
   return;
 }
 
@@ -48829,13 +49193,13 @@ bool FUN_BATTLE_BIN__80070a38(int param_1)
   int iVar2;
   uint uVar3;
   
-  if ((DAT_BATTLE_BIN__80098d84 == 0x100) || (DAT_BATTLE_BIN__80098d84 == 0xff00)) {
+  if ((type_of_action == 0x100) || (type_of_action == 0xff00)) {
     uVar3 = 0;
 LAB_BATTLE_BIN__80070b18:
     bVar1 = *(byte *)(*(int *)(param_1 + 0x134) + 0x18a);
   }
   else {
-    if ((DAT_BATTLE_BIN__80098d84 != 0x200) && (uVar3 = 1, DAT_BATTLE_BIN__80098d84 != 0x300))
+    if ((type_of_action != 0x200) && (uVar3 = 1, type_of_action != 0x300))
     goto LAB_BATTLE_BIN__80070b18;
     iVar2 = FUN_BATTLE_BIN__801419b8(8,2,(uint)*(byte *)(*(int *)(param_1 + 0x134) + 0x18a),0,1);
     if ((iVar2 != 2) || (uVar3 = FUN_BATTLE_BIN__80142ba4(), uVar3 == 0)) {
@@ -48890,15 +49254,15 @@ void SetActionMenuScript(void)
 {
   bool bVar1;
   int *piVar2;
-  int *piVar3;
+  ENTDDisplayUnitData *pEVar3;
   undefined3 extraout_var;
   
   FUN_BATTLE_BIN__8006eef0();
   piVar2 = FUN_BATTLE_BIN__8007a1d4();
-  piVar3 = FUN_BATTLE_BIN__8007a218();
+  pEVar3 = get_Caster_ENTD_Dat();
   FUN_BATTLE_BIN__800683c0();
   FUN_BATTLE_BIN__80070b7c((int)piVar2);
-  bVar1 = FUN_BATTLE_BIN__80070a38((int)piVar3);
+  bVar1 = FUN_BATTLE_BIN__80070a38((int)pEVar3);
   if (CONCAT31(extraout_var,bVar1) == 0) {
     BattleGameState = IdlingActionMenus;
     DAT_BATTLE_BIN__80098db8 = 0;
@@ -48912,7 +49276,7 @@ void SetActionMenuScript(void)
 void FreeCursorSelect(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
   DAT_80045980 = 1;
   FUN_BATTLE_BIN__8006eef0();
@@ -48920,9 +49284,9 @@ void FreeCursorSelect(void)
   DAT_BATTLE_BIN__800960ec = 0;
   FUN_BATTLE_BIN__8006e55c();
   FUN_BATTLE_BIN__800683c0();
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  if (piVar1 != (int *)0x0) {
-    FUN_BATTLE_BIN__80070b7c((int)piVar1);
+  pEVar1 = get_Caster_ENTD_Dat();
+  if (pEVar1 != (ENTDDisplayUnitData *)0x0) {
+    FUN_BATTLE_BIN__80070b7c((int)pEVar1);
   }
   return;
 }
@@ -49011,62 +49375,61 @@ bool FUN_BATTLE_BIN__80070e24(void)
 
 
 
-void FUN_BATTLE_BIN__80070e6c(undefined4 param_1,int *param_2,undefined4 param_3,uint param_4)
+void betweenTurn_events(undefined4 param_1,int *param_2,undefined4 param_3,uint param_4)
 
 {
   uint uVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   int iVar3;
   
   uVar1 = FUN_BATTLE_BIN__801827f0(0);
-  DAT_BATTLE_BIN__80098d84 = uVar1 & 0xff00;
+  type_of_action = uVar1 & 0xff00;
   uVar1 = uVar1 & 0xff;
-  if (DAT_BATTLE_BIN__80098d84 == 0xff00) {
+  if (type_of_action == 0xff00) {
     return;
   }
-  piVar2 = FUN_BATTLE_BIN__8007a724((ushort)uVar1);
-  if (piVar2 == (int *)0x0) {
+  pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)uVar1);
+  if (pEVar2 == (ENTDDisplayUnitData *)0x0) {
     FUN_80044a34();
   }
   else {
-    DAT_BATTLE_BIN__80096118 = (uint)*(byte *)(piVar2 + 1);
+    AT_Unit_ID = (uint)pEVar2->ENTDID;
   }
-  if (DAT_BATTLE_BIN__80098d84 == 0x300) {
+  if (type_of_action == 0x300) {
     iVar3 = FUN_BATTLE_BIN__8018be08(uVar1);
-    piVar2[0x60] = iVar3;
+    *(int *)&pEVar2->field_0x180 = iVar3;
     if (iVar3 == -1) {
-      FUN_BATTLE_BIN__8017ec18(uVar1,(undefined2 *)(piVar2 + 0x61));
-      FUN_BATTLE_BIN__80081b88(piVar2);
+      FUN_BATTLE_BIN__8017ec18(uVar1,(undefined2 *)&pEVar2->field_0x184);
+      FUN_BATTLE_BIN__80081b88((int *)pEVar2);
     }
     goto LAB_BATTLE_BIN__80070fbc;
   }
-  if ((int)DAT_BATTLE_BIN__80098d84 < 0x301) {
-    if ((DAT_BATTLE_BIN__80098d84 == 0x100) || (DAT_BATTLE_BIN__80098d84 == 0x200)) {
-      FUN_BATTLE_BIN__8008d138((ushort)*(byte *)(piVar2 + 1));
+  if ((int)type_of_action < 0x301) {
+    if ((type_of_action == 0x100) || (type_of_action == 0x200)) {
+      FUN_BATTLE_BIN__8008d138((ushort)pEVar2->ENTDID);
       goto LAB_BATTLE_BIN__80070fbc;
     }
   }
   else {
-    if (DAT_BATTLE_BIN__80098d84 == 0x500) goto LAB_BATTLE_BIN__80070fbc;
-    if (((int)DAT_BATTLE_BIN__80098d84 < 0x501) && (DAT_BATTLE_BIN__80098d84 == 0x400)) {
+    if (type_of_action == 0x500) goto LAB_BATTLE_BIN__80070fbc;
+    if (((int)type_of_action < 0x501) && (type_of_action == 0x400)) {
       iVar3 = FUN_BATTLE_BIN__8018be08(uVar1);
-      piVar2[0x60] = iVar3;
+      *(int *)&pEVar2->field_0x180 = iVar3;
       if (iVar3 == -1) {
-        param_2 = piVar2 + 0x61;
+        param_2 = (int *)&pEVar2->field_0x184;
         FUN_BATTLE_BIN__8017ec18(uVar1,(undefined2 *)param_2);
-        FUN_BATTLE_BIN__80081b88(piVar2);
+        FUN_BATTLE_BIN__80081b88((int *)pEVar2);
       }
-      FUN_BATTLE_BIN__80068bd4((ushort)*(byte *)(piVar2 + 1),param_2,param_3,param_4);
-      FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar2 + 1));
+      FUN_BATTLE_BIN__80068bd4((ushort)pEVar2->ENTDID,param_2,param_3,param_4);
+      FUN_BATTLE_BIN__80068e30((ushort)pEVar2->ENTDID);
       goto LAB_BATTLE_BIN__80070fbc;
     }
   }
   FUN_80044a34();
 LAB_BATTLE_BIN__80070fbc:
-  piVar2 = FUN_BATTLE_BIN__8007a218();
-  if ((piVar2 != (int *)0x0) &&
-     (*(undefined *)(piVar2 + 0x4f) = 0, DAT_BATTLE_BIN__80098d84 != 0x400)) {
-    FUN_BATTLE_BIN__800683e4((int)piVar2);
+  pEVar2 = get_Caster_ENTD_Dat();
+  if ((pEVar2 != (ENTDDisplayUnitData *)0x0) && (pEVar2->CTResolved = 0, type_of_action != 0x400)) {
+    FUN_BATTLE_BIN__800683e4((int)pEVar2);
   }
   return;
 }
@@ -49078,45 +49441,45 @@ void FUN_BATTLE_BIN__80071008(undefined4 param_1,int *param_2,undefined4 param_3
 {
   bool bVar1;
   undefined3 extraout_var;
-  int *piVar2;
+  ENTDDisplayUnitData *AT_ENTD;
   undefined3 extraout_var_00;
   
   bVar1 = FUN_BATTLE_BIN__80070ddc();
   if (CONCAT31(extraout_var,bVar1) == 0) {
-    FUN_BATTLE_BIN__80068794();
+    Clear_AT_listID();
     DAT_80045980 = 1;
-    FUN_BATTLE_BIN__80070e6c(param_1,param_2,param_3,param_4);
-    piVar2 = FUN_BATTLE_BIN__8007a218();
-    if (piVar2 != (int *)0x0) {
-      DAT_BATTLE_BIN__8009611c = (uint)*(byte *)(piVar2 + 1);
-      FUN_BATTLE_BIN__80070b7c((int)piVar2);
-      if (piVar2[0x4d] == 0) {
+    betweenTurn_events(param_1,param_2,param_3,param_4);
+    AT_ENTD = get_Caster_ENTD_Dat();
+    if (AT_ENTD != (ENTDDisplayUnitData *)0x0) {
+      DAT_BATTLE_BIN__8009611c = (uint)AT_ENTD->ENTDID;
+      FUN_BATTLE_BIN__80070b7c((int)AT_ENTD);
+      if (AT_ENTD->UnitBattleData == (BattleUnitData *)0x0) {
         FreeCursorSelect();
       }
       else {
-        FUN_BATTLE_BIN__8013f900((uint)*(byte *)(piVar2[0x4d] + 0x18a));
-        FUN_BATTLE_BIN__80070b7c((int)piVar2);
-        if (((DAT_BATTLE_BIN__800960f8 == 0) || ((*(byte *)((int)piVar2 + 0x13d) & 8) != 0)) ||
-           (DAT_BATTLE_BIN__80098d84 != 0x100)) {
+        FUN_BATTLE_BIN__8013f900((uint)(AT_ENTD->UnitBattleData->CurActionTargetData).UnitID2);
+        FUN_BATTLE_BIN__80070b7c((int)AT_ENTD);
+        if (((DAT_BATTLE_BIN__800960f8 == 0) || ((AT_ENTD->ENTDFlags & 8) != 0)) ||
+           (type_of_action != 0x100)) {
           DAT_BATTLE_BIN__80098db8 = 0;
-          if ((DAT_BATTLE_BIN__80098d84 == 0x100) || (DAT_BATTLE_BIN__80098d84 == 0xff00)) {
-            FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar2 + 1));
+          if ((type_of_action == 0x100) || (type_of_action == 0xff00)) {
+            FUN_BATTLE_BIN__80068e30((ushort)AT_ENTD->ENTDID);
           }
-          bVar1 = FUN_BATTLE_BIN__80070a38((int)piVar2);
+          bVar1 = FUN_BATTLE_BIN__80070a38((int)AT_ENTD);
           if (CONCAT31(extraout_var_00,bVar1) == 0) {
-            FUN_BATTLE_BIN__8013d634(1,0xff,0xff);
+            Store_unitname_evtblock_dat(1,0xff,0xff);
             BattleGameState = Case27;
             FUN_BATTLE_BIN__8019ae30();
             DAT_BATTLE_BIN__800e4e8c = 1;
           }
           else {
-            FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar2 + 1));
+            FUN_BATTLE_BIN__80068e30((ushort)AT_ENTD->ENTDID);
           }
           DAT_BATTLE_BIN__800960f8 = 0;
         }
         else {
-          FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar2 + 1));
-          Call_Play_Sound(0x71);
+          FUN_BATTLE_BIN__80068e30((ushort)AT_ENTD->ENTDID);
+          Call_Play_Sound(AT_halt);
           FUN_BATTLE_BIN__80068768();
           FUN_BATTLE_BIN__800686b0();
           SetActionMenuScript();
@@ -49132,7 +49495,7 @@ void FUN_BATTLE_BIN__80071008(undefined4 param_1,int *param_2,undefined4 param_3
 void FUN_BATTLE_BIN__800711a4(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   uint uVar2;
   uint uVar3;
   uint uVar4;
@@ -49140,41 +49503,40 @@ void FUN_BATTLE_BIN__800711a4(void)
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = CaseB;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar1 = get_Caster_ENTD_Dat();
   FUN_BATTLE_BIN__800683d4();
   DAT_BATTLE_BIN__80098db8 = 0;
-  if (DAT_BATTLE_BIN__80098d84 == 0x500) {
+  if (type_of_action == 0x500) {
     FUN_BATTLE_BIN__8013aedc(0x3c);
-    FUN_BATTLE_BIN__801419b8
-              (10,0x183a,(uint)*(byte *)(piVar1[0x4d] + 0x18a),(uint)*(byte *)(piVar1[0x4d] + 0x18a)
-               ,1);
-    FUN_BATTLE_BIN__80081988(0x16,*(undefined2 *)(piVar1 + 0x1c),(int)piVar1);
+    uVar2 = (uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2;
+    FUN_BATTLE_BIN__801419b8(10,0x183a,uVar2,uVar2,1);
+    FUN_BATTLE_BIN__80081988(0x16,pEVar1->CurrentFacing,(int)pEVar1);
   }
   else {
     FUN_BATTLE_BIN__8013aedc(0xb4);
-    if ((piVar1[0x53] & 1U) == 0) {
+    if ((pEVar1->StatusesAdd56 & 1) == 0) {
       uVar2 = 0x183c;
-      if ((piVar1[0x53] & 8U) == 0) {
+      if ((pEVar1->StatusesAdd56 & 8) == 0) {
         uVar2 = 0;
-        uVar3 = (uint)*(byte *)(piVar1[0x4d] + 0x18a);
+        uVar3 = (uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2;
         uVar4 = 0;
         iVar5 = 0;
       }
       else {
-        uVar3 = (uint)*(byte *)(piVar1[0x4d] + 0x18a);
+        uVar3 = (uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2;
         iVar5 = 1;
         uVar4 = uVar3;
       }
     }
     else {
       uVar2 = 0x183d;
-      uVar3 = (uint)*(byte *)(piVar1[0x4d] + 0x18a);
+      uVar3 = (uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2;
       iVar5 = 1;
       uVar4 = uVar3;
     }
     FUN_BATTLE_BIN__801419b8(10,uVar2,uVar3,uVar4,iVar5);
-    FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar1 + 1));
-    FUN_BATTLE_BIN__80068bd4((ushort)*(byte *)(piVar1 + 1),uVar2,uVar3,uVar4);
+    FUN_BATTLE_BIN__80068e30((ushort)pEVar1->ENTDID);
+    FUN_BATTLE_BIN__80068bd4((ushort)pEVar1->ENTDID,uVar2,uVar3,uVar4);
   }
   return;
 }
@@ -49184,16 +49546,16 @@ void FUN_BATTLE_BIN__800711a4(void)
 void FUN_BATTLE_BIN__800712d8(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = DisableMoveAct;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  *(undefined2 *)(piVar1 + 2) = 0;
-  *(undefined *)(piVar1 + 0x6d) = 0;
+  pEVar1 = get_Caster_ENTD_Dat();
+  *(undefined2 *)&pEVar1->field_0x8 = 0;
+  (pEVar1->field377_0x18c).field_0x28 = 0;
   FUN_BATTLE_BIN__800ec718(0);
-  if ((piVar1 != (int *)0x0) && (piVar1[0x4d] != 0)) {
-    FUN_BATTLE_BIN__8013d634(3,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0);
+  if ((pEVar1 != (ENTDDisplayUnitData *)0x0) && (pEVar1->UnitBattleData != (BattleUnitData *)0x0)) {
+    Store_unitname_evtblock_dat(3,(uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,0);
   }
   return;
 }
@@ -49217,23 +49579,23 @@ void HighlightUnitsTeam(void)
 void FUN_BATTLE_BIN__800713a0(void)
 
 {
-  int *piVar1;
-  int iVar2;
+  ENTDDisplayUnitData *pEVar1;
+  BattleUnitData *pBVar2;
   uint uVar3;
   
   FUN_BATTLE_BIN__8006eef0();
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  DAT_BATTLE_BIN__8009611c = (uint)*(byte *)(piVar1 + 1);
-  FUN_BATTLE_BIN__800683e4((int)piVar1);
+  pEVar1 = get_Caster_ENTD_Dat();
+  DAT_BATTLE_BIN__8009611c = (uint)pEVar1->ENTDID;
+  FUN_BATTLE_BIN__800683e4((int)pEVar1);
   BattleGameState = MenuToTargetting;
-  if (piVar1 != (int *)0x0) {
-    iVar2 = piVar1[0x4d];
-    if (iVar2 == 0) goto code_r0x8007140c;
-    FUN_BATTLE_BIN__8013d634(3,(uint)*(byte *)(iVar2 + 0x18a),0);
+  if (pEVar1 != (ENTDDisplayUnitData *)0x0) {
+    pBVar2 = pEVar1->UnitBattleData;
+    if (pBVar2 == (BattleUnitData *)0x0) goto code_r0x8007140c;
+    Store_unitname_evtblock_dat(3,(uint)(pBVar2->CurActionTargetData).UnitID2,0);
   }
-  iVar2 = piVar1[0x4d];
+  pBVar2 = pEVar1->UnitBattleData;
 code_r0x8007140c:
-  uVar3 = FUN_BATTLE_BIN__8018114c((uint)*(byte *)(iVar2 + 0x18a));
+  uVar3 = FUN_BATTLE_BIN__8018114c((uint)(pBVar2->CurActionTargetData).UnitID2);
   FUN_BATTLE_BIN__8013cf58(uVar3);
   return;
 }
@@ -49251,7 +49613,7 @@ void FUN_BATTLE_BIN__80071434(void)
   if (piVar1 != (int *)0x0) {
     FUN_BATTLE_BIN__8006eef0();
     BattleGameState = MenuToTargetting;
-    FUN_BATTLE_BIN__8013d634(3,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0);
+    Store_unitname_evtblock_dat(3,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0);
     uVar2 = FUN_BATTLE_BIN__8018114c((uint)*(byte *)(piVar1[0x4d] + 0x18a));
     if (DAT_BATTLE_BIN__800960fc != 0) {
       if (uVar2 == 0xf) {
@@ -49277,7 +49639,7 @@ void FUN_BATTLE_BIN__800714f4(void)
                      (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
   if (piVar1 != (int *)0x0) {
     DAT_BATTLE_BIN__8009611c = (uint)*(byte *)(piVar1 + 1);
-    if ((DAT_BATTLE_BIN__800960fc == 0) && (*(byte *)(piVar1 + 1) == DAT_BATTLE_BIN__80096118)) {
+    if ((DAT_BATTLE_BIN__800960fc == 0) && (*(byte *)(piVar1 + 1) == AT_Unit_ID)) {
       if ((*(byte *)((int)piVar1 + 0x13d) & 8) == 0) {
         FUN_BATTLE_BIN__800712d8();
       }
@@ -49318,7 +49680,7 @@ void FUN_BATTLE_BIN__800715e8(void)
   FUN_BATTLE_BIN__800ec718(1);
   DAT_BATTLE_BIN__800960c4 = DAT_BATTLE_BIN__800960c0;
   DAT_BATTLE_BIN__800960c0 = 2;
-  Call_Play_Sound(1);
+  Call_Play_Sound(confirm);
   return;
 }
 
@@ -49363,21 +49725,21 @@ void FUN_BATTLE_BIN__8007171c(int param_1)
 
 {
   uint uVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   undefined4 uVar3;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = CaseA;
   uVar1 = FUN_BATTLE_BIN__80183544(param_1);
   if (-1 < (int)uVar1) {
-    piVar2 = FUN_BATTLE_BIN__8007a724((ushort)uVar1 & 0xff);
+    pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)uVar1 & 0xff);
     if ((uVar1 & 0x100) == 0) {
-      FUN_BATTLE_BIN__800683e4((int)piVar2);
+      FUN_BATTLE_BIN__800683e4((int)pEVar2);
       uVar3 = 0;
     }
     else {
-      FUN_BATTLE_BIN__80068418((int)piVar2);
-      FUN_BATTLE_BIN__8017aaf8((CurActionTargetData *)(piVar2[0x4d] + 0x16e));
+      FUN_BATTLE_BIN__80068418((int)pEVar2);
+      FUN_BATTLE_BIN__8017aaf8(&pEVar2->UnitBattleData->CurActionTargetData);
       uVar3 = 7;
     }
     FUN_BATTLE_BIN__800ec718(uVar3);
@@ -49392,13 +49754,14 @@ void FUN_BATTLE_BIN__8007171c(int param_1)
 void FUN_BATTLE_BIN__800717cc(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = UnitMove;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar1 = get_Caster_ENTD_Dat();
   FUN_BATTLE_BIN__801419b8
-            (1,0,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,*(byte *)((int)piVar1 + 0x13d) & 8);
+            (1,0,(uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,0,pEVar1->ENTDFlags & 8
+            );
   return;
 }
 
@@ -49407,13 +49770,14 @@ void FUN_BATTLE_BIN__800717cc(void)
 void FUN_BATTLE_BIN__80071824(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = CaseE;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar1 = get_Caster_ENTD_Dat();
   FUN_BATTLE_BIN__801419b8
-            (1,2,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,*(byte *)((int)piVar1 + 0x13d) & 8);
+            (1,2,(uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,0,pEVar1->ENTDFlags & 8
+            );
   return;
 }
 
@@ -49422,14 +49786,14 @@ void FUN_BATTLE_BIN__80071824(void)
 void FUN_BATTLE_BIN__8007187c(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   int *piVar2;
   int iVar3;
   
   FUN_BATTLE_BIN__8006eef0();
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar1 = get_Caster_ENTD_Dat();
   piVar2 = FUN_BATTLE_BIN__8007a1d4();
-  if ((*(byte *)((int)piVar1 + 0x13d) & 8) == 0) {
+  if ((pEVar1->ENTDFlags & 8) == 0) {
     FUN_BATTLE_BIN__800683d4();
   }
   else {
@@ -49453,13 +49817,14 @@ void FUN_BATTLE_BIN__8007187c(void)
 void OpenIllegalMoveHelp(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = IllegalMoveMenu;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar1 = get_Caster_ENTD_Dat();
   FUN_BATTLE_BIN__801419b8
-            (2,2,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,*(byte *)((int)piVar1 + 0x13d) & 8);
+            (2,2,(uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,0,pEVar1->ENTDFlags & 8
+            );
   return;
 }
 
@@ -49468,14 +49833,14 @@ void OpenIllegalMoveHelp(void)
 void SetupUnitMoving(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   int *piVar2;
   int iVar3;
   uint uVar4;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = UnitMovingSetup;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar1 = get_Caster_ENTD_Dat();
   piVar2 = FUN_BATTLE_BIN__8007a1d4();
   iVar3 = 2;
   if ((*(byte *)((int)piVar2 + 0x11b) & 0x80) == 0) {
@@ -49500,8 +49865,8 @@ void SetupUnitMoving(void)
   }
 LAB_BATTLE_BIN__80071a4c:
   FUN_BATTLE_BIN__801419b8
-            (iVar3,uVar4,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,*(byte *)((int)piVar1 + 0x13d) & 8)
-  ;
+            (iVar3,uVar4,(uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,0,
+             pEVar1->ENTDFlags & 8);
   return;
 }
 
@@ -49552,44 +49917,45 @@ void CheckUnitMoving(void)
 {
   bool bVar1;
   byte bVar2;
-  int *piVar3;
+  ENTDDisplayUnitData *pEVar3;
   int *piVar4;
   int iVar5;
   uint uVar6;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = MoveConfirmMenu;
-  piVar3 = FUN_BATTLE_BIN__8007a218();
+  pEVar3 = get_Caster_ENTD_Dat();
   piVar4 = FUN_BATTLE_BIN__8007a1d4();
   FUN_BATTLE_BIN__8013aedc(0x3c);
   if ((*(byte *)((int)piVar4 + 0x119) & 8) == 0) {
     if ((DAT_800473ac & 0x18000) == 0) {
-      FUN_BATTLE_BIN__80068534((int)piVar3,2);
+      FUN_BATTLE_BIN__80068534((int)pEVar3,2);
       iVar5 = 0xd;
     }
     else {
-      FUN_BATTLE_BIN__80068534((int)piVar3,2);
+      FUN_BATTLE_BIN__80068534((int)pEVar3,2);
       iVar5 = 0x10;
     }
     FUN_BATTLE_BIN__801419b8
-              (iVar5,0,(uint)*(byte *)(piVar3[0x4d] + 0x18a),0,*(byte *)((int)piVar3 + 0x13d) & 8);
+              (iVar5,0,(uint)(pEVar3->UnitBattleData->CurActionTargetData).UnitID2,0,
+               pEVar3->ENTDFlags & 8);
   }
   else {
     bVar1 = *(char *)((int)piVar4 + 0x11d) != -1;
     iVar5 = 0xd;
     if (bVar1) {
       uVar6 = 0;
-      bVar2 = *(byte *)(piVar3[0x4d] + 0x18a);
+      bVar2 = (pEVar3->UnitBattleData->CurActionTargetData).UnitID2;
     }
     else {
       iVar5 = 10;
       uVar6 = 0x183b;
-      bVar2 = *(byte *)(piVar3[0x4d] + 0x18a);
+      bVar2 = (pEVar3->UnitBattleData->CurActionTargetData).UnitID2;
     }
     FUN_BATTLE_BIN__801419b8(iVar5,uVar6,(uint)bVar2,0,(uint)!bVar1);
     *(undefined *)((int)piVar4 + 0x11d) = 0;
   }
-  if ((*(byte *)((int)piVar3 + 0x13d) & 8) == 0) {
+  if ((pEVar3->ENTDFlags & 8) == 0) {
     FUN_BATTLE_BIN__800683d4();
   }
   else {
@@ -49603,13 +49969,13 @@ void CheckUnitMoving(void)
 void FUN_BATTLE_BIN__80071c8c(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
   DAT_80045980 = 1;
   BattleGameState = Case25;
   DAT_BATTLE_BIN__80098db8 = 0;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  FUN_BATTLE_BIN__800683e4((int)piVar1);
+  pEVar1 = get_Caster_ENTD_Dat();
+  FUN_BATTLE_BIN__800683e4((int)pEVar1);
   FUN_BATTLE_BIN__801419b8(6,0,0,0,0);
   return;
 }
@@ -49720,177 +50086,188 @@ bool FUN_BATTLE_BIN__80071e68(int param_1)
 undefined4 MainPostMovement(void)
 
 {
-  byte bVar1;
-  bool bVar2;
-  int *piVar3;
-  int *piVar4;
-  uint uVar5;
-  uint uVar6;
-  undefined4 *puVar7;
+  ushort uVar1;
+  ushort uVar2;
+  byte bVar3;
+  bool bVar4;
+  ENTDDisplayUnitData *pEVar5;
+  int *piVar6;
+  uint uVar7;
+  uint uVar8;
+  int iVar9;
+  undefined4 *puVar10;
   undefined3 extraout_var;
   undefined3 extraout_var_00;
-  short sVar8;
-  int iVar9;
-  int *piVar10;
-  int iVar11;
-  undefined4 uVar12;
-  uint uVar13;
-  uint uVar14;
+  short sVar11;
+  undefined *puVar12;
+  BattleUnitData *pBVar13;
+  undefined4 uVar14;
+  int *piVar15;
+  uint uVar16;
+  uint uVar17;
   
-  piVar3 = FUN_BATTLE_BIN__8007a218();
-  piVar4 = FUN_BATTLE_BIN__8007a1d4();
-  piVar10 = (int *)0x0;
-  uVar14 = 0;
-  uVar13 = (uint)*(byte *)(piVar3[0x4d] + 0x18a);
-  FUN_BATTLE_BIN__801419b8(0xc,0,uVar13,0,0);
-  uVar6 = DAT_BATTLE_BIN__80096208;
+  pEVar5 = get_Caster_ENTD_Dat();
+  piVar6 = FUN_BATTLE_BIN__8007a1d4();
+  puVar12 = (undefined *)0x0;
+  uVar17 = 0;
+  uVar16 = (uint)(pEVar5->UnitBattleData->CurActionTargetData).UnitID2;
+  FUN_BATTLE_BIN__801419b8(0xc,0,uVar16,0,0);
+  uVar8 = DAT_BATTLE_BIN__80096208;
   BattleGameState = CrystalLearn;
   DAT_BATTLE_BIN__80098db8 = 0;
-  uVar5 = DAT_BATTLE_BIN__80096208 & 1;
-  *(undefined2 *)(piVar4 + 2) = 0;
-  if (uVar5 == 0) {
-    if ((uVar6 & 2) == 0) {
-      if ((uVar6 & 4) == 0) {
-        if ((uVar6 & 8) != 0) {
-          bVar1 = FUN_BATTLE_BIN__8018dbb0((BattleUnitData *)piVar4[0x4d]);
-          iVar11 = FUN_BATTLE_BIN__8018be08((uint)*(byte *)(piVar3[0x4d] + 0x18a));
-          piVar3[0x60] = iVar11;
-          if (iVar11 == -1) {
-            piVar10 = piVar3 + 0x61;
-            FUN_BATTLE_BIN__8017ec18((uint)*(byte *)(piVar3[0x4d] + 0x18a),(undefined2 *)piVar10);
-            FUN_BATTLE_BIN__80081b88(piVar3);
+  uVar7 = DAT_BATTLE_BIN__80096208 & 1;
+  *(undefined2 *)(piVar6 + 2) = 0;
+  if (uVar7 == 0) {
+    if ((uVar8 & 2) == 0) {
+      if ((uVar8 & 4) == 0) {
+        if ((uVar8 & 8) != 0) {
+          bVar3 = FUN_BATTLE_BIN__8018dbb0((BattleUnitData *)piVar6[0x4d]);
+          iVar9 = FUN_BATTLE_BIN__8018be08
+                            ((uint)(pEVar5->UnitBattleData->CurActionTargetData).UnitID2);
+          *(int *)&pEVar5->field_0x180 = iVar9;
+          if (iVar9 == -1) {
+            puVar12 = &pEVar5->field_0x184;
+            FUN_BATTLE_BIN__8017ec18
+                      ((uint)(pEVar5->UnitBattleData->CurActionTargetData).UnitID2,
+                       (undefined2 *)puVar12);
+            FUN_BATTLE_BIN__80081b88((int *)pEVar5);
           }
-          FUN_BATTLE_BIN__800803e4((int)piVar3,piVar10,uVar13,uVar14);
-          FUN_BATTLE_BIN__80083978(0,(int)piVar3);
-          FUN_BATTLE_BIN__80068ad4((int)piVar3);
+          FUN_BATTLE_BIN__800803e4((int)pEVar5,puVar12,uVar16,uVar17);
+          FUN_BATTLE_BIN__80083978(0,(int)pEVar5);
+          FUN_BATTLE_BIN__80068ad4((int)pEVar5);
           FUN_BATTLE_BIN__801419b8
-                    (0xe,CONCAT31(extraout_var,bVar1),(uint)*(byte *)(piVar3[0x4d] + 0x18a),0,1);
+                    (0xe,CONCAT31(extraout_var,bVar3),
+                     (uint)(pEVar5->UnitBattleData->CurActionTargetData).UnitID2,0,1);
           FUN_BATTLE_BIN__8019ae58
-                    (*(undefined *)(piVar4 + 0x1f),*(undefined *)((int)piVar4 + 0x7e),
-                     *(undefined *)((int)piVar4 + 0x7d));
+                    (*(undefined *)(piVar6 + 0x1f),*(undefined *)((int)piVar6 + 0x7e),
+                     *(undefined *)((int)piVar6 + 0x7d));
           return 1;
         }
-        if ((uVar6 & 0x10) == 0) {
-          if ((uVar6 & 0x200) == 0) {
-            uVar12 = 0;
-            if ((uVar6 & 0x400) == 0) {
-              FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar3 + 1));
-              FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar4 + 1));
-              bVar2 = FUN_BATTLE_BIN__80070e24();
-              if (CONCAT31(extraout_var_00,bVar2) != 0) {
+        if ((uVar8 & 0x10) == 0) {
+          if ((uVar8 & 0x200) == 0) {
+            uVar14 = 0;
+            if ((uVar8 & 0x400) == 0) {
+              FUN_BATTLE_BIN__80068e30((ushort)pEVar5->ENTDID);
+              FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar6 + 1));
+              bVar4 = FUN_BATTLE_BIN__80070e24();
+              if (CONCAT31(extraout_var_00,bVar4) != 0) {
                 return 0;
               }
               FUN_BATTLE_BIN__80071c8c();
               return 0;
             }
-            uVar6 = (uint)*(byte *)(piVar3[0x4d] + 0x18a);
-            uVar5 = 0;
-            FUN_BATTLE_BIN__801419b8(0xc,0,uVar6,0,0);
-            if (*(char *)(piVar3 + 0x4c) == '\0') {
+            uVar8 = (uint)(pEVar5->UnitBattleData->CurActionTargetData).UnitID2;
+            uVar7 = 0;
+            FUN_BATTLE_BIN__801419b8(0xc,0,uVar8,0,0);
+            if (pEVar5->MountVal == 0) {
               return 1;
             }
-            piVar3 = FUN_BATTLE_BIN__8007a6e4((ushort)*(byte *)((int)piVar3 + 0x131));
-            if (piVar3 == (int *)0x0) {
+            piVar6 = FUN_BATTLE_BIN__8007a6e4((ushort)pEVar5->MountID);
+            if (piVar6 == (int *)0x0) {
               return 1;
             }
-            FUN_BATTLE_BIN__80068bd4((ushort)*(byte *)(piVar3 + 1),uVar12,uVar6,uVar5);
-            bVar1 = *(byte *)(piVar3 + 1);
+            FUN_BATTLE_BIN__80068bd4((ushort)*(byte *)(piVar6 + 1),uVar14,uVar8,uVar7);
+            bVar3 = *(byte *)(piVar6 + 1);
           }
           else {
-            uVar12 = 0;
-            uVar6 = (uint)*(byte *)(piVar3[0x4d] + 0x18a);
-            uVar5 = 0;
-            FUN_BATTLE_BIN__801419b8(0xc,0,uVar6,0,0);
-            FUN_BATTLE_BIN__80068bd4((ushort)*(byte *)(piVar3 + 1),uVar12,uVar6,uVar5);
-            bVar1 = *(byte *)(piVar3 + 1);
+            uVar14 = 0;
+            uVar8 = (uint)(pEVar5->UnitBattleData->CurActionTargetData).UnitID2;
+            uVar7 = 0;
+            FUN_BATTLE_BIN__801419b8(0xc,0,uVar8,0,0);
+            FUN_BATTLE_BIN__80068bd4((ushort)pEVar5->ENTDID,uVar14,uVar8,uVar7);
+            bVar3 = pEVar5->ENTDID;
           }
-          FUN_BATTLE_BIN__80068e30((ushort)bVar1);
+          FUN_BATTLE_BIN__80068e30((ushort)bVar3);
           return 1;
         }
-        FUN_BATTLE_BIN__80180178((BattleUnitData *)piVar4[0x4d],1);
+        FUN_BATTLE_BIN__80180178((BattleUnitData *)piVar6[0x4d],1);
         iVar9 = 0xc;
-        iVar11 = piVar3[0x4d];
-        uVar6 = 0;
+        pBVar13 = pEVar5->UnitBattleData;
+        uVar8 = 0;
       }
       else {
-        puVar7 = FUN_BATTLE_BIN__80180230(piVar4[0x4d]);
-        DAT_BATTLE_BIN__8009620c = *puVar7;
-        _DAT_BATTLE_BIN__80096210 = puVar7[1];
-        FUN_BATTLE_BIN__8007f45c((int)piVar3,_DAT_BATTLE_BIN__80096210 & 0xff);
-        FUN_BATTLE_BIN__80081988(0x33,*(undefined2 *)(piVar3 + 0x1c),(int)piVar3);
+        puVar10 = FUN_BATTLE_BIN__80180230(piVar6[0x4d]);
+        DAT_BATTLE_BIN__8009620c = *puVar10;
+        _DAT_BATTLE_BIN__80096210 = puVar10[1];
+        FUN_BATTLE_BIN__8007f45c((int)pEVar5,_DAT_BATTLE_BIN__80096210 & 0xff);
+        FUN_BATTLE_BIN__80081988(0x33,pEVar5->CurrentFacing,(int)pEVar5);
         iVar9 = 0xf;
-        if ((*(byte *)((int)piVar3 + 0x13d) & 0x30) == 0) {
+        if ((pEVar5->ENTDFlags & 0x30) == 0) {
           FUN_BATTLE_BIN__801419b8
-                    (0xf,_DAT_BATTLE_BIN__80096210 & 0xff,(uint)*(byte *)(piVar3[0x4d] + 0x18a),0,1)
-          ;
+                    (0xf,_DAT_BATTLE_BIN__80096210 & 0xff,
+                     (uint)(pEVar5->UnitBattleData->CurActionTargetData).UnitID2,0,1);
           Play_GNRC_Tune(2);
           return 1;
         }
-        iVar11 = piVar3[0x4d];
-        uVar6 = _DAT_BATTLE_BIN__80096210 & 0xff;
+        pBVar13 = pEVar5->UnitBattleData;
+        uVar8 = _DAT_BATTLE_BIN__80096210 & 0xff;
       }
-      FUN_BATTLE_BIN__801419b8(iVar9,uVar6,(uint)*(byte *)(iVar11 + 0x18a),0,0);
+      FUN_BATTLE_BIN__801419b8(iVar9,uVar8,(uint)(pBVar13->CurActionTargetData).UnitID2,0,0);
     }
     else if (DAT_BATTLE_BIN__80096204 == 0) {
-      FUN_BATTLE_BIN__8018dd44((BattleUnitData *)piVar4[0x4d]);
-      piVar3 = piVar4 + 0x6c;
-      FUN_BATTLE_BIN__8018df0c(piVar4[0x4d],(undefined *)piVar3);
-      FUN_BATTLE_BIN__800803e4((int)piVar4,piVar3,uVar13,uVar14);
-      FUN_BATTLE_BIN__80080f44((int)piVar4);
-      FUN_BATTLE_BIN__80071de8((int)piVar4);
+      FUN_BATTLE_BIN__8018dd44((BattleUnitData *)piVar6[0x4d]);
+      piVar15 = piVar6 + 0x6c;
+      FUN_BATTLE_BIN__8018df0c(piVar6[0x4d],(undefined *)piVar15);
+      FUN_BATTLE_BIN__800803e4((int)piVar6,piVar15,uVar16,uVar17);
+      FUN_BATTLE_BIN__80080f44((int)piVar6);
+      FUN_BATTLE_BIN__80071de8((int)piVar6);
     }
     else if (DAT_BATTLE_BIN__80096204 == 1) {
-      FUN_BATTLE_BIN__80071e68((int)piVar4);
+      FUN_BATTLE_BIN__80071e68((int)piVar6);
     }
   }
   else {
-    piVar4 = FUN_BATTLE_BIN__8007a3f8
-                       ((uint)*(byte *)(piVar3 + 0x1f),(uint)*(byte *)((int)piVar3 + 0x7d),
-                        (uint)*(byte *)((int)piVar3 + 0x7e));
-    uVar6 = FUN_BATTLE_BIN__80141a8c((uint)*(byte *)(piVar3[0x4d] + 0x18a));
-    if (uVar6 == 0xffffffff) {
-      sVar8 = 0x1b;
+    piVar6 = FUN_BATTLE_BIN__8007a3f8((uint)pEVar5->MapX,(uint)pEVar5->MapY,(uint)pEVar5->MapZ);
+    uVar8 = FUN_BATTLE_BIN__80141a8c((uint)(pEVar5->UnitBattleData->CurActionTargetData).UnitID2);
+    if (uVar8 == 0xffffffff) {
+      sVar11 = 0x1b;
     }
     else {
-      FUN_BATTLE_BIN__8007f45c((int)piVar3,uVar6);
-      sVar8 = 0x39;
+      FUN_BATTLE_BIN__8007f45c((int)pEVar5,uVar8);
+      sVar11 = 0x39;
     }
-    FUN_BATTLE_BIN__80081988(sVar8,*(undefined2 *)(piVar3 + 0x1c),(int)piVar3);
-    if (uVar6 == 0xffffffff) {
-      iVar11 = piVar3[0x4d];
-      if ((*(ushort *)(iVar11 + 0x1ba) & 0x38) == 8) {
-        FUN_BATTLE_BIN__801419b8
-                  (0xc,(uint)*(byte *)(iVar11 + 0x18a),(uint)*(byte *)(iVar11 + 0x18a),0,1);
+    FUN_BATTLE_BIN__80081988(sVar11,pEVar5->CurrentFacing,(int)pEVar5);
+    if (uVar8 == 0xffffffff) {
+      pBVar13 = pEVar5->UnitBattleData;
+      uVar1._0_1_ = (pBVar13->CurActionUnitData).ModifiedENTDTeam;
+      uVar1._1_1_ = (pBVar13->CurActionUnitData).FinalInflictStatus.Status1;
+      if ((uVar1 & 0x38) == 8) {
+        uVar8 = (uint)(pBVar13->CurActionTargetData).UnitID2;
+        FUN_BATTLE_BIN__801419b8(0xc,uVar8,uVar8,0,1);
       }
       else {
-        uVar6 = (uint)*(byte *)(iVar11 + 0x18a);
-        uVar5 = 0;
-        FUN_BATTLE_BIN__801419b8(0xc,uVar6,uVar6,0,0);
-        uVar12 = 2;
-        FUN_BATTLE_BIN__80180904(piVar3[0x4d],2);
-        FUN_BATTLE_BIN__8018be08((uint)*(byte *)(piVar3[0x4d] + 0x18a));
-        FUN_BATTLE_BIN__800803e4((int)piVar3,uVar12,uVar6,uVar5);
-        FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar3 + 1));
+        uVar8 = (uint)(pBVar13->CurActionTargetData).UnitID2;
+        uVar7 = 0;
+        FUN_BATTLE_BIN__801419b8(0xc,uVar8,uVar8,0,0);
+        uVar14 = 2;
+        FUN_BATTLE_BIN__80180904((int)pEVar5->UnitBattleData,2);
+        FUN_BATTLE_BIN__8018be08((uint)(pEVar5->UnitBattleData->CurActionTargetData).UnitID2);
+        FUN_BATTLE_BIN__800803e4((int)pEVar5,uVar14,uVar8,uVar7);
+        FUN_BATTLE_BIN__80068e30((ushort)pEVar5->ENTDID);
       }
     }
     else {
-      iVar11 = piVar3[0x4d];
-      bVar2 = (*(byte *)(iVar11 + 0x1ba) & 0x30) != 0;
-      if (bVar2) {
-        bVar1 = *(byte *)(iVar11 + 0x18a);
+      pBVar13 = pEVar5->UnitBattleData;
+      bVar4 = ((pBVar13->CurActionUnitData).ModifiedENTDTeam & light_blue) !=
+              ~(is_ramza|immortal|player_control|light_blue|random_present|always_present);
+      if (bVar4) {
+        bVar3 = (pBVar13->CurActionTargetData).UnitID2;
       }
       else {
-        bVar1 = *(byte *)(iVar11 + 0x18a);
+        bVar3 = (pBVar13->CurActionTargetData).UnitID2;
       }
-      FUN_BATTLE_BIN__801419b8(0xc,(uint)bVar1,(uint)bVar1,0,(uint)!bVar2);
-      if ((*(ushort *)(piVar3[0x4d] + 0x1ba) & 0x38) != 8) {
-        FUN_BATTLE_BIN__80180904(piVar3[0x4d],4);
+      FUN_BATTLE_BIN__801419b8(0xc,(uint)bVar3,(uint)bVar3,0,(uint)!bVar4);
+      pBVar13 = pEVar5->UnitBattleData;
+      uVar2._0_1_ = (pBVar13->CurActionUnitData).ModifiedENTDTeam;
+      uVar2._1_1_ = (pBVar13->CurActionUnitData).FinalInflictStatus.Status1;
+      if ((uVar2 & 0x38) != 8) {
+        FUN_BATTLE_BIN__80180904((int)pBVar13,4);
       }
     }
-    FUN_BATTLE_BIN__80089528((uint)*(byte *)(piVar4 + 1));
-    iVar11 = FUN_BATTLE_BIN__8007d3f4(piVar3);
-    *(short *)(piVar4 + 0x1d) = 0x24 - ((short)iVar11 - *(short *)((int)piVar4 + 0x42));
-    Call_PlaySound_findChannel(0x85);
+    FUN_BATTLE_BIN__80089528((uint)*(byte *)(piVar6 + 1));
+    iVar9 = FUN_BATTLE_BIN__8007d3f4((int *)pEVar5);
+    *(short *)(piVar6 + 0x1d) = 0x24 - ((short)iVar9 - *(short *)((int)piVar6 + 0x42));
+    Call_PlaySound_findChannel(crystal_pickup);
   }
   return 1;
 }
@@ -49924,33 +50301,34 @@ void FUN_BATTLE_BIN__800723d4(void)
 void FUN_BATTLE_BIN__80072460(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   int *piVar2;
   uint uVar3;
   
   FUN_BATTLE_BIN__8006eef0();
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  DAT_BATTLE_BIN__80096218 = (int)*(short *)(piVar1 + 0x1c);
+  pEVar1 = get_Caster_ENTD_Dat();
+  DAT_BATTLE_BIN__80096218 = (int)pEVar1->CurrentFacing;
   BattleGameState = WaitDirection;
-  *(undefined2 *)(piVar1 + 2) = 0;
-  if ((*(char *)(piVar1 + 0x4c) == '\x01') &&
-     (piVar2 = FUN_BATTLE_BIN__8007a6e4((ushort)*(byte *)((int)piVar1 + 0x131)),
-     piVar2 != (int *)0x0)) {
-    FUN_BATTLE_BIN__80071cec((int)piVar1,(int)*(short *)(piVar2 + 0x1c));
-    if (piVar1[0x4d] != 0) {
+  *(undefined2 *)&pEVar1->field_0x8 = 0;
+  if ((pEVar1->MountVal == 1) &&
+     (piVar2 = FUN_BATTLE_BIN__8007a6e4((ushort)pEVar1->MountID), piVar2 != (int *)0x0)) {
+    FUN_BATTLE_BIN__80071cec((int)pEVar1,(int)*(short *)(piVar2 + 0x1c));
+    if (pEVar1->UnitBattleData != (BattleUnitData *)0x0) {
       uVar3 = (uint)*(short *)(piVar2 + 0x1c);
       if ((int)uVar3 < 0) {
         uVar3 = uVar3 + 0x3ff;
       }
       FUN_BATTLE_BIN__8017fddc
-                ((uint)*(byte *)(piVar1[0x4d] + 0x18a),*(byte *)(piVar1 + 0x1f),
-                 *(byte *)((int)piVar1 + 0x7d),(uint)*(byte *)((int)piVar1 + 0x7e),
-                 (byte)(uVar3 >> 10));
+                ((uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,pEVar1->MapX,
+                 pEVar1->MapY,(uint)pEVar1->MapZ,(byte)(uVar3 >> 10));
     }
   }
-  if ((*(byte *)((int)piVar1 + 0x13d) & 8) == 0) {
+  if ((pEVar1->ENTDFlags & 8) == 0) {
     uVar3 = FUN_BATTLE_BIN__8019abb4();
-    piVar1[0x59] = uVar3;
+    pEVar1->UsedItem2 = (char)uVar3;
+    pEVar1->field_0x165 = (char)(uVar3 >> 8);
+    pEVar1->TileOrTarget = (char)(uVar3 >> 0x10);
+    pEVar1->TargetID2 = (char)(uVar3 >> 0x18);
   }
   return;
 }
@@ -49961,37 +50339,39 @@ void FUN_BATTLE_BIN__80072544(void)
 
 {
   byte bVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   int iVar3;
   uint uVar4;
-  int *piVar5;
-  uint uVar6;
+  BattleUnitData *pBVar5;
+  int *piVar6;
   uint uVar7;
+  uint uVar8;
   
   FUN_BATTLE_BIN__8006eef0();
-  piVar2 = FUN_BATTLE_BIN__8007a218();
-  piVar5 = (int *)0x2;
-  uVar7 = 0;
-  uVar6 = (uint)*(byte *)(piVar2[0x4d] + 0x18a);
-  iVar3 = FUN_BATTLE_BIN__801419b8(8,2,uVar6,0,1);
+  pEVar2 = get_Caster_ENTD_Dat();
+  piVar6 = (int *)0x2;
+  uVar8 = 0;
+  uVar7 = (uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2;
+  iVar3 = FUN_BATTLE_BIN__801419b8(8,2,uVar7,0,1);
   if ((iVar3 == 2) && (uVar4 = FUN_BATTLE_BIN__80142ba4(), uVar4 != 0)) {
     DAT_BATTLE_BIN__800960e8 = BattleGameState;
-    FUN_BATTLE_BIN__801419b8(8,0,(uint)*(byte *)(piVar2[0x4d] + 0x18a),0,1);
+    FUN_BATTLE_BIN__801419b8(8,0,(uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2,0,1);
     FUN_BATTLE_BIN__80070998();
   }
   else {
-    iVar3 = piVar2[0x4d];
-    bVar1 = FUN_BATTLE_BIN__801832cc(iVar3);
+    pBVar5 = pEVar2->UnitBattleData;
+    bVar1 = FUN_BATTLE_BIN__801832cc((int)pBVar5);
     if ((bVar1 & 0xf) == 0) {
       BattleGameState = WaitMenu;
       FUN_BATTLE_BIN__8006e55c();
       FUN_BATTLE_BIN__801419b8
-                (3,0,(uint)*(byte *)(piVar2[0x4d] + 0x18a),0,*(byte *)((int)piVar2 + 0x13d) & 8);
+                (3,0,(uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2,0,
+                 pEVar2->ENTDFlags & 8);
     }
     else {
-      FUN_BATTLE_BIN__80071008(iVar3,piVar5,uVar6,uVar7);
+      FUN_BATTLE_BIN__80071008(pBVar5,piVar6,uVar7,uVar8);
     }
-    if ((*(byte *)((int)piVar2 + 0x13d) & 8) == 0) {
+    if ((pEVar2->ENTDFlags & 8) == 0) {
       FUN_BATTLE_BIN__800683d4();
     }
     else {
@@ -50040,10 +50420,11 @@ void FUN_BATTLE_BIN__8007273c(int param_1,int param_2)
 
 {
   short sVar1;
-  long lVar2;
-  uint uVar3;
-  int *piVar4;
-  int iVar5;
+  ENTDDisplayUnitData *pEVar2;
+  long lVar3;
+  uint uVar4;
+  int *piVar5;
+  int iVar6;
   int local_18;
   int local_10;
   
@@ -50053,46 +50434,46 @@ void FUN_BATTLE_BIN__8007273c(int param_1,int param_2)
   local_10 = 0;
   local_18 = 0;
   if (param_2 == 0) {
-    iVar5 = *(int *)(param_1 + 0x134);
-    if (*(char *)(iVar5 + 0x178) != '\x05') {
-      piVar4 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(iVar5 + 0x179));
-      if (piVar4 == (int *)0x0) goto LAB_BATTLE_BIN__80072824;
-      local_18 = (int)*(short *)(piVar4 + 0x10) - (int)*(short *)(param_1 + 0x40);
-      sVar1 = *(short *)(piVar4 + 0x11);
+    iVar6 = *(int *)(param_1 + 0x134);
+    if (*(char *)(iVar6 + 0x178) != '\x05') {
+      pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(iVar6 + 0x179));
+      if (pEVar2 == (ENTDDisplayUnitData *)0x0) goto LAB_BATTLE_BIN__80072824;
+      local_18 = (int)pEVar2->ScreenX - (int)*(short *)(param_1 + 0x40);
+      sVar1 = pEVar2->ScreenY;
       goto LAB_BATTLE_BIN__80072810;
     }
-    local_18 = *(short *)(iVar5 + 0x17a) * 0x1c - (*(short *)(param_1 + 0x40) + -0xe);
+    local_18 = *(short *)(iVar6 + 0x17a) * 0x1c - (*(short *)(param_1 + 0x40) + -0xe);
     local_10 = *(short *)(*(int *)(param_1 + 0x134) + 0x17e) * 0x1c;
-    iVar5 = *(short *)(param_1 + 0x44) + -0xe;
+    iVar6 = *(short *)(param_1 + 0x44) + -0xe;
   }
   else {
     local_18 = (int)*(short *)(param_2 + 0x40) - (int)*(short *)(param_1 + 0x40);
     sVar1 = *(short *)(param_2 + 0x44);
 LAB_BATTLE_BIN__80072810:
     local_10 = (int)sVar1;
-    iVar5 = (int)*(short *)(param_1 + 0x44);
+    iVar6 = (int)*(short *)(param_1 + 0x44);
   }
-  local_10 = local_10 - iVar5;
+  local_10 = local_10 - iVar6;
 LAB_BATTLE_BIN__80072824:
   if ((((*(uint *)(param_1 + 0x140) & 0x80074) == 0) && (*(short *)(param_1 + 0x1ac) != 0x1b8)) &&
      ((local_18 != 0 || (local_10 != 0)))) {
     FUN_BATTLE_BIN__8007270c(param_1);
-    lVar2 = ratan2(-local_10,local_18);
-    uVar3 = lVar2 - 0x200U & 0xc00;
-    *(short *)(param_1 + 0x70) = (short)uVar3;
+    lVar3 = ratan2(-local_10,local_18);
+    uVar4 = lVar3 - 0x200U & 0xc00;
+    *(short *)(param_1 + 0x70) = (short)uVar4;
     FUN_BATTLE_BIN__8017fddc
               ((uint)*(byte *)(*(int *)(param_1 + 0x134) + 0x18a),*(byte *)(param_1 + 0x7c),
-               *(byte *)(param_1 + 0x7d),(uint)*(byte *)(param_1 + 0x7e),(byte)(uVar3 >> 10));
+               *(byte *)(param_1 + 0x7d),(uint)*(byte *)(param_1 + 0x7e),(byte)(uVar4 >> 10));
     if (*(char *)(param_1 + 0x130) != '\0') {
-      piVar4 = FUN_BATTLE_BIN__8007a6e4((ushort)*(byte *)(param_1 + 0x131));
-      *(undefined2 *)(piVar4 + 0x1c) = *(undefined2 *)(param_1 + 0x70);
-      uVar3 = (uint)*(short *)(param_1 + 0x70);
-      if ((int)uVar3 < 0) {
-        uVar3 = uVar3 + 0x3ff;
+      piVar5 = FUN_BATTLE_BIN__8007a6e4((ushort)*(byte *)(param_1 + 0x131));
+      *(undefined2 *)(piVar5 + 0x1c) = *(undefined2 *)(param_1 + 0x70);
+      uVar4 = (uint)*(short *)(param_1 + 0x70);
+      if ((int)uVar4 < 0) {
+        uVar4 = uVar4 + 0x3ff;
       }
       FUN_BATTLE_BIN__8017fddc
                 ((uint)*(byte *)(*(int *)(param_1 + 0x134) + 0x18a),*(byte *)(param_1 + 0x7c),
-                 *(byte *)(param_1 + 0x7d),(uint)*(byte *)(param_1 + 0x7e),(byte)(uVar3 >> 10));
+                 *(byte *)(param_1 + 0x7d),(uint)*(byte *)(param_1 + 0x7e),(byte)(uVar4 >> 10));
     }
   }
   return;
@@ -50162,13 +50543,13 @@ void FUN_BATTLE_BIN__80072a88(void)
 void FUN_BATTLE_BIN__80072ad0(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
   DAT_80045980 = 1;
   BattleGameState = JPEXPGain;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  if (piVar1 != (int *)0x0) {
-    *(undefined2 *)(piVar1 + 2) = 0;
+  pEVar1 = get_Caster_ENTD_Dat();
+  if (pEVar1 != (ENTDDisplayUnitData *)0x0) {
+    *(undefined2 *)&pEVar1->field_0x8 = 0;
   }
   return;
 }
@@ -50189,15 +50570,15 @@ void FUN_BATTLE_BIN__80072b14(int param_1)
 void ExecuteAction(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = ActionExecuteSetup;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar1 = get_Caster_ENTD_Dat();
   FUN_BATTLE_BIN__801419b8
-            (1,(uint)(piVar1[0x5d] == 3),(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,
-             *(byte *)((int)piVar1 + 0x13d) & 8);
-  if ((*(byte *)((int)piVar1 + 0x13d) & 8) == 0) {
+            (1,(uint)(*(int *)&pEVar1->field_0x174 == 3),
+             (uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,0,pEVar1->ENTDFlags & 8);
+  if ((pEVar1->ENTDFlags & 8) == 0) {
     FUN_BATTLE_BIN__800683d4();
   }
   else {
@@ -50404,20 +50785,21 @@ void FUN_BATTLE_BIN__80073164(void)
 
 {
   int *piVar1;
-  int *piVar2;
-  int iVar3;
+  ENTDDisplayUnitData *pEVar2;
+  int *piVar3;
+  int iVar4;
   
   DAT_BATTLE_BIN__80096244 = 0;
-  iVar3 = 0;
+  iVar4 = 0;
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
-  piVar2 = piVar1;
+  piVar3 = piVar1;
   if (*(char *)((int)piVar1 + 0x18d) != '\0') {
     do {
-      iVar3 = iVar3 + 1;
-      piVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar2 + 0x18e));
-      FUN_BATTLE_BIN__80072d8c((int)piVar2);
-      piVar2 = (int *)((int)piVar1 + iVar3);
-    } while (iVar3 < (int)(uint)*(byte *)((int)piVar1 + 0x18d));
+      iVar4 = iVar4 + 1;
+      pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar3 + 0x18e));
+      FUN_BATTLE_BIN__80072d8c((int)pEVar2);
+      piVar3 = (int *)((int)piVar1 + iVar4);
+    } while (iVar4 < (int)(uint)*(byte *)((int)piVar1 + 0x18d));
   }
   return;
 }
@@ -50473,7 +50855,7 @@ void FUN_BATTLE_BIN__800732c8(undefined4 param_1,int *param_2,undefined4 param_3
   uint uVar4;
   int iVar5;
   uint uVar6;
-  int *unaff_s3;
+  ENTDDisplayUnitData *unaff_s3;
   
   BattleGameState = BattleMessageDisplay;
   DAT_80045980 = 1;
@@ -50504,8 +50886,9 @@ void FUN_BATTLE_BIN__800732c8(undefined4 param_1,int *param_2,undefined4 param_3
     if (*(char *)((int)piVar1 + 0x18d) != '\0') {
       do {
         unaff_s3 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar2 + 0x18e));
-        if (((unaff_s3 != (int *)0x0) && (unaff_s3[0x4d] != 0)) &&
-           (*(char *)(unaff_s3[0x4d] + 0x18c) != '\0')) {
+        if (((unaff_s3 != (ENTDDisplayUnitData *)0x0) &&
+            (unaff_s3->UnitBattleData != (BattleUnitData *)0x0)) &&
+           ((unaff_s3->UnitBattleData->CurActionUnitData).HitFlag != 0)) {
           FUN_BATTLE_BIN__8013aedc(0x3c);
           uVar6 = (uint)(byte)(&DAT_BATTLE_BIN__80093e12)[piVar1[0x5c] * 3];
           if (uVar6 != 0) {
@@ -50538,7 +50921,7 @@ LAB_BATTLE_BIN__80073440:
     }
     uVar6 = uVar6 | 0x1800;
     uVar3 = (uint)*(byte *)(piVar1[0x4d] + 0x18a);
-    uVar4 = (uint)*(byte *)(unaff_s3[0x4d] + 0x18a);
+    uVar4 = (uint)(unaff_s3->UnitBattleData->CurActionTargetData).UnitID2;
     iVar5 = 1;
   }
 LAB_BATTLE_BIN__800734a4:
@@ -50553,35 +50936,36 @@ LAB_BATTLE_BIN__800734a4:
 void FUN_BATTLE_BIN__800734cc(void)
 
 {
-  int *piVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar1;
+  ENTDDisplayUnitData *pEVar2;
   ushort local_18 [4];
   
   BattleGameState = LearnAbilityOnHit;
   DAT_80045980 = 1;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  FUN_BATTLE_BIN__801419b8(10,0,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,0);
+  pEVar1 = get_Caster_ENTD_Dat();
+  FUN_BATTLE_BIN__801419b8(10,0,(uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,0,0);
   FUN_BATTLE_BIN__8013aedc(0x1e);
   if (DAT_BATTLE_BIN__80096204 == 1) {
-    FUN_BATTLE_BIN__80071e68((int)piVar1);
+    FUN_BATTLE_BIN__80071e68((int)pEVar1);
   }
   else if (DAT_BATTLE_BIN__80096204 < 2) {
     if (DAT_BATTLE_BIN__80096204 == 0) {
-      FUN_BATTLE_BIN__80071de8((int)piVar1);
+      FUN_BATTLE_BIN__80071de8((int)pEVar1);
     }
   }
   else if (DAT_BATTLE_BIN__80096204 == 2) {
     _DAT_BATTLE_BIN__80096200 =
-         FUN_BATTLE_BIN__8018e6b8((uint)*(byte *)(piVar1[0x4d] + 0x18a),(short *)local_18);
+         FUN_BATTLE_BIN__8018e6b8
+                   ((uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,(short *)local_18);
     if (_DAT_BATTLE_BIN__80096200 == -1) {
       DAT_BATTLE_BIN__80096204 = DAT_BATTLE_BIN__80096204 + 1;
     }
     else {
-      piVar2 = FUN_BATTLE_BIN__8007a724(DAT_BATTLE_BIN__80096200);
+      pEVar2 = FUN_BATTLE_BIN__8007a724(DAT_BATTLE_BIN__80096200);
       FUN_BATTLE_BIN__801419b8
-                (0xb,(uint)local_18[0],(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,
-                 *(byte *)(piVar2[0x4d] + 5) & 8);
-      FUN_BATTLE_BIN__800683e4((int)piVar2);
+                (0xb,(uint)local_18[0],(uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,0
+                 ,(pEVar2->UnitBattleData->AllActionUnitData).EntdTeamFlags & 8);
+      FUN_BATTLE_BIN__800683e4((int)pEVar2);
       FUN_BATTLE_BIN__800683c0();
     }
   }
@@ -50594,23 +50978,23 @@ void FUN_BATTLE_BIN__800734cc(void)
 void FUN_BATTLE_BIN__80073638(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   int iVar2;
   
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar1 = get_Caster_ENTD_Dat();
   FUN_BATTLE_BIN__80072a88();
-  if (((piVar1 != (int *)0x0) && (piVar1[0x4d] != 0)) &&
-     (iVar2 = FUN_BATTLE_BIN__8017e7e4
-                        ((uint)*(byte *)(piVar1[0x4d] + 0x18a),(byte *)(piVar1 + 0x6c)), iVar2 == -1
-     )) {
-    *(undefined *)((int)piVar1 + 0x1b3) = 0;
-    *(undefined *)((int)piVar1 + 0x1b2) = 0;
-    *(undefined *)((int)piVar1 + 0x1b1) = 0;
-    *(undefined *)(piVar1 + 0x6c) = 0;
+  if (((pEVar1 != (ENTDDisplayUnitData *)0x0) && (pEVar1->UnitBattleData != (BattleUnitData *)0x0))
+     && (iVar2 = FUN_BATTLE_BIN__8017e7e4
+                           ((uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,
+                            &(pEVar1->field377_0x18c).EarnedEXP), iVar2 == -1)) {
+    (pEVar1->field377_0x18c).JobLevel = 0;
+    (pEVar1->field377_0x18c).Level = 0;
+    (pEVar1->field377_0x18c).EarnedJP = 0;
+    (pEVar1->field377_0x18c).EarnedEXP = 0;
   }
-  FUN_BATTLE_BIN__80080f44((int)piVar1);
+  FUN_BATTLE_BIN__80080f44((int)pEVar1);
   DAT_BATTLE_BIN__80096204 = 0;
-  FUN_BATTLE_BIN__800683e4((int)piVar1);
+  FUN_BATTLE_BIN__800683e4((int)pEVar1);
   FUN_BATTLE_BIN__800734cc();
   DAT_BATTLE_BIN__80098db8 = 0;
   VFX_canOpen = 0;
@@ -50622,13 +51006,16 @@ void FUN_BATTLE_BIN__80073638(void)
 void FUN_BATTLE_BIN__800736d4(int param_1,int param_2)
 
 {
-  int *piVar1;
-  undefined *puVar2;
-  int iVar3;
+  byte bVar1;
+  ENTDDisplayUnitData *pEVar2;
+  int *piVar3;
   int iVar4;
-  uint uVar5;
-  int iVar6;
+  undefined *puVar5;
+  BattleUnitData *pBVar6;
   int iVar7;
+  uint uVar8;
+  int iVar9;
+  int iVar10;
   ushort local_f0;
   undefined local_ee;
   undefined local_ed;
@@ -50647,7 +51034,7 @@ void FUN_BATTLE_BIN__800736d4(int param_1,int param_2)
   local_4a = *(undefined *)(param_2 + 4);
   Store_3_Halfwords(auStack_32,(ushort)*(byte *)(param_2 + 0x1a8),(ushort)*(byte *)(param_2 + 0x1aa)
                     ,(ushort)*(byte *)(param_2 + 0x1a9));
-  iVar7 = param_2 + 0x18c;
+  iVar10 = param_2 + 0x18c;
   if (local_f0 == 0) {
     if (*(char *)(param_2 + 0x19e) == '\0') {
       local_f0 = 1;
@@ -50658,75 +51045,76 @@ void FUN_BATTLE_BIN__800736d4(int param_1,int param_2)
     }
   }
   else {
-    iVar4 = 0;
+    iVar7 = 0;
     if (local_f0 != 0) {
-      iVar6 = 0;
+      iVar9 = 0;
       do {
-        piVar1 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(iVar7 + iVar4 + 2));
-        *(undefined2 *)((int)&local_ec + iVar6) = 0;
-        *(undefined *)((int)&local_ea + iVar6) = *(undefined *)(piVar1 + 1);
-        iVar3 = piVar1[0x4d];
-        if (iVar3 == 0) {
+        pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(iVar10 + iVar7 + 2));
+        *(undefined2 *)((int)&local_ec + iVar9) = 0;
+        *(byte *)((int)&local_ea + iVar9) = pEVar2->ENTDID;
+        pBVar6 = pEVar2->UnitBattleData;
+        if (pBVar6 == (BattleUnitData *)0x0) {
 LAB_BATTLE_BIN__800737b4:
-          *(undefined *)((int)&local_ea + iVar6 + 1) = 0;
+          *(undefined *)((int)&local_ea + iVar9 + 1) = 0;
         }
-        else if (*(char *)(iVar3 + 0x18d) == '\0') {
-          if (*(char *)(iVar3 + 0x18e) == '\t') {
-            *(undefined *)((int)&local_ea + iVar6 + 1) = 2;
+        else if ((pBVar6->CurActionUnitData).CritFlag == 0) {
+          bVar1 = (pBVar6->CurActionUnitData).EvadeType;
+          if (bVar1 == 9) {
+            *(undefined *)((int)&local_ea + iVar9 + 1) = 2;
           }
           else {
-            if (*(char *)(iVar3 + 0x18e) == '\0') goto LAB_BATTLE_BIN__800737b4;
-            *(undefined *)((int)&local_ea + iVar6 + 1) = 3;
+            if (bVar1 == 0) goto LAB_BATTLE_BIN__800737b4;
+            *(undefined *)((int)&local_ea + iVar9 + 1) = 3;
           }
         }
         else {
-          *(undefined *)((int)&local_ea + iVar6 + 1) = 1;
+          *(undefined *)((int)&local_ea + iVar9 + 1) = 1;
         }
-        iVar4 = iVar4 + 1;
-        iVar6 = iVar6 + 10;
-      } while (iVar4 < (int)(uint)local_f0);
+        iVar7 = iVar7 + 1;
+        iVar9 = iVar9 + 10;
+      } while (iVar7 < (int)(uint)local_f0);
     }
   }
-  iVar4 = 0;
-  uVar5 = 0;
+  iVar7 = 0;
+  uVar8 = 0;
   do {
-    if (((uVar5 != *(byte *)(param_2 + 4)) &&
-        (piVar1 = FUN_BATTLE_BIN__8007a6e4((ushort)uVar5), piVar1 != (int *)0x0)) &&
-       (piVar1[0x4d] != 0)) {
-      iVar6 = 0;
+    if (((uVar8 != *(byte *)(param_2 + 4)) &&
+        (piVar3 = FUN_BATTLE_BIN__8007a6e4((ushort)uVar8), piVar3 != (int *)0x0)) &&
+       (piVar3[0x4d] != 0)) {
+      iVar9 = 0;
       if (*(byte *)(param_2 + 0x18d) != 0) {
-        iVar3 = iVar7;
+        iVar4 = iVar10;
         do {
-          if (*(char *)(piVar1[0x4d] + 0x18a) == *(char *)(iVar3 + 2)) break;
-          iVar6 = iVar6 + 1;
-          iVar3 = iVar7 + iVar6;
-        } while (iVar6 < (int)(uint)*(byte *)(param_2 + 0x18d));
-        if (iVar6 < (int)(uint)*(byte *)(param_2 + 0x18d)) goto LAB_BATTLE_BIN__800738b0;
+          if (*(char *)(piVar3[0x4d] + 0x18a) == *(char *)(iVar4 + 2)) break;
+          iVar9 = iVar9 + 1;
+          iVar4 = iVar10 + iVar9;
+        } while (iVar9 < (int)(uint)*(byte *)(param_2 + 0x18d));
+        if (iVar9 < (int)(uint)*(byte *)(param_2 + 0x18d)) goto LAB_BATTLE_BIN__800738b0;
       }
-      puVar2 = local_42 + iVar4;
-      iVar4 = iVar4 + 1;
-      *puVar2 = *(undefined *)(piVar1 + 1);
+      puVar5 = local_42 + iVar7;
+      iVar7 = iVar7 + 1;
+      *puVar5 = *(undefined *)(piVar3 + 1);
     }
 LAB_BATTLE_BIN__800738b0:
-    uVar5 = uVar5 + 1;
-    if (0xf < (int)uVar5) {
-      local_ee = (undefined)iVar4;
+    uVar8 = uVar8 + 1;
+    if (0xf < (int)uVar8) {
+      local_ee = (undefined)iVar7;
       local_ed = *(undefined *)(param_2 + 0x19f);
       local_2a = (ushort)*(byte *)(param_2 + 0x1ab);
-      uVar5 = 0;
+      uVar8 = 0;
       if (((*(short *)(param_2 + 0x1a0) != 0) && (*(char *)(param_2 + 0x1a3) == '\0')) &&
          ((DAT_BATTLE_BIN__80096214 == 1 &&
           ((1 < *(byte *)(param_2 + 0x13a) - 0x4a && (*(byte *)(param_2 + 0x13a) != 0x4c)))))) {
         if (param_1 == 0x189) {
-          uVar5 = (uint)DAT_BATTLE_BIN__800942ab |
+          uVar8 = (uint)DAT_BATTLE_BIN__800942ab |
                   (uint)(byte)WeaponSecondary[*(byte *)(param_2 + 0x13a)].field_0x6 << 0x10;
         }
         else {
-          uVar5 = (uint)(byte)(&DAT_BATTLE_BIN__80093e10)[param_1 * 3] |
+          uVar8 = (uint)(byte)(&DAT_BATTLE_BIN__80093e10)[param_1 * 3] |
                   (uint)SecondaryAbilityData[param_1].Element << 0x10;
         }
       }
-      FUN_BATTLE_BIN__801a15b4(uVar5,param_1,(undefined4 *)&local_f0);
+      FUN_BATTLE_BIN__801a15b4(uVar8,param_1,(undefined4 *)&local_f0);
       return;
     }
   } while( true );
@@ -50737,34 +51125,38 @@ LAB_BATTLE_BIN__800738b0:
 undefined4 FUN_BATTLE_BIN__800739cc(void)
 
 {
-  int *piVar1;
-  int iVar2;
-  int *piVar3;
+  AbilityID AVar1;
+  ENTDDisplayUnitData *pEVar2;
+  int iVar3;
+  ENTDDisplayUnitData *pEVar4;
   uint unaff_s1;
   undefined uStack_30;
   undefined local_2f;
   AbilityID local_2e [11];
   
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar2 = get_Caster_ENTD_Dat();
   do {
     if (DAT_BATTLE_BIN__80096214 == 1) {
-      iVar2 = FUN_BATTLE_BIN__8017c9b8((uint)*(byte *)(piVar1[0x4d] + 0x18a));
-      if (iVar2 == 0) {
+      iVar3 = FUN_BATTLE_BIN__8017c9b8((uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2);
+      if (iVar3 == 0) {
         BattleGameState = DoEffectDamageDisp;
-        DAT_BATTLE_BIN__8009611c = (uint)*(byte *)(piVar1 + 1);
-        FUN_BATTLE_BIN__8014175c(piVar1[0x4d] + 0x16e,(uint)*(byte *)(piVar1[0x4d] + 0x18a),1);
-        *(undefined *)((int)piVar1 + 0x1b5) = 0;
+        DAT_BATTLE_BIN__8009611c = (uint)pEVar2->ENTDID;
+        FUN_BATTLE_BIN__8014175c
+                  ((int)&pEVar2->UnitBattleData->CurActionTargetData,
+                   (uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2,1);
+        AVar1 = pEVar2->UsedAbility2;
+        (pEVar2->field377_0x18c).field_0x29 = 0;
         DAT_BATTLE_BIN__80098db8 = 0;
-        piVar1[0x5c] = (int)*(short *)((int)piVar1 + 0x15e);
-        *(short *)(piVar1 + 0x4e) = *(short *)((int)piVar1 + 0x15e);
+        *(int *)&pEVar2->field_0x170 = (int)(short)AVar1;
+        pEVar2->UsedAbility = AVar1;
         unaff_s1 = 0;
       }
       else {
-        if ((-1 < iVar2) && (iVar2 < 4)) {
-          FUN_BATTLE_BIN__80080fec((int)piVar1,iVar2);
+        if ((-1 < iVar3) && (iVar3 < 4)) {
+          FUN_BATTLE_BIN__80080fec((int)pEVar2,iVar3);
         }
-        FUN_BATTLE_BIN__80082eec((int)piVar1);
-        FUN_BATTLE_BIN__80072b14((int)piVar1);
+        FUN_BATTLE_BIN__80082eec((int)pEVar2);
+        FUN_BATTLE_BIN__80072b14((int)pEVar2);
         unaff_s1 = 0xffffffff;
       }
 LAB_BATTLE_BIN__80073b4c:
@@ -50781,19 +51173,21 @@ LAB_BATTLE_BIN__80073b4c:
         goto LAB_BATTLE_BIN__80073b4c;
       }
       if (DAT_BATTLE_BIN__80096214 != 0) goto LAB_BATTLE_BIN__80073b4c;
-      unaff_s1 = FUN_BATTLE_BIN__8017defc((uint)*(byte *)(piVar1[0x4d] + 0x18a),local_2e);
+      unaff_s1 = FUN_BATTLE_BIN__8017defc
+                           ((uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2,local_2e);
 LAB_BATTLE_BIN__80073af0:
       if (unaff_s1 != 0xffffffff) {
         BattleGameState = DoEffectDamageDisp;
-        piVar3 = FUN_BATTLE_BIN__8007a724((ushort)unaff_s1);
-        DAT_BATTLE_BIN__8009611c = (uint)*(byte *)(piVar3 + 1);
+        pEVar4 = FUN_BATTLE_BIN__8007a724((ushort)unaff_s1);
+        DAT_BATTLE_BIN__8009611c = (uint)pEVar4->ENTDID;
         local_2f = 0;
-        FUN_BATTLE_BIN__8014175c((int)&uStack_30,(uint)*(byte *)(piVar3[0x4d] + 0x18a),1);
+        FUN_BATTLE_BIN__8014175c
+                  ((int)&uStack_30,(uint)(pEVar4->UnitBattleData->CurActionTargetData).UnitID2,1);
         unaff_s1 = 0;
-        *(undefined *)((int)piVar3 + 0x1b5) = 0;
+        (pEVar4->field377_0x18c).field_0x29 = 0;
         DAT_BATTLE_BIN__80098db8 = 0;
-        piVar3[0x5c] = (int)(short)local_2e[0];
-        *(AbilityID *)(piVar3 + 0x4e) = local_2e[0];
+        *(int *)&pEVar4->field_0x170 = (int)(short)local_2e[0];
+        pEVar4->UsedAbility = local_2e[0];
         goto LAB_BATTLE_BIN__80073b4c;
       }
     }
@@ -50810,11 +51204,12 @@ void FUN_BATTLE_BIN__80073b9c(void)
 
 {
   int *piVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   int iVar3;
   int *piVar4;
   uint uVar5;
   int iVar6;
+  int *piVar7;
   
   DAT_80045980 = 1;
   BattleGameState = SecondaryEffect;
@@ -50823,21 +51218,23 @@ void FUN_BATTLE_BIN__80073b9c(void)
   if (*(char *)((int)piVar1 + 0x1b5) == '\0') {
     FUN_BATTLE_BIN__8007273c((int)piVar1,0);
   }
-  piVar4 = piVar1 + 99;
+  piVar7 = piVar1 + 99;
   if ((*(char *)((int)piVar1 + 0x18d) != '\0') &&
-     (iVar6 = 0, piVar2 = piVar4, *(char *)((int)piVar1 + 0x18d) != '\0')) {
+     (iVar6 = 0, piVar4 = piVar7, *(char *)((int)piVar1 + 0x18d) != '\0')) {
     do {
-      piVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar2 + 2));
+      pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar4 + 2));
       iVar6 = iVar6 + 1;
-      if (piVar2 != (int *)0x0) {
-        iVar3 = FUN_BATTLE_BIN__8018be08((uint)*(byte *)(piVar2[0x4d] + 0x18a));
-        piVar2[0x60] = iVar3;
+      if (pEVar2 != (ENTDDisplayUnitData *)0x0) {
+        iVar3 = FUN_BATTLE_BIN__8018be08
+                          ((uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2);
+        *(int *)&pEVar2->field_0x180 = iVar3;
         if (iVar3 == -1) {
           FUN_BATTLE_BIN__8017ec18
-                    ((uint)*(byte *)(piVar2[0x4d] + 0x18a),(undefined2 *)(piVar2 + 0x61));
+                    ((uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2,
+                     (undefined2 *)&pEVar2->field_0x184);
         }
       }
-      piVar2 = (int *)((int)piVar4 + iVar6);
+      piVar4 = (int *)((int)piVar7 + iVar6);
     } while (iVar6 < (int)(uint)*(byte *)((int)piVar1 + 0x18d));
   }
   if (DAT_BATTLE_BIN__80096214 == 1) {
@@ -50845,8 +51242,8 @@ void FUN_BATTLE_BIN__80073b9c(void)
       if (((1 < *(byte *)((int)piVar1 + 0x13a) - 0x4a) && (*(char *)((int)piVar1 + 0x13a) != 'L'))
          && (*(char *)((int)piVar1 + 0x1a3) == '\0')) {
 LAB_BATTLE_BIN__80073e3c:
-        piVar4 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar1 + 0x18e));
-        FUN_BATTLE_BIN__80082c10((int)piVar1,(int)piVar4);
+        pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar1 + 0x18e));
+        FUN_BATTLE_BIN__80082c10((int)piVar1,(int)pEVar2);
         return;
       }
       if (((*(short *)(piVar1 + 0x4e) != 0) && (1 < *(byte *)((int)piVar1 + 0x13a) - 0x4a)) &&
@@ -50855,35 +51252,34 @@ LAB_BATTLE_BIN__80073e3c:
       }
     }
     if (*(char *)((int)piVar1 + 0x18d) != '\0') {
-      piVar4 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar1 + 0x18e));
+      pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar1 + 0x18e));
       goto LAB_BATTLE_BIN__80073ec0;
     }
   }
   else {
     if (*(short *)(piVar1 + 0x4e) == 0x200) {
       iVar6 = 0;
-      piVar2 = piVar4;
+      piVar4 = piVar7;
       if (*(char *)((int)piVar1 + 0x18d) == '\0') {
         return;
       }
       do {
-        piVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar2 + 2));
-        if (piVar2 != (int *)0x0) {
-          uVar5 = (uint)*(short *)(piVar2 + 0x1c);
-          *(undefined *)(piVar2 + 0x1f) = *(undefined *)(piVar1 + 0x6a);
-          *(undefined *)((int)piVar2 + 0x7d) = *(undefined *)((int)piVar1 + 0x1a9);
-          *(undefined *)((int)piVar2 + 0x7e) = *(undefined *)((int)piVar1 + 0x1aa);
+        pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar4 + 2));
+        if (pEVar2 != (ENTDDisplayUnitData *)0x0) {
+          uVar5 = (uint)pEVar2->CurrentFacing;
+          pEVar2->MapX = *(byte *)(piVar1 + 0x6a);
+          pEVar2->MapY = *(byte *)((int)piVar1 + 0x1a9);
+          pEVar2->MapZ = *(byte *)((int)piVar1 + 0x1aa);
           if ((int)uVar5 < 0) {
             uVar5 = uVar5 + 0x3ff;
           }
           FUN_BATTLE_BIN__8017fddc
-                    ((uint)*(byte *)(piVar2[0x4d] + 0x18a),*(byte *)(piVar2 + 0x1f),
-                     *(byte *)((int)piVar2 + 0x7d),(uint)*(byte *)((int)piVar2 + 0x7e),
-                     (byte)(uVar5 >> 10));
-          FUN_BATTLE_BIN__80081b0c(piVar2);
+                    ((uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2,pEVar2->MapX,
+                     pEVar2->MapY,(uint)pEVar2->MapZ,(byte)(uVar5 >> 10));
+          FUN_BATTLE_BIN__80081b0c((int *)pEVar2);
         }
         iVar6 = iVar6 + 1;
-        piVar2 = (int *)((int)piVar4 + iVar6);
+        piVar4 = (int *)((int)piVar7 + iVar6);
       } while (iVar6 < (int)(uint)*(byte *)((int)piVar1 + 0x18d));
       return;
     }
@@ -50904,13 +51300,13 @@ LAB_BATTLE_BIN__80073e3c:
       }
     }
     if (*(char *)((int)piVar1 + 0x18d) != '\0') {
-      piVar4 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar1 + 0x18e));
+      pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar1 + 0x18e));
       goto LAB_BATTLE_BIN__80073ec0;
     }
   }
-  piVar4 = (int *)0x0;
+  pEVar2 = (ENTDDisplayUnitData *)0x0;
 LAB_BATTLE_BIN__80073ec0:
-  FUN_BATTLE_BIN__8008288c((int)piVar1,(int)piVar4);
+  FUN_BATTLE_BIN__8008288c((int)piVar1,(int)pEVar2);
   return;
 }
 
@@ -50958,17 +51354,17 @@ void FUN_BATTLE_BIN__80073fb8(void)
 void FUN_BATTLE_BIN__80073fe0(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
   FUN_BATTLE_BIN__800ec718(0);
   BattleGameState = PreAttackAnim1;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  *(undefined2 *)(piVar1 + 2) = 0;
-  if ((&DAT_BATTLE_BIN__80093e10)[(uint)*(ushort *)(piVar1 + 0x4e) * 3] == '\0') {
-    FUN_BATTLE_BIN__80081978(2,*(undefined2 *)(piVar1 + 0x1c),(int)piVar1);
+  pEVar1 = get_Caster_ENTD_Dat();
+  *(undefined2 *)&pEVar1->field_0x8 = 0;
+  if ((&DAT_BATTLE_BIN__80093e10)[(uint)pEVar1->UsedAbility * 3] == '\0') {
+    FUN_BATTLE_BIN__80081978(2,pEVar1->CurrentFacing,(int)pEVar1);
   }
   else {
-    FUN_BATTLE_BIN__80082b1c((int)piVar1);
+    FUN_BATTLE_BIN__80082b1c((int)pEVar1);
   }
   FUN_BATTLE_BIN__800683d4();
   return;
@@ -50980,17 +51376,17 @@ void FUN_BATTLE_BIN__80074068(void)
 
 {
   bool bVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   undefined3 extraout_var;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = Case1d;
   DAT_BATTLE_BIN__80098db8 = 0;
-  piVar2 = FUN_BATTLE_BIN__8007a218();
-  bVar1 = FUN_BATTLE_BIN__80070a38((int)piVar2);
+  pEVar2 = get_Caster_ENTD_Dat();
+  bVar1 = FUN_BATTLE_BIN__80070a38((int)pEVar2);
   if (CONCAT31(extraout_var,bVar1) == 0) {
     BattleGameState = Case1d;
-    FUN_BATTLE_BIN__80070820((int)piVar2);
+    FUN_BATTLE_BIN__80070820((int)pEVar2);
   }
   return;
 }
@@ -51000,38 +51396,38 @@ void FUN_BATTLE_BIN__80074068(void)
 void FUN_BATTLE_BIN__800740d4(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   uint uVar2;
   
-  FUN_BATTLE_BIN__8013d634(0,0,0);
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  FUN_BATTLE_BIN__80183ba8((uint)*(byte *)(piVar1[0x4d] + 0x18a));
-  *(byte *)(piVar1 + 0x4f) = *(byte *)(piVar1 + 0x4f) | 2;
-  FUN_BATTLE_BIN__80072674((int)piVar1);
-  uVar2 = FUN_BATTLE_BIN__8017c3dc((CurActionTargetData *)(piVar1 + 0x57));
-  piVar1[0x5f] = uVar2;
+  Store_unitname_evtblock_dat(0,0,0);
+  pEVar1 = get_Caster_ENTD_Dat();
+  FUN_BATTLE_BIN__80183ba8((uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2);
+  pEVar1->CTResolved = pEVar1->CTResolved | 2;
+  FUN_BATTLE_BIN__80072674((int)pEVar1);
+  uVar2 = FUN_BATTLE_BIN__8017c3dc((CurActionTargetData *)&pEVar1->TargetID);
+  *(uint *)&pEVar1->field_0x17c = uVar2;
   if (uVar2 == 1) {
 LAB_BATTLE_BIN__80074184:
     FUN_BATTLE_BIN__8006eef0();
     BattleGameState = CommenceAtkPhaseCtrl;
     DAT_BATTLE_BIN__80098db8 = 0;
-    *(byte *)(piVar1 + 0x4f) = *(byte *)(piVar1 + 0x4f) | 2;
-    if ((&DAT_BATTLE_BIN__80093e10)[(uint)*(ushort *)(piVar1 + 0x4e) * 3] == '\0') {
+    pEVar1->CTResolved = pEVar1->CTResolved | 2;
+    if ((&DAT_BATTLE_BIN__80093e10)[(uint)pEVar1->UsedAbility * 3] == '\0') {
       return;
     }
-    FUN_BATTLE_BIN__80082b80((int)piVar1);
+    FUN_BATTLE_BIN__80082b80((int)pEVar1);
     return;
   }
   if ((int)uVar2 < 2) {
     if (uVar2 == 0) {
-      FUN_BATTLE_BIN__80082b80((int)piVar1);
+      FUN_BATTLE_BIN__80082b80((int)pEVar1);
       goto LAB_BATTLE_BIN__800741e8;
     }
   }
   else if ((uVar2 != 2) && (uVar2 == 3)) goto LAB_BATTLE_BIN__80074184;
   FUN_80044a34();
 LAB_BATTLE_BIN__800741e8:
-  FUN_BATTLE_BIN__80072b14((int)piVar1);
+  FUN_BATTLE_BIN__80072b14((int)pEVar1);
   return;
 }
 
@@ -51040,28 +51436,53 @@ LAB_BATTLE_BIN__800741e8:
 void FUN_BATTLE_BIN__80074204(void)
 
 {
-  int *piVar1;
-  int iVar2;
-  int iVar3;
-  int iVar4;
-  int iVar5;
+  SkillsetID SVar1;
+  AbilityID AVar2;
+  short sVar3;
+  short sVar4;
+  ItemID IVar5;
+  undefined uVar6;
+  byte bVar7;
+  byte bVar8;
+  short sVar9;
+  short sVar10;
+  ENTDDisplayUnitData *pEVar11;
+  BattleUnitData *pBVar12;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = CommenceAtkPhaseCtrl;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  iVar2 = piVar1[0x4d];
-  iVar3 = *(int *)(iVar2 + 0x172);
-  iVar4 = *(int *)(iVar2 + 0x176);
-  iVar5 = *(int *)(iVar2 + 0x17a);
-  piVar1[0x57] = *(int *)(iVar2 + 0x16e);
-  piVar1[0x58] = iVar3;
-  piVar1[0x59] = iVar4;
-  piVar1[0x5a] = iVar5;
-  piVar1[0x5b] = *(int *)(iVar2 + 0x17e);
-  *(undefined2 *)(piVar1 + 0x4e) = *(undefined2 *)(piVar1[0x4d] + 0x170);
-  *(byte *)(piVar1 + 0x4f) = *(byte *)(piVar1 + 0x4f) | 2;
-  if (*(short *)(piVar1 + 0x4e) != 0) {
-    FUN_BATTLE_BIN__80082b80((int)piVar1);
+  pEVar11 = get_Caster_ENTD_Dat();
+  pBVar12 = pEVar11->UnitBattleData;
+  SVar1 = (pBVar12->CurActionTargetData).SkillsetOfAttack;
+  AVar2 = (pBVar12->CurActionTargetData).AttackToUse;
+  sVar3 = (pBVar12->CurActionTargetData).CalcTypeAb;
+  sVar4 = (pBVar12->CurActionTargetData).CalcMultAb;
+  IVar5 = (pBVar12->CurActionTargetData).UsedItem;
+  uVar6 = (pBVar12->CurActionTargetData).field_0x9;
+  bVar7 = (pBVar12->CurActionTargetData).TileTarget;
+  bVar8 = (pBVar12->CurActionTargetData).TargetID;
+  sVar9 = (pBVar12->CurActionTargetData).XMapCoordTarget;
+  sVar10 = (pBVar12->CurActionTargetData).ZMapCoordTarget;
+  pEVar11->TargetID = (pBVar12->CurActionTargetData).AttackerID;
+  pEVar11->UsedSkillset = SVar1;
+  pEVar11->UsedAbility2 = AVar2;
+  pEVar11->CalcTypeAb = sVar3;
+  pEVar11->CalcMultAb = sVar4;
+  pEVar11->UsedItem2 = IVar5;
+  pEVar11->field_0x165 = uVar6;
+  pEVar11->TileOrTarget = bVar7;
+  pEVar11->TargetID2 = bVar8;
+  pEVar11->TargetX = sVar9;
+  pEVar11->TargetZ = sVar10;
+  bVar7 = (pBVar12->CurActionTargetData).DeathOnChocobo;
+  uVar6 = (pBVar12->CurActionTargetData).field_0x13;
+  pEVar11->TargetY = (pBVar12->CurActionTargetData).YMapCoordTarget;
+  pEVar11->field_0x16e = bVar7;
+  pEVar11->field_0x16f = uVar6;
+  pEVar11->UsedAbility = (pEVar11->UnitBattleData->CurActionTargetData).AttackToUse;
+  pEVar11->CTResolved = pEVar11->CTResolved | 2;
+  if (pEVar11->UsedAbility != None) {
+    FUN_BATTLE_BIN__80082b80((int)pEVar11);
   }
   return;
 }
@@ -51071,30 +51492,30 @@ void FUN_BATTLE_BIN__80074204(void)
 void SelectTargetTile(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   int iVar2;
   ushort uVar3;
   ushort uVar4;
   ushort uVar5;
   
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  *(undefined2 *)(piVar1 + 2) = 0;
-  if (piVar1[0x5d] == 2) {
-    uVar3 = (ushort)*(byte *)(piVar1 + 0x1f);
-    uVar4 = (ushort)*(byte *)((int)piVar1 + 0x7e);
-    uVar5 = (ushort)*(byte *)((int)piVar1 + 0x7d);
+  pEVar1 = get_Caster_ENTD_Dat();
+  *(undefined2 *)&pEVar1->field_0x8 = 0;
+  if (*(int *)&pEVar1->field_0x174 == 2) {
+    uVar3 = (ushort)pEVar1->MapX;
+    uVar4 = (ushort)pEVar1->MapZ;
+    uVar5 = (ushort)pEVar1->MapY;
   }
   else {
-    if ((*(byte *)((int)piVar1 + 0x13d) & 8) == 0) goto LAB_BATTLE_BIN__8007437c;
+    if ((pEVar1->ENTDFlags & 8) == 0) goto LAB_BATTLE_BIN__8007437c;
     uVar3 = (ushort)DAT_BATTLE_BIN__800961b4;
     uVar4 = (ushort)DAT_BATTLE_BIN__800961b8;
     uVar5 = (ushort)DAT_BATTLE_BIN__800961bc;
   }
-  Store_3_Halfwords((undefined2 *)(piVar1 + 0x5a),uVar3,uVar4,uVar5);
-  *(undefined *)((int)piVar1 + 0x166) = 5;
+  Store_3_Halfwords(&pEVar1->TargetX,uVar3,uVar4,uVar5);
+  pEVar1->TileOrTarget = 5;
 LAB_BATTLE_BIN__8007437c:
-  iVar2 = FUN_BATTLE_BIN__8017aaf8((CurActionTargetData *)(piVar1 + 0x57));
-  piVar1[0x5e] = iVar2;
+  iVar2 = FUN_BATTLE_BIN__8017aaf8((CurActionTargetData *)&pEVar1->TargetID);
+  *(int *)&pEVar1->field_0x178 = iVar2;
   if (iVar2 < 2) {
     if (iVar2 < 0) {
       if (iVar2 == -1) {
@@ -51127,13 +51548,14 @@ LAB_BATTLE_BIN__8007437c:
 void FUN_BATTLE_BIN__80074470(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = IllegalRange;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar1 = get_Caster_ENTD_Dat();
   FUN_BATTLE_BIN__801419b8
-            (4,5,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,*(byte *)((int)piVar1 + 0x13d) & 8);
+            (4,5,(uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,0,pEVar1->ENTDFlags & 8
+            );
   return;
 }
 
@@ -51142,18 +51564,18 @@ void FUN_BATTLE_BIN__80074470(void)
 int FUN_BATTLE_BIN__800744c8(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  *(undefined2 *)(piVar1 + 2) = 0;
-  switch(piVar1[0x5d]) {
+  pEVar1 = get_Caster_ENTD_Dat();
+  *(undefined2 *)&pEVar1->field_0x8 = 0;
+  switch(*(undefined4 *)&pEVar1->field_0x174) {
   case 0:
   case 1:
     FUN_BATTLE_BIN__8006eef0();
     BattleGameState = TargettingRange;
     FUN_BATTLE_BIN__800ec718(2);
     FUN_BATTLE_BIN__8006e5c0();
-    if ((*(byte *)((int)piVar1 + 0x13d) & 8) == 0) {
+    if ((pEVar1->ENTDFlags & 8) == 0) {
       FUN_BATTLE_BIN__800683d4();
     }
     else {
@@ -51165,11 +51587,11 @@ int FUN_BATTLE_BIN__800744c8(void)
     SelectTargetTile();
     FUN_BATTLE_BIN__8006e5c0();
     break;
-  case -1:
+  case 0xffffffff:
   case 3:
     FUN_BATTLE_BIN__800714f4();
   }
-  return piVar1[0x5d];
+  return *(int *)&pEVar1->field_0x174;
 }
 
 
@@ -51177,17 +51599,17 @@ int FUN_BATTLE_BIN__800744c8(void)
 void FUN_BATTLE_BIN__800745ac(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   int *piVar2;
   int iVar3;
   uint uVar4;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = ConfirmAction;
-  piVar1 = FUN_BATTLE_BIN__8007a218();
+  pEVar1 = get_Caster_ENTD_Dat();
   piVar2 = FUN_BATTLE_BIN__8007a2b8
                      (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
-  iVar3 = piVar1[0x5d];
+  iVar3 = *(int *)&pEVar1->field_0x174;
   if (iVar3 == 1) {
     if (piVar2 == (int *)0x0) {
       uVar4 = 2;
@@ -51221,7 +51643,8 @@ void FUN_BATTLE_BIN__800745ac(void)
   }
 LAB_BATTLE_BIN__8007467c:
   FUN_BATTLE_BIN__801419b8
-            (4,uVar4,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,*(byte *)((int)piVar1 + 0x13d) & 8);
+            (4,uVar4,(uint)(pEVar1->UnitBattleData->CurActionTargetData).UnitID2,0,
+             pEVar1->ENTDFlags & 8);
   return;
 }
 
@@ -51308,7 +51731,7 @@ void FUN_BATTLE_BIN__8007485c(void)
   piVar1 = FUN_BATTLE_BIN__8007a2b8
                      (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
   if ((piVar1 != (int *)0x0) && (piVar1[0x4d] != 0)) {
-    FUN_BATTLE_BIN__8013d634(3,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0);
+    Store_unitname_evtblock_dat(3,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0);
   }
   piVar2 = FUN_BATTLE_BIN__8007a1d4();
   if (piVar1 == (int *)0x0) {
@@ -51339,7 +51762,7 @@ void FUN_BATTLE_BIN__80074930(void)
   piVar1 = FUN_BATTLE_BIN__8007a2b8
                      (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,DAT_BATTLE_BIN__800961b8);
   if ((piVar1 != (int *)0x0) && (piVar1[0x4d] != 0)) {
-    FUN_BATTLE_BIN__8013d634(3,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0);
+    Store_unitname_evtblock_dat(3,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0);
   }
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
   FUN_BATTLE_BIN__801419b8(9,0,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,1);
@@ -51355,7 +51778,7 @@ void FUN_BATTLE_BIN__800749c8(void)
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = Case23;
-  FUN_BATTLE_BIN__8013d634(1,0xff,0xff);
+  Store_unitname_evtblock_dat(1,0xff,0xff);
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
   FUN_BATTLE_BIN__801419b8(1,0,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0,1);
   DAT_BATTLE_BIN__80098db8 = 0;
@@ -51369,15 +51792,16 @@ void FUN_BATTLE_BIN__80074a3c(void)
 
 {
   int *piVar1;
+  ENTDDisplayUnitData *pEVar2;
   
   FUN_BATTLE_BIN__8006eef0();
   BattleGameState = Case24;
   piVar1 = FUN_BATTLE_BIN__8007a1d4();
-  piVar1 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(piVar1[0x4d] + 0x1b9));
-  FUN_BATTLE_BIN__800683e4((int)piVar1);
-  FUN_BATTLE_BIN__80070820((int)piVar1);
-  if ((piVar1 != (int *)0x0) && (piVar1[0x4d] != 0)) {
-    FUN_BATTLE_BIN__8013d634(3,(uint)*(byte *)(piVar1[0x4d] + 0x18a),0);
+  pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(piVar1[0x4d] + 0x1b9));
+  FUN_BATTLE_BIN__800683e4((int)pEVar2);
+  FUN_BATTLE_BIN__80070820((int)pEVar2);
+  if ((pEVar2 != (ENTDDisplayUnitData *)0x0) && (pEVar2->UnitBattleData != (BattleUnitData *)0x0)) {
+    Store_unitname_evtblock_dat(3,(uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2,0);
   }
   return;
 }
@@ -51433,6 +51857,7 @@ void FUN_BATTLE_BIN__80074bf8(undefined4 param_1,undefined4 param_2,undefined4 p
 {
   uint *puVar1;
   int *piVar2;
+  ENTDDisplayUnitData *pEVar3;
   
   ButtonInput_Map_Rotation();
   FUN_BATTLE_BIN__8006f634();
@@ -51441,25 +51866,25 @@ void FUN_BATTLE_BIN__80074bf8(undefined4 param_1,undefined4 param_2,undefined4 p
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar1 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar1,DAT_80045944);
-  if ((DAT_8004594c & 0x100) == 0) {
-    if ((DAT_8004594c & 0x80) == 0) {
-      if ((DAT_8004594c & 0x20) == 0) {
-        if ((DAT_8004594c & 0x40) == 0) {
-          if ((DAT_8004594c & 0x800) == 0) {
-            if ((DAT_8004594c & 0x10) != 0) {
-              FUN_BATTLE_BIN__80068794();
-              Call_Play_Sound(1);
+  if ((PAD_input2 & 0x100) == 0) {
+    if ((PAD_input2 & 0x80) == 0) {
+      if ((PAD_input2 & 0x20) == 0) {
+        if ((PAD_input2 & 0x40) == 0) {
+          if ((PAD_input2 & 0x800) == 0) {
+            if ((PAD_input2 & 0x10) != 0) {
+              Clear_AT_listID();
+              Call_Play_Sound(confirm);
               FreeCursorMiniMenu();
             }
           }
           else if ((DAT_800473ac & 0x1c0) != 0xc0) {
-            Call_Play_Sound(1);
+            Call_Play_Sound(confirm);
             FUN_BATTLE_BIN__800686b0();
             FUN_BATTLE_BIN__8006e55c();
           }
         }
         else {
-          FUN_BATTLE_BIN__80068794();
+          Clear_AT_listID();
           piVar2 = FUN_BATTLE_BIN__8007a2b8
                              (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
                               DAT_BATTLE_BIN__800961b8);
@@ -51471,14 +51896,14 @@ void FUN_BATTLE_BIN__80074bf8(undefined4 param_1,undefined4 param_2,undefined4 p
       }
       else {
         FUN_BATTLE_BIN__800ec718(0);
-        Call_Play_Sound(1);
+        Call_Play_Sound(confirm);
         piVar2 = FUN_BATTLE_BIN__8007a2b8
                            (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
                             DAT_BATTLE_BIN__800961b8);
         if (piVar2 == (int *)0x0) {
-          piVar2 = FUN_BATTLE_BIN__8007a218();
-          if (piVar2 != (int *)0x0) {
-            FUN_BATTLE_BIN__800683e4((int)piVar2);
+          pEVar3 = get_Caster_ENTD_Dat();
+          if (pEVar3 != (ENTDDisplayUnitData *)0x0) {
+            FUN_BATTLE_BIN__800683e4((int)pEVar3);
             SetActionMenuScript();
           }
         }
@@ -51488,12 +51913,12 @@ void FUN_BATTLE_BIN__80074bf8(undefined4 param_1,undefined4 param_2,undefined4 p
       }
     }
     else {
-      FUN_BATTLE_BIN__80068794();
+      Clear_AT_listID();
       HighlightUnitsTeam();
     }
   }
   else {
-    FUN_BATTLE_BIN__80068794();
+    Clear_AT_listID();
     FUN_BATTLE_BIN__80070cdc();
   }
   return;
@@ -51579,7 +52004,7 @@ void FUN_BATTLE_BIN__80074f5c(undefined4 param_1,undefined4 param_2,undefined4 p
   if (uVar3 == 0) {
     FreeCursorSelect();
   }
-  if ((DAT_8004594c & 0x100) != 0) {
+  if ((PAD_input2 & 0x100) != 0) {
     OpenHelpMenu();
   }
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
@@ -51595,7 +52020,7 @@ LAB_BATTLE_BIN__800752a0:
     FUN_BATTLE_BIN__800747b8();
     return;
   }
-  uVar3 = DAT_BATTLE_BIN__80096118;
+  uVar3 = AT_Unit_ID;
   if (0xe < iVar8) {
     if (iVar8 == 0x12) {
       FUN_BATTLE_BIN__80070b7c((int)piVar6);
@@ -51616,7 +52041,7 @@ LAB_BATTLE_BIN__800752b4:
     }
 LAB_BATTLE_BIN__800750a0:
     DAT_BATTLE_BIN__8009611c = uVar3;
-    FUN_BATTLE_BIN__80068794();
+    Clear_AT_listID();
     FUN_BATTLE_BIN__800717cc();
     return;
   }
@@ -51648,7 +52073,7 @@ LAB_BATTLE_BIN__800750a0:
   if (iVar8 != 1) {
     return;
   }
-  FUN_BATTLE_BIN__80068794();
+  Clear_AT_listID();
   switch(*(undefined *)((int)piVar5 + 5)) {
   default:
     iVar8 = piVar5[1];
@@ -51728,92 +52153,95 @@ void FUN_BATTLE_BIN__80075310(undefined4 param_1,undefined4 param_2,undefined4 p
 {
   ushort uVar1;
   uint *puVar2;
-  int *piVar3;
+  ENTDDisplayUnitData *pEVar3;
   int iVar4;
-  uint uVar5;
+  int *piVar5;
+  uint uVar6;
   
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar2 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar2,DAT_80045944);
-  piVar3 = FUN_BATTLE_BIN__8007a218();
-  if ((0x1e < *(ushort *)(piVar3 + 2)) && (*(char *)(piVar3 + 0x6d) == '\0')) {
+  pEVar3 = get_Caster_ENTD_Dat();
+  if ((0x1e < *(ushort *)&pEVar3->field_0x8) && ((pEVar3->field377_0x18c).field_0x28 == '\0')) {
     DAT_80045980 = 2;
-    iVar4 = FUN_BATTLE_BIN__80193e50((uint)*(byte *)(piVar3[0x4d] + 0x18a),piVar3 + 0x56);
+    iVar4 = FUN_BATTLE_BIN__80193e50
+                      ((uint)(pEVar3->UnitBattleData->CurActionTargetData).UnitID2,
+                       (undefined4 *)&pEVar3->field_0x158);
     if (iVar4 == 0) {
-      if (piVar3[0x56] == 1) {
-        *(undefined *)(piVar3 + 0x57) = *(undefined *)(piVar3[0x4d] + 0x18a);
-        FUN_BATTLE_BIN__8017c3b8((CurActionTargetData *)(piVar3 + 0x57));
+      if (*(int *)&pEVar3->field_0x158 == 1) {
+        pEVar3->TargetID = (pEVar3->UnitBattleData->CurActionTargetData).UnitID2;
+        FUN_BATTLE_BIN__8017c3b8((CurActionTargetData *)&pEVar3->TargetID);
       }
-      *(undefined *)(piVar3 + 0x6d) = 1;
+      (pEVar3->field377_0x18c).field_0x28 = 1;
       DAT_80045980 = 1;
     }
   }
-  uVar1 = *(ushort *)(piVar3 + 2);
-  *(ushort *)(piVar3 + 2) = uVar1 + 1;
+  uVar1 = *(ushort *)&pEVar3->field_0x8;
+  *(ushort *)&pEVar3->field_0x8 = uVar1 + 1;
   if (uVar1 < 0x1f) {
     return;
   }
-  if (*(char *)(piVar3 + 0x6d) == '\0') {
+  if ((pEVar3->field377_0x18c).field_0x28 == '\0') {
     return;
   }
-  iVar4 = piVar3[0x56];
+  iVar4 = *(int *)&pEVar3->field_0x158;
   if (iVar4 != 1) {
-    uVar5 = DAT_BATTLE_BIN__80096118;
+    uVar6 = AT_Unit_ID;
     if (iVar4 < 2) {
       if (iVar4 != 0) {
         return;
       }
-      if (*(char *)(piVar3 + 0x4c) != '\0') {
-        piVar3 = FUN_BATTLE_BIN__8007a6e4((ushort)*(byte *)((int)piVar3 + 0x131));
-        uVar5 = (uint)*(byte *)(piVar3 + 1);
+      if (pEVar3->MountVal != 0) {
+        piVar5 = FUN_BATTLE_BIN__8007a6e4((ushort)pEVar3->MountID);
+        uVar6 = (uint)*(byte *)(piVar5 + 1);
       }
     }
     else {
       if (iVar4 == 2) {
-        *(byte *)(piVar3 + 0x4f) = *(byte *)(piVar3 + 0x4f) | 3;
-        FUN_BATTLE_BIN__80183c6c((uint)*(byte *)(piVar3[0x4d] + 0x18a));
+        pEVar3->CTResolved = pEVar3->CTResolved | 3;
+        FUN_BATTLE_BIN__80183c6c((uint)(pEVar3->UnitBattleData->CurActionTargetData).UnitID2);
         goto LAB_BATTLE_BIN__800755dc;
       }
       if (iVar4 != 0x19) {
         return;
       }
     }
-    DAT_BATTLE_BIN__8009611c = uVar5;
+    DAT_BATTLE_BIN__8009611c = uVar6;
     FUN_BATTLE_BIN__800717cc();
     return;
   }
-  switch(*(undefined *)((int)piVar3 + 0x15d)) {
+  switch(pEVar3->UsedSkillset) {
   default:
-    *(undefined2 *)(piVar3 + 0x4e) = *(undefined2 *)((int)piVar3 + 0x15e);
-    uVar5 = FUN_BATTLE_BIN__8017a8c0((CurActionTargetData *)(piVar3 + 0x57));
-    piVar3[0x5d] = uVar5;
-    if (uVar5 != 2) {
-      if ((int)uVar5 < 3) {
-        if ((int)uVar5 < 0) goto LAB_BATTLE_BIN__800755b0;
+    pEVar3->UsedAbility = pEVar3->UsedAbility2;
+    uVar6 = FUN_BATTLE_BIN__8017a8c0((CurActionTargetData *)&pEVar3->TargetID);
+    *(uint *)&pEVar3->field_0x174 = uVar6;
+    if (uVar6 != 2) {
+      if ((int)uVar6 < 3) {
+        if ((int)uVar6 < 0) goto LAB_BATTLE_BIN__800755b0;
       }
-      else if (uVar5 != 3) goto LAB_BATTLE_BIN__800755b0;
+      else if (uVar6 != 3) goto LAB_BATTLE_BIN__800755b0;
       ExecuteAction();
       return;
     }
 LAB_BATTLE_BIN__800755b0:
     SelectTargetTile();
     return;
-  case 2:
-    FUN_BATTLE_BIN__80183e00((uint)*(byte *)(piVar3[0x4d] + 0x18a));
-    *(byte *)(piVar3 + 0x4f) = *(byte *)(piVar3 + 0x4f) | 2;
-    FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar3 + 1));
-    FUN_BATTLE_BIN__80183ba8((uint)*(byte *)(piVar3[0x4d] + 0x18a));
+  case Defend:
+    FUN_BATTLE_BIN__80183e00((uint)(pEVar3->UnitBattleData->CurActionTargetData).UnitID2);
+    pEVar3->CTResolved = pEVar3->CTResolved | 2;
+    FUN_BATTLE_BIN__80068e30((ushort)pEVar3->ENTDID);
+    FUN_BATTLE_BIN__80183ba8((uint)(pEVar3->UnitBattleData->CurActionTargetData).UnitID2);
     break;
-  case 3:
-    *(byte *)(piVar3 + 0x4f) = *(byte *)(piVar3 + 0x4f) | 2;
-    FUN_BATTLE_BIN__80183de0(piVar3[0x4d]);
-    FUN_BATTLE_BIN__80199ec8((uint)*(byte *)(piVar3[0x4d] + 0x18a));
-    FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar3 + 1));
-    FUN_BATTLE_BIN__80183ba8((uint)*(byte *)(piVar3[0x4d] + 0x18a));
+  case EqChng:
+    pEVar3->CTResolved = pEVar3->CTResolved | 2;
+    FUN_BATTLE_BIN__80183de0((int)pEVar3->UnitBattleData);
+    FUN_BATTLE_BIN__80199ec8((uint)(pEVar3->UnitBattleData->CurActionTargetData).UnitID2);
+    FUN_BATTLE_BIN__80068e30((ushort)pEVar3->ENTDID);
+    FUN_BATTLE_BIN__80183ba8((uint)(pEVar3->UnitBattleData->CurActionTargetData).UnitID2);
     break;
-  case 4:
-  case 0x18:
-    FUN_BATTLE_BIN__80183ba8((uint)*(byte *)(piVar3[0x4d] + 0x18a));
+  case DEPRECATED:
+  case Mimic:
+    FUN_BATTLE_BIN__80183ba8((uint)(pEVar3->UnitBattleData->CurActionTargetData).UnitID2);
   }
 LAB_BATTLE_BIN__800755dc:
   FUN_BATTLE_BIN__80071c8c();
@@ -51834,7 +52262,7 @@ void FUN_BATTLE_BIN__800755fc(undefined4 param_1,undefined4 param_2,undefined4 p
     DAT_BATTLE_BIN__800960ec = 0;
     piVar2 = FUN_BATTLE_BIN__8007a1d4();
     if (piVar2 != (int *)0x0) {
-      if (*(byte *)(piVar2 + 1) == DAT_BATTLE_BIN__80096118) {
+      if (*(byte *)(piVar2 + 1) == AT_Unit_ID) {
         FUN_BATTLE_BIN__800713a0();
       }
       else {
@@ -51855,12 +52283,12 @@ void FUN_BATTLE_BIN__80075690(undefined4 param_1,undefined4 param_2,undefined4 p
 {
   uint *puVar1;
   
-  if ((DAT_8004594c & 0x40) != 0) {
+  if ((PAD_input2 & 0x40) != 0) {
     param_2 = 1;
     FUN_BATTLE_BIN__800ec718(0);
     DAT_BATTLE_BIN__800960c0 = DAT_BATTLE_BIN__800960c4;
     param_1 = 2;
-    Call_Play_Sound(2);
+    Call_Play_Sound(cancel);
     FreeCursorSelect();
   }
   ButtonInput_Map_Rotation();
@@ -51881,7 +52309,7 @@ void FUN_BATTLE_BIN__8007571c(undefined4 param_1,undefined4 param_2,undefined4 p
   uint *puVar2;
   
   uVar1 = FUN_BATTLE_BIN__8013d578();
-  if ((DAT_8004594c & 0x100) == 0) {
+  if ((PAD_input2 & 0x100) == 0) {
     if (uVar1 == 0) {
       DAT_BATTLE_BIN__800960c0 = DAT_800473ac & 7;
       FreeCursorSelect();
@@ -51926,7 +52354,7 @@ void FUN_BATTLE_BIN__80075820(undefined4 param_1,undefined4 param_2,undefined4 p
 {
   uint *puVar1;
   
-  if (((DAT_8004594c & 0x20) != 0) || ((DAT_8004594c & 0x40) != 0)) {
+  if (((PAD_input2 & 0x20) != 0) || ((PAD_input2 & 0x40) != 0)) {
     FUN_BATTLE_BIN__8007169c();
   }
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
@@ -51970,67 +52398,72 @@ void FUN_BATTLE_BIN__8007587c(undefined4 param_1,undefined4 param_2,undefined4 p
 void FUN_BATTLE_BIN__80075910(undefined4 param_1,undefined4 param_2,undefined4 param_3,uint param_4)
 
 {
-  ushort uVar1;
-  int *piVar2;
-  int *piVar3;
-  uint *puVar4;
+  undefined2 uVar1;
+  short sVar2;
+  ushort uVar3;
+  ENTDDisplayUnitData *pEVar4;
   int *piVar5;
-  int iVar6;
-  int iVar7;
+  uint *puVar6;
+  int *piVar7;
   int iVar8;
-  int *piVar9;
+  int iVar9;
+  int iVar10;
+  int *piVar11;
+  int *piVar12;
   
-  piVar2 = FUN_BATTLE_BIN__8007a218();
-  piVar3 = FUN_BATTLE_BIN__8007a1d4();
+  pEVar4 = get_Caster_ENTD_Dat();
+  piVar5 = FUN_BATTLE_BIN__8007a1d4();
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
-  puVar4 = (uint *)Get_OTAG_List();
-  FUN_BATTLE_BIN__8013f520(puVar4,DAT_80045944);
-  if ((*(byte *)((int)piVar2 + 0x13d) & 8) == 0) {
-    uVar1 = *(ushort *)(piVar2 + 2);
-    *(ushort *)(piVar2 + 2) = uVar1 + 1;
-    if (0x1e < uVar1) {
-      piVar5 = (int *)FUN_BATTLE_BIN__801766b4
-                                ((uint)*(byte *)(piVar3[0x4d] + 0x18a),
-                                 (byte)*(undefined2 *)(piVar2 + 0x57),
-                                 (byte)*(undefined2 *)(piVar2 + 0x58),
-                                 (byte)*(undefined2 *)((int)piVar2 + 0x15e));
+  puVar6 = (uint *)Get_OTAG_List();
+  FUN_BATTLE_BIN__8013f520(puVar6,DAT_80045944);
+  if ((pEVar4->ENTDFlags & 8) == 0) {
+    uVar3 = *(ushort *)&pEVar4->field_0x8;
+    *(ushort *)&pEVar4->field_0x8 = uVar3 + 1;
+    if (0x1e < uVar3) {
+      uVar1._0_1_ = pEVar4->TargetID;
+      uVar1._1_1_ = pEVar4->UsedSkillset;
+      piVar7 = (int *)FUN_BATTLE_BIN__801766b4
+                                ((uint)*(byte *)(piVar5[0x4d] + 0x18a),(byte)uVar1,
+                                 (byte)pEVar4->CalcTypeAb,(byte)pEVar4->UsedAbility2);
       FUN_BATTLE_BIN__800ec718(0);
-      piVar9 = piVar3 + 0x27;
-      if (piVar5 == (int *)0x0) {
+      piVar11 = piVar5 + 0x27;
+      if (piVar7 == (int *)0x0) {
         SetActionMenuScript();
       }
       else {
-        DAT_BATTLE_BIN__800961b4 = (int)*(short *)(piVar2 + 0x57);
-        DAT_BATTLE_BIN__800961b8 = (int)*(short *)((int)piVar2 + 0x15e);
-        DAT_BATTLE_BIN__800961bc = (int)*(short *)(piVar2 + 0x58);
-        piVar2 = piVar5 + 0x20;
-        if ((((uint)piVar5 | (uint)piVar9) & 3) == 0) {
+        sVar2._0_1_ = pEVar4->TargetID;
+        sVar2._1_1_ = pEVar4->UsedSkillset;
+        DAT_BATTLE_BIN__800961b4 = (int)sVar2;
+        DAT_BATTLE_BIN__800961b8 = (int)pEVar4->UsedAbility2;
+        DAT_BATTLE_BIN__800961bc = (int)pEVar4->CalcTypeAb;
+        piVar12 = piVar7 + 0x20;
+        if ((((uint)piVar7 | (uint)piVar11) & 3) == 0) {
           do {
-            iVar6 = piVar5[1];
-            iVar7 = piVar5[2];
-            iVar8 = piVar5[3];
-            *piVar9 = *piVar5;
-            piVar9[1] = iVar6;
-            piVar9[2] = iVar7;
-            piVar9[3] = iVar8;
-            piVar5 = piVar5 + 4;
-            piVar9 = piVar9 + 4;
-          } while (piVar5 != piVar2);
+            iVar8 = piVar7[1];
+            iVar9 = piVar7[2];
+            iVar10 = piVar7[3];
+            *piVar11 = *piVar7;
+            piVar11[1] = iVar8;
+            piVar11[2] = iVar9;
+            piVar11[3] = iVar10;
+            piVar7 = piVar7 + 4;
+            piVar11 = piVar11 + 4;
+          } while (piVar7 != piVar12);
         }
         else {
           do {
-            iVar6 = piVar5[1];
-            iVar7 = piVar5[2];
-            iVar8 = piVar5[3];
-            *piVar9 = *piVar5;
-            piVar9[1] = iVar6;
-            piVar9[2] = iVar7;
-            piVar9[3] = iVar8;
-            piVar5 = piVar5 + 4;
-            piVar9 = piVar9 + 4;
-          } while (piVar5 != piVar2);
+            iVar8 = piVar7[1];
+            iVar9 = piVar7[2];
+            iVar10 = piVar7[3];
+            *piVar11 = *piVar7;
+            piVar11[1] = iVar8;
+            piVar11[2] = iVar9;
+            piVar11[3] = iVar10;
+            piVar7 = piVar7 + 4;
+            piVar11 = piVar11 + 4;
+          } while (piVar7 != piVar12);
         }
-        piVar3[0xe] = 0x2000;
+        piVar5[0xe] = 0x2000;
         SetupUnitMoving();
       }
     }
@@ -52040,61 +52473,61 @@ void FUN_BATTLE_BIN__80075910(undefined4 param_1,undefined4 param_2,undefined4 p
     ButtonInput_Map_Rotation();
     FUN_BATTLE_BIN__8006f634();
     FUN_BATTLE_BIN__8006f968();
-    if ((DAT_8004594c & 0x20) == 0) {
-      if ((DAT_8004594c & 0x40) == 0) {
-        if ((DAT_8004594c & 0x10) != 0) {
-          piVar2 = FUN_BATTLE_BIN__8007a218();
-          FUN_BATTLE_BIN__800683e4((int)piVar2);
+    if ((PAD_input2 & 0x20) == 0) {
+      if ((PAD_input2 & 0x40) == 0) {
+        if ((PAD_input2 & 0x10) != 0) {
+          pEVar4 = get_Caster_ENTD_Dat();
+          FUN_BATTLE_BIN__800683e4((int)pEVar4);
           FUN_BATTLE_BIN__8006e55c();
         }
       }
       else {
         FUN_BATTLE_BIN__800ec718(0);
-        FUN_BATTLE_BIN__800683e4((int)piVar2);
+        FUN_BATTLE_BIN__800683e4((int)pEVar4);
         FUN_BATTLE_BIN__800713a0();
       }
     }
     else {
-      piVar2 = (int *)FUN_BATTLE_BIN__801766b4
-                                ((uint)*(byte *)(piVar3[0x4d] + 0x18a),
+      piVar7 = (int *)FUN_BATTLE_BIN__801766b4
+                                ((uint)*(byte *)(piVar5[0x4d] + 0x18a),
                                  (byte)DAT_BATTLE_BIN__800961b4,(byte)DAT_BATTLE_BIN__800961bc,
                                  (byte)DAT_BATTLE_BIN__800961b8);
-      piVar5 = piVar3 + 0x27;
-      if (piVar2 == (int *)0x0) {
+      piVar11 = piVar5 + 0x27;
+      if (piVar7 == (int *)0x0) {
         OpenIllegalMoveHelp();
       }
       else {
-        if ((((uint)piVar2 | (uint)piVar5) & 3) == 0) {
-          piVar9 = piVar2 + 0x20;
+        if ((((uint)piVar7 | (uint)piVar11) & 3) == 0) {
+          piVar12 = piVar7 + 0x20;
           do {
-            iVar6 = piVar2[1];
-            iVar7 = piVar2[2];
-            iVar8 = piVar2[3];
-            *piVar5 = *piVar2;
-            piVar5[1] = iVar6;
-            piVar5[2] = iVar7;
-            piVar5[3] = iVar8;
-            piVar2 = piVar2 + 4;
-            piVar5 = piVar5 + 4;
-          } while (piVar2 != piVar9);
+            iVar8 = piVar7[1];
+            iVar9 = piVar7[2];
+            iVar10 = piVar7[3];
+            *piVar11 = *piVar7;
+            piVar11[1] = iVar8;
+            piVar11[2] = iVar9;
+            piVar11[3] = iVar10;
+            piVar7 = piVar7 + 4;
+            piVar11 = piVar11 + 4;
+          } while (piVar7 != piVar12);
         }
         else {
-          piVar9 = piVar2 + 0x20;
+          piVar12 = piVar7 + 0x20;
           do {
-            iVar6 = piVar2[1];
-            iVar7 = piVar2[2];
-            iVar8 = piVar2[3];
-            *piVar5 = *piVar2;
-            piVar5[1] = iVar6;
-            piVar5[2] = iVar7;
-            piVar5[3] = iVar8;
-            piVar2 = piVar2 + 4;
-            piVar5 = piVar5 + 4;
-          } while (piVar2 != piVar9);
+            iVar8 = piVar7[1];
+            iVar9 = piVar7[2];
+            iVar10 = piVar7[3];
+            *piVar11 = *piVar7;
+            piVar11[1] = iVar8;
+            piVar11[2] = iVar9;
+            piVar11[3] = iVar10;
+            piVar7 = piVar7 + 4;
+            piVar11 = piVar11 + 4;
+          } while (piVar7 != piVar12);
         }
-        piVar3[0xe] = 0x2000;
+        piVar5[0xe] = 0x2000;
         FUN_BATTLE_BIN__800ec718(0);
-        Call_Play_Sound(1);
+        Call_Play_Sound(confirm);
         SetupUnitMoving();
       }
     }
@@ -52322,7 +52755,7 @@ void FUN_BATTLE_BIN__8007601c(int param_1,int param_2)
   *(byte *)(param_1 + 0x13c) = *(byte *)(param_1 + 0x13c) | 1;
   FUN_BATTLE_BIN__80183bcc((uint)*(byte *)(*(int *)(param_1 + 0x134) + 0x18a));
   if (((*(byte *)(param_1 + 0x13d) & 8) != 0) && ((*(byte *)(param_1 + 0x119) & 8) == 0)) {
-    Call_Play_Sound(1);
+    Call_Play_Sound(confirm);
   }
   FUN_BATTLE_BIN__80068494();
   FUN_BATTLE_BIN__800723d4();
@@ -52336,7 +52769,7 @@ void FUN_BATTLE_BIN__800761cc(undefined4 param_1,undefined4 param_2,undefined4 p
 {
   uint *puVar1;
   int *piVar2;
-  int *piVar3;
+  ENTDDisplayUnitData *pEVar3;
   int *piVar4;
   int iVar5;
   
@@ -52344,7 +52777,7 @@ void FUN_BATTLE_BIN__800761cc(undefined4 param_1,undefined4 param_2,undefined4 p
   puVar1 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar1,DAT_80045944);
   piVar2 = FUN_BATTLE_BIN__8013f978();
-  piVar3 = FUN_BATTLE_BIN__8007a218();
+  pEVar3 = get_Caster_ENTD_Dat();
   piVar4 = FUN_BATTLE_BIN__8007a1d4();
   iVar5 = *piVar2;
   if (iVar5 != 8) {
@@ -52365,7 +52798,7 @@ void FUN_BATTLE_BIN__800761cc(undefined4 param_1,undefined4 param_2,undefined4 p
     return;
   }
 LAB_BATTLE_BIN__8007625c:
-  FUN_BATTLE_BIN__8007601c((int)piVar3,(int)piVar4);
+  FUN_BATTLE_BIN__8007601c((int)pEVar3,(int)piVar4);
   return;
 }
 
@@ -52377,7 +52810,7 @@ void FUN_BATTLE_BIN__8007629c(undefined4 param_1,undefined4 param_2,undefined4 p
   bool bVar1;
   uint *puVar2;
   int *piVar3;
-  int *piVar4;
+  ENTDDisplayUnitData *pEVar4;
   undefined3 extraout_var;
   int iVar5;
   
@@ -52385,7 +52818,7 @@ void FUN_BATTLE_BIN__8007629c(undefined4 param_1,undefined4 param_2,undefined4 p
   puVar2 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar2,DAT_80045944);
   piVar3 = FUN_BATTLE_BIN__8013f978();
-  piVar4 = FUN_BATTLE_BIN__8007a218();
+  pEVar4 = get_Caster_ENTD_Dat();
   iVar5 = *piVar3;
   if (iVar5 != 8) {
     if (iVar5 < 9) {
@@ -52398,7 +52831,7 @@ void FUN_BATTLE_BIN__8007629c(undefined4 param_1,undefined4 param_2,undefined4 p
       return;
     }
   }
-  bVar1 = FUN_BATTLE_BIN__80183d70((uint)*(byte *)(piVar4[0x4d] + 0x18a));
+  bVar1 = FUN_BATTLE_BIN__80183d70((uint)(pEVar4->UnitBattleData->CurActionTargetData).UnitID2);
   if (CONCAT31(extraout_var,bVar1) != 1) {
     FUN_BATTLE_BIN__80071c8c();
     return;
@@ -52446,77 +52879,80 @@ void FUN_BATTLE_BIN__80076430(undefined4 param_1,undefined4 param_2,undefined4 p
 
 {
   ushort uVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   uint *puVar3;
   int iVar4;
   int *piVar5;
-  undefined4 uVar6;
-  int *piVar7;
+  ENTDDisplayUnitData *pEVar6;
+  undefined4 uVar7;
   
-  piVar2 = FUN_BATTLE_BIN__8007a218();
+  pEVar2 = get_Caster_ENTD_Dat();
   FUN_BATTLE_BIN__80086b44();
   if (DAT_BATTLE_BIN__800960f0 != 1) {
     FUN_BATTLE_BIN__8008719c(param_1,param_2,param_3,param_4);
   }
-  if ((*(byte *)((int)piVar2 + 0x13d) & 8) != 0) {
+  if ((pEVar2->ENTDFlags & 8) != 0) {
     FUN_BATTLE_BIN__80089384();
   }
   FUN_BATTLE_BIN__80086dc4();
   puVar3 = (uint *)Get_OTAG_List();
   piVar5 = DAT_80045944;
   FUN_BATTLE_BIN__8013f520(puVar3,(uint)DAT_80045944);
-  if ((*(byte *)((int)piVar2 + 0x13d) & 8) == 0) {
-    piVar7 = (int *)piVar2[0x59];
-    piVar5 = piVar2;
-    if ((int)piVar7 < 4) {
-      piVar7 = (int *)((int)piVar7 << 10);
-      FUN_BATTLE_BIN__80071cec((int)piVar2,(int)piVar7);
-      if ((*(char *)(piVar2 + 0x4c) != '\0') &&
-         (piVar5 = FUN_BATTLE_BIN__8007a6e4((ushort)*(byte *)((int)piVar2 + 0x131)),
-         piVar5 != (int *)0x0)) {
-        piVar7 = (int *)(piVar2[0x59] << 10);
-        FUN_BATTLE_BIN__80071cec((int)piVar5,(int)piVar7);
+  if ((pEVar2->ENTDFlags & 8) == 0) {
+    piVar5 = *(int **)&pEVar2->UsedItem2;
+    pEVar6 = pEVar2;
+    if ((int)piVar5 < 4) {
+      piVar5 = (int *)((int)piVar5 << 10);
+      FUN_BATTLE_BIN__80071cec((int)pEVar2,(int)piVar5);
+      if ((pEVar2->MountVal != 0) &&
+         (pEVar6 = (ENTDDisplayUnitData *)FUN_BATTLE_BIN__8007a6e4((ushort)pEVar2->MountID),
+         pEVar6 != (ENTDDisplayUnitData *)0x0)) {
+        iVar4._0_1_ = pEVar2->UsedItem2;
+        iVar4._1_1_ = pEVar2->field_0x165;
+        iVar4._2_1_ = pEVar2->TileOrTarget;
+        iVar4._3_1_ = pEVar2->TargetID2;
+        piVar5 = (int *)(iVar4 << 10);
+        FUN_BATTLE_BIN__80071cec((int)pEVar6,(int)piVar5);
       }
     }
-    uVar1 = *(ushort *)(piVar2 + 2);
-    *(ushort *)(piVar2 + 2) = uVar1 + 1;
+    uVar1 = *(ushort *)&pEVar2->field_0x8;
+    *(ushort *)&pEVar2->field_0x8 = uVar1 + 1;
     if (0x1e < uVar1) {
-      if (piVar2[0x4d] != 0) {
-        FUN_BATTLE_BIN__80183c6c((uint)*(byte *)(piVar2[0x4d] + 0x18a));
-        FUN_BATTLE_BIN__80076358((int)piVar2);
-        piVar5 = piVar2;
+      if (pEVar2->UnitBattleData != (BattleUnitData *)0x0) {
+        FUN_BATTLE_BIN__80183c6c((uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2);
+        FUN_BATTLE_BIN__80076358((int)pEVar2);
+        pEVar6 = pEVar2;
       }
-      FUN_BATTLE_BIN__80071008(piVar5,piVar7,param_3,param_4);
+      FUN_BATTLE_BIN__80071008(pEVar6,piVar5,param_3,param_4);
     }
   }
   else {
     ButtonInput_Map_Rotation();
     FUN_BATTLE_BIN__8006f634();
     FUN_BATTLE_BIN__8006f968();
-    if ((DAT_8004594c & 0x20) == 0) {
-      if ((DAT_8004594c & 0x40) != 0) {
+    if ((PAD_input2 & 0x20) == 0) {
+      if ((PAD_input2 & 0x40) != 0) {
         FUN_BATTLE_BIN__80071c8c();
       }
     }
     else {
-      if (piVar2[0x4d] != 0) {
-        FUN_BATTLE_BIN__80183c6c((uint)*(byte *)(piVar2[0x4d] + 0x18a));
-        FUN_BATTLE_BIN__80076358((int)piVar2);
+      if (pEVar2->UnitBattleData != (BattleUnitData *)0x0) {
+        FUN_BATTLE_BIN__80183c6c((uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2);
+        FUN_BATTLE_BIN__80076358((int)pEVar2);
       }
-      uVar6 = 1;
-      Call_Play_Sound(1);
-      FUN_BATTLE_BIN__80071008(uVar6,piVar5,param_3,param_4);
+      uVar7 = 1;
+      Call_Play_Sound(confirm);
+      FUN_BATTLE_BIN__80071008(uVar7,piVar5,param_3,param_4);
     }
     iVar4 = FUN_BATTLE_BIN__8006ddec(1,(uint)piVar5);
     if ((iVar4 != -1) && (iVar4 != DAT_BATTLE_BIN__80096218)) {
-      Call_Play_Sound(3);
+      Call_Play_Sound(cursor_move);
       DAT_BATTLE_BIN__80096218 = iVar4;
     }
-    FUN_BATTLE_BIN__80071cec((int)piVar2,iVar4);
-    if ((*(char *)(piVar2 + 0x4c) != '\0') &&
-       (piVar2 = FUN_BATTLE_BIN__8007a6e4((ushort)*(byte *)((int)piVar2 + 0x131)),
-       piVar2 != (int *)0x0)) {
-      FUN_BATTLE_BIN__80071cec((int)piVar2,iVar4);
+    FUN_BATTLE_BIN__80071cec((int)pEVar2,iVar4);
+    if ((pEVar2->MountVal != 0) &&
+       (piVar5 = FUN_BATTLE_BIN__8007a6e4((ushort)pEVar2->MountID), piVar5 != (int *)0x0)) {
+      FUN_BATTLE_BIN__80071cec((int)piVar5,iVar4);
     }
   }
   return;
@@ -52529,7 +52965,7 @@ void FUN_BATTLE_BIN__80076658(undefined4 param_1,undefined4 param_2,undefined4 p
 {
   ushort uVar1;
   uint *puVar2;
-  int *piVar3;
+  ENTDDisplayUnitData *pEVar3;
   int *piVar4;
   uint uVar5;
   undefined4 uVar6;
@@ -52538,12 +52974,12 @@ void FUN_BATTLE_BIN__80076658(undefined4 param_1,undefined4 param_2,undefined4 p
   puVar2 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar2,DAT_80045944);
   puVar2 = FUN_BATTLE_BIN__8013f978();
-  piVar3 = FUN_BATTLE_BIN__8007a218();
+  pEVar3 = get_Caster_ENTD_Dat();
   piVar4 = FUN_BATTLE_BIN__8007a1d4();
   uVar5 = *puVar2;
   if (uVar5 == 4) {
 LAB_BATTLE_BIN__80076748:
-    FUN_BATTLE_BIN__80180904(piVar3[0x4d],*puVar2);
+    FUN_BATTLE_BIN__80180904((int)pEVar3->UnitBattleData,*puVar2);
   }
   else {
     if ((int)uVar5 < 5) {
@@ -52551,11 +52987,11 @@ LAB_BATTLE_BIN__80076748:
       if (1 < (int)uVar5) {
         if (uVar5 == 2) {
           uVar6 = 2;
-          FUN_BATTLE_BIN__80180904(piVar3[0x4d],2);
+          FUN_BATTLE_BIN__80180904((int)pEVar3->UnitBattleData,2);
           DAT_BATTLE_BIN__80098db8 = 1;
-          FUN_BATTLE_BIN__8018be08((uint)*(byte *)(piVar3[0x4d] + 0x18a));
-          FUN_BATTLE_BIN__800803e4((int)piVar3,uVar6,param_3,param_4);
-          FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar3 + 1));
+          FUN_BATTLE_BIN__8018be08((uint)(pEVar3->UnitBattleData->CurActionTargetData).UnitID2);
+          FUN_BATTLE_BIN__800803e4((int)pEVar3,uVar6,param_3,param_4);
+          FUN_BATTLE_BIN__80068e30((ushort)pEVar3->ENTDID);
         }
         goto LAB_BATTLE_BIN__80076764;
       }
@@ -52567,7 +53003,7 @@ LAB_BATTLE_BIN__80076748:
 LAB_BATTLE_BIN__80076764:
   if ((((DAT_BATTLE_BIN__80098db8 != 0) && (VFX_canOpen == 0)) &&
       (uVar1 = *(ushort *)(piVar4 + 2), *(ushort *)(piVar4 + 2) = uVar1 + 1, 0x1e < uVar1)) &&
-     ((*(char *)(piVar3 + 0xaf) == '\0' && (*(char *)(piVar4 + 0xaf) == '\0')))) {
+     ((*(char *)&pEVar3->AtkResultGraphicTrigger == '\0' && (*(char *)(piVar4 + 0xaf) == '\0')))) {
     if ((DAT_BATTLE_BIN__80096208 & 1) == 0) {
       if ((DAT_BATTLE_BIN__80096208 & 2) == 0) {
         if ((DAT_BATTLE_BIN__80096208 & 4) == 0) {
@@ -52583,14 +53019,15 @@ LAB_BATTLE_BIN__80076764:
           else {
             DAT_BATTLE_BIN__80096208 = DAT_BATTLE_BIN__80096208 & 0xfffffff7;
             FUN_BATTLE_BIN__8019ae30();
-            FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar3 + 1));
+            FUN_BATTLE_BIN__80068e30((ushort)pEVar3->ENTDID);
           }
         }
         else {
-          if ((*(short *)((int)piVar3 + 0x1e2) != 0) && (0xb < *(ushort *)(piVar3 + 0x77) >> 1)) {
+          if (((pEVar3->UnitSpriteData).WaitTime != 0) &&
+             (0xb < (ushort)(pEVar3->UnitSpriteData).CurrentAnim >> 1)) {
             return;
           }
-          *(undefined *)(piVar3 + 0xb4) = 0;
+          *(undefined *)&pEVar3->FoundItemGraphicTrigger = 0;
           DAT_BATTLE_BIN__80096208 = DAT_BATTLE_BIN__80096208 & 0xfffffffb;
         }
       }
@@ -52602,10 +53039,8 @@ LAB_BATTLE_BIN__80076764:
       }
     }
     else {
-      piVar3 = FUN_BATTLE_BIN__8007a3f8
-                         ((uint)*(byte *)(piVar3 + 0x1f),(uint)*(byte *)((int)piVar3 + 0x7d),
-                          (uint)*(byte *)((int)piVar3 + 0x7e));
-      if (piVar3 != (int *)0x0) {
+      piVar4 = FUN_BATTLE_BIN__8007a3f8((uint)pEVar3->MapX,(uint)pEVar3->MapY,(uint)pEVar3->MapZ);
+      if (piVar4 != (int *)0x0) {
         return;
       }
       DAT_BATTLE_BIN__80096208 = DAT_BATTLE_BIN__80096208 & 0xfffffffe;
@@ -52652,29 +53087,29 @@ void FUN_BATTLE_BIN__800769b0(undefined4 param_1,undefined4 param_2,undefined4 p
 
 {
   ushort uVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   uint *puVar3;
   map_tile_data *pmVar4;
-  int *piVar5;
+  ENTDDisplayUnitData *pEVar5;
   uint uVar6;
   uint uVar7;
   uint uVar8;
   
-  piVar2 = FUN_BATTLE_BIN__8007a218();
+  pEVar2 = get_Caster_ENTD_Dat();
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar3 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar3,DAT_80045944);
-  if ((*(byte *)((int)piVar2 + 0x13d) & 8) != 0) {
+  if ((pEVar2->ENTDFlags & 8) != 0) {
     FUN_BATTLE_BIN__8006e7c8();
     ButtonInput_Map_Rotation();
     FUN_BATTLE_BIN__8006f634();
     FUN_BATTLE_BIN__8006f968();
-    if ((DAT_8004594c & 0x40) != 0) {
+    if ((PAD_input2 & 0x40) != 0) {
       FUN_BATTLE_BIN__800ec718(0);
       FUN_BATTLE_BIN__800713a0();
       return;
     }
-    if ((DAT_8004594c & 0x20) == 0) {
+    if ((PAD_input2 & 0x20) == 0) {
       return;
     }
     pmVar4 = get_tile_data_ptr(DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
@@ -52686,35 +53121,35 @@ void FUN_BATTLE_BIN__800769b0(undefined4 param_1,undefined4 param_2,undefined4 p
     FUN_BATTLE_BIN__80074470();
     return;
   }
-  if (*(char *)((int)piVar2 + 0x166) == '\x05') {
-    FUN_BATTLE_BIN__8006e6b0((int)piVar2,0);
-    uVar1 = *(ushort *)(piVar2 + 2);
-    *(ushort *)(piVar2 + 2) = uVar1 + 1;
+  if (pEVar2->TileOrTarget == 5) {
+    FUN_BATTLE_BIN__8006e6b0((int)pEVar2,0);
+    uVar1 = *(ushort *)&pEVar2->field_0x8;
+    *(ushort *)&pEVar2->field_0x8 = uVar1 + 1;
     if (uVar1 < 0x1f) {
       return;
     }
-    uVar6 = (uint)*(short *)(piVar2 + 0x5a);
-    uVar7 = (uint)*(short *)(piVar2 + 0x5b);
-    uVar8 = (uint)*(short *)((int)piVar2 + 0x16a);
+    uVar6 = (uint)pEVar2->TargetX;
+    uVar7 = (uint)pEVar2->TargetY;
+    uVar8 = (uint)pEVar2->TargetZ;
   }
   else {
-    if (*(char *)((int)piVar2 + 0x166) != '\x06') {
+    if (pEVar2->TileOrTarget != 6) {
       return;
     }
-    piVar5 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar2 + 0x167));
-    if (piVar5 == (int *)0x0) {
+    pEVar5 = FUN_BATTLE_BIN__8007a724((ushort)pEVar2->TargetID2);
+    if (pEVar5 == (ENTDDisplayUnitData *)0x0) {
       SetActionMenuScript();
       return;
     }
-    FUN_BATTLE_BIN__8006e6b0((int)piVar2,(int)piVar5);
-    uVar1 = *(ushort *)(piVar2 + 2);
-    *(ushort *)(piVar2 + 2) = uVar1 + 1;
+    FUN_BATTLE_BIN__8006e6b0((int)pEVar2,(int)pEVar5);
+    uVar1 = *(ushort *)&pEVar2->field_0x8;
+    *(ushort *)&pEVar2->field_0x8 = uVar1 + 1;
     if (uVar1 < 0x1f) {
       return;
     }
-    uVar6 = (uint)*(byte *)(piVar5 + 0x1f);
-    uVar7 = (uint)*(byte *)((int)piVar5 + 0x7d);
-    uVar8 = (uint)*(byte *)((int)piVar5 + 0x7e);
+    uVar6 = (uint)pEVar5->MapX;
+    uVar7 = (uint)pEVar5->MapY;
+    uVar8 = (uint)pEVar5->MapZ;
   }
   get_tile_data_ptr(uVar6,uVar7,uVar8);
   SelectTargetTile();
@@ -52767,26 +53202,26 @@ void FUN_BATTLE_BIN__80076c50(undefined4 param_1,undefined4 param_2,undefined4 p
 
 {
   ushort uVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   uint *puVar3;
   
-  piVar2 = FUN_BATTLE_BIN__8007a218();
-  if ((*(byte *)((int)piVar2 + 0x13d) & 8) == 0) {
-    uVar1 = *(ushort *)(piVar2 + 2);
-    *(ushort *)(piVar2 + 2) = uVar1 + 1;
+  pEVar2 = get_Caster_ENTD_Dat();
+  if ((pEVar2->ENTDFlags & 8) == 0) {
+    uVar1 = *(ushort *)&pEVar2->field_0x8;
+    *(ushort *)&pEVar2->field_0x8 = uVar1 + 1;
     if (uVar1 < 0x1f) goto LAB_BATTLE_BIN__80076d50;
   }
   else {
     ButtonInput_Map_Rotation();
     FUN_BATTLE_BIN__8006f634();
     FUN_BATTLE_BIN__8006f968();
-    if ((DAT_8004594c & 0x20) == 0) {
+    if ((PAD_input2 & 0x20) == 0) {
       param_1 = 8;
-      if ((DAT_8004594c & 0x40) != 0) {
+      if ((PAD_input2 & 0x40) != 0) {
         DAT_BATTLE_BIN__800960c0 = DAT_BATTLE_BIN__800960c4;
         FUN_BATTLE_BIN__800ec718(8);
         param_1 = 0;
-        if (piVar2[0x5d] == 2) {
+        if (*(int *)&pEVar2->field_0x174 == 2) {
           param_2 = 3;
           FUN_BATTLE_BIN__800ec718(0);
           FUN_BATTLE_BIN__80068494();
@@ -52819,7 +53254,7 @@ void FUN_BATTLE_BIN__80076d84(undefined4 param_1,undefined4 param_2,undefined4 p
 {
   uint *puVar1;
   int *piVar2;
-  int *piVar3;
+  ENTDDisplayUnitData *pEVar3;
   int *piVar4;
   int iVar5;
   
@@ -52827,8 +53262,8 @@ void FUN_BATTLE_BIN__80076d84(undefined4 param_1,undefined4 param_2,undefined4 p
   puVar1 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar1,DAT_80045944);
   piVar2 = FUN_BATTLE_BIN__8013f978();
-  piVar3 = FUN_BATTLE_BIN__8007a218();
-  if ((*(byte *)((int)piVar3 + 0x13d) & 8) == 0) {
+  pEVar3 = get_Caster_ENTD_Dat();
+  if ((pEVar3->ENTDFlags & 8) == 0) {
     iVar5 = *piVar2;
     if (iVar5 == 8) goto LAB_BATTLE_BIN__80076eec;
     if (iVar5 < 9) {
@@ -52846,21 +53281,21 @@ void FUN_BATTLE_BIN__80076d84(undefined4 param_1,undefined4 param_2,undefined4 p
         if (iVar5 != 5) {
           return;
         }
-        *(undefined *)((int)piVar3 + 0x166) = *(undefined *)piVar2;
+        pEVar3->TileOrTarget = *(byte *)piVar2;
       }
       else {
         piVar4 = FUN_BATTLE_BIN__8007a2b8
                            (DAT_BATTLE_BIN__800961b4,DAT_BATTLE_BIN__800961bc,
                             DAT_BATTLE_BIN__800961b8);
         if (piVar4 == (int *)0x0) {
-          *(undefined *)((int)piVar3 + 0x166) = 5;
+          pEVar3->TileOrTarget = 5;
         }
         else {
-          *(undefined *)((int)piVar3 + 0x166) = *(undefined *)piVar2;
-          *(undefined *)((int)piVar3 + 0x167) = *(undefined *)(piVar4[0x4d] + 0x18a);
+          pEVar3->TileOrTarget = *(byte *)piVar2;
+          pEVar3->TargetID2 = *(byte *)(piVar4[0x4d] + 0x18a);
         }
       }
-      Store_3_Halfwords((undefined2 *)(piVar3 + 0x5a),(short)DAT_BATTLE_BIN__800961b4,
+      Store_3_Halfwords(&pEVar3->TargetX,(short)DAT_BATTLE_BIN__800961b4,
                         (short)DAT_BATTLE_BIN__800961b8,(short)DAT_BATTLE_BIN__800961bc);
       FUN_BATTLE_BIN__80073fe0();
       return;
@@ -52882,14 +53317,14 @@ void FUN_BATTLE_BIN__80076f14(undefined4 param_1,undefined4 param_2,undefined4 p
 
 {
   uint *puVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar1 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar1,DAT_80045944);
-  piVar2 = FUN_BATTLE_BIN__8007a218();
-  if ((((*(short *)((int)piVar2 + 0x1e2) == 0) || (*(short *)(piVar2 + 0x79) != 0)) ||
-      (0x3c < *(ushort *)(piVar2 + 2))) &&
+  pEVar2 = get_Caster_ENTD_Dat();
+  if (((((pEVar2->UnitSpriteData).WaitTime == 0) || ((pEVar2->UnitSpriteData).DebugLoopcount != 0))
+      || (0x3c < *(ushort *)&pEVar2->field_0x8)) &&
      (((DAT_BATTLE_BIN__800a1c48 | DAT_BATTLE_BIN__800a1c4c | DAT_BATTLE_BIN__800a1c50) == 0 &&
       (DAT_BATTLE_BIN__800960c8 == 0)))) {
     FUN_BATTLE_BIN__800740d4();
@@ -52927,16 +53362,16 @@ void FUN_BATTLE_BIN__80077098(undefined4 param_1,undefined4 param_2,undefined4 p
 
 {
   uint *puVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar1 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar1,DAT_80045944);
-  piVar2 = FUN_BATTLE_BIN__8007a218();
-  if (piVar2[0x5f] == 3) {
-    if (*(short *)((int)piVar2 + 0x1e2) == 0) {
-      FUN_BATTLE_BIN__80183ba8((uint)*(byte *)(piVar2[0x4d] + 0x18a));
-      FUN_BATTLE_BIN__80072b14((int)piVar2);
+  pEVar2 = get_Caster_ENTD_Dat();
+  if (*(int *)&pEVar2->field_0x17c == 3) {
+    if ((pEVar2->UnitSpriteData).WaitTime == 0) {
+      FUN_BATTLE_BIN__80183ba8((uint)(pEVar2->UnitBattleData->CurActionTargetData).UnitID2);
+      FUN_BATTLE_BIN__80072b14((int)pEVar2);
     }
   }
   else {
@@ -53082,7 +53517,7 @@ void FUN_BATTLE_BIN__800773f8(undefined4 param_1,int *param_2,undefined4 param_3
 
 {
   uint *puVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   uint uVar3;
   uint *puVar4;
   uint *puVar5;
@@ -53105,11 +53540,11 @@ void FUN_BATTLE_BIN__800773f8(undefined4 param_1,int *param_2,undefined4 param_3
   if ((*(char *)((int)puVar1 + 0x18d) != '\0') &&
      (iVar6 = 0, puVar5 = puVar1, *(char *)((int)puVar1 + 0x18d) != '\0')) {
     do {
-      piVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)puVar5 + 0x18e));
+      pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)puVar5 + 0x18e));
       iVar6 = iVar6 + 1;
-      if (piVar2 != (int *)0x0) {
-        FUN_BATTLE_BIN__8006db10(piVar2);
-        VFX_canOpen = *(byte *)((int)piVar2 + 0x7f) | VFX_canOpen;
+      if (pEVar2 != (ENTDDisplayUnitData *)0x0) {
+        FUN_BATTLE_BIN__8006db10((int *)pEVar2);
+        VFX_canOpen = pEVar2->CentreTileOffs | VFX_canOpen;
       }
       puVar5 = (uint *)((int)puVar1 + iVar6);
     } while (iVar6 < (int)(uint)*(byte *)((int)puVar1 + 0x18d));
@@ -53118,7 +53553,7 @@ void FUN_BATTLE_BIN__800773f8(undefined4 param_1,int *param_2,undefined4 param_3
   if (((puVar5 == (uint *)0x0) || (puVar5 == (uint *)0x200)) || (puVar5 == (uint *)0x94)) {
     FUN_BATTLE_BIN__80070640();
     puVar5 = (uint *)Get_OTAG_List();
-    param_2 = DAT_80045944;
+    param_2 = (int *)DAT_80045944;
     FUN_BATTLE_BIN__8013f520(puVar5,(uint)DAT_80045944);
     if (VFX_canOpen != 0) {
       return;
@@ -53133,13 +53568,13 @@ void FUN_BATTLE_BIN__800773f8(undefined4 param_1,int *param_2,undefined4 param_3
        (iVar6 = 0, puVar4 = puVar1, *(char *)((int)puVar1 + 0x18d) != '\0')) {
       do {
         puVar5 = (uint *)(uint)*(byte *)((int)puVar4 + 0x18e);
-        piVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)puVar4 + 0x18e));
-        if (piVar2 != (int *)0x0) {
+        pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)puVar4 + 0x18e));
+        if (pEVar2 != (ENTDDisplayUnitData *)0x0) {
           if (*(short *)(puVar1 + 0x4e) == 0x200) {
-            FUN_BATTLE_BIN__80068bd4((ushort)*(byte *)(piVar2 + 1),param_2,param_3,param_4);
+            FUN_BATTLE_BIN__80068bd4((ushort)pEVar2->ENTDID,param_2,param_3,param_4);
           }
-          puVar5 = (uint *)(uint)*(byte *)(piVar2 + 1);
-          FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar2 + 1));
+          puVar5 = (uint *)(uint)pEVar2->ENTDID;
+          FUN_BATTLE_BIN__80068e30((ushort)pEVar2->ENTDID);
         }
         iVar6 = iVar6 + 1;
         puVar4 = (uint *)((int)puVar1 + iVar6);
@@ -53165,21 +53600,21 @@ void FUN_BATTLE_BIN__800773f8(undefined4 param_1,int *param_2,undefined4 param_3
        (iVar6 = 0, puVar4 = puVar1, *(char *)((int)puVar1 + 0x18d) != '\0')) {
       do {
         puVar5 = (uint *)(uint)*(byte *)((int)puVar4 + 0x18e);
-        piVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)puVar4 + 0x18e));
-        if (piVar2 != (int *)0x0) {
+        pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)puVar4 + 0x18e));
+        if (pEVar2 != (ENTDDisplayUnitData *)0x0) {
           if (*(ushort *)(puVar1 + 0x4e) - 0x1a6 < 0x20) {
             puVar5 = (uint *)(uint)*(ushort *)(puVar1 + 0x4e);
             uVar3 = FUN_BATTLE_BIN__801a1814((int)puVar5);
             if ((uVar3 != 0) &&
                (puVar5 = puVar1,
                (&DAT_BATTLE_BIN__80093e11)[(uint)*(ushort *)(puVar1 + 0x4e) * 3] != '\0')) {
-              FUN_BATTLE_BIN__800773b4((int)puVar1,(int)piVar2,param_3,param_4);
-              param_2 = piVar2;
+              FUN_BATTLE_BIN__800773b4((int)puVar1,(int)pEVar2,param_3,param_4);
+              param_2 = (int *)pEVar2;
             }
           }
           else {
-            puVar5 = (uint *)(uint)*(byte *)(piVar2 + 1);
-            FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar2 + 1));
+            puVar5 = (uint *)(uint)pEVar2->ENTDID;
+            FUN_BATTLE_BIN__80068e30((ushort)pEVar2->ENTDID);
           }
         }
         iVar6 = iVar6 + 1;
@@ -53243,13 +53678,13 @@ void FUN_BATTLE_BIN__800777ec(undefined4 param_1,undefined4 param_2,undefined4 p
         DAT_BATTLE_BIN__80098d70 = 0;
       }
       FUN_BATTLE_BIN__8007a968((int)piVar3);
-      if ((DAT_BATTLE_BIN__80098d84 == 0x100) && (DAT_BATTLE_BIN__80096214 == 1)) {
+      if ((type_of_action == 0x100) && (DAT_BATTLE_BIN__80096214 == 1)) {
         FUN_BATTLE_BIN__8018ef2c();
       }
       FUN_BATTLE_BIN__8017dbc8(piVar3[0x4d]);
       FUN_BATTLE_BIN__80083854((int)piVar3);
       FUN_BATTLE_BIN__80083c58((int)piVar3);
-      FUN_BATTLE_BIN__8007a218();
+      get_Caster_ENTD_Dat();
       if (DAT_BATTLE_BIN__80096214 != 0) {
         if (DAT_BATTLE_BIN__80096214 != 2) {
           DAT_BATTLE_BIN__80096214 = DAT_BATTLE_BIN__80096214 + 1;
@@ -53278,23 +53713,24 @@ void FUN_BATTLE_BIN__800779a0(undefined4 param_1,undefined4 param_2,undefined4 p
   uint *puVar2;
   int *piVar3;
   int *piVar4;
-  int iVar5;
+  ENTDDisplayUnitData *pEVar5;
+  int iVar6;
   
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar2 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar2,DAT_80045944);
   piVar3 = FUN_BATTLE_BIN__8013f978();
   piVar4 = FUN_BATTLE_BIN__8007a1d4();
-  iVar5 = *piVar3;
-  if (iVar5 != 8) {
-    if (iVar5 < 9) {
-      if (iVar5 != 7) goto LAB_BATTLE_BIN__80077a94;
+  iVar6 = *piVar3;
+  if (iVar6 != 8) {
+    if (iVar6 < 9) {
+      if (iVar6 != 7) goto LAB_BATTLE_BIN__80077a94;
       if (DAT_BATTLE_BIN__80096204 == 2) {
-        piVar3 = FUN_BATTLE_BIN__8007a724(DAT_BATTLE_BIN__80096200);
-        FUN_BATTLE_BIN__8018e8ac(piVar3[0x4d]);
+        pEVar5 = FUN_BATTLE_BIN__8007a724(DAT_BATTLE_BIN__80096200);
+        FUN_BATTLE_BIN__8018e8ac((int)pEVar5->UnitBattleData);
       }
     }
-    else if (iVar5 != 0xff) goto LAB_BATTLE_BIN__80077a94;
+    else if (iVar6 != 0xff) goto LAB_BATTLE_BIN__80077a94;
   }
   DAT_BATTLE_BIN__80096204 = DAT_BATTLE_BIN__80096204 + 1;
   if (DAT_BATTLE_BIN__80096204 < 3) {
@@ -53305,24 +53741,25 @@ void FUN_BATTLE_BIN__800779a0(undefined4 param_1,undefined4 param_2,undefined4 p
   }
 LAB_BATTLE_BIN__80077a94:
   if (((DAT_BATTLE_BIN__80098db8 != 0) && (VFX_canOpen == 0)) &&
-     (iVar5 = 0, *(char *)(piVar4 + 0xaf) == '\0')) {
+     (iVar6 = 0, *(char *)(piVar4 + 0xaf) == '\0')) {
     bVar1 = false;
     piVar3 = piVar4;
     if (*(char *)((int)piVar4 + 0x18d) != '\0') {
       do {
-        piVar3 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar3 + 0x18e));
-        iVar5 = iVar5 + 1;
-        if ((piVar3 != (int *)0x0) && (*(char *)(piVar3 + 0xaf) != '\0')) {
+        pEVar5 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)((int)piVar3 + 0x18e));
+        iVar6 = iVar6 + 1;
+        if ((pEVar5 != (ENTDDisplayUnitData *)0x0) &&
+           (*(char *)&pEVar5->AtkResultGraphicTrigger != '\0')) {
           bVar1 = true;
           break;
         }
-        piVar3 = (int *)((int)piVar4 + iVar5);
-      } while (iVar5 < (int)(uint)*(byte *)((int)piVar4 + 0x18d));
+        piVar3 = (int *)((int)piVar4 + iVar6);
+      } while (iVar6 < (int)(uint)*(byte *)((int)piVar4 + 0x18d));
     }
     if (!bVar1) {
-      piVar3 = FUN_BATTLE_BIN__8007a218();
-      FUN_BATTLE_BIN__80083854((int)piVar3);
-      FUN_BATTLE_BIN__80072b14((int)piVar3);
+      pEVar5 = get_Caster_ENTD_Dat();
+      FUN_BATTLE_BIN__80083854((int)pEVar5);
+      FUN_BATTLE_BIN__80072b14((int)pEVar5);
     }
   }
   return;
@@ -53423,15 +53860,15 @@ void FUN_BATTLE_BIN__80077ca4(undefined4 param_1,undefined4 param_2,undefined4 p
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar1 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar1,DAT_80045944);
-  if ((DAT_8004594c & 0x20) == 0) {
-    if ((DAT_8004594c & 0x40) != 0) {
+  if ((PAD_input2 & 0x20) == 0) {
+    if ((PAD_input2 & 0x40) != 0) {
       piVar2 = FUN_BATTLE_BIN__8007a1d4();
       FUN_BATTLE_BIN__800683e4((int)piVar2);
       FUN_BATTLE_BIN__80068494();
       SetActionMenuScript();
       return;
     }
-    if ((DAT_8004594c & 0x10) == 0) {
+    if ((PAD_input2 & 0x10) == 0) {
       return;
     }
     piVar2 = FUN_BATTLE_BIN__8007a1d4();
@@ -53555,7 +53992,7 @@ void FUN_BATTLE_BIN__80078030(undefined4 param_1,undefined4 param_2,undefined4 p
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar1 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar1,DAT_80045944);
-  if (((DAT_8004594c & 0x20) != 0) || ((DAT_8004594c & 0x40) != 0)) {
+  if (((PAD_input2 & 0x20) != 0) || ((PAD_input2 & 0x40) != 0)) {
     piVar2 = FUN_BATTLE_BIN__8007a1d4();
     FUN_BATTLE_BIN__800683e4((int)piVar2);
     SetActionMenuScript();
@@ -53570,19 +54007,19 @@ void FUN_BATTLE_BIN__800780a0(undefined4 param_1,undefined4 param_2,undefined4 p
 {
   uint *puVar1;
   int *piVar2;
-  int *piVar3;
+  ENTDDisplayUnitData *pEVar3;
   int iVar4;
   
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar1 = (uint *)Get_OTAG_List();
   FUN_BATTLE_BIN__8013f520(puVar1,DAT_80045944);
   piVar2 = FUN_BATTLE_BIN__8013f978();
-  piVar3 = FUN_BATTLE_BIN__8007a218();
+  pEVar3 = get_Caster_ENTD_Dat();
   iVar4 = *piVar2;
   if ((6 < iVar4) && ((iVar4 < 9 || (iVar4 == 0xff)))) {
     DAT_BATTLE_BIN__80098db8 = 1;
   }
-  if ((DAT_BATTLE_BIN__80098db8 != 0) && (*(char *)(piVar3 + 0xaf) == '\0')) {
+  if ((DAT_BATTLE_BIN__80098db8 != 0) && (*(char *)&pEVar3->AtkResultGraphicTrigger == '\0')) {
     FUN_BATTLE_BIN__80072ad0();
   }
   return;
@@ -53593,69 +54030,88 @@ void FUN_BATTLE_BIN__800780a0(undefined4 param_1,undefined4 param_2,undefined4 p
 void FUN_BATTLE_BIN__80078148(undefined4 param_1,undefined4 param_2,undefined4 param_3,uint param_4)
 
 {
-  bool bVar1;
-  uint *puVar2;
-  int *piVar3;
-  int iVar4;
-  uint uVar5;
+  SkillsetID SVar1;
+  AbilityID AVar2;
+  short sVar3;
+  short sVar4;
+  byte bVar5;
+  undefined uVar6;
+  bool bVar7;
+  uint *puVar8;
+  ENTDDisplayUnitData *pEVar9;
+  int iVar10;
+  uint uVar11;
   undefined3 extraout_var;
-  uint uVar6;
-  int iVar7;
-  int *piVar8;
-  uint uVar9;
+  BattleUnitData *pBVar12;
+  uint uVar13;
+  int *piVar14;
+  uint uVar15;
   
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
-  puVar2 = (uint *)Get_OTAG_List();
-  FUN_BATTLE_BIN__8013f520(puVar2,DAT_80045944);
-  piVar3 = FUN_BATTLE_BIN__8007a218();
+  puVar8 = (uint *)Get_OTAG_List();
+  FUN_BATTLE_BIN__8013f520(puVar8,DAT_80045944);
+  pEVar9 = get_Caster_ENTD_Dat();
   if ((DAT_BATTLE_BIN__800a1c48 | DAT_BATTLE_BIN__800a1c4c | DAT_BATTLE_BIN__800a1c50) != 0) {
     return;
   }
   if (DAT_BATTLE_BIN__800960c8 != 0) {
     return;
   }
-  uVar6 = 8;
-  if (DAT_BATTLE_BIN__80098d84 == 0x200) {
-    piVar8 = (int *)0x2;
+  uVar13 = 8;
+  if (type_of_action == 0x200) {
+    piVar14 = (int *)0x2;
     param_4 = 0;
-    uVar9 = (uint)*(byte *)(piVar3[0x4d] + 0x18a);
-    iVar4 = FUN_BATTLE_BIN__801419b8(8,2,uVar9,0,1);
-    if (iVar4 == 2) {
-      uVar5 = FUN_BATTLE_BIN__80142ba4();
-      uVar6 = 8;
-      if (uVar5 != 0) {
+    uVar15 = (uint)(pEVar9->UnitBattleData->CurActionTargetData).UnitID2;
+    iVar10 = FUN_BATTLE_BIN__801419b8(8,2,uVar15,0,1);
+    if (iVar10 == 2) {
+      uVar11 = FUN_BATTLE_BIN__80142ba4();
+      uVar13 = 8;
+      if (uVar11 != 0) {
         DAT_BATTLE_BIN__800960e8 = BattleGameState;
-        FUN_BATTLE_BIN__801419b8(8,0,(uint)*(byte *)(piVar3[0x4d] + 0x18a),0,1);
+        FUN_BATTLE_BIN__801419b8
+                  (8,0,(uint)(pEVar9->UnitBattleData->CurActionTargetData).UnitID2,0,1);
         FUN_BATTLE_BIN__80070998();
         return;
       }
     }
   }
   else {
-    bVar1 = FUN_BATTLE_BIN__80183d70((uint)*(byte *)(piVar3[0x4d] + 0x18a));
-    if (CONCAT31(extraout_var,bVar1) != 1) {
+    bVar7 = FUN_BATTLE_BIN__80183d70((uint)(pEVar9->UnitBattleData->CurActionTargetData).UnitID2);
+    if (CONCAT31(extraout_var,bVar7) != 1) {
       SetActionMenuScript();
       return;
     }
-    iVar4 = piVar3[0x4d];
-    iVar7 = *(int *)(iVar4 + 0x172);
-    piVar8 = *(int **)(iVar4 + 0x176);
-    uVar9 = *(uint *)(iVar4 + 0x17a);
-    piVar3[0x57] = *(int *)(iVar4 + 0x16e);
-    piVar3[0x58] = iVar7;
-    piVar3[0x59] = (int)piVar8;
-    piVar3[0x5a] = uVar9;
-    piVar3[0x5b] = *(int *)(iVar4 + 0x17e);
-    *(undefined2 *)(piVar3 + 0x4e) = *(undefined2 *)(piVar3[0x4d] + 0x170);
-    if (piVar3[0x5f] != 3) {
+    pBVar12 = pEVar9->UnitBattleData;
+    SVar1 = (pBVar12->CurActionTargetData).SkillsetOfAttack;
+    AVar2 = (pBVar12->CurActionTargetData).AttackToUse;
+    sVar3 = (pBVar12->CurActionTargetData).CalcTypeAb;
+    sVar4 = (pBVar12->CurActionTargetData).CalcMultAb;
+    piVar14 = *(int **)&(pBVar12->CurActionTargetData).UsedItem;
+    uVar15._0_2_ = (pBVar12->CurActionTargetData).XMapCoordTarget;
+    uVar15._2_2_ = (pBVar12->CurActionTargetData).ZMapCoordTarget;
+    pEVar9->TargetID = (pBVar12->CurActionTargetData).AttackerID;
+    pEVar9->UsedSkillset = SVar1;
+    pEVar9->UsedAbility2 = AVar2;
+    pEVar9->CalcTypeAb = sVar3;
+    pEVar9->CalcMultAb = sVar4;
+    *(int **)&pEVar9->UsedItem2 = piVar14;
+    pEVar9->TargetX = (short)uVar15;
+    pEVar9->TargetZ = (short)(uVar15 >> 0x10);
+    bVar5 = (pBVar12->CurActionTargetData).DeathOnChocobo;
+    uVar6 = (pBVar12->CurActionTargetData).field_0x13;
+    pEVar9->TargetY = (pBVar12->CurActionTargetData).YMapCoordTarget;
+    pEVar9->field_0x16e = bVar5;
+    pEVar9->field_0x16f = uVar6;
+    pEVar9->UsedAbility = (pEVar9->UnitBattleData->CurActionTargetData).AttackToUse;
+    if (*(int *)&pEVar9->field_0x17c != 3) {
       FUN_BATTLE_BIN__80072544();
       return;
     }
-    uVar6 = (uint)*(byte *)(piVar3 + 1);
-    piVar3[0x5f] = 0;
-    FUN_BATTLE_BIN__8008d18c((ushort)*(byte *)(piVar3 + 1));
+    uVar13 = (uint)pEVar9->ENTDID;
+    *(undefined4 *)&pEVar9->field_0x17c = 0;
+    FUN_BATTLE_BIN__8008d18c((ushort)pEVar9->ENTDID);
   }
-  FUN_BATTLE_BIN__80071008(uVar6,piVar8,uVar9,param_4);
+  FUN_BATTLE_BIN__80071008(uVar13,piVar14,uVar15,param_4);
   return;
 }
 
@@ -53679,11 +54135,11 @@ void FUN_BATTLE_BIN__80078328(undefined4 param_1,undefined4 param_2,undefined4 p
   if (((DAT_BATTLE_BIN__80098db8 != 0) &&
       ((DAT_BATTLE_BIN__800a1c48 | DAT_BATTLE_BIN__800a1c4c | DAT_BATTLE_BIN__800a1c50) == 0)) &&
      (DAT_BATTLE_BIN__800960c8 == 0)) {
-    FUN_BATTLE_BIN__8007a218();
-    if (DAT_BATTLE_BIN__80098d84 == 0x200) {
+    get_Caster_ENTD_Dat();
+    if (type_of_action == 0x200) {
       FUN_BATTLE_BIN__80074068();
     }
-    else if ((DAT_BATTLE_BIN__80098d84 == 0x300) || (DAT_BATTLE_BIN__80098d84 == 0x500)) {
+    else if ((type_of_action == 0x300) || (type_of_action == 0x500)) {
       FUN_BATTLE_BIN__800711a4();
     }
     else {
@@ -53700,24 +54156,25 @@ void FUN_BATTLE_BIN__8007843c(undefined4 param_1,undefined4 param_2,undefined4 p
 {
   uint *puVar1;
   int *piVar2;
-  int iVar3;
-  uint uVar4;
-  int *piVar5;
+  ENTDDisplayUnitData *pEVar3;
+  int iVar4;
+  uint uVar5;
+  int *piVar6;
   
   FUN_BATTLE_BIN__80074bac(param_1,param_2,param_3,param_4);
   puVar1 = (uint *)Get_OTAG_List();
-  piVar5 = DAT_80045944;
+  piVar6 = DAT_80045944;
   FUN_BATTLE_BIN__8013f520(puVar1,(uint)DAT_80045944);
   piVar2 = FUN_BATTLE_BIN__8013f978();
-  iVar3 = *piVar2;
-  if ((6 < iVar3) && ((iVar3 < 9 || (iVar3 == 0xff)))) {
+  iVar4 = *piVar2;
+  if ((6 < iVar4) && ((iVar4 < 9 || (iVar4 == 0xff)))) {
     DAT_BATTLE_BIN__80098db8 = 1;
   }
   if (((DAT_BATTLE_BIN__80098db8 != 0) && (VFX_canOpen == 0)) &&
-     (piVar2 = FUN_BATTLE_BIN__8007a218(), *(char *)(piVar2 + 0xaf) == '\0')) {
-    uVar4 = (uint)*(byte *)(piVar2 + 1);
-    FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar2 + 1));
-    FUN_BATTLE_BIN__80071008(uVar4,piVar5,param_3,param_4);
+     (pEVar3 = get_Caster_ENTD_Dat(), *(char *)&pEVar3->AtkResultGraphicTrigger == '\0')) {
+    uVar5 = (uint)pEVar3->ENTDID;
+    FUN_BATTLE_BIN__80068e30((ushort)pEVar3->ENTDID);
+    FUN_BATTLE_BIN__80071008(uVar5,piVar6,param_3,param_4);
   }
   return;
 }
@@ -54087,12 +54544,12 @@ LAB_BATTLE_BIN__800790a0:
 void FUN_BATTLE_BIN__800791e8(void)
 
 {
-  FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094ae4,2,1,0);
-  FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094b04,2,2,0);
-  FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094b44,2,3,0);
-  FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094b64,2,4,0);
-  FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094bc4,2,5,0);
-  FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094be4,2,7,0);
+  Get_Palette_Data((ushort *)&DAT_BATTLE_BIN__80094ae4,2,1,0);
+  Get_Palette_Data((ushort *)&DAT_BATTLE_BIN__80094b04,2,2,0);
+  Get_Palette_Data((ushort *)&DAT_BATTLE_BIN__80094b44,2,3,0);
+  Get_Palette_Data((ushort *)&DAT_BATTLE_BIN__80094b64,2,4,0);
+  Get_Palette_Data((ushort *)&DAT_BATTLE_BIN__80094bc4,2,5,0);
+  Get_Palette_Data((ushort *)&DAT_BATTLE_BIN__80094be4,2,7,0);
   return;
 }
 
@@ -54106,7 +54563,7 @@ void FUN_BATTLE_BIN__80079298(void)
 
 
 
-void FUN_BATTLE_BIN__800792a0(void)
+void BATTLE_do_deployment(void)
 
 {
   bool bVar1;
@@ -54306,7 +54763,7 @@ LAB_BATTLE_BIN__80079918:
     }
     puVar5 = (uint *)Get_OTAG_List();
     puVar6 = (undefined4 *)FUN_BATTLE_BIN__8013f4f8(puVar5,DAT_80045944);
-    DAT_BATTLE_BIN__800960f4 = FUN_BATTLE_BIN__8008ec70(iVar2,DAT_BATTLE_BIN__800960f4,puVar6);
+    DAT_BATTLE_BIN__800960f4 = BATTLE_sprite_init_loop_func(iVar2,DAT_BATTLE_BIN__800960f4,puVar6);
     if (DAT_BATTLE_BIN__800960f4 == 0xd) {
       FUN_BATTLE_BIN__800791e8();
       FUN_BATTLE_BIN__800709fc();
@@ -54351,7 +54808,7 @@ void BATTLE_main(void)
     iVar1 = iVar1 + -0x32d6;
   } while (-1 < iVar1);
   do {
-    FUN_BATTLE_BIN__800792a0();
+    BATTLE_do_deployment();
     DAT_BATTLE_BIN__800e4e8c = 0;
     DAT_BATTLE_BIN__800960c0 = DAT_800473ac & 7;
     while( true ) {
@@ -54632,37 +55089,41 @@ LAB_BATTLE_BIN__8007a15c:
 int * FUN_BATTLE_BIN__8007a1d4(void)
 
 {
-  int **ppiVar1;
+  ENTDDisplayUnitData **ppEVar1;
+  ENTDDisplayUnitData *pEVar2;
   
-  ppiVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int **)0x0) {
+  pEVar2 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if (*(byte *)(ppiVar1 + 1) == DAT_BATTLE_BIN__8009611c) {
-        return (int *)ppiVar1;
+      if (pEVar2->ENTDID == DAT_BATTLE_BIN__8009611c) {
+        return (int *)pEVar2;
       }
-      ppiVar1 = (int **)*ppiVar1;
-    } while (ppiVar1 != (int **)0x0);
+      ppEVar1 = &pEVar2->PrevMiscUnitData;
+      pEVar2 = *ppEVar1;
+    } while (*ppEVar1 != (ENTDDisplayUnitData *)0x0);
   }
   return (int *)0x0;
 }
 
 
 
-int * FUN_BATTLE_BIN__8007a218(void)
+ENTDDisplayUnitData * get_Caster_ENTD_Dat(void)
 
 {
-  int **ppiVar1;
+  ENTDDisplayUnitData *cas_Data;
+  ENTDDisplayUnitData **prev_data;
   
-  ppiVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int **)0x0) {
+  cas_Data = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if (*(byte *)(ppiVar1 + 1) == DAT_BATTLE_BIN__80096118) {
-        return (int *)ppiVar1;
+      if (cas_Data->ENTDID == AT_Unit_ID) {
+        return cas_Data;
       }
-      ppiVar1 = (int **)*ppiVar1;
-    } while (ppiVar1 != (int **)0x0);
+      prev_data = &cas_Data->PrevMiscUnitData;
+      cas_Data = *prev_data;
+    } while (*prev_data != (ENTDDisplayUnitData *)0x0);
   }
-  return (int *)0x0;
+  return (ENTDDisplayUnitData *)0x0;
 }
 
 
@@ -54670,17 +55131,16 @@ int * FUN_BATTLE_BIN__8007a218(void)
 int * FUN_BATTLE_BIN__8007a25c(uint param_1,uint param_2,uint param_3)
 
 {
-  int **ppiVar1;
+  ENTDDisplayUnitData *pEVar1;
   
-  ppiVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int **)0x0) {
+  pEVar1 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if (((*(byte *)(ppiVar1 + 0x1f) == param_1) && (*(byte *)((int)ppiVar1 + 0x7d) == param_2)) &&
-         (*(byte *)((int)ppiVar1 + 0x7e) == param_3)) {
-        return (int *)ppiVar1;
+      if (((pEVar1->MapX == param_1) && (pEVar1->MapY == param_2)) && (pEVar1->MapZ == param_3)) {
+        return (int *)pEVar1;
       }
-      ppiVar1 = (int **)*ppiVar1;
-    } while (ppiVar1 != (int **)0x0);
+      pEVar1 = pEVar1->PrevMiscUnitData;
+    } while (pEVar1 != (ENTDDisplayUnitData *)0x0);
   }
   return (int *)0x0;
 }
@@ -54690,58 +55150,60 @@ int * FUN_BATTLE_BIN__8007a25c(uint param_1,uint param_2,uint param_3)
 int * FUN_BATTLE_BIN__8007a2b8(uint param_1,uint param_2,uint param_3)
 
 {
-  int *piVar1;
-  int iVar2;
-  int **ppiVar3;
-  int **ppiVar4;
-  int iVar5;
-  int **ppiVar6;
-  int *local_50 [20];
+  ENTDDisplayUnitData **ppEVar1;
+  ENTDDisplayUnitData *pEVar2;
+  int iVar3;
+  ENTDDisplayUnitData **ppEVar4;
+  ENTDDisplayUnitData **ppEVar5;
+  int iVar6;
+  ENTDDisplayUnitData **ppEVar7;
+  ENTDDisplayUnitData *local_50 [20];
   
-  ppiVar6 = local_50;
-  ppiVar3 = local_50;
-  ppiVar4 = local_50;
-  iVar5 = 0;
-  piVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int *)0x0) {
+  ppEVar7 = local_50;
+  ppEVar4 = local_50;
+  ppEVar5 = local_50;
+  iVar6 = 0;
+  pEVar2 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if ((((*(byte *)(piVar1 + 0x1f) == param_1) && (*(byte *)((int)piVar1 + 0x7d) == param_2)) &&
-          (*(byte *)((int)piVar1 + 0x7e) == param_3)) &&
-         (((piVar1[0x4d] != 0 && (*(char *)(piVar1[0x4d] + 1) != -1)) &&
-          ((piVar1[0x51] & 0x49U) == 0)))) {
-        *ppiVar6 = piVar1;
-        ppiVar6 = ppiVar6 + 1;
-        iVar5 = iVar5 + 1;
+      if ((((pEVar2->MapX == param_1) && (pEVar2->MapY == param_2)) && (pEVar2->MapZ == param_3)) &&
+         (((pEVar2->UnitBattleData != (BattleUnitData *)0x0 &&
+           ((pEVar2->UnitBattleData->AllActionUnitData).UnitID != 0xff)) &&
+          ((*(uint *)&pEVar2->field_0x144 & 0x49) == 0)))) {
+        *ppEVar7 = pEVar2;
+        ppEVar7 = ppEVar7 + 1;
+        iVar6 = iVar6 + 1;
       }
-      piVar1 = (int *)*piVar1;
-    } while (piVar1 != (int *)0x0);
+      ppEVar1 = &pEVar2->PrevMiscUnitData;
+      pEVar2 = *ppEVar1;
+    } while (*ppEVar1 != (ENTDDisplayUnitData *)0x0);
   }
-  if (iVar5 == 0) {
-    local_50[0] = (int *)0x0;
+  if (iVar6 == 0) {
+    local_50[0] = (ENTDDisplayUnitData *)0x0;
   }
-  else if (iVar5 != 1) {
-    iVar2 = 0;
-    if (0 < iVar5) {
+  else if (iVar6 != 1) {
+    iVar3 = 0;
+    if (0 < iVar6) {
       do {
-        iVar2 = iVar2 + 1;
-        if (*(byte *)(*ppiVar3 + 1) == DAT_BATTLE_BIN__80096118) {
-          return *ppiVar3;
+        iVar3 = iVar3 + 1;
+        if (*(byte *)((int)*ppEVar4 + 4) == AT_Unit_ID) {
+          return (int *)*ppEVar4;
         }
-        ppiVar3 = ppiVar3 + 1;
-      } while (iVar2 < iVar5);
+        ppEVar4 = (ENTDDisplayUnitData **)((int **)ppEVar4 + 1);
+      } while (iVar3 < iVar6);
     }
-    iVar2 = 0;
-    if (0 < iVar5) {
+    iVar3 = 0;
+    if (0 < iVar6) {
       do {
-        iVar2 = iVar2 + 1;
-        if (*(char *)(*ppiVar4 + 0x4c) == '\x01') {
-          return *ppiVar4;
+        iVar3 = iVar3 + 1;
+        if (*(char *)((int)*ppEVar5 + 0x130) == '\x01') {
+          return (int *)*ppEVar5;
         }
-        ppiVar4 = ppiVar4 + 1;
-      } while (iVar2 < iVar5);
+        ppEVar5 = (ENTDDisplayUnitData **)((int **)ppEVar5 + 1);
+      } while (iVar3 < iVar6);
     }
   }
-  return local_50[0];
+  return (int *)local_50[0];
 }
 
 
@@ -54749,41 +55211,43 @@ int * FUN_BATTLE_BIN__8007a2b8(uint param_1,uint param_2,uint param_3)
 int * FUN_BATTLE_BIN__8007a3f8(uint param_1,uint param_2,uint param_3)
 
 {
-  int *piVar1;
-  int iVar2;
-  int **ppiVar3;
-  int iVar4;
-  int **ppiVar5;
-  int *local_48 [18];
+  ENTDDisplayUnitData **ppEVar1;
+  ENTDDisplayUnitData *pEVar2;
+  int iVar3;
+  ENTDDisplayUnitData **ppEVar4;
+  int iVar5;
+  ENTDDisplayUnitData **ppEVar6;
+  ENTDDisplayUnitData *local_48 [18];
   
-  ppiVar5 = local_48;
-  ppiVar3 = local_48;
-  iVar4 = 0;
-  piVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int *)0x0) {
+  ppEVar6 = local_48;
+  ppEVar4 = local_48;
+  iVar5 = 0;
+  pEVar2 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if (((((*(byte *)(piVar1 + 0x1f) == param_1) && (*(byte *)((int)piVar1 + 0x7d) == param_2)) &&
-           (*(byte *)((int)piVar1 + 0x7e) == param_3)) &&
-          ((piVar1[0x4d] != 0 && (*(char *)(piVar1[0x4d] + 1) != -1)))) &&
-         ((piVar1[0x51] & 9U) != 0)) {
-        *ppiVar5 = piVar1;
-        ppiVar5 = ppiVar5 + 1;
-        iVar4 = iVar4 + 1;
+      if (((((pEVar2->MapX == param_1) && (pEVar2->MapY == param_2)) && (pEVar2->MapZ == param_3))
+          && ((pEVar2->UnitBattleData != (BattleUnitData *)0x0 &&
+              ((pEVar2->UnitBattleData->AllActionUnitData).UnitID != 0xff)))) &&
+         ((*(uint *)&pEVar2->field_0x144 & 9) != 0)) {
+        *ppEVar6 = pEVar2;
+        ppEVar6 = ppEVar6 + 1;
+        iVar5 = iVar5 + 1;
       }
-      piVar1 = (int *)*piVar1;
-    } while (piVar1 != (int *)0x0);
+      ppEVar1 = &pEVar2->PrevMiscUnitData;
+      pEVar2 = *ppEVar1;
+    } while (*ppEVar1 != (ENTDDisplayUnitData *)0x0);
   }
-  piVar1 = (int *)0x0;
-  if ((iVar4 != 0) && (iVar2 = 0, piVar1 = local_48[0], 0 < iVar4)) {
+  pEVar2 = (ENTDDisplayUnitData *)0x0;
+  if ((iVar5 != 0) && (iVar3 = 0, pEVar2 = local_48[0], 0 < iVar5)) {
     do {
-      iVar2 = iVar2 + 1;
-      if (*(byte *)(*ppiVar3 + 1) == DAT_BATTLE_BIN__80096118) {
-        return *ppiVar3;
+      iVar3 = iVar3 + 1;
+      if (*(byte *)((int)*ppEVar4 + 4) == AT_Unit_ID) {
+        return (int *)*ppEVar4;
       }
-      ppiVar3 = ppiVar3 + 1;
-    } while (iVar2 < iVar4);
+      ppEVar4 = (ENTDDisplayUnitData **)((int **)ppEVar4 + 1);
+    } while (iVar3 < iVar5);
   }
-  return piVar1;
+  return (int *)pEVar2;
 }
 
 
@@ -54791,40 +55255,42 @@ int * FUN_BATTLE_BIN__8007a3f8(uint param_1,uint param_2,uint param_3)
 int FUN_BATTLE_BIN__8007a4f4(uint param_1,uint param_2,uint param_3)
 
 {
-  int iVar1;
-  int *piVar2;
-  uint uVar3;
-  int iVar4;
-  int **ppiVar5;
-  int **ppiVar6;
-  int iVar7;
-  int *local_48 [18];
+  ENTDDisplayUnitData **ppEVar1;
+  int iVar2;
+  ENTDDisplayUnitData *pEVar3;
+  uint uVar4;
+  int iVar5;
+  ENTDDisplayUnitData **ppEVar6;
+  ENTDDisplayUnitData **ppEVar7;
+  int iVar8;
+  ENTDDisplayUnitData *local_48 [18];
   
-  ppiVar6 = local_48;
-  ppiVar5 = local_48;
-  iVar7 = 0;
-  piVar2 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int *)0x0) {
+  ppEVar7 = local_48;
+  ppEVar6 = local_48;
+  iVar8 = 0;
+  pEVar3 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if ((((*(byte *)(piVar2 + 0x1f) == param_1) && (*(byte *)((int)piVar2 + 0x7d) == param_2)) &&
-          (*(byte *)((int)piVar2 + 0x7e) == param_3)) && (*(char *)((int)piVar2 + 6) == -0x7a)) {
-        *ppiVar6 = piVar2;
-        ppiVar6 = ppiVar6 + 1;
-        iVar7 = iVar7 + 1;
+      if ((((pEVar3->MapX == param_1) && (pEVar3->MapY == param_2)) && (pEVar3->MapZ == param_3)) &&
+         (pEVar3->SpritesheetID == Chocobo)) {
+        *ppEVar7 = pEVar3;
+        ppEVar7 = ppEVar7 + 1;
+        iVar8 = iVar8 + 1;
       }
-      piVar2 = (int *)*piVar2;
-    } while (piVar2 != (int *)0x0);
+      ppEVar1 = &pEVar3->PrevMiscUnitData;
+      pEVar3 = *ppEVar1;
+    } while (*ppEVar1 != (ENTDDisplayUnitData *)0x0);
   }
-  if ((iVar7 != 0) && (iVar4 = 0, 0 < iVar7)) {
+  if ((iVar8 != 0) && (iVar5 = 0, 0 < iVar8)) {
     do {
-      iVar1 = (int)*ppiVar5;
-      uVar3 = (uint)*(byte *)(iVar1 + 4);
-      ppiVar5 = (int **)((int *)ppiVar5 + 1);
-      if ((uVar3 != DAT_BATTLE_BIN__80096118) && (uVar3 != DAT_BATTLE_BIN__8009611c)) {
-        return iVar1;
+      iVar2 = (int)*ppEVar6;
+      uVar4 = (uint)*(byte *)(iVar2 + 4);
+      ppEVar6 = (ENTDDisplayUnitData **)((int *)ppEVar6 + 1);
+      if ((uVar4 != AT_Unit_ID) && (uVar4 != DAT_BATTLE_BIN__8009611c)) {
+        return iVar2;
       }
-      iVar4 = iVar4 + 1;
-    } while (iVar4 < iVar7);
+      iVar5 = iVar5 + 1;
+    } while (iVar5 < iVar8);
   }
   return 0;
 }
@@ -54834,44 +55300,45 @@ int FUN_BATTLE_BIN__8007a4f4(uint param_1,uint param_2,uint param_3)
 int * FUN_BATTLE_BIN__8007a5d0(int *param_1,uint param_2,uint param_3,uint param_4)
 
 {
-  int *piVar1;
-  int iVar2;
-  int **ppiVar3;
-  int **ppiVar4;
+  ENTDDisplayUnitData **ppEVar1;
+  ENTDDisplayUnitData *pEVar2;
+  int iVar3;
+  ENTDDisplayUnitData **ppEVar4;
   int iVar5;
-  int **ppiVar6;
-  int *local_48 [18];
+  ENTDDisplayUnitData **ppEVar6;
+  ENTDDisplayUnitData *local_48 [18];
   
-  ppiVar6 = local_48;
-  ppiVar3 = local_48;
+  ppEVar6 = local_48;
+  ppEVar4 = local_48;
   iVar5 = 0;
-  ppiVar4 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int **)0x0) {
+  pEVar2 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if (((((ppiVar4 != (int **)param_1) && (*(byte *)(ppiVar4 + 0x1f) == param_2)) &&
-           (*(byte *)((int)ppiVar4 + 0x7d) == param_3)) &&
-          ((*(byte *)((int)ppiVar4 + 0x7e) == param_4 && (ppiVar4[0x4d] != (int *)0x0)))) &&
-         ((*(char *)((int)ppiVar4[0x4d] + 1) != -1 &&
-          ((*(char *)(param_1 + 0x4c) == '\0' ||
-           (*(char *)(ppiVar4 + 1) != *(char *)((int)param_1 + 0x131))))))) {
-        *ppiVar6 = (int *)ppiVar4;
-        ppiVar6 = ppiVar6 + 1;
+      if (((((pEVar2 != (ENTDDisplayUnitData *)param_1) && (pEVar2->MapX == param_2)) &&
+           (pEVar2->MapY == param_3)) &&
+          ((pEVar2->MapZ == param_4 && (pEVar2->UnitBattleData != (BattleUnitData *)0x0)))) &&
+         (((pEVar2->UnitBattleData->AllActionUnitData).UnitID != 0xff &&
+          ((*(char *)(param_1 + 0x4c) == '\0' || (pEVar2->ENTDID != *(byte *)((int)param_1 + 0x131))
+           ))))) {
+        *ppEVar6 = pEVar2;
+        ppEVar6 = ppEVar6 + 1;
         iVar5 = iVar5 + 1;
       }
-      ppiVar4 = (int **)*ppiVar4;
-    } while (ppiVar4 != (int **)0x0);
+      ppEVar1 = &pEVar2->PrevMiscUnitData;
+      pEVar2 = *ppEVar1;
+    } while (*ppEVar1 != (ENTDDisplayUnitData *)0x0);
   }
-  piVar1 = (int *)0x0;
-  if ((iVar5 != 0) && (iVar2 = 0, piVar1 = local_48[0], 0 < iVar5)) {
+  pEVar2 = (ENTDDisplayUnitData *)0x0;
+  if ((iVar5 != 0) && (iVar3 = 0, pEVar2 = local_48[0], 0 < iVar5)) {
     do {
-      iVar2 = iVar2 + 1;
-      if (*(byte *)(*ppiVar3 + 1) == DAT_BATTLE_BIN__80096118) {
-        return *ppiVar3;
+      iVar3 = iVar3 + 1;
+      if (*(byte *)((int)*ppEVar4 + 4) == AT_Unit_ID) {
+        return (int *)*ppEVar4;
       }
-      ppiVar3 = ppiVar3 + 1;
-    } while (iVar2 < iVar5);
+      ppEVar4 = (ENTDDisplayUnitData **)((int **)ppEVar4 + 1);
+    } while (iVar3 < iVar5);
   }
-  return piVar1;
+  return (int *)pEVar2;
 }
 
 
@@ -54879,37 +55346,42 @@ int * FUN_BATTLE_BIN__8007a5d0(int *param_1,uint param_2,uint param_3,uint param
 int * FUN_BATTLE_BIN__8007a6e4(ushort param_1)
 
 {
-  int **ppiVar1;
+  ENTDDisplayUnitData **ppEVar1;
+  ENTDDisplayUnitData *pEVar2;
   
-  ppiVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int **)0x0) {
+  pEVar2 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if (*(byte *)(ppiVar1 + 1) == param_1) {
-        return (int *)ppiVar1;
+      if (pEVar2->ENTDID == param_1) {
+        return (int *)pEVar2;
       }
-      ppiVar1 = (int **)*ppiVar1;
-    } while (ppiVar1 != (int **)0x0);
+      ppEVar1 = &pEVar2->PrevMiscUnitData;
+      pEVar2 = *ppEVar1;
+    } while (*ppEVar1 != (ENTDDisplayUnitData *)0x0);
   }
   return (int *)0x0;
 }
 
 
 
-int * FUN_BATTLE_BIN__8007a724(ushort param_1)
+ENTDDisplayUnitData * FUN_BATTLE_BIN__8007a724(ushort param_1)
 
 {
-  int **ppiVar1;
+  ENTDDisplayUnitData **ppEVar1;
+  ENTDDisplayUnitData *pEVar2;
   
-  ppiVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int **)0x0) {
+  pEVar2 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if ((ppiVar1[0x4d] != (int *)0x0) && (*(byte *)((int)ppiVar1[0x4d] + 0x18a) == param_1)) {
-        return (int *)ppiVar1;
+      if ((pEVar2->UnitBattleData != (BattleUnitData *)0x0) &&
+         ((pEVar2->UnitBattleData->CurActionTargetData).UnitID2 == param_1)) {
+        return pEVar2;
       }
-      ppiVar1 = (int **)*ppiVar1;
-    } while (ppiVar1 != (int **)0x0);
+      ppEVar1 = &pEVar2->PrevMiscUnitData;
+      pEVar2 = *ppEVar1;
+    } while (*ppEVar1 != (ENTDDisplayUnitData *)0x0);
   }
-  return (int *)0x0;
+  return (ENTDDisplayUnitData *)0x0;
 }
 
 
@@ -54917,20 +55389,22 @@ int * FUN_BATTLE_BIN__8007a724(ushort param_1)
 int FUN_BATTLE_BIN__8007a774(void)
 
 {
-  int *piVar1;
-  int iVar2;
+  ENTDDisplayUnitData **ppEVar1;
+  ENTDDisplayUnitData *pEVar2;
+  int iVar3;
   
-  iVar2 = 0;
-  piVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int *)0x0) {
+  iVar3 = 0;
+  pEVar2 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if (*(char *)((int)piVar1 + 6) == -0x65) {
-        iVar2 = iVar2 + 1;
+      if (pEVar2->SpritesheetID == Crystal) {
+        iVar3 = iVar3 + 1;
       }
-      piVar1 = (int *)*piVar1;
-    } while (piVar1 != (int *)0x0);
+      ppEVar1 = &pEVar2->PrevMiscUnitData;
+      pEVar2 = *ppEVar1;
+    } while (*ppEVar1 != (ENTDDisplayUnitData *)0x0);
   }
-  return iVar2;
+  return iVar3;
 }
 
 
@@ -54938,23 +55412,23 @@ int FUN_BATTLE_BIN__8007a774(void)
 undefined4 FUN_BATTLE_BIN__8007a7b8(ushort param_1)
 
 {
-  int **ppiVar1;
-  int **ppiVar2;
-  int **ppiVar3;
+  ENTDDisplayUnitData *pEVar1;
+  ENTDDisplayUnitData *pEVar2;
+  ENTDDisplayUnitData *pEVar3;
   
-  ppiVar1 = (int **)FUN_BATTLE_BIN__8007a6e4(param_1);
-  if (ppiVar1 != (int **)0x0) {
-    ppiVar3 = (int **)&DAT_BATTLE_BIN__80098a54;
+  pEVar1 = (ENTDDisplayUnitData *)FUN_BATTLE_BIN__8007a6e4(param_1);
+  if (pEVar1 != (ENTDDisplayUnitData *)0x0) {
+    pEVar3 = (ENTDDisplayUnitData *)&last_ENTD_Dat;
     do {
-      ppiVar2 = (int **)*ppiVar3;
-      if (ppiVar2 == ppiVar1) {
-        *ppiVar3 = *ppiVar1;
-        *ppiVar1 = (int *)DAT_BATTLE_BIN__80098a54;
-        DAT_BATTLE_BIN__80098a54 = ppiVar1;
+      pEVar2 = pEVar3->PrevMiscUnitData;
+      if (pEVar2 == pEVar1) {
+        pEVar3->PrevMiscUnitData = pEVar1->PrevMiscUnitData;
+        pEVar1->PrevMiscUnitData = last_ENTD_Dat;
+        last_ENTD_Dat = pEVar1;
         return 1;
       }
-      ppiVar3 = ppiVar2;
-    } while (ppiVar2 != (int **)0x0);
+      pEVar3 = pEVar2;
+    } while (pEVar2 != (ENTDDisplayUnitData *)0x0);
   }
   return 0;
 }
@@ -56895,7 +57369,7 @@ void FUN_BATTLE_BIN__8007e72c(short *param_1,uint *param_2)
 {
   undefined uVar1;
   u_short uVar2;
-  int *piVar3;
+  ENTDDisplayUnitData *pEVar3;
   int iVar4;
   undefined4 uVar5;
   undefined4 uVar6;
@@ -56926,7 +57400,7 @@ void FUN_BATTLE_BIN__8007e72c(short *param_1,uint *param_2)
   local_3c = DAT_BATTLE_BIN__800677f4;
   uVar8 = 0;
   local_30 = param_2;
-  piVar3 = FUN_BATTLE_BIN__8007a218();
+  pEVar3 = get_Caster_ENTD_Dat();
   DAT_BATTLE_BIN__80093cb0 = DAT_BATTLE_BIN__80093cb0 + DAT_80045980;
   pSVar7 = &SStack_70;
   do {
@@ -56957,7 +57431,7 @@ void FUN_BATTLE_BIN__8007e72c(short *param_1,uint *param_2)
     *(undefined *)((int)p + 5) = 0x80;
     *(undefined *)((int)p + 4) = 0x80;
     uVar1 = 0xd8;
-    if (uVar8 == (*(ushort *)(piVar3 + 0x1c) & 0xc00) >> 10) {
+    if (uVar8 == ((ushort)pEVar3->CurrentFacing & 0xc00) >> 10) {
       if ((DAT_BATTLE_BIN__80093cb0 & 0x20) == 0) {
         *(undefined *)((int)p + 0x1c) = 0xd6;
         *(undefined *)((int)p + 0xc) = 0xd6;
@@ -57080,7 +57554,7 @@ void FUN_BATTLE_BIN__8007eb8c(int param_1)
       *(undefined2 *)(param_1 + 0x2e2) = uVar5;
       if ((*(ushort *)(param_1 + 0x2e0) & 0xf) == 0) {
         uVar9 = *(uint *)(param_1 + 0x140);
-        if (((uVar9 & 0x1fffc2c4) == 0) && (*(byte *)(param_1 + 4) != DAT_BATTLE_BIN__80096118)) {
+        if (((uVar9 & 0x1fffc2c4) == 0) && (*(byte *)(param_1 + 4) != AT_Unit_ID)) {
           *(undefined *)(param_1 + 0x2dc) = 0;
           return;
         }
@@ -57098,7 +57572,7 @@ void FUN_BATTLE_BIN__8007eb8c(int param_1)
             }
             if (uVar8 == *(byte *)(param_1 + 0x2dd)) goto LAB_BATTLE_BIN__8007ece4;
             if (uVar8 != 0x15) break;
-            if (*(byte *)(param_1 + 4) == DAT_BATTLE_BIN__80096118) goto LAB_BATTLE_BIN__8007ece4;
+            if (*(byte *)(param_1 + 4) == AT_Unit_ID) goto LAB_BATTLE_BIN__8007ece4;
           }
         } while ((uVar9 & *puVar7) == 0);
 LAB_BATTLE_BIN__8007ece4:
@@ -57866,7 +58340,7 @@ LAB_BATTLE_BIN__8008011c:
   }
   FUN_BATTLE_BIN__8007b4ec(iVar9,0,uVar10,unaff_s8,uVar11,uVar13,uVar14,uVar15,0);
 switchD_BATTLE_BIN__8007ff3c_caseD_6:
-  FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094ba4,7,(uint)*(byte *)(param_1 + 4),0);
+  Get_Palette_Data((ushort *)&DAT_BATTLE_BIN__80094ba4,7,(uint)*(byte *)(param_1 + 4),0);
   return 1;
 }
 
@@ -58232,7 +58706,7 @@ LAB_BATTLE_BIN__80080ef4:
   }
   FUN_BATTLE_BIN__8007b4ec(iVar7,0,uVar10,uVar11,uVar2,uVar13,uVar14,uVar15,0);
 LAB_BATTLE_BIN__80080f04:
-  FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094ba4,7,(uint)*(byte *)(param_1 + 4),0);
+  Get_Palette_Data((ushort *)&DAT_BATTLE_BIN__80094ba4,7,(uint)*(byte *)(param_1 + 4),0);
   return 1;
 }
 
@@ -58832,7 +59306,7 @@ void FUN_BATTLE_BIN__80081d54(int *param_1,int param_2,int param_3)
   else {
     puVar7 = (ushort *)(iVar6 + -0x7ff35142);
   }
-  FUN_BATTLE_BIN__800926d8(puVar7,10,(uint)bVar3,0);
+  Get_Palette_Data(puVar7,10,(uint)bVar3,0);
   uVar10 = 0;
   uVar11 = 0;
   uVar9 = 0;
@@ -59102,8 +59576,7 @@ void FUN_BATTLE_BIN__80082468(int *param_1,int param_2,int param_3)
 void FUN_BATTLE_BIN__80082508(int param_1)
 
 {
-  if (((*(uint *)(param_1 + 0x140) & 0x1fffc2c4) == 0) &&
-     (*(byte *)(param_1 + 4) != DAT_BATTLE_BIN__80096118)) {
+  if (((*(uint *)(param_1 + 0x140) & 0x1fffc2c4) == 0) && (*(byte *)(param_1 + 4) != AT_Unit_ID)) {
     *(undefined *)(param_1 + 0x2dc) = 0;
   }
   else {
@@ -59155,59 +59628,61 @@ void FUN_BATTLE_BIN__8008258c(int *param_1)
 
 
 
-void FUN_BATTLE_BIN__80082620(int param_1,int param_2)
+void FUN_BATTLE_BIN__80082620(ENTDDisplayUnitData *caster_data,int swoosh_hit)
 
 {
-  PrimaryItemData *pPVar1;
-  int iVar2;
-  int *piVar3;
-  MusicDataHeader *pMVar4;
-  int iVar5;
-  uint uVar6;
+  PrimaryItemData *item_pointer;
+  ENTDDisplayUnitData *tar_data;
+  SFX_ID sfx_ID;
+  int iVar1;
+  uint item_type;
   
-  pPVar1 = Get_Item_DataPointer((uint)*(byte *)(param_1 + 0x1ab));
-  uVar6 = (uint)pPVar1->ItemType;
-  if (0x1f < uVar6) {
-    uVar6 = 1;
+  item_pointer = Get_Item_DataPointer((uint)(caster_data->field377_0x18c).CurActionUsedWeaponID);
+  item_type = (uint)item_pointer->ItemType;
+  if (0x1f < item_type) {
+    item_type = 1;
   }
-  if (param_2 == 0) {
-    FUN_BATTLE_BIN__8006b960(param_1,(MusicDataHeader *)(uint)*(byte *)(uVar6 + 0x80093d40));
+  if (swoosh_hit == 0) {
+    FUN_BATTLE_BIN__8006b960((int)caster_data,(uint)swoosh_sound_itemtype[item_type]);
   }
-  else if ((param_2 == 1) && (iVar5 = 0, iVar2 = param_1, *(char *)(param_1 + 0x18d) != '\0')) {
+  else if ((swoosh_hit == 1) &&
+          (iVar1 = 0, tar_data = caster_data,
+          (caster_data->field377_0x18c).CurActionTargetHitCount != 0)) {
     do {
-      piVar3 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(iVar2 + 0x18e));
-      if ((piVar3 != (int *)0x0) && (piVar3[0x4d] != 0)) {
-        switch(*(undefined *)(piVar3[0x4d] + 0x18e)) {
+      tar_data = FUN_BATTLE_BIN__8007a724((ushort)(tar_data->field377_0x18c).TargetList[0]);
+      if ((tar_data != (ENTDDisplayUnitData *)0x0) &&
+         (tar_data->UnitBattleData != (BattleUnitData *)0x0)) {
+        switch((tar_data->UnitBattleData->CurActionUnitData).EvadeType) {
         case 1:
         case 4:
         case 7:
         case 0xb:
         case 0xd:
-          pMVar4 = (MusicDataHeader *)0x30;
+          sfx_ID = shirahadori;
           break;
         case 2:
         case 3:
         case 10:
-          pMVar4 = (MusicDataHeader *)(uint)*(byte *)(uVar6 + 0x80093d80);
+          sfx_ID = (SFX_ID)blocked_sound_itemtype[item_type];
           break;
         case 5:
         case 6:
         case 8:
           goto switchD_BATTLE_BIN__800826fc_caseD_5;
         default:
-          if (*(char *)(piVar3[0x4d] + 0x18d) == '\0') {
-            pMVar4 = (MusicDataHeader *)(uint)*(byte *)(uVar6 + 0x80093d60);
+          if ((tar_data->UnitBattleData->CurActionUnitData).CritFlag == 0) {
+            sfx_ID = (SFX_ID)hit_sound_itemtype[item_type];
           }
           else {
-            pMVar4 = (MusicDataHeader *)0x72;
+            sfx_ID = impale_hit;
           }
         }
-        FUN_BATTLE_BIN__8006b960(param_1,pMVar4);
+        FUN_BATTLE_BIN__8006b960((int)caster_data,sfx_ID);
       }
 switchD_BATTLE_BIN__800826fc_caseD_5:
-      iVar5 = iVar5 + 1;
-      iVar2 = param_1 + iVar5;
-    } while (iVar5 < (int)(uint)*(byte *)(param_1 + 0x18d));
+      iVar1 = iVar1 + 1;
+      tar_data = (ENTDDisplayUnitData *)((int)&caster_data->PrevMiscUnitData + iVar1);
+    } while (iVar1 < (int)(uint)(caster_data->field377_0x18c).CurActionTargetHitCount);
   }
   return;
 }
@@ -59640,7 +60115,7 @@ void FUN_BATTLE_BIN__800831b8(int param_1)
   byte bVar1;
   undefined2 uVar2;
   short sVar3;
-  MusicDataHeader *pMVar4;
+  SFX_ID sfx_ID;
   
   if ((*(uint *)(param_1 + 0x14c) & 2) == 0) {
     if ((*(uint *)(param_1 + 0x154) & 2) != 0) {
@@ -59665,16 +60140,16 @@ void FUN_BATTLE_BIN__800831b8(int param_1)
     if ((BattleGameState != Case34) && (*(int *)(param_1 + 0x134) != 0)) {
       bVar1 = *(byte *)(*(int *)(param_1 + 0x134) + 6);
       if ((bVar1 & 0x80) == 0) {
-        pMVar4 = (MusicDataHeader *)0x45;
+        sfx_ID = female_dead;
         if ((bVar1 & 0x40) == 0) {
           if ((bVar1 & 0x20) == 0) goto LAB_BATTLE_BIN__800832fc;
-          pMVar4 = (MusicDataHeader *)0x46;
+          sfx_ID = monster_dead;
         }
       }
       else {
-        pMVar4 = (MusicDataHeader *)0x9a;
+        sfx_ID = male_death_2;
       }
-      FUN_BATTLE_BIN__8006b960(param_1,pMVar4);
+      FUN_BATTLE_BIN__8006b960(param_1,sfx_ID);
     }
   }
 LAB_BATTLE_BIN__800832fc:
@@ -59869,14 +60344,13 @@ void FUN_BATTLE_BIN__80083758(uint param_1,int param_2)
     bVar3 = 0x15;
   }
   bVar1 = *(byte *)(param_2 + 4);
-  FUN_BATTLE_BIN__800926d8
-            ((ushort *)
-             (&DAT_BATTLE_BIN__800b6294 +
-             (uint)((byte)(&DAT_BATTLE_BIN__800943e4)[param_1 * 2] >> 4) * 0x20),5,(uint)bVar1,0);
-  FUN_BATTLE_BIN__800926d8
-            ((ushort *)
-             (&DAT_BATTLE_BIN__800b6294 +
-             ((byte)(&DAT_BATTLE_BIN__800943e4)[param_1 * 2] & 0xf) * 0x20),6,(uint)bVar1,0);
+  Get_Palette_Data((ushort *)
+                   (&DAT_BATTLE_BIN__800b6294 +
+                   (uint)((byte)(&DAT_BATTLE_BIN__800943e4)[param_1 * 2] >> 4) * 0x20),5,(uint)bVar1
+                   ,0);
+  Get_Palette_Data((ushort *)
+                   (&DAT_BATTLE_BIN__800b6294 +
+                   ((byte)(&DAT_BATTLE_BIN__800943e4)[param_1 * 2] & 0xf) * 0x20),6,(uint)bVar1,0);
   *(char *)(param_2 + 0x13a) = (char)param_1;
   *(byte *)(param_2 + 0x13b) = bVar3;
   return;
@@ -60053,16 +60527,16 @@ void FUN_BATTLE_BIN__80083c58(int param_1)
 
 {
   int iVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   int iVar3;
   
   if ((*(char *)(param_1 + 0x18d) != '\0') &&
      (iVar3 = 0, iVar1 = param_1, *(char *)(param_1 + 0x18d) != '\0')) {
     do {
-      piVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(iVar1 + 0x18e));
+      pEVar2 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(iVar1 + 0x18e));
       iVar3 = iVar3 + 1;
-      if (piVar2 != (int *)0x0) {
-        FUN_BATTLE_BIN__80068e30((ushort)*(byte *)(piVar2 + 1));
+      if (pEVar2 != (ENTDDisplayUnitData *)0x0) {
+        FUN_BATTLE_BIN__80068e30((ushort)pEVar2->ENTDID);
       }
       iVar1 = param_1 + iVar3;
     } while (iVar3 < (int)(uint)*(byte *)(param_1 + 0x18d));
@@ -60446,12 +60920,12 @@ void FUN_BATTLE_BIN__80084818(int param_1,int param_2,int param_3,uint param_4)
   byte bVar1;
   short sVar2;
   uint uVar3;
-  int *piVar4;
+  ENTDDisplayUnitData *pEVar4;
   undefined2 *puVar5;
   short sVar6;
   char cVar7;
   int iVar8;
-  int *piVar9;
+  ENTDDisplayUnitData *pEVar9;
   int iVar10;
   int iVar11;
   ushort uVar12;
@@ -60614,7 +61088,8 @@ switchD_BATTLE_BIN__80084930_caseD_ca:
     break;
   case 0xd4:
     FUN_BATTLE_BIN__80082620
-              (param_1,(uint)*(byte *)(*(int *)((uint)uVar16 * 4 + iVar17 + 8) + (int)sVar2));
+              ((ENTDDisplayUnitData *)param_1,
+               (uint)*(byte *)(*(int *)((uint)uVar16 * 4 + iVar17 + 8) + (int)sVar2));
     uVar3 = (uint)uVar16;
     uVar13 = uVar14 + 3;
     goto LAB_BATTLE_BIN__800848d0;
@@ -60674,13 +61149,13 @@ switchD_BATTLE_BIN__80084930_caseD_c7:
       if (*(char *)(param_1 + 0x18d) == '\0') goto switchD_BATTLE_BIN__80084930_caseD_c2;
       uVar3 = 0;
       do {
-        piVar4 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(param_1 + uVar3 + 0x18e));
+        pEVar4 = FUN_BATTLE_BIN__8007a724((ushort)*(byte *)(param_1 + uVar3 + 0x18e));
         uVar12 = uVar12 + 1;
-        if (piVar4 != (int *)0x0) {
-          FUN_BATTLE_BIN__80083978(param_1,(int)piVar4);
-          piVar9 = piVar4;
-          FUN_BATTLE_BIN__80083874(param_1,(int)piVar4);
-          FUN_BATTLE_BIN__80068bd4((ushort)*(byte *)(piVar4 + 1),piVar9,iVar11,param_4);
+        if (pEVar4 != (ENTDDisplayUnitData *)0x0) {
+          FUN_BATTLE_BIN__80083978(param_1,(int)pEVar4);
+          pEVar9 = pEVar4;
+          FUN_BATTLE_BIN__80083874(param_1,(int)pEVar4);
+          FUN_BATTLE_BIN__80068bd4((ushort)pEVar4->ENTDID,pEVar9,iVar11,param_4);
           FUN_BATTLE_BIN__8006894c(param_1);
         }
         uVar3 = (uint)uVar12;
@@ -60752,8 +61227,7 @@ switchD_BATTLE_BIN__80084930_caseD_c7:
     goto switchD_BATTLE_BIN__80084930_caseD_c2;
   case 0xf6:
     FUN_BATTLE_BIN__8006b960
-              (param_1,(MusicDataHeader *)
-                       (uint)*(byte *)(*(int *)((uint)uVar16 * 4 + iVar17 + 8) + (int)sVar2));
+              (param_1,(uint)*(byte *)(*(int *)((uint)uVar16 * 4 + iVar17 + 8) + (int)sVar2));
     uVar3 = (uint)uVar16;
     uVar13 = uVar14 + 3;
     goto LAB_BATTLE_BIN__800848d0;
@@ -61077,9 +61551,7 @@ switchD_BATTLE_BIN__80085378_caseD_d7:
     *puVar5 = 1;
     goto switchD_BATTLE_BIN__80085378_caseD_de;
   case 0xf6:
-    FUN_BATTLE_BIN__8006b960
-              (param_1,(MusicDataHeader *)
-                       (uint)*(byte *)(*(int *)(uVar19 * 4 + iVar16) + (int)sVar4));
+    FUN_BATTLE_BIN__8006b960(param_1,(uint)*(byte *)(*(int *)(uVar19 * 4 + iVar16) + (int)sVar4));
     iVar7 = uVar19 << 2;
     uVar14 = uVar8 + 3;
     goto LAB_BATTLE_BIN__8008531c;
@@ -61680,7 +62152,7 @@ void FUN_BATTLE_BIN__80086b44(void)
   map_tile_data *pmVar2;
   uint uVar3;
   int iVar4;
-  int *piVar5;
+  ENTDDisplayUnitData *pEVar5;
   short local_38;
   short local_34;
   int local_30;
@@ -61690,27 +62162,27 @@ void FUN_BATTLE_BIN__80086b44(void)
   
   SetRotMatrix((MATRIX *)&DAT_BATTLE_BIN__80098a24);
   SetTransMatrix((MATRIX *)&DAT_BATTLE_BIN__80098a24);
-  for (piVar5 = (int *)DAT_BATTLE_BIN__80098a54; piVar5 != (int *)0x0; piVar5 = (int *)*piVar5) {
-    FUN_BATTLE_BIN__8007b96c(&SStack_28.vx,(int)piVar5);
-    RotTrans(&SStack_28,(VECTOR *)&local_38,piVar5 + 0x4b);
-    if ((*(ushort *)((int)piVar5 + 0x12) & 2) == 0) {
-      sVar1 = *(short *)(piVar5 + 0x16);
+  for (pEVar5 = last_ENTD_Dat; pEVar5 != (ENTDDisplayUnitData *)0x0;
+      pEVar5 = pEVar5->PrevMiscUnitData) {
+    FUN_BATTLE_BIN__8007b96c(&SStack_28.vx,(int)pEVar5);
+    RotTrans(&SStack_28,(VECTOR *)&local_38,(long *)&pEVar5->field_0x12c);
+    if ((*(ushort *)&pEVar5->field_0x12 & 2) == 0) {
+      sVar1 = *(short *)&pEVar5->field_0x58;
     }
     else {
-      sVar1 = -*(short *)(piVar5 + 0x16);
+      sVar1 = -*(short *)&pEVar5->field_0x58;
     }
-    *(short *)(piVar5 + 0x48) = local_38 + sVar1;
-    if ((*(ushort *)((int)piVar5 + 0x12) & 4) == 0) {
-      sVar1 = *(short *)((int)piVar5 + 0x5a);
+    *(short *)&pEVar5->field_0x120 = local_38 + sVar1;
+    if ((*(ushort *)&pEVar5->field_0x12 & 4) == 0) {
+      sVar1 = *(short *)&pEVar5->field_0x5a;
     }
     else {
-      sVar1 = -*(short *)((int)piVar5 + 0x5a);
+      sVar1 = -*(short *)&pEVar5->field_0x5a;
     }
-    *(short *)((int)piVar5 + 0x122) = local_34 + sVar1;
-    pmVar2 = get_tile_data_ptr(((int)*(short *)(piVar5 + 0x10) / 0x1c) * 0x10000 >> 0x10,
-                               ((int)*(short *)(piVar5 + 0x11) / 0x1c) * 0x10000 >> 0x10,
-                               (uint)*(byte *)((int)piVar5 + 0x7e));
-    if (*(char *)((int)piVar5 + 0x7f) == '\0') {
+    *(short *)&pEVar5->field_0x122 = local_34 + sVar1;
+    pmVar2 = get_tile_data_ptr(((int)pEVar5->ScreenX / 0x1c) * 0x10000 >> 0x10,
+                               ((int)pEVar5->ScreenY / 0x1c) * 0x10000 >> 0x10,(uint)pEVar5->MapZ);
+    if (pEVar5->CentreTileOffs == 0) {
       if ((pmVar2->TileType & 0x40) == 0) {
         FUN_BATTLE_BIN__8007b92c(&SStack_28.vx,&SStack_20.vx);
       }
@@ -61724,8 +62196,8 @@ void FUN_BATTLE_BIN__80086b44(void)
     else {
       FUN_BATTLE_BIN__8007b6a8(&SStack_28.vx,&SStack_20.vx);
     }
-    if (piVar5[0x4d] != 0) {
-      uVar3 = FUN_BATTLE_BIN__8017f020(piVar5[0x4d]);
+    if (pEVar5->UnitBattleData != (BattleUnitData *)0x0) {
+      uVar3 = FUN_BATTLE_BIN__8017f020((int)pEVar5->UnitBattleData);
       if ((uVar3 & 0x10) == 0) {
         if (((uVar3 & 0x40) == 0) && ((uVar3 & 0x20) == 0)) {
           SStack_20.vy = SStack_20.vy + (ushort)(pmVar2->height_small >> 5) * -0xc;
@@ -61740,7 +62212,7 @@ void FUN_BATTLE_BIN__80086b44(void)
     if (local_30 < 0) {
       iVar4 = local_30 + 3;
     }
-    piVar5[0x4a] = iVar4 >> 2;
+    *(int *)&pEVar5->field_0x128 = iVar4 >> 2;
   }
   return;
 }
@@ -61750,7 +62222,7 @@ void FUN_BATTLE_BIN__80086b44(void)
 void FUN_BATTLE_BIN__80086dc4(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
   switch(BattleGameState) {
   case FreeCursor:
@@ -61769,12 +62241,12 @@ void FUN_BATTLE_BIN__80086dc4(void)
         (DAT_BATTLE_BIN__800960c8 == 0)) &&
        ((DAT_BATTLE_BIN__800a1c48 | DAT_BATTLE_BIN__800a1c4c | DAT_BATTLE_BIN__800a1c50) == 0)) {
       if (DAT_BATTLE_BIN__80096130 == 0) {
-        piVar1 = DAT_BATTLE_BIN__80098a54;
-        if (DAT_BATTLE_BIN__80098a54 != (int *)0x0) {
+        pEVar1 = last_ENTD_Dat;
+        if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
           do {
-            FUN_BATTLE_BIN__800865a4((int)piVar1);
-            piVar1 = (int *)*piVar1;
-          } while (piVar1 != (int *)0x0);
+            FUN_BATTLE_BIN__800865a4((int)pEVar1);
+            pEVar1 = pEVar1->PrevMiscUnitData;
+          } while (pEVar1 != (ENTDDisplayUnitData *)0x0);
         }
       }
       else {
@@ -61789,8 +62261,9 @@ void FUN_BATTLE_BIN__80086dc4(void)
     }
   }
   FUN_BATTLE_BIN__80085234();
-  for (piVar1 = DAT_BATTLE_BIN__80098a54; piVar1 != (int *)0x0; piVar1 = (int *)*piVar1) {
-    FUN_BATTLE_BIN__80086640((int)piVar1);
+  for (pEVar1 = last_ENTD_Dat; pEVar1 != (ENTDDisplayUnitData *)0x0;
+      pEVar1 = pEVar1->PrevMiscUnitData) {
+    FUN_BATTLE_BIN__80086640((int)pEVar1);
   }
   return;
 }
@@ -61801,35 +62274,34 @@ void FUN_BATTLE_BIN__80086f2c(undefined4 *param_1)
 
 {
   bool bVar1;
-  undefined4 *puVar2;
-  int *piVar3;
-  undefined4 *puVar4;
+  ENTDDisplayUnitData *pEVar2;
+  ENTDDisplayUnitData *pEVar3;
   
   bVar1 = false;
   FUN_BATTLE_BIN__8007aecc();
   (&DAT_BATTLE_BIN__800b7304)[(uint)*(byte *)(param_1 + 1) * 0x110] = 0;
-  if (DAT_BATTLE_BIN__80098a54 != (int *)0x0) {
-    piVar3 = DAT_BATTLE_BIN__80098a54;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
+    pEVar3 = last_ENTD_Dat;
     do {
-      if ((*(char *)((int)piVar3 + 5) == *(char *)((int)param_1 + 5)) &&
-         ((&DAT_BATTLE_BIN__800b7304)[(uint)*(byte *)(piVar3 + 1) * 0x110] != 0)) {
+      if ((pEVar3->SpritesheetVRAM == *(byte *)((int)param_1 + 5)) &&
+         ((&DAT_BATTLE_BIN__800b7304)[(uint)pEVar3->ENTDID * 0x110] != 0)) {
         bVar1 = true;
       }
-      piVar3 = (int *)*piVar3;
-    } while (piVar3 != (int *)0x0);
+      pEVar3 = pEVar3->PrevMiscUnitData;
+    } while (pEVar3 != (ENTDDisplayUnitData *)0x0);
   }
   if (!bVar1) {
     (&DAT_BATTLE_BIN__800c7ce8)[(uint)*(byte *)((int)param_1 + 5) * 0x32d6] = 0;
   }
-  puVar4 = &DAT_BATTLE_BIN__80098a54;
+  pEVar3 = (ENTDDisplayUnitData *)&last_ENTD_Dat;
   do {
-    puVar2 = (undefined4 *)*puVar4;
-    if (puVar2 == param_1) {
-      *puVar4 = *puVar2;
+    pEVar2 = pEVar3->PrevMiscUnitData;
+    if (pEVar2 == (ENTDDisplayUnitData *)param_1) {
+      pEVar3->PrevMiscUnitData = pEVar2->PrevMiscUnitData;
       return;
     }
-    puVar4 = puVar2;
-  } while (puVar2 != (undefined4 *)0x0);
+    pEVar3 = pEVar2;
+  } while (pEVar2 != (ENTDDisplayUnitData *)0x0);
   return;
 }
 
@@ -61838,14 +62310,14 @@ void FUN_BATTLE_BIN__80086f2c(undefined4 *param_1)
 void FUN_BATTLE_BIN__80087064(void)
 
 {
-  undefined4 *puVar1;
+  ENTDDisplayUnitData *pEVar1;
   
-  puVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (undefined4 *)0x0) {
+  pEVar1 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      FUN_BATTLE_BIN__80086f2c(puVar1);
-      puVar1 = (undefined4 *)*puVar1;
-    } while (puVar1 != (undefined4 *)0x0);
+      FUN_BATTLE_BIN__80086f2c(&pEVar1->PrevMiscUnitData);
+      pEVar1 = pEVar1->PrevMiscUnitData;
+    } while (pEVar1 != (ENTDDisplayUnitData *)0x0);
   }
   return;
 }
@@ -61873,7 +62345,7 @@ undefined4 FUN_BATTLE_BIN__800870ac(undefined4 *param_1)
       else {
         uVar3 = 0;
         if (cVar1 == '\x02') {
-          if (bVar2 == DAT_BATTLE_BIN__80096118) {
+          if (bVar2 == AT_Unit_ID) {
             FUN_BATTLE_BIN__8008d18c((ushort)bVar2);
             uVar3 = 0;
           }
@@ -61897,16 +62369,16 @@ undefined4 FUN_BATTLE_BIN__800870ac(undefined4 *param_1)
 void FUN_BATTLE_BIN__8008719c(undefined4 param_1,undefined4 param_2,undefined4 param_3,uint param_4)
 
 {
-  int **ppiVar1;
+  ENTDDisplayUnitData *pEVar1;
   
-  ppiVar1 = (int **)DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int *)0x0) {
+  pEVar1 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      FUN_BATTLE_BIN__80085c0c((int)ppiVar1,param_2,param_3,param_4);
-      FUN_BATTLE_BIN__8007f1d4((int *)ppiVar1);
-      FUN_BATTLE_BIN__800870ac(ppiVar1);
-      ppiVar1 = (int **)*ppiVar1;
-    } while (ppiVar1 != (int **)0x0);
+      FUN_BATTLE_BIN__80085c0c((int)pEVar1,param_2,param_3,param_4);
+      FUN_BATTLE_BIN__8007f1d4((int *)pEVar1);
+      FUN_BATTLE_BIN__800870ac(&pEVar1->PrevMiscUnitData);
+      pEVar1 = pEVar1->PrevMiscUnitData;
+    } while (pEVar1 != (ENTDDisplayUnitData *)0x0);
   }
   return;
 }
@@ -62229,7 +62701,7 @@ void FUN_BATTLE_BIN__800878a4(undefined *param_1)
     puVar2 = puVar2 + 1;
   } while (iVar1 < 0x200);
   LoadTPage((u_long *)(param_1 + 0x8400),0,0,0x200,0,0x100,0x100);
-  FUN_BATTLE_BIN__800926d8((ushort *)(param_1 + 0x10400),0xb,0,1);
+  Get_Palette_Data((ushort *)(param_1 + 0x10400),0xb,0,1);
   LoadTPage((u_long *)(param_1 + 0x10600),0,0,0x200,0x70,0x100,0x90);
   return;
 }
@@ -62331,7 +62803,7 @@ FUN_BATTLE_BIN__80087a28
       FUN_BATTLE_BIN__80087704(param_10,uVar16,uVar19,(int)pEVar3);
       pmVar5 = get_tile_data_ptr(param_1,param_2,param_3);
       FUN_BATTLE_BIN__80082468((int *)pEVar3,pmVar5->tile_interaction >> 2 & 3,1);
-      FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094bc4,4,uVar19,0);
+      Get_Palette_Data((ushort *)&DAT_BATTLE_BIN__80094bc4,4,uVar19,0);
       uVar1 = GetClut(uVar19 << 4,0x1e3);
       pEVar3->CLUT = uVar1;
       pEVar3->TPAGE = (short)uVar16 + 0x14;
@@ -62526,8 +62998,8 @@ FUN_BATTLE_BIN__80087a28
         iVar18 = iVar18 + 1;
         iVar15 = iVar15 + 0x30;
       } while (iVar18 < 3);
-      pEVar3->PrevMiscUnitData = DAT_BATTLE_BIN__80098a54;
-      DAT_BATTLE_BIN__80098a54 = pEVar3;
+      pEVar3->PrevMiscUnitData = last_ENTD_Dat;
+      last_ENTD_Dat = pEVar3;
       FUN_BATTLE_BIN__80083758
                 ((uint)(pEVar3->UnitBattleData->AllActionUnitData).RHWeapon,(int)pEVar3);
       FUN_BATTLE_BIN__80180fe4((uint)(pEVar3->UnitBattleData->CurActionTargetData).UnitID2);
@@ -62564,7 +63036,7 @@ void FUN_BATTLE_BIN__80088018(void)
   int iVar1;
   int iVar2;
   
-  DAT_BATTLE_BIN__80098a54 = 0;
+  last_ENTD_Dat = (ENTDDisplayUnitData *)0x0;
   iVar1 = 0x3fc0;
   do {
     *(undefined4 *)((int)&DAT_BATTLE_BIN__800b7304 + iVar1) = 0;
@@ -62593,8 +63065,8 @@ void FUN_BATTLE_BIN__80088018(void)
   DAT_BATTLE_BIN__800aed36 = 0;
   DAT_BATTLE_BIN__800aed38 = 0x40;
   DAT_BATTLE_BIN__800aed3a = 200;
-  DAT_BATTLE_BIN__80098d74 = 0;
-  DAT_BATTLE_BIN__80098d78 = 0;
+  file_func_indexAAAAAAAAAAAA = 0;
+  sprite_func_index = 0;
   DAT_BATTLE_BIN__80098d7c = 0;
   DAT_BATTLE_BIN__80098d80 = 0;
   DAT_BATTLE_BIN__800bf78c = &DAT_BATTLE_BIN__800c1260;
@@ -62611,22 +63083,22 @@ int FUN_BATTLE_BIN__80088130(void)
   int *piVar3;
   uint uVar4;
   
-  if (DAT_BATTLE_BIN__80098d78 == 1) {
+  if (sprite_func_index == 1) {
     iVar1 = Check_File_Still_Loading();
     if (iVar1 != 0) {
-      return DAT_BATTLE_BIN__80098d74;
+      return file_func_indexAAAAAAAAAAAA;
     }
-    DAT_BATTLE_BIN__80098d78 = DAT_BATTLE_BIN__80098d78 + 1;
-    return DAT_BATTLE_BIN__80098d74;
+    sprite_func_index = sprite_func_index + 1;
+    return file_func_indexAAAAAAAAAAAA;
   }
-  if (1 < DAT_BATTLE_BIN__80098d78) {
-    if (DAT_BATTLE_BIN__80098d78 != 2) {
-      if (DAT_BATTLE_BIN__80098d78 != 3) {
-        return DAT_BATTLE_BIN__80098d74;
+  if (1 < sprite_func_index) {
+    if (sprite_func_index != 2) {
+      if (sprite_func_index != 3) {
+        return file_func_indexAAAAAAAAAAAA;
       }
       Call_BIN_Free_FFT((int)DAT_BATTLE_BIN__80098d80);
-      DAT_BATTLE_BIN__80098d78 = 0;
-      switch(DAT_BATTLE_BIN__80098d74) {
+      sprite_func_index = 0;
+      switch(file_func_indexAAAAAAAAAAAA) {
       case 0:
         break;
       case 1:
@@ -62634,41 +63106,41 @@ int FUN_BATTLE_BIN__80088130(void)
       case 2:
       case 3:
         if (DAT_BATTLE_BIN__80098d7c + 1 < 2) {
-          DAT_BATTLE_BIN__80098d78 = 0;
+          sprite_func_index = 0;
           DAT_BATTLE_BIN__80098d7c = DAT_BATTLE_BIN__80098d7c + 1;
-          return DAT_BATTLE_BIN__80098d74;
+          return file_func_indexAAAAAAAAAAAA;
         }
         goto LAB_BATTLE_BIN__800887b0;
       case 4:
       case 5:
         if (DAT_BATTLE_BIN__80098d7c + 1 < 1) {
-          DAT_BATTLE_BIN__80098d78 = 0;
+          sprite_func_index = 0;
           DAT_BATTLE_BIN__80098d7c = DAT_BATTLE_BIN__80098d7c + 1;
-          return DAT_BATTLE_BIN__80098d74;
+          return file_func_indexAAAAAAAAAAAA;
         }
         goto LAB_BATTLE_BIN__800887b0;
       case 6:
       case 7:
-        piVar3 = &DAT_BATTLE_BIN__80098d74;
+        piVar3 = &file_func_indexAAAAAAAAAAAA;
         DAT_BATTLE_BIN__80098d7c = 0;
-        iVar1 = DAT_BATTLE_BIN__80098d74;
+        iVar1 = file_func_indexAAAAAAAAAAAA;
         goto LAB_BATTLE_BIN__800887e8;
       default:
-        DAT_BATTLE_BIN__80098d78 = 0;
-        return DAT_BATTLE_BIN__80098d74;
+        sprite_func_index = 0;
+        return file_func_indexAAAAAAAAAAAA;
       }
       if (DAT_BATTLE_BIN__80098d7c + 1 < 5) {
-        DAT_BATTLE_BIN__80098d78 = 0;
+        sprite_func_index = 0;
         DAT_BATTLE_BIN__80098d7c = DAT_BATTLE_BIN__80098d7c + 1;
-        return DAT_BATTLE_BIN__80098d74;
+        return file_func_indexAAAAAAAAAAAA;
       }
 LAB_BATTLE_BIN__800887b0:
-      DAT_BATTLE_BIN__80098d74 = DAT_BATTLE_BIN__80098d74 + 1;
-      DAT_BATTLE_BIN__80098d78 = 0;
+      file_func_indexAAAAAAAAAAAA = file_func_indexAAAAAAAAAAAA + 1;
+      sprite_func_index = 0;
       DAT_BATTLE_BIN__80098d7c = 0;
-      return DAT_BATTLE_BIN__80098d74;
+      return file_func_indexAAAAAAAAAAAA;
     }
-    switch(DAT_BATTLE_BIN__80098d74) {
+    switch(file_func_indexAAAAAAAAAAAA) {
     case 0:
       FUN_BATTLE_BIN__800873bc
                 ((int *)(DAT_BATTLE_BIN__80098d7c * 0x688 + -0x7ff69d0c),
@@ -62704,22 +63176,22 @@ LAB_BATTLE_BIN__80088680:
     case 7:
       FUN_BATTLE_BIN__800879b8((byte *)DAT_BATTLE_BIN__80098d80);
     }
-    piVar3 = &DAT_BATTLE_BIN__80098d78;
-    iVar1 = DAT_BATTLE_BIN__80098d78;
+    piVar3 = &sprite_func_index;
+    iVar1 = sprite_func_index;
 LAB_BATTLE_BIN__800887e8:
     *piVar3 = iVar1 + 1;
-    return DAT_BATTLE_BIN__80098d74;
+    return file_func_indexAAAAAAAAAAAA;
   }
-  if (DAT_BATTLE_BIN__80098d78 != 0) {
-    return DAT_BATTLE_BIN__80098d74;
+  if (sprite_func_index != 0) {
+    return file_func_indexAAAAAAAAAAAA;
   }
-  switch(DAT_BATTLE_BIN__80098d74) {
+  switch(file_func_indexAAAAAAAAAAAA) {
   case 0:
     DAT_BATTLE_BIN__80098d80 =
          (u_long *)
          BIN_Malloc_FFT(*(uint *)(&DAT_BATTLE_BIN__80094c50 + DAT_BATTLE_BIN__80098d7c * 8));
     if (DAT_BATTLE_BIN__80098d80 == (u_long *)0x0) {
-      return DAT_BATTLE_BIN__80098d74;
+      return file_func_indexAAAAAAAAAAAA;
     }
     iVar1 = *(int *)(&DAT_BATTLE_BIN__80094c4c + DAT_BATTLE_BIN__80098d7c * 8);
     uVar4 = *(uint *)(&DAT_BATTLE_BIN__80094c50 + DAT_BATTLE_BIN__80098d7c * 8);
@@ -62729,7 +63201,7 @@ LAB_BATTLE_BIN__800887e8:
          (u_long *)
          BIN_Malloc_FFT(*(uint *)(&DAT_BATTLE_BIN__80094c08 + DAT_BATTLE_BIN__80098d7c * 8));
     if (DAT_BATTLE_BIN__80098d80 == (u_long *)0x0) {
-      return DAT_BATTLE_BIN__80098d74;
+      return file_func_indexAAAAAAAAAAAA;
     }
     iVar1 = *(int *)(&DAT_BATTLE_BIN__80094c04 + DAT_BATTLE_BIN__80098d7c * 8);
     uVar4 = *(uint *)(&DAT_BATTLE_BIN__80094c08 + DAT_BATTLE_BIN__80098d7c * 8);
@@ -62739,7 +63211,7 @@ LAB_BATTLE_BIN__800887e8:
          (u_long *)
          BIN_Malloc_FFT(*(uint *)(&DAT_BATTLE_BIN__80094ca8 + DAT_BATTLE_BIN__80098d7c * 8));
     if (DAT_BATTLE_BIN__80098d80 == (u_long *)0x0) {
-      return DAT_BATTLE_BIN__80098d74;
+      return file_func_indexAAAAAAAAAAAA;
     }
     iVar1 = *(int *)(&DAT_BATTLE_BIN__80094ca4 + DAT_BATTLE_BIN__80098d7c * 8);
     uVar4 = *(uint *)(&DAT_BATTLE_BIN__80094ca8 + DAT_BATTLE_BIN__80098d7c * 8);
@@ -62749,7 +63221,7 @@ LAB_BATTLE_BIN__800887e8:
          (u_long *)
          BIN_Malloc_FFT(*(uint *)(&DAT_BATTLE_BIN__80094c98 + DAT_BATTLE_BIN__80098d7c * 8));
     if (DAT_BATTLE_BIN__80098d80 == (u_long *)0x0) {
-      return DAT_BATTLE_BIN__80098d74;
+      return file_func_indexAAAAAAAAAAAA;
     }
     iVar1 = *(int *)(&DAT_BATTLE_BIN__80094c94 + DAT_BATTLE_BIN__80098d7c * 8);
     uVar4 = *(uint *)(&DAT_BATTLE_BIN__80094c98 + DAT_BATTLE_BIN__80098d7c * 8);
@@ -62759,7 +63231,7 @@ LAB_BATTLE_BIN__800887e8:
          (u_long *)
          BIN_Malloc_FFT(*(uint *)(&DAT_BATTLE_BIN__80094cc8 + DAT_BATTLE_BIN__80098d7c * 8));
     if (DAT_BATTLE_BIN__80098d80 == (u_long *)0x0) {
-      return DAT_BATTLE_BIN__80098d74;
+      return file_func_indexAAAAAAAAAAAA;
     }
     iVar1 = *(int *)(&DAT_BATTLE_BIN__80094cc4 + DAT_BATTLE_BIN__80098d7c * 8);
     uVar4 = *(uint *)(&DAT_BATTLE_BIN__80094cc8 + DAT_BATTLE_BIN__80098d7c * 8);
@@ -62769,7 +63241,7 @@ LAB_BATTLE_BIN__800887e8:
          (u_long *)
          BIN_Malloc_FFT(*(uint *)(&DAT_BATTLE_BIN__80094cb8 + DAT_BATTLE_BIN__80098d7c * 8));
     if (DAT_BATTLE_BIN__80098d80 == (u_long *)0x0) {
-      return DAT_BATTLE_BIN__80098d74;
+      return file_func_indexAAAAAAAAAAAA;
     }
     iVar1 = *(int *)(&DAT_BATTLE_BIN__80094cb4 + DAT_BATTLE_BIN__80098d7c * 8);
     uVar4 = *(uint *)(&DAT_BATTLE_BIN__80094cb8 + DAT_BATTLE_BIN__80098d7c * 8);
@@ -62777,20 +63249,20 @@ LAB_BATTLE_BIN__800887e8:
   case 6:
     DAT_BATTLE_BIN__80098d80 = (u_long *)BIN_Malloc_FFT(0x15000);
     if (DAT_BATTLE_BIN__80098d80 == (u_long *)0x0) {
-      return DAT_BATTLE_BIN__80098d74;
+      return file_func_indexAAAAAAAAAAAA;
     }
     iVar1 = Call_CalcFileHead_NNL(0xdefa,0x15000,DAT_BATTLE_BIN__80098d80);
     goto joined_r0x800884b0;
   case 7:
     DAT_BATTLE_BIN__80098d80 = (u_long *)BIN_Malloc_FFT(0x8800);
     if (DAT_BATTLE_BIN__80098d80 == (u_long *)0x0) {
-      return DAT_BATTLE_BIN__80098d74;
+      return file_func_indexAAAAAAAAAAAA;
     }
     iVar1 = Call_CalcFileHead_NNL(0xdf24,0x8800,DAT_BATTLE_BIN__80098d80);
 joined_r0x800884b0:
     if (iVar1 != 0) {
       Call_BIN_Free_FFT((int)DAT_BATTLE_BIN__80098d80);
-      return DAT_BATTLE_BIN__80098d74;
+      return file_func_indexAAAAAAAAAAAA;
     }
     goto LAB_BATTLE_BIN__800884b8;
   default:
@@ -62799,13 +63271,13 @@ joined_r0x800884b0:
   iVar1 = Call_CalcFileHead_NNL(iVar1,uVar4,DAT_BATTLE_BIN__80098d80);
   if (iVar1 == 0) {
 LAB_BATTLE_BIN__800884b8:
-    DAT_BATTLE_BIN__80098d78 = DAT_BATTLE_BIN__80098d78 + 1;
+    sprite_func_index = sprite_func_index + 1;
   }
   else {
     Call_BIN_Free_FFT((int)DAT_BATTLE_BIN__80098d80);
   }
 switchD_BATTLE_BIN__800881b0_caseD_8:
-  return DAT_BATTLE_BIN__80098d74;
+  return file_func_indexAAAAAAAAAAAA;
 }
 
 
@@ -62828,8 +63300,8 @@ void FUN_BATTLE_BIN__80088808(undefined4 param_1,undefined4 param_2,undefined4 p
 void FUN_BATTLE_BIN__80088840(void)
 
 {
-  DAT_BATTLE_BIN__80098d74 = 0;
-  DAT_BATTLE_BIN__80098d78 = 0;
+  file_func_indexAAAAAAAAAAAA = 0;
+  sprite_func_index = 0;
   DAT_BATTLE_BIN__80098d7c = 0;
   DAT_BATTLE_BIN__80098d80 = 0;
   return;
@@ -62858,8 +63330,8 @@ void FUN_BATTLE_BIN__80088868(void)
   puVar2 = (undefined *)FUN_801c5a50();
 LAB_BATTLE_BIN__800888cc:
   FUN_BATTLE_BIN__8017f620(puVar2);
-  DAT_BATTLE_BIN__80098d74 = 0;
-  DAT_BATTLE_BIN__80098d78 = 0;
+  file_func_indexAAAAAAAAAAAA = 0;
+  sprite_func_index = 0;
   DAT_BATTLE_BIN__80098d7c = 0;
   DAT_BATTLE_BIN__80098d80 = 0;
   return;
@@ -62878,28 +63350,28 @@ byte FUN_BATTLE_BIN__80088904(void)
   int iVar6;
   byte bVar7;
   
-  iVar6 = DAT_BATTLE_BIN__80098d74;
+  iVar6 = file_func_indexAAAAAAAAAAAA;
   bVar7 = 1;
-  if (DAT_BATTLE_BIN__80098d78 == 1) {
+  if (sprite_func_index == 1) {
     iVar6 = Check_File_Still_Loading();
     if (iVar6 != 0) goto LAB_BATTLE_BIN__80088eb0;
   }
   else {
-    if (1 < DAT_BATTLE_BIN__80098d78) {
-      if (DAT_BATTLE_BIN__80098d78 == 2) {
-        if (DAT_BATTLE_BIN__80098d74 == 1) {
+    if (1 < sprite_func_index) {
+      if (sprite_func_index == 2) {
+        if (file_func_indexAAAAAAAAAAAA == 1) {
           DAT_BATTLE_BIN__800a1c58 = &DAT_BATTLE_BIN__800e4670;
           FUN_BATTLE_BIN__800871f4
                     ((int *)&DAT_BATTLE_BIN__800c0e58,(byte *)DAT_BATTLE_BIN__80098d80);
         }
-        else if (DAT_BATTLE_BIN__80098d74 < 2) {
-          if (DAT_BATTLE_BIN__80098d74 == 0) {
+        else if (file_func_indexAAAAAAAAAAAA < 2) {
+          if (file_func_indexAAAAAAAAAAAA == 0) {
             DAT_BATTLE_BIN__800bf78c = &DAT_BATTLE_BIN__80098dec;
             FUN_BATTLE_BIN__800873bc
                       ((int *)&DAT_BATTLE_BIN__8009839c,(byte *)DAT_BATTLE_BIN__80098d80);
           }
         }
-        else if (DAT_BATTLE_BIN__80098d74 == 2) {
+        else if (file_func_indexAAAAAAAAAAAA == 2) {
           iVar6 = DAT_BATTLE_BIN__80098d7c * 0x14;
           uVar1 = (uint)(byte)(&DAT_80049c1c)[iVar6];
           uVar3 = (uint)(byte)(&DAT_80049c1d)[iVar6];
@@ -62915,37 +63387,37 @@ byte FUN_BATTLE_BIN__80088904(void)
                      (byte *)DAT_BATTLE_BIN__80098d80);
           FUN_BATTLE_BIN__80088808(uVar1,uVar3,uVar4,uVar5);
         }
-        DAT_BATTLE_BIN__80098d78 = DAT_BATTLE_BIN__80098d78 + 1;
+        sprite_func_index = sprite_func_index + 1;
       }
-      else if (DAT_BATTLE_BIN__80098d78 == 3) {
+      else if (sprite_func_index == 3) {
         if (DAT_BATTLE_BIN__80098d80 != (u_long *)0x0) {
           Call_BIN_Free_FFT((int)DAT_BATTLE_BIN__80098d80);
         }
-        DAT_BATTLE_BIN__80098d78 = 0;
-        if (-1 < DAT_BATTLE_BIN__80098d74) {
-          if (DAT_BATTLE_BIN__80098d74 < 2) {
-            DAT_BATTLE_BIN__80098d74 = DAT_BATTLE_BIN__80098d74 + 1;
+        sprite_func_index = 0;
+        if (-1 < file_func_indexAAAAAAAAAAAA) {
+          if (file_func_indexAAAAAAAAAAAA < 2) {
+            file_func_indexAAAAAAAAAAAA = file_func_indexAAAAAAAAAAAA + 1;
             bVar7 = 2;
             goto LAB_BATTLE_BIN__80088eb0;
           }
           bVar7 = 2;
-          if (DAT_BATTLE_BIN__80098d74 != 2) goto LAB_BATTLE_BIN__80088eb0;
-          DAT_BATTLE_BIN__80098d74 = 0;
+          if (file_func_indexAAAAAAAAAAAA != 2) goto LAB_BATTLE_BIN__80088eb0;
+          file_func_indexAAAAAAAAAAAA = 0;
           DAT_BATTLE_BIN__80098d7c = DAT_BATTLE_BIN__80098d7c + 1;
         }
         bVar7 = 2;
       }
       goto LAB_BATTLE_BIN__80088eb0;
     }
-    if (DAT_BATTLE_BIN__80098d78 != 0) goto LAB_BATTLE_BIN__80088eb0;
-    if (DAT_BATTLE_BIN__80098d74 == 1) {
+    if (sprite_func_index != 0) goto LAB_BATTLE_BIN__80088eb0;
+    if (file_func_indexAAAAAAAAAAAA == 1) {
       uVar1 = (uint)(byte)(&DAT_BATTLE_BIN__80094749)
                           [*(short *)(&DAT_80049c22 + DAT_BATTLE_BIN__80098d7c * 0x14) * 4];
       if ((uVar1 < 5) || (iVar6 = uVar1 * 8, uVar1 == DAT_BATTLE_BIN__80096120)) {
 LAB_BATTLE_BIN__80088aa4:
         bVar7 = 2;
         DAT_BATTLE_BIN__80098d80 = (u_long *)0x0;
-        DAT_BATTLE_BIN__80098d78 = 3;
+        sprite_func_index = 3;
         goto LAB_BATTLE_BIN__80088eb0;
       }
       DAT_BATTLE_BIN__80096120 = uVar1;
@@ -62955,8 +63427,8 @@ LAB_BATTLE_BIN__80088aa4:
       iVar2 = *(int *)(&DAT_BATTLE_BIN__80094c04 + iVar6);
       uVar1 = *(uint *)(&DAT_BATTLE_BIN__80094c08 + iVar6);
     }
-    else if (DAT_BATTLE_BIN__80098d74 < 2) {
-      if (DAT_BATTLE_BIN__80098d74 != 0) goto LAB_BATTLE_BIN__80088eb0;
+    else if (file_func_indexAAAAAAAAAAAA < 2) {
+      if (file_func_indexAAAAAAAAAAAA != 0) goto LAB_BATTLE_BIN__80088eb0;
       uVar1 = (uint)(byte)(&DAT_BATTLE_BIN__80094748)
                           [*(short *)(&DAT_80049c22 + DAT_BATTLE_BIN__80098d7c * 0x14) * 4];
       if ((uVar1 < 5) || (iVar6 = uVar1 * 8, uVar1 == DAT_BATTLE_BIN__80096124))
@@ -62969,7 +63441,7 @@ LAB_BATTLE_BIN__80088aa4:
       uVar1 = *(uint *)(&DAT_BATTLE_BIN__80094c50 + iVar6);
     }
     else {
-      if (DAT_BATTLE_BIN__80098d74 != 2) goto LAB_BATTLE_BIN__80088eb0;
+      if (file_func_indexAAAAAAAAAAAA != 2) goto LAB_BATTLE_BIN__80088eb0;
       if (0x9f < *(short *)(&DAT_80049c22 + DAT_BATTLE_BIN__80098d7c * 0x14)) {
         *(undefined2 *)(&DAT_80049c22 + DAT_BATTLE_BIN__80098d7c * 0x14) = 1;
       }
@@ -62978,7 +63450,7 @@ LAB_BATTLE_BIN__80088aa4:
       if (iVar2 != 0) {
         bVar7 = 2;
         DAT_BATTLE_BIN__80098d80 = (u_long *)0x0;
-        DAT_BATTLE_BIN__80098d78 = iVar6;
+        sprite_func_index = iVar6;
         goto LAB_BATTLE_BIN__80088eb0;
       }
       DAT_BATTLE_BIN__80098d80 =
@@ -62998,7 +63470,7 @@ LAB_BATTLE_BIN__80088aa4:
       goto LAB_BATTLE_BIN__80088eb0;
     }
   }
-  DAT_BATTLE_BIN__80098d78 = DAT_BATTLE_BIN__80098d78 + 1;
+  sprite_func_index = sprite_func_index + 1;
 LAB_BATTLE_BIN__80088eb0:
   return bVar7 & -(DAT_BATTLE_BIN__80098d7c < DAT_80049c18);
 }
@@ -63044,8 +63516,8 @@ void FUN_BATTLE_BIN__80088eec(void)
       }
       puVar4 = (ushort *)&DAT_BATTLE_BIN__800a1be8;
     }
-    FUN_BATTLE_BIN__800926d8(puVar4,2,1,0);
-    FUN_BATTLE_BIN__800926d8(puVar4 + 0x10,2,2,0);
+    Get_Palette_Data(puVar4,2,1,0);
+    Get_Palette_Data(puVar4 + 0x10,2,2,0);
   }
   return;
 }
@@ -63118,7 +63590,7 @@ void FUN_BATTLE_BIN__8008924c(void)
 void FUN_BATTLE_BIN__80089384(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   int iVar2;
   SVECTOR SStack_38;
   SVECTOR SStack_30;
@@ -63127,11 +63599,10 @@ void FUN_BATTLE_BIN__80089384(void)
   
   SetRotMatrix((MATRIX *)&DAT_BATTLE_BIN__80098a24);
   SetTransMatrix((MATRIX *)&DAT_BATTLE_BIN__80098a24);
-  piVar1 = FUN_BATTLE_BIN__8007a218();
-  Store_3_Halfwords(&SStack_38.vx,*(undefined2 *)(piVar1 + 0x10),*(undefined2 *)((int)piVar1 + 0x42)
-                    ,*(undefined2 *)(piVar1 + 0x11));
+  pEVar1 = get_Caster_ENTD_Dat();
+  Store_3_Halfwords(&SStack_38.vx,pEVar1->ScreenX,pEVar1->ScreenZ,pEVar1->ScreenY);
   RotTrans(&SStack_38,&VStack_28,alStack_18);
-  FUN_BATTLE_BIN__8007b92c((short *)(piVar1 + 0x10),&SStack_30.vx);
+  FUN_BATTLE_BIN__8007b92c(&pEVar1->ScreenX,&SStack_30.vx);
   SStack_30.vy = SStack_30.vy + -0x30;
   RotTrans(&SStack_30,&VStack_28,alStack_18);
   if (VStack_28.vz < 0) {
@@ -63491,20 +63962,21 @@ int * FUN_BATTLE_BIN__8008c410(ushort param_1)
 bool FUN_BATTLE_BIN__8008c468(ushort param_1,short *param_2)
 
 {
-  int *piVar1;
-  int iVar2;
+  ENTDDisplayUnitData *pEVar1;
+  BattleUnitData *pBVar2;
+  int iVar3;
   
-  piVar1 = FUN_BATTLE_BIN__8007a724(param_1);
-  if (piVar1 != (int *)0x0) {
-    iVar2 = piVar1[0x4d];
-    get_tile_data_ptr((uint)*(byte *)(iVar2 + 0x47),(uint)*(byte *)(iVar2 + 0x48),
-                      (uint)(*(ushort *)(iVar2 + 0x48) >> 0xf));
-    *param_2 = (ushort)*(byte *)(piVar1[0x4d] + 0x47) * 0x1c + 0xe;
-    param_2[2] = (ushort)*(byte *)(piVar1[0x4d] + 0x48) * 0x1c + 0xe;
-    iVar2 = FUN_BATTLE_BIN__8007d51c(piVar1);
-    param_2[1] = (short)iVar2;
+  pEVar1 = FUN_BATTLE_BIN__8007a724(param_1);
+  if (pEVar1 != (ENTDDisplayUnitData *)0x0) {
+    pBVar2 = pEVar1->UnitBattleData;
+    get_tile_data_ptr((uint)(pBVar2->AllActionUnitData).MapX,(uint)(pBVar2->AllActionUnitData).MapY,
+                      (uint)(*(ushort *)&(pBVar2->AllActionUnitData).MapY >> 0xf));
+    *param_2 = (ushort)(pEVar1->UnitBattleData->AllActionUnitData).MapX * 0x1c + 0xe;
+    param_2[2] = (ushort)(pEVar1->UnitBattleData->AllActionUnitData).MapY * 0x1c + 0xe;
+    iVar3 = FUN_BATTLE_BIN__8007d51c((int *)pEVar1);
+    param_2[1] = (short)iVar3;
   }
-  return piVar1 != (int *)0x0;
+  return pEVar1 != (ENTDDisplayUnitData *)0x0;
 }
 
 
@@ -63560,16 +64032,17 @@ uint FUN_BATTLE_BIN__8008cdd0(ushort param_1)
 uint GetMiscIDByMiscID(uint param_1)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
-  piVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int *)0x0) {
+  pEVar1 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if ((piVar1[0x4d] != 0) && (*(byte *)(piVar1[0x4d] + 0x18a) == param_1)) {
-        return (uint)*(byte *)(piVar1 + 1);
+      if ((pEVar1->UnitBattleData != (BattleUnitData *)0x0) &&
+         ((pEVar1->UnitBattleData->CurActionTargetData).UnitID2 == param_1)) {
+        return (uint)pEVar1->ENTDID;
       }
-      piVar1 = (int *)*piVar1;
-    } while (piVar1 != (int *)0x0);
+      pEVar1 = pEVar1->PrevMiscUnitData;
+    } while (pEVar1 != (ENTDDisplayUnitData *)0x0);
   }
   return 0xffffffff;
 }
@@ -63579,16 +64052,17 @@ uint GetMiscIDByMiscID(uint param_1)
 uint GetUniquePortraitID(uint param_1)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
-  piVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int *)0x0) {
+  pEVar1 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if ((piVar1[0x4d] != 0) && (*(byte *)(piVar1[0x4d] + 0x18a) == param_1)) {
-        return (uint)*(byte *)((int)piVar1 + 5);
+      if ((pEVar1->UnitBattleData != (BattleUnitData *)0x0) &&
+         ((pEVar1->UnitBattleData->CurActionTargetData).UnitID2 == param_1)) {
+        return (uint)pEVar1->SpritesheetVRAM;
       }
-      piVar1 = (int *)*piVar1;
-    } while (piVar1 != (int *)0x0);
+      pEVar1 = pEVar1->PrevMiscUnitData;
+    } while (pEVar1 != (ENTDDisplayUnitData *)0x0);
   }
   return 0xffffffff;
 }
@@ -63598,15 +64072,15 @@ uint GetUniquePortraitID(uint param_1)
 int * FUN_BATTLE_BIN__8008ced0(ushort param_1)
 
 {
-  int *piVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar1;
+  byte *pbVar2;
   
-  piVar1 = FUN_BATTLE_BIN__8007a724(param_1);
-  piVar2 = piVar1 + 0x57;
-  if (piVar1 == (int *)0x0) {
-    piVar2 = (int *)0x0;
+  pEVar1 = FUN_BATTLE_BIN__8007a724(param_1);
+  pbVar2 = &pEVar1->TargetID;
+  if (pEVar1 == (ENTDDisplayUnitData *)0x0) {
+    pbVar2 = (byte *)0x0;
   }
-  return piVar2;
+  return (int *)pbVar2;
 }
 
 
@@ -63685,16 +64159,16 @@ bool FUN_BATTLE_BIN__8008d18c(ushort param_1)
 void FUN_BATTLE_BIN__8008d1c8(void)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
-  piVar1 = DAT_BATTLE_BIN__80098a54;
-  if (DAT_BATTLE_BIN__80098a54 != (int *)0x0) {
+  pEVar1 = last_ENTD_Dat;
+  if (last_ENTD_Dat != (ENTDDisplayUnitData *)0x0) {
     do {
-      if ((piVar1[0x51] & 0x40U) != 0) {
-        FUN_BATTLE_BIN__8008d18c((ushort)*(byte *)(piVar1 + 1));
+      if ((*(uint *)&pEVar1->field_0x144 & 0x40) != 0) {
+        FUN_BATTLE_BIN__8008d18c((ushort)pEVar1->ENTDID);
       }
-      piVar1 = (int *)*piVar1;
-    } while (piVar1 != (int *)0x0);
+      pEVar1 = pEVar1->PrevMiscUnitData;
+    } while (pEVar1 != (ENTDDisplayUnitData *)0x0);
   }
   return;
 }
@@ -63944,10 +64418,10 @@ void FUN_BATTLE_BIN__8008dc74(ushort param_1)
 void FUN_BATTLE_BIN__8008dc9c(ushort param_1)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
-  piVar1 = FUN_BATTLE_BIN__8007a724(param_1);
-  FUN_BATTLE_BIN__8008dc24((int)piVar1);
+  pEVar1 = FUN_BATTLE_BIN__8007a724(param_1);
+  FUN_BATTLE_BIN__8008dc24((int)pEVar1);
   return;
 }
 
@@ -64056,11 +64530,10 @@ void FUN_BATTLE_BIN__8008df10(undefined2 *param_1)
 void FUN_BATTLE_BIN__8008dfac(ushort param_1)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
-  piVar1 = FUN_BATTLE_BIN__8007a724(param_1);
-  get_tile_data_ptr((uint)*(byte *)(piVar1 + 0x1f),(uint)*(byte *)((int)piVar1 + 0x7d),
-                    (uint)*(byte *)((int)piVar1 + 0x7e));
+  pEVar1 = FUN_BATTLE_BIN__8007a724(param_1);
+  get_tile_data_ptr((uint)pEVar1->MapX,(uint)pEVar1->MapY,(uint)pEVar1->MapZ);
   return;
 }
 
@@ -64141,13 +64614,13 @@ bool FUN_BATTLE_BIN__8008e17c(void)
 bool FUN_BATTLE_BIN__8008e1f8(ushort param_1)
 
 {
-  int *piVar1;
+  ENTDDisplayUnitData *pEVar1;
   
-  piVar1 = FUN_BATTLE_BIN__8007a724(param_1);
-  if (piVar1 != (int *)0x0) {
-    FUN_BATTLE_BIN__800683e4((int)piVar1);
+  pEVar1 = FUN_BATTLE_BIN__8007a724(param_1);
+  if (pEVar1 != (ENTDDisplayUnitData *)0x0) {
+    FUN_BATTLE_BIN__800683e4((int)pEVar1);
   }
-  return piVar1 != (int *)0x0;
+  return pEVar1 != (ENTDDisplayUnitData *)0x0;
 }
 
 
@@ -64188,7 +64661,7 @@ void FUN_BATTLE_BIN__8008e468(void)
   Store_3_Halfwords(&DAT_BATTLE_BIN__800a7784,0x12e,0xe00,0);
   Store_3_Words(&DAT_BATTLE_BIN__800e4e74,0,0,0);
   DAT_BATTLE_BIN__8009611c = 0xff;
-  DAT_BATTLE_BIN__80096118 = 0xff;
+  AT_Unit_ID = 0xff;
   DAT_BATTLE_BIN__800961bc = 0;
   DAT_BATTLE_BIN__800961b8 = 0;
   DAT_BATTLE_BIN__800961b4 = 0;
@@ -64378,10 +64851,10 @@ int FUN_BATTLE_BIN__8008ea6c(int sfx_ID,int param_2,undefined4 *param_3)
   switch(param_2) {
   case 0:
     param_2 = param_2 + 1;
-    Stop_Playing_SFX(sfx_ID);
+    Stop_Playing_ENV_SFX(sfx_ID);
     FUN_BATTLE_BIN__8008e468();
     FUN_BATTLE_BIN__80093048();
-    FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094b84,2,0,0);
+    Get_Palette_Data((ushort *)&DAT_BATTLE_BIN__80094b84,2,0,0);
     DAT_80049c18 = 0;
     FUN_BATTLE_BIN__8013d188();
     break;
@@ -64438,7 +64911,7 @@ int FUN_BATTLE_BIN__8008ea6c(int sfx_ID,int param_2,undefined4 *param_3)
       if (iVar2 == 0) goto switchD_BATTLE_BIN__8008ea9c_caseD_9;
     }
     FUN_80043f50();
-    Stop_Playing_SFX(sfx_ID);
+    Stop_Playing_ENV_SFX(sfx_ID);
     iVar2 = rand();
     if (iVar2 < 0) {
       iVar2 = iVar2 + 0x1fff;
@@ -64448,7 +64921,7 @@ int FUN_BATTLE_BIN__8008ea6c(int sfx_ID,int param_2,undefined4 *param_3)
     break;
   case 0xc:
     iVar2 = param_2;
-    FUN_BATTLE_BIN__800f59f0();
+    Play_Weather_SFX();
     FUN_BATTLE_BIN__80092dc0(sfx_ID,iVar2,param_3);
     FUN_BATTLE_BIN__80092e98(sfx_ID,iVar2,param_3);
     FUN_BATTLE_BIN__80092f18(sfx_ID,iVar2,param_3);
@@ -64465,7 +64938,7 @@ switchD_BATTLE_BIN__8008ea9c_caseD_9:
 
 
 
-int FUN_BATTLE_BIN__8008ec70(int param_1,int param_2,undefined4 *param_3)
+int BATTLE_sprite_init_loop_func(int map_param,int init_func,undefined4 *deployment_runstatus)
 
 {
   byte bVar1;
@@ -64473,48 +64946,48 @@ int FUN_BATTLE_BIN__8008ec70(int param_1,int param_2,undefined4 *param_3)
   undefined3 extraout_var_00;
   int iVar2;
   
-  switch(param_2) {
+  switch(init_func) {
   case 0:
-    Stop_Playing_SFX(param_1);
+    Stop_Playing_ENV_SFX(map_param);
     FUN_BATTLE_BIN__8008e468();
     FUN_BATTLE_BIN__80093048();
-    param_2 = param_2 + 1;
+    init_func = init_func + 1;
     if (Stream_openmovie == 1) {
       FUN_BATTLE_BIN__8008e80c();
     }
-    FUN_BATTLE_BIN__800926d8((ushort *)&DAT_BATTLE_BIN__80094b84,2,0,0);
+    Get_Palette_Data((ushort *)&DAT_BATTLE_BIN__80094b84,2,0,0);
     DAT_80049c18 = 0;
     break;
   case 1:
     goto switchD_BATTLE_BIN__8008eca4_caseD_1;
   case 2:
-    iVar2 = FUN_BATTLE_BIN__800f3718(param_1,0x75);
+    iVar2 = FUN_BATTLE_BIN__800f3718(map_param,0x75);
     if (iVar2 != 0) {
-      param_2 = param_2 + 1;
+      init_func = init_func + 1;
     }
     break;
   case 3:
-    iVar2 = FUN_BATTLE_BIN__800f3718(param_1,0x76);
+    iVar2 = FUN_BATTLE_BIN__800f3718(map_param,0x76);
     if (iVar2 == 0) {
-      param_2 = param_2 + 1;
+      init_func = init_func + 1;
     }
     break;
   case 4:
     iVar2 = FUN_BATTLE_BIN__8008e6d8();
     if (iVar2 != 0) {
-      param_2 = param_2 + 1;
+      init_func = init_func + 1;
     }
     break;
   case 5:
     iVar2 = FUN_BATTLE_BIN__8008e7b8();
     if (iVar2 == 0) {
       if (DAT_BATTLE_BIN__80096114 == 0) {
-        param_2 = param_2 + 1;
+        init_func = init_func + 1;
         FUN_BATTLE_BIN__80088018();
       }
       else {
         FUN_BATTLE_BIN__80088840();
-        param_2 = 7;
+        init_func = 7;
       }
     }
     break;
@@ -64523,7 +64996,7 @@ int FUN_BATTLE_BIN__8008ec70(int param_1,int param_2,undefined4 *param_3)
     if (iVar2 == 8) {
       DAT_BATTLE_BIN__80096114 = 1;
       FUN_BATTLE_BIN__80088840();
-      param_2 = param_2 + 1;
+      init_func = init_func + 1;
     }
     break;
   case 7:
@@ -64533,14 +65006,14 @@ int FUN_BATTLE_BIN__8008ec70(int param_1,int param_2,undefined4 *param_3)
         bVar1 = FUN_BATTLE_BIN__80088904();
       } while (CONCAT31(extraout_var,bVar1) == 2);
       if (CONCAT31(extraout_var,bVar1) != 0) {
-        return param_2;
+        return init_func;
       }
-      return param_2 + 1;
+      return init_func + 1;
     }
     goto switchD_BATTLE_BIN__8008eca4_caseD_1;
   case 8:
     if (DAT_BATTLE_BIN__800e6aa4 != 0) {
-      param_2 = param_2 + 1;
+      init_func = init_func + 1;
       FUN_BATTLE_BIN__80088868();
       DAT_BATTLE_BIN__80096108 = 0;
     }
@@ -64550,43 +65023,43 @@ int FUN_BATTLE_BIN__8008ec70(int param_1,int param_2,undefined4 *param_3)
       bVar1 = FUN_BATTLE_BIN__80088904();
     } while (CONCAT31(extraout_var_00,bVar1) == 2);
     if (CONCAT31(extraout_var_00,bVar1) == 0) {
-      param_2 = param_2 + 1;
+      init_func = init_func + 1;
     }
     break;
   case 10:
-    if (param_3 == (undefined4 *)0x0) {
-      param_2 = param_2 + 1;
+    if (deployment_runstatus == (undefined4 *)0x0) {
+      init_func = init_func + 1;
       FUN_801c3b00();
     }
     break;
   case 0xb:
     if (Stream_openmovie != 1) {
-      param_1 = 0x1fe;
+      map_param = 0x1fe;
       iVar2 = GetScriptVariable(DebugBattleNext);
       if (iVar2 == 0) goto switchD_BATTLE_BIN__8008eca4_caseD_1;
     }
     FUN_80043f50();
-    Stop_Playing_SFX(param_1);
+    Stop_Playing_ENV_SFX(map_param);
     iVar2 = rand();
     if (iVar2 < 0) {
       iVar2 = iVar2 + 0x1fff;
     }
-    param_2 = param_2 + 1;
+    init_func = init_func + 1;
     FUN_80043f88((uint)(byte)(&DAT_BATTLE_BIN__80094a3c)[iVar2 >> 0xd]);
     break;
   case 0xc:
-    iVar2 = param_2;
-    FUN_BATTLE_BIN__800f59f0();
-    FUN_BATTLE_BIN__80092dc0(param_1,iVar2,param_3);
-    FUN_BATTLE_BIN__80092e98(param_1,iVar2,param_3);
-    FUN_BATTLE_BIN__80092f18(param_1,iVar2,param_3);
+    iVar2 = init_func;
+    Play_Weather_SFX();
+    FUN_BATTLE_BIN__80092dc0(map_param,iVar2,deployment_runstatus);
+    FUN_BATTLE_BIN__80092e98(map_param,iVar2,deployment_runstatus);
+    FUN_BATTLE_BIN__80092f18(map_param,iVar2,deployment_runstatus);
     FUN_BATTLE_BIN__80092f98();
     FUN_BATTLE_BIN__801827f0(1);
     FUN_BATTLE_BIN__80199d20();
 switchD_BATTLE_BIN__8008eca4_caseD_1:
-    param_2 = param_2 + 1;
+    init_func = init_func + 1;
   }
-  return param_2;
+  return init_func;
 }
 
 
@@ -66146,7 +66619,7 @@ void FUN_BATTLE_BIN__80092620(ushort *param_1,int param_2,int param_3)
 
 
 
-void FUN_BATTLE_BIN__800926d8(ushort *param_1,int param_2,int param_3,int param_4)
+void Get_Palette_Data(ushort *param_1,int param_2,int param_3,int param_4)
 
 {
   int iVar1;
@@ -66571,18 +67044,18 @@ undefined4 FUN_BATTLE_BIN__80093654(void)
 
 {
   int iVar1;
-  int *piVar2;
+  ENTDDisplayUnitData *pEVar2;
   
   DAT_80045944 = PadRead(1);
   iVar1 = GetScriptVariable(BraveStoryRecord);
   if (iVar1 != 0) {
     FUN_BATTLE_BIN__80142d2c(&DAT_80045944);
   }
-  DAT_80045964 = DAT_8004594c;
-  DAT_80045968 = DAT_8004594c;
-  DAT_8004596c = DAT_8004594c;
-  DAT_80045970 = DAT_8004594c;
-  DAT_8004594c = ~DAT_80045948 & DAT_80045944;
+  DAT_80045964 = PAD_input2;
+  DAT_80045968 = PAD_input2;
+  DAT_8004596c = PAD_input2;
+  DAT_80045970 = PAD_input2;
+  PAD_input2 = ~DAT_80045948 & DAT_80045944;
   DAT_80045950 = ~DAT_80045944 & DAT_80045948;
   DAT_80045954 = DAT_80045948;
   DAT_80045958 = DAT_80045948;
@@ -66595,10 +67068,10 @@ undefined4 FUN_BATTLE_BIN__80093654(void)
     DAT_80045974 = 0;
   }
   DAT_80045948 = DAT_80045944;
-  if (((((DAT_8004594c & 0x10) != 0) && (BattleGameState != Case34)) &&
-      (piVar2 = FUN_BATTLE_BIN__8007a218(), DAT_BATTLE_BIN__800e4e8c != 0)) &&
-     ((DAT_BATTLE_BIN__800960f8 == 0 && ((*(byte *)((int)piVar2 + 0x13d) & 8) == 0)))) {
-    Call_Play_Sound(0x71);
+  if (((((PAD_input2 & 0x10) != 0) && (BattleGameState != Case34)) &&
+      (pEVar2 = get_Caster_ENTD_Dat(), DAT_BATTLE_BIN__800e4e8c != 0)) &&
+     ((DAT_BATTLE_BIN__800960f8 == 0 && ((pEVar2->ENTDFlags & 8) == 0)))) {
+    Call_Play_Sound(AT_halt);
     DAT_BATTLE_BIN__800960f8 = 1;
   }
   if ((DAT_80045948 & 0x90c) == 0x90c) {
@@ -66613,7 +67086,7 @@ undefined4 FUN_BATTLE_BIN__800937f8(void)
 
 {
   DAT_80045944 = PadRead(1);
-  DAT_8004594c = ~DAT_80045948 & DAT_80045944;
+  PAD_input2 = ~DAT_80045948 & DAT_80045944;
   DAT_80045950 = ~DAT_80045944 & DAT_80045948;
   DAT_80045948 = DAT_80045944;
   if ((DAT_80045944 & 0x90c) == 0x90c) {
@@ -67259,6 +67732,7 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
   ushort uVar12;
   int iVar13;
   int iVar14;
+  SFX_ID sfx_ID;
   int iVar15;
   char *pcVar16;
   MATRIX *m0;
@@ -67322,20 +67796,20 @@ void FUN_BATTLE_BIN__800e840c(undefined4 *param_1)
           (void *)(DAT_BATTLE_BIN__8011a2d4 + 0xe59c));
   FUN_BATTLE_BIN__800f1204();
   FUN_BATTLE_BIN__800ef6f0();
-  if ((DAT_BATTLE_BIN__800f79bc != 0) && (DAT_BATTLE_BIN__800f5c70 != '\0')) {
+  if ((DAT_BATTLE_BIN__800f79bc != 0) && (weather_sound_on != '\0')) {
     iVar8 = rand();
     if (iVar8 == (iVar8 / 0x1e0) * 0x1e0) {
       DAT_BATTLE_BIN__800f79c0 = 0x3c;
       uVar9 = rand();
       if ((uVar9 & 1) == 0) {
-        DAT_BATTLE_BIN__800f5c6c = 0x1000e;
-        uVar9 = 0x1000e;
+        Bad_thunder_sfx = thunder_random_2;
+        sfx_ID = thunder_random_2;
       }
       else {
-        DAT_BATTLE_BIN__800f5c68 = 0x10003;
-        uVar9 = 0x10003;
+        Thunder_sfx = thunder_random_1;
+        sfx_ID = thunder_random_1;
       }
-      Call_PlaySound_findChannel(uVar9);
+      Call_PlaySound_findChannel(sfx_ID);
     }
     iVar8 = DAT_BATTLE_BIN__800f79c0 + -1;
     if (DAT_BATTLE_BIN__800f79c0 == 0) {
@@ -69108,8 +69582,8 @@ void FUN_BATTLE_BIN__800ee104(void)
     iVar6 = iVar6 + 1;
     iVar2 = iVar2 + 0x18;
   } while (iVar6 < 0x100);
-  DAT_BATTLE_BIN__800f5c64 = 0;
-  DAT_BATTLE_BIN__800f5c70 = 0;
+  Rain_SFX = 0;
+  weather_sound_on = 0;
   DAT_BATTLE_BIN__801251c4 = 0;
   return;
 }
@@ -69343,8 +69817,8 @@ void FUN_BATTLE_BIN__800ee95c
 void FUN_BATTLE_BIN__800eeaf8(undefined param_1)
 
 {
-  uint uVar1;
-  undefined uVar2;
+  uint weather;
+  undefined uVar1;
   
   switch(param_1) {
   case 0x53:
@@ -69385,9 +69859,9 @@ LAB_BATTLE_BIN__800eee08:
   case 0x89:
     DAT_BATTLE_BIN__800f79bc = 2;
     DAT_BATTLE_BIN__800f79c0 = 0x3c;
-    DAT_BATTLE_BIN__800f5c64 = 0x10002;
-    if (DAT_BATTLE_BIN__800f5c70 != '\0') {
-      Call_Play_Sound2(0x10002);
+    Rain_SFX = rain_random;
+    if (weather_sound_on != '\0') {
+      Call_Play_Sound2(rain_random);
     }
     goto LAB_BATTLE_BIN__800eed70;
   case 0x8a:
@@ -69406,49 +69880,49 @@ LAB_BATTLE_BIN__800eed70:
     FUN_BATTLE_BIN__800eeaf8(0x8c);
     break;
   case 0x8b:
-    uVar1 = GetScriptVariable(Weather);
+    weather = GetScriptVariable(Weather);
     DAT_BATTLE_BIN__800f79bc = 0;
-    uVar1 = uVar1 & 7;
-    if (uVar1 < 2) {
+    weather = weather & 7;
+    if (weather < 2) {
       FUN_BATTLE_BIN__800f5a64();
       FUN_BATTLE_BIN__800eeaf8(0x54);
       FUN_BATTLE_BIN__800eeaf8(0x8c);
     }
-    if (uVar1 == 2) {
+    if (weather == 2) {
       if ((DAT_BATTLE_BIN__800b6698 & 1) == 0) {
         FUN_BATTLE_BIN__800f5a64();
-        uVar2 = 0x7c;
+        uVar1 = 0x7c;
       }
       else {
         FUN_BATTLE_BIN__800f5a64();
-        uVar2 = 0x7e;
+        uVar1 = 0x7e;
       }
-      FUN_BATTLE_BIN__800eeaf8(uVar2);
+      FUN_BATTLE_BIN__800eeaf8(uVar1);
       FUN_BATTLE_BIN__800eeaf8(0x8c);
     }
-    if (uVar1 == 3) {
+    if (weather == 3) {
       if ((DAT_BATTLE_BIN__800b6698 & 1) == 0) {
-        DAT_BATTLE_BIN__800f5c64 = 0x10002;
-        if (DAT_BATTLE_BIN__800f5c70 != '\0') {
-          Call_Play_Sound2(0x10002);
+        Rain_SFX = rain_random;
+        if (weather_sound_on != '\0') {
+          Call_Play_Sound2(rain_random);
         }
-        uVar2 = 0x55;
+        uVar1 = 0x55;
       }
       else {
         FUN_BATTLE_BIN__800f5a64();
-        uVar2 = 0x53;
+        uVar1 = 0x53;
       }
-      FUN_BATTLE_BIN__800eeaf8(uVar2);
+      FUN_BATTLE_BIN__800eeaf8(uVar1);
       FUN_BATTLE_BIN__800eeaf8(0x8c);
     }
-    if (uVar1 == 4) {
+    if (weather == 4) {
       if ((DAT_BATTLE_BIN__800b6698 & 1) == 0) {
         FUN_BATTLE_BIN__800f5a64();
         FUN_BATTLE_BIN__800eeaf8(0x7d);
         FUN_BATTLE_BIN__800eeaf8(0x8a);
-        DAT_BATTLE_BIN__800f5c64 = 0x10002;
-        if (DAT_BATTLE_BIN__800f5c70 != '\0') {
-          Call_Play_Sound2(0x10002);
+        Rain_SFX = rain_random;
+        if (weather_sound_on != '\0') {
+          Call_Play_Sound2(rain_random);
         }
       }
       else {
@@ -70335,8 +70809,8 @@ LAB_BATTLE_BIN__800f1adc:
         if (iVar7 < 0) {
           iVar7 = iVar7 + 0xf;
         }
-        FUN_BATTLE_BIN__800926d8
-                  (&DAT_BATTLE_BIN__800f687c + (uint)bVar1 * 0x10 + sVar4 * 0x10,0,iVar7 >> 4,0);
+        Get_Palette_Data(&DAT_BATTLE_BIN__800f687c + (uint)bVar1 * 0x10 + sVar4 * 0x10,0,iVar7 >> 4,
+                         0);
       }
       break;
     case 4:
@@ -70432,10 +70906,9 @@ LAB_BATTLE_BIN__800f1aac:
         if (iVar7 < 0) {
           iVar7 = iVar7 + 0xf;
         }
-        FUN_BATTLE_BIN__800926d8
-                  (&DAT_BATTLE_BIN__800f687c +
-                   (uint)*(byte *)((int)&DAT_BATTLE_BIN__80121d8c + iVar10) * 0x10 + sVar3 * 0x10,0,
-                   iVar7 >> 4,0);
+        Get_Palette_Data(&DAT_BATTLE_BIN__800f687c +
+                         (uint)*(byte *)((int)&DAT_BATTLE_BIN__80121d8c + iVar10) * 0x10 +
+                         sVar3 * 0x10,0,iVar7 >> 4,0);
         *(char *)((int)&DAT_BATTLE_BIN__80121d8c + iVar10) =
              *(char *)((int)&DAT_BATTLE_BIN__80121d8c + iVar10) + '\x01';
         if (*(char *)((int)&DAT_BATTLE_BIN__80121d8c + iVar10) ==
@@ -71180,7 +71653,7 @@ LAB_BATTLE_BIN__800f2d0c:
     DAT_BATTLE_BIN__800f682c = 0x100;
     DAT_BATTLE_BIN__800f6828 = 0;
     DAT_BATTLE_BIN__800f682e = 1;
-    FUN_BATTLE_BIN__800926d8((ushort *)param_2,iVar3,0,1);
+    Get_Palette_Data((ushort *)param_2,iVar3,0,1);
     break;
   case 0x83:
     DAT_BATTLE_BIN__800f5b9c = -*(short *)(param_2 + 3);
@@ -72185,18 +72658,18 @@ undefined4 FUN_BATTLE_BIN__800f5984(void)
     }
     piVar1 = piVar1 + 1;
   } while (iVar2 < 0x20);
-  DAT_BATTLE_BIN__800f5c70 = 0;
+  weather_sound_on = 0;
   return 0;
 }
 
 
 
-void FUN_BATTLE_BIN__800f59f0(void)
+void Play_Weather_SFX(void)
 
 {
-  DAT_BATTLE_BIN__800f5c70 = 1;
-  if (DAT_BATTLE_BIN__800f5c64 != 0) {
-    Call_Play_Sound2(DAT_BATTLE_BIN__800f5c64);
+  weather_sound_on = 1;
+  if (Rain_SFX != 0) {
+    Call_Play_Sound2(Rain_SFX);
   }
   return;
 }
@@ -72206,17 +72679,17 @@ void FUN_BATTLE_BIN__800f59f0(void)
 void FUN_BATTLE_BIN__800f5a64(void)
 
 {
-  if (DAT_BATTLE_BIN__800f5c64 != 0) {
-    Stop_Playing_SFX(DAT_BATTLE_BIN__800f5c64);
-    DAT_BATTLE_BIN__800f5c64 = 0;
+  if (Rain_SFX != 0) {
+    Stop_Playing_ENV_SFX(Rain_SFX);
+    Rain_SFX = 0;
   }
-  if (DAT_BATTLE_BIN__800f5c68 != 0) {
-    Stop_Playing_SFX(DAT_BATTLE_BIN__800f5c68);
-    DAT_BATTLE_BIN__800f5c68 = 0;
+  if (Thunder_sfx != 0) {
+    Stop_Playing_ENV_SFX(Thunder_sfx);
+    Thunder_sfx = 0;
   }
-  if (DAT_BATTLE_BIN__800f5c6c != 0) {
-    Stop_Playing_SFX(DAT_BATTLE_BIN__800f5c6c);
-    DAT_BATTLE_BIN__800f5c6c = 0;
+  if (Bad_thunder_sfx != 0) {
+    Stop_Playing_ENV_SFX(Bad_thunder_sfx);
+    Bad_thunder_sfx = 0;
   }
   return;
 }
@@ -72804,7 +73277,7 @@ uint FUN_BATTLE_BIN__8012dcac(uint param_1)
 void FUN_BATTLE_BIN__8012dd1c(void)
 
 {
-  DAT_BATTLE_BIN__80165fb4 = 1;
+  SFX_ID_BATTLE_BIN__80165fb4 = confirm;
   return;
 }
 
@@ -72813,7 +73286,7 @@ void FUN_BATTLE_BIN__8012dd1c(void)
 void FUN_BATTLE_BIN__8012dd58(void)
 
 {
-  DAT_BATTLE_BIN__80165fb4 = 5;
+  SFX_ID_BATTLE_BIN__80165fb4 = invalid;
   return;
 }
 
@@ -74179,7 +74652,7 @@ void FUN_BATTLE_BIN__8013d610(void)
 
 
 
-void FUN_BATTLE_BIN__8013d634(int param_1,int param_2,int param_3)
+void Store_unitname_evtblock_dat(int param_1,int param_2,int param_3)
 
 {
   int iVar1;
@@ -74952,7 +75425,7 @@ FUN_BATTLE_BIN__80141b0c(int param_1,uint param_2,uint param_3,uint param_4,int 
             return 2;
           }
           FUN_BATTLE_BIN__8013b644(0x27,400);
-          FUN_BATTLE_BIN__8013d634(0,0xff,0xff);
+          Store_unitname_evtblock_dat(0,0xff,0xff);
           DAT_BATTLE_BIN__80166048 = 1;
           DAT_BATTLE_BIN__80173cb0 = 1;
           FUN_BATTLE_BIN__8013f3fc();
@@ -74965,7 +75438,7 @@ FUN_BATTLE_BIN__80141b0c(int param_1,uint param_2,uint param_3,uint param_4,int 
               DAT_BATTLE_BIN__80173c74 = 0x191;
               return 2;
             }
-            FUN_BATTLE_BIN__8013d634(0,0xff,0xff);
+            Store_unitname_evtblock_dat(0,0xff,0xff);
             DAT_BATTLE_BIN__80166048 = 1;
             iVar4 = GetScriptVariable(DebugBattleNext);
             if (iVar4 == 0) {
@@ -74984,7 +75457,7 @@ FUN_BATTLE_BIN__80141b0c(int param_1,uint param_2,uint param_3,uint param_4,int 
               DAT_BATTLE_BIN__80173c74 = 0x192;
               return 2;
             }
-            FUN_BATTLE_BIN__8013d634(0,0xff,0xff);
+            Store_unitname_evtblock_dat(0,0xff,0xff);
             DAT_BATTLE_BIN__80166048 = 1;
             FUN_BATTLE_BIN__8013b644(0x27,0x192);
             DAT_BATTLE_BIN__80173cb0 = 1;
@@ -75000,7 +75473,7 @@ FUN_BATTLE_BIN__80141b0c(int param_1,uint param_2,uint param_3,uint param_4,int 
               FUN_BATTLE_BIN__8013b644(0x27,uVar3);
               return 2;
             }
-            FUN_BATTLE_BIN__8013d634(0,0xff,0xff);
+            Store_unitname_evtblock_dat(0,0xff,0xff);
             DAT_BATTLE_BIN__80166048 = 1;
             FUN_BATTLE_BIN__8013f3fc();
             return 2;
@@ -75684,7 +76157,7 @@ short FUN_BATTLE_BIN__80142d58(uint *param_1,uint param_2)
   DAT_BATTLE_BIN__80173ca0 = 0xffffffff;
   DAT_BATTLE_BIN__80173cac = 0xffffffff;
   DAT_BATTLE_BIN__80173f48 = 0xffffffff;
-  DAT_BATTLE_BIN__80165fb4 = 0xffffffff;
+  SFX_ID_BATTLE_BIN__80165fb4 = 0xffffffff;
   DAT_BATTLE_BIN__80165fc0 = 0xffffffff;
   DAT_BATTLE_BIN__8016d9bc = 0;
   DAT_BATTLE_BIN__80165fe2 = 0;
@@ -75910,8 +76383,8 @@ LAB_BATTLE_BIN__80143644:
   if (-1 < DAT_BATTLE_BIN__80173f48) {
     FUN_BATTLE_BIN__8008d8e4(DAT_BATTLE_BIN__80173f48);
   }
-  if (DAT_BATTLE_BIN__80165fb4 != 0xffffffff) {
-    Call_Play_Sound(DAT_BATTLE_BIN__80165fb4);
+  if (SFX_ID_BATTLE_BIN__80165fb4 != 0xffffffff) {
+    Call_Play_Sound(SFX_ID_BATTLE_BIN__80165fb4);
   }
   if (-1 < DAT_BATTLE_BIN__80165fc8) {
     Set_No_Forced_MUS_Playing();
@@ -76480,7 +76953,7 @@ void FUN_BATTLE_BIN__80148e88(undefined4 param_1,undefined4 param_2,undefined4 p
       FUN_BATTLE_BIN__80149100(uVar9,0x10,1,1);
       callOnCurrentThread_Func = (func *)&DAT_BATTLE_BIN__8008bde4;
       Call_OnCurrentThread(uVar5,uVar7,uVar8);
-      DAT_BATTLE_BIN__80165fb4 = 0x41;
+      SFX_ID_BATTLE_BIN__80165fb4 = exit_map;
       goto LAB_BATTLE_BIN__801490c0;
     }
     if (iVar3 != 2) goto LAB_BATTLE_BIN__801490c0;
@@ -76533,6 +77006,79 @@ void FUN_BATTLE_BIN__80149100(uint param_1,int param_2,int param_3,undefined4 pa
     callOnCurrentThread_Func = FUN_BATTLE_BIN__8018e07c;
     Call_OnCurrentThread(UnitID,param_4,iVar5);
   }
+  return;
+}
+
+
+
+void EVT_6B_BGSound(void)
+
+{
+  byte *EVT_PTR;
+  uint echo;
+  SFX_ID sfx_ID;
+  byte bg_sfx;
+  
+  Set_Thread_Task_ID(0x35);
+  EVT_PTR = (byte *)Thread_getParam1();
+  bg_sfx = *EVT_PTR;
+  sfx_ID = bg_sfx + ENV_SED;
+  if (EVT_PTR[3] == 0) {
+    Stop_Playing_ENV_SFX(sfx_ID);
+    Call_Play_Sound2(sfx_ID);
+  }
+  else {
+    Stop_Playing_ENV_SFX(sfx_ID);
+    Call_PlaySound_findChannel(sfx_ID);
+  }
+  echo = (uint)EVT_PTR[1];
+  if (echo == 0) {
+    echo = 1;
+  }
+  Call_SFX_Set_Echo(bg_sfx | 0x10000,echo);
+  FUN_BATTLE_BIN__80149a54();
+  return;
+}
+
+
+
+void FUN_BATTLE_BIN__80149a54(void)
+
+{
+  byte bVar1;
+  byte bVar2;
+  byte bVar3;
+  byte *pbVar4;
+  int echo;
+  int iVar5;
+  uint uVar6;
+  int iVar7;
+  
+  Set_Thread_Task_ID(0x35);
+  iVar7 = 0;
+  pbVar4 = (byte *)Thread_getParam1();
+  bVar1 = *pbVar4;
+  bVar2 = pbVar4[1];
+  uVar6 = (uint)pbVar4[4];
+  bVar3 = pbVar4[2];
+  if (uVar6 != 0) {
+    iVar5 = 0;
+    do {
+      Thread_doNext();
+      echo = iVar5 / (int)uVar6 + (uint)bVar2;
+      if (echo < 0) {
+        echo = -echo;
+      }
+      iVar5 = iVar5 + ((uint)bVar3 - (uint)bVar2);
+      if (echo == 0) {
+        echo = 1;
+      }
+      Call_SFX_Set_Echo(bVar1 + ENV_SED,echo);
+      iVar7 = iVar7 + 1;
+    } while (iVar7 < (int)uVar6);
+  }
+  Call_SFX_Set_Echo(bVar1 | 0x10000,(uint)bVar3);
+  Thread_stop();
   return;
 }
 
@@ -99820,8 +100366,8 @@ void get_vfx_PAL(int vfx_ID)
   _vfx_addr = *(int *)((int)VFX_hdr_addr + ((vfx_ID << 0x10) >> 0xe));
   _vfx_pal_addr = (ushort *)(_vfx_addr + *(int *)(_vfx_addr + 0x24));
   DAT_BATTLE_BIN__801bbf80 = _vfx_pal_addr;
-  FUN_BATTLE_BIN__800926d8(_vfx_pal_addr,0xc,0,1);
-  FUN_BATTLE_BIN__800926d8(_vfx_pal_addr + 0x100,0xd,0,1);
+  Get_Palette_Data(_vfx_pal_addr,0xc,0,1);
+  Get_Palette_Data(_vfx_pal_addr + 0x100,0xd,0,1);
   _vfx_addr = (uint)*(byte *)(_vfx_pal_addr + 0x200) +
               (uint)*(byte *)((int)_vfx_pal_addr + 0x401) * 0x100 +
               (uint)*(byte *)(_vfx_pal_addr + 0x201) * 0x10000;
@@ -99938,18 +100484,18 @@ void get_vfx_SMD_addr(int param_1)
 {
   vfx_hdr *iVar2;
   
-  if (vfx_SMD_addr != (vfx_SMD_hdr *)0x0) {
+  if (vfx_SMD_addr != (SED_hdr *)0x0) {
     vfx_SMD_pop(vfx_SMD_addr);
   }
   iVar2 = *(vfx_hdr **)((int)VFX_hdr_addr + ((param_1 << 0x10) >> 0xe));
-  vfx_SMD_addr = (vfx_SMD_hdr *)(iVar2->vfx_SMD->feds + (int)&iVar2->vfx_start_data);
-  if (iVar2->vfx_SMD == (vfx_SMD_hdr *)0x0) {
-    vfx_SMD_addr = (vfx_SMD_hdr *)0x0;
+  vfx_SMD_addr = (SED_hdr *)(iVar2->vfx_SED->feds + (int)&iVar2->vfx_start_data);
+  if (iVar2->vfx_SED == (SED_hdr *)0x0) {
+    vfx_SMD_addr = (SED_hdr *)0x0;
     vfx_sfx_ID = 0;
   }
   else {
-    append_vfx_SMD(vfx_SMD_addr);
-    vfx_sfx_ID = (uint)(ushort)vfx_SMD_addr->field3_0xa << 0x10;
+    append_SED(vfx_SMD_addr);
+    vfx_sfx_ID = (uint)(ushort)vfx_SMD_addr->SED_ID << 0x10;
   }
   return;
 }
@@ -100278,9 +100824,9 @@ undefined4 FUN_BATTLE_BIN__801a18d8(void)
     if ((*vfx_timer1_addr & 0x10) != 0) {
       volume_with_targetTime_currentSong(0x78);
     }
-    if (vfx_SMD_addr != (vfx_SMD_hdr *)0x0) {
+    if (vfx_SMD_addr != (SED_hdr *)0x0) {
       vfx_SMD_pop(vfx_SMD_addr);
-      vfx_SMD_addr = (vfx_SMD_hdr *)0x0;
+      vfx_SMD_addr = (SED_hdr *)0x0;
     }
     FUN_BATTLE_BIN__800ef6a0(0x87);
     FUN_BATTLE_BIN__80093144();
@@ -115123,33 +115669,33 @@ void FUN_WORLD__80113748(uint param_1)
 void FUN_WORLD__80113dd4(void)
 
 {
-  uint uVar1;
+  SFX_ID SVar1;
   
   if (DAT_WORLD__8018bacd != '\0') {
     DAT_WORLD__8018bacc = 0;
   }
-  if ((DAT_WORLD__80153298 == 0x73) || (DAT_WORLD__80153298 == 0x2d)) {
+  if ((DAT_WORLD__80153298 == text) || (DAT_WORLD__80153298 == turn_page)) {
     Call_PlaySound_findChannel(DAT_WORLD__80153298);
     DAT_WORLD__80153298 = 0;
   }
   else if (DAT_WORLD__8018bacc == 0x30) {
-    Call_PlaySound_findChannel(0x30);
+    Call_PlaySound_findChannel(shirahadori);
     DAT_WORLD__8018bacc = 0;
   }
-  if (DAT_WORLD__80153298 - 2 < 2) {
+  if (DAT_WORLD__80153298 + ~confirm < 2) {
     DAT_WORLD__8018bacc = (byte)DAT_WORLD__80153298;
   }
   if (((int)DAT_WORLD__80153298 < 0) || (DAT_WORLD__801532a0 != 0)) {
     DAT_WORLD__80153298 = 0;
   }
-  uVar1 = DAT_WORLD__80153298;
+  SVar1 = DAT_WORLD__80153298;
   if (DAT_WORLD__80153298 == 0) {
-    uVar1 = (uint)DAT_WORLD__8018bacc;
+    SVar1 = (SFX_ID)DAT_WORLD__8018bacc;
   }
   DAT_WORLD__8018bacc = 0;
   DAT_WORLD__80153298 = 0;
-  if (uVar1 != 0) {
-    Call_Play_Sound(uVar1);
+  if (SVar1 != 0) {
+    Call_Play_Sound(SVar1);
   }
   return;
 }
@@ -121847,7 +122393,7 @@ LAB_WORLD__80131b90:
           }
         }
         else {
-          Call_Play_Sound(1);
+          Call_Play_Sound(confirm);
           uVar15 = (uint)DAT_WORLD__801cc80c;
           iVar7 = 0;
           if (DAT_WORLD__801cc804 == '\0') {
@@ -124468,8 +125014,9 @@ int BUNIT_Entrypoint(void)
   undefined4 uVar2;
   uint uVar3;
   int iVar4;
-  uint uVar5;
-  ushort uVar6;
+  SFX_ID SVar5;
+  uint uVar6;
+  ushort uVar7;
   undefined auStack_cff8 [40000];
   undefined auStack_33b8 [2160];
   undefined auStack_2b48 [6240];
@@ -124508,7 +125055,7 @@ int BUNIT_Entrypoint(void)
   FUN_BUNIT__801c7ea0((int)auStack_1e8,(int)auStack_3e8,0,0,0,(int)auStack_cff8,0,0,
                       (int)auStack_33b8,(int)auStack_2b48,0,0,0,0,0,0,(int)auStack_12e8,0,0,0,0,0,0,
                       (int)auStack_f28,(int)auStack_6b8,(int)auStack_988);
-  uVar5 = 1;
+  uVar6 = 1;
   FUN_BUNIT__801c2e38();
   FUN_BUNIT__801c4670();
   do {
@@ -124532,38 +125079,38 @@ int BUNIT_Entrypoint(void)
       FUN_BUNIT__801c5864((int)DAT_BUNIT__801cf50b + (int)DAT_BUNIT__801cf50c);
     }
     else {
-      uVar5 = FUN_BUNIT__801c366c();
+      uVar6 = FUN_BUNIT__801c366c();
       uVar2 = FUN_BUNIT__801c360c();
-      uVar6 = DAT_BUNIT__801ecad4;
+      uVar7 = DAT_BUNIT__801ecad4;
       if (DAT_BUNIT__801ecb68 != 0) {
-        uVar6 = 0;
+        uVar7 = 0;
       }
-      FUN_BUNIT__801c4750(1,1,1,1,0,uVar6,(short)uVar2);
+      FUN_BUNIT__801c4750(1,1,1,1,0,uVar7,(short)uVar2);
     }
     FUN_BUNIT__801c3a68();
     DAT_80173f44 = *DAT_BUNIT__801ecacc + 0xf4;
     FUN_8012e65c();
     uVar3 = FUN_BUNIT__801c3150();
     FUN_BUNIT__801c25c4(*DAT_BUNIT__801ecacc + 0x24,uVar3,DAT_BUNIT__801eca90);
-    if (DAT_80165fb4 - 2 < 2) {
+    if (DAT_80165fb4 + ~confirm < 2) {
       DAT_BUNIT__801ecaac = (byte)DAT_80165fb4;
     }
     if (((int)DAT_80165fb4 < 0) || (DAT_80165fbc != 0)) {
       DAT_80165fb4 = 0;
     }
-    uVar3 = DAT_80165fb4;
+    SVar5 = DAT_80165fb4;
     if (DAT_80165fb4 == 0) {
-      uVar3 = (uint)DAT_BUNIT__801ecaac;
+      SVar5 = (SFX_ID)DAT_BUNIT__801ecaac;
     }
-    if (uVar3 == 0x30) {
-      Call_PlaySound_findChannel(0x30);
+    if (SVar5 == shirahadori) {
+      Call_PlaySound_findChannel(shirahadori);
     }
-    else if (uVar3 != 0) {
-      Call_Play_Sound(uVar3);
+    else if (SVar5 != 0) {
+      Call_Play_Sound(SVar5);
     }
     DAT_BUNIT__801ecaac = 0;
     DAT_80165fb4 = 0;
-  } while ((uVar5 & 0xff) != 0);
+  } while ((uVar6 & 0xff) != 0);
   FUN_BUNIT__801c3fa8(0);
   FUN_BUNIT__801c3ee0(0);
   do {
